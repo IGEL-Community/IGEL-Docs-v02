@@ -30,7 +30,6 @@ Remove for now
 - [Cheatsheet Linux General](Docs/Cheatsheet-Linux-General.md)
 
 -----
------
 
 ## HOWTOs
 

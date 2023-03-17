@@ -331,6 +331,21 @@ reboot the system
 user_reboot
 ```
 
+## find
+
+search for all files in the `/services` folder that have `snmp` in the name
+
+```bash linenums="1"
+find /services -type f -name "*snmp*" | less
+```
+
+```bash linenums="1"
+/services/cups/lib/cups/backend/snmp
+/services/cups/share/cups/doc-root/help/man-cups-snmp.html
+/services/cups/share/cups/snmp.conf.default
+```
+
+
 ## grep
 
 search for regular expression

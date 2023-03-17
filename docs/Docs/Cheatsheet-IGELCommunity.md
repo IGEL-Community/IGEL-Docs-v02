@@ -12,6 +12,7 @@
 | [cp](Cheatsheet-Linux-General.md#cp)                       | copy files and folders                     |
 | [date](Cheatsheet-Linux-General.md#date)                   | date tool                                  |
 | [echo](Cheatsheet-Linux-General.md#echo)                   | output strings                             |
+| [find](Cheatsheet-Linux-General.md#find)                   | search for files in a directory hierarchy  |
 | [grep](Cheatsheet-Linux-General.md#grep)                   | search for regular expression              |
 | [kill](Cheatsheet-Linux-General.md#kill)                   | kill a running task by process id          |
 | [killall](Cheatsheet-Linux-General.md#killall)             | kill a running task by name                |

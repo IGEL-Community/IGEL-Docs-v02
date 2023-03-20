@@ -14,6 +14,32 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-03-20 - 11.08.274
+
+```
+The new PRIVATE BUILD 11.08.274 for IGEL Workspace is ready.
+
+This build is based on 11.08.230.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP fullscreen-toggle not working when trying to switch from fullscreen
+  to windowed mode.
+```
+
+-----
+
 ## 2023-03-16 - 11.08.273
 
 ```

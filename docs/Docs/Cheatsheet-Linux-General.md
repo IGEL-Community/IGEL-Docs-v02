@@ -568,3 +568,12 @@ Close VMware window
 ```bash linenums="1"
 wmctrl -c VMware
 ```
+
+Execute the VMware Horizon client as maximized using wmctrl command
+
+```bash linenums="1"
+#!/bin/bash
+/config/sessions/vdm_client0 &
+sleep 2 &&
+wmctrl -x -r vmware-view -b add,maximized_vert,maximized_horz
+```

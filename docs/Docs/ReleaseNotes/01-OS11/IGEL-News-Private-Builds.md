@@ -14,7 +14,7 @@ These are the release notes published with each release:
 
 -----
 
-## 2023-03-20 - 11.08.274
+## 2023-03-20 - [11.08.274](readme11.08.274.txt)
 
 ```
 The new PRIVATE BUILD 11.08.274 for IGEL Workspace is ready.
@@ -40,7 +40,7 @@ Resolved Issues
 
 -----
 
-## 2023-03-16 - 11.08.273
+## 2023-03-16 - [11.08.273](readme11.08.273.txt)
 
 ```
 The new PRIVATE BUILD 11.08.273 for IGEL Workspace is ready.
@@ -75,7 +75,7 @@ The following changes have been applied:
 
 -----
 
-## 2023-03-15 - 11.08.268
+## 2023-03-15 - [11.08.268](readme11.08.268.txt)
 
 ```
 The new Private Build 11.08.268 for IGEL Workspace is ready.
@@ -122,7 +122,7 @@ Resolved Issues
 
 -----
 
-## 2023-03-07 - 11.08.267
+## 2023-03-07 - [11.08.267](readme11.08.267.txt)
 
 ```
 The new PRIVATE BUILD 11.08.267 for IGEL Workspace is ready.
@@ -146,7 +146,7 @@ New Features
 
 -----
 
-## 2023-03-01 – 11.08.266
+## 2023-03-01 – [11.08.266](readme11.08.266.txt)
 
 ```
 The new PRIVATE BUILD 11.08.266 for IGEL Workspace is ready.
@@ -175,7 +175,7 @@ Available Zoom VDI plugins in this release: 5.13.1.22610 (default),
 
 -----
 
-## 2023-03-01 – 11.08.265
+## 2023-03-01 – [11.08.265](readme11.08.265.txt)
 
 ```
 The new PRIVATE BUILD 11.08.265 for IGEL Workspace is ready.
@@ -201,7 +201,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-26 – 11.08.264
+## 2023-02-26 – [11.08.264](readme11.08.264.txt)
 
 ```
 The new PRIVATE BUILD 11.08.264 for IGEL Workspace is ready.
@@ -227,7 +227,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-24 – 11.08.263
+## 2023-02-24 – [11.08.263](readme11.08.263.txt)
 
 ```
 The new PRIVATE BUILD 11.08.263 for IGEL Workspace is ready.
@@ -351,7 +351,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-24 – 11.08.262
+## 2023-02-24 – [11.08.262](readme11.08.262.txt)
 
 ```
 The new PRIVATE BUILD 11.08.262 for IGEL Workspace is ready.
@@ -388,7 +388,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-22 – 11.08.261
+## 2023-02-22 – [11.08.261](readme11.08.261.txt)
 
 ```
 The new PRIVATE BUILD 11.08.261 for IGEL Workspace is ready.
@@ -414,7 +414,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-22 – 11.08.257
+## 2023-02-22 – [11.08.257](readme11.08.257.txt)
 
 ```
 The new PRIVATE BUILD 11.08.257 for IGEL Workspace is ready.
@@ -451,7 +451,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-14 – 11.08.252
+## 2023-02-14 – [11.08.252](readme11.08.252.txt)
 
 ```
 The new PRIVATE BUILD 11.08.252 for IGEL Workspace is ready.
@@ -483,7 +483,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-10 – 11.08.251
+## 2023-02-10 – [11.08.251](readme11.08.251.txt)
 
 ```
 The new PRIVATE BUILD 11.08.251 for IGEL Workspace is ready.
@@ -516,7 +516,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-10 – 11.08.240
+## 2023-02-10 – [11.08.240](readme11.08.240.txt)
 
 ```
 The new PRIVATE BUILD 11.08.240 for IGEL Workspace is ready.
@@ -639,7 +639,7 @@ connection changed and the display switcher is still open.
 
 -----
 
-## 2023-02-10 – 11.08.247
+## 2023-02-10 – [11.08.247](readme11.08.247.txt)
 
 ```
 The new PRIVATE BUILD 11.08.247 for IGEL Workspace is ready.
@@ -733,7 +733,7 @@ session.
 
 -----
 
-## 2023-02-06 – 11.08.248
+## 2023-02-06 – [11.08.248](readme11.08.248.txt)
 
 ```
 The new PRIVATE BUILD 11.08.248 for IGEL Workspace is ready.
@@ -782,7 +782,7 @@ Resolved Issues
 
 -----
 
-## 2023-02-02 – 11.08.244
+## 2023-02-02 – [11.08.244](readme11.08.244.txt)
 
 ```
 The new PRIVATE BUILD 11.08.244 for IGEL Workspace is ready.
@@ -821,7 +821,7 @@ Resolved Issues
 
 -----
 
-## 2023-01-20 – 11.08.243
+## 2023-01-20 – [11.08.243](readme11.08.243.txt)
 
 ```
 The new PRIVATE BUILD 11.08.243 for IGEL Workspace is ready.
@@ -852,7 +852,7 @@ New Features
 
 -----
 
-## 2022-12-20 – 11.08.236
+## 2022-12-20 – [11.08.236](readme11.08.236.txt)
 
 ```
 The new PRIVATE BUILD 11.08.236 for IGEL Workspace is ready.
@@ -883,7 +883,7 @@ browser.
 
 -----
 
-## 2022-12-20 – 11.08.235
+## 2022-12-20 – [11.08.235](readme11.08.235.txt)
 
 ```
 The new PRIVATE BUILD 11.08.235 for IGEL Workspace is ready.
@@ -940,7 +940,7 @@ in a P2P call. [Techinical Preview]
 
 -----
 
-## 2022-12-07 – 11.08.218
+## 2022-12-07 – [11.08.218](readme11.08.218.txt)
 
 ```
 The new PRIVATE BUILD 11.08.218 for IGEL Workspace is ready.
@@ -998,7 +998,7 @@ and settings regarding integrated printing
 
 -----
 
-## 2022-11-28 – 11.08.219
+## 2022-11-28 – [11.08.219](readme11.08.219.txt)
 
 ```
 The new PRIVATE BUILD 11.08.219 for IGEL Workspace is ready.
@@ -1025,7 +1025,7 @@ has been removed for the sake of compatibility!
 
 -----
 
-## 2022-11-25 – 11.08.216
+## 2022-11-25 – [11.08.216](readme11.08.216.txt)
 
 Please note that 11.08.216 replaces 11.08.215. Make sure all customers that have 11.08.215 installed do update to 11.08.216:
 
@@ -1098,7 +1098,7 @@ risk)
 
 -----
 
-## 2022-11-23 – 11.08.215
+## 2022-11-23 – [11.08.215](readme11.08.215.txt)
 
 IMPORTANT NOTES for IGEL OS 11.08.215
 
@@ -1167,7 +1167,7 @@ risk)
 
 -----
 
-## 2022-11-18 – 11.08.212
+## 2022-11-18 – [11.08.212](readme11.08.212.txt)
 
 ```
 The new PRIVATE BUILD 11.08.212 for IGEL Workspace is ready.
@@ -1194,7 +1194,7 @@ to windowed mode.
 
 -----
 
-## 2022-11-17 – 11.08.211
+## 2022-11-17 – [11.08.211](readme11.08.211.txt)
 
 ```
 The new PRIVATE BUILD 11.08.211 for IGEL Workspace is ready.
@@ -1222,7 +1222,7 @@ Available workspace app version in this release: 2211 (default), 2209, and 2010
 
 -----
 
-## 2022-11-08 – 11.08.207
+## 2022-11-08 – [11.08.207](readme11.08.207.txt)
 
 ```
 The new PRIVATE BUILD 11.08.207 for IGEL Workspace is ready.
@@ -1261,7 +1261,7 @@ New parameter:
 
 -----
 
-## 2022-11-08 – 11.08.206
+## 2022-11-08 – [11.08.206](readme11.08.206.txt)
 
 ```
 The new PRIVATE BUILD 11.08.206 for IGEL Workspace is ready.
@@ -1287,7 +1287,7 @@ New Features
 
 -----
 
-## 2022-10-27 – 11.08.205
+## 2022-10-27 – [11.08.205](readme11.08.205.txt)
 
 ```
 The new PRIVATE BUILD 11.08.205 for IGEL Workspace is ready.
@@ -1314,7 +1314,7 @@ ID Prime 940.
 
 -----
 
-## 2022-10-25 – 11.08.204
+## 2022-10-25 – [11.08.204](readme11.08.204.txt)
 
 ```
 The new PRIVATE BUILD 11.08.204 for IGEL Workspace is ready.
@@ -1351,7 +1351,7 @@ issues.
 
 -----
 
-## 2022-10-25 – 11.07.207
+## 2022-10-25 – [11.07.207](readme11.07.207.txt)
 
 ```
 The new PRIVATE BUILD 11.07.207 for IGEL Workspace is ready.
@@ -1377,7 +1377,7 @@ New Features
 
 -----
 
-## 2022-10-19 – 11.08.202
+## 2022-10-19 – [11.08.202](readme11.08.202.txt)
 
 ```
 The new PRIVATE BUILD 11.08.202 for IGEL Workspace is ready.
@@ -1443,7 +1443,7 @@ Resolved Issues
 
 -----
 
-## 2022-10-13 – 11.08.114
+## 2022-10-13 – [11.08.114](readme11.08.114.txt)
 
 ```
 The new PRIVATE BUILD 11.08.114 for IGEL Workspace is ready.
@@ -1493,7 +1493,7 @@ Available plugins in this release: 5.12.1.21950 (default), 5.11.2.21530 and
 
 -----
 
-## 2022-10-05 – 11.07.922
+## 2022-10-05 – [11.07.922](readme11.07.922.txt)
 
 ```
 The new PRIVATE BUILD 11.07.922 for IGEL Workspace is ready.
@@ -1688,7 +1688,7 @@ Resolved Issues
 
 -----
 
-## 2022-10-04 – 11.08.113
+## 2022-10-04 – [11.08.113](readme11.08.113.txt)
 
 ```
 The new PRIVATE BUILD 11.08.111 for IGEL Workspace is ready.
@@ -1840,7 +1840,7 @@ fixes Imprivata/Horizon roaming issue
 
 -----
 
-## 2022-09-22 – 11.07.921
+## 2022-09-22 – [11.07.921](readme11.07.921.txt)
 
 ```
 The new PRIVATE BUILD 11.07.921 for IGEL Workspace is ready.
@@ -1868,7 +1868,7 @@ New Features
 
 -----
 
-## 2022-09-22 – 11.08.112.DER
+## 2022-09-22 – [11.08.112.DER](readme11.08.112.DER.txt)
 
 ```
 The new PRIVATE BUILD 11.08.112.DER for IGEL Workspace is ready.
@@ -1890,7 +1890,7 @@ These are the release notes published with that release:
 
 -----
 
-## 2022-09-20 – 11.08.111
+## 2022-09-20 – [11.08.111](readme11.08.111.txt)
 
 ```
 The new PRIVATE BUILD 11.08.111 for IGEL Workspace is ready.
@@ -1913,7 +1913,7 @@ are ended.
 
 -----
 
-## 2022-09-15 – 11.07.920
+## 2022-09-15 – [11.07.920](readme11.07.920.txt)
 
 ```
 The new PRIVATE BUILD 11.07.920 for IGEL Workspace is ready.
@@ -1943,7 +1943,7 @@ Resolved Issues
 
 -----
 
-## 2022-09-15 – 11.08.110
+## 2022-09-15 – [11.08.110](readme11.08.110.txt)
 
 ```
 The new PRIVATE BUILD 11.08.110 for IGEL Workspace is ready.
@@ -1973,7 +1973,7 @@ Resolved Issues
 
 -----
 
-## 2022-09-14 – 11.07.205
+## 2022-09-14 – [11.07.205](readme11.07.205.txt)
 
 ```
 The new PRIVATE BUILD 11.07.205 for IGEL Workspace is ready.
@@ -1999,7 +1999,7 @@ Resolved Issues
 
 -----
 
-## 2022-09-08 – 11.07.196
+## 2022-09-08 – [11.07.196](readme11.07.196.txt)
 
 ```
 The new PRIVATE BUILD 11.07.196 for IGEL Workspace is ready.
@@ -2037,7 +2037,7 @@ Resolved Issues
 
 -----
 
-## 2022-09-07 – 11.08.101
+## 2022-09-07 – [11.08.101](readme11.08.101.txt)
 
 ```
 The new PRIVATE BUILD 11.08.101 for IGEL Workspace is ready.
@@ -2091,7 +2091,7 @@ order to see if this helps the fluh264dec crashes!
 
 -----
 
-## 2022-09-02 – 11.07.203
+## 2022-09-02 – [11.07.203](readme11.07.203.txt)
 
 ```
 The new PRIVATE BUILD 11.07.911 for IGEL Workspace is ready.
@@ -2125,7 +2125,7 @@ Resolved Issues
 
 -----
 
-## 2022-09-01 – 11.07.911
+## 2022-09-01 – [11.07.911](readme11.07.911.txt)
 
 ```
 The new PRIVATE BUILD 11.07.911 for IGEL Workspace is ready.
@@ -2243,7 +2243,7 @@ Available Webex Meetings Plugins in this release: 41.10.11.5, 42.2.4.12, and
 
 -----
 
-## 2022-09-01 – 11.07.201
+## 2022-09-01 – [11.07.201](readme11.07.201.txt)
 
 ```
 The new PRIVATE BUILD 11.07.201 for IGEL Workspace is ready.
@@ -2270,7 +2270,7 @@ SCCM Add-On
 
 -----
 
-## 2022-08-30 – 11.07.152
+## 2022-08-30 – [11.07.152](readme11.07.152.txt)
 
 ```
 The new PRIVATE BUILD 11.07.152 for IGEL Workspace is ready.
@@ -2298,7 +2298,7 @@ under certain circumstances.
 
 -----
 
-## 2022-08-25 – 11.07.198
+## 2022-08-25 – [11.07.198](readme11.07.198.txt)
 
 ```
 The new PRIVATE BUILD 11.07.198 for IGEL Workspace is ready.
@@ -2324,7 +2324,7 @@ Resolved Issues
 
 -----
 
-## 2022-08-06 – 11.07.139
+## 2022-08-06 – [11.07.139](readme11.07.139.txt)
 
 
 ```
@@ -2352,7 +2352,7 @@ RdCoreSDK for further debugging heartbeat losses of some users!
 
 -----
 
-## 2022-08-03 – 11.07.191
+## 2022-08-03 – [11.07.191](readme11.07.191.txt)
 
 ```
 The new PRIVATE BUILD 11.07.191 for IGEL Workspace is ready.
@@ -2384,7 +2384,7 @@ New Features
 
 -----
 
-## 2022-07-29 – 11.07.189
+## 2022-07-29 – [11.07.189](readme11.07.189.txt)
 
 ```
 The new PRIVATE BUILD 11.07.188 for IGEL Workspace is ready.
@@ -2412,7 +2412,7 @@ New Features
 
 -----
 
-## 2022-07-22 – 11.07.188
+## 2022-07-22 – [11.07.188](readme11.07.188.txt)
 
 ```
 The new PRIVATE BUILD 11.07.188 for IGEL Workspace is ready.
@@ -2438,7 +2438,7 @@ Resolved Issues
 
 -----
 
-## 2022-07-15 – 11.07.151
+## 2022-07-15 – [11.07.151](readme11.07.151.txt)
 
 ```
 The new PRIVATE BUILD 11.07.151 for IGEL Workspace is ready.
@@ -2562,7 +2562,7 @@ default for ica.wfclient.keyboardeventmode changed to \\"Unicode\\"
 
 -----
 
-## 2022-07-14 – 11.07.181
+## 2022-07-14 – [11.07.181](readme11.07.181.txt)
 
 ```
 The new PRIVATE BUILD 11.07.181 for IGEL Workspace is ready.
@@ -2685,7 +2685,7 @@ default for ica.wfclient.keyboardeventmode changed to \\"Unicode\\"
 
 -----
 
-## 2022-07-13 – 11.07.178
+## 2022-07-13 – [11.07.178](readme11.07.178.txt)
 
 ```
 The new PRIVATE BUILD 11.07.178 for IGEL Workspace is ready.
@@ -2746,7 +2746,7 @@ by the USB Port on the endpoint or by the printers USB IDs.
 
 -----
 
-## 2022-07-13 – 11.07.179
+## 2022-07-13 – [11.07.179](readme11.07.179.txt)
 
 ```
 The new PRIVATE BUILD 11.07.179 for IGEL Workspace is ready.
@@ -2772,7 +2772,7 @@ New Features
 
 -----
 
-## 2022-07-13 – 11.07.182
+## 2022-07-13 – [11.07.182](readme11.07.182.txt)
 
 ```
 The new PRIVATE BUILD 11.07.182 for IGEL Workspace is ready.
@@ -2799,7 +2799,7 @@ emulation window to large sizes.
 
 -----
 
-## 2022-07-05 – 11.07.176
+## 2022-07-05 – [11.07.176](readme11.07.176.txt)
 
 ```
 The new PRIVATE BUILD 11.07.176 for IGEL Workspace is ready.
@@ -2847,7 +2847,7 @@ optimization.
 
 -----
 
-## 2022-07-04 – 11.07.173
+## 2022-07-04 – [11.07.173](readme11.07.173.txt)
 
 ```
 The new PRIVATE BUILD 11.07.173 for IGEL Workspace is ready.
@@ -2884,7 +2884,7 @@ device unplug
 
 -----
 
-## 2022-07-01 – 11.07.175
+## 2022-07-01 – [11.07.175](readme11.07.175.txt)
 
 ```
 The new PRIVATE BUILD 11.07.175 for IGEL Workspace is ready.
@@ -2983,7 +2983,7 @@ may be left empty if only one device shall be supported:
 
 -----
 
-## 2022-07-01 – 11.07.174
+## 2022-07-01 – [11.07.174](readme11.07.174.txt)
 
 ```
 The new PRIVATE BUILD 11.07.174 for IGEL Workspace is ready.
@@ -3028,7 +3028,7 @@ behaviour.
 
 -----
 
-## 2022-07-01 – 11.07.171
+## 2022-07-01 – [11.07.171](readme11.07.171.txt)
 
 ```
 The new PRIVATE BUILD 11.07.171 for IGEL Workspace is ready.
@@ -3054,7 +3054,7 @@ New Features
 
 -----
 
-## 2022-06-21 – 11.07.148
+## 2022-06-21 – [11.07.148](readme11.07.148.txt)
 
 ```
 The new PRIVATE BUILD 11.07.148 for IGEL Workspace is ready.
@@ -3114,7 +3114,7 @@ New Features
 
 -----
 
-## 2022-06-21 – 11.07.147
+## 2022-06-21 – [11.07.147](readme11.07.147.txt)
 
 ```
 The new PRIVATE BUILD 11.07.147 for IGEL Workspace is ready.
@@ -3342,7 +3342,7 @@ possibility to switch to a older one.
 
 -----
 
-## 2022-06-14 – 11.07.136
+## 2022-06-14 – [11.07.136](readme11.07.136.txt)
 
 
 ```
@@ -3374,7 +3374,7 @@ optimization.
 
 -----
 
-## 2022-06-14 – 11.07.144
+## 2022-06-14 – [11.07.144](readme11.07.144.txt)
 
 ```
 The new PRIVATE BUILD 11.07.144 for IGEL Workspace is ready.
@@ -3453,7 +3453,7 @@ Available Webex Meetings Plugins in this release: 42.5.5.9 **(default)**,
 
 -----
 
-## 2022-06-13 – 11.07.143
+## 2022-06-13 – [11.07.143](readme11.07.143.txt)
 
 ```
 The new PRIVATE BUILD 11.07.143 for IGEL Workspace is ready.
@@ -3506,7 +3506,7 @@ possibility to switch to a older one.
 
 -----
 
-## 2022-06-10 – 11.07.160
+## 2022-06-10 – [11.07.160](readme11.07.160.txt)
 
 ```
 The new PRIVATE BUILD 11.07.160 for IGEL Workspace is ready.
@@ -3532,7 +3532,7 @@ These are the release notes published with that release:
 
 -----
 
-## 2022-06-08 – 11.07.150
+## 2022-06-08 – [11.07.150](readme11.07.150.txt)
 
 ```
 The new PRIVATE BUILD 11.07.150 for IGEL Workspace is ready.
@@ -3584,7 +3584,7 @@ Resolved Issues
 
 -----
 
-## 2022-06-03 – 11.07.141
+## 2022-06-03 – [11.07.141](readme11.07.141.txt)
 
 ```
 The new PRIVATE BUILD 11.07.141 for IGEL Workspace is ready.

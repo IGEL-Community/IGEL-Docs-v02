@@ -47,6 +47,8 @@
 | [xinput](Cheatsheet-Linux-General.md#xinput)               | utility to configure and test X input devices |
 | [xset](Cheatsheet-Linux-General.md#xset)               | user preference utility for X |
 
+-----
+
 ## [IGELOS General](Cheatsheet-IGELOS-General.md)
 
 | command                                                 | description                                                 |
@@ -114,16 +116,19 @@
 | write_rmsettings                                        | Write local setup changes back to UMS.                      |
 | xfce4-display-settings                                  | Start the old Display Switcher as binary                    |
 | xrandr                                                  | Controls the Screens from command line                      |
+
+-----
+
 ## [IGELOS Networking](Cheatsheet-IGELOS-Networking.md)
 
-| command                                                                                | description                                                                                             |
-|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [ping](Cheatsheet-IGELOS-Networking.md#ping)                                           | test the reachability of a host                                                                         |
+| command | description |
+|---------|-------------|
+| [ping](Cheatsheet-IGELOS-Networking.md#ping)               | test the reachability of a host                                                                         |
 | [nc](Cheatsheet-IGELOS-Networking.md#nc)       | arbitrary TCP and UDP connections and listens |
 | [/etc/init.d/network-manager](Cheatsheet-IGELOS-Networking.md#etcinitdnetwork-manager) | manage network service                                                                                  |
-| [ftp](Cheatsheet-IGELOS-Networking.md#ftp)                                             | start the FTP client                                                                                    |
-| [netstat](Cheatsheet-IGELOS-Networking.md#netstat)                                     | display open connections                                                                                |
-| [hostname](Cheatsheet-IGELOS-Networking.md#hostname)                                   | display current hostname                                                                                |
+| [ftp](Cheatsheet-IGELOS-Networking.md#ftp)                 | start the FTP client |
+| [netstat](Cheatsheet-IGELOS-Networking.md#netstat)         | display open connections |
+| [hostname](Cheatsheet-IGELOS-Networking.md#hostname)       | display current hostname  |
 | [route](Cheatsheet-IGELOS-Networking.md#route)                                         | display/config network routes                                                                           |
 | [iptables](Cheatsheet-IGELOS-Networking.md#iptables)                                   | firewall configuration                                                                                  |
 | [probeport](Cheatsheet-IGELOS-Networking.md#probeport)                                 | test network port on a host                                                                             |
@@ -137,6 +142,8 @@
 | [iwlist](Cheatsheet-IGELOS-Networking.md#iwlist)                                       | display some additional information from a wireless network interface that is not displayed by iwconfig |
 | [iwevent](Cheatsheet-IGELOS-Networking.md#iwevent)                                     | display wireless events                                                                                 |
 | [iwspy](Cheatsheet-IGELOS-Networking.md#iwspy)                                         | get wireless statistics from specific nodes                                                             |
+
+-----
 
 ## [IGELOS Hardware](Cheatsheet-IGELOS-Hardware.md)
 
@@ -160,6 +167,8 @@
 | opensc-explorer                                      | Show available  Smart Cardeaders    |
 | opensc-tool                                          | Commandline  Smart Card Tool        |
 
+-----
+
 ## IGELOS Folders
 
 | folder                    | description                      |
@@ -172,6 +181,8 @@
 | /var/logs                 | Various log files                |
 | /wfs                      | Configurations / Certs           |
 
+-----
+
 ## IGELOS Files
 
 | file                  | description                              |
@@ -182,6 +193,8 @@
 | /wfs/group.ini        | Configuration from UMS                   |
 | /wfs/server.crt       | UMS Server certificate                   |
 | /wfs/setup.ini        | Local configuration                      |
+
+-----
 
 ## IGELOS Keybindings
 
@@ -195,11 +208,15 @@
 | ++ctrl+alt+f1++  | IGELOS UI              |
 | ++ctrl+alt+s++   | Access IGEL setup      |
 
+-----
+
 ## IGELOS Registry
 
 | Path                                             | description |
 |--------------------------------------------------|-------------|
 | network.interfaces.wirelesslan.device0.wpa.debug | wifi debug  |
+
+-----
 
 ## UMS-Files
 

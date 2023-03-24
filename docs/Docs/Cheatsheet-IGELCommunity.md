@@ -91,7 +91,6 @@
 | store_usbconfig                                         | :material-check-bold: | :material-check-bold:| Write config to USB Storage                                 |
 | superclasses                                            | :material-check-bold: | :material-check-bold:| List all available superclasses                             |
 | systemd-resolve --flush-caches                          | :material-check-bold: | :material-check-bold:| Flush DNS cache                                             |
-| ums_available                                           | :material-check-bold: | :material-close-circle:| Check available UMS Server                                  |
 | update                                       | :material-check-bold: | :material-close-circle:| Start firmware update                                       |
 | user_reboot                                             | :material-check-bold: | :material-check-bold:| Reboot as user                                              |
 | user_shutdown                                           | :material-check-bold: | :material-check-bold:| Shutdown as User                                            |
@@ -149,6 +148,7 @@
 | rmagent-ums-enroll | :material-close-circle: | :material-check-bold: | UMS enroll |
 | rmagent-update-device-info | :material-close-circle: | :material-check-bold: | Update device info |
 | rmagent-ws-tunnel | :material-close-circle: | :material-check-bold: | WS Tunnel |
+| ums_available                                           | :material-check-bold: | :material-close-circle:| Check available UMS Server                                  |
 
 -----
 

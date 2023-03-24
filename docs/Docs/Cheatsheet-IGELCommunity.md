@@ -253,6 +253,8 @@
 
 ## UMS-Files
 
+[Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-6.10/en/where-can-i-find-the-igel-ums-log-files-57320879.html)
+
 | file | UMS6 | UMS12 | description |
 |------|------|------|-------------|
 | api.log                                              | :material-check-bold: | :material-check-bold:| IMI interface log                                                                                                                                                                    |

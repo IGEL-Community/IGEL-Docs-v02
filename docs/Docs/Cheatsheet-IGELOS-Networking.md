@@ -78,18 +78,14 @@ Connection to mlccdnprod.azureedge.net port 443 succeeded!
 Connection to aka.ms port 443 succeeded!
 ```
 
-## /etc/init.d/network-manager
+## /lib/systemd/system/NetworkManager.service
 
 manage network service
 
 **restart network service:**
 
 ```bash linenums="1"
-/etc/init.d/network-manager restart
-```
-
-```bash linenums="1"
-[ ok ] Restarting network-manager (via systemctl): network-manager.service.
+systemctl restart NetworkManager
 ```
 
 ## ftp

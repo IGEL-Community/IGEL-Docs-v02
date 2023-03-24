@@ -1261,7 +1261,7 @@ New parameter:
 
 -----
 
-## 2022-11-08 – [11.08.206](readme11.08.206.txt)
+## 2022-11-08 – 11.08.206
 
 ```
 The new PRIVATE BUILD 11.08.206 for IGEL Workspace is ready.

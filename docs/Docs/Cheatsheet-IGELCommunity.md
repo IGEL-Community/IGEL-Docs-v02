@@ -2,240 +2,273 @@
 
 ## [Linux General](Cheatsheet-Linux-General.md)
 
-| command                                                    | description                                |
-|------------------------------------------------------------|--------------------------------------------|
-| [cat](Cheatsheet-Linux-General.md#cat)                     | display the content of a file              |
-| [cd](Cheatsheet-Linux-General.md#cd)                       | change folder                              |
-| [chmod](Cheatsheet-Linux-General.md#chmod)                 | change file attributes                     |
-| [comm](Cheatsheet-Linux-General.md#comm)             | compare two sorted files line by line |
-| [compgen](Cheatsheet-Linux-General.md#compgen)             | list all the linux commands                |
-| [cp](Cheatsheet-Linux-General.md#cp)                       | copy files and folders                     |
-| [date](Cheatsheet-Linux-General.md#date)                   | date tool                                  |
-| [echo](Cheatsheet-Linux-General.md#echo)                   | output strings                             |
-| [find](Cheatsheet-Linux-General.md#find)                   | search for files in a directory hierarchy  |
-| [grep](Cheatsheet-Linux-General.md#grep)                   | search for regular expression              |
-| [kill](Cheatsheet-Linux-General.md#kill)                   | kill a running task by process id          |
-| [killall](Cheatsheet-Linux-General.md#killall)             | kill a running task by name                |
-| [less](Cheatsheet-Linux-General.md#less)                   | less is more and allows backward movement in the file as well as forward movement |
-| lpc                                                        | Printer control tool                       |
-| lpq                                                        | Show current print jobs                    |
-| lpr                                                        | Print a file                               |
-| lprm                                                       | Delete a print job                         |
-| lpstat                                                     | Show finished print jobs                   |
-| [ls](Cheatsheet-Linux-General.md#ls)                       | show directory content                     |
-| [mkdir](Cheatsheet-Linux-General.md#mkdir)                 | create a folder                            |
-| [more](Cheatsheet-Linux-General.md#more)                   | display the content of a file page by page |
-| [mount](Cheatsheet-Linux-General.md#mount)                 | mount a partition                          |
-| [openssl](Cheatsheet-Linux-General.md#openssl) | OpenSSL command line tool |
-| [ps](Cheatsheet-Linux-General.md#ps)                       | show running tasks                         |
-| [pwd](Cheatsheet-Linux-General.md#pwd)                     | print working directory                    |
-| [rm](Cheatsheet-Linux-General.md#rm)                       | delete a file                              |
-| [rmdir](Cheatsheet-Linux-General.md#rmdir)                 | delete a folder                            |
-| [sleep](Cheatsheet-Linux-General.md#sleep)                 | wait                                       |
-| [su](Cheatsheet-Linux-General.md#su)                       | change to root                             |
-| [systemctl](Cheatsheet-Linux-General.md#systemctl)         | service handler                            |
-| [top](Cheatsheet-Linux-General.md#top)                     | task monitor                               |
-| [touch](Cheatsheet-Linux-General.md#touch)                 | create a file                              |
-| [tr](Cheatsheet-Linux-General.md#tr)                       | translates, deletes, and squeezes characters |
-| [uname](Cheatsheet-Linux-General.md#uname)                 | show linux details                         |
-| [user_reboot](Cheatsheet-Linux-General.md#user_reboot)     | reboot the system                          |
-| [user_shutdown](Cheatsheet-Linux-General.md#user_shutdown) | shutdown the system                        |
-| [vi](Cheatsheet-Linux-General.md#vi)                       | texteditor                                 |
-| [watch](Cheatsheet-Linux-General.md#watch)                 | repeat periodic a command                  |
-| [which](Cheatsheet-Linux-General.md#which)                 | locate command                             |
-| [wmctrl](Cheatsheet-Linux-General.md#wmctrl) | interact with X window manager |
-| [xinput](Cheatsheet-Linux-General.md#xinput)               | utility to configure and test X input devices |
-| [xset](Cheatsheet-Linux-General.md#xset)               | user preference utility for X |
+| command | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| [cat](Cheatsheet-Linux-General.md#cat)                     | :material-check-bold: | :material-check-bold: | display the content of a file              |
+| [cd](Cheatsheet-Linux-General.md#cd)                       | :material-check-bold: | :material-check-bold: | change folder                              |
+| [chmod](Cheatsheet-Linux-General.md#chmod)                 | :material-check-bold: | :material-check-bold: | change file attributes                     |
+| [comm](Cheatsheet-Linux-General.md#comm)             | :material-check-bold: | :material-check-bold: | compare two sorted files line by line |
+| [compgen](Cheatsheet-Linux-General.md#compgen)             | :material-check-bold: | :material-check-bold: | list all the linux commands                |
+| [cp](Cheatsheet-Linux-General.md#cp)                       | :material-check-bold: | :material-check-bold: | copy files and folders                     |
+| [date](Cheatsheet-Linux-General.md#date)                   | :material-check-bold: | :material-check-bold: | date tool                                  |
+| [echo](Cheatsheet-Linux-General.md#echo)                   | :material-check-bold: | :material-check-bold: | output strings                             |
+| [find](Cheatsheet-Linux-General.md#find)                   | :material-check-bold: | :material-check-bold: | search for files in a directory hierarchy  |
+| [grep](Cheatsheet-Linux-General.md#grep)                   | :material-check-bold: | :material-check-bold: | search for regular expression              |
+| [kill](Cheatsheet-Linux-General.md#kill)                   | :material-check-bold: | :material-check-bold: | kill a running task by process id          |
+| [killall](Cheatsheet-Linux-General.md#killall)             | :material-check-bold: | :material-check-bold: | kill a running task by name                |
+| [less](Cheatsheet-Linux-General.md#less)                   | :material-check-bold: | :material-check-bold: | less is more and allows backward movement in the file as well as forward movement |
+| lpc                                                        | :material-check-bold: | :material-check-bold: | Printer control tool                       |
+| lpq                                                        | :material-check-bold: | :material-check-bold: | Show current print jobs                    |
+| lpr                                                        | :material-check-bold: | :material-check-bold: | Print a file                               |
+| lprm                                                       | :material-check-bold: | :material-check-bold: | Delete a print job                         |
+| lpstat                                                     | :material-check-bold: | :material-check-bold: | Show finished print jobs                   |
+| [ls](Cheatsheet-Linux-General.md#ls)                       | :material-check-bold: | :material-check-bold: | show directory content                     |
+| [mkdir](Cheatsheet-Linux-General.md#mkdir)                 | :material-check-bold: | :material-check-bold: | create a folder                            |
+| [more](Cheatsheet-Linux-General.md#more)                   | :material-check-bold: | :material-check-bold:| display the content of a file page by page |
+| [mount](Cheatsheet-Linux-General.md#mount)                 | :material-check-bold: | :material-check-bold:| mount a partition                          |
+| [openssl](Cheatsheet-Linux-General.md#openssl) | :material-check-bold: | :material-check-bold:| OpenSSL command line tool |
+| [ps](Cheatsheet-Linux-General.md#ps)                       | :material-check-bold: | :material-check-bold:| show running tasks                         |
+| [pwd](Cheatsheet-Linux-General.md#pwd)                     | :material-check-bold: | :material-check-bold:| print working directory                    |
+| [rm](Cheatsheet-Linux-General.md#rm)                       | :material-check-bold: | :material-check-bold:| delete a file                              |
+| [rmdir](Cheatsheet-Linux-General.md#rmdir)                 | :material-check-bold: | :material-check-bold:| delete a folder                            |
+| [sleep](Cheatsheet-Linux-General.md#sleep)                 | :material-check-bold: | :material-check-bold:| wait                                       |
+| [su](Cheatsheet-Linux-General.md#su)                       | :material-check-bold: | :material-check-bold:| change to root                             |
+| [systemctl](Cheatsheet-Linux-General.md#systemctl)         | :material-check-bold: | :material-check-bold:| service handler                            |
+| [top](Cheatsheet-Linux-General.md#top)                     | :material-check-bold: | :material-check-bold:| task monitor                               |
+| [touch](Cheatsheet-Linux-General.md#touch)                 | :material-check-bold: | :material-check-bold:| create a file                              |
+| [tr](Cheatsheet-Linux-General.md#tr)                       | :material-check-bold: | :material-check-bold:| translates, deletes, and squeezes characters |
+| [uname](Cheatsheet-Linux-General.md#uname)                 | :material-check-bold: | :material-check-bold:| show linux details                         |
+| [user_reboot](Cheatsheet-Linux-General.md#user_reboot)     | :material-check-bold: | :material-check-bold:| reboot the system                          |
+| [user_shutdown](Cheatsheet-Linux-General.md#user_shutdown) | :material-check-bold: | :material-check-bold:| shutdown the system                        |
+| [vi](Cheatsheet-Linux-General.md#vi)                       | :material-check-bold: | :material-check-bold:| texteditor                                 |
+| [watch](Cheatsheet-Linux-General.md#watch)                 | :material-check-bold: | :material-check-bold:| repeat periodic a command                  |
+| [which](Cheatsheet-Linux-General.md#which)                 | :material-check-bold: | :material-check-bold:| locate command                             |
+| [wmctrl](Cheatsheet-Linux-General.md#wmctrl) | :material-check-bold: | :material-check-bold:| interact with X window manager |
+| [xinput](Cheatsheet-Linux-General.md#xinput)               | :material-check-bold: | :material-check-bold:| utility to configure and test X input devices |
+| [xset](Cheatsheet-Linux-General.md#xset)               | :material-check-bold: | :material-check-bold:| user preference utility for X |
 
 -----
 
 ## [IGELOS General](Cheatsheet-IGELOS-General.md)
 
-| command                                                 | description                                                 |
-|---------------------------------------------------------|-------------------------------------------------------------|
-| /config/bin/firmware-update                                       | Start firmware update                                       |
-| [apparmor_status](Cheatsheet-IGELOS-General.md#apparmor_status)                                       | Lists all services protected by apparmor                    |
-| applauncher                                             | Starts the application launcher                             |
-| [chromium-browser](Cheatsheet-IGELOS-General.md#chromium-browser) | Start Chromium Browser |
-| [curl](Cheatsheet-IGELOS-General.md#curl)               | Check for trusted certificate or download files         |
-| custompart                                              | Delete/Create a custom partition                            |
-| delinstance                                             | Delete a session or instance                                |
-| df -h                                                   | Shows Partition usage                                       |
-| florence                                                | OnScreen Keyboard                                           |
-| [get](Cheatsheet-IGELOS-General.md#get)                 | Get Variable from registry                                  |
-| get_icg_info                                          | Get ICG connection information |
-| get_rmsettings                                          | Get UMS config (reboot to apply)                            |
-| [get_unit_id](Cheatsheet-IGELOS-General.md#get_unit_id) | Get the Unit ID                                             |
-| [getmyip](Cheatsheet-IGELOS-General.md#getmyip)         | show device IP                                              |
-| gpicview                                                | Starts an Picture Viewer                                    |
-| icaconncenter                                           | ICA Connection Center                                       |
-| [icg-config](Cheatsheet-IGELOS-General.md#getmyip)      | IGEL Cloud Gateway config; with url and mass deployment key |
-| icg-setup                                               | Start the ICG GUI Setup or with parameters the CLI          |
-| igel_buddy_update_server_scan                           | Search for Buddy Masters in network                         |
-| igel_display_switcher                                   | Start the new Display Switcher                              |
-| igel_firstboot_wizard                                   | Starts the First Boot Wizard                                |
-| igel_gamma                                              | TOCHECK Should influence the brightness                     |
-| journalctl -f                                           | Sys logs anzeigen und folgen.                               |
-| killwait_postsetupd                                     | reset and applay setup changes set by "setparam"            |
-| [kinit](Cheatsheet-IGELOS-General.md#kinit)             | Active Directory login                                      |
-| [klist](Cheatsheet-IGELOS-General.md#klist)             | Display kerberos tickets                                    |
-| list                                                    | List a part of the registry                                 |
-| load_usbconfig                                          | Load config from USB Storage                                |
-| newinstace                                              | Create a session or instance                                |
-| nmcli radio wifi off                                    | Disables Wifi, On enables it                                |
-| notify-send-message                                     | Display GUI Text Message                                    |
-| numinstances                                            | Show next available instance nr.                            |
-| opensc-tool                                             | Lists opensc smartcard informations and tools               |
-| pkcs11getloginname                                      | Shows extracted smart card login name                       |
-| reset_to_defaults                                       | Factory reset                                               |
-| rmagent_cli                                             | UMS Agent commandline                                       |
-| rmagent-devattrs-enum | Lists all device attributes including the current value for this device. The enumeration is ordered according to the attribute's order id. |
-| rmagent-devattrs-enum-range <ATTRIBUTE_NAME> | Enumerates entries of the given range. The enumeration is ordered according to the range item's order id. |
-| rmagent-devattrs-get-type <ATTRIBUTE_NAME> | Prints the type of the given attribute |
-| rmagent-devattrs-get <ATTRIBUTE_NAME> | Prints the current value of the given attribute |
-| rmagent-devattrs-set <ATTRIBUTE_NAME> <ATTRIBUTE_VALUE> | Sets the given attribute to the specified value |
-| rmagent-devattrs-reset <ATTRIBUTE_NAME> | Resets the given attribute to an empty value |
-| rmagent-devattrs-sync | Send Attributes to UMS If a Value Has Been Changed by Device |
-| magent-write-device-attributes | The complete set of attributes is sent to the UMS |
-| rmregister                                              | Start tool to register @ UMS                                |
-| setcryptparam                                           | Saves encrypted Data like Password to Igel Registry         |
-| setcryptparam                                           | Write a password to the registry                            |
-| [setparam](Cheatsheet-IGELOS-General.md#setparam)       | Write variable to registry                                  |
-| setup                                                   | Start IGEL Setup                                            |
-| setusercryptparam                                       | Saves User encrypted Data like Password to Igel Registry    |
-| show_usbconfig                                          | List configs from USB Storage                               |
-| start-wireless-manager                                  | Starts the Wireless cafe menu (start as user)               |
-| store_usbconfig                                         | Write config to USB Storage                                 |
-| superclasses                                            | List all available superclasses                             |
-| systemd-resolve --flush-caches                          | Flush DNS cache                                             |
-| ums_available                                           | Check available UMS Server                                  |
-| user_reboot                                             | Reboot as user                                              |
-| user_shutdown                                           | Shutdown as User                                            |
-| vget                                                    | Get specification for a variable                            |
-| [vdm_client0](Cheatsheet-IGELOS-General.md#vdm_client0) | Start VMware Horizon client |
-| write_rmsettings                                        | Write local setup changes back to UMS.                      |
-| xfce4-display-settings                                  | Start the old Display Switcher as binary                    |
-| xrandr                                                  | Controls the Screens from command line                      |
+| command | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| [apparmor_status](Cheatsheet-IGELOS-General.md#apparmor_status)                                       | :material-check-bold: | :material-check-bold:| Lists all services protected by apparmor                    |
+| applauncher                                             | :material-check-bold: | :material-check-bold:| Starts the application launcher                             |
+| [chromium-browser](Cheatsheet-IGELOS-General.md#chromium-browser) | :material-check-bold: | :material-check-bold:| Start Chromium Browser |
+| [curl](Cheatsheet-IGELOS-General.md#curl)               | :material-check-bold: | :material-check-bold:| Check for trusted certificate or download files         |
+| custompart                                              | :material-check-bold: | :material-check-bold:| Delete/Create a custom partition                            |
+| delinstance                                             | :material-check-bold: | :material-check-bold:| Delete a session or instance                                |
+| df -h                                                   | :material-check-bold: | :material-check-bold:| Shows Partition usage                                       |
+| florence                                                | :material-check-bold: | :material-check-bold:| OnScreen Keyboard                                           |
+| [get](Cheatsheet-IGELOS-General.md#get)                 | :material-check-bold: | :material-check-bold:| Get Variable from registry                                  |
+| [get_unit_id](Cheatsheet-IGELOS-General.md#get_unit_id) | :material-check-bold: | :material-check-bold:| Get the Unit ID                                             |
+| [getmyip](Cheatsheet-IGELOS-General.md#getmyip)         | :material-check-bold: | :material-check-bold:| show device IP                                              |
+| gpicview                                                | :material-check-bold: | :material-check-bold:| Starts an Picture Viewer                                    |
+| icaconncenter                                           | :material-check-bold: | :material-check-bold:| ICA Connection Center                                       |
+| igel_buddy_update_server_scan                           | :material-check-bold: | :material-check-bold:| Search for Buddy Masters in network                         |
+| igel_display_switcher                                   | :material-check-bold: | :material-check-bold:| Start the new Display Switcher                              |
+| igel_firstboot_wizard                                   | :material-check-bold: | :material-close-circle:| Starts the First Boot Wizard                                |
+| igel_gamma                                              | :material-check-bold: | :material-check-bold:| TOCHECK Should influence the brightness                     |
+| journalctl -f                                           | :material-check-bold: | :material-check-bold:| Sys logs anzeigen und folgen.                               |
+| killwait_postsetupd                                     | :material-check-bold: | :material-check-bold:| reset and applay setup changes set by "setparam"            |
+| [kinit](Cheatsheet-IGELOS-General.md#kinit)             | :material-check-bold: | :material-check-bold:| Active Directory login                                      |
+| [klist](Cheatsheet-IGELOS-General.md#klist)             | :material-check-bold: | :material-check-bold:| Display kerberos tickets                                    |
+| list                                                    | :material-check-bold: | :material-check-bold:| List a part of the registry                                 |
+| load_usbconfig                                          | :material-check-bold: | :material-check-bold:| Load config from USB Storage                                |
+| newinstance                                             | :material-check-bold: | :material-check-bold:| Create a session or instance                                |
+| nmcli radio wifi off                                    | :material-check-bold: | :material-check-bold:| Disables Wifi, On enables it                                |
+| notify-send-message                                     | :material-check-bold: | :material-check-bold:| Display GUI Text Message                                    |
+| numinstances                                            | :material-check-bold: | :material-check-bold:| Show next available instance nr.                            |
+| opensc-tool                                             | :material-check-bold: | :material-check-bold:| Lists opensc smartcard informations and tools               |
+| pkcs11getloginname                                      | :material-check-bold: | :material-check-bold:| Shows extracted smart card login name                       |
+| reset_to_defaults                                       | :material-check-bold: | :material-check-bold:| Factory reset                                               |
+| setcryptparam                                           | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to Igel Registry         |
+| [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
+| setup                                                   | :material-check-bold: | :material-check-bold:| Start IGEL Setup                                            |
+| show_usbconfig                                          | :material-check-bold: | :material-check-bold:| List configs from USB Storage                               |
+| start-wireless-manager                                  | :material-check-bold: | :material-check-bold:| Starts the Wireless cafe menu (start as user)               |
+| store_usbconfig                                         | :material-check-bold: | :material-check-bold:| Write config to USB Storage                                 |
+| superclasses                                            | :material-check-bold: | :material-check-bold:| List all available superclasses                             |
+| systemd-resolve --flush-caches                          | :material-check-bold: | :material-check-bold:| Flush DNS cache                                             |
+| ums_available                                           | :material-check-bold: | :material-close-circle:| Check available UMS Server                                  |
+| update                                       | :material-check-bold: | :material-close-circle:| Start firmware update                                       |
+| user_reboot                                             | :material-check-bold: | :material-check-bold:| Reboot as user                                              |
+| user_shutdown                                           | :material-check-bold: | :material-check-bold:| Shutdown as User                                            |
+| [vdm_client0](Cheatsheet-IGELOS-General.md#vdm_client0) | :material-check-bold: | :material-check-bold:| Start VMware Horizon client |
+| vget                                                    | :material-check-bold: | :material-check-bold:| Get specification for a variable                            |
+| write_rmsettings                                        | :material-check-bold: | :material-check-bold:| Write local setup changes back to UMS.                      |
+| xrandr                                                  | :material-check-bold: | :material-check-bold:| Controls the Screens from command line                      |
+
+-----
+
+## IGELOS RMAGENT Commands
+
+| command | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| get_icg_info                                          | :material-check-bold: | :material-close-circle:| Get ICG connection information |
+| get_rmsettings                                          | :material-check-bold: | :material-close-circle:| Get UMS config (reboot to apply)                            |
+| [icg-config](Cheatsheet-IGELOS-General.md#icgconfig)    | :material-check-bold: | :material-close-circle:| IGEL Cloud Gateway config; with url and mass deployment key |
+| icg-setup                                               | :material-check-bold: | :material-close-circle:| Start the ICG GUI Setup or with parameters the CLI          |
+| rmagent_cli                                             | :material-check-bold: | :material-close-circle:| UMS Agent commandline                                       |
+| rmagent-devattrs-enum | :material-check-bold: | :material-close-circle:| Lists all device attributes including the current value for this device. The enumeration is ordered according to the attribute's order id. |
+| rmagent-devattrs-enum-range <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Enumerates entries of the given range. The enumeration is ordered according to the range item's order id. |
+| rmagent-devattrs-get-type <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Prints the type of the given attribute |
+| rmagent-devattrs-get <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Prints the current value of the given attribute |
+| rmagent-devattrs-set <ATTRIBUTE_NAME> <ATTRIBUTE_VALUE> | :material-check-bold: | :material-close-circle:| Sets the given attribute to the specified value |
+| rmagent-devattrs-reset <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Resets the given attribute to an empty value |
+| rmagent-devattrs-sync | :material-check-bold: | :material-close-circle:| Send Attributes to UMS If a Value Has Been Changed by Device |
+| rmagent-write-device-attributes | :material-check-bold: | :material-close-circle:| The complete set of attributes is sent to the UMS |
+| rmregister                                              | :material-check-bold: | :material-close-circle:| Start tool to register @ UMS                                |
+| rmagent-check-reenroll | :material-close-circle: | :material-check-bold: | Reenroll |
+| rmagent-connect | :material-close-circle: | :material-check-bold: | Connect |
+| rmagent-disconnect | :material-close-circle: | :material-check-bold: | Disconnect |
+| rmagent-enroll | :material-close-circle: | :material-check-bold: | Enroll |
+| rmagent-jobs | :material-close-circle: | :material-check-bold: | Jobs |
+| rmagent-manage-apps | :material-close-circle: | :material-check-bold: | Apps |
+| rmagent-merge-settings | :material-close-circle: | :material-check-bold: | Merge settings |
+| rmagent-obs-enroll | :material-close-circle: | :material-check-bold: | OBS enroll |
+| rmagent-pull-appauthtoken | :material-close-circle: | :material-check-bold: | Pull appauthtoken |
+| rmagent-pull-file | :material-close-circle: | :material-check-bold: | Pull file |
+| rmagent-pull-settings | :material-close-circle: | :material-check-bold: | Pull settings |
+| rmagent-push-appstatus | :material-close-circle: | :material-check-bold: | Push appstatus |
+| rmagent-push-runtime | :material-close-circle: | :material-check-bold: | Push runtime |
+| rmagent-push-settings | :material-close-circle: | :material-check-bold: | Push settings |
+| rmagent-push-sysinfo | :material-close-circle: | :material-check-bold: | Push sysinfo |
+| rmagent-register | :material-close-circle: | :material-check-bold: | Register |
+| rmagent-register-app | :material-close-circle: | :material-check-bold: | Register app |
+| rmagent-set-job-state | :material-close-circle: | :material-check-bold: | Set job state |
+| rmagent-set-structure-tag | :material-close-circle: | :material-check-bold: | Set structure tag |
+| rmagent-setupd-event | :material-close-circle: | :material-check-bold: | Set event |
+| rmagent-setupd-event-reset | :material-close-circle: | :material-check-bold: | Reset event |
+| rmagent-setupd-event-wait | :material-close-circle: | :material-check-bold: | Wait event |
+| rmagent-state | :material-close-circle: | :material-check-bold: | State |
+| rmagent-trust-get-zero | :material-close-circle: | :material-check-bold: | Trust get |
+| rmagent-trust-put | :material-close-circle: | :material-check-bold: | Trust put |
+| rmagent-trust-reset | :material-close-circle: | :material-check-bold: | Trust reset |
+| rmagent-ums-enroll | :material-close-circle: | :material-check-bold: | UMS enroll |
+| rmagent-update-device-info | :material-close-circle: | :material-check-bold: | Update device info |
+| rmagent-ws-tunnel | :material-close-circle: | :material-check-bold: | WS Tunnel |
 
 -----
 
 ## [IGELOS Networking](Cheatsheet-IGELOS-Networking.md)
 
-| command | description |
-|---------|-------------|
-| [ping](Cheatsheet-IGELOS-Networking.md#ping)               | test the reachability of a host                                                                         |
-| [nc](Cheatsheet-IGELOS-Networking.md#nc)       | arbitrary TCP and UDP connections and listens |
-| [/etc/init.d/network-manager](Cheatsheet-IGELOS-Networking.md#etcinitdnetwork-manager) | manage network service                                                                                  |
-| [ftp](Cheatsheet-IGELOS-Networking.md#ftp)                 | start the FTP client |
-| [netstat](Cheatsheet-IGELOS-Networking.md#netstat)         | display open connections |
-| [hostname](Cheatsheet-IGELOS-Networking.md#hostname)       | display current hostname  |
-| [route](Cheatsheet-IGELOS-Networking.md#route)                                         | display/config network routes                                                                           |
-| [iptables](Cheatsheet-IGELOS-Networking.md#iptables)                                   | firewall configuration                                                                                  |
-| [probeport](Cheatsheet-IGELOS-Networking.md#probeport)                                 | test network port on a host                                                                             |
-| [nmcli](Cheatsheet-IGELOS-Networking.md#nmcli)                                         | manage network connections via cli                                                                      |
-| [ifconfig](Cheatsheet-IGELOS-Networking.md#ifconfig)                                   | show/manage ethernet configuration                                                                      |
-| [ethtool](Cheatsheet-IGELOS-Networking.md#ethtool)                                     | tool for ethernet configuration                                                                         |
-| [getmyhwaddr](Cheatsheet-IGELOS-Networking.md#getmyhwaddr)                             | show current MAC                                                                                        |
-| [iwconfig](Cheatsheet-IGELOS-Networking.md#iwconfig)                                   | configure a wireless network interface                                                                  |
-| [getmyip](Cheatsheet-IGELOS-Networking.md#getmyip)                                     | show current IP address                                                                                 |
-| [iwgetid](Cheatsheet-IGELOS-Networking.md#iwgetid)                                     | report ESSID, NWID or AP/Cell Address of wireless network                                               |
-| [iwlist](Cheatsheet-IGELOS-Networking.md#iwlist)                                       | display some additional information from a wireless network interface that is not displayed by iwconfig |
-| [iwevent](Cheatsheet-IGELOS-Networking.md#iwevent)                                     | display wireless events                                                                                 |
-| [iwspy](Cheatsheet-IGELOS-Networking.md#iwspy)                                         | get wireless statistics from specific nodes                                                             |
+| command | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| [/lib/systemd/system/NetworkManager.service](Cheatsheet-IGELOS-Networking.md#libsystemdsystemnetworkmanagerservice) | :material-check-bold: | :material-check-bold:| manage network service                                                                                  |
+| [ethtool](Cheatsheet-IGELOS-Networking.md#ethtool)                                     | :material-check-bold: | :material-check-bold:| tool for ethernet configuration                                                                         |
+| [ftp](Cheatsheet-IGELOS-Networking.md#ftp)                 | :material-check-bold: | :material-check-bold:| start the FTP client |
+| [getmyhwaddr](Cheatsheet-IGELOS-Networking.md#getmyhwaddr)                             | :material-check-bold: | :material-check-bold:| show current MAC                                                                                        |
+| [getmyip](Cheatsheet-IGELOS-Networking.md#getmyip)                                     | :material-check-bold: | :material-check-bold:| show current IP address                                                                                 |
+| [hostname](Cheatsheet-IGELOS-Networking.md#hostname)       | :material-check-bold: | :material-check-bold:| display current hostname  |
+| [ifconfig](Cheatsheet-IGELOS-Networking.md#ifconfig)                                   | :material-check-bold: | :material-check-bold:| show/manage ethernet configuration                                                                      |
+| [iptables](Cheatsheet-IGELOS-Networking.md#iptables)                                   | :material-check-bold: | :material-close-circle:| firewall configuration                                                                                  |
+| [iwconfig](Cheatsheet-IGELOS-Networking.md#iwconfig)                                   | :material-check-bold: | :material-check-bold:| configure a wireless network interface                                                                  |
+| [iwevent](Cheatsheet-IGELOS-Networking.md#iwevent)                                     | :material-check-bold: | :material-check-bold:| display wireless events                                                                                 |
+| [iwgetid](Cheatsheet-IGELOS-Networking.md#iwgetid)                                     | :material-check-bold: | :material-check-bold:| report ESSID, NWID or AP/Cell Address of wireless network                                               |
+| [iwlist](Cheatsheet-IGELOS-Networking.md#iwlist)                                       | :material-check-bold: | :material-check-bold:| display some additional information from a wireless network interface that is not displayed by iwconfig |
+| [iwspy](Cheatsheet-IGELOS-Networking.md#iwspy)                                         | :material-check-bold: | :material-check-bold:| get wireless statistics from specific nodes                                                             |
+| [nc](Cheatsheet-IGELOS-Networking.md#nc)       | :material-check-bold: | :material-close-circle:| arbitrary TCP and UDP connections and listens |
+| [netstat](Cheatsheet-IGELOS-Networking.md#netstat)         | :material-check-bold: | :material-check-bold:| display open connections |
+| [nmcli](Cheatsheet-IGELOS-Networking.md#nmcli)                                         | :material-check-bold: | :material-check-bold:| manage network connections via cli                                                                      |
+| [ping](Cheatsheet-IGELOS-Networking.md#ping)               | :material-check-bold: | :material-check-bold:| test the reachability of a host                                                                         |
+| [probeport](Cheatsheet-IGELOS-Networking.md#probeport)                                 | :material-check-bold: | :material-check-bold:| test network port on a host                                                                             |
+| [route](Cheatsheet-IGELOS-Networking.md#route)                                         | :material-check-bold: | :material-check-bold:| display/config network routes                                                                           |
 
 -----
 
 ## [IGELOS Hardware](Cheatsheet-IGELOS-Hardware.md)
 
-| command                                              | description                         |
-|------------------------------------------------------|-------------------------------------|
-| [dmidecode](Cheatsheet-IGELOS-Hardware.md#dmidecode) | DMI (SMBIOS) table decoder          |
-| [lsusb](Cheatsheet-IGELOS-Hardware.md#lsusb)         | list USB devices                    |
-| lspci                                                | List PCI devices                    |
-| rtcwake                                              | Automatic restart/supend            |
-| speaker-test                                         | Speaker test                        |
-| aplay                                                | Audio device tool                   |
-| x11config                                            | Show display config                 |
-| get-edid                                             | Display DDC details                 |
-| saned                                                | SANE Daemon                         |
-| hardinfo                                             | Display Hardware Info's             |
-| setserial                                            | Setup/Diagnostic for RS232          |
-| amixer                                               | Audio configuration tool            |
-| free                                                 | Show memory details                 |
-| pcsclistreaders                                      | List Smart Card readers             |
-| /etc/init.d/pcscd                                    | Stop / Start Smart Card PCSC Daemon |
-| opensc-explorer                                      | Show available  Smart Cardeaders    |
-| opensc-tool                                          | Commandline  Smart Card Tool        |
+| command | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| /etc/init.d/pcscd                                    | :material-check-bold: | :material-check-bold:| Stop / Start Smart Card PCSC Daemon |
+| amixer                                               | :material-check-bold: | :material-check-bold:| Audio configuration tool            |
+| aplay                                                | :material-check-bold: | :material-check-bold:| Audio device tool                   |
+| [dmidecode](Cheatsheet-IGELOS-Hardware.md#dmidecode) | :material-check-bold: | :material-check-bold:| DMI (SMBIOS) table decoder          |
+| free                                                 | :material-check-bold: | :material-check-bold:| Show memory details                 |
+| get-edid                                             | :material-check-bold: | :material-check-bold:| Display DDC details                 |
+| hardinfo                                             | :material-check-bold: | :material-check-bold:| Display Hardware Info's             |
+| lspci                                                | :material-check-bold: | :material-check-bold:| List PCI devices                    |
+| [lsusb](Cheatsheet-IGELOS-Hardware.md#lsusb)         | :material-check-bold: | :material-check-bold:| list USB devices                    |
+| opensc-explorer                                      | :material-check-bold: | :material-check-bold:| Show available  Smart Cardeaders    |
+| opensc-tool                                          | :material-check-bold: | :material-check-bold:| Commandline  Smart Card Tool        |
+| pcsclistreaders                                      | :material-check-bold: | :material-check-bold:| List Smart Card readers             |
+| rtcwake                                              | :material-check-bold: | :material-check-bold:| Automatic restart/supend            |
+| saned                                                | :material-check-bold: | :material-check-bold:| SANE Daemon                         |
+| setserial                                            | :material-check-bold: | :material-check-bold:| Setup/Diagnostic for RS232          |
+| speaker-test                                         | :material-check-bold: | :material-check-bold:| Speaker test                        |
+| x11config                                            | :material-check-bold: | :material-check-bold:| Show display config                 |
 
 -----
 
 ## IGELOS Folders
 
-| folder                    | description                      |
-|---------------------------|----------------------------------|
-| /license/dsa/licenses     | device licenses                  |
-| /media                    | Removable Storage                |
-| /services                 | License related services         |
-| /userhome/.ICAClient/logs | ICA Client logs                  |
-| /usr/share/icons          | Contains Icons of Linux and Igel |
-| /var/logs                 | Various log files                |
-| /wfs                      | Configurations / Certs           |
+| folder | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| /license/dsa/licenses     | :material-check-bold: | :material-check-bold:| device licenses                  |
+| /media                    | :material-check-bold: | :material-check-bold:| Removable Storage                |
+| /services                 | :material-check-bold: | :material-check-bold:| License related services         |
+| /userhome/.ICAClient/logs | :material-check-bold: | :material-check-bold:| ICA Client logs                  |
+| /usr/share/icons          | :material-check-bold: | :material-check-bold:| Contains Icons of Linux and Igel |
+| /var/logs                 | :material-check-bold: | :material-check-bold:| Various log files                |
+| /wfs                      | :material-check-bold: | :material-check-bold:| Configurations / Certs           |
 
 -----
 
 ## IGELOS Files
 
-| file                  | description                              |
-|-----------------------|------------------------------------------|
-| /config/sessions      | Generated sessions                       |
-| /tmp/wpa_debug.all    | network debug log                        |
-| /wfs/dhclient-*.lease | dhcp client lease; DHCP Option 224 + 226 |
-| /wfs/group.ini        | Configuration from UMS                   |
-| /wfs/server.crt       | UMS Server certificate                   |
-| /wfs/setup.ini        | Local configuration                      |
+| file | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| /config/sessions      | :material-check-bold: | :material-check-bold:| Generated sessions                       |
+| /tmp/wpa_debug.all    | :material-check-bold: | :material-check-bold:| network debug log                        |
+| /wfs/dhclient-*.lease | :material-check-bold: | :material-check-bold:| dhcp client lease; DHCP Option 224 + 226 |
+| /wfs/group.ini        | :material-check-bold: | :material-check-bold:| Configuration from UMS                   |
+| /wfs/server.crt       | :material-check-bold: | :material-check-bold:| UMS Server certificate                   |
+| /wfs/setup.ini        | :material-check-bold: | :material-check-bold:| Local configuration                      |
 
 -----
 
 ## IGELOS Keybindings
 
-| keybinding       | description            |
-|------------------|------------------------|
-| ++ctrl+alt+tab++ | Switch active window   |
-| ++tab+tab++      | Show commands          |
-| ++ctrl+alt++ + [Fn] | Switch between console |
-| ++ctrl+alt+f11++ | terminal 1             |
-| ++ctrl+alt+f12++ | terminal 2             |
-| ++ctrl+alt+f1++  | IGELOS UI              |
-| ++ctrl+alt+s++   | Access IGEL setup      |
+| keybinding | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| ++ctrl+alt+tab++ | :material-check-bold: | :material-check-bold:| Switch active window   |
+| ++tab+tab++      | :material-check-bold: | :material-check-bold:| Show commands          |
+| ++ctrl+alt++ + [Fn] | :material-check-bold: | :material-check-bold:| Switch between console |
+| ++ctrl+alt+f11++ | :material-check-bold: | :material-check-bold:| terminal 1             |
+| ++ctrl+alt+f12++ | :material-check-bold: | :material-check-bold:| terminal 2             |
+| ++ctrl+alt+f1++  | :material-check-bold: | :material-check-bold:| IGELOS UI              |
+| ++ctrl+alt+s++   | :material-check-bold: | :material-check-bold:| Access IGEL setup      |
 
 -----
 
 ## IGELOS Registry
 
-| Path                                             | description |
-|--------------------------------------------------|-------------|
-| network.interfaces.wirelesslan.device0.wpa.debug | wifi debug  |
+| Path | OS11 | OS12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| network.interfaces.wirelesslan.device0.wpa.debug | :material-check-bold: | :material-check-bold:| wifi debug  |
 
 -----
 
 ## UMS-Files
 
-| file                                                 | description                                                                                                                                                                          |
-|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| api.log                                              | IMI interface log                                                                                                                                                                    |
-| catalina.log(.yyyy-mm-dd)                            | UMS log                                                                                                                                                                              |
-| localhost.log(.yyyy-mm-dd)                           | Tomcat log                                                                                                                                                                           |
-| communication.log                                    | communication between devices and UMS server / UMS console and UMS server log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active |
-| usgcommunication.log(.x)                             | communication between devices and ICG / UMS console and ICG log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active               |
-| license_deployment.log                               | ALD log                                                                                                                                                                              |
-| stdout.log                                           | like catalina.log but only since last server start                                                                                                                                   |
-| stderr.log                                           | JVM error output log; critical VM messages                                                                                                                                           |
-| umsthreaddump                                        | UMS ThreadDump                                                                                                                                                                       |
-| igel-ums-admin.log                                   | UMS Administrator log                                                                                                                                                                |
-| install.log                                          | UMS installation log                                                                                                                                                                 |
-| ERP_PROCESS.log                                      | support information                                                                                                                                                                  |
-| ERP_PROCESS_INFOS.log                                | support information                                                                                                                                                                  |
-| Environment.txt                                      | support information                                                                                                                                                                  |
-| thread_dump_start.\*                                 | support information                                                                                                                                                                  |
-| thread_dump_end.\*                                   | support information                                                                                                                                                                  |
-| network.interfaces.ethernet.devices%.ieee8021x.debug | 802.1x debug                                                                                                                                                                         |
+| file | OS11 | OS12 | description |
+|------|------|------|-------------|
+| api.log                                              | :material-check-bold: | :material-check-bold:| IMI interface log                                                                                                                                                                    |
+| catalina.log(.yyyy-mm-dd)                            | :material-check-bold: | :material-check-bold:| UMS log                                                                                                                                                                              |
+| localhost.log(.yyyy-mm-dd)                           | :material-check-bold: | :material-check-bold:| Tomcat log                                                                                                                                                                           |
+| communication.log                                    | :material-check-bold: | :material-check-bold:| communication between devices and UMS server / UMS console and UMS server log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active |
+| usgcommunication.log(.x)                             | :material-check-bold: | :material-check-bold:| communication between devices and ICG / UMS console and ICG log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active               |
+| license_deployment.log                               | :material-check-bold: | :material-check-bold:| ALD log                                                                                                                                                                              |
+| stdout.log                                           | :material-check-bold: | :material-check-bold:| like catalina.log but only since last server start                                                                                                                                   |
+| stderr.log                                           | :material-check-bold: | :material-check-bold:| JVM error output log; critical VM messages                                                                                                                                           |
+| umsthreaddump                                        | :material-check-bold: | :material-check-bold:| UMS ThreadDump                                                                                                                                                                       |
+| igel-ums-admin.log                                   | :material-check-bold: | :material-check-bold:| UMS Administrator log                                                                                                                                                                |
+| install.log                                          | :material-check-bold: | :material-check-bold:| UMS installation log                                                                                                                                                                 |
+| ERP_PROCESS.log                                      | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
+| ERP_PROCESS_INFOS.log                                | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
+| Environment.txt                                      | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
+| thread_dump_start.\*                                 | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
+| thread_dump_end.\*                                   | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
+| network.interfaces.ethernet.devices%.ieee8021x.debug | :material-check-bold: | :material-check-bold:| 802.1x debug                                                                                                                                                                         |

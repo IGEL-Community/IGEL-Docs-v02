@@ -253,7 +253,7 @@
 
 ## UMS-Files
 
-| file | OS11 | OS12 | description |
+| file | UMS6 | UMS12 | description |
 |------|------|------|-------------|
 | api.log                                              | :material-check-bold: | :material-check-bold:| IMI interface log                                                                                                                                                                    |
 | catalina.log(.yyyy-mm-dd)                            | :material-check-bold: | :material-check-bold:| UMS log                                                                                                                                                                              |

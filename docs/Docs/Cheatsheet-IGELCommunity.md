@@ -102,7 +102,7 @@
 
 -----
 
-## IGELOS RMAGENT Commands
+## IGELOS UMS & ICG Communication Commands
 
 | command | OS11 | OS12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|

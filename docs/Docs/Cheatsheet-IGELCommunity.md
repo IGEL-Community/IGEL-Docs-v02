@@ -277,7 +277,7 @@
 
 -----
 
-## [IGELOS 12 Packages - igelpkgctl]
+## IGELOS 12 Packages - igelpkgctl
 
 `igelpkgctl` is the command line tool to control the igelpkgd. For applications, it allows for:
 

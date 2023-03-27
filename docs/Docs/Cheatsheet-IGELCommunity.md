@@ -274,3 +274,25 @@
 | thread_dump_start.\*                                 | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
 | thread_dump_end.\*                                   | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
 | network.interfaces.ethernet.devices%.ieee8021x.debug | :material-check-bold: | :material-check-bold:| 802.1x debug                                                                                                                                                                         |
+
+-----
+
+## [IGELOS 12 Packages - igelpkgctl]
+
+`igelpkgctl` is the command line tool to control the igelpkgd. For applications, it allows for:
+
+- listing of installed
+- installing
+- updating
+- removing 
+
+The available APPs are fetched from the configured remote repositories.
+
+| command | description       |
+|---------|-------------------|
+| igelpkgctl --help | Help on usage |
+| igelpkgctl list installed | List installed applications |
+| igelpkgctl list available | List available applications |
+| igelpkgctl install <app_name> | Install application from APP Portal |
+| igelpkgctl install -f <path_to_app.ipkg> | Install application from file |
+| igelpkgctl uninstall <app_name> | Uninstall application |

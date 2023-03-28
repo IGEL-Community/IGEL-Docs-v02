@@ -69,3 +69,9 @@ Compatibility lists for Cisco Webex Meetings VDI & Cisco Webex App VDI:
 ## [Citrix HDX Webcam redirection for 64-bit applications. HowTo guide!](https://virtualbrat.com/2023/02/23/citrix-hdx-webcam-redirection-for-64-bit-applications-how-to-guide/)
 
 -----
+
+## [Cisco Webex App for VDI using IGEL OS and the known limitation with "ring all devices"](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_010.html#id_133267)
+
+**NOTE:** Cisco fix planned for 43.6 version scheduled June 2023. 
+
+- On Linux VDI clients, an incoming call does not ring all devices (including speakers on the thin client) even if that option is selected in Webex App on the HVD host. Only the audio device selected on the HVD plays the ringtone.

@@ -293,6 +293,6 @@ The available APPs are fetched from the configured remote repositories.
 | igelpkgctl --help | Help on usage |
 | igelpkgctl list installed | List installed applications |
 | igelpkgctl list available | List available applications |
-| igelpkgctl install <app_name> | Install application from APP Portal |
-| igelpkgctl install -f <path_to_app.ipkg> | Install application from file |
-| igelpkgctl uninstall <app_name> | Uninstall application |
+| igelpkgctl install `app_name` | Install application from APP Portal |
+| igelpkgctl install -f `path_to_app.ipkg` | Install application from file |
+| igelpkgctl uninstall `app_name` | Uninstall application |

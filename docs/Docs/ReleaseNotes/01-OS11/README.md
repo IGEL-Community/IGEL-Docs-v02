@@ -6,7 +6,7 @@ Shows the branches of IGEL OS.
 
 -----
 
-## [IGEL News: Private Builds](IGEL-News-Private-Builds.md)
+## [IGEL News: Builds](IGEL-News-Builds.md)
 
 Lists what changes are in the build.
 
@@ -38,6 +38,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
+    11.08.230-- 2023-03-30 -->11.08.290
     11.08.230-- 2023-03-20 -->11.08.274
     11.08.236-->11.08.256[[11.08.256]]-- 2023-03-07 -->11.08.267
     11.08.240-- 2023-03-01 -->11.08.265 
@@ -63,6 +64,7 @@ flowchart LR
     11.08.110((11.08.110))-- 2022-09-22 -->11.08.112.DER>11.08.112.DER]
     11.08.100-- 2022-09-15 -->11.08.110-- 2022-09-20 -->11.08.111
     11.08.100((11.08.100))-- 2022-09-07 -->11.08.101
+    click 11.08.290 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.290.txt" _blank
     click 11.08.274 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.274.txt" _blank
     click 11.08.273 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.273.txt" _blank
     click 11.08.268 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.268.txt" _blank

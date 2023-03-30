@@ -1,4 +1,4 @@
-# IGEL News: Private Builds
+# IGEL News: Builds
 
 **NOTE:**
 
@@ -10,6 +10,624 @@ the integrated features or bugfixes.
 Please keep in mind a Private Build is a fully supported firmware!
 ********************************************************************************
 These are the release notes published with each release:
+```
+
+-----
+
+## 2023-03-30 - [11.08.290](readme11.08.290.txt)
+
+
+```
+The new PRIVATE BUILD 11.08.290 for IGEL Workspace is ready.
+
+This build is based on 11.08.230.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Added Citrix Workspace App 2302.
+* New features:  
+* Screen pinning in custom web stores [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Multi-monitor support`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.screenpinenabled`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |disabled(default)/enabled                                        |
++------------+-----------------------------------------------------------------+
+
+* Available Citrix workspace apps: 23.02 (default), 22.11, and 20.10
+
+### Citrix NSGClient
+
+* Added Citrix EPA client for Netscaler analysis.  
+  No configuration necessary. When the Netscaler URL is opened in the browser
+  (Chromium or Firefox), the NSEPA checks configured in Netscaler are performed
+  automatically.  
+  Dynamic updates are not possible in IGEL OS, due to the read-only system.
+  Therefore, the option "Linux EPA Plugin Upgrade" must be set to "Never" in
+  Netscaler.  
+  
+* Added Citrix NSGClient client for Netscaler VPN connections.  
+  No configuration necessary. When the Netscaler URL is called in the browser
+  (Chromium or Firefox), the NSGClient is configured automatically. Additionally
+  a desktop icon can be configured by adding an instance of sessions.nsgclient%
+
+### AVD
+
+* Updated AVD client to version 1.1.12 with MS-Teams screen share and tcp buffer
+  bump fixes.
+
+### VMware Horizon
+
+* Updated VMware Horizon client to version 2212-8.8.0-21079016
+* Fixed vmware-view protocol handler used for federated (SAML-based)
+  authentication.
+* Added support for the monitors option to specify which monitors (and in what
+  order) are to be used for a all-monitros fullscreen mode.  
+  Furthermore, added minimized launch of the client window and the use of the
+  useExisting option for letting  
+  the client use an already running client to start a new desktop or app
+  session.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Specify a list of monitor numbers you want to use in all-monitors fullscreen mode` |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.use-monitors`                                       |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Specify a list of monitor numbers you want to use in all-monitors fullscreen mode` |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vdm_client%.options.use-monitors`                      |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use an already running Horizon session to start apps or desktops` |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.use-existing`                                       |
++------------+-----------------------------------------------------------------+
+|Range       | [on][off]                                                       |
++------------+-----------------------------------------------------------------+
+|Value       |**off**                                                          |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use an already running Horizon session to start apps or desktops` |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vdm_client%.options.use-existing`                      |
++------------+-----------------------------------------------------------------+
+|Range       | [Global setting][on][off]                                       |
++------------+-----------------------------------------------------------------+
+|Value       |**Global setting**                                               |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Run Horizon client in minimized mode`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.launch-minimized`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [on][off]                                                       |
++------------+-----------------------------------------------------------------+
+|Value       |**off**                                                          |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Run Horizon client in minimized mode`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vdm_client%.options.launch-minimized`                  |
++------------+-----------------------------------------------------------------+
+|Range       | [Global setting][on][off]                                       |
++------------+-----------------------------------------------------------------+
+|Value       |**Global setting**                                               |
++------------+-----------------------------------------------------------------+
+
+### Parallels Client
+
+* Updated Parallels client to version 19.1.1.
+
+### HP Anyware
+
+* Updated HP Anyware PCoIP Software Client to version 23.01.1  
+* Added new parameter in registry for enabling high-performance options
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable high performance on endpoint`                            |
++------------+-----------------------------------------------------------------+
+|Registry    |`pcoip.high_performance`                                         |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable PCoIP Ultra on host`                                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`pcoip.ultra`                                                    |
++------------+-----------------------------------------------------------------+
+|Range       | [Off][CPU Offload][GPU Offload][Auto]                           |
++------------+-----------------------------------------------------------------+
+|Value       |**Off**                                                          |
++------------+-----------------------------------------------------------------+
+
+### Firefox
+
+* Updated Firefox to version 102.8.0.
+
+### Network
+
+* Added check if BIOS has Wake-on-LAN disabled. If disabled, it is not
+  recommended to configure network interface to use WoL.  
+** Registry key:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Respect the BIOS WoL setting so if disabled reflect this for the linux network devices settings.` |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.interfaces.respect_bios_wol_setting`                    |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* This check is only supported / possible on Lenovo devices with official IGEL
+  OS hardware support.
+
+### WiFi
+
+* Added: Set default wireless regulatory domain on HP devices, based on product
+  option code.
+
+### HID
+
+* Changed touchpad parameter name from `Enable Touchpad` to `Enable Touchpad on
+  Boot` - just to clarify what is meant here.
+
++------------+-----------------------------------------------------------------+
+|Setup       |`User Interface > Input > Touchpad`                              |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Touchpad on Boot`                                        |
++------------+-----------------------------------------------------------------+
+|Tooltip     |`Can be overruled by Hotkey.`                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`userinterface.touchpad.general.TouchpadEnable`                  |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Furthermore, changed function of TouchpadOff registry key. This is now only
+  used used for switching on and off tapping.
+
++------------+-----------------------------------------------------------------+
+|Setup       |`User Interface > Input > Touchpad`                              |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Tapping Mode`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`userinterface.touchpad.general.TouchpadOff`                     |
++------------+-----------------------------------------------------------------+
+|Range       | [With tapping][Without tapping]                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**With tapping**                                                 |
++------------+-----------------------------------------------------------------+
+
+### CUPS Printing
+
+* Updated PrinterLogic (Vasion) PrinterInstallerClient to version 25.1.0.625
+
+### Cisco Webex
+
+* Integrated Cisco Webex VDI 43.2  
+  
+  Note: Webex VDI requires a compatible Webex Meetings plugin installed in the
+  client.
+* Integrated Cisco Webex Meetings VDI Plugin 43.2.1.18  
+  Available Webex Meetings Plugins in this release: 43.2.1.18 (default),
+  42.10.8.14 and 42.6.11.6
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.1.3.307560
+
+### Base system
+
+* Updated sscep to version 0.10.0
+* Added CPU temperature monitoring tools:  
+  Graphical tool /usr/bin/psensor  
+  Command line tool /usr/bin/sensors
+* Changed the default mem sleep mode to deep as some devices defaults to s2idle
+  which cases issues.  
+* Added new registry key to set the suspend mem sleep mode.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set suspend mem sleep mode.`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.suspend.sleep_mode`                                     |
++------------+-----------------------------------------------------------------+
+| Range      | [Suspend to RAM][Suspend to idle]                               |
++------------+-----------------------------------------------------------------+
+| Value      | **Suspend to RAM**                                              |
++------------+-----------------------------------------------------------------+
+
+* Updated DriveLock Agent to version 22.2.2.42489 (2022.2).
+* Added for LVFS Bios update support:  
+** Improved version detection of installed BIOS version with fwupd.  
+** Added registry key for enabling installion of not signed BIOS files
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Allow only signed cab files (sometimes this must be switched off as not all BIOS files are signed).` |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.allow_only_trusted`                          |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Added registry key to enable bluetooth debugging messages.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Activate bluetooth debugging.`                                  |
++------------+-----------------------------------------------------------------+
+|Registry    |`devices.bluetooth.debug`                                        |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+### CID Key Agent
+
+* Update of Stratusphere Connector ID Key to version 6.6.2-3
+
+### X11 system
+
+* Added new registry key to activate tear-free for modesetting driver
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Enable tear free option for modesetting driver`                |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.drivers.modesetting.use_tear_free`                           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### Multimedia
+
+* Added VP9 video hardware acceleration.
+* Added new registry key to switch from fluendo to vaapi gstreamer plugin for
+  h264 hardware acceleration.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Switch from Fluendo to VAAPI h264 hardware accelerated decoder.` |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.gstreamer.use_vaapi_for_h264`                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### zoomvdi
+
+* Updated Zoom VDI plugin to version 5.13.1.22610 and 5.12.6.22200  
+  Available Zoom VDI plugins in this release: 5.13.1.22610 (default),
+  5.12.6.22200 and 5.8.4.21112
+* Updated Zoom VDI plugin 5.13.10.23090  
+  Available plugins in this release: 5.13.10.23090 (default), 5.12.6.22200 and
+  5.8.4.21112
+
+### Hardware
+
+* Added hardware support for HP USB-C G5 ESSENTIAL DOCK
+* Added hardware support for Lenovo ThinkCentre Neo50q Gen 4 (Celeron) device.  
+* Added hardware support for Lenovo ThinkCentre Neo50q Gen 4 (i3) device.
+* Added hardware support for Lenovo ThinkCentre M75q Gen 2 device.
+* Added hardware support for Lenovo K14 Gen 1 (AMD based) device.
+* Added hardware support for Lenovo ThinkCentre M70q Gen 3 device.
+* Added hardware support for HP t740.
+* Added hardware support for Lenovo K14 Gen1 (INTEL) device.
+
+### TC Setup (Java)
+
+* Added usage of long(er) device names - with port name in Audio Setup now. This
+  affects "Default Sound Output" and "Default Sound Input" configuration at
+  setup page Accessories - Sound Preferences - Options. The change is backwards-
+  compatible.
+
+### Fabulatech
+
+* Updated Fabulatech USB for Remote Desktop version 6.1.2.9
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed forbidden file access. If enabled, downloads, bookmarks and printing in
+  Chromium is disabled.
+* Fixed Chromium-browser security issues CVE-2023-0941, CVE-2023-0933,
+  CVE-2023-0932, CVE-2023-0931, CVE-2023-0930, CVE-2023-0929, CVE-2023-0928,
+  CVE-2023-0927, CVE-2023-0705, CVE-2023-0704, CVE-2023-0703, CVE-2023-0702,
+  CVE-2023-0701, CVE-2023-0700, CVE-2023-0699, CVE-2023-0698, CVE-2023-0697,
+  CVE-2023-0696, CVE-2023-0474, CVE-2023-0473, CVE-2023-0472, CVE-2023-0471,
+  CVE-2023-0141, CVE-2023-0140, CVE-2023-0139, CVE-2023-0138, CVE-2023-0137,
+  CVE-2023-0136, CVE-2023-0135, CVE-2023-0134, CVE-2023-0133, CVE-2023-0132,
+  CVE-2023-0131, CVE-2023-0130, CVE-2023-0129, CVE-2023-0128, CVE-2022-4440,
+  CVE-2022-4439, CVE-2022-4438, CVE-2022-4437 and CVE-2022-4436.  
+* Updated Chromium-browser to version 110.0.5481.177.
+
+### Network
+
+* Fixed privilege escalation in network management.
+
+### Base system
+
+* Fixed privilege escalation in setup_cmd tool.
+* Changed: For security reasons, the default password protection value for the
+  System Information accessory is set to Administrator.
+
++------------+-----------------------------------------------------------------+
+|IGEL Setup  |Accessories > System Information                                 |
++============+=================================================================+
+|Parameter   |`Password protection`                                            |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.device_manager0.pwprotected`                           |
++------------+-----------------------------------------------------------------+
+|Value       |**Administrator** (default)                                      |
++------------+-----------------------------------------------------------------+
+
+* Fixed empty password entry for floppy group.
+* Fixed sysstat security issue CVE-2022-39377.  
+* Fixed binutils security issue CVE-2022-38533.  
+* Fixed libarchive security issues CVE-2022-36227 and CVE-2022-28066.  
+* Fixed curl security issues  CVE-2023-23916, CVE-2023-23915, CVE-2023-23914,
+  CVE-2022-43552, CVE-2022-43551, CVE-2022-42916, CVE-2022-42915, CVE-2022-35260
+  and CVE-2022-32221.  
+* Fixed xorg-server security issues CVE-2022-46344, CVE-2022-46343,
+  CVE-2022-46342, CVE-2022-46341, CVE-2022-46340 and CVE-2022-46283.  
+* Fixed libksba security issue CVE-2022-47629.  
+* Fixed nautilus security issue CVE-2022-37290.  
+* Fixed python2.7 security issue CVE-2022-45061.  
+* Fixed python3.6 security issue CVE-2022-45061.  
+* Fixed net-snmp security issues CVE-2022-44793, CVE-2022-44792 and
+  CVE-2022-4479.  
+* Fixed tiff security issue CVE-2022-3970.  
+* Fixed webkit2gtk security issues CVE-2023-23518, CVE-2023-23517,
+  CVE-2022-42826, CVE-2022-46700, CVE-2022-46699, CVE-2022-46698,
+  CVE-2022-46692, CVE-2022-46691, CVE-2022-42867, CVE-2022-42863, CVE-2022-42856
+  and CVE-2022-42852.  
+* Fixed qemu security issues CVE-2022-4172 and CVE-2022-3165.  
+* Fixed vim security issue CVE-2022-0392.  
+* Fixed sudo security issue CVE-2023-22809.  
+* Fixed libxpm security issues CVE-2022-4883, CVE-2022-46285 and CVE-2022-44617.  
+* Fixed zulu8-ca security issues CVE-2023-21830, CVE-2023-21835 and
+  CVE-2023-21843.  
+* Fixed heimdal security issues CVE-2022-45142, CVE-2022-44640, CVE-2022-42898,
+  CVE-2022-41916, CVE-2022-3437 and CVE-2021-44758.  
+* Fixed python-setuptools security issue CVE-2022-40897.  
+* Fixed pam security issue CVE-2022-28321.  
+* Fixed mysql-5.7 security issue CVE-2023-21840.  
+* Fixed xorg-server security issue CVE-2023-0494.  
+* Fixed e2fsprogs security issue CVE-2022-1304.  
+* Fixed openssl1.0 security issues CVE-2023-0286 and CVE-2023-0215.  
+* Fixed openssl security issues CVE-2023-0286, CVE-2023-0215, CVE-2022-4450 and
+  CVE-2022-4304.  
+* Fixed tpm2-tss security issue CVE-2023-22745.  
+* Fixed nss security issue CVE-2023-0767.  
+* Fixed python3.6 security issue CVE-2022-37454.  
+* Fixed tiff security issues CVE-2023-0804, CVE-2023-0803, CVE-2023-0802,
+  CVE-2023-0801, CVE-2023-0800, CVE-2023-0799, CVE-2023-0798, CVE-2023-0797,
+  CVE-2023-0796 and CVE-2023-0795.  
+* Fixed rsync security issue CVE-2022-29154.  
+* Fixed tar security issue CVE-2022-48303.
+* Updated ca-certificates to version 20230311.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed H264 codec: When the server was configured to update only regions which
+  have changed, sometimes massive glitches in the shape of green rectangles
+  appeared.
+* Fixed: Expired DigiCertSHA2SecureServerCA certificate was replaced with a
+  valid one.
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP fullscreen-toggle not working when trying to switch from fullscreen
+  to windowed mode.
+
+### AVD
+
+* Fixed MS-Teams optimized video playback to not slow down on high CPU load.
+* Fixed percentage (%) window size settings.
+* Fixed workarea session window size.
+* Fixed multimonitor switching during session.
+* Supports all kinds of multi monitor constellations.
+* MS-Teams optimization stability fixes.
+* Fixed Zoom VDI support for multimonitor.
+* Fixed video encoder buffer queuing up endlessly and crashing the client when
+  it runs out of memory. Instead we drop webcam frames when the CPU cannot catch
+  up with encoding.
+* Fixed MS Teams screenshare on multi-monitor.
+* Fixed session size preset to take effect when not multi-monitor.
+* Added fixes from the latest RdClientSDK including the TCP buffer bump to avoid
+  unwanted client session dis-/reconnections.
+
+### NX client
+
+* The value of sessions.nxclient%.general.commandline is not converted to
+  lowercase anymore when being written to a session config file
+
+### Chromium
+
+* Fixed Chromium browser could not be restarted after closing it too quickly.
+* Fixed ClearBrowsingDataOnExitList policy for Chromium browser.
+* Fixed Chromium browser not starting if persistent partition was missing.
+
+### Firefox
+
+* Mozilla Firefox 102 ESR starting Citrix Desktops, requires an ica file to
+  start sessions.
+* In normal browser session, the following parameter must be disabled:  
+  Sessions > Firefox Browser > Firefox Browser Global > Security > Hide local
+  filesystem
+* If browser appliance mode is used, following is required to activate :
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`File system access needed for ica file handling`                |
++------------+-----------------------------------------------------------------+
+|Registry    |`browserglobal.app.ica-file-access-needed`                       |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+* Fixed Registry parameter sessions.browser\<instance>.gstreamer_version: If set
+  to 1.0 via setup, 0.10 was activated and vice versa.
+
+### Network
+
+* Added registry key for choosing the base of decisions regarding automatically
+  switching on and off enabling Wi-Fi carrier : either completed IP
+  configuration of an Ethernet interface (default, traditional implementation)
+  or just Ethernet carrier. The new key has no effect if
+  network.applet.wireless.enable_wifi_auto_switch is false.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Wi-Fi automatic switch on Ethernet carrier change`       |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.applet.wireless.enable_wifi_auto_switch_on_carrier`     |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+* Fixed set of 100Mbps ethernet modes
+* Improved reliability of Ethernet configuration on IGEL D220 devices
+* Fixed disabling of WoL - which was not applied without a reboot.
+
+### WiFi
+
+* Fixed: System regulatory domain now also set on the self-managed driver
+  rtl8852be
+* Fixed default wireless regulatory domain for HP devices delivered to Indonesia
+  - by detecting the HP option code.
+* Fixed: HP Probook 450 G8 with Intel AX201 Wifi.
+* Improved finding hidden SSIDs with MT7922 WLAN adapter (e.g. in  Lenovo
+  ThinkPad L14 Gen 3)
+* Improved restoration of Wi-Fi rfkill state on startup
+
+### Imprivata
+
+* Improved error messages on PIN enrollment.
+
+### Smartcard
+
+* Fixed cryptas TicTok v3 smartcards for usage within Horizon sessions.
+* Fixed sporadic duplicated smartcard user entries at login screen.
+
+### Cisco Webex
+
+* Integrated Cisco Webex Meetings VDI Plugin 42.6.11.6
+
+### Base system
+
+* Added new registry key to set left-hand on touchpad devices
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Left hand`                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | `userinterface.touchpad.general.LeftHand`                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **disabled** (default)                                          |
++------------+-----------------------------------------------------------------+
+
+* Fixed sporadic delayed local logon when logon logging is enabled.
+* Fixed German translation of "Enter new password" in password change dialog of
+  local login window.
+* Fixed starter license on devices with multiple network interfaces.
+* Fixed autostart notification.
+* Fixed error message on login screen in case Kerberos KDC (domain controller)
+  is unreachable.
+* Added Fluendo h264 codec version 24012023, which fixes stability issues with
+  AVD MS-Teams optimization.
+* Changed default of registry key devices.bluetooth.connect_only to true to make
+  connect after reboot for bluetooth the new default.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Connect devices without pairing`                               |
++------------+-----------------------------------------------------------------+
+| Registry   | `devices.bluetooth.connect_only`                                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Fixed WoL BIOS setting detection for Lenovo M75q Gen 2.
+* Fixed "fwupdmgr get-devices" command.
+* Fixed disabling of the "BIOS Tools" feature on setup page System > Firmware
+  Customization > Features.
+* Improved Bluetooth auto connect.
+
+### X11 system
+
+* Fixed monitor refresh rate handling in Display Switcher.
+* Fixed issue that display switcher settings were overwritten by UMS if network
+  connection changed and the display switcher is still open.
+* Added registry key to influence the graphic card order in IGEL setup.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Preserve card order in setup even if the X11 order of the cards was changed.` |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.drivers.preserve_order_if_swapped`                           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Changed default X11 graphic driver from modesetting to intel on Dell Wyse
+  5070.
+
+### Audio
+
+* Added new registry key to limit max headphone volume (setting will survive a
+  reset to factory defaults)
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Limit max headphone volume (use auto or 0 - 100 as values).`   |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.alsa.limit_headphone_volume`                        |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | auto **Default**                                                |
++------------+-----------------------------------------------------------------+
+
+* Fixed audio output on jack in LG 24CN650N device.
+
+### Hardware
+
+* Fixed issue on specific monitors stayed black after resume (DPMS off).
 ```
 
 -----

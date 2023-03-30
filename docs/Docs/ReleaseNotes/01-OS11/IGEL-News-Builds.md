@@ -18,16 +18,10 @@ These are the release notes published with each release:
 
 
 ```
-The new PRIVATE BUILD 11.08.290 for IGEL Workspace is ready.
+The new BUILD 11.08.290 for IGEL Workspace is ready.
 
 This build is based on 11.08.230.
 
-********************************************************************************
-Do not share this build unless you have customers who need one of
-the integrated features or bugfixes.
- 
-Please keep in mind a Private Build is a fully supported firmware!
-********************************************************************************
 These are the release notes published with that release:
 
 New Features

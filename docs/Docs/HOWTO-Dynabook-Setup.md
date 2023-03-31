@@ -44,8 +44,8 @@
 4. Select Security tab.
 5. Set Secure Boot to \<Disabled>.
 6. Select Boot tab.
-7. Set Boot Option \# 1 to \<USB Memory>.
-8. Set Boot Option \# 2 to \<HDD/SSD>.
+7. Set Boot Option \# 1 to `<USB Memory>`.
+8. Set Boot Option \# 2 to `<HDD/SSD>`.
 9. Save the settings and exit [F10].
 10. Connect the IGEL OSC USB stick to the device.
 11. Reboot the device.

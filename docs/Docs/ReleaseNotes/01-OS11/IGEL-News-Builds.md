@@ -14,8 +14,220 @@ These are the release notes published with each release:
 
 -----
 
-## 2023-03-30 - [11.08.290](readme11.08.290.txt)
+## 2023-03-31 - [11.08.292](readme11.08.292.txt)
 
+```
+The new PRIVATE BUILD 11.08.292 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+Known Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* To launch multiple desktop sessions with Citrix HDX RTME and Citrix H.264  
+  acceleration plugin, the following registry key needs to be enabled:
++------------+-----------------------------------------------------------------+
+|Parameter   |`Activate workaround for dual RTME sessions and H264 acceleration` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.workaround-dual-rtme`                                       |
++------------+-----------------------------------------------------------------+
+|Range       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+* This workaround is not applicable when \\"Enable Secure ICA\\" is active for the  
+  specific delivery group.
+* Adding smartcard readers during running / active session does not work. The
+  reader is visible, but cannot be used due to unknown reader status. Only
+  relevant for CWA versions earlier than 2112.
+* There are known issues with GStreamer 1.0 in combination with Citrix. These
+  occure with multimedia redirection of H.264, MPEG1 and MPEG2. (GStreamer 1.0
+  is used if browser content redirection is enabled active.)
+* Browser content redirection does not work when DRI3 and hardware accelerated
+  H.264 deep compression codec is enabled.
+* Enabled DRI3 on an AMD GPU with enabled Citrix H.264 acceleration could lead
+  to a freeze. Selective H.264 mode (API v2) is not affected from this issue.  
+* Citrix H.264 acceleration plugin does not work with **enabled** server policy
+  \\"Optimize for 3D graphics workload\\" in combination with server policy \\"Use
+  video codec compression\\" -> *\\"For the entire screen\\"**.
+* Currently H.264 for Citrix sessions cannot be used in parallel with video
+  input acceleration.
+* While starting Self-Service, it is possible that process ServiceRecord
+  segfaults -> Self-Service cannot be started afterwards.  
+  A cache cleanup with reboot is needed. In addition, the following parameters
+  should set to true.
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up UI cache after Self-Service termination`               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupwebui`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up Store cache after Self-Service termination`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupstore`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+* Logoff of Self-Service causes a segfault with CWAL 2211 which ends the
+  application. Restart of Self-Service is functional.
+* Browser Content Redirection (BCR) may not work with Chrome version 105.0.* or
+  later
+* White/ green fragments may appear during desktop launch, if JPEG graphical
+  codec is used, 
+
+### OSC Installer
+* OSC not deployable with IGEL Deployment Appliance: Version 11.3 or later is
+  required for deploying IGEL OS 11.06. and following.
+
+### AVD
+* AVD MS-Teams optimization can crash the AVD client if H264 software decoder is
+  used (fluh264dec). AVD prefers the hardware decoders (fluvadec) but when there
+  are no hardware decoders or when all hardware decoders are in use already, the
+  software decoder is utilized which may randomly crash the AVD client. It is
+  likely when it crashes in a certain MS-Teams call, it might crash quite soon
+  again when rejoining the same call. A fix for that is in development. A
+  workaround is to disable incoming video in such MS-Teams calls, which is an
+  option in the \\"...\\" menu from the control bar during an active call.
+* H.264 hardware decoding for MS-Teams optimization is currently limited to non-
+  AMD devices due to stability issues on AMD devices.
+
+### VMware Horizon
+* After disconnect of an RDP-based session, the Horizon main window which
+  contains the server or sessions overview, cannot be resized anymore.
+* Copying text from Horizon Blast sessions is not possible.
+* The on-screen keyboard in Horizon appliance mode does not work correctly with
+  local logon.  
+  It is necessary to switch off local logon and enable the following two keys
+  via IGEL registry:  
+  userinterface.softkeyboard.autoshow  
+  userinterface.softkeyboard.autohide
+* Zoom VDI Media Plugin versions below 5.8.0 make Horizon Client crash upon
+  connection to the remote desktop when TCSetup is running at the same time.
+* With usage of PCoIP protocol, the virtual channel provided by VMware used for
+  serial port and scanner redirection could freeze on logout from remote
+  session.  
+  
+  This happens only with enabled scanner or serial port redirection.  
+  The freeze does not occur if both redirection methods are enabled or none of
+  them. The Blast Protocol is not affected by this bug.  
+  
+  The respective settings can be found in the IGEL Registry:  
+  vmware.view.enable-serial-port-redir  
+  vmware.view.enable-scanner-redir
+* Keyboard Input Source Language Synchronization works only with usage of local
+  layout and deadkeys enabled.  
+  If a keyboard layout is used which has deadkeys disabled (which is the default
+  on IGEL OS), Horizon client falls back to en-US layout.
+* PCoIP sessions may crash in some cases, switch to Blast Protocol is
+  recommended then. H.264/HEVC encoding can be disabled when overall performance
+  is too low.
+* Client drive mapping and USB redirection for storage devices can be enabled at
+  the same time, but this could lead to sporadic problems.  
+  Horizon Client tracks the drives which are dynamically mounted and adds them
+  to the remote session using client drive mapping, means USB redirection is not
+  used for theses devices then.  
+  However, in case of devices like USB SD card readers, Horizon does not map
+  them as client drives but forcefully uses USB-redirection which results in an
+  unclean unmount.  
+  As a work-around, the IDs of these card readers can be added to IGEL USB
+  access rules and denied.
+
+### Parallels Client
+* Attached storage devices appear as network drives in the remote session  
+* USB device redirection is considered as experimental for the Parallels client
+  for Linux
+
+### Firefox
+* With enabled Citrix Browser Content Redirection, Firefox has no H.264 and AAC
+  multimedia codec support. Means, when codec support is needed in Firefox, BCR
+  needs to be disabled. Citrix Browser Content Redirection is disabled by
+  default.
+* Multimedia playback in Firefox is unstable if GStreamer version 0.10 is
+  active. The default GStreamer version for Firefox
+  sessions.browser\\<inst>.gstreamer_version was set to 1.0.
+
+### Network
+* Wakeup from system suspend fails on DELL Latitude 5510
+* If applications are configured to start after established network connection
+  and network mounts are configured, spurious \\"Failed to start application\\"
+  notifications may be shown. The applications still start.
+* Set of credentials for manual system wide proxy is broken.
+
+### WiFi
+* TP-Link Archer T2UH WiFi adapters does not work after system suspend/resume.
+  Workaround: Disable system suspend at IGEL Setup > System > Power Options >
+  Shutdown.
+
+### Cisco JVDI Client
+* There may be a segfault shown in the logs (during logout of Citrix Desktop
+  session). Occurs only when using Citrix Workspace App 2010 and Cisco JVDI.
+
+### Base system
+* Hyper-V (Generation 2) needs a lot of memory (RAM). The machine needs a
+  sufficient amount of memory allocated.
+* Update from memory stick requires network online state (at least when multiple
+  update stages are triggered / necessary)
+
+### Conky
+* The right screen when using multiscreen environment may not be shown
+  correctly.  
+  Workaround: The horizontal offset should be set to the width of the monitor
+  (e.g. if the monitor has a width of 1920, the offset should be set to 1920)
+
+### Firmware update
+* On devices with 2 GB of flash storage it could happen that there is not enough
+  space for updating all features. In this case, a corresponding error message
+  occurs. Please visit [https://kb.igel.com/igelos-11.04/en/error-not-enough-
+  space-on-local-drive-when-updating-to-igel-os-11-04-or-higher-32870765.html]
+  for a possible solution and additional information.
+
+### Appliance Mode
+* When ending a Citrix session in browser appliance mode, the browser is
+  restarted twice (instead of once).
+* Appliance mode RHEV/Spice: spice-xpi firefox plugin is no longer supported.
+  The \\"Console Invocation\\" has to allow 'Native' client (auto is also possible)
+  and should be started in fullscreen to prevent any opening windows.
+* Browser Appliance mode can fail when the Web URL contains special control
+  characters like ampersand (& character).  
+  Workaround: Add quotes at the beginning and the end of an affected URL. E.g.:  
+  'https://www.google.com/search?q=aSearchTerm&source=lnms&tbm=isch'
+
+### Audio
+* IGEL UD2 (D220) fails to restore the volume level of the speaker when the
+  device used firmware version 11.01.110 before.
+* Audio jack detection on Advantec POC-W243L does not work. Therefore, sound
+  output goes through a possibly connected headset and also the internal
+  speakers.
+* UD3-M340C: Sound preferences are showing Headphone & Microphone, although not
+  connected.
+
+### Multimedia
+* Multimedia redirection with GStreamer could fail when using Nouveau GPU
+  driver.
+
+### Hardware
+* Some newer Delock 62599 active DisplayPort to DVI (4k) adapters only work on
+  INTEL-based devices.
+* Wake up from suspend via UMS does not work on HP mt645 devices. Workaround:
+  Disable system suspend and use shutdown instead.
+
+### Remote Management
+* AIT feature with IGEL Starter License is only supported by UMS version
+  6.05.100 or newer.
+```
+
+-----
+
+## 2023-03-30 - [11.08.290](readme11.08.290.txt)
 
 ```
 The new BUILD 11.08.290 for IGEL Workspace is ready.

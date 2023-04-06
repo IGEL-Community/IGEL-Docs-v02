@@ -49,3 +49,15 @@ USBDEVICE=$(/usr/lib/cups/backend/usb 2>/dev/null | cut -d " " -f 2)
 
 lpadmin -p USBPRINTER -E -v "${USBDEVICE}" -m /wfs/USBPRINTER.ppd
 ```
+
+-----
+
+## Registry key to change settings
+
+IGEL OS registry key `print.cups.printer%.lpoptions:`
+
+The expected format is like so:
+
+`-o InputSlot=Tray3 -o HPOption_Tray3=HP550SheetInputTray -o OutputBin=FrontBin`
+
+To test by using use the browser's print dialog (and choose the systems dialog).

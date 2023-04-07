@@ -614,3 +614,21 @@ By default, the files are stored on the local WebDAV repository via HTTPS. Click
 You can now manage devices that are outside the corporate network via UMS and ICG. If you have any questions, please contact your IGEL Channel partner or IGEL Sales Rep and they can forward your request to an Engineer.
 
 **NOTE:** You can also use [IGEL Community on Slack](https://www.igelcommunity.com/)
+
+-----
+
+## UMS Database Sizing
+
+- Number of registered firmware definitions (listed in UMS Console > Misc > Firmware Statistics) have the largest impact on database size
+
+- Number of devices or profiles have minor impact
+
+- Log entries (event- and log messages, jobs, admin task history, ..) grow over time; make sure to use UMS admin tasks to prune them regularly
+
+- As a Rule of Thumb
+  - ~15 MB per firmware configuration (10 max – as noted in link below)
+  - ~100kB per profile (depends on how many parameter are active)
+  - ~100kB per device
+  - Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
+ 
+[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-6.10/en/installation-and-sizing-guidelines-for-igel-ums-57320929.html)

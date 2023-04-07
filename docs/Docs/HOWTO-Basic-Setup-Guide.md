@@ -625,10 +625,11 @@ You can now manage devices that are outside the corporate network via UMS and IC
 
 - Log entries (event- and log messages, jobs, admin task history, ..) grow over time; make sure to use UMS admin tasks to prune them regularly
 
-- As a Rule of Thumb
-  * ~15 MB per firmware configuration (10 max – as noted in link below)
-  * ~100kB per profile (depends on how many parameter are active)
-  * ~100kB per device
-  * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
+- As a Rule of Thumb:
+
+    * ~15 MB per firmware configuration (10 max – as noted in link below)
+    * ~100kB per profile (depends on how many parameter are active)
+    * ~100kB per device
+    * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
  
 [Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-6.10/en/installation-and-sizing-guidelines-for-igel-ums-57320929.html)

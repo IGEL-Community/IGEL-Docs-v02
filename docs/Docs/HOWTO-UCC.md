@@ -1,10 +1,10 @@
 # HOWTO UCC
 
-# [IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
+## [IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
 
 -----
 
-# Addendum to UCC Guide
+## Addendum to UCC Guide
 
 -----
 

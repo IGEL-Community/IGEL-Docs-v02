@@ -75,3 +75,31 @@ Compatibility lists for Cisco Webex Meetings VDI & Cisco Webex App VDI:
 **NOTE:** Cisco fix planned for 43.6 version scheduled June 2023. 
 
 - On Linux VDI clients, an incoming call does not ring all devices (including speakers on the thin client) even if that option is selected in Webex App on the HVD host. Only the audio device selected on the HVD plays the ringtone.
+
+-----
+
+## Bandwidth Requirements for Various Types of Users
+ 
+When determining minimum bandwidth requirements for Citrix / VMware, plan with the following estimates:
+ 
+- `100 to 150Kbps` average bandwidth for a basic office productivity desktop: typical office applications with no video, no 3D graphics, and the default Windows and Citrix / VMware settings. 
+- `50 to 100Kbps` average bandwidth for an optimized office productivity desktop: typical office applications with no video, no 3D graphics, with Windows desktop settings optimized and Citrix / Horizon optimized.
+- `400 to 600Kbps` average bandwidth for virtual desktops utilizing multiple monitors, 3D, Aero, and Microsoft Office. 
+- `500Kbps to 1Mbps` minimum peak bandwidth to provide headroom for bursts of display changes. In general, size your network using the average bandwidth, but consider peak bandwidth to accommodate bursts of imaging traffic associated with large screen changes.
+- `2Mbps` per simultaneous user running 480p video, depending upon the configured frame rate limit and the video type. 
+ 
+### Example -- Branch or Remote Office Scenario
+
+- Users have basic Microsoft Office productivity applications, no video, no 3D graphics, and USB keyboards and mouse devices. 
+- The bandwidth required per typical office user on Horizon is from 50-150Kbps.
+- The T1 network capacity is 1.5Mbps.
+- Bandwidth utilization is 80 percent (.8 utilization factor).
+ 
+### Formula for Determining the Number of Users Supported
+ 
+- In the worst case, users require `150Kbps: (1.5Mbps*.8)/150Kbps = (1500*.8)/150 = 8 users`
+- In the best case, users require `50Kbps: (1.5Mbps*.8)/50Kbps = (1500*.8)/50 = 24 users`
+ 
+Result 
+ 
+- This remote office can support between 8 and 24 concurrent users per T1 line with 1.5Mbps capacity.

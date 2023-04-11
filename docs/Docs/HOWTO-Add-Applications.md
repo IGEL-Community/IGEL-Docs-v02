@@ -41,3 +41,38 @@ Use at your own risk!
 -----
 
 ## OS12 App SDK (Coming 18 April)
+
+-----
+
+## Do you have a UD Pocket with IGEL OS 12 from Disrupt?
+
+Here are some steps to try out until 18 April GA
+
+Steps to test out your UDPocket
+
+- Boot device
+- Skip -- Let's connect to the company network
+- Skip -- Use the one-time password to onboard this device?
+- Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
+- Reboot
+- Open a Terminal Window as root (add terminal session from setup)
+- Register device in my personal UMS: rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL 
+- List packages to install: igelpkgctl list
+- Install lastest Chromium: igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)
+- Open Setup to add a Chromium session
+
+[Options for igelpkgctl](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/?h=igelpkgctl#igelos-12-packages-igelpkgctl)
+
+If you need to reset device then direct message on IGEL Community on Slack (`@Ron Neher - IGEL`) about the device (IGEL ABOUT) and I will delete it.
+
+Then you can reset device and add it back in:
+
+Run the following command as root in terminal window:
+
+mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
+
+-----
+
+**NOTE:** Can also be used to test out OS12 without a UMS12.
+
+-----

@@ -42,7 +42,9 @@ bash makeboot.sh /dev/device_mount_point (for example from dmesg: /dev/sda1)
 
 ## Configure VirtualBox on IGEL OS
 
-[LINK to Sample VirtualBox UMS Profile](Profiles/HOWTO-Run-VirtualBox-VMs-on-IGELOS-VirtualBox-profile.xml)
+<a href="../Profiles/HOWTO-Run-VirtualBox-VMs-on-IGELOS-VirtualBox-profile.xml" download>LINK to Sample VirtualBox UMS Profile</a>
+
+
 
 ### Steps to be done on IGEL OS:
 

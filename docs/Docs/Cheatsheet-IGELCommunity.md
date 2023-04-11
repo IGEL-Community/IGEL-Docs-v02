@@ -97,7 +97,7 @@
 | [vdm_client0](Cheatsheet-IGELOS-General.md#vdm_client0) | :material-check-bold: | :material-check-bold:| Start VMware Horizon client |
 | vget                                                    | :material-check-bold: | :material-check-bold:| Get specification for a variable                            |
 | write_rmsettings                                        | :material-check-bold: | :material-check-bold:| Write local setup changes back to UMS.                      |
-| xrandr                                                  | :material-check-bold: | :material-check-bold:| Controls the Screens from command line                      |
+| [xrandr](Cheatsheet-IGELOS-General.md#xrandr)  | :material-check-bold: | :material-check-bold:| Controls the Screens from command line  |
 
 -----
 

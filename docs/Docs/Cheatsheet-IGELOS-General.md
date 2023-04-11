@@ -160,3 +160,27 @@ After creating a VMware Horizon session, you can get it to run fully as User fro
 ```bash linenums="1"
 su -c "XDG_RUNTIME_DIR=/run/user/777 /config/sessions/vdm_client0" user &
 ```
+
+## xrandr
+
+Controls the Screens from command line
+
+Scale down a 4k-monitor in conference room to match laptop display resolution.
+
+- Find the outputs
+
+```bash linenums="1"
+su user -c xrandr
+```
+
+- Example 1:
+
+```bash linenums="1"
+su user -c xrandr --output DISPLAY1 --rate 60 --mode 1920x1080 --fb 1920x1080 --panning 1920x1080* --output DISPLAY2 --mode 1920x1080 --same-as DISPLAY1
+```
+
+- Example 2:
+
+```bash linenums="1"
+xrandr —output HDMI-1 —rate 60 —mode 1920x1080 —fb 1920x1080 —panning 1920x1080* —output eDP-1 —mode 1920x1080 —same-as HDMI-1
+```

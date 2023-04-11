@@ -59,13 +59,19 @@ Steps to test out your UDPocket
 - Register device in my personal UMS:
 
 ```bash linenums="1"
-rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL`
+rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL
 ```
 
 - List packages to install:
 
 ```bash linenums="1"
 igelpkgctl list
+```
+
+- Update to latest version of IGEL OS
+
+```bash linenums="1"
+igelpkgctl install $(igelpkgctl list | grep base_system- | tail -1)
 ```
 
 - Install lastest Chromium:

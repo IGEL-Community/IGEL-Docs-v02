@@ -59,6 +59,6 @@ Steps to enable:
   - Open up IGEL Setup. ++ctrl+alt+s++
   - Select **System > Registry**.
   - Select **network.interfaces.wirelesslan.wireless_backend**.
-  - Wi-Fi backend set to **<iNet Wireless Daemon (iwd)>**.
+  - Wi-Fi backend set to **iNet Wireless Daemon (iwd)**.
   - Select **Ok**.
   - Reboot the device.

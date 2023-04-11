@@ -56,10 +56,25 @@ Steps to test out your UDPocket
 - Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
 - Reboot
 - Open a Terminal Window as root (add terminal session from setup)
-- Register device in my personal UMS: rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL 
-- List packages to install: igelpkgctl list
-- Install lastest Chromium: igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)
-- Open Setup to add a Chromium session
+- Register device in my personal UMS:
+
+```bash linenums="1"
+rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL`
+```
+
+- List packages to install:
+
+```bash linenums="1"
+igelpkgctl list
+```
+
+- Install lastest Chromium:
+
+```bash linenums="1"
+igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)
+```
+
+- Open Setup to add a Chromium session: ++ctrl+alt+s++ 
 
 [Options for igelpkgctl](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/?h=igelpkgctl#igelos-12-packages-igelpkgctl)
 
@@ -69,7 +84,9 @@ Then you can reset device and add it back in:
 
 Run the following command as root in terminal window:
 
+```bash linenums="1"
 mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
+```
 
 -----
 

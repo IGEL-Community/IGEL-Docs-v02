@@ -24,7 +24,8 @@ IGEL Knowledge Base: [OpenConnect VPN](https://kb.igel.com/igelos-11.08.200/en/o
 
 ## OTP (One Time Password) for OpenConnect VPN Client
 
-[OTP Profile for OpenConnect](Profiles/HOWTO-Use-OpenConnect-VPN-Client-OTP-profile.xml)
+<a href="../Profiles/HOWTO-Use-OpenConnect-VPN-Client-OTP-profile.xml" download>LINK to OTP Profile for OpenConnect</a>
+
 
 **Note:** A reboot is needed once profile is applied (firmware update to add OpenConnect, and for script to be applied).
 

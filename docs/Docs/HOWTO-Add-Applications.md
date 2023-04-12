@@ -74,7 +74,15 @@ igelpkgctl list
 igelpkgctl install $(igelpkgctl list | grep base_system- | tail -1)
 ```
 
-- Install lastest Chromium:
+- Install lastest AVD client:
+
+```bash linenums="1"
+igelpkgctl install $(igelpkgctl list | grep avd- | tail -1)
+```
+
+- Open Setup to add a AVD session: ++ctrl+alt+s++ 
+
+- Install lastest Chromium client:
 
 ```bash linenums="1"
 igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)

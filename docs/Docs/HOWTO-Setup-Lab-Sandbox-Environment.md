@@ -94,7 +94,7 @@ IGEL OS using VMware:
 
 IGEL OS on Hyper-V:
 
-- Allocated at least 4GB (4096) of memory (RAM)
+- Allocated at least 4GB (4096 MB) of memory
 - Create Generation 1 VM
 - Remove the Network adapter
 - Add a Legacy Network adapter

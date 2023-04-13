@@ -37,8 +37,14 @@ cp /etc/os-release etc-os-release.txt
 cp /wfs/group.ini wfs-group.ini
 tar cvjf var-log.tar.bz2 /var/log
 
+# uncomment following line for Citrix
+#tar cvjf citrix-user-logs.tar.bz2 /userhome/.ICAClient/logs 
+
 # uncomment following line for VMware Horizon
 #tar cvjf vmware-user-logs.tar.bz2 /tmp/vmware-user
+
+# uncomment following line for OpenSC Smart Card (scard.pkcs11.opensc.default.debug = 9 ; scard.pkcs11.opensc.default.debug_file = /tmp/opensc.log)
+#tar cvjf opensc-logs.tar.bz2 /tmp/opensc.log
 
 # uncomment following line if using Imprivata
 #/services/imprivata/bin/fetch_support_info imprivata_logs_$(date +%y%m%d%H%M).zip

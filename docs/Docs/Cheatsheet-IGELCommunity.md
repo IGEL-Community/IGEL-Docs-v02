@@ -119,9 +119,9 @@
 | rmagent-devattrs-sync | :material-check-bold: | :material-close-circle:| Send Attributes to UMS If a Value Has Been Changed by Device |
 | rmagent-write-device-attributes | :material-check-bold: | :material-close-circle:| The complete set of attributes is sent to the UMS |
 | rmregister                                              | :material-check-bold: | :material-close-circle:| Start tool to register @ UMS                                |
-| rmagent-check-reenroll | :material-close-circle: | :material-check-bold: | Reenroll |
-| rmagent-connect | :material-close-circle: | :material-check-bold: | Connect |
-| rmagent-disconnect | :material-close-circle: | :material-check-bold: | Disconnect |
+| rmagent-check-reenroll | :material-close-circle: | :material-check-bold: | Check the validity of the device’s certificate and reenroll a new one if the specified number of days are left before expiring date or the certificate is already expired |
+| rmagent-connect | :material-close-circle: | :material-check-bold: | Connects to the UMS where the device is registered |
+| rmagent-disconnect | :material-close-circle: | :material-check-bold: | Disconnect an established connection |
 | rmagent-enroll | :material-close-circle: | :material-check-bold: | Enroll |
 | rmagent-jobs | :material-close-circle: | :material-check-bold: | Jobs |
 | rmagent-manage-apps | :material-close-circle: | :material-check-bold: | Apps |
@@ -129,24 +129,24 @@
 | rmagent-obs-enroll | :material-close-circle: | :material-check-bold: | OBS enroll |
 | rmagent-pull-appauthtoken | :material-close-circle: | :material-check-bold: | Pull appauthtoken |
 | rmagent-pull-file | :material-close-circle: | :material-check-bold: | Pull file |
-| rmagent-pull-settings | :material-close-circle: | :material-check-bold: | Pull settings |
+| rmagent-pull-settings | :material-close-circle: | :material-check-bold: | Get the latest settings from UMS |
 | rmagent-push-appstatus | :material-close-circle: | :material-check-bold: | Push appstatus |
-| rmagent-push-runtime | :material-close-circle: | :material-check-bold: | Push runtime |
-| rmagent-push-settings | :material-close-circle: | :material-check-bold: | Push settings |
-| rmagent-push-sysinfo | :material-close-circle: | :material-check-bold: | Push sysinfo |
+| rmagent-push-runtime | :material-close-circle: | :material-check-bold: | Push the current runtime information to UMS |
+| rmagent-push-settings | :material-close-circle: | :material-check-bold: | Push the current settings to UMS |
+| rmagent-push-sysinfo | :material-close-circle: | :material-check-bold: | Push the current system information to UMS |
 | rmagent-register | :material-close-circle: | :material-check-bold: | Register |
-| rmagent-register-app | :material-close-circle: | :material-check-bold: | Register app |
+| rmagent-register-app | :material-close-circle: | :material-check-bold: | Registers a specific app from the device in UMS |
 | rmagent-set-job-state | :material-close-circle: | :material-check-bold: | Set job state |
 | rmagent-set-structure-tag | :material-close-circle: | :material-check-bold: | Set structure tag |
 | rmagent-setupd-event | :material-close-circle: | :material-check-bold: | Set event |
 | rmagent-setupd-event-reset | :material-close-circle: | :material-check-bold: | Reset event |
 | rmagent-setupd-event-wait | :material-close-circle: | :material-check-bold: | Wait event |
-| rmagent-state | :material-close-circle: | :material-check-bold: | State |
+| rmagent-state | :material-close-circle: | :material-check-bold: | Retrieve the current state of the rmagent |
 | rmagent-trust-get-zero | :material-close-circle: | :material-check-bold: | Trust get |
 | rmagent-trust-put | :material-close-circle: | :material-check-bold: | Trust put |
 | rmagent-trust-reset | :material-close-circle: | :material-check-bold: | Trust reset |
 | rmagent-ums-enroll | :material-close-circle: | :material-check-bold: | UMS enroll |
-| rmagent-update-device-info | :material-close-circle: | :material-check-bold: | Update device info |
+| rmagent-update-device-info | :material-close-circle: | :material-check-bold: | Send the essential device’s information to the UMS and receive the latest settings and assigned objects |
 | rmagent-ws-tunnel | :material-close-circle: | :material-check-bold: | WS Tunnel |
 | ums_available                                           | :material-check-bold: | :material-close-circle:| Check available UMS Server                                  |
 
@@ -296,3 +296,17 @@ The available APPs are fetched from the configured remote repositories.
 | igelpkgctl install `app_name` | Install application from APP Portal |
 | igelpkgctl install -f `path_to_app.ipkg` | Install application from file |
 | igelpkgctl uninstall `app_name` | Uninstall application |
+
+-----
+
+## IGELOS 12 Licensing
+
+| command | description       |
+|---------|-------------------|
+| journalctl -u igel-dsad | The license status is reported in the journal |
+| licensestatus | Show current license status |
+| licenseauthtoken | Show auth token embedded in the license (usually in evaluation license) |
+| install_igel_license `license file` | Manually install a license file |
+| delete_igel_licenses `service id` | Manually remove a license of a type. For example, `SUB_SERVICE_SET_WORKSPACE_EDITION` |
+| delete_igel_licenses `ALL` | | Delete all licenses |
+

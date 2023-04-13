@@ -82,6 +82,25 @@ flowchart TD
 
 -----
 
+## Using other Hypervisors
+
+IGEL OS using VMware:
+
+- Create new Virtual Machine (select IGEL ISO image)
+- Choose Operating System (Other > Other 64-bit)
+- Choose Firmware Type (Legacy BIOS)
+- Change memory from 256 MB to 4096 MB
+- Change Network Adapter to Bridged Networking > Autodetect
+
+IGEL OS on Hyper-V:
+
+- Allocated at least 4GB (4096) of memory (RAM)
+- Create Generation 1 VM
+- Remove the Network adapter
+- Add a Legacy Network adapter
+
+-----
+
 ## Setup PC File System and Downloads
 
 Create a folder called igel-lab to hold:

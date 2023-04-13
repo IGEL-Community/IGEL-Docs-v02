@@ -43,6 +43,11 @@ tar cvjf var-log.tar.bz2 /var/log
 # uncomment following line if using Imprivata
 #/services/imprivata/bin/fetch_support_info imprivata_logs_$(date +%y%m%d%H%M).zip
 
+# run IGEL log collection
+/config/bin/create_support_information
+mkdir tclogs
+unzip /tmp/tclogs.zip -d tclogs
+
 cd ..
 
 zip -r data_dump.zip data_dump

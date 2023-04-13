@@ -308,5 +308,5 @@ The available APPs are fetched from the configured remote repositories.
 | licenseauthtoken | Show auth token embedded in the license (usually in evaluation license) |
 | install_igel_license `license file` | Manually install a license file |
 | delete_igel_licenses `service id` | Manually remove a license of a type. For example, `SUB_SERVICE_SET_WORKSPACE_EDITION` |
-| delete_igel_licenses `ALL` | | Delete all licenses |
+| delete_igel_licenses `ALL` | Delete all licenses |
 

@@ -103,7 +103,7 @@ mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_d
 ```
 Or (new command with OS12 - `delete_igel_licenses ALL`)
 ```bash linenums="1"
-delete_igel_licenses ALL && && reset_to_defaults && reboot
+delete_igel_licenses ALL && reset_to_defaults && reboot
 ```
 
 -----

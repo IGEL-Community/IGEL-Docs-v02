@@ -25,7 +25,7 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 ### Steps to collect the log files (as root)
 
-```bash
+```bash linenums="1"
 #!/bin/bash
 # Need to be run as root
 
@@ -44,7 +44,7 @@ Edit Imprivata.conf file to reduce the Failovertime from 8 minutes to one minute
 
 Create a profile and add the following command to custom commands - Desktop - Before desktop starts:
 
-```bash
+```bash linenums="1"
 sed '/\[agent\]/i [mainloader.SSL]\nReadTimeout=15\nWriteTimeout=15\n ' /usr/lib/imprivata/runtime/etc/Imprivata.conf
 ```
 
@@ -71,7 +71,7 @@ There are two ways to get the metadata field values for an application window fr
 To get the metadata field values from a log file, follow this procedure on one Imprivata ProveID Embedded endpoint:
 
 1. Enable logging of application window activity. Set ProveID Embedded configuration option `log-activity = True` in the [windows.monitor] section of the Imprivata.conf configuration file. Edit the Imprivata.conf file located in /imprivata folder:
-```bash
+```bash linenums="1"
     [windows.monitor]
     log-activity = True
 ```
@@ -218,6 +218,36 @@ An issue may occur when using default directory rules with appliance mode, where
 
 -----
 
+## 22 August 2022 - Unable to access OS feature menus after upgrading the Linux thin clients to PIE 7.7 and above
+
+- Issue: After upgrading the IGEL clients with ProveID Embedded 7.7 we are unable to access the menus from the IGEL OS, preventing our users to accessing the Display Switch and Sound Settings functionality.
+
+- Cause: This is caused by a security feature that has been implemented in Imprivata 7.7 that hides any application that tries to be displayed on top of the PIE lock screen if it hasn't been previously allowed.
+
+- Resolution: In order to allow an application to be displayed on top of the PIE lock screen, some information will need to be collected previously for the PIE agent to detect this screen correctly.
+    - The fastest way to collect this information is to exit the PIE agent by pressing Ctrl + Power Menu Arrow Up, this should display the option to Exit the PIE agent. Please note that the Computer Policy applied to this Linux Thin Client will need to allow the users to exit the OneSign agent.
+    - Once the PIE agent has been exited, the Linux Thin Client lock screen will be shown, we should now be able to invoke the desired OS feature (Display Switch, Sound Settings), launch the desired menu that needs to be allowed and then SSH with root access to the Linux device.
+    - In the SSH session, execute the following two commands to start gathering the information about the window menu that needs to be allowed, when this is executed the cursor will change to a cross symbol.
+
+    ```bash linenums="1"
+    export DISPLAY=:0
+    xprop
+    ```
+
+    - Click on the desired window, and then collect the following information from the SSH session, note that many more lines will be shown.
+
+    ```bash linenums="1"
+    WM_CLASS(STRING) = "sun-awt-X11-XFramePeer", "IGEL Setup"
+    WM_NAME(STRING) = "IGEL Setup 11.05.133.01 (Build 6.7.5)"
+    ```
+
+    - Please note that the above information is only an example.
+    - With the information gathered, navigate to the Imprivata Admin Console, and then on the Gear icon, select the ProveID Embedded option. In this menu you will have the option to create an allowed application with the information gathered.
+    - For more detailed information on the above steps or different methods to gather this information, please visit the Imprivata Documentation regarding this functionality on the page below: [Allowing an Application Window Atop the ProveID Embedded Lock Screen](https://support.imprivata.com/CommunitySecureHelpRedirect?helpLink=Topics/ImprivataPlatform/VDA/ProveIDEmbedded/App_Atop_PIE_Lock_Screen.htm)
+
+
+-----
+
 ## Sample setup of Imprivata with a screensaver that locks
 
 The screensaver settings are in the Imprivata Appliance Computer Policy set for IGEL ProveID devices.
@@ -280,7 +310,7 @@ Location of the configuration file: `/usr/lib/imprivata/runtime/etc/Imprivata.co
 
 Edit the file with nano editor: `nano /usr/lib/imprivata/runtime/etc/Imprivata.conf`
 
-```bash
+```bash linenums="1"
 [windows.monitor]
 log-activity = True
 ```

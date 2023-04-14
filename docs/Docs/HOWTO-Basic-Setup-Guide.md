@@ -150,7 +150,7 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
-  L[UMS Web App]-- Port *443 TCP --> C{UMS Server}
+  L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
 ```
 
 #### IGEL OS 12 Devices

@@ -53,8 +53,7 @@ The hash of the certificate can be viewed with the following command:
 openssl x509 -fingerprint -noout -in /wfs/zert.pem | sed 's/://g'
 ```
 
-<a href="../Profiles/HOWTO-Use-OpenConnect-VPN-Trust-Cert-profile.xml" download>LINK to OTP Profile for OpenConnect</a>
-
+<a href="../Profiles/HOWTO-Use-OpenConnect-VPN-Trust-Cert-profile.xml" download>LINK to Profile for OpenConnect and Cisco ASA Firewall with untrusted Cert</a>
 -----
 
 ## OpenConnect VPN Client Documentation

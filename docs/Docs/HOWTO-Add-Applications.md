@@ -62,6 +62,8 @@ Steps to test out your UDPocket
 rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL
 ```
 
+**Note:** Reboot after registering device.
+
 - List packages to install:
 
 ```bash linenums="1"

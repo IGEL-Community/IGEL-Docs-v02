@@ -54,6 +54,7 @@ openssl x509 -fingerprint -noout -in /wfs/zert.pem | sed 's/://g'
 ```
 
 <a href="../Profiles/HOWTO-Use-OpenConnect-VPN-Trust-Cert-profile.xml" download>LINK to Profile for OpenConnect and Cisco ASA Firewall with untrusted Cert</a>
+
 -----
 
 ## OpenConnect VPN Client Documentation

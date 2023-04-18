@@ -14,6 +14,96 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-04-18 - [11.08.298](readme11.08.298.txt)
+
+```
+The new PRIVATE BUILD 11.08.298 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### VNC Viewer
+* Added VNC viewer parameter to control if current or all monitors are used when
+  switching to full-screen mode.
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use all monitors in full-screen mode`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vncviewer<num>.option.fullscreenallmonitors`           |
++------------+-----------------------------------------------------------------+
+|Value       |**disabled**(default)/enabled                                    |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
+## 2023-04-18 - [11.08.297](readme11.08.297.txt)
+
+```
+The new PRIVATE BUILD 11.08.297 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+* Integrated Citrix workspace app 23.03  
+  Available workspace apps in this release: 22.09 (default), 23.02, and 23.03  
+  New features:  
+*  Inactivity Timeout for Citrix Workspace app
++------------+-----------------------------------------------------------------+
+|Parameter   |`Inactivity Timeout for Citrix Workspace app`                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.itoenabled`                                         |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+*  Background blurring for webcam redirection
++------------+-----------------------------------------------------------------+
+|Parameter   |`Background blurring for webcam redirection`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.HDXWebCamEnableBackgndEffect`                      |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+* Integrated RTME 2.9.600 for Skype for Business
+### zoomvdi
+* Available Zoom VDI clients in this release: 5.13.1.22610 (default),
+  5.12.6.22200 and 5.11.2.21530
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firefox
+* Fixed possibility to have more than one Firefox session running  
+  which effectively was prevented by app-armor lacking  
+  an additional exception for the Firefox 102 esr.
+* Fixed possibility to handle ica files required to start  
+  Citrix sessions by restoring the former Firefox behavior.  
+  Thus download of temporary files which have a dedicated  
+  handler can be made even when file download in general  
+  is be forbidden for the user.
+```
+
+-----
+
 ## 2023-04-12 - [11.08.294](readme11.08.294.txt)
 
 ```

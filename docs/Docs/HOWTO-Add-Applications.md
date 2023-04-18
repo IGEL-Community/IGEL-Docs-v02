@@ -46,7 +46,9 @@ Use at your own risk!
 
 ## Do you have a UD Pocket with IGEL OS 12 from Disrupt?
 
-Here are some steps to try out until 18 April GA
+## Want to test out OS12 with App Portal without UMS12?
+
+Here are some steps to try out
 
 Steps to test out your UDPocket
 
@@ -55,14 +57,11 @@ Steps to test out your UDPocket
 - Skip -- Use the one-time password to onboard this device?
 - Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
 - Reboot
+- Open the App Portal and install applications
+
+### Optional - Use igelpkgctl command line
+
 - Open a Terminal Window as root (add terminal session from setup)
-- Register device in my personal UMS:
-
-```bash linenums="1"
-rmagent-register -s 73.98.126.35 -p 8443 -a TRY-IGEL
-```
-
-**Note:** Reboot after registering device.
 
 - List packages to install:
 
@@ -94,9 +93,8 @@ igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)
 
 [Options for igelpkgctl](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/?h=igelpkgctl#igelos-12-packages-igelpkgctl)
 
-If you need to reset device then direct message on IGEL Community on Slack (`@Ron Neher - IGEL`) about the device (IGEL ABOUT) and I will delete it.
 
-Then you can reset device and add it back in:
+### Optional - How to reset a device
 
 Run the following command as root in terminal window:
 
@@ -107,9 +105,3 @@ Or (new command with OS12 - `delete_igel_licenses ALL`)
 ```bash linenums="1"
 delete_igel_licenses ALL && reset_to_defaults && reboot
 ```
-
------
-
-**NOTE:** Can also be used to test out OS12 without a UMS12.
-
------

@@ -50,7 +50,7 @@ Use at your own risk!
 
 Here are some steps to try out
 
-Steps to test out your UDPocket
+Steps to test out your UDPocket or OS12 installed device
 
 - Boot device
 - Skip -- Let's connect to the company network

@@ -63,6 +63,8 @@ Remove for now
 - [02-UMS](Docs/ReleaseNotes/02-UMS)
 - [03-IGC](Docs/ReleaseNotes/03-ICG)
 
+### [IGEL Software Downloads](https://www.igel.com/software-downloads/)
+
 -----
 
 ## IGEL KB (PDF files)

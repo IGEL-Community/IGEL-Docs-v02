@@ -201,11 +201,11 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosm
 
 -----
 
-## UMS to/from IGEL OS Communication ports (NO ICG)
+## UMS to/from IGEL OS 11 Communication ports (NO ICG)
 
 [UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html)
 
-### Core Communication
+### Core Communication UMS / OS 11
 
 - Core (scanning for device) : 30005 (TCP/UDP) : (UMS agent) Device : The device responds to a broadcast sent by the UMS during a scan. The port number to be used is contained in the UDP packet sent by the UMS. From UMS Server: `nc -v -z IGEL-OS-IP-ADDRESS 30005`
 
@@ -213,7 +213,7 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosm
 
 - Core (file transfer, firmware customization, licenses, Universal Firmware Update) : 8443 (TCP) : UMS Server (Windows: service IGELRMGUIServer; Linux: daemon igelRMServer). Request for files. From IGEL OS: `nc -v -z UMS-SERVER-IP-ADDRESS 8443`
 
-### Optional Communication
+### Optional Communication UMS / OS 11
 
 - Core (secure terminal) : 30022 (TCP) : Device (UMS agent). From UMS Server: `nc -v -z IGEL-OS-IP-ADDRESS 30022`
 
@@ -225,7 +225,7 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosm
 
 -----
 
-## ICG to/from IGEL OS Communication ports (443 or 8443)
+## ICG to/from IGEL OS 11 Communication ports (443 or 8443)
 
 All communication over 8443 (default) or 443 as defined during installation of ICG.
 
@@ -238,7 +238,7 @@ Core (with ICG) : 8443 (default) or 443. From IGEL OS: `nc -v -z ICG-SERVER-IP-A
 - Connect to ICG via HTTPS URL to confirm the health of the server: `https://<icg FQDN>:port/usg/server-status` where port is either 8443 or 443.
 -----
 
-## Optional - Install ICG from UMS
+## Optional - Install ICG from UMS (OS 11)
 
 - Follow VirtualBox guide for installing ISO image (Ubuntu 64 bit; 4GB RAM; 25GB Disk, take defaults for the rest)
 - After install then install time synchronization, update OS and upgrade OS

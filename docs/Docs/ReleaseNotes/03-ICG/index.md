@@ -1,6 +1,7 @@
 
 # IGEL ICG Release Notes
 
+- [12.01.100](Readme-12.01.100.txt)
 - [2.05.110](Readme-2.05.110.txt)
 - [2.05.100](Readme-2.05.100.txt)
 - [2.04.100](Readme-2.04.100.txt)

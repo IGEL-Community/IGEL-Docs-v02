@@ -4,7 +4,7 @@
 
 **NOTE:** This guide follows KB article -- First Steps with IGEL OS 11 and adds optional IGEL Cloud Gateway (ICG) setup.
 
-[IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
+[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
 
 -----
 
@@ -38,7 +38,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 
 ### Create an IGEL OS formatted USB stick to convert your endpoint
 
-- [Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/workspace-edition/)
+- [OS11 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/workspace-edition/)
+- [OS12 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/cosmos/)
 - Insert a spare USB stick. We recommend 4GB or larger.
 - Unzip the OSC file you downloaded and run Preparestick.exe.
 
@@ -64,7 +65,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | IGEL   | Del     |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
--	[A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.
+-	[OS11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.
+-	[OS12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html). Choose the options best for you.
 -	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. [See a tutorial video for installing IGEL OS here](https://www.youtube.com/watch?v=w-EMUDS5Tb0).
 
 ### Option 2: Purchase New 3rd-Party Hardware and Install IGEL OS 
@@ -107,7 +109,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 ### Prepare the Server
 
 - UMS can install on several 64-bit Windows and Linux operating systems.
-- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-6.10/en/installation-requirements-for-the-igel-ums-57320977.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
+- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.01/en/installation-requirements-for-the-igel-ums-77864394.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
 - The UMS can be installed on-prem or in the cloud (Azure, AWS, Hosting Providers, etc.) on a physical or virtual machine.
 
 ### Install the UMS Software
@@ -120,7 +122,7 @@ The Installation Wizard will cover the following setup items:
 -	End User License Agreement
 -	Target directory for installation (default recommended)
 -	Select Components (defaults recommended – this will install the UMS software, embedded database, Java console and web console)
--	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-6.10/en/changing-the-ums-superuser-57322085.html), which is a separate application from the UMS Console.)
+-	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-12.01/en/changing-the-ums-superuser-77865352.html), which is a separate application from the UMS Console.)
 -	UMS data directory (default recommended)
 -	Start menu folder (default recommended)
 -	Network Ports (UMS will do a port check and open required network ports on the local server for you if you allow it)
@@ -131,7 +133,7 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 ### Configure UMS Network Ports
 
-The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-6.10/en/ums-communication-ports-57320114.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
+The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
 ```mermaid
 flowchart TD
@@ -325,7 +327,7 @@ From the endpoint running IGEL OS (not from the UMS):
 
 -	In UMS, go to UMS Administration > UMS Global Configuration > Licenses > Deployment and hit the refresh button in the top right menu and your licenses from the ILP should appear in the window.
 
--	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-6.10/en/automatic-license-deployment-ald-57320310.html).
+-	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-12.01/en/automatic-license-deployment-ald-77863879.html).
 
 -----
 
@@ -644,4 +646,4 @@ You can now manage devices that are outside the corporate network via UMS and IC
     * ~100kB per device
     * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
  
-[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-6.10/en/installation-and-sizing-guidelines-for-igel-ums-57320929.html)
+[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-12.01/en/installation-and-sizing-guidelines-for-igel-ums-77864359.html)

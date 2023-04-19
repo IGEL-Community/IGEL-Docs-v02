@@ -10,6 +10,8 @@ Remove for now
 ## [IGEL Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
 -->
 
+## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
+
 ## [IGEL KB - Overview: First Steps with IGEL OS11](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
 
 ## [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)

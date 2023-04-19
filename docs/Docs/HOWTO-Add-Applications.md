@@ -36,11 +36,15 @@ Use at your own risk!
 
 -----
 
-## OS12 App Portal (Coming 18 April)
+## [OS12 App Portal](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
+
+- With IGEL OS 12, the modular principle is introduced – you can install and update single applications like Citrix or AVD client, Chromium browser, etc. individually. All applications currently available for IGEL OS 12 can be found in the IGEL App Portal. 
 
 -----
 
-## OS12 App SDK (Coming 18 April)
+## OS12 App SDK (Coming soon)
+
+- Build your own IGEL OS App with IGEL OS App SDK
 
 -----
 

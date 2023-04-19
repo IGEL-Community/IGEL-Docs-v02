@@ -126,10 +126,10 @@ Create a folder called igel-lab to hold:
 
 Download software:
 
--	[VirtualBox](https://www.virtualbox.org/) and install. IGEL OS 11 has VirtualBox Guest Additions built in to support shared folders.
+-	[VirtualBox](https://www.virtualbox.org/) and install. IGEL OS 11 / 12 has VirtualBox Guest Additions built in to support shared folders.
 -	Linux ISO [Ubuntu Desktop 18.04]( https://releases.ubuntu.com/18.04/)
 -	Optional – [Windows Server 2019 ISO - 180 day trial](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019?filetype=ISO)
--	[IGEL Software](https://www.igel.com/software-downloads) - OS 11, UMS - Workspace Edition, ICG - Enterprise Management Pack
+-	[IGEL Software](https://www.igel.com/software-downloads) - OS 11 / 12, UMS - Workspace Edition, ICG - Enterprise Management Pack
 -	[Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
 -----
@@ -156,10 +156,10 @@ sudo reboot now
 
 ## Install UMS on Linux
 
-- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-6.10/en/igel-ums-installation-under-linux-57320981.html)
+- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-under-linux-81494549.html)
 - sudo ./setup-igel-ums-linux-[version].bin
 
-**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-6.10/en/igel-ums-installation-under-windows-57321024.html)
+**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-under-windows-77864446.html)
 
 - IGEL Community on GitHub UMS Console setup - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
 -----
@@ -179,29 +179,31 @@ VirtualBox > New
 - `automount`
 - `OK`
 - Start VM
-- Disk file to install from: `path to IGEL OS 11 ISO file`
+- Disk file to install from: `path to IGEL OS 11 / 12 ISO file`
 - Start
 
-Follow IGEL OS installation procedures - [LINK](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html)
+Follow IGEL OS 11 installation procedures - [LINK](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html)
+
+Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html)
 
 -----
 
 ## Registering Devices on the UMS Server
 
-- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-6.10/en/registering-igel-os-devices-on-the-ums-server-57321102.html)
+- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-12.01/en/registering-igel-os-devices-on-the-ums-server-77864528.html)
 
 -----
 
 ## Run UMS Web App
 
 - Start UMS Web App - `https://<UMS-Server>:8443/webapp/#/login`
-- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-6.10/en/ums-web-app-57322471.html)
+- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-web-app-77865357.html)
 
 -----
 
 ## UMS to/from IGEL OS Communication ports (NO ICG)
 
-[UMS Communication Ports](https://kb.igel.com/endpointmgmt-6.10/en/ums-communication-ports-57320114.html)
+[UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html)
 
 ### Core Communication
 
@@ -271,6 +273,7 @@ Use pfSense to create firewall (DMZ)
 ![image01](Images/HOWTO-Setup-Lab-Sandbox-Environment-01.png)
 ![image02](Images/HOWTO-Setup-Lab-Sandbox-Environment-02.png)
 ![image03](Images/HOWTO-Setup-Lab-Sandbox-Environment-03.png)
+![image04](Images/HOWTO-Setup-Lab-Sandbox-Environment-04.png)
 
 -----
 

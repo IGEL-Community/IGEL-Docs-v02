@@ -14,6 +14,113 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-04-19 - [11.08.299](readme11.08.299.txt)
+
+```
+The new PRIVATE BUILD 11.08.299 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firefox
+
+* Fixed possibility to have more than one Firefox session running  
+  which effectively was prevented by app-armor lacking  
+  an additional exception for the Firefox 102 esr.
+* Fixed possibility to handle ica files required to start  
+  Citrix sessions by restoring the former Firefox behavior.  
+  Thus download of temporary files which have a dedicated  
+  handler can be made even when file download in general  
+  is forbidden for the user.
+
+### Network
+
+* SCEP:  
+    -Fixed SCEP via proxy  
+    -Added separator definition for use if multiple values of distinguished name
+      attributes are desired, e.g. multiple organizational units. The separator
+      also affects organization, state, locality, and potentially more in the
+      future.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Name separator`                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.multivalueseparator`                  |
++------------+-----------------------------------------------------------------+
+| Range      | [<none>]                                                        |
++------------+-----------------------------------------------------------------+
+| Value      | **<none>*                                                       |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
+## 2023-04-18 - [11.08.296](readme11.08.296.txt)
+
+```
+The new PRIVATE BUILD 11.08.296 for IGEL Workspace is ready.
+
+This build is based on 11.08.292.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+* Integrated RTME 2.9.600 for Skype for Business
+* Integrated Citrix workspace app 23.03  
+  Available workspace apps in this release: 23.03 (default), 23.02, and 20.10
+* New features:  
+*  Inactivity Timeout for Citrix Workspace app
++------------+-----------------------------------------------------------------+
+|Parameter   |`Inactivity Timeout for Citrix Workspace app`                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.itoenabled`                                         |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+*  Background blurring for webcam redirection
++------------+-----------------------------------------------------------------+
+|Parameter   |`Background blurring for webcam redirection`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.HDXWebCamEnableBackgndEffect`                      |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firefox
+* Fixed possibility to have more than one Firefox session running  
+  which effectively was prevented by app-armor lacking  
+  an additional exception for the Firefox 102 esr.
+* Fixed possibility to handle ica files required to start  
+  Citrix sessions by restoring the former Firefox behavior.  
+  Thus download of temporary files which have a dedicated  
+  handler can be made even when file download in general  
+  is be forbidden for the user.
+```
+
+-----
+
 ## 2023-04-18 - [11.08.298](readme11.08.298.txt)
 
 ```

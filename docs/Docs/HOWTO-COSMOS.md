@@ -11,7 +11,21 @@
 
 **A:** Open `UMS Console` and add `General - WebApp > App Management > Allow`  permission to account(s). Steps:
 
-  - `System` > `Administrator accounts`
+  - Start `UMS Console`
+  - Select `System` > `Administrator accounts`
   - Select Administrator account
   - `Edit`
   - `General - WebApp` select `Allow`
+
+  ![image-howto-cosmos-01](Images/HOWTO-COSMOS-01.png)
+
+**Q:** Trying to connect OS12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
+
+**A:** You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to. Steps:
+
+  - Start `UMS Console`
+  - Open `UMS Administration`
+  - Select `Global Configuration` > `Certificate Management` > `Web`
+  - Add new endpoint web certificate with all the IP addresses, fully qualified domain names (FQDN), and short names that the device can connect to
+
+  ![image-howto-cosmos-02](Images/HOWTO-COSMOS-02.png)

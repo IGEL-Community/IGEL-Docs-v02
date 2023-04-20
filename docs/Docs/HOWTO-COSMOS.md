@@ -29,3 +29,15 @@
   - Add new endpoint web certificate with all the IP addresses, fully qualified domain names (FQDN), and short names that the device can connect to
 
   ![image-howto-cosmos-02](Images/HOWTO-COSMOS-02.png)
+
+-----
+
+## FAQ - OS 12
+
+**Q:** I want to quickly test out OS 12. What are the steps to test?
+
+**A:** See the following note: [Want to test out OS 12 with App Portal without UMS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os12-with-app-portal-without-ums12)
+
+**Q:** I'm testing OS 12 and want to reset a device and remove trial license. How do I do that?
+
+**A:** See the following note:  [How to reset a device](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#optional-how-to-reset-a-device)

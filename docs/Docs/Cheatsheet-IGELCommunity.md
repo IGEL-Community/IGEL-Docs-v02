@@ -85,7 +85,8 @@
 | reset_to_defaults                                       | :material-check-bold: | :material-check-bold:| Factory reset                                               |
 | setcryptparam                                           | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to Igel Registry         |
 | [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
-| setup                                                   | :material-check-bold: | :material-check-bold:| Start IGEL Setup                                            |
+| setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                            |
+| setup-assistant | :material-close-circle: | :material-check-bold: | Start IGEL Setup  |
 | show_usbconfig                                          | :material-check-bold: | :material-check-bold:| List configs from USB Storage                               |
 | start-wireless-manager                                  | :material-check-bold: | :material-check-bold:| Starts the Wireless cafe menu (start as user)               |
 | store_usbconfig                                         | :material-check-bold: | :material-check-bold:| Write config to USB Storage                                 |

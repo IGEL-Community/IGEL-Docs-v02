@@ -13,7 +13,7 @@
 
 -----
 
-## FAQ - Licening
+## FAQ - Licensing
 
 **Q:** How do I convert OS 11 licenses to OS 12 licenses?
 

@@ -46,6 +46,10 @@
 
 **A:** See the following note:  [How to reset a device](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#optional-how-to-reset-a-device)
 
+**Q:** How do I update an OS 11 device to OS 12?
+
+**A:** Currently OS 11 to OS 12 is a re-install. Upgrade from OS 11 to OS 12 will be availiable in the Fall - 2023.
+
 -----
 
 ## FAQ - ICG 12

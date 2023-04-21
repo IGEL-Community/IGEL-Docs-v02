@@ -13,15 +13,24 @@
 
 -----
 
-## FAQ - UMS
+## FAQ - Licening
 
-**Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
+**Q:** How do I convert OS 11 licenses to OS 12 licenses?
 
-**A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
+**A:** No conversion needed. Your normal WE licenses work with OS 12. There is not a specific license type for OS 12.
 
 **Q:** What is needed for UMS 12 to support OS 11 licensing?
 
 **A:** EMP will need to be created from WP licensing.  [Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
+
+-----
+
+## FAQ - UMS
+
+
+**Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
+
+**A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
 
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 

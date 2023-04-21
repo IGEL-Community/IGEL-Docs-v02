@@ -13,6 +13,24 @@
 
 -----
 
+## FAQ - Time Service
+
+**Q:** Do I really have to have the correct time / date on all my computers?
+
+**A:** YES! In SSL, clocks are used for certificate validation. The client needs to make sure that it talks to the right server; for that, the client will validate the server's certificate. Validation implies verifying a lot of things; two of them involve clocks:
+
+  - The server's certificate (and all involved CA certificates) must include the present time in their validity time range. Each certificate as a notBefore and a notAfter fields; the current time must fall between these two dates.
+  - The client is supposed to obtain the revocation status of each certificate, by obtaining (and validating) a CRL (Certificate Revocation List) from the appropriate issuers (the CA). A CRL is deemed acceptable if (in particular) it is "not too old": again, the CRL has a thisUpdate field that says when it was produced, and a nextUpdate field that more-or-less serves as expiration date for the CRL.
+
+If the client's clock is off, then it will break either or both of these functionalities. For instance, the server's certificate will be considered as "long expired", or "not usable yet", leading to rejection.
+
+  - OS 12: `Setup > System > Time and Date > Use NTP time server`
+  - OS 12: `NTP time server` pool.ntp.org
+  - OS 12: Check that time NTP is enabled: `get system.time.ntp_enabled`
+  - OS 12: Check NTP time server: `get system.time.ntp_timeserver`
+
+-----
+
 ## FAQ - Licensing
 
 **Q:** How do I convert OS 11 licenses to OS 12 licenses?

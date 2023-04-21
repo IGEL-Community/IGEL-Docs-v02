@@ -52,7 +52,7 @@
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet. Since most companies will not allow UMS 12 (Windows or Linux) to have port 8443 opened to the Internet, an ICG 12 will be needed and support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.01/en/igel-cloud-gateway-icg-81512143.html).
+**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet. Since most companies will not allow UMS 12 (Windows or Linux) to have port 8443 opened to the Internet, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.01/en/igel-cloud-gateway-icg-81512143.html).
 
 **Q:** Does ICG 12 support OS 11 devices?
 

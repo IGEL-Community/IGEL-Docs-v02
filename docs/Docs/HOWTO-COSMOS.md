@@ -55,6 +55,24 @@
 
   ![image-howto-cosmos-02](Images/HOWTO-COSMOS-02.png)
 
+**Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?
+
+**A:** Follow steps to test `rmagent-register`
+
+  - Start `UMS Console`
+  - Open `UMS Administration`
+  - Select `Global Configuration` > `First-authentication Keys`
+  - Select `(+) `
+  - Create `Mass-deployment key` with `First-authentication key` TRY-IGEL
+
+  ![image-howto-cosmos-03](Images/HOWTO-COSMOS-03.png)
+
+  - On IGEL OS 12 open a `Terminal` window as root and type
+
+    ```bash linenums="1"
+    rmagent-register -s UMS-SERVER-NAME-OR-IP -p 8443 -a TRY-IGEL
+    ```
+
 -----
 
 ## FAQ - OS 12

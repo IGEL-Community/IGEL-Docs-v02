@@ -19,7 +19,7 @@
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
 
-**Q:** What is needed for UMS 12 to support OS 11 liceensing?
+**Q:** What is needed for UMS 12 to support OS 11 licensing?
 
 **A:** EMP will need to be created from WP licensing.  [Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
 

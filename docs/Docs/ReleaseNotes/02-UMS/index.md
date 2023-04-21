@@ -1,6 +1,7 @@
 
 # IGEL UMS Release Notes
 
+- [12.01.110](Readme-12.01.110.txt)
 - [6.10.150](Readme-6.10.150.txt)
 - [6.10.140](Readme-6.10.140.txt)
 - [6.10.130](Readme-6.10.130.txt)

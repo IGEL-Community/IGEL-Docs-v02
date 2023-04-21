@@ -5,6 +5,14 @@
 -----
 -----
 
+## FAQ - IGEL Education
+
+**Q:** What are the training options for IGEL COSMOS?
+
+**A:** Please enroll in [IGEL Academy](https://www.igel.com/learn-and-connect/igel-education/) for formal training courses on IGEL products geared towards beginners and experienced users alike.
+
+-----
+
 ## FAQ - UMS
 
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.

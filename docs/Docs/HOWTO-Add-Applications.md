@@ -76,13 +76,13 @@ igelpkgctl list
 - Update to latest version of IGEL OS
 
 ```bash linenums="1"
-igelpkgctl install $(igelpkgctl list | grep base_system- | tail -1)
+igelpkgctl install base_system
 ```
 
 - Install lastest AVD client:
 
 ```bash linenums="1"
-igelpkgctl install $(igelpkgctl list | grep avd- | tail -1)
+igelpkgctl install avd
 ```
 
 - Open Setup to add a AVD session: ++ctrl+alt+s++ 
@@ -90,7 +90,7 @@ igelpkgctl install $(igelpkgctl list | grep avd- | tail -1)
 - Install lastest Chromium client:
 
 ```bash linenums="1"
-igelpkgctl install $(igelpkgctl list | grep chromium- | tail -1)
+igelpkgctl install chromium
 ```
 
 - Open Setup to add a Chromium session: ++ctrl+alt+s++ 

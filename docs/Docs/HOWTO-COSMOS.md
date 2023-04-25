@@ -50,6 +50,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
 
+**Q:** What is feature matrix between UMS Web App and UMS Console?
+
+**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.01/en/overview-of-the-igel-ums-81500680.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole)
+
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
 **A:** Open `UMS Console` and add `General - WebApp > App Management > Allow`  permission to account(s). Steps:

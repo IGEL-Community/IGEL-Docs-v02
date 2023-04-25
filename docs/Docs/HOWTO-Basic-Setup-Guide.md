@@ -62,6 +62,7 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | Lenovo | (Fn+) F12 |
 | HP     | F9      |
 | Dell   | F12     |
+| Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.08/en/ud-pocket-breaks-microsoft-surface-63804118.html) |
 | IGEL   | Del     |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 

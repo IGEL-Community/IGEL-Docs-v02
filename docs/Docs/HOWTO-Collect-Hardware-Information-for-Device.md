@@ -21,6 +21,8 @@ Collection script (collect_data.sh) to copy onto thumb drive
 
 ```bash linenums="1"
 #!/bin/bash
+#set -x
+#trap read debug
 
 mkdir data_dump
 cd data_dump

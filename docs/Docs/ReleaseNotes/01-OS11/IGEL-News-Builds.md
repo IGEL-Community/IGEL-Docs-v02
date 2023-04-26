@@ -14,6 +14,30 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-04-25 - [11.08.301](readme11.08.301.txt)
+
+```
+The new PRIVATE BUILD 11.08.301 for IGEL Workspace is ready.
+
+This build is based on 11.08.236.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+* Added Canadian Multilingual Standard keyboard layout.
+```
+
+-----
+
 ## 2023-04-19 - [11.08.299](readme11.08.299.txt)
 
 ```

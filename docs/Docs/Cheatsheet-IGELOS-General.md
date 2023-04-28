@@ -184,3 +184,56 @@ su user -c xrandr --output DISPLAY1 --rate 60 --mode 1920x1080 --fb 1920x1080 --
 ```bash linenums="1"
 su user -c xrandr —output HDMI-1 —rate 60 —mode 1920x1080 —fb 1920x1080 —panning 1920x1080* —output eDP-1 —mode 1920x1080 —same-as HDMI-1
 ```
+
+## resetvalue_tree
+
+Reset defined section of the IGEL registry
+
+- Reset all settings under each of the registry classes back to default `but do not include network`
+
+```bash linenums="1"
+#!/bin/bash
+/bin/resetvalue_tree auth
+/bin/resetvalue_tree awsc
+/bin/resetvalue_tree browserglobal
+/bin/resetvalue_tree chromiumglobal
+/bin/resetvalue_tree custom_partition
+/bin/resetvalue_tree debug
+/bin/resetvalue_tree devices
+/bin/resetvalue_tree evidian
+/bin/resetvalue_tree fwtools
+/bin/resetvalue_tree ibm
+/bin/resetvalue_tree ica
+/bin/resetvalue_tree igel-sound-control
+/bin/resetvalue_tree imprivata
+/bin/resetvalue_tree jabra
+/bin/resetvalue_tree java
+/bin/resetvalue_tree monitoring_agent
+/bin/resetvalue_tree multimedia
+/bin/resetvalue_tree pcoip
+/bin/resetvalue_tree pcom
+/bin/resetvalue_tree print
+/bin/resetvalue_tree printerlogic
+/bin/resetvalue_tree product
+/bin/resetvalue_tree rdp
+/bin/resetvalue_tree scard
+/bin/resetvalue_tree services
+/bin/resetvalue_tree sessions
+/bin/resetvalue_tree speechwrite
+/bin/resetvalue_tree spice
+/bin/resetvalue_tree stratusphere_ux
+/bin/resetvalue_tree system
+/bin/resetvalue_tree thinlinc
+/bin/resetvalue_tree twox
+/bin/resetvalue_tree update
+/bin/resetvalue_tree userinterface
+/bin/resetvalue_tree vmware
+/bin/resetvalue_tree vmwarevdmapp
+/bin/resetvalue_tree voip
+/bin/resetvalue_tree windowmanager
+/bin/resetvalue_tree wvd
+/bin/resetvalue_tree x
+/bin/resetvalue_tree xen
+/bin/killwait_postsetupd
+/sbin/write_rmsettings
+```

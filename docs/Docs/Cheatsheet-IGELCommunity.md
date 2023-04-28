@@ -83,6 +83,7 @@
 | opensc-tool                                             | :material-check-bold: | :material-check-bold:| Lists opensc smartcard informations and tools               |
 | pkcs11getloginname                                      | :material-check-bold: | :material-check-bold:| Shows extracted smart card login name                       |
 | reset_to_defaults                                       | :material-check-bold: | :material-check-bold:| Factory reset                                               |
+| [resetvalue_tree](Cheatsheet-IGELOS-General.md#resetvalue_tree) | :material-check-bold: | :material-check-bold:| Reset all settings under each of the registry classes back to default                   |
 | setcryptparam                                           | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to Igel Registry         |
 | [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
 | setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                            |

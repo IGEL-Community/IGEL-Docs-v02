@@ -237,7 +237,7 @@
 |---------|------|-------------------------------------------|--------------------------------------------|
 | ++ctrl+alt+tab++ | :material-check-bold: | :material-check-bold:| Switch active window   |
 | ++tab+tab++      | :material-check-bold: | :material-check-bold:| Show commands          |
-| ++ctrl+alt++ + [Fn] | :material-check-bold: | :material-check-bold:| Switch between console |
+| ++ctrl+alt+f10++ | :material-check-bold: | :material-check-bold:| Terminal log screen |
 | ++ctrl+alt+f11++ | :material-check-bold: | :material-check-bold:| terminal 1             |
 | ++ctrl+alt+f12++ | :material-check-bold: | :material-check-bold:| terminal 2             |
 | ++ctrl+alt+f1++  | :material-check-bold: | :material-check-bold:| IGELOS UI              |

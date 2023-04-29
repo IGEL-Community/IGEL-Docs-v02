@@ -43,6 +43,10 @@ If the client's clock is off, then it will break either or both of these functio
 
   - **NOTE:** This is currently only accessible by the primary account users, anyone with Service Provider access will not see this button.
 
+**Q:** Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?
+
+**A:** Yes! Details can be found here - [HOWTO Remove IGEL Device License](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Remove-IGEL-Device-License/#ums-12)
+
 -----
 
 ## FAQ - UMS

@@ -6,7 +6,7 @@
 
 [IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
-Sample OS11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
+Sample OS 11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
 
 | Application | Profile |
 |-------------|---------|

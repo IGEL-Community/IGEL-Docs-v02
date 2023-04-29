@@ -68,7 +68,7 @@ If the client's clock is off, then it will break either or both of these functio
 
   ![image-howto-cosmos-01](Images/HOWTO-COSMOS-01.png)
 
-**Q:** Trying to connect OS12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
+**Q:** Trying to connect OS 12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
 
 **A:** You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to. Steps:
 

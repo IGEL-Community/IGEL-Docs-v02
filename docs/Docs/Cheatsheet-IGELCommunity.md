@@ -2,7 +2,7 @@
 
 ## [Linux General](Cheatsheet-Linux-General.md)
 
-| command | OS11 | OS12                                      | description                                |
+| command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | [cat](Cheatsheet-Linux-General.md#cat)                     | :material-check-bold: | :material-check-bold: | display the content of a file              |
 | [cd](Cheatsheet-Linux-General.md#cd)                       | :material-check-bold: | :material-check-bold: | change folder                              |
@@ -51,7 +51,7 @@
 
 ## [IGELOS General](Cheatsheet-IGELOS-General.md)
 
-| command | OS11 | OS12                                      | description                                |
+| command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | [apparmor_status](Cheatsheet-IGELOS-General.md#apparmor_status)                                       | :material-check-bold: | :material-check-bold:| Lists all services protected by apparmor                    |
 | applauncher                                             | :material-check-bold: | :material-check-bold:| Starts the application launcher                             |
@@ -105,7 +105,7 @@
 
 ## IGELOS UMS & ICG Communication Commands
 
-| command | OS11 | OS12                                      | description                                |
+| command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | get_icg_info                                          | :material-check-bold: | :material-close-circle:| Get ICG connection information |
 | get_rmsettings                                          | :material-check-bold: | :material-close-circle:| Get UMS config (reboot to apply)                            |
@@ -156,7 +156,7 @@
 
 ## [IGELOS Networking](Cheatsheet-IGELOS-Networking.md)
 
-| command | OS11 | OS12                                      | description                                |
+| command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | [/lib/systemd/system/NetworkManager.service](Cheatsheet-IGELOS-Networking.md#libsystemdsystemnetworkmanagerservice) | :material-check-bold: | :material-check-bold:| manage network service                                                                                  |
 | [ethtool](Cheatsheet-IGELOS-Networking.md#ethtool)                                     | :material-check-bold: | :material-check-bold:| tool for ethernet configuration                                                                         |
@@ -182,7 +182,7 @@
 
 ## [IGELOS Hardware](Cheatsheet-IGELOS-Hardware.md)
 
-| command | OS11 | OS12                                      | description                                |
+| command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | /etc/init.d/pcscd                                    | :material-check-bold: | :material-check-bold:| Stop / Start Smart Card PCSC Daemon |
 | amixer                                               | :material-check-bold: | :material-check-bold:| Audio configuration tool            |
@@ -206,7 +206,7 @@
 
 ## IGELOS Folders
 
-| folder | OS11 | OS12                                      | description                                |
+| folder | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | /license/dsa/licenses     | :material-check-bold: | :material-check-bold:| device licenses                  |
 | /media                    | :material-check-bold: | :material-check-bold:| Removable Storage                |
@@ -220,7 +220,7 @@
 
 ## IGELOS Files
 
-| file | OS11 | OS12                                      | description                                |
+| file | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | /config/sessions      | :material-check-bold: | :material-check-bold:| Generated sessions                       |
 | /tmp/wpa_debug.all    | :material-check-bold: | :material-check-bold:| network debug log                        |
@@ -233,7 +233,7 @@
 
 ## IGELOS Keybindings
 
-| keybinding | OS11 | OS12                                      | description                                |
+| keybinding | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | ++ctrl+alt+tab++ | :material-check-bold: | :material-check-bold:| Switch active window   |
 | ++tab+tab++      | :material-check-bold: | :material-check-bold:| Show commands          |
@@ -247,7 +247,7 @@
 
 ## IGELOS Registry
 
-| Path | OS11 | OS12                                      | description                                |
+| Path | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | network.interfaces.wirelesslan.device0.wpa.debug | :material-check-bold: | :material-check-bold:| wifi debug  |
 

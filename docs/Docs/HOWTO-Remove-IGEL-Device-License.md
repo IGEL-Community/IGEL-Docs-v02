@@ -129,13 +129,13 @@ Where:
 
 ## Reset IGEL OS device (shortcut)
 
-### OS11
+### OS 11
 
 ```bash linenums="1"
 mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
 ```
 
-### OS12
+### OS 12
 
 ```bash linenums="1"
 delete_igel_licenses ALL && reset_to_defaults && reboot

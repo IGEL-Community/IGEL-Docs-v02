@@ -38,8 +38,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 
 ### Create an IGEL OS formatted USB stick to convert your endpoint
 
-- [OS11 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/workspace-edition/)
-- [OS12 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/cosmos/)
+- [OS 11 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/workspace-edition/)
+- [OS 12 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/cosmos/)
 - Insert a spare USB stick. We recommend 4GB or larger.
 - Unzip the OSC file you downloaded and run Preparestick.exe.
 
@@ -66,8 +66,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | IGEL   | Del     |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
--	[OS11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.
--	[OS12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html). Choose the options best for you.
+-	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.
+-	[OS 12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html). Choose the options best for you.
 -	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. [See a tutorial video for installing IGEL OS here](https://www.youtube.com/watch?v=w-EMUDS5Tb0).
 
 ### Option 2: Purchase New 3rd-Party Hardware and Install IGEL OS 

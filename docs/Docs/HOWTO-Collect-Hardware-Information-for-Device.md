@@ -191,7 +191,7 @@ The IGEL Linux Registry offers a number of extended logging options that can hel
 
 ## Steps to update firmware from USB drive
 
-- [Download OS11 -> Firmware Updates -> lxos_[VERSION]_public.zip](https://www.igel.com/software-downloads/workspace-edition/)
+- [Download OS 11 -> Firmware Updates -> lxos_[VERSION]_public.zip](https://www.igel.com/software-downloads/workspace-edition/)
 - Format USB Drive on PC (FAT)
 - Unzip lxos_[VERSION]_public.zip to USB drive
 - Configure IGEL OS to take new firmware from USB drive

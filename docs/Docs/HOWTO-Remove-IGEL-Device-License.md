@@ -14,10 +14,10 @@
 
 - For IGEL OS 12 devices only: In the `Confirm deletion` dialog, specify whether the licenses should be deleted and accept the `Terms and Conditions`. If you enable `Delete Licenses`:
 
-  - all licenses will be removed from the device if the device is online (Device level)
-  - all licenses registered in the UMS for the device will be removed from the UMS (UMS level)
-  - corresponding Unit IDs will be removed from all registered Product Packs if the IGEL License Portal (ILP) can be reached (ILP level)
-  - Thus, the affected licenses are completely removed and can be deployed to another device.
+    - all licenses will be removed from the device if the device is online (Device level)
+    - all licenses registered in the UMS for the device will be removed from the UMS (UMS level)
+    - corresponding Unit IDs will be removed from all registered Product Packs if the IGEL License Portal (ILP) can be reached (ILP level)
+    - Thus, the affected licenses are completely removed and can be deployed to another device.
 
 -----
 

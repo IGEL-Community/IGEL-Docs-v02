@@ -2,6 +2,25 @@
 
 -----
 
+## UMS 12
+
+[Resetting a Device to Factory Defaults via the IGEL UMS Web App](https://kb.igel.com/endpointmgmt-12.01/en/resetting-a-device-to-factory-defaults-via-the-igel-ums-web-app-77869841.html)
+
+[Recycle Bin - Deleting Objects in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.01/en/recycle-bin-deleting-objects-in-the-igel-ums-77869757.html)
+
+**Notes:**
+
+- In the IGEL Universal Management Suite (UMS) Web App, you can reset a device to factory defaults. 
+
+- For IGEL OS 12 devices only: In the `Confirm deletion` dialog, specify whether the licenses should be deleted and accept the `Terms and Conditions`. If you enable `Delete Licenses`:
+
+  - all licenses will be removed from the device if the device is online (Device level)
+  - all licenses registered in the UMS for the device will be removed from the UMS (UMS level)
+  - corresponding Unit IDs will be removed from all registered Product Packs if the IGEL License Portal (ILP) can be reached (ILP level)
+  - Thus, the affected licenses are completely removed and can be deployed to another device.
+
+-----
+
 ## Summary of steps to remove IGEL device License
 
 - Remove the License from the IGEL License Portal

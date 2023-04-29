@@ -16,7 +16,7 @@ Remove for now
 
 -----
 
-## [IGEL KB - Overview: First Steps with IGEL OS11](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
+## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
 
 -----
 
@@ -67,7 +67,7 @@ Remove for now
 
 ## Release Notes
 
-- [01-OS11](Docs/ReleaseNotes/01-OS11)
+- [01-OS 11](Docs/ReleaseNotes/01-OS11)
 - [02-UMS](Docs/ReleaseNotes/02-UMS)
 - [03-IGC](Docs/ReleaseNotes/03-ICG)
 

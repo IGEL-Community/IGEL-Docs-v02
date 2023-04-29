@@ -2,7 +2,7 @@
 
 -----
 
-## OS11 & OS12 Via Custom Partitions
+## OS 11 & OS 12 Via Custom Partitions
 
 [IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
@@ -36,13 +36,13 @@ Use at your own risk!
 
 -----
 
-## [OS12 App Portal](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
+## [OS 12 App Portal](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
 
 - With IGEL OS 12, the modular principle is introduced – you can install and update single applications like Citrix or AVD client, Chromium browser, etc. individually. All applications currently available for IGEL OS 12 can be found in the IGEL App Portal. 
 
 -----
 
-## OS12 App SDK (Coming soon)
+## OS 12 App SDK (Coming soon)
 
 - Build your own IGEL OS App with IGEL OS App SDK
 
@@ -50,11 +50,11 @@ Use at your own risk!
 
 ## Do you have a UD Pocket with IGEL OS 12 from Disrupt?
 
-## Want to test out OS12 with App Portal without UMS12?
+## Want to test out OS 12 with App Portal without UMS12?
 
 Here are some steps to try out
 
-Steps to test out your UDPocket or OS12 installed device
+Steps to test out your UDPocket or OS 12 installed device
 
 - Boot device
 - Skip -- Let's connect to the company network
@@ -105,16 +105,16 @@ Run the following command as root in terminal window:
 ```bash linenums="1"
 mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
 ```
-Or (new command with OS12 - `delete_igel_licenses ALL`)
+Or (new command with OS 12 - `delete_igel_licenses ALL`)
 ```bash linenums="1"
 delete_igel_licenses ALL && reset_to_defaults && reboot
 ```
 
 -----
 
-## Steps to connect your device sandbox UMS
+## Steps to connect an OS 12 device to sandbox UMS
 
-Steps to test out your UDPocket or OS12 installed device with sandbox UMS
+Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
 
 - Boot device
 - Skip -- Let's connect to the company network

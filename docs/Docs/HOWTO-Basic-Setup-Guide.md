@@ -81,7 +81,7 @@ If you don’t have existing hardware you want to convert, and you’re looking 
 
 You can also visit the IGEL website to see [a list of common endpoints](https://kb.igel.com/hardware/en/supported-devices) which have been qualified by IGEL.
 
-If a device does not appear on either the IGEL Ready Showcase or the IGEL list of approved devices, that does not mean it won’t work with IGEL - it just means you should test it first. IGEL will run fine on most x86 devices that meet the [minimum requirements](https://kb.igel.com/hardware/en/supported-devices/third-party-devices-supported-by-igel-os-11).
+If a device does not appear on either the IGEL Ready Showcase or the IGEL list of approved devices, that does not mean it won’t work with IGEL - it just means you should test it first. IGEL will run fine on most x86 devices that meet the [minimum requirements](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
 
 ### Option 3: Purchase a UD Pocket from IGEL
 
@@ -355,13 +355,13 @@ Setup of the ICG Server can be done in four steps:
 
 ### Prepare the Linux Machine
 
-[Here is a list of prerequisites](https://kb.igel.com/igelicg-2.05/en/prerequisites-57324192.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
+[Here is a list of prerequisites](https://kb.igel.com/igelicg-12.01/en/prerequisites-81512147.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
 
 For example, RHEL users may find it necessary to [install Python 3](https://www.scaler.com/topics/python/install-python-on-linux/) and set [SELinux to permissive mode](https://www.thegeekdiary.com/how-to-disable-or-set-selinux-to-permissive-mode/) in order for ICG to work correctly. Ubuntu 18.04 users may not require these additional steps. Depending on your level of expertise with Linux, [you may find additional help here](https://kb.igel.com/igelicg-2.05/en/preparing-a-linux-machine-for-installing-igel-cloud-gateway-icg-57324550.html) with things like creating the root account or setting a static IP. The version of Linux you use is entirely up to you if it is supported.
 
 Additionally, we recommend that the server/VM hosting ICG have 8GB of RAM/vRAM, 2 CPU cores, and 20GB of available disk space. 
 
-[We also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-2.05/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-57324489.html).
+[We also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-12.01/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-81512461.html).
 
 **NOTE:** Do NOT use “icg” as the name of your account in Linux!  This name is reserved for use by IGEL!
 
@@ -496,7 +496,7 @@ For Self-Signed Certificates:
 
 -	Your end certificate now shows up under the root certificate chain AND under the “Select Certificate” section. With the new certificate selected, click “Next.”  Accept the EULA and click “Next” again.
 
--	[Click here and download the latest ICG installation package (BIN file)](https://www.igel.com/software-downloads/enterprise-management-pack/). Save it where the UMS can see it.
+-	[Click here and download the latest ICG installation package (BIN file)](https://www.igel.com/software-downloads/cosmos/).  Save it where the UMS can see it.
 
 -	On the “Enter Install Parameters” window, type in the internal address of your ICG server (reachable from the UMS) and the username and password of the account with root privilege on your ICG server. On the Path to Installer field, browse to the location of your ICG installer BIN file which you previously downloaded.
 
@@ -518,7 +518,7 @@ You may also refer to the IGEL KB for these instructions on installing ICG.
 
 Manual Installation via Linux Command Line
 
-It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-2.05/en/installing-the-icg-without-remote-installer-57324568.html).
+It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-12.01/en/installing-the-icg-without-remote-installer-81512539.html)
 
 ### Connecting an Endpoint to ICG
 

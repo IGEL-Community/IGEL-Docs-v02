@@ -109,3 +109,19 @@ Or (new command with OS12 - `delete_igel_licenses ALL`)
 ```bash linenums="1"
 delete_igel_licenses ALL && reset_to_defaults && reboot
 ```
+
+-----
+
+## Steps to connect your device sandbox UMS
+
+Steps to test out your UDPocket or OS12 installed device with sandbox UMS
+
+- Boot device
+- Skip -- Let's connect to the company network
+- Use the one-time password to onboard this device?
+    - URL / Server address: `73.98.126.35`
+    - Port: `8443`
+    - One-time password: `TRY-IGEL`
+    - Communication token: `94ad777f5b5894a7`
+
+[IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)

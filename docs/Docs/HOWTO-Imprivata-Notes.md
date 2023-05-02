@@ -332,3 +332,7 @@ Monitor the log file: `tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log`
 **Q:** How to reset device in appliance mode if the agent installation is no longer working?
 
 **A:** Steps: `(1)` In UMS, move the device to a directory where the Imprivata appliance mode is disabled; `(2)` Then reboot - The reboot makes sure the old Imprivata data partition is gone; `(3)` Move the device back into the directory to re-enable the Imprivata Appliance mode.
+
+**Q:** When using multiple monitors with Imprivata PIE agent (appliance mode), how to keep login screen on specific monitor?
+
+**A:** By default the login screen will show on the default display (1 if you are using a profile). You can set the default display in DisplaySwitch or by forcing 1 to be output via a specific video card / port.

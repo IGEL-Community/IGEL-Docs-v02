@@ -5,6 +5,7 @@
 ## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/igelos-11.08.200/en/imprivata-69175857.html)
 
 -----
+
 -----
 
 ## Collect Imprivata Log Files
@@ -335,4 +336,15 @@ Monitor the log file: `tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log`
 
 **Q:** When using multiple monitors with Imprivata PIE agent (appliance mode), how to keep login screen on specific monitor?
 
-**A:** By default the login screen will show on the default display (1 if you are using a profile). You can set the default display in DisplaySwitch or by forcing 1 to be output via a specific video card / port.
+**A:** By default the login screen will show on the default display (1 if you are using a profile). You can set the default display in DisplaySwitch or by forcing 1 to be output via a specific video card / port (Card 1, HDMI 1).
+
+**Q:** How to exit Imprivata agent to go to IGEL configuration screen?
+
+**A:** Steps to setup
+
+  - Login to OneSign Admin UI
+  - Go to Computer Policies tab and select computer policy assigned to IGEL (ProveID Embedded) client
+  - In the General section, scroll down to `Authentication`
+  - Select `Yes` to `Allow Users to Exit and Disable Agent`
+
+Once the above option is enabled in computer policy (sync and reboot IGEL device(s)) you can right click on turn off button right hand side of the screen.

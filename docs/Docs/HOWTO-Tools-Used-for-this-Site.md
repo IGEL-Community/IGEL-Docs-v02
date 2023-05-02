@@ -8,15 +8,64 @@ The following is used for the creation of this site:
 
 - **GitHub:** Used to hold the files, GitHub action to automate the building of the `html` files, and serving of the `html` files.
 
-- **MkDocs:** MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+- **Mermaid:** [Mermaid](https://mermaid.js.org/) is a markdown diagramming and charting tool to create and modify diagram dynamically.
 
-- **Material for MKDocs:** Material is the theme used with MkDocs.
+- **MkDocs:** [MkDocs](https://www.mkdocs.org/) is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+
+- **Material for MKDocs:** [Material](https://squidfunk.github.io/mkdocs-material/) is the theme used with MkDocs.
 
 -----
 
 ## GitHub Location
 
 - GitHub Location: [https://github.com/IGEL-Community/IGEL-Docs-v02](https://github.com/IGEL-Community/IGEL-Docs-v02)
+
+-----
+
+## Mermaid
+
+The following Mermaid example will generate diagram of IGEL architecture:
+
+```bash linenums="1"
+mermaid
+flowchart TD
+  A[UMS Console]-- Port 5900 TCP SSL Tunnel Encrypted VNC-data --> B[\Intranet OS 11 Devices/]
+  A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
+  C{UMS Server}<-- Port 8443 TCP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
+  C{UMS Server}-- DB Port--> E[(UMS DB)]
+  C{UMS Server}-- Port 30022 TCP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- Port 30005 TCP UDP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
+  B[\Intranet OS 11 Devices/]-- Port 30001 TCP --> C{UMS Server}
+  G[/Internet OS 11 Devices\]-- Port 8443/443 TCP --> H((Internet Connection))
+  H((Internet Connection))<-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
+  C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
+  H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+```
+
+```mermaid
+flowchart TD
+  A[UMS Console]-- Port 5900 TCP SSL Tunnel Encrypted VNC-data --> B[\Intranet OS 11 Devices/]
+  A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
+  C{UMS Server}<-- Port 8443 TCP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
+  C{UMS Server}-- DB Port--> E[(UMS DB)]
+  C{UMS Server}-- Port 30022 TCP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- Port 30005 TCP UDP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
+  B[\Intranet OS 11 Devices/]-- Port 30001 TCP --> C{UMS Server}
+  G[/Internet OS 11 Devices\]-- Port 8443/443 TCP --> H((Internet Connection))
+  H((Internet Connection))<-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
+  C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
+  H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+```
 
 -----
 

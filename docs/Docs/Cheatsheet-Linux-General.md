@@ -577,3 +577,25 @@ Execute the VMware Horizon client as maximized using wmctrl command
 sleep 2 &&
 wmctrl -x -r vmware-view -b add,maximized_vert,maximized_horz
 ```
+
+Bring IGEL UMS Console to the foreground
+
+- List the windows
+
+```bash linenums="1"
+wmctrl -l
+```
+
+```bash linenums="1"
+0x02000003 -1 ITC08002792DECB xfce4-panel
+0x02200069 -1 ITC08002792DECB Desktop
+0x03200003  0 ITC08002792DECB X11
+0x03400401  0       igelums12 IGEL Universal Management Suite 12
+0x03800003  0 ITC08002792DECB Local Terminal
+```
+
+- Raise UMS Console to the foreground
+
+```bash linenums="1"
+wmctrl -i -a $(wmctrl -l | grep igelums | cut -f 1)
+```

@@ -2,7 +2,7 @@
 
 -----
 
-## OS 11 & OS 12 Via Custom Partitions
+## OS 11 and  OS 12 Via Custom Partitions
 
 [IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 

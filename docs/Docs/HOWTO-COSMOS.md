@@ -58,7 +58,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** When will proxy mode support for UMS 12 be released?
 
-**A:** As of 3 May, it is still be development and release date by end of July. The work around for the UMS to access the App Portal is to manually import applications into the UMS.
+**A:** As of 3 May, it is still in development and target release date by end of July. The work around for the UMS to access the App Portal is to manually import applications into the UMS.
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 

@@ -136,6 +136,14 @@ Save the change and reboot without the “Force VESA driver” option being set.
 
 [IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.08.200/en/boot-menu-69177300.html)
 
+### Try VESA only boot
+
+Steps:
+
+- Reboot device
+- Keep hitting ++esc++
+- Select > `VESA only boot`
+
 -----
 
 ## Improve sound quality for internal speakers or HDMI / DP

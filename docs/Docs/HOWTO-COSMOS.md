@@ -87,6 +87,11 @@ If the client's clock is off, then it will break either or both of these functio
 
   ![image-howto-cosmos-02](Images/HOWTO-COSMOS-02.png)
 
+  **NOTE:** `Web Certificates`
+
+  - The web certificate is used for the web server port (Default port: 8443)
+  - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
+
 **Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?
 
 **A:** Follow steps to test `rmagent-register`

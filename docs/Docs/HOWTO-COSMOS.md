@@ -56,6 +56,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
 
+**Q:** How are OS 12 profiles created or modified?
+
+**A:** UMS Web App `MUST` be used to create / modify OS 12 profiles.
+
 **Q:** When will proxy mode support for UMS 12 be released?
 
 **A:** As of 3 May, it is still in development and target release date by end of July. The work around for the UMS to access the App Portal is to manually import applications into the UMS.

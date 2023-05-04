@@ -103,3 +103,12 @@ When determining minimum bandwidth requirements for Citrix / VMware, plan with t
 Result 
  
 - This remote office can support between 8 and 24 concurrent users per T1 line with 1.5Mbps capacity.
+
+-----
+
+## Citrix Browser Content Redirection (BCR)
+
+Browser content redirection prevents the rendering of webpages in the allow list on the VDA side. This feature uses Citrix Workspace app for Linux to instantiate a corresponding rendering engine on the client side, which fetches the HTTP and HTTPS content from the URL.
+
+- [Citrix -  Browser content redirection](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/browser-content-redirection.html)
+- [Citrix - How to Troubleshoot Browser Content Redirection](https://support.citrix.com/article/CTX230052/how-to-troubleshoot-browser-content-redirection)

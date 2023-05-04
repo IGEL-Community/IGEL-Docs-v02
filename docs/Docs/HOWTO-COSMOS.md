@@ -109,6 +109,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - OS 12
 
+**Q:** What are the hardware requirements for OS 12?
+
+**A:** [Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
+
 **Q:** I want to quickly test out OS 12. What are the steps to test?
 
 **A:** See the following note: [Want to test out OS 12 with App Portal without UMS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os12-with-app-portal-without-ums12)

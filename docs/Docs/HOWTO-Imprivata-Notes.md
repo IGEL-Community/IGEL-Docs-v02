@@ -347,4 +347,6 @@ Monitor the log file: `tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log`
   - In the General section, scroll down to `Authentication`
   - Select `Yes` to `Allow Users to Exit and Disable Agent`
 
-Once the above option is enabled in computer policy (sync and reboot IGEL device(s)) you can right click on turn off button right hand side of the screen.
+Once the above option is enabled in computer policy (sync and reboot IGEL device(s)) you can right click on turn off button right hand side of the screen:
+
+  - Hold down ++ctrl++ and right click on the power button

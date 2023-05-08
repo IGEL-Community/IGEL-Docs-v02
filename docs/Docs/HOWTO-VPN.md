@@ -77,6 +77,8 @@ openssl x509 -fingerprint -noout -in /wfs/zert.pem | sed 's/://g'
 
 - [Check Point SSL Network Extender (SNX)](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Network/Check_Point_SSL_Network_Extender)
 
+- `Cisco AnyConnect VPN` - Open a ticket with IGEL support to request the CP
+
 - [F5 VPN](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Network/F5_VPN)
 
 - [OpenFortiGUI](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/OpenFortiGUI)

@@ -51,6 +51,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Details can be found here - [Entitlements that Come with an IGEL COSMOS Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html)
 
+**Q:** Does UMS 12 support demo license automatic deployment?
+
+**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html)
+
 -----
 
 ## FAQ - UMS

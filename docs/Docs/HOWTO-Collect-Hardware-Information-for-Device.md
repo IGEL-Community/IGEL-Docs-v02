@@ -65,6 +65,10 @@ cd ..
 zip -r data_dump.zip data_dump
 ```
 
+**NOTE:** Logs can be collected from the VDI backend for the following:
+
+- Zoom VDI log collection: [Using the VDI log tool](https://support.zoom.us/hc/en-us/articles/360057873792-Using-the-VDI-log-tool)
+
 -----
 
 ## Search for string (audio) in data_dump files

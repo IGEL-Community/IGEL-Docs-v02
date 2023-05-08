@@ -225,6 +225,8 @@ New features:
 - Added: Profiles based on the OS12 firmware can only be created and changed in the UMS Web App. The assignment is still possible in the UMS console.
 
 [Automatic License Deployment (ALD)]
+- Added: Now an automatic license renewal, incl. product pack switch if necessary, can be configured for expiring device licenses. (UMS Administration -> Global Configuration -> Licenses -> Deployment)
+- Added: For Automatic License Deployment global distribution conditions can be configured (UMS Administration -> Global Configuration -> Licenses -> Deployment)
 - Added: Pack comments created on the IGEL License Portal are shown at the registered packs overview and the details of a pack (UMS Administration -> Global Configuration -> Licenses -> Deployment).
 - Changed: Hardware removal actions are now also logged and are shown in the 'Executed actions' area like license deployment actions. (UMS Administration -> Global Configuration -> Licenses -> Deployment)
 - Changed: Automatic License Deployment can now deploy evaluation licenses to OS11 and OS12 devices.
@@ -267,6 +269,8 @@ New features:
 - Added: Admin CLI prints more details upon unexpected errors.
 
 [Devices]
+- Added: If an OS12 device is removed from UMS it can be specified, whether the licenses should be deleted on the device. 
+         In this case also all registered licenses of the device are removed from UMS and the Unit ID is removed from all registered product packs in ILP.
 - Added: Two options for the device settings export, to either include all passwords or replace them with a placeholder.
 
 [Views]

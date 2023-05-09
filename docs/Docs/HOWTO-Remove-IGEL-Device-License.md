@@ -154,7 +154,7 @@ Where:
 mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
 ```
 
-### OS 11 with Starter License
+### OS 11 with a Starter License
 
 ```bash linenums="1"
 bootreg set /dev/igfdisk installation_date INVALID && bootreg set /dev/igfdisk installation_meta INVALID && reset_to_defaults && reboot

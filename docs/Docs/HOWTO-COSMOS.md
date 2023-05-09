@@ -156,4 +156,4 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** I upgraded my UMS and ICG to 12 and I am now getting `Could not manage your device because of an internal error (#37)` when trying to connect OS 12 devices. What are the steps to fix this item?
 
-**A:** Generate a new ICG certificate in UMS 12.
+**A:** Remove the cert chain from UMS completely, reboot the ICG's and then reconnect to them from UMS.  ~~Generate a new ICG certificate in UMS 12.~~

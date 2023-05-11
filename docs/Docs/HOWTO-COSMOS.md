@@ -157,3 +157,7 @@ If the client's clock is off, then it will break either or both of these functio
 **Q:** I upgraded my UMS and ICG to 12 and I am now getting `Could not manage your device because of an internal error (#37)` when trying to connect OS 12 devices. What are the steps to fix this item?
 
 **A:** Remove the cert chain from UMS completely, reboot the ICG's and then reconnect to them from UMS.  ~~Generate a new ICG certificate in UMS 12.~~
+
+**Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
+
+**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html)

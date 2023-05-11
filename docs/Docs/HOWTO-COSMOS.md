@@ -142,6 +142,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Currently OS 11 to OS 12 is a re-install. Upgrade from OS 11 to OS 12 will be availiable in the Fall - 2023.
 
+**Q:** When will Citrix username / password auto login support in cloud environment be supported?
+
+**A:** As of May 10, this is being worked on with Citrix. Date pending for release.
+
 -----
 
 ## FAQ - ICG 12

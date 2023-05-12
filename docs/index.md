@@ -20,6 +20,10 @@ Remove for now
 
 -----
 
+## [IGEL KB - IGEL Product Security Information](https://kb.igel.com/securitysafety/en/igel-product-security-information-10346597.html)
+
+-----
+
 ## [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 
 -----

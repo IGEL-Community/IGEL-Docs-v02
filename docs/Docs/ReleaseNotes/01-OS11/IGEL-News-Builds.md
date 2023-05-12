@@ -14,6 +14,31 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-05-12 - [11.08.307](readme11.08.307.txt)
+
+```
+The new PRIVATE BUILD 11.08.307 for IGEL Workspace is ready.
+
+This build is based on 11.08.256.
+
+********************************************************************************
+Do not share this build unless you have customers who need one of
+the integrated features or bugfixes.
+ 
+Please keep in mind a Private Build is a fully supported firmware!
+********************************************************************************
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### zoomvdi
+
+* Integraded Zoom VDI Versions: [5.10.6.21295]; [5.11.2.21530]; [5.12.1.21950]
+```
+
+-----
+
 ## 2023-05-04 - [11.08.305](readme11.08.305.txt)
 
 ```

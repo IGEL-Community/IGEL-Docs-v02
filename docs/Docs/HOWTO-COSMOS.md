@@ -146,6 +146,14 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** As of May 10, this is being worked on with Citrix. Date pending for release.
 
+**Q:** When using the first-time auth key to connect OS 12 to the UMS 12 it asks for a `communication token` - where is this found? 
+
+![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
+
+**A:** It is the third fingerprint of the root web certificate for your UMS 12.
+
+![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
+
 -----
 
 ## FAQ - ICG 12

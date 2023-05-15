@@ -206,7 +206,7 @@ sequenceDiagram
   C->>D: 6 - Request OBS Params
   D->>C: 7 - Respond with OBS Params
   C->>A: 8 - Send OBS Params to IGEL OS
-  A->>B: 8 - Initiate Onboarding
+  A->>B: 9 - Initiate Onboarding
 ```
 
 **Q:** How to test OBS connection?

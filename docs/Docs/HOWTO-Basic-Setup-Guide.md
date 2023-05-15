@@ -58,12 +58,13 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 
 | Vendor | Boot Key |
 |--------|----------|
-| LG     | F10      |
-| Lenovo | (Fn+) F12 |
-| HP     | F9      |
-| Dell   | F12     |
+| Dell   | ++f12++     |
+| Dynabook   | ++f2++     |
+| HP     | ++f9++      |
+| IGEL   | ++delete++     |
+| LG     | ++f10++      |
+| Lenovo | ++fn+f12++ |
 | Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.08/en/ud-pocket-breaks-microsoft-surface-63804118.html) |
-| IGEL   | Del     |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
 -	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.

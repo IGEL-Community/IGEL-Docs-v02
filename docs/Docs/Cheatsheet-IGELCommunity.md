@@ -1,5 +1,21 @@
 # Cheatsheet IGELCommunity
 
+-----
+
+## Common Boot Keys
+
+| Vendor | Boot Key |
+|--------|----------|
+| Dell   | ++f12++     |
+| Dynabook   | ++f2++     |
+| HP     | ++f9++      |
+| IGEL   | ++delete++     |
+| LG     | ++f10++      |
+| Lenovo | ++fn+f12++ |
+| Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.08/en/ud-pocket-breaks-microsoft-surface-63804118.html) |
+
+-----
+
 ## [Linux General](Cheatsheet-Linux-General.md)
 
 | command | OS 11 | OS 12                                      | description                                |

@@ -199,7 +199,7 @@ sequenceDiagram
   C->>E: 4 - oAuthLogin on IDP
   E->>C: 5 - ID Token
   C->>D: 6 - Request OBS Params
-  D->>C: 7 - Respond with BS Params
+  D->>C: 7 - Respond with OBS Params
   C->>A: 8 - Send OBS Params to IGEL OS
   A->>B: 8 - Initiate Onboarding
 ```

@@ -103,6 +103,7 @@ If the client's clock is off, then it will break either or both of these functio
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
+  - Additional details [Creating the End Certificates ](https://kb.igel.com/endpointmgmt-12.01/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-77864040.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates)
 
 **Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?
 

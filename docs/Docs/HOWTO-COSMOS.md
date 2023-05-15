@@ -173,3 +173,37 @@ If the client's clock is off, then it will break either or both of these functio
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
 **A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html)
+
+-----
+
+## FAQ - Onboarding Service (OBS)
+
+**Q:** What are the steps to setup OBS?
+
+**A:** [Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)
+
+**Q:** What is the OBS sequence for registering an OS 12 device?
+
+**A:** Here is the sequence.
+
+```mermaid
+sequenceDiagram
+  participant A as IGEL OS 12
+  participant B as UMS 12
+  participant C as OBS
+  participant D as Service Hub
+  participant E as Customer IDP (AAD, Okta, Ping Identity)
+  A->>C: 1 - Request Onboarding Params from email
+  C->>D: 2 - Request IDP from email
+  D->>C: 3 - Respond with IDP Credentials
+  C->>E: 4 - oAuthLogin on IDP
+  E->>C: 5 - ID Token
+  C->>D: 6 - Request OBS Params
+  D->>C: 7 - Respond with BS Params
+  C->>A: 8 - Send OBS Params to IGEL OS
+  A->>B: 8 - Initiate Onboarding
+```
+
+**Q:** How to test OBS connection?
+
+**A:** Open web browser and connect to `https://obs.services.igel.com/auth/user@domain.com`. Use the browser developer tools to look at returned content. Here is link to [Chrome DevTools](https://developer.chrome.com/docs/devtools/)

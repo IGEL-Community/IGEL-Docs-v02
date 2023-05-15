@@ -182,6 +182,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)
 
+**Q:** What are the steps to onboard an OS 12 device?
+
+**A:** [Onboarding IGEL OS 12 Devices](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html)
+
 **Q:** What is the OBS sequence for registering an OS 12 device?
 
 **A:** Here is the sequence.

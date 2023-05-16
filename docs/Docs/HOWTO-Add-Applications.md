@@ -158,7 +158,7 @@ Let us take a look at the build script [build-vlc-cp.sh](https://github.com/IGEL
 
 - **Lines: 2-3** `set -x` will show each line as executed. `trap read debug` will single step the script and will require ++return++ key pressed to move to next line. Remove the `#` for debugging script.
 
-- **Lines: 7-19** Variables used in the script
+- **Lines: 7-19** Variables used in the script. `Lines: 18-19` are the dependent libraries and were obtained by starting an install of `VLC`. `gdebi` can be used for finding dependencies on a `.deb` file.
 
 - **Lines: 60-74** VLC has many dependencies that may or may not be included in IGEL OS 11 or 12. The builder adds all the dependencies and this section of the script prunes out any dependencies that are in the target OS version as defined by `OS11_CLEAN` or `OS12_CLEAN`. Additional details can be found [GitHub Usr Clean](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/utils/igelos_usr)
 

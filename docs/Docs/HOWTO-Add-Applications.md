@@ -125,3 +125,145 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
     - Communication token: `94ad777f5b5894a7`
 
 [IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)
+
+-----
+
+## GitHub Custom Partition Builders - Where the Magic Happens
+
+The GitHub site for Custom Partitions (CP) uses build script to automate the creation of a CP.
+
+- [IGEL Community - GitHub Custom Partition site](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
+
+There are videos in the link above showing steps to create a CP. In summary the steps are:
+
+- Create Ubuntu VM (18.04 for OS 11 & 20.04 for OS 12)
+- Get the builder script from GitHub and run it on the VM
+- Copy the CP to UMS / File server  (importing, `.inf`, `.tar.bz2`, `.xml`)
+- Update the UMS CP profile for file server name and file location
+- Assign profile to devices
+
+**NOTE:** As of 16 May, 2023 IGEL OS 11 uses Ubuntu 18.04 libraries and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version `cat /etc/os-release | grep "^VERSION_ID"`
+
+### VLC Media Player Build Script
+
+The [VLC Media Player CP](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/VLC) can build a CP for either OS 11 or OS 12.
+
+Let us take a look at the build script [build-vlc-cp.sh](https://github.com/IGEL-Community/IGEL-Custom-Partitions/blob/master/CP_Source/Apps/VLC/build/build-vlc-cp.sh)
+
+- **Lines: 2-3** `set -x` will show each line as executed. `trap read debug` will single step the script and will require ++return++ key pressed to move to next line. Remove the `#` for debugging script.
+
+- **Lines: 7-19** Variables used in the script
+
+- **Lines: 60-74** VLC has many dependencies that may or may not be included in IGEL OS 11 or 12. The builder adds all the dependencies and this section of the script prunes out any dependencies that are in the target OS version as defined by `OS11_CLEAN` or `OS12_CLEAN`. Additional details can be found [GitHub Usr Clean](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/utils/igelos_usr)
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+# Creating an IGELOS CP
+## Development machine Ubuntu (OS11 = 18.04; OS12 = 20.04)
+CP="vlc"
+ZIP_LOC="https://github.com/IGEL-Community/IGEL-Custom-Partitions/raw/master/CP_Packages/Apps"
+ZIP_FILE="VLC"
+FIX_MIME="TRUE"
+CLEAN="TRUE"
+OS11_CLEAN="11.07.100"
+OS12_CLEAN="12.01.100"
+USERHOME_FOLDERS="TRUE"
+USERHOME_FOLDERS_DIRS="custom/${CP}/userhome/.config/${CP} custom/${CP}/userhome/.local/share/${CP}"
+APPARMOR="TRUE"
+GETVERSION_FILE="../../${CP}_*amd64.deb"
+MISSING_LIBS_OS11="i965-va-driver liba52-0.7.4 libaacs0 libaribb24-0 libass9 libavcodec57 libavformat57 libavutil55 libbasicusageenvironment1 libbdplus0 libbluray2 libcddb2 libchromaprint1 libcrystalhd3 libdc1394-22 libdca0 libdouble-conversion1 libdvbpsi10 libdvdnav4 libdvdread4 libebml4v5 libfaad2 libgme0 libgroupsock8 libgsm1 libkate1 liblirc-client0 liblivemedia62 liblua5.2-0 libmad0 libmatroska6v5 libmicrodns0 libmpcdec6 libmpeg2-4 libnfs11 libopenjp2-7 libopenmpt-modplug1 libopenmpt0 libplacebo4 libpostproc54 libprotobuf-lite10 libproxy-tools libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5x11extras5 libresid-builder0c2a libsdl-image1.2 libsdl1.2debian libshine3 libsidplay2 libsnappy1v5 libsndio6.1 libsoxr0 libssh-gcrypt-4 libssh2-1 libswresample2 libswscale4 libupnp6 libusageenvironment3 libva-drm2 libva-wayland2 libva-x11-2 libva2 libvdpau1 libvlc-bin libvlc5 libvlccore9 libvulkan1 libx264-152 libx265-146 libxcb-xinerama0 libxvidcore4 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers qt5-gtk-platformtheme qttranslations5-l10n va-driver-all vdpau-driver-all vlc vlc-bin vlc-data vlc-l10n vlc-plugin-base vlc-plugin-notify vlc-plugin-qt vlc-plugin-samba vlc-plugin-skins2 vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization"
+MISSING_LIBS_OS12="i965-va-driver intel-media-va-driver liba52-0.7.4 libaacs0 libaom0 libaribb24-0 libass9 libavcodec58 libavformat58 libavutil56 libbasicusageenvironment1 libbdplus0 libbluray2 libcddb2 libchromaprint1 libcodec2-0.9 libdc1394-22 libdca0 libdouble-conversion3 libdvbpsi10 libdvdnav4 libdvdread7 libebml4v5 libfaad2 libgme0 libgroupsock8 libgsm1 libigdgmm11 libixml10 libkate1 liblirc-client0 liblivemedia77 liblua5.2-0 libmad0 libmatroska6v5 libmpcdec6 libmpeg2-4 libmysofa1 libopenmpt-modplug1 libopenmpt0 libpcre2-16-0 libplacebo7 libpostproc55 libprotobuf-lite17 libproxy-tools libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5x11extras5 libresid-builder0c2a libsdl-image1.2 libsdl1.2debian libshine3 libsidplay2 libsnappy1v5 libsndio7.0 libspatialaudio0 libsrt1 libssh-gcrypt-4 libssh2-1 libswresample3 libswscale5 libupnp13 libusageenvironment3 libva-drm2 libva-wayland2 libva-x11-2 libva2 libvdpau1 libvlc-bin libvlc5 libvlccore9 libx264-155 libx265-179 libxcb-xinerama0 libxcb-xinput0 libxvidcore4 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers ocl-icd-libopencl1 qt5-gtk-platformtheme qttranslations5-l10n va-driver-all vdpau-driver-all vlc vlc-bin vlc-data vlc-l10n vlc-plugin-base vlc-plugin-notify vlc-plugin-qt vlc-plugin-samba vlc-plugin-skins2 vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization"
+
+VERSION_ID=$(grep "^VERSION_ID" /etc/os-release | cut -d "\"" -f 2)
+
+if [ "${VERSION_ID}" = "18.04" ]; then
+  MISSING_LIBS="${MISSING_LIBS_OS11}"
+  IGELOS_ID="OS11"
+elif [ "${VERSION_ID}" = "20.04" ]; then
+  MISSING_LIBS="${MISSING_LIBS_OS12}"
+  IGELOS_ID="OS12"
+else
+  echo "Not a valid Ubuntu OS release. OS11 needs 18.04 (bionic) and OS12 needs 20.04 (focal)."
+  exit 1
+fi
+
+sudo apt install unzip -y
+
+mkdir build_tar
+cd build_tar
+
+for lib in $MISSING_LIBS; do
+  apt-get download $lib
+done
+
+mkdir -p custom/${CP}
+
+find . -name "*.deb" | while read LINE
+do
+  dpkg -x "${LINE}" custom/${CP}
+done
+
+if [ "${FIX_MIME}" = "TRUE" ]; then
+  mv custom/${CP}/usr/share/applications/ custom/${CP}/usr/share/applications.mime
+fi
+
+if [ "${USERHOME_FOLDERS}" = "TRUE" ]; then
+  for folder in $USERHOME_FOLDERS_DIRS; do
+    mkdir -p $folder
+  done
+fi
+
+if [ "${CLEAN}" = "TRUE" ]; then
+  echo "+++++++=======  STARTING CLEAN of USR =======+++++++"
+  wget https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/master/utils/igelos_usr/clean_cp_usr_lib.sh
+  chmod a+x clean_cp_usr_lib.sh
+  wget https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/master/utils/igelos_usr/clean_cp_usr_share.sh
+  chmod a+x clean_cp_usr_share.sh
+  if [ "${IGELOS_ID}" = "OS11" ]; then
+    ./clean_cp_usr_lib.sh ${OS11_CLEAN}_usr_lib.txt custom/${CP}/usr/lib
+    ./clean_cp_usr_share.sh ${OS11_CLEAN}_usr_share.txt custom/${CP}/usr/share
+  else
+    ./clean_cp_usr_lib.sh ${OS12_CLEAN}_usr_lib.txt custom/${CP}/usr/lib
+    ./clean_cp_usr_share.sh ${OS12_CLEAN}_usr_share.txt custom/${CP}/usr/share
+  fi
+  echo "+++++++=======  DONE CLEAN of USR =======+++++++"
+fi
+
+wget ${ZIP_LOC}/${ZIP_FILE}.zip
+
+unzip ${ZIP_FILE}.zip -d custom
+
+if [ "${APPARMOR}" = "TRUE" ]; then
+  mkdir -p custom/${CP}/config/bin
+  mkdir -p custom/${CP}/lib/systemd/system
+  mv custom/target/build/${CP}_cp_apparmor_reload custom/${CP}/config/bin
+  mv custom/target/build/igel-${CP}-cp-apparmor-reload.service custom/${CP}/lib/systemd/system/
+fi
+mv custom/target/build/${CP}-cp-init-script.sh custom
+
+cd custom
+
+# edit inf file for version number
+mkdir getversion
+cd getversion
+ar -x ${GETVERSION_FILE}
+tar xf control.tar.* ./control
+VERSION=$(grep Version control | cut -d " " -f 2)
+#echo "Version is: " ${VERSION}
+cd ..
+sed -i "/^version=/c version=\"${VERSION}\"" target/${CP}.inf
+#echo "${CP}.inf file is:"
+#cat target/${CP}.inf
+
+# new build process into zip file
+tar cvjf target/${CP}.tar.bz2 ${CP} ${CP}-cp-init-script.sh
+zip -g ../${ZIP_FILE}.zip target/${CP}.tar.bz2 target/${CP}.inf
+zip -d ../${ZIP_FILE}.zip "target/build/*" "target/igel/*" "target/target/*"
+mv ../${ZIP_FILE}.zip ../../${ZIP_FILE}-${VERSION}_${IGELOS_ID}_igel01.zip
+
+cd ../..
+rm -rf build_tar
+```

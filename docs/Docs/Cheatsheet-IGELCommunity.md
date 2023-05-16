@@ -16,6 +16,20 @@
 
 -----
 
+## IGELOS Keybindings
+
+| keybinding | OS 11 | OS 12                                      | description                                |
+|---------|------|-------------------------------------------|--------------------------------------------|
+| ++ctrl+alt+tab++ | :material-check-bold: | :material-check-bold:| Switch active window   |
+| ++tab+tab++      | :material-check-bold: | :material-check-bold:| Show commands          |
+| ++ctrl+alt+f10++ | :material-check-bold: | :material-check-bold:| Terminal log screen |
+| ++ctrl+alt+f11++ | :material-check-bold: | :material-check-bold:| terminal 1             |
+| ++ctrl+alt+f12++ | :material-check-bold: | :material-check-bold:| terminal 2             |
+| ++ctrl+alt+f1++  | :material-check-bold: | :material-check-bold:| IGELOS UI              |
+| ++ctrl+alt+s++   | :material-check-bold: | :material-check-bold:| Access IGEL setup      |
+
+-----
+
 ## [Linux General](Cheatsheet-Linux-General.md)
 
 | command | OS 11 | OS 12                                      | description                                |
@@ -244,20 +258,6 @@
 | /wfs/group.ini        | :material-check-bold: | :material-check-bold:| Configuration from UMS                   |
 | /wfs/server.crt       | :material-check-bold: | :material-check-bold:| UMS Server certificate                   |
 | /wfs/setup.ini        | :material-check-bold: | :material-check-bold:| Local configuration                      |
-
------
-
-## IGELOS Keybindings
-
-| keybinding | OS 11 | OS 12                                      | description                                |
-|---------|------|-------------------------------------------|--------------------------------------------|
-| ++ctrl+alt+tab++ | :material-check-bold: | :material-check-bold:| Switch active window   |
-| ++tab+tab++      | :material-check-bold: | :material-check-bold:| Show commands          |
-| ++ctrl+alt+f10++ | :material-check-bold: | :material-check-bold:| Terminal log screen |
-| ++ctrl+alt+f11++ | :material-check-bold: | :material-check-bold:| terminal 1             |
-| ++ctrl+alt+f12++ | :material-check-bold: | :material-check-bold:| terminal 2             |
-| ++ctrl+alt+f1++  | :material-check-bold: | :material-check-bold:| IGELOS UI              |
-| ++ctrl+alt+s++   | :material-check-bold: | :material-check-bold:| Access IGEL setup      |
 
 -----
 

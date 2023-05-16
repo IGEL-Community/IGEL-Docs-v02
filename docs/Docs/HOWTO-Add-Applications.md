@@ -142,12 +142,20 @@ There are videos in the link above showing steps to create a CP. In summary the 
 - Update the UMS CP profile for file server name and file location
 - Assign profile to devices
 
-**NOTE:** As of 16 May, 2023 IGEL OS 11 uses Ubuntu 18.04 libraries and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version `cat /etc/os-release | grep "^VERSION_ID"`
+**NOTE:** As of 16 May, 2023 IGEL OS 11 uses Ubuntu 18.04 libraries and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version:
+
+```bash linenums="1"
+cat /etc/os-release | grep "^VERSION_ID"
+```
 
 ### Debugging Custom Partition
 
 - **Q:** What log should be checked for failed CP deployment?
-- **A:** `journalctl | grep -i custom`
+- **A:** Here is command to find custom:
+
+```bash linenums="1"
+journalctl | grep -i custom
+```
 
 
 ### VLC Media Player Build Script

@@ -112,3 +112,12 @@ Browser content redirection prevents the rendering of webpages in the allow list
 
 - [Citrix -  Browser content redirection](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/browser-content-redirection.html)
 - [Citrix - How to Troubleshoot Browser Content Redirection](https://support.citrix.com/article/CTX230052/how-to-troubleshoot-browser-content-redirection)
+
+-----
+
+## Google Meet in VDI
+
+Steps to optimize Google Meet in VDI:
+
+- [Improved meeting quality when joining on virtual machines](https://workspaceupdates.googleblog.com/2022/11/improved-meeting-quality-for-virtual-machines.html)
+- [Prepare your network for Meet meetings](https://support.google.com/a/answer/1279090?hl=en#zippy=%2Cusing-vdi%2Cavoid-using-vdi)

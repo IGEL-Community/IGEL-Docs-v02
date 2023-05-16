@@ -144,6 +144,12 @@ There are videos in the link above showing steps to create a CP. In summary the 
 
 **NOTE:** As of 16 May, 2023 IGEL OS 11 uses Ubuntu 18.04 libraries and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version `cat /etc/os-release | grep "^VERSION_ID"`
 
+### Debugging Custom Partition
+
+- **Q:** What log should be checked for failed CP deployment?
+- **A:** `journalctl | grep -i custom`
+
+
 ### VLC Media Player Build Script
 
 The [VLC Media Player CP](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/VLC) can build a CP for either OS 11 or OS 12.

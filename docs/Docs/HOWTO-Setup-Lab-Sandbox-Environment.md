@@ -285,6 +285,16 @@ Use pfSense to create firewall (DMZ)
 
 -----
 
+## Appendix - IGEL Downloads
+
+| Name | Description - Link |
+|------|--------------------|
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.01.110.exe" download>UMS for Windows Server</a> |
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.01.110.bin" download>UMS for Linux Server</a> |
+| OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.01.110.1.zip" download>OSC - OS 12</a> |
+| OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.330.zip" download>OSC - OS 11</a> |
+
+
 <!---
 Remove for now
 # [Basic Setup Guide](HOWTO-Basic-Setup-Guide.md)

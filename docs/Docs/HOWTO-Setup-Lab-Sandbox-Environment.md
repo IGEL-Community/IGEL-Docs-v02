@@ -278,7 +278,7 @@ Use pfSense to create firewall (DMZ)
 
 -----
 
-## Appendix
+## Appendix - Linux Scripts
 
 - [Linux Scripts](https://github.com/rneher-igel/Linux-Scripts/tree/master)
 - [Linux UMS and X11 forwarding to IGEL OS endpoint](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
@@ -293,6 +293,7 @@ Use pfSense to create firewall (DMZ)
 | UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.01.110.bin" download>UMS for Linux Server</a> |
 | OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.01.110.1.zip" download>OSC - OS 12</a> |
 | OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.330.zip" download>OSC - OS 11</a> |
+| OS Update - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.08.330_public.zip" download>OS Update Firmware - OS 11</a> |
 
 
 <!---

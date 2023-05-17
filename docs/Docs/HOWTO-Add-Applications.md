@@ -157,7 +157,6 @@ cat /etc/os-release | grep "^VERSION_ID"
 journalctl | grep -i custom
 ```
 
-
 ### VLC Media Player Build Script
 
 The [VLC Media Player CP](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/VLC) can build a CP for either OS 11 or OS 12.
@@ -280,4 +279,88 @@ mv ../${ZIP_FILE}.zip ../../${ZIP_FILE}-${VERSION}_${IGELOS_ID}_igel01.zip
 
 cd ../..
 rm -rf build_tar
+```
+
+### VLC Media Player Build Script
+
+The `CP init script` runs after the CP files are deployed and before the CP files are removed. Many applications expect to be installed in predefined folders. The init script can be used to link the CP into the file system.
+
+Let us take a look at the init script [vlc-cp-init-script.sh](https://github.com/IGEL-Community/IGEL-Custom-Partitions/blob/master/CP_Source/Apps/VLC/build/vlc-cp-init-script.sh)
+
+- **Lines: 27-36** Link the files in the CP to the IGEL OS file system.
+
+- **Lines: 48-52** Associate VLC for media file types.
+
+- **Lines: 57-62** Unlink the files in the CP from the IGEL OS file system.
+
+```bash linenums="1"
+#! /bin/bash
+#set -x
+#trap read debug
+
+ACTION="custompart-vlc_${1}"
+
+# mount point path
+MP=$(get custom_partition.mountpoint)
+
+# custom partition path
+CP="${MP}/vlc"
+
+# userhome
+VLC_CONFIG="/userhome/.config/vlc"
+VLC_LOCAL="/userhome/.local/share/vlc"
+
+# output to systemlog with ID amd tag
+LOGGER="logger -it ${ACTION}"
+
+echo "Starting" | $LOGGER
+
+case "$1" in
+init)
+  # Initial permissions
+  chown -R root:root "${CP}" | $LOGGER
+  # Linking files and folders on proper path
+  find ${CP} -printf "/%P\n" | while read DEST
+  do
+    if [ ! -z "${DEST}" -a ! -e "${DEST}" ]; then
+      # Remove the last slash, if it is a dir
+      [ -d $DEST ] && DEST=${DEST%/} | $LOGGER
+      if [ ! -z "${DEST}" ]; then
+        ln -sv "${CP}/${DEST}" "${DEST}" | $LOGGER
+      fi
+    fi
+  done
+
+  # basic persistency
+  chown -R user:users "${CP}${VLC_CONFIG}"
+  chown -R user:users "${CP}${VLC_LOCAL}"
+
+  # Add apparmor profile to trust in Firefox to make SSO possible
+  # We do this by a systemd service to run the reconfiguration
+  # surely after apparmor.service!!!
+  systemctl --no-block start igel-vlc-cp-apparmor-reload.service
+
+  # after CP installation run wm_postsetup to activate mimetypes for SSO
+  if [ -d /run/user/777 ]; then
+    wm_postsetup
+    # delay the CP ready notification
+    sleep 3
+  fi
+
+;;
+stop)
+  # Unlinking files and folders on proper path
+  find ${CP} -printf "/%P\n" | while read DEST
+  do
+    if [ -L "${DEST}" ]; then
+      unlink $DEST | $LOGGER
+    fi
+  done
+
+;;
+esac
+
+echo "Finished" | $LOGGER
+
+exit 0
 ```

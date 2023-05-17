@@ -123,6 +123,10 @@ If the client's clock is off, then it will break either or both of these functio
     rmagent-register -s UMS-SERVER-NAME-OR-IP -p 8443 -a TRY-IGEL
     ```
 
+*Q:** What are the steps to upgrade distributed UMS 6.10 to 12.01 on Windows?
+
+*A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.01/en/known-issues-ums-12-01-110-88023333.html)
+
 -----
 
 ## FAQ - OS 12

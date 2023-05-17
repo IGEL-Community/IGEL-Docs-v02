@@ -157,7 +157,7 @@ cat /etc/os-release | grep "^VERSION_ID"
 journalctl | grep -i custom
 ```
 
-### VLC Media Player Build Script
+### VLC Media Player  - Build Script
 
 The [VLC Media Player CP](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/VLC) can build a CP for either OS 11 or OS 12.
 
@@ -281,7 +281,7 @@ cd ../..
 rm -rf build_tar
 ```
 
-### VLC Media Player Build Script
+### VLC Media Player - CP init script
 
 The `CP init script` runs after the CP files are deployed and before the CP files are removed. Many applications expect to be installed in predefined folders. The init script can be used to link the CP into the file system.
 

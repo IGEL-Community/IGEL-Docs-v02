@@ -18,7 +18,7 @@ These are the release notes published with each release:
 ## 2023-05-17 - [11.08.330](readme11.08.330.txt)
 
 ```
-The new PUBLIC BUILD 11.08.307 for IGEL Workspace is ready.
+The new PUBLIC BUILD 11.08.330 for IGEL Workspace is ready.
 
 This build is based on 11.08.290.
 

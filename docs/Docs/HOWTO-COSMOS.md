@@ -167,6 +167,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
+**Q:** OS 12 missing `System > System Customization > Custom Commands > Post Session`. Need to `logoff/reboot` the endpoint when a user disconnects from a Citrix Self-Service session. When will this feature be released?
+
+**A:** Not currently implemented in OS 12. Do not have a date from IGEL. Please vote for this [feature request](https://igel.nolt.io/widget/202)
+
 -----
 
 ## FAQ - ICG 12

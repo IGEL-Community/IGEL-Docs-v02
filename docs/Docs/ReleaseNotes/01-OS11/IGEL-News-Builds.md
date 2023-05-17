@@ -12,6 +12,561 @@ Please keep in mind a Private Build is a fully supported firmware!
 These are the release notes published with each release:
 ```
 
+
+-----
+
+## 2023-05-17 - [11.08.330](readme11.08.330.txt)
+
+```
+The new PUBLIC BUILD 11.08.307 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace App 2303  
+  Available Workspace Apps in this release: 2303 (default), 2302, and 2010
+* New features:  
+* Inactivity Timeout for Citrix Workspace app
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Inactivity Timeout for Citrix Workspace app`                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.itoenabled`                                         |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+
+* Background blurring for webcam redirection
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Background blurring for webcam redirection`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.HDXWebCamEnableBackgndEffect`                      |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/true                                              |
++------------+-----------------------------------------------------------------+
+
+* Integrated RTME 2.9.600 for Skype for Business
+
+### AVD
+
+* Updated IGEL AVD client to version 1.1.17  
+* Added: Cache of last entered username for AVD sessions if no other username
+  preset is active.  
+* Added parameter to disable the username cache
+
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.wvd%.options.cache-username`                           |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+
+### VMware Horizon
+
+* Updated Horizon client to version 2303-8.9.0-21435420  
+  Added parameter for the browser redirection feature and  
+  setting rtav related audio out option:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Browser Redirection`                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.html5mmrbcr.enable-bcr`                            |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Allow client webcam in Browser Redirection`                    |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.html5mmrbcr.media-stream-enabled`                  |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Ignore website's certificate errors`                           |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.html5mmrbcr.ignore-certs`                          |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Save Cookies for Browser Redirection`                          |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.html5mmrbcr.use-cache-enabled`                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Select audio output devices`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.audio-out-option`                                  |
++------------+-----------------------------------------------------------------+
+| Range      | [Default][All][User selection]                                  |
++------------+-----------------------------------------------------------------+
+| Value      | **Default**                                                     |
++------------+-----------------------------------------------------------------+
+
+
+### Chromium
+
+* Updated Chromium browser to version 112.0.5615.165
+
+### Firefox
+
+* Updated Mozilla Firefox to version 102.10.0 esr
+
+### WiFi
+
+* Added iwlwifi backport WiFi driver which can be used if issues with Intel WiFi
+  devices occur.  
+* Added registry key (reboot is required to become effective)
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use the newer backport drivers for WLAN.`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.use_backport_drivers`                           |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+
+### Smartcard
+
+* Updated Pointsharp (formerly SecMaker) Net iD Client to version 1.1.0.37.
+
+### CUPS Printing
+
+* Added LRS printing agent V1R1.0.000
+* Corresponding configuration options in setup - Devices > Printing > LRS
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Custom path to LRS software`                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.custom_path`                                                |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Manage printers by LRS VPSA`                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.active`                                                     |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Debug mode`                                                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.debug_mode`                                                 |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Pass Username to the LRS Backend`                               |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.pass_username`                                              |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Username Format`                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.username_format`                                            |
++------------+-----------------------------------------------------------------+
+|Range       | [Username][Domain\Username][Username@Domain]                    |
++------------+-----------------------------------------------------------------+
+|Value       |**Username**                                                     |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Cups printer model name for local printing`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.cups_model`                                                 |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |Generic Raw Queue **Default**                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Driver name used in remote Windows session`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.windows_driver`                                             |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |MS Publisher Color Printer **Default**                           |
++------------+-----------------------------------------------------------------+
+|Parameter   |`VSPA URL`                                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.homeurl`                                                    |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       | [http://replace.me.server/lrs/nlrswc2.exe/vpsx]                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`ICA Sessions`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.map_ica`                                                    |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`RDP Sessions`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.map_rdp`                                                    |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Parallels Sessions`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.map_twox`                                                   |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`NX Client Sessions`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`LRS.map_nxclient`                                               |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`LRS Output Management`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`services.printing_lrs.enabled`                                  |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+
+### Cisco Webex
+
+* Integrated Cisco Webex VDI  43.4.0.25788
+
+### Base system
+
+* Added Canadian Multilingual Standard keyboard layout.
+* Added BIOS update and password management support for HP t540 and t640. How-
+  to-guide via [https://kb.igel.com/hp-ami-bios], added parameters:
+
++------------+-----------------------------------------------------------------+
+|Setup       |`System > Firmware Customization > Features`                     |
++------------+-----------------------------------------------------------------+
+|Parameter   |`BIOS Tools`                                                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`services.bios_tools.enabled`                                    |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_update_file`                            |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_settings_set_file`                      |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_settings_get_file`                      |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_pwd_file`                               |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_pwd_file_old`                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_download_username`                      |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`fwtools.bios_tools.bios_download_crypt_password`                |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+
+
+### Driver
+
+* Updated Olympus driver for dictation to version 4.0.3.
+
+### Audio
+
+* Updated EPOS Connect to version 7.4
+
+### Hardware
+
+* Added hardware support for Lenovo ThinkPad L14 Gen3 (Intel) - integrated LTE
+  is not supported yet.
+* Added hardware support for HP Elite mt645 G7, includes WWAN Intel XMM 7560 R+
+* Added hardware support for LG CQ600i-6N.
+* Added hardware support for LG 24CQ650i-6N.
+* Added hardware support for HP t550.
+
+### Remote Management
+
+* Remote management evaluates a HTTP cookie which is propagated to the device
+  during the ICG handshake and uses this cookie in all HTTP and Websocket
+  connections belonging to the established ICG connection. This enables the load
+  balancing mechanism involving an affinity HTTP cookie to relate device's HTTP
+  and Websocket requests to a particular ICG connection.
+* Upgraded libwebsockets to v4.1.6
+* IGEL remote manager agent exposes in all ICG connections and HTTP(s) requests
+  the User-Agent HTTP header in the form: igel-rmagent/\<RMAGENTVERSION>
+
+### Fabulatech
+
+* Updated Fabulatech plugins to version 3.10.0.9.
+
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed Chromium browser security issues CVE-2023-1236, CVE-2023-1235,
+  CVE-2023-1234, CVE-2023-1233, CVE-2023-1232, CVE-2023-1231, CVE-2023-1230,
+  CVE-2023-1229, CVE-2023-1228, CVE-2023-1227, CVE-2023-1226, CVE-2023-1225,
+  CVE-2023-1224, CVE-2023-1223, CVE-2023-1222, CVE-2023-1221, CVE-2023-1220,
+  CVE-2023-1219, CVE-2023-1218, CVE-2023-1217, CVE-2023-1216, CVE-2023-1215,
+  CVE-2023-1214 and CVE-2023-1213.
+* Fixed Chromium browser security issues CVE-2023-2137, CVE-2023-2136,
+  CVE-2023-2135, CVE-2023-2134, CVE-2023-2133, CVE-2023-2033, CVE-2023-1534,
+  CVE-2023-1533, CVE-2023-1532, CVE-2023-1531, CVE-2023-1530, CVE-2023-1529,
+  CVE-2023-1528, CVE-2022-2136 and CVE-2022-2033.  
+* Updated chromium browser to version 112.0.5615.165
+
+### Firefox
+
+* Updated Mozilla Firefox to version 102.10.0 ESR  
+  Security fixes for mfsa2023-14, also known as:  
+  CVE-2023-29533, CVE-2023-29535, CVE-2023-29536, CVE-2023-29539,  
+  CVE-2023-29541, CVE-2023-1945, CVE-2023-29548, CVE-2023-29550.  
+  Security fixes for mfsa2023-10, also known as:  
+  CVE-2023-25751, CVE-2023-28164, CVE-2023-28162, CVE-2023-25752,  
+  CVE-2023-28176.
+
+### Base system
+
+* Updated Intel-microcode from 20221108 to 20230214 version for solving relevant
+  security issues.  
+* Fixed sudo security issues CVE-2023-28487, CVE-2023-28486 and CVE-2023-2848.  
+* Fixed vim security issues CVE-2023-1175, CVE-2023-1170, CVE-2023-0433,
+  CVE-2023-0288, CVE-2023-0054, CVE-2023-0049, CVE-2022-47024, CVE-2022-2946,
+  CVE-2022-2923, CVE-2022-2849, CVE-2022-2845, CVE-2022-2581, CVE-2022-2571,
+  CVE-2022-2345, CVE-2022-2304, CVE-2022-2206, CVE-2022-2183, CVE-2022-2175,
+  CVE-2022-2129, CVE-2022-2126, CVE-2022-2125, CVE-2022-2124, CVE-2022-1968,
+  CVE-2022-1942, CVE-2022-1898, CVE-2022-1851, CVE-2022-1796, CVE-2022-1785,
+  CVE-2022-1735, CVE-2022-1733, CVE-2022-1720, CVE-2022-1674, CVE-2022-1629 and
+  CVE-2022-0413.  
+* Fixed bubblewrap security issue CVE-2021-41133.  
+* Fixed heimdal security issue CVE-2022-45142.  
+* Fixed xorg-server security issue CVE-2023-1393.  
+* Fixed ghostscript security issue CVE-2023-28879.  
+* Fixed protobuf security issues CVE-2022-1941 and CVE-2021-22570.  
+* Fixed python2.7 security issue CVE-2023-24329.  
+* Fixed python3.6 security issue CVE-2023-24329.  
+* Fixed zulu8-ca security issues CVE-2023-21930, CVE-2023-21937, CVE-2023-21938,
+  CVE-2023-21939, CVE-2023-21954, CVE-2023-21967 and CVE-2023-21968.  
+* Fixed systemd security issues CVE-2022-3821 and CVE-2022-4415.  
+* Fixed openssl1.0 security issues CVE-2023-0466, CVE-2023-0465 and
+  CVE-2023-0464.  
+* Fixed openssl security issues CVE-2023-0466, CVE-2023-0465 and CVE-2023-0464.  
+* Fixed gnutls28 security issue CVE-2023-0361.  
+* Fixed qemu security issue CVE-2022-1050.  
+* Fixed ffmpeg security issues CVE-2022-48434, CVE-2022-3964, CVE-2022-3341 and
+  CVE-2022-3109.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed MS-Teams video color issues for remote video feeds and screenshares.
+* Optimized h.264 encoder settings for MS-Teams VDI calls.  
+* Added a registry parameter to change the x264enc speed-preset property used
+  for MS-Teams VDI
+
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.wvd%.options.webrtcencoderpreset`                      |
++------------+-----------------------------------------------------------------+
+|Value       | [none][ultrafast][superfast][veryfast][faster][fast]            |
+|            | [ **medium** ][slow][slower][veryslow][placebo]                 |
++------------+-----------------------------------------------------------------+
+
+* Removed smartcard option until smartcard support is stabilized. Smartcard
+  redirection still can be enabled by setting sessions.wvd%.options.cmd_ext =
+  --smartcard
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP sessions not starting on configured monitor.
+* Fixed RDP sessions no longer starting on multiple monitors when using
+  different resolutions.
+* Fixed cursor position not updated correctly in RDP sessions.
+
+### Firefox
+
+* Fixed browser startup behavior if multiple browser sessions are started. As
+  example, different autostarted browser sessions on different monitors.  
+  For that browser's remote interface is required to start the next session
+  which takes time on slow endpoints.  
+  A configurable timeout is implemented:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Timeout for starting next browser session`                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`browserglobal.app.startup-timeout`                              |
++------------+-----------------------------------------------------------------+
+|Range       | [0][2][4][6][8][10][12][14][16][18][20]                         |
++------------+-----------------------------------------------------------------+
+|Value       |**0**                                                            |
++------------+-----------------------------------------------------------------+
+
+* Fixed usage of more than one Firefox session. This was prevented by app-armor
+  lacking an additional exception for Firefox 102 ESR.
+* Fixed handling of ica files - required to start Citrix sessions (restored
+  former behavior).
+* Fixed typo in browser start script which could corrupt URL in some cases.
+
+### Network
+
+* Fixed: Set thirdparty r8125 as default driver on Lenovo L14 Gen 3 (Intel-
+  based)  
+* Added new registry key to prefer thirdparty r8125 over r8169 network driver.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use thirdparty r8125 kernel module.`                            |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.r8169.prefer_r8125`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
+* Fixed tray icon for Fibocom L860-GL-16 LTE Module
+* SCEP:  
+    -Fixed SCEP via proxy  
+    -Added separator definition to use if multiple values of distinguished name
+      attributes are desired, e.g. multiple organizational units. The separator
+      also affects organization, state, locality, and potentially more in the
+      future.
+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Name separator`                                                 |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.scepclient.cert%.multivalueseparator`                   |
++------------+-----------------------------------------------------------------+
+|Range       | [<none>]                                                        |
++------------+-----------------------------------------------------------------+
+|Value       |**<none>**                                                       |
++------------+-----------------------------------------------------------------+
+
+
+### WiFi
+
+* Fixed: WiFi IP setting changes become effective immediately now.
+
+### Base system
+
+* Fixed serial port support for TSharc touch devices.  
+* Added new registry key:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Set serial interface for TSharc touch (None for USB device).`   |
++------------+-----------------------------------------------------------------+
+|Registry    |`userinterface.touchscreen.tsharc_serial_device`                 |
++------------+-----------------------------------------------------------------+
+|Range       | [None][COM1][COM2][COM3][COM4][COM1 (USB)][COM2 (USB)]          |
++------------+-----------------------------------------------------------------+
+|Value       |**None**                                                         |
++------------+-----------------------------------------------------------------+
+
+* Fixed missing node actions for changing Device Encryption settings
+* Disabled suspend support on Intel based Lenovo L14 Gen 3 as it does not work
+  currently.
+* Fixed handling of certificate files in PEM format which do not include a final
+  newline character.
+
+### Custom Partition
+
+* Fixed: Creating or updating a custom partition is decoupled from the
+  partition's mounting so that the creating process doesn't interrupt the boot
+  process and runs in the background now. This fixes problems with premature
+  abort while creating the custom partition by a timeout during boot.
+
+### X11 system
+
+* Fixed out of range issue for NEC EA223WM monitors.
+* Added quirk for DisplayLink leads to long Xorg start on boot.  
+* Added new registry key x.xserver0.quirks.displaylink_crash_workaround
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Quirk to fix issues with Xorg start take ages with DisplayLink connected.` |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver0.quirks.displaylink_crash_workaround`                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+
+### VNC Viewer
+
+* Added VNC viewer parameter to control if current or all monitors are used when
+  switching to full-screen mode.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use all monitors in full-screen mode`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vncviewer<num>.option.fullscreenallmonitors`           |
++------------+-----------------------------------------------------------------+
+|Value       |**disabled**(default)/enabled                                    |
++------------+-----------------------------------------------------------------+
+
+
+### Remote Management
+
+* IGEL remote management reacts now on every change among the all available
+  network interfaces in the running IGEL OS. So if a network interface becomes
+  online or offline then the remote management tries to connect the UMS or the
+  ICG server.
+```
+
 -----
 
 ## 2023-05-12 - [11.08.307](readme11.08.307.txt)

@@ -133,7 +133,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 
-**A:** UMS server is not supported on Windows 11. Please selected a supported OS and reinstall UMS. [Supported Environment UMS 12.01.110](https://kb.igel.com/endpointmgmt-12.01/en/supported-environment-ums-12-01-110-81510942.html)
+**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12.01.110](https://kb.igel.com/endpointmgmt-12.01/en/supported-environment-ums-12-01-110-81510942.html)
 
 -----
 

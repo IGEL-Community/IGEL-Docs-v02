@@ -127,6 +127,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.01/en/known-issues-ums-12-01-110-88023333.html)
 
+**Q:** What can be done to increase performance for UMS?
+
+**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-types-diagrams-77864360.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.01/en/performance-optimizations-77864390.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.01/en/how-to-configure-java-heap-size-for-the-ums-server-77864106.html).
+
 -----
 
 ## FAQ - OS 12

@@ -224,3 +224,11 @@ sequenceDiagram
 **Q:** What do the error codes from onboarding mean?
 
 **A:** [Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding)
+
+-----
+
+## FAQ - Microsoft AVD
+
+**Q:** How to pass Microsoft Excel keyboard shortcut keys?
+
+**A:** [Microsoft Excel keyboard shortcut keys](https://www.computerhope.com/shortcut/excel.htm) can be passed to AVD session by enabling `System > app > avd > avd% > options > remote-keymapping`.

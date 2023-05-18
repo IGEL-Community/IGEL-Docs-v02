@@ -16,7 +16,7 @@ Remove for now
 
 -----
 
-## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
+## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08.330/en/overview-first-steps-with-igel-os-11-88018897.html)
 
 -----
 

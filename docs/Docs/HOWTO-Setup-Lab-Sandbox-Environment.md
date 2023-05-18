@@ -285,7 +285,7 @@ Use pfSense to create firewall (DMZ)
 
 -----
 
-## Appendix - IGEL Downloads
+## Appendix - Current IGEL Downloads
 
 | Name | Description - Link |
 |------|--------------------|

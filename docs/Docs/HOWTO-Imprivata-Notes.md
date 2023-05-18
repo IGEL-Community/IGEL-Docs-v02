@@ -1,8 +1,8 @@
 # HOWTO Imprivata Notes
 
-## [IGEL Knowledge Base -- Imprivata](https://kb.igel.com/igelos-11.08.200/en/imprivata-69177524.html)
+## [IGEL Knowledge Base -- Imprivata](https://kb.igel.com/igelos-11.08/en/imprivata-63804438.html)
 
-## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/igelos-11.08.200/en/imprivata-69175857.html)
+## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/igelos-11.08/en/imprivata-63802856.html)
 
 -----
 

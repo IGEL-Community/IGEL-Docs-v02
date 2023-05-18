@@ -138,7 +138,7 @@ Save the change and reboot without the “Force VESA driver” option being set.
 
 [IGEL OS Boot Menu Explained – Video](https://videos.igelcommunity.com/igel-os-boot-menu-explained-video/)
 
-[IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.08.200/en/boot-menu-69177300.html)
+[IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.08/en/boot-menu-63804218.html)
 
 ### Try VESA only boot
 
@@ -197,7 +197,7 @@ rm -rf $tmp_dir
 
 The IGEL Linux Registry offers a number of extended logging options that can help customers, Support and PreSales debug system and network issues.
 
-[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/igelos-11.08.200/en/extended-logging-with-syslog-tcpdump-and-netlog-69176254.html)
+[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/igelos-11.08/en/extended-logging-with-syslog-tcpdump-and-netlog-63803234.html)
 
 -----
 
@@ -288,7 +288,7 @@ update
 
 | Under the igelos/amd64 and igelos/arm64 paths, the subpaths for the various versions of IGEL OS public and private. |
 |-----------------------|
-| igelos/amd64/11.08.230 |
+| igelos/amd64/11.08.330 |
 | igelos/amd64/11.07.920 |
 | igelos/amd64/11.07.170 |
 | igelos/arm64/11.02.120 |

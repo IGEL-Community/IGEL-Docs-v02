@@ -1,6 +1,6 @@
 # HOWTO CUPs Printing
 
-## [IGEL KB - CUPs Printing](https://kb.igel.com/igelos-11.08.200/en/cups-69178109.html)
+## [IGEL KB - CUPs Printing](https://kb.igel.com/igelos-11.08/en/cups-63805004.html)
 ## [IGEL Community GitHub - Work from home with network printer](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/WFH-Add-Network-Printers)
 ## [IGEL Community GitHub - Work from office with network printer](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/WFO-Add-Assigned-Printers)
 
@@ -10,7 +10,7 @@
 
 If printer is not network attached, then follow IGEL note on setting up CUPs printer with USB connection with PPD file.
 
-### [Installing a Custom CUPS Driver](https://kb.igel.com/igelos-11.08.200/en/installing-a-custom-cups-driver-69177139.html)
+### [Installing a Custom CUPS Driver](https://kb.igel.com/igelos-11.08/en/installing-a-custom-cups-driver-63804114.html)
 
 -----
 

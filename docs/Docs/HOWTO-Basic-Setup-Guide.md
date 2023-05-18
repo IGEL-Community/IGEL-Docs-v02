@@ -4,7 +4,7 @@
 
 **NOTE:** This guide follows KB article -- First Steps with IGEL OS 11 and adds optional IGEL Cloud Gateway (ICG) setup.
 
-[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08.200/en/overview-first-steps-with-igel-os-11-69175175.html)
+[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08.330/en/overview-first-steps-with-igel-os-11-88018897.html)
 
 -----
 
@@ -67,7 +67,7 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.08/en/ud-pocket-breaks-microsoft-surface-63804118.html) |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
--	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html). Choose the options best for you.
+-	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08.330/en/installation-procedure-88022111.html). Choose the options best for you.
 -	[OS 12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html). Choose the options best for you.
 -	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. [See a tutorial video for installing IGEL OS here](https://www.youtube.com/watch?v=w-EMUDS5Tb0).
 

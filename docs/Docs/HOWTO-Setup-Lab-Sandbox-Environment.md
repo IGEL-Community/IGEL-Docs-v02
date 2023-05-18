@@ -183,7 +183,7 @@ VirtualBox > New
 - Disk file to install from: `path to IGEL OS 11 / 12 ISO file`
 - Start
 
-Follow IGEL OS 11 installation procedures - [LINK](https://kb.igel.com/igelos-11.08.200/en/installation-procedure-69178239.html)
+Follow IGEL OS 11 installation procedures - [LINK](https://kb.igel.com/igelos-11.08/en/installation-procedure-63805133.html)
 
 Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html)
 

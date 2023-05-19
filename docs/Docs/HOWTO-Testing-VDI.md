@@ -18,7 +18,7 @@ Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions th
 
 - [Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop)
 
-- [IGEL Ready Parnter - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
+- [IGEL Ready Partner - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
 
 -----
 

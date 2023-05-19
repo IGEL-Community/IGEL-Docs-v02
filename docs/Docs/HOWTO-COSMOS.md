@@ -2,8 +2,9 @@
 
 ## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
------
------
+----------
+
+----------
 
 ## FAQ - IGEL Education
 

@@ -10,7 +10,7 @@ VDI vendors provide testing / demo environments. Below are some notes on how to 
 
 ## Microsoft AVD and Windows 365 Cloud PC
 
-Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions that deliver Windows desktops to users, but they have different features, pricing, and management models. Windows 365 Cloud PC is a fully managed SaaS solution that offers easy and predictable per-user pricing and a turn-key deployment, but does not support virtual desktop pools or automatic scalability. Azure Virtual Desktop is a cloud VDI that allows users to fully customize their infrastructure and manage the resources that work within the virtualized infrastructure, but requires more IT skills and has a more complex pricing method based on resource consumption. Azure Virtual Desktop also supports all current versions of Windows and all image types, while Windows 365 Cloud PC only supports Windows 10 Enterprise (single session) and Azure Marketplace images.
+Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions that deliver Windows desktops to users, but they have different features, pricing, and management models. Windows 365 Cloud PC is a fully managed SaaS solution that offers easy and predictable per-user pricing and a turn-key deployment, but does not support virtual desktop pools or automatic scalability. Azure Virtual Desktop is a cloud VDI that allows users to fully customize their infrastructure and manage the resources that work within the virtualized infrastructure, but requires more IT skills and has a more complex pricing method based on resource consumption.
 
 - [Try Windows 365 Business free for one month](https://www.microsoft.com/en-us/windows-365/business/windows-365-free-trial-b)
 

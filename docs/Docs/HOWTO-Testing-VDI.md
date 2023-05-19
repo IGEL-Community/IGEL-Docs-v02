@@ -12,19 +12,19 @@ VDI vendors provide testing / demo environments. Below are some notes on how to 
 
 Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions that deliver Windows desktops to users, but they have different features, pricing, and management models. Windows 365 Cloud PC is a fully managed SaaS solution that offers easy and predictable per-user pricing and a turn-key deployment, but does not support virtual desktop pools or automatic scalability. Azure Virtual Desktop is a cloud VDI that allows users to fully customize their infrastructure and manage the resources that work within the virtualized infrastructure, but requires more IT skills and has a more complex pricing method based on resource consumption.
 
-- [Try Windows 365 Business free for one month](https://www.microsoft.com/en-us/windows-365/business/windows-365-free-trial-b)
+### [Try Windows 365 Business free for one month](https://www.microsoft.com/en-us/windows-365/business/windows-365-free-trial-b)
 
-- [Windows 365 Cloud PC](https://www.microsoft.com/en-us/windows-365)
+### [Windows 365 Cloud PC](https://www.microsoft.com/en-us/windows-365)
 
-- [Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop)
+### [Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop)
 
-- [IGEL Ready Partner - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
+### [IGEL Ready Partner - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
 
-- [IGEL KB: AVD Session](https://kb.igel.com/igelos-11.08/en/avd-session-63804667.html)
+### [IGEL KB: AVD Session](https://kb.igel.com/igelos-11.08/en/avd-session-63804667.html)
 
-- [IGEL KB: AVD Global](https://kb.igel.com/igelos-11.08/en/avd-global-63804664.html)
+### [IGEL KB: AVD Global](https://kb.igel.com/igelos-11.08/en/avd-global-63804664.html)
 
-- [IGEL KB: AVD Articles](https://kb.igel.com/igelos-11.08/en/microsoft-azure-virtual-desktop-avd-63802873.html)
+### [IGEL KB: AVD Articles](https://kb.igel.com/igelos-11.08/en/microsoft-azure-virtual-desktop-avd-63802873.html)
 
 -----
 
@@ -82,8 +82,8 @@ Once your account is created, you will receive email with your login details.
 
 App & Desktop Virtualization Made Easy.
 
-- [Take Frame for a spin](https://www.nutanix.com/products/frame/test-drive)
+### [Take Frame for a spin](https://www.nutanix.com/products/frame/test-drive)
 
-- [OS 11 / 12 - Create Custom Partition for Frame](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/Nutanix_Frame)
+### [OS 11 / 12 - Create Custom Partition for Frame](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/Nutanix_Frame)
 
-- [OS 12 - IGEL App Portal - coming soon](https://app.igel.com/)
+### [OS 12 - IGEL App Portal - coming soon](https://app.igel.com/)

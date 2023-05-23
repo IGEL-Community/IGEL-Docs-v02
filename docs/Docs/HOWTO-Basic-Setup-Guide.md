@@ -137,6 +137,8 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
+- OS 11 and OS 12
+
 ```mermaid
 flowchart TD
   A[UMS Console]-- Port 5900 TCP SSL Tunnel Encrypted VNC-data --> B[\Intranet OS 11 Devices/]
@@ -149,6 +151,22 @@ flowchart TD
   C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
   B[\Intranet OS 11 Devices/]-- Port 30001 TCP --> C{UMS Server}
   G[/Internet OS 11 Devices\]-- Port 8443/443 TCP --> H((Internet Connection))
+  H((Internet Connection))<-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
+  C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
+  H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+```
+
+- OS 12 (No OS 11)
+
+```mermaid
+flowchart TD
+  A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
+  C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
+  C{UMS Server}-- DB Port--> E[(UMS DB)]
+  C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
   H((Internet Connection))<-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]

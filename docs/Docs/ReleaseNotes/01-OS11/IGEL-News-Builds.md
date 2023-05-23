@@ -11,7 +11,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 ********************************************************************************
 These are the release notes published with each release:
 ```
+-----
 
+## 2023-05-23 - [11.08.118.DER](readme11.08.118.DER.txt)
+
+```
+The new PUBLIC BUILD 11.08.118.DER for IGEL Workspace is ready.
+
+This build is based on 11.08.110.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace App 2303  
+* Integrated Cisco JVDI 14.1.2  
+* Integrated Cisco Webex Meetings 43.2
+```
 
 -----
 

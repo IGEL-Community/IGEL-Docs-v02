@@ -176,6 +176,7 @@ flowchart TD
   H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
+  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
 ```
 
 - OS 12 (No OS 11; No ICG; No OBS)
@@ -190,6 +191,7 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
 ```
 
 - OS 12 (No OS 11; No ICG; OBS; IDP)
@@ -208,6 +210,7 @@ flowchart TD
   H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
+  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
 ```
 
 - OBS sequence for registering an OS 12 device

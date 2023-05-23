@@ -369,6 +369,6 @@ exit 0
 
 ## GitHub Custom Partition Builders - Automation
 
-*Q:** How to keep applications up to date?
+**Q:** How to keep applications up to date?
 
 **A:** [CP build automation](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/utils/cp_build_automation)

@@ -157,6 +157,9 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> M[[OBS]]
+  M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
+  M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
 ```
 
 - OS 12 (No OS 11; No ICG)
@@ -171,6 +174,23 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+```
+
+- OS 12 (No OS 11; No ICG; OBS; IDP)
+
+```mermaid
+flowchart TD
+  A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
+  C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
+  C{UMS Server}-- DB Port--> E[(UMS DB)]
+  C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
+  H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> M[[OBS]]
+  M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
+  M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
 ```
 
 #### IGEL OS 12 Devices

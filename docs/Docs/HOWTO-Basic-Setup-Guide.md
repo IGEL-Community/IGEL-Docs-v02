@@ -137,6 +137,21 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
+- Legend
+
+```mermaid
+flowchart LR
+  A === B === C === D === E === F === G === H
+  A[[IGEL Servers - PAS]]
+  B((Connection to Internet))
+  C{Client Servers - UMS / ICG}
+  D[UMS Console Client]
+  E[/Internet OS 11 Devices\]
+  F[\Intranet OS 11 Devices/]
+  G[/OS 12 Devices\]
+  H[(Database)]
+```
+
 - OS 11 and OS 12
 
 ```mermaid
@@ -156,13 +171,14 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> M[[OBS]]
+  H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
 ```
 
-- OS 12 (No OS 11; No ICG)
+- OS 12 (No OS 11; No ICG; No OBS)
 
 ```mermaid
 flowchart TD
@@ -188,7 +204,8 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> M[[OBS]]
+  K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
+  H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
 ```

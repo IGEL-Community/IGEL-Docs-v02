@@ -14,6 +14,14 @@
 
 -----
 
+## FAQ - IGEL Topology
+
+**Q:** What has changed with IGEL network topology?
+
+**A:** [Details on the different network topologies](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Basic-Setup-Guide/#configure-ums-network-ports).
+
+-----
+
 ## FAQ - Time Service
 
 **Q:** Do I really have to have the correct time / date on all my computers?

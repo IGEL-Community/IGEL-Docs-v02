@@ -193,6 +193,26 @@ flowchart TD
   M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
 ```
 
+- OBS sequence for registering an OS 12 device
+
+```mermaid
+sequenceDiagram
+  participant A as IGEL OS 12
+  participant B as UMS 12
+  participant C as OBS
+  participant D as Service Hub
+  participant E as Customer IDP (AAD, Okta, Ping Identity)
+  A->>C: 1 - Request Onboarding Params from email
+  C->>D: 2 - Request IDP from email
+  D->>C: 3 - Respond with IDP Credentials
+  C->>E: 4 - oAuthLogin on IDP
+  E->>C: 5 - ID Token
+  C->>D: 6 - Request OBS Params
+  D->>C: 7 - Respond with OBS Params
+  C->>A: 8 - Send OBS Params to IGEL OS
+  A->>B: 9 - Initiate Onboarding
+```
+
 #### IGEL OS 12 Devices
 
 - Port 8443 (TCP) Incoming / Outgoing

@@ -11,6 +11,34 @@ Please keep in mind a Private Build is a fully supported firmware!
 ********************************************************************************
 These are the release notes published with each release:
 ```
+
+-----
+
+## 2023-05-24 - [11.08.331](readme11.08.331.txt)
+
+```
+The new PUBLIC BUILD 11.08.331 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### WiFi
+* Made DHCP refresh after roaming within the same network configurable.
++------------+-----------------------------------------------------------------+
+| Parameter  | `Refresh DHCP after roaming`                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.roam_refresh_dhcp`      |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+```
+
 -----
 
 ## 2023-05-23 - [11.08.118.DER](readme11.08.118.DER.txt)

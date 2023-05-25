@@ -6,7 +6,7 @@
 
 [IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
-Sample OS 11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
+### Sample OS 11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
 
 | Application | Profile |
 |-------------|---------|
@@ -17,6 +17,18 @@ Sample OS 11 Profiles to test some of the most common Custom Partitions created 
 | VLC | <a href="../Profiles/HOWTO-Add-Application-VLC-CP-profile.xml" download>LINK to Profile</a> |
 | Webex | <a href="../Profiles/HOWTO-Add-Application-Webex-CP-profile.xml" download>LINK to Profile</a> |
 | Zoom | <a href="../Profiles/HOWTO-Add-Application-Zoom-CP-profile.xml" download>LINK to Profile</a> |
+
+### OS 12 Profile Settings
+
+| Application | Size | URL | Initial action | Final Action | Icon | Command |
+|-------------|------|-----|----------------|--------------|------|---------|
+| Chrome | 600M | https://[UMS_Server]:8443/ums_filetransfer/chrome.inf | /custom/chrome-cp-init-script.sh init | /custom/chrome-cp-init-script.sh stop | /custom/chrome/opt/google/chrome/product_logo_256.png | /custom/chrome/usr/bin/google-chrome-stable |
+| Frame | 500M | https://[UMS_Server]:8443/ums_filetransfer/frame.inf | /custom/frame-cp-init-script.sh init | /custom/frame-cp-init-script.sh stop | /custom/frame/usr/share/pixmaps/Frame.png | /custom/frame/usr/bin/nutanix-frame/Frame –url=console.nutanix.com |
+| LibreOffice | 1500M | https://[UMS_Server]:8443/ums_filetransfer/libreoffice.inf | /custom/libreoffice-cp-init-script.sh init | /custom/libreoffice-cp-init-script.sh stop | /custom/libreoffice/usr/share/icons/hicolor/256x256/apps/libreoffice7.5-main.png | /custom/libreoffice/opt/libreoffice7.5/program/soffice |
+| Microsoft Edge | 800M | https://[UMS_Server]:8443/ums_filetransfer/edge.inf | /custom/edge-cp-init-script.sh init | /custom/edge-cp-init-script.sh stop | /custom/edge/opt/microsoft/msedge-beta/product_logo_256_beta.png | /custom/edge/usr/bin/microsoft-edge-beta |
+| VLC | 300M | https://[UMS_Server]:8443/ums_filetransfer/vlc.inf | /custom/vlc-cp-init-script.sh init | /custom/vlc-cp-init-script.sh stop | /custom/vlc/usr/share/icons/hicolor/256x256/apps/vlc.png | /custom/vlc/usr/bin/vlc |
+| Webex | 1100M | https://[UMS_Server]:8443/ums_filetransfer/webex.inf | /custom/webex-cp-init-script.sh init | /custom/webex-cp-init-script.sh stop | /custom/webex/opt/Webex/bin/sparklogosmall.png | /custom/webex/opt/Webex/bin/CiscoCollabHost |
+| Zoom | 600M | https://[UMS_Server]:8443/ums_filetransfer/zoom.inf | /custom/zoom-cp-init-script.sh init | /custom/zoom-cp-init-script.sh stop | /custom/zoom/usr/share/pixmaps/Zoom.png | xdg-mime default Zoom.desktop x-scheme-handler/zoommtg && /custom/zoom/usr/bin/zoom |
 
 ### IGEL Disclaimer
 

@@ -146,6 +146,13 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12.01.110](https://kb.igel.com/endpointmgmt-12.01/en/supported-environment-ums-12-01-110-81510942.html)
 
+**Q:** How to limit bulk actions for UMS help desk users?
+
+
+**A:** UMS WebApp has a layer of security to `only` allow actions on a single device - `Permission > General - WebApp > Device Bulk Action`.
+
+  ![image-howto-cosmos-06](Images/HOWTO-COSMOS-06.png)
+
 -----
 
 ## FAQ - OS 12

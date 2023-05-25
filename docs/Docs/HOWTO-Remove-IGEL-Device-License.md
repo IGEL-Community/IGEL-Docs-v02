@@ -59,11 +59,13 @@ Removing a license from the IGEL license portal, and UMS does not remove it from
 
 Now that the portal reflects the change, and UMS has synced, we will need to remove the device license from UMS, so it does not re-issue the license back to the device. To do this follow the steps below:
 
+- In UMS remove the device from devices
 - In UMS open UMS Administration in the navigation menu
 - Navigate to **Global Configuration -> Licenses -> Device Licenses**
 - Click the Select Filter button and enter the Unit ID of the device and click OK to locate the device you want to remove
 - **Note:** You can also use the three dots “…” button to navigate to the device
 - Select the license pack you wish to release and then click the minus button in the top right
+- In UMS clear out the recycle bin
 
 -----
 

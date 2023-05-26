@@ -14,6 +14,30 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-05-26 - [11.08.334](readme11.08.334.txt)
+
+```
+The new PUBLIC BUILD 11.08.334 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Added initial secondary ringer support. But since the RdClientSDK support for
+  it currently is non-functional (the sinkId does not change on the related MS-
+  Teams setting), we added a command line option \\"--webrtc-ring-all-devices\\" and
+  have set that as default in the cmd_ext setting. This makes MS-Teams ring on
+  all audio output devices. This default setting will be removed as soon as the
+  RdClientSDK implementation works as expected!
+```
+
+-----
+
 ## 2023-05-24 - [11.08.331](readme11.08.331.txt)
 
 ```
@@ -27,6 +51,7 @@ New Features
 --------------------------------------------------------------------------------
 
 ### WiFi
+
 * Made DHCP refresh after roaming within the same network configurable.
 +------------+-----------------------------------------------------------------+
 | Parameter  | `Refresh DHCP after roaming`                                    |

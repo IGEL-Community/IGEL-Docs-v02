@@ -14,10 +14,39 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-05-27 - [11.08.333](readme11.08.333.txt)
+
+```
+The new PRIVATE BUILD 11.08.333 for IGEL Workspace is ready.
+
+This build is based on 11.08.290.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Updated Horizon Client to version 2206-8.6.0-64817841
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firefox
+
+* Fixed usage of more than one Firefox session. This was prevented by app-armor
+  lacking an additional exception for Firefox 102 ESR.
+* Fixed handling of ica files - required to start Citrix sessions (restored
+  former behavior).
+* Fixed typo in browser start script which could corrupt URL in some cases.
+```
+
+-----
+
 ## 2023-05-26 - [11.08.334](readme11.08.334.txt)
 
 ```
-The new PUBLIC BUILD 11.08.334 for IGEL Workspace is ready.
+The new PRIVATE BUILD 11.08.334 for IGEL Workspace is ready.
 
 This build is based on 11.08.330.
 
@@ -41,7 +70,7 @@ New Features
 ## 2023-05-24 - [11.08.331](readme11.08.331.txt)
 
 ```
-The new PUBLIC BUILD 11.08.331 for IGEL Workspace is ready.
+The new PRIVATE BUILD 11.08.331 for IGEL Workspace is ready.
 
 This build is based on 11.08.330.
 
@@ -69,7 +98,7 @@ New Features
 ## 2023-05-23 - [11.08.118.DER](readme11.08.118.DER.txt)
 
 ```
-The new PUBLIC BUILD 11.08.118.DER for IGEL Workspace is ready.
+The new PRIVATE BUILD 11.08.118.DER for IGEL Workspace is ready.
 
 This build is based on 11.08.110.
 

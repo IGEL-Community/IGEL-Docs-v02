@@ -84,7 +84,17 @@ Write variable to registry
 
 ```bash linenums="1"
 setparam system.remotemanager.ums_structure_tag "Building1"
+write_rmsettings
 ```
+
+**Write and read variable system.remotemanager.ums_structure_tag with MAC Address of all network interfaces:**
+
+```bash linenums="1"
+setparam system.remotemanager.ums_structure_tag $(ip a | grep ether | tr -s ' ' | cut -d " " -f 3 | paste -d " "  - -)
+write_rmsettings
+get system.remotemanager.ums_structure_tag
+```
+
 
 ## get_unit_id
 

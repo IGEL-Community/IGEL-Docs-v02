@@ -14,6 +14,47 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-05-31 - [11.08.335](readme11.08.336.DER.txt)
+
+```
+The new PRIVATE BUILD 11.08.335 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### zoomvdi
+
+* Integrated Zoom VDI 5.14.0.23370  
+  Available Zoom VDI Clients: 5.12.6.22200, 5.13.10.23090, and 5.14.0.23370
+```
+
+-----
+
+## 2023-05-30 - [11.08.336.DER](readme11.08.336.DER.txt)
+
+```
+The new PRIVATE BUILD 11.08.336.DER for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Switched system kernel to version 5.15.111  
+* Changed registry key x.server.use_legacy_xorg_server default to true so the
+  older Xorg server is used.
+```
+
+-----
+
 ## 2023-05-27 - [11.08.333](readme11.08.333.txt)
 
 ```

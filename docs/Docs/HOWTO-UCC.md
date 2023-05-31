@@ -20,6 +20,14 @@
 
 -----
 
+## USB Devices and UCC
+
+In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.
+
+- [When to use USB Redirection](https://kb.igel.com/igelos-11.08/en/when-to-use-usb-redirection-63804088.html)
+
+-----
+
 ## Citrix with the Jabra Evolve 20 to enable the call button on the headset:
 
 Setup call button on Jabra Evolve 20 with Native USB Redirection enabled via following device rule:

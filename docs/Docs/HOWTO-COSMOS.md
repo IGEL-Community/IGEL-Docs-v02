@@ -209,6 +209,14 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html)
 
+**Q:** Having issues connecting to ICG. How to check ICG server status?
+
+**A:** Make sure NTP time service is running on all devices (IGEL OS, ICG and UMS). Open a browser session to check status from IGEL OS device:
+
+```bash linenums="1"
+https://yourICG:8443/usg/server-status
+```
+
 -----
 
 ## FAQ - Onboarding Service (OBS)

@@ -189,6 +189,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Not currently implemented in OS 12. Do not have a date from IGEL. Please vote for this [feature request](https://igel.nolt.io/widget/202)
 
+**Q:** How to enable audio on Dell Wyse 5470 AIO?
+
+**A:** Change value in the registry to either 1 or 8 for `system.sound_driver.snd_hda_intel.probe_mask` and reboot.
+
 -----
 
 ## FAQ - ICG 12

@@ -253,16 +253,16 @@ sudo apt autoremove -y
 sudo reboot now
 ```
 
-- Setup SSH and create a user account with
+- Setup SSH sample -- `Edit for your environment`
 
 ```bash linenums="1"
 #!/bin/bash
 
+# EDIT for your values
 IGEL_MASTER=IP_ADDRESS_OF_UMS
 IGEL_MASTER_USER=igelums
 IGEL_ICG_INSTALL=IP_ADDRESS_OF_ICG
 IGEL_ICG_USER=icginstall
-SSHCONFIG=/etc/ssh/sshd_config
 
 #
 # OpenSSH
@@ -280,8 +280,8 @@ sudo apt install openssh-server -y
 
 SSHCONFIG=/etc/ssh/sshd_config
 
-sudo sed -i "/#Port 22/ a Port 60022" $SSHCONFIG
-sudo sed -i "/#PermitRootLogin/ a PermitRootLogin no" $SSHCONFIG
+sudo sed -i "/#Port 22/ a Port 22" $SSHCONFIG
+#sudo sed -i "/#PermitRootLogin/ a PermitRootLogin no" $SSHCONFIG
 sudo sed -i "/#PermitEmptyPasswords no/ a PermitEmptyPasswords no" $SSHCONFIG
 sudo sed -i "\$ a AllowUsers $IGEL_MASTER_USER@$IGEL_MASTER" $SSHCONFIG
 sudo sed -i "\$ a AllowUsers $IGEL_ICG_USER@$IGEL_ICG_INSTALL" $SSHCONFIG

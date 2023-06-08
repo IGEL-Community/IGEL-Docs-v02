@@ -241,7 +241,7 @@ Core (with ICG) : 8443 (default) or 443. From IGEL OS: `nc -v -z ICG-SERVER-IP-A
 
 ## Optional - Install ICG from UMS (OS 11)
 
-- Follow VirtualBox guide for installing ISO image (Ubuntu 64 bit; 4GB RAM; 25GB Disk, take defaults for the rest)
+- Follow VirtualBox guide for installing ISO image (Ubuntu 64 bit; 8GB RAM; 25GB Disk, take defaults for the rest)
 - After install then install time synchronization, update OS and upgrade OS
 
 ```bash linenums="1"

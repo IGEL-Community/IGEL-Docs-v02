@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-06 - [11.08.337](readme11.08.337.txt)
+
+```
+The new PRIVATE BUILD 11.08.337 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed mouse pointer disappearing in RemoteApp sessions.
+```
+
+-----
+
 ## 2023-05-31 - [11.08.335](readme11.08.336.DER.txt)
 
 ```

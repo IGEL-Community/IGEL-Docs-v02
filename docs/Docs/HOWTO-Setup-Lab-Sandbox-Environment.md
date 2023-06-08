@@ -246,10 +246,50 @@ Core (with ICG) : 8443 (default) or 443. From IGEL OS: `nc -v -z ICG-SERVER-IP-A
 
 ```bash linenums="1"
 sudo apt install chrony -y
+sudo apt install openssh-server -y
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt autoremove -y
 sudo reboot now
+```
+
+- Setup SSH and create a user account with
+
+```bash linenums="1"
+#!/bin/bash
+
+IGEL_MASTER=IP_ADDRESS_OF_UMS
+IGEL_MASTER_USER=igelums
+IGEL_ICG_INSTALL=IP_ADDRESS_OF_ICG
+IGEL_ICG_USER=icginstall
+SSHCONFIG=/etc/ssh/sshd_config
+
+#
+# OpenSSH
+#
+# Actions after install may include:
+#
+#   - Generate key pairs in .ssh directory -- ssh-keygen
+#   - Copy public key to remote server -- ssh-copy-id username@remote_host
+#   - Test connection -- ssh -l username hostname
+#   - Check listing port -- sudo netstat -tulpn
+# Ref: https://tinyurl.com/ssh-setup
+#
+echo "******* Starting -- apt install openssh-server"
+sudo apt install openssh-server -y
+
+SSHCONFIG=/etc/ssh/sshd_config
+
+sudo sed -i "/#Port 22/ a Port 60022" $SSHCONFIG
+sudo sed -i "/#PermitRootLogin/ a PermitRootLogin no" $SSHCONFIG
+sudo sed -i "/#PermitEmptyPasswords no/ a PermitEmptyPasswords no" $SSHCONFIG
+sudo sed -i "\$ a AllowUsers $IGEL_MASTER_USER@$IGEL_MASTER" $SSHCONFIG
+sudo sed -i "\$ a AllowUsers $IGEL_ICG_USER@$IGEL_ICG_INSTALL" $SSHCONFIG
+
+sudo systemctl stop sshd.service
+sudo systemctl start sshd.service
+sudo systemctl enable sshd.service
+echo "******* Ending -- apt install openssh-server"
 ```
 
 - Follow IGEL ICG install from UMS - [LINK](https://kb.igel.com/igelicg-2.05/en/installing-the-igel-cloud-gateway-57324362.html)

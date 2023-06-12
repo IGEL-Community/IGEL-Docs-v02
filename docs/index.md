@@ -76,6 +76,7 @@ Remove for now
 - [01-OS 11](Docs/ReleaseNotes/01-OS11)
 - [02-UMS](Docs/ReleaseNotes/02-UMS)
 - [03-IGC](Docs/ReleaseNotes/03-ICG)
+- [04-OS 12](Docs/ReleaseNotes/04-OS12)
 
 ### [IGEL Software Downloads](https://www.igel.com/software-downloads/)
 

@@ -30,6 +30,7 @@ New Features
 
 * Integrated Citrix workspace app 23.05  
   Available workspace apps in this release: 20.10 (default), 23.03, and 23.05
+
 * New features:  
 
 *  Copy and paste files and folders between two virtual desktops [Technical

@@ -100,52 +100,79 @@ These are the release notes published with that release:
 ```
 
 - Added SSO login for Azure AD IdP using web context.
+
 - Added setup parameter, required to set if Okta is selected as IdP.
-	| Parameter | Registry | Type | Value |
-	| ------ | ------ | ------ | ------ |
-	| `Client secret` | `auth.cloudidp.client_secret` | string | empty *Default* |
+
+| Parameter | Registry | Type | Value |
+| ------ | ------ | ------ | ------ |
+| `Client secret` | `auth.cloudidp.client_secret` | string | empty *Default* |
+
 - Introduced new setup parameter, required to be set if Azure AD is selected as IdP.
-	| Parameter | Registry | Type | Value |
-	| ------ | ------ | ------ | ------ |
-	| `Azure AD Tenant Name/ID` | `auth.cloudidp.aad_tenant` | string | empty *Default* |
+
+| Parameter | Registry | Type | Value |
+| ------ | ------ | ------ | ------ |
+| `Azure AD Tenant Name/ID` | `auth.cloudidp.aad_tenant` | string | empty *Default* |
+
 - Added IGEL Add-On License support.
+
 - Changed touchpad parameter name from `Enable Touchpad` to `Enable Touchpad on Boot` which make it more obvious what is meant here.
-	|  Setup  |  Parameter  |  Tooltip  |  Registry   |  Type       |  Value      |
-	| ------ | ------ | ------ | ------ | ------ | ------ |
-	|  `User Interface > Input > Touchpad`  |  `Enable Touchpad on Boot`  |  `Can be overruled by Hotkey.`  |  `userinterface.touchpad.general.TouchpadEnable`  |  bool  |  *enabled* (default) / disabled  |
+
+|  Setup  |  Parameter  |  Tooltip  |  Registry   |  Type       |  Value      |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+|  `User Interface > Input > Touchpad`  |  `Enable Touchpad on Boot`  |  `Can be overruled by Hotkey.`  |  `userinterface.touchpad.general.TouchpadEnable`  |  bool  |  *enabled* (default) / disabled  |
+
 - Also changed function of TouchpadOff registry key to only be used to switch on and off the tapping.
-	|  Setup  |  Parameter  |  Registry   |  Range      |  Value      |
-	| ------ | ------ | ------ | ------ | ------ |
-	|  `User Interface > Input > Touchpad`  |  `Tapping Mode`  |  `userinterface.touchpad.general.TouchpadOff`  |  [With tapping][Without tapping]  |  *With tapping*  |
+
+|  Setup  |  Parameter  |  Registry   |  Range      |  Value      |
+| ------ | ------ | ------ | ------ | ------ |
+|  `User Interface > Input > Touchpad`  |  `Tapping Mode`  |  `userinterface.touchpad.general.TouchpadOff`  |  [With tapping][Without tapping]  |  *With tapping*  |
+
 - Added new registry key to set left-hand on touchpad devices
-	|  Parameter  |  Registry  |  Type  |  Value  |
-	| ------ | ------ | ------ | ------ |
-	|  `Left hand`  |  `userinterface.touchpad.general.LeftHand`  |  bool  |  *disabled* (default)/enabled |
+
+|  Parameter  |  Registry  |  Type  |  Value  |
+| ------ | ------ | ------ | ------ |
+|  `Left hand`  |  `userinterface.touchpad.general.LeftHand`  |  bool  |  *disabled* (default)/enabled |
+
 - Added WiFi Regulatory Domain configuration to Setup Assistant.
+
 - Added setup parameter to enable/disable debugging mode of SSO related services and programs.
-	| Parameter | Registry | Type | Value |
-	| ------ | ------ | ------ | ------ |
-	| `Enable Debugging of Single Sign-On` | `debug.auth.cloudidp_debug` | bool | enabled / *disabled* (default) |
+
+| Parameter | Registry | Type | Value |
+| ------ | ------ | ------ | ------ |
+| `Enable Debugging of Single Sign-On` | `debug.auth.cloudidp_debug` | bool | enabled / *disabled* (default) |
+
 - Added registry key to enable natural scrolling
-	| Parameter | Registry | Type | Value |
-	| ------ | ------ | ------ | ------ |
-	| `Natural Scroll` | `userinterface.touchpad.general.naturalscroll` | bool | *disabled* (default)/enabled |
+
+| Parameter | Registry | Type | Value |
+| ------ | ------ | ------ | ------ |
+| `Natural Scroll` | `userinterface.touchpad.general.naturalscroll` | bool | *disabled* (default)/enabled |
+
 - Added parameter to adjust position of shadow indicator popup window.
-	| IGEL Setup | Parameter | Registry | Range |
-	| ------ | ------ | ------ | ------ |
-	| System > Remote Access > Shadow | `Position of the indicator` | `userinterface.vncserver.indicatorposition` | [Bottom left][ *Bottom right* ][Top left][Top right] |
+
+| IGEL Setup | Parameter | Registry | Range |
+| ------ | ------ | ------ | ------ |
+| System > Remote Access > Shadow | `Position of the indicator` | `userinterface.vncserver.indicatorposition` | [Bottom left][ *Bottom right* ][Top left][Top right] |
+
 - Added setup option to disable Single-Sign-On URL restrictions for debugging purposes.
-	| Parameter | Registry | Type | Value |
-	| ------ | ------ | ------ | ------ |
-	| `Disable Single Sign-On URL Restrictions` | `debug.auth.cloudidp_disable_url_restrictions` | bool | enabled / *disabled* (default) |
+
+| Parameter | Registry | Type | Value |
+| ------ | ------ | ------ | ------ |
+| `Disable Single Sign-On URL Restrictions` | `debug.auth.cloudidp_disable_url_restrictions` | bool | enabled / *disabled* (default) |
+
 - Updated EULA to version of April 2023
+
 - **App Management**
+
 	- Added: Automatic up- / downgrade is not allowed for pinned apps (assigned via UMS). Base System version is always pinned - even if not assigned via UMS.
+
 - **X11 system**
+
 	- Fixed default mirror mode from Panning to Scale down
-		|  Parameter  |  Registry   |  Range      |  Value      |
-		| ------ | ------ | ------ | ------ |
-		|  `Choose the mode which should be used for mirroring monitors if resolution differs.`  |  `x.xserver%.mirror_mode`  |  [Panning][Biggest common resolution][Scaling][Scaling down]  |  *Scaling down*  |
+
+|  Parameter  |  Registry   |  Range      |  Value      |
+| ------ | ------ | ------ | ------ |
+|  `Choose the mode which should be used for mirroring monitors if resolution differs.`  |  `x.xserver%.mirror_mode`  |  [Panning][Biggest common resolution][Scaling][Scaling down]  |  *Scaling down*  |
+
 ```
 ## Security Fixes
 

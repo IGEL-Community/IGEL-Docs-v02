@@ -14,7 +14,7 @@ These are the release notes published with each release:
 
 -----
 
-## 2023-06-14 - [11.08.360](readme11.08.360.txt)
+## 2023-06-13 - [11.08.360](readme11.08.360.txt)
 
 ```
 The new PUBLIC BUILD 11.08.360 for IGEL Workspace is ready.

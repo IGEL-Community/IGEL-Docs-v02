@@ -288,7 +288,7 @@ update
 
 | Under the igelos/amd64 and igelos/arm64 paths, the subpaths for the various versions of IGEL OS public and private. |
 |-----------------------|
-| igelos/amd64/11.08.330 |
+| igelos/amd64/11.08.360 |
 | igelos/amd64/11.07.920 |
 | igelos/amd64/11.07.170 |
 | igelos/arm64/11.02.120 |

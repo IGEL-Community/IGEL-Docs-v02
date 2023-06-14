@@ -14,6 +14,144 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-14 - [11.08.360](readme11.08.360.txt)
+
+```
+The new PUBLIC BUILD 11.08.360 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Parallels Client
+
+* Updated Parallels client to version 19.2.0
+
+### Network
+
+* Added support for WWAN chipset Quectel EM05 on Lenovo L14 Gen3
+
+### WiFi
+
+* Added option for DHCP refresh after roaming (within the same network).
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Refresh DHCP after roaming`                                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.interfaces.wirelesslan.device0.roam_refresh_dhcp`       |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+### Base system
+
+* Added possibility to clean-up IGEL licenses in license partition. License
+  files which are superseded by other licenses will be removed and not
+  downloaded from UMS again. This helps keeping free space for new license
+  files. The following parameter activates the license cleanup:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up redundant licenses`                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.remotemanager.license_cleanup`                           |
++------------+-----------------------------------------------------------------+
+|Value       |{**}true{**}(default)/false                                      |
++------------+-----------------------------------------------------------------+
+
+### zoomvdi
+
+* Integrated Zoom VDI 5.14.0.23370  
+  Available Zoom VDI Clients: 5.12.6.22200, 5.13.10.23090, and 5.14.0.23370
+
+### Hardware
+
+* Added hardware support for LG CQ601I
+* Added hardware support for Lenovo ThinkEdge SE10
+* Added hardware support for HP mt645 G7 with Ryzen 5
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Base system
+
+* For security reasons the accessory 'Network Tools' is enforced to run with
+  Administrator (root) privileges only. Therefore, parameter 'Password
+  protection on page Accessories>Network Tools was removed.
+* Fixed cups-filters security issue CVE-2023-24805.  
+* Fixed mysql-5.7 security issues CVE-2023-21980 and CVE-2023-21912.  
+* Fixed libwebp security issue CVE-2023-1999.  
+* Fixed libssh security issues CVE-2023-2283 and CVE-2023-1667.  
+* Fixed webkit2gtk security issues CVE-2023-28205, CVE-2023-27954,
+  CVE-2023-27932, CVE-2022-32885 and CVE-2022-0108.  
+* Fixed binutils security issues CVE-2023-25588, CVE-2023-25585 and
+  CVE-2023-25584.  
+* Fixed postgresql-10 security issues CVE-2023-2455 and CVE-2023-2454.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed mouse pointer disappearing in RemoteApp sessions.
+
+### VMware Horizon
+
+* Fixed Single Sign-On feature in Horizon.  
+  The domain name is given by Kerberos in the format like in domain.com.  
+  This does not work for all Horizon installations.
+* Therefore, configuration option to specify / set domain format is added.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Fixup domain for Single Sign-On`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.sso-cred-mode`                                      |
++------------+-----------------------------------------------------------------+
+|Range       | [Derive domain from username][Use fully qualified domain name]  |
+|            | [Use short domain name][Keep domain as is]                      |
++------------+-----------------------------------------------------------------+
+|Value       |**Derive domain from username**                                  |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Improved automatic connection with LTE module Quectel EM05.
+
+### Cisco JVDI Client
+
+* Fixed issue, Jabra Headset control button is not working.
+
+### Base system
+
+* Fixed issue that on some device the Bluetooth stays off if once disabled over
+  Bluetooth tray menu.
+
+### Audio
+
+* New Parameter to disable the time scheduling in pulseaudio module-udev-detect.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Disable timer scheduling for module-udev`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.pulseaudio.daemon.disable-module-udev-tsched`        |
++------------+-----------------------------------------------------------------+
+|Range       | [auto][true][false]                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**auto**                                                         |
++------------+-----------------------------------------------------------------+
+
+### Remote Management
+
+* Fixed assignment of the device's hostname by the UMS while registering a
+  device.
+```
+
+-----
+
 ## 2023-06-10 - [11.08.338](readme11.08.338.txt)
 
 ```

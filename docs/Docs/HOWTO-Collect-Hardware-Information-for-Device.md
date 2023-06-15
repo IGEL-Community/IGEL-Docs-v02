@@ -60,6 +60,9 @@ tar cvjf var-log.tar.bz2 /var/log
 mkdir tclogs
 unzip /tmp/tclogs.zip -d tclogs
 
+# uncomment for OS 12
+#igelpkgctl list installed > igelpkgctl_list_installed.txt
+
 cd ..
 
 zip -r data_dump.zip data_dump

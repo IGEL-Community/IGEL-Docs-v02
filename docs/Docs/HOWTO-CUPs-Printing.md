@@ -61,3 +61,35 @@ The expected format is like so:
 `-o InputSlot=Tray3 -o HPOption_Tray3=HP550SheetInputTray -o OutputBin=FrontBin`
 
 To test by using use the browser's print dialog (and choose the systems dialog).
+
+-----
+
+## Add Network attached Printer
+
+- Query printer to confirm communication
+
+```bash linenums="1"
+driverless ipp://ip_address_of_printer/ipp/print
+```
+
+- Add printer
+
+```bash linenums="1"
+lpadmin -p wifiprinter1 -E -v ipp://ip_address_of_printer/ipp/print -m everywhere && lpoptions -d wifiprinter1
+```
+
+- Make default printer
+
+```bash linenums="1"
+lpoptions -d wifiprinter1
+```
+
+-----
+
+## CUPs Printer Admin
+
+- Open browser and connect to:
+
+```bash linenums="1"
+http://localhost:631/printers
+```

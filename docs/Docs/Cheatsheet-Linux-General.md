@@ -480,7 +480,7 @@ comm -1 -3 /tmp/ps1.txt /tmp/ps2.txt
 
 **Start IGEL setup:** `/bin/bash /config/bin/start_setup`
 
-**Start IGLE About:** `applauncher -style gtk2 --aboutOnly`
+**Start IGEL About:** `applauncher -style gtk2 --aboutOnly`
 
 ## compgen
 

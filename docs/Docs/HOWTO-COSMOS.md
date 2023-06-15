@@ -237,8 +237,10 @@ https://yourICG:8443/usg/server-status
 
 **Q:** What is the OBS sequence for registering an OS 12 device?
 
-**A:** Here is the sequence.
+**A:** This sequence cannot be shared to the public. 
 
+<!---
+This is a comment section
 ```mermaid
 sequenceDiagram
   participant A as IGEL OS 12
@@ -256,6 +258,7 @@ sequenceDiagram
   C->>A: 8 - Send OBS Params to IGEL OS
   A->>B: 9 - Initiate Onboarding
 ```
+-->
 
 **Q:** How to test OBS connection?
 

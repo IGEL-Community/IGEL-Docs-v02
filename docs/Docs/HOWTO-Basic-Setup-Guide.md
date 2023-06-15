@@ -213,6 +213,7 @@ flowchart TD
   H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
 ```
 
+<!---
 - OBS sequence for registering an OS 12 device
 
 ```mermaid
@@ -232,6 +233,7 @@ sequenceDiagram
   C->>A: 8 - Send OBS Params to IGEL OS
   A->>B: 9 - Initiate Onboarding
 ```
+-->
 
 #### IGEL OS 12 Devices
 

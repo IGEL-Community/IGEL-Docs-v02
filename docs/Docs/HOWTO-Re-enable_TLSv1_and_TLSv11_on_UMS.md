@@ -28,3 +28,9 @@ re-enable TSLv1 and TLSv1.1 to enable management for UDLXV4 devices on UMS with 
    \+ `sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2"`
 
 - Restart service IGELRMGUIServer
+
+-----
+
+**NOTE**
+
+`The TLS 1.2 is the secured way to communicate with your IGEL OS Devices, PLEASE don't change this until there is a need for it. There is no construct where this is needed for versions newer than OS5.`

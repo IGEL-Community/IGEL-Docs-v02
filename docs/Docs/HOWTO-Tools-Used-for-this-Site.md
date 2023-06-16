@@ -102,6 +102,8 @@ theme:
       primary: teal
       accent: lime
 
+copyright: IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+
 markdown_extensions:
   - pymdownx.critic
   - pymdownx.caret

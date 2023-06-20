@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-19 - [11.08.277](readme11.08.277.txt)
+
+```
+The new PRIVATE BUILD 11.08.277 for IGEL Workspace is ready.
+
+This build is based on 11.08.264.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed screenshare with audio-only direct calls.
+* Includes latest RdClientSDK with tcp-no-delay socket option enabled to fix certain latency issues.
+```
+
+-----
+
 ## 2023-06-13 - [11.08.360](readme11.08.360.txt)
 
 ```

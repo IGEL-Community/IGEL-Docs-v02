@@ -68,7 +68,6 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - UMS
 
-
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
@@ -267,6 +266,10 @@ sequenceDiagram
 **Q:** What do the error codes from onboarding mean?
 
 **A:** [Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding)
+
+**Q:** OBS connection issue for UMS server with long server name in cloud hosted server. How can I change UMS server name?
+
+**A:** Open `UMS Console > UMS Administration`, right click on `UMS Network > Server > your UMS server` choose edit and replace super long UMS hostname with shortened FQDN.
 
 -----
 

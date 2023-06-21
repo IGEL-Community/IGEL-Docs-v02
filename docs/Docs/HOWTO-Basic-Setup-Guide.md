@@ -291,6 +291,8 @@ sequenceDiagram
 - fwus.igel.com
 - Port 443 TCP Incoming
 
+#### [How to check communication ports](HOWTO-Setup-Lab-Sandbox-Environment#ums-tofrom-igel-os-11-communication-ports-no-icg)
+
 -----
 
 ## Register Your Endpoints with the UMS Server

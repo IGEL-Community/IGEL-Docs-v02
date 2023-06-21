@@ -4,7 +4,7 @@
 
 -----
 
-## 2023-06-12 - [12.01.120](readme12.01.120.txt)
+## 2023-06-12 - [12.01.120](readme12.01.120.1.txt)
 
 ```
 The new BUILD 12.01.120 for IGEL Workspace is ready.
@@ -77,7 +77,7 @@ These are the release notes published with that release:
 
 -----
 
-## 2023-04-17 - [12.01.110](readme12.01.110.txt)
+## 2023-04-17 - [12.01.110](readme12.01.110.1.txt)
 
 ```
 The new BUILD 12.01.110 for IGEL Workspace is ready.

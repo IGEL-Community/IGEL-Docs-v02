@@ -14,6 +14,161 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-20 - [11.08.361](readme11.08.361.txt)
+
+```
+The new PRIVATE BUILD 11.08.361 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix workspace app 23.05  
+  Available workspace apps in this release: 20.10 (default), 23.03, and 23.05
+* New features:  
+*  Copy and paste files and folders between two virtual desktops [Technical
+  Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Copy and paste files and folders between two virtual desktops`  |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.vdgdt`                                               |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+*  Enhancement on 32-bit cursor support [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhancement on 32-bit cursor support`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.Cursor32bitSupport`                                |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+* Change the default browser for FIDO2
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change the default browser for FIDO2`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2authbrowser`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |CEB, chromium, firefox, chromium-browser                         |
++------------+-----------------------------------------------------------------+
+
+* Fixed Issues:  
+
+* App Protection now works with all the Citrix session types including the
+  Firefox browser. Please reboot the system after enabling/disabling the feature
+  (ica.appprotection)
+* Integrated Citrix workspace app 23.05  
+  Available workspace apps in this release: 20.10 (default), 23.03, and 23.05
+
+* New features:  
+*  Copy and paste files and folders between two virtual desktops [Technical
+  Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Copy and paste files and folders between two virtual desktops`  |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.vdgdt`                                               |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+*  Enhancement on 32-bit cursor support [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhancement on 32-bit cursor support`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.Cursor32bitSupport`                                |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+* Change the default browser for FIDO2
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change the default browser for FIDO2`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2authbrowser`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |CEB (default), chromium, firefox, chromium-browser               |
++------------+-----------------------------------------------------------------+
+
+*  Support for authentication using FIDO2 when connecting to on-premises stores
+  [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for authentication using FIDO2 when connecting to on-premises stores` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2enabled`                                       |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Fixed Issues:  
+
+* App Protection now works with all the Citrix session types including the
+  Firefox browser. Please reboot the system after enabling/disabling the feature
+  (ica.appprotection)
+
+### AVD
+
+* Added initial secondary ringer support. But since the RdClientSDK support for
+  it currently is non-functional (the sinkId does not change on the related MS-
+  Teams setting), we added a command line option "--webrtc-ring-all-devices" and
+  have set that as default in the cmd_ext setting. This makes MS-Teams ring on
+  all audio output devices. This default setting will be removed as soon as the
+  RdClientSDK implementation works as expected!
+
+### Network
+
+* Added MAC address passthrough among Ethernet devices. With the following
+  registry key a LAN device can be specified from which the MAC address shall be
+  adopted. The donor device and any conflicting receiver device will be removed
+  (by unbinding the driver) as long as the receiving device is present.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `MAC address source`                                            |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.ethernet.device%.mac_source`                |
++------------+-----------------------------------------------------------------+
+| Range      | [none][LAN][LAN2][LAN3][LAN4]                                   |
++------------+-----------------------------------------------------------------+
+| Value      | **none**                                                        |
++------------+-----------------------------------------------------------------+
+
+* Example: If LAN2 and LAN3 are configurations for docking stations that shall
+  adopt the MAC address from LAN, the following two parameters must be set to
+  "LAN":  
+  network.interfaces.ethernet.device1.mac_source  
+  network.interfaces.ethernet.device2.mac_source  
+  Warning: Misconfiguration may result in loss of connectivity
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed screenshare with audio-only direct calls.
+* Includes latest RdClientSDK with tcp-no-delay socket option enabled to fix
+  certain latency issues.
+
+### VMware Horizon
+
+* Fixed the Horizon session starter to be able to handle backslashes in the
+  password
+```
+
+-----
+
 ## 2023-06-19 - [11.08.277](readme11.08.277.txt)
 
 ```

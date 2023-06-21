@@ -291,7 +291,7 @@ sequenceDiagram
 - fwus.igel.com
 - Port 443 TCP Incoming
 
-#### [How to check communication ports](https://igel-community.github.io/IGEL-Docs-v02/HOWTO-Setup-Lab-Sandbox-Environment#ums-tofrom-igel-os-11-communication-ports-no-icg)
+#### [How to check communication ports](https://igel-community.github.io/IGEL-Docs-v02/HOWTO-Setup-Lab-Sandbox-Environment/#ums-tofrom-igel-os-11-communication-ports-no-icg)
 
 -----
 

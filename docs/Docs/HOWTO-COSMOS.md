@@ -226,6 +226,10 @@ https://yourICG:8443/usg/server-status
 
 ## FAQ - Onboarding Service (OBS)
 
+**Q:** Is OBS a substitute for ICG (IGEL Cloud Gateway)? 
+
+**A:** OSB is not an alternative for ICG or reverse proxy for secure device communication beyond your company network.
+
 **Q:** What are the steps to setup OBS?
 
 **A:** [Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)

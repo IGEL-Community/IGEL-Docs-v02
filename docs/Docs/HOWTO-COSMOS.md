@@ -282,3 +282,16 @@ sequenceDiagram
 **Q:** How to pass Microsoft Excel keyboard shortcut keys?
 
 **A:** [Microsoft Excel keyboard shortcut keys](https://www.computerhope.com/shortcut/excel.htm) can be passed to AVD session by enabling `System > app > avd > avd% > options > remote-keymapping`. In OS 11 (11.08.330) `System > Registry > sessions.wvd%.options.remote-keymapping`
+
+-----
+
+## FAQ - VMware Horizon
+
+**Q:** Having performance issues with VMware Horizon and BLAST protocol. What can be done?
+
+**A:** Most performance issues are resolved in Horizon / BLAST with [dri3](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure#DRI3). Enable the following in the registry:
+
+    x.drivers.use_dri3
+    x.drivers.intel.force_dri3
+    x.drivers.ati.force_dri3
+    x.drivers.amdgpu.force_dri3

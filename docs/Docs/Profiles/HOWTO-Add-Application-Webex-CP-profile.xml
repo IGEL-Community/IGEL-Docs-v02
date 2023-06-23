@@ -28,7 +28,7 @@
                 <ivalue classname="custom_partition.source%.final_action" variableExpression="" variableSubstitutionActive="false">/custom/webex-cp-init-script.sh stop</ivalue>
                 <ivalue classname="custom_partition.source%.init_action" variableExpression="" variableSubstitutionActive="false">/custom/webex-cp-init-script.sh init</ivalue>
                 <ivalue classname="custom_partition.source%.password" variableExpression="" variableSubstitutionActive="false"></ivalue>
-                <ivalue classname="custom_partition.source%.url" variableExpression="" variableSubstitutionActive="false">https://73.98.126.35:8443/ums_filetransfer/OS11/webex.inf</ivalue>
+                <ivalue classname="custom_partition.source%.url" variableExpression="" variableSubstitutionActive="false">https://73.242.149.67:8443/ums_filetransfer/OS11/webex.inf</ivalue>
                 <ivalue classname="custom_partition.source%.username" variableExpression="" variableSubstitutionActive="false">igeldl</ivalue>
             </instance>
             <instance classprefix="sessions.custom_application%" serialnumber="7493932e:1872e995fbe:-7ff1127.0.1.1">

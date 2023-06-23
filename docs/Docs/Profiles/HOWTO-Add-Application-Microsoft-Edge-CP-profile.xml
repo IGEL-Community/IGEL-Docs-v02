@@ -24,7 +24,7 @@
         <instancesettings>
             <instance classprefix="custom_partition.source%" serialnumber="7493932e:1872e995fbe:-7ff6127.0.1.1">
                 <ivalue classname="custom_partition.source%.username" variableExpression="" variableSubstitutionActive="false">igeldl</ivalue>
-                <ivalue classname="custom_partition.source%.url" variableExpression="" variableSubstitutionActive="false">https://73.98.126.35:8443/ums_filetransfer/OS11/edge.inf</ivalue>
+                <ivalue classname="custom_partition.source%.url" variableExpression="" variableSubstitutionActive="false">https://73.242.149.67:8443/ums_filetransfer/OS11/edge.inf</ivalue>
                 <ivalue classname="custom_partition.source%.password" variableExpression="" variableSubstitutionActive="false"></ivalue>
                 <ivalue classname="custom_partition.source%.init_action" variableExpression="" variableSubstitutionActive="false">/custom/edge-cp-init-script.sh init</ivalue>
                 <ivalue classname="custom_partition.source%.final_action" variableExpression="" variableSubstitutionActive="false">/custom/edge-cp-init-script.sh stop</ivalue>

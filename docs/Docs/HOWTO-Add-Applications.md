@@ -131,7 +131,7 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
 - Boot device
 - Skip -- Let's connect to the company network
 - Use the one-time password to onboard this device?
-    - URL / Server address: `73.98.126.35`
+    - URL / Server address: `73.242.149.67`
     - Port: `8443`
     - One-time password: `TRY-IGEL`
     - Communication token: `94ad777f5b5894a7`

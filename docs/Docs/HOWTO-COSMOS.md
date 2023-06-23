@@ -273,7 +273,7 @@ sequenceDiagram
 
 **Q:** OBS connection issue for UMS server with long server name in cloud hosted server. How can I change UMS server name?
 
-**A:** Open `UMS Console > UMS Administration`, right click on `UMS Network > Server > your UMS server` choose edit and replace super long UMS hostname with shortened FQDN.
+**A:** Open `UMS Console > UMS Administration`, right click on `UMS Network > Server > your UMS server` choose edit and replace super long UMS hostname with shortened FQDN  - `Max length for FQDN is 32 characters`.
 
 -----
 

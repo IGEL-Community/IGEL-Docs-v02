@@ -120,7 +120,7 @@ login as "user" or "root": root
 
 ## Create Profile with all settings for a Device
 
-These device profiles can be used to see all settings for a device and can also be used to compare to devices.
+These device profiles can be used to see all settings for a device and can also be used to compare two devices.
 
 [IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.01/en/import-devices-as-profiles-77864828.html)
 

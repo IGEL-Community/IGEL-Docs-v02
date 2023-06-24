@@ -37,16 +37,20 @@ journalctl > journalctl_output.txt
 cp /var/log/Xorg.0.log Xorg.0.log
 cp /etc/os-release etc-os-release.txt
 cp /wfs/group.ini wfs-group.ini
+cp /wfs/setup.ini wfs-setup.ini
 tar cvjf var-log.tar.bz2 /var/log
 
-# uncomment following line for Citrix
-#tar cvjf citrix-user-logs.tar.bz2 /userhome/.ICAClient/logs 
+# uncomment following lines for Citrix
+#mkdir citrix-logs
+#cp -R /userhome/.ICAClient/logs citrix-logs
 
-# uncomment following line for VMware Horizon
-#tar cvjf vmware-user-logs.tar.bz2 /tmp/vmware-user
+# uncomment following lines for VMware Horizon
+#mkdir vmware-logs
+#cp -R /tmp/vmware-user vmware-logs
 
-# uncomment following line for OpenSC Smart Card (scard.pkcs11.opensc.default.debug = 9 ; scard.pkcs11.opensc.default.debug_file = /tmp/opensc.log)
-#tar cvjf opensc-logs.tar.bz2 /tmp/opensc.log
+# uncomment following lines for OpenSC Smart Card (scard.pkcs11.opensc.default.debug = 9 ; scard.pkcs11.opensc.default.debug_file = /tmp/opensc.log)
+#mkdir opensc-logs
+#cp -R /tmp/opensc.log opensc-logs
 
 # uncomment following line if using Imprivata
 #/services/imprivata/bin/fetch_support_info imprivata_logs_$(date +%y%m%d%H%M).zip
@@ -112,6 +116,24 @@ login as "user" or "root": root
 
 ![image02](Images/HOWTO-Collect-Hardware-Information-for-Device-02.png)
 
+-----
+
+## Create Profile with all settings for a Device
+
+These device profiles can be used to see all settings for a device and can also be used to compare to devices.
+
+[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.01/en/import-devices-as-profiles-77864828.html)
+
+[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.01/en/comparing-profiles-in-the-igel-ums-77864660.html)
+
+The following steps will:
+
+- Export device settings as a profile
+- Import device settings as a profile
+
+![image01](Images/HOWTO-Collect-Hardware-Information-for-Device-05.png)
+![image01](Images/HOWTO-Collect-Hardware-Information-for-Device-06.png)
+![image01](Images/HOWTO-Collect-Hardware-Information-for-Device-07.png)
 
 -----
 

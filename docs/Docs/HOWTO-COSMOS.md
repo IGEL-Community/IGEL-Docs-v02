@@ -152,6 +152,10 @@ If the client's clock is off, then it will break either or both of these functio
 
   ![image-howto-cosmos-06](Images/HOWTO-COSMOS-06.png)
 
+**Q:** UMS public facing IP address changed. What needs to be updated in UMS?
+
+**A:** Change the public address of UMS server: `UMS Administration > UMS Network > Server > Your_UMS`. Create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to `see details above`.
+
 -----
 
 ## FAQ - OS 12

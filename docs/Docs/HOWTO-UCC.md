@@ -20,6 +20,10 @@
 
 -----
 
+## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/igelos-11.08.330/en/virtual-background-for-unified-communication-apps-in-igel-os-88020980.html)
+
+-----
+
 ## USB Devices and UCC
 
 In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.

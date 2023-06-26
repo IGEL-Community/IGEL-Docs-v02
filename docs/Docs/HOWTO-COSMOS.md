@@ -139,7 +139,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-types-diagrams-77864360.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.01/en/performance-optimizations-77864390.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.01/en/how-to-configure-java-heap-size-for-the-ums-server-77864106.html).
+**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.01/en/installation-requirements-for-the-igel-ums-77864394.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.01/en/performance-optimizations-77864390.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.01/en/how-to-configure-java-heap-size-for-the-ums-server-77864106.html).
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 

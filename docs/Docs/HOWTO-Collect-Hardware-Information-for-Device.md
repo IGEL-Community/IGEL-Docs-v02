@@ -72,7 +72,9 @@ cd ..
 zip -r data_dump.zip data_dump
 ```
 
-**NOTE:** Logs can be collected from the VDI backend for the following:
+**NOTE:** Additional logging notes:
+
+- AVD log collection OS 11: `sessions.wvd%.options.client-log-level` set to `Debug`
 
 - Zoom VDI log collection: [Using the VDI log tool](https://support.zoom.us/hc/en-us/articles/360057873792-Using-the-VDI-log-tool)
 

@@ -76,6 +76,8 @@ zip -r data_dump.zip data_dump
 
 - AVD log collection OS 11: `sessions.wvd%.options.client-log-level` set to `Debug`
 
+- AVD log collection OS 12: `System > Registry > app > avd > sessions > avd0 > options > client-log-level` set to `Debug`
+
 - Zoom VDI log collection: [Using the VDI log tool](https://support.zoom.us/hc/en-us/articles/360057873792-Using-the-VDI-log-tool)
 
 -----

@@ -4,7 +4,7 @@
 
 **NOTE:** This article provides a solution that has not been approved by the IGEL Research and Development department. Therefore, official support cannot be provided by IGEL. Where applicable, test the solution before deploying it to a productive environment.
 
-## OverviewLink to Overview
+## Overview
 
 This article addresses the issue when the customers need a signed cert, but don’t want to use the UMS as CA.
 
@@ -30,6 +30,6 @@ You can use "letsencrypt" as a CA for quickly and easily grabbing a FREE certifi
 
 - Finish the remaining questions.
 
-- If all was successful, you'll find your server certificate (cert1.pem), root CA Chain (chain1.pem), and private key (privkey1.pem) in the /etc/letsencrypt/archive/<your domain name> folder.
+- If all was successful, you'll find your server certificate (`cert1.pema`), root CA Chain (`chain1.pem`), and private key (`privkey1.pem`) in the `/etc/letsencrypt/archive/<your domain name>` folder.
 
 - These files are all ready and in the right format to add to UMS and create your keystore.icg file.

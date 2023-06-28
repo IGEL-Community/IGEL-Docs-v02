@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-28 - [11.08.345](readme11.08.345.txt)
+
+```
+The new PRIVATE BUILD 11.08.345 for IGEL Workspace is ready.
+
+This build is based on 11.08.344.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed issue with dynamic e911 feature.
+```
+
+-----
+
 ## 2023-06-23 - [11.08.344](readme11.08.344.txt)
 
 ```

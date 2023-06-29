@@ -1,14 +1,14 @@
 # HOWTO ICG Free Signed Certificate Option
 
-## Recommendation for a Free Signed Certificate for ICG
+## Recommendation for a Free Signed Certificate for ICG for Testing
 
-**NOTE:** This article provides a solution that has not been approved by the IGEL Research and Development department. Therefore, official support cannot be provided by IGEL. Where applicable, test the solution before deploying it to a productive environment.
+**NOTE:** This article provides a solution that has not been approved by the IGEL Research and Development department. Therefore, official support cannot be provided by IGEL.
 
 ## Overview
 
-This article addresses the issue when the customers need a signed cert, but don’t want to use the UMS as CA.
+This article addresses the issue when the customers need a signed cert for testing / lab environment, but don’t want to use the UMS as CA. This should not be considered a solution for production environment.
 
-You can use "letsencrypt" as a CA for quickly and easily grabbing a FREE certificate for your ICG server (or for any server where you need a signed cert). At this point, LetsEncrypt is trusted by all the browsers and it has a completely automated process for initially retrieving a new singed cert and also for renewing.
+You can use "letsencrypt" as a CA for quickly and easily grabbing a FREE certificate for your ICG server (or for any server where you need a signed cert) testing / lab work. At this point, LetsEncrypt is trusted by all the browsers and it has a completely automated process for initially retrieving a new singed cert and also for renewing.
 
 ## Environment
 

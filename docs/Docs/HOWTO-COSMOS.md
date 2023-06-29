@@ -64,6 +64,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html)
 
+**Q:** How to automate license renewal?
+
+**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expirationa`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html).
+
 -----
 
 ## FAQ - UMS

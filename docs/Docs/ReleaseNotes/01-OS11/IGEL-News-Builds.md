@@ -14,6 +14,89 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-06-30 - [11.08.309](readme11.08.309.txt)
+
+```
+The new PRIVATE BUILD 11.08.309 for IGEL Workspace is ready.
+
+This build is based on 11.08.299.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.1.2
+```
+
+-----
+
+## 2023-06-30 - [11.08.368](readme11.08.368.txt)
+
+```
+The new PRIVATE BUILD 11.08.368 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix workspace app 23.05  
+  Available workspace apps in this release: 20.10 (default), 23.03, and 23.05
+* New features:  
+*  Copy and paste files and folders between two virtual desktops [Technical
+  Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Copy and paste files and folders between two virtual desktops`  |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.vdgdt`                                               |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+*  Enhancement on 32-bit cursor support [Technical Preview]
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhancement on 32-bit cursor support`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.Cursor32bitSupport`                                |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+* Change the default browser for FIDO2
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change the default browser for FIDO2`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2authbrowser`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |CEB (default), chromium, firefox, chromium-browser               |
++------------+-----------------------------------------------------------------+
+
+*  Support for authentication using FIDO2 when connecting to on-premises stores
+  [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for authentication using FIDO2 when connecting to on-premises stores` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2enabled`                                       |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Fixed Issues:  
+
+* App Protection now works with all the Citrix session types including the
+  Firefox browser. Please reboot the system after enabling/disabling the feature
+  (ica.appprotection)
+```
+
+-----
+
 ## 2023-06-29 - [11.08.367](readme11.08.367.txt)
 
 ```

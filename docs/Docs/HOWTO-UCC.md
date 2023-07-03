@@ -123,9 +123,9 @@ Result
 ### Guideline for VDA workloads – based on CPU Cores (Servers have 2 CPUs with 18 cores per CPU - Total of 36 cores)
  
 - HSA (Hosted Shared Applications):
-  - Light -- 4 applications running at the same time (12:1 users to core) (12 * 36 = 432 users per server)
-  - Medium -- 4 applications running at the same time (10:1 users to core) (10 * 36 = 360 users per server)
-  - Heavy -- 4 applications running at the same time (8:1 users to core) (8 * 36 = 288 users per server)
+    - Light -- 4 applications running at the same time (12:1 users to core) (12 * 36 = 432 users per server)
+    - Medium -- 4 applications running at the same time (10:1 users to core) (10 * 36 = 360 users per server)
+    - Heavy -- 4 applications running at the same time (8:1 users to core) (8 * 36 = 288 users per server)
 - HSD (Hosted Shared Desktops - Windows Server 2016) (8:1 users to core) (follow Memory guideline)
 - NVD (Non-Persistent Desktops - Windows 10) (5:1 users to core) (follow Memory guideline)
 - PVD (Persistent Desktops - Windows 11 (should be 5% of total workload) (4:1 users to core) (follow Memory guideline)
@@ -133,9 +133,9 @@ Result
 ### Guideline for VDA workloads – based on server memory (768GB RAM)
  
 - HSA (Hosted Shared Applications):
-  - Light -- 4 applications running at the same time (12:1 users to core) (follow CPU cores guideline)
-  - Medium -- 4 applications running at the same time (10:1 users to core) (follow CPU cores guideline)
-  - Heavy -- 4 applications running at the same time (8:1 users to core) (follow CPU cores guideline)
+    - Light -- 4 applications running at the same time (12:1 users to core) (follow CPU cores guideline)
+    - Medium -- 4 applications running at the same time (10:1 users to core) (follow CPU cores guideline)
+    - Heavy -- 4 applications running at the same time (8:1 users to core) (follow CPU cores guideline)
 - HSD (Hosted Shared Desktops - Windows Server 2016) (8:1 users to core) (768GB / 3GB per user = 256 users per server)
 - NVD (Non-Persistent Desktops - Windows 11) (5:1 users to core) (768GB / 6GB per user = 128 users per server)
 - PVD (Persistent Desktops - Windows 11 (should be 5% of total workload) (4:1 users to core) (768GB / 8GB per user = 96 users per server)

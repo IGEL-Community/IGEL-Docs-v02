@@ -88,6 +88,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.01/en/overview-of-the-igel-ums-81500680.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole)
 
+**Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
+
+**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server.
+
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
 **A:** Open `UMS Console` and add `General - WebApp > App Management > Allow`  permission to account(s). Steps:

@@ -140,6 +140,8 @@ Result
 - NVD (Non-Persistent Desktops - Windows 11) (5:1 users to core) (768GB / 6GB per user = 128 users per server)
 - PVD (Persistent Desktops - Windows 11 (should be 5% of total workload) (4:1 users to core) (768GB / 8GB per user = 96 users per server)
 
+[Citrix: Design Decision: Single Server Scalability](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/single-server-scalability.html)
+
 -----
 
 ## Citrix Browser Content Redirection (BCR)

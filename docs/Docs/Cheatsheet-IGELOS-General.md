@@ -226,6 +226,7 @@ Reset defined section of the IGEL registry
 /bin/resetvalue_tree java
 /bin/resetvalue_tree monitoring_agent
 /bin/resetvalue_tree multimedia
+#/bin/resetvalue_tree network
 /bin/resetvalue_tree pcoip
 /bin/resetvalue_tree pcom
 /bin/resetvalue_tree print

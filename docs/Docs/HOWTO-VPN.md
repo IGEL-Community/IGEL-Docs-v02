@@ -67,7 +67,7 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 
 **NOTES:**
 
-- PANURL FQDN of server and `do not include` https:// in the name.
+- PANURL FQDN of server and `do not include` https:// in the name since the script adds it automatically.
 - Certificate chain may be needed.
 
 -----

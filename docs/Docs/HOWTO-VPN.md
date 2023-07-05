@@ -61,9 +61,14 @@ openssl x509 -fingerprint -noout -in /wfs/zert.pem | sed 's/://g'
 
 This is a helper script to allow you to interactively login to a GlobalProtect VPN that uses SAML authentication, so that you can subsequently connect with OpenConnect.
 
-Install the gp-saml-gui as a file via UMS. Edit profile to set variable for VPN server - `PANURL`.
+Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for FQDN of VPN server - `PANURL`.
 
 <a href="../Profiles/HOWTO-Use-OpenConnect-VPN-gp-saml-gui-profile.xml" download>LINK to Profile for OpenConnect using gp-saml-gui</a>
+
+**NOTES:**
+
+- PANURL FQDN of server and `do not include` https:// in the name.
+- Certificate chain may be needed.
 
 -----
 

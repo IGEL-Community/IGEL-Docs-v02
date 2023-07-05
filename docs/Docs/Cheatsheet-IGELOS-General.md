@@ -195,7 +195,7 @@ su user -c xrandr --output DISPLAY1 --rate 60 --mode 1920x1080 --fb 1920x1080 --
 su user -c xrandr —output HDMI-1 —rate 60 —mode 1920x1080 —fb 1920x1080 —panning 1920x1080* —output eDP-1 —mode 1920x1080 —same-as HDMI-1
 ```
 
-Create a virtual monitor to be used for applications, such as VMware Horizon, that expect a monitor to be attached.
+Create a virtual monitor to be used for applications, such as VMware Horizon, that expect a monitor to be attached. This can be added to `Setup > System > Firmware Customization > Custom Commands > Desktop > Final desktop command`
 
 ```bash linenums="1"
 xrandr --setmonitor virtual 640/64x480/48+1680+0 none

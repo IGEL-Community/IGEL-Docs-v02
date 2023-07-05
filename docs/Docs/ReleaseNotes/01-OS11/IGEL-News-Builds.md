@@ -14,6 +14,49 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-04 - [11.08.372](readme11.08.372.txt)
+
+```
+The new PRIVATE BUILD 11.08.372 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added new registry key to set acpi= kernel cmdline options (some devices needs
+  acpi=off).
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set ACPI kernel parameters.`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.kernel.bootparams.acpi`                                 |
++------------+-----------------------------------------------------------------+
+| Range      | [No setting][Force][On][Off][Noirq][Strict][Rsdt][Copy_dsdt]    |
++------------+-----------------------------------------------------------------+
+| Value      | **No setting**                                                  |
++------------+-----------------------------------------------------------------+
+
+* Added new registry key to set reboot kernel cmdline which can be used if
+  reboot or shutdown issues are present.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set reboot kernel parameters.`                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.kernel.bootparams.reboot`                               |
++------------+-----------------------------------------------------------------+
+| Range      | [Default][Bios][Triple][Kbd][Acpi][Efi][Pci]                    |
++------------+-----------------------------------------------------------------+
+| Value      | **Default**                                                     |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2023-06-30 - [11.08.309](readme11.08.309.txt)
 
 ```

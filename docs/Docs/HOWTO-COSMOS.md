@@ -174,7 +174,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** I want to quickly test out OS 12. What are the steps to test?
 
-**A:** See the following note: [Want to test out OS 12 with App Portal without UMS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os12-with-app-portal-without-ums12)
+**A:** See the following note: [Want to test out OS 12 with App Portal without UMS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os-12-with-app-portal-without-ums12)
 
 **Q:** I'm testing OS 12 and want to reset a device and remove trial license. How do I do that?
 

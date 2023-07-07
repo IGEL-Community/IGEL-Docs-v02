@@ -2,6 +2,8 @@
 
 ## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
+**NOTE:** [Minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product)
+
 ----------
 
 ----------

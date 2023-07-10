@@ -1,0 +1,1372 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Basic-Setup-Guide/">
+      
+      
+        <link rel="next" href="../HOWTO-CUPs-Printing/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>HOWTO COSMOS - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-cosmos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO COSMOS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      IGEL Community Docs
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link md-tabs__link--active">
+        Docs
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        IGEL Community Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        Cheatsheet IGELCommunity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        Cheatsheet IGELOS General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        Cheatsheet IGELOS Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        Cheatsheet IGELOS Networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        Cheatsheet Linux General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        HOWTO Add Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        HOWTO Basic Setup Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOWTO COSMOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        HOWTO COSMOS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-how-to-start-with-igel-cosmos" class="md-nav__link">
+    IGEL KB - How to Start with IGEL COSMOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-igel-education" class="md-nav__link">
+    FAQ - IGEL Education
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-igel-topology" class="md-nav__link">
+    FAQ - IGEL Topology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-time-service" class="md-nav__link">
+    FAQ - Time Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-licensing" class="md-nav__link">
+    FAQ - Licensing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-ums" class="md-nav__link">
+    FAQ - UMS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-os-12" class="md-nav__link">
+    FAQ - OS 12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-icg-12" class="md-nav__link">
+    FAQ - ICG 12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-onboarding-service-obs" class="md-nav__link">
+    FAQ - Onboarding Service (OBS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-microsoft-avd" class="md-nav__link">
+    FAQ - Microsoft AVD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-vmware-horizon" class="md-nav__link">
+    FAQ - VMware Horizon
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        HOWTO CUPs Printing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        HOWTO Collect Hardware Information for a Device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium-MacOS/" class="md-nav__link">
+        HOWTO Create USB installation medium (MacOS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        HOWTO Dynabook Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        HOWTO Edit Initial Settings Prior to OSC Install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        HOWTO ICG Free Signed Certificate Option
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        HOWTO Use Static Template Keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        HOWTO Imprivata Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        HOWTO Microsoft Teams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nutanix-Frame-Setup/" class="md-nav__link">
+        HOWTO Nutanix Frame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        HOWTO Remove IGEL Device License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        HOWTO Run Virtual Machines on MacOS (Intel)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        HOWTO Setup Lab Sandbox Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        HOWTO Testing VDI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        HOWTO Tools Used for this Site
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        HOWTO UCC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        HOWTO VPN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        HOWTO Run VirtualBox Virtual Machines on IGEL OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        HOWTO Work from Home Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        HOWTO Write config files to IGEL OSC ISO file from Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        HOWTO Zero Trust Networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_31" id="__nav_2_31_label" tabindex="0">
+          ReleaseNotes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_31_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_31">
+          <span class="md-nav__icon md-icon"></span>
+          ReleaseNotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        IGEL Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_31_2" id="__nav_2_31_2_label" tabindex="0">
+          01 OS11
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_31_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_31_2">
+          <span class="md-nav__icon md-icon"></span>
+          01 OS11
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        IGEL OS Branches
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        IGEL News: Builds
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_31_3" id="__nav_2_31_3_label" tabindex="0">
+          02 UMS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_31_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_31_3">
+          <span class="md-nav__icon md-icon"></span>
+          02 UMS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        IGEL UMS Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_31_4" id="__nav_2_31_4_label" tabindex="0">
+          03 ICG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_31_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_31_4">
+          <span class="md-nav__icon md-icon"></span>
+          03 ICG
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        IGEL ICG Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_31_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_31_5" id="__nav_2_31_5_label" tabindex="0">
+          04 OS12
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_31_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_31_5">
+          <span class="md-nav__icon md-icon"></span>
+          04 OS12
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        IGEL OS 12 Branches
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        IGEL News: Builds OS 12
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="howto-cosmos">HOWTO COSMOS</h1>
+<h2 id="igel-kb-how-to-start-with-igel-cosmos"><a href="https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html">IGEL KB - How to Start with IGEL COSMOS</a></h2>
+<p><strong>NOTE:</strong> <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">Minimum viable product</a></p>
+<hr />
+<hr />
+<h2 id="faq-igel-education">FAQ - IGEL Education</h2>
+<p><strong>Q:</strong> What are the training options for IGEL COSMOS?</p>
+<p><strong>A:</strong> Please enroll in <a href="https://www.igel.com/learn-and-connect/igel-education/">IGEL Academy</a> for formal training courses on IGEL products geared towards beginners and experienced users alike.</p>
+<hr />
+<h2 id="faq-igel-topology">FAQ - IGEL Topology</h2>
+<p><strong>Q:</strong> What has changed with IGEL network topology?</p>
+<p><strong>A:</strong> <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Basic-Setup-Guide/#configure-ums-network-ports">Details on the different network topologies</a>.</p>
+<hr />
+<h2 id="faq-time-service">FAQ - Time Service</h2>
+<p><strong>Q:</strong> Do I really have to have the correct time / date on all my computers?</p>
+<p><strong>A:</strong> YES! In SSL, clocks are used for certificate validation. The client needs to make sure that it talks to the right server; for that, the client will validate the server's certificate. Validation implies verifying a lot of things; two of them involve clocks:</p>
+<ul>
+<li>The server's certificate (and all involved CA certificates) must include the present time in their validity time range. Each certificate as a notBefore and a notAfter fields; the current time must fall between these two dates.</li>
+<li>The client is supposed to obtain the revocation status of each certificate, by obtaining (and validating) a CRL (Certificate Revocation List) from the appropriate issuers (the CA). A CRL is deemed acceptable if (in particular) it is "not too old": again, the CRL has a thisUpdate field that says when it was produced, and a nextUpdate field that more-or-less serves as expiration date for the CRL.</li>
+</ul>
+<p>If the client's clock is off, then it will break either or both of these functionalities. For instance, the server's certificate will be considered as "long expired", or "Invalid server certificate: certificate is not yet valid", leading to rejection.</p>
+<ul>
+<li>OS 12: <code>Setup &gt; System &gt; Time and Date &gt; Use NTP time server</code></li>
+<li>OS 12: <code>NTP time server</code> pool.ntp.org</li>
+<li>OS 12: Check that time NTP is enabled: <code>get system.time.ntp_enabled</code></li>
+<li>OS 12: Check NTP time server: <code>get system.time.ntp_timeserver</code></li>
+</ul>
+<hr />
+<h2 id="faq-licensing">FAQ - Licensing</h2>
+<p><strong>Q:</strong> How do I convert OS 11 licenses to OS 12 licenses?</p>
+<p><strong>A:</strong> No conversion needed. Your normal WE licenses work with OS 12. There is not a specific license type for OS 12.</p>
+<p><strong>Q:</strong> What is needed for UMS 12 to support OS 11 licensing?</p>
+<p><strong>A:</strong> EMP will need to be created from WP licensing.  <a href="https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html">Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack</a></p>
+<ul>
+<li><strong>NOTE:</strong> <del>This is currently only accessible by the primary account users, anyone with Service Provider access will not see this button.</del></li>
+</ul>
+<p><strong>Q:</strong> Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?</p>
+<p><strong>A:</strong> Yes! Details can be found here - <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Remove-IGEL-Device-License/#ums-12">HOWTO Remove IGEL Device License</a></p>
+<p><strong>Q:</strong> What happens when a license expires?</p>
+<p><strong>A:</strong> Details can be found here - <a href="https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html">Entitlements that Come with an IGEL COSMOS Platform Access Subscription (PAS) and Effects of Expiry</a></p>
+<p><strong>Q:</strong> Does UMS 12 support demo license automatic deployment?</p>
+<p><strong>A:</strong> Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. <a href="https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html">UMS 12 License Deployment</a></p>
+<p><strong>Q:</strong> How to automate license renewal?</p>
+<p><strong>A:</strong> Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS <code>UMS Console &gt; UMS Administration &gt; Global Configuration &gt; Licenses &gt; Deployment</code> enable automatic license exchange and select <code>Licenses are exchanged [number] days before expiration</code>: Defines how many days before the expiration date a new license should be deployed. (Default: 7). <a href="https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html">KB - License Deployment</a>.</p>
+<hr />
+<h2 id="faq-ums">FAQ - UMS</h2>
+<p><strong>Q:</strong> We noticed that UMS 6 is no longer listed on <a href="https://www.igel.com/software-downloads/workspace-edition/">IGEL download site</a>. We are not ready to move to UMS 12.</p>
+<p><strong>A:</strong> UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.</p>
+<p><strong>Q:</strong> How are OS 12 profiles created or modified?</p>
+<p><strong>A:</strong> UMS Web App <code>MUST</code> be used to create / modify OS 12 profiles.</p>
+<p><strong>Q:</strong> When will proxy mode support for UMS 12 be released?</p>
+<p><strong>A:</strong> As of 3 May, it is still in development and target release date by end of July. The work around for the UMS to access the App Portal is to manually import applications into the UMS.</p>
+<p><strong>Q:</strong> What is feature matrix between UMS Web App and UMS Console?</p>
+<p><strong>A:</strong> Here is link to <a href="https://kb.igel.com/endpointmgmt-12.01/en/overview-of-the-igel-ums-81500680.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole">Feature Matrix: UMS Web App vs. UMS Console</a></p>
+<p><strong>Q:</strong> I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?</p>
+<p><strong>A:</strong> Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. <a href="https://kb.igel.com/endpointmgmt-12.01/en/ums-and-devices-secure-shadowing-77863778.html">KB - UMS and Devices: Secure Shadowing</a>.</p>
+<p><strong>Q:</strong> How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.</p>
+<p><strong>A:</strong> Open <code>UMS Console</code> and add <code>General - WebApp &gt; App Management &gt; Allow</code>  permission to account(s). Steps:</p>
+<ul>
+<li>Start <code>UMS Console</code></li>
+<li>Select <code>System</code> &gt; <code>Administrator accounts</code></li>
+<li>Select Administrator account</li>
+<li><code>Edit</code></li>
+<li><code>General - WebApp</code> select <code>Allow</code></li>
+</ul>
+<p><img alt="image-howto-cosmos-01" src="../Images/HOWTO-COSMOS-01.png" /></p>
+<p><strong>Q:</strong> Trying to connect OS 12 to UMS using the one-time password method but I get this message: <code>could not manage your device because of an internal error (#45)</code>.</p>
+<p><strong>A:</strong> You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to. Steps:</p>
+<ul>
+<li>Start <code>UMS Console</code></li>
+<li>Open <code>UMS Administration</code></li>
+<li>Select <code>Global Configuration</code> &gt; <code>Certificate Management</code> &gt; <code>Web</code></li>
+<li>Add new endpoint web certificate with all the IP addresses, fully qualified domain names (FQDN), and short names that the device can connect to</li>
+</ul>
+<p><img alt="image-howto-cosmos-02" src="../Images/HOWTO-COSMOS-02.png" /></p>
+<p><strong>NOTE:</strong> <code>Web Certificates</code></p>
+<ul>
+<li>The web certificate is used for the web server port (Default port: 8443)</li>
+<li>This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the <code>UMS Web App</code>.</li>
+<li>Additional details <a href="https://kb.igel.com/endpointmgmt-12.01/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-77864040.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates">Creating the End Certificates </a></li>
+<li><a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4">Video showing steps to create and enable a new web cert</a></li>
+</ul>
+<p><strong>Q:</strong> How do I use <code>rmagent-register</code> to register OS 12 device to my UMS?</p>
+<p><strong>A:</strong> Follow steps to test <code>rmagent-register</code></p>
+<ul>
+<li>Start <code>UMS Console</code></li>
+<li>Open <code>UMS Administration</code></li>
+<li>Select <code>Global Configuration</code> &gt; <code>First-authentication Keys</code></li>
+<li>Select <code>(+)</code></li>
+<li>Create <code>Mass-deployment key</code> with <code>First-authentication key</code> TRY-IGEL</li>
+</ul>
+<p><img alt="image-howto-cosmos-03" src="../Images/HOWTO-COSMOS-03.png" /></p>
+<ul>
+<li>
+<p>On IGEL OS 12 open a <code>Terminal</code> window as root and type</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rmagent-register<span class="w"> </span>-s<span class="w"> </span>UMS-SERVER-NAME-OR-IP<span class="w"> </span>-p<span class="w"> </span><span class="m">8443</span><span class="w"> </span>-a<span class="w"> </span>TRY-IGEL
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<p><strong>Q:</strong> What are the steps to upgrade distributed UMS 6.10 to 12.01 on Windows?</p>
+<p><strong>A:</strong> <a href="https://kb.igel.com/endpointmgmt-12.01/en/known-issues-ums-12-01-110-88023333.html">Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server</a></p>
+<p><strong>Q:</strong> What can be done to increase performance for UMS?</p>
+<p><strong>A:</strong> Make sure you have met requirements for <a href="https://kb.igel.com/endpointmgmt-12.01/en/installation-requirements-for-the-igel-ums-77864394.html">RAM and vCPUs</a>, <a href="https://kb.igel.com/endpointmgmt-12.01/en/performance-optimizations-77864390.html">performance optimizations</a>, and <a href="https://kb.igel.com/endpointmgmt-12.01/en/how-to-configure-java-heap-size-for-the-ums-server-77864106.html">Java heap size</a>.</p>
+<p><strong>Q:</strong> Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?</p>
+<p><strong>A:</strong> UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. <a href="https://kb.igel.com/endpointmgmt-12.01/en/supported-environment-ums-12-01-110-81510942.html">Supported Environment UMS 12.01.110</a></p>
+<p><strong>Q:</strong> How to limit bulk actions for UMS help desk users?</p>
+<p><strong>A:</strong> UMS WebApp has a layer of security to <code>only</code> allow actions on a single device - <code>Permission &gt; General - WebApp &gt; Device Bulk Action</code>.</p>
+<p><img alt="image-howto-cosmos-06" src="../Images/HOWTO-COSMOS-06.png" /></p>
+<p><strong>Q:</strong> UMS public facing IP address changed. What needs to be updated in UMS?</p>
+<p><strong>A:</strong> Change the public address of UMS server: <code>UMS Administration &gt; UMS Network &gt; Server &gt; Your_UMS</code>. Create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to <code>see details above</code>.</p>
+<hr />
+<h2 id="faq-os-12">FAQ - OS 12</h2>
+<p><strong>Q:</strong> What are the hardware requirements for OS 12?</p>
+<p><strong>A:</strong> <a href="https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html">Requirements for IGEL OS 12</a></p>
+<p><strong>Q:</strong> I want to quickly test out OS 12. What are the steps to test?</p>
+<p><strong>A:</strong> See the following note: <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os-12-with-app-portal-without-ums12">Want to test out OS 12 with App Portal without UMS 12</a></p>
+<p><strong>Q:</strong> I'm testing OS 12 and want to reset a device and remove trial license. How do I do that?</p>
+<p><strong>A:</strong> See the following note:  <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#optional-how-to-reset-a-device">How to reset a device</a></p>
+<p><strong>Q:</strong> How do I update an OS 11 device to OS 12?</p>
+<p><strong>A:</strong> Currently OS 11 to OS 12 is a re-install. Upgrade from OS 11 to OS 12 will be availiable in the Fall - 2023.</p>
+<p><strong>Q:</strong> When will Citrix username / password auto login support in cloud environment be supported?</p>
+<p><strong>A:</strong> As of May 10, this is being worked on with Citrix. Date pending for release.</p>
+<p><strong>Q:</strong> When using the first-time auth key to connect OS 12 to the UMS 12 it asks for a <code>communication token</code> - where is this found? </p>
+<p><img alt="image-howto-cosmos-04" src="../Images/HOWTO-COSMOS-04.png" /></p>
+<p><strong>A:</strong> This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in <a href="https://kb.igel.com/endpointmgmt-12.01/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-77864040.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-DeployingaCertificateChainwithaPublicRootCADeployingaCertificateChainwithaPublicRootCA">Deploying a Certificate Chain with a Public Root CA</a></p>
+<p><img alt="image-howto-cosmos-05" src="../Images/HOWTO-COSMOS-05.png" /></p>
+<p><strong>Q:</strong> OS 12 missing <code>System &gt; System Customization &gt; Custom Commands &gt; Post Session</code>. Need to <code>logoff/reboot</code> the endpoint when a user disconnects from a Citrix Self-Service session. When will this feature be released?</p>
+<p><strong>A:</strong> For OS 12 this can be found here: <code>System &gt; Registry &gt; auth &gt; login &gt; autologoff &gt; Session type</code></p>
+<p><img alt="image-howto-cosmos-07" src="../Images/HOWTO-COSMOS-07.png" /></p>
+<p><strong>Q:</strong> How to enable audio on Dell Wyse 5470 AIO?</p>
+<p><strong>A:</strong> Change value in the registry to either 1 or 8 for <code>system.sound_driver.snd_hda_intel.probe_mask</code> and reboot.</p>
+<hr />
+<h2 id="faq-icg-12">FAQ - ICG 12</h2>
+<p><strong>Q:</strong> Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?</p>
+<p><strong>A:</strong> That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / Azure Application Gateway with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See <a href="https://kb.igel.com/igelicg-12.01/en/igel-cloud-gateway-icg-81512143.html">ICG 12 KB</a> and <a href="https://kb.igel.com/endpointmgmt-12.01/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-90222095.html">KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices</a>.</p>
+<p><strong>Q:</strong> Does ICG 12 support OS 11 devices?</p>
+<p><strong>A:</strong> Yes!</p>
+<p><strong>Q:</strong> I upgraded my UMS and ICG to 12 and I am now getting <code>Could not manage your device because of an internal error (#37)</code> when trying to connect OS 12 devices. What are the steps to fix this item?</p>
+<p><strong>A:</strong> Remove the cert chain from UMS completely, reboot the ICG's and then reconnect to them from UMS.  <del>Generate a new ICG certificate in UMS 12.</del></p>
+<p><strong>Q:</strong> IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?</p>
+<p><strong>A:</strong> Details on fix can be found here: <a href="https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html">Configuration of Unlimited Session Timeout for ICG 12.01.100</a></p>
+<p><strong>Q:</strong> Having issues connecting to ICG. How to check ICG server status?</p>
+<p><strong>A:</strong> Make sure NTP time service is running on all devices (IGEL OS, ICG and UMS). Open a browser session to check status from IGEL OS device:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://yourICG:8443/usg/server-status
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="faq-onboarding-service-obs">FAQ - Onboarding Service (OBS)</h2>
+<p><strong>Q:</strong> Is OBS a substitute for ICG (IGEL Cloud Gateway)? </p>
+<p><strong>A:</strong> OSB is not an alternative for ICG or reverse proxy for secure device communication beyond your company network.</p>
+<p><strong>Q:</strong> What are the steps to setup OBS?</p>
+<p><strong>A:</strong> <a href="https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html">Initial Configuration of the IGEL Onboarding Service (OBS)</a></p>
+<p><strong>Q:</strong> What are the steps to onboard an OS 12 device?</p>
+<p><strong>A:</strong> <a href="https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html">Onboarding IGEL OS 12 Devices</a></p>
+<p><strong>Q:</strong> What is the OBS sequence for registering an OS 12 device?</p>
+<p><strong>A:</strong> This sequence cannot be shared to the public. </p>
+<!---
+This is a comment section
+<pre class="mermaid"><code>sequenceDiagram
+  participant A as IGEL OS 12
+  participant B as UMS 12
+  participant C as OBS
+  participant D as Service Hub
+  participant E as Customer IDP (AAD, Okta, Ping Identity)
+  A-&gt;&gt;C: 1 - Request Onboarding Params from email
+  C-&gt;&gt;D: 2 - Request IDP from email
+  D-&gt;&gt;C: 3 - Respond with IDP Credentials
+  C-&gt;&gt;E: 4 - oAuthLogin on IDP
+  E-&gt;&gt;C: 5 - ID Token
+  C-&gt;&gt;D: 6 - Request OBS Params
+  D-&gt;&gt;C: 7 - Respond with OBS Params
+  C-&gt;&gt;A: 8 - Send OBS Params to IGEL OS
+  A-&gt;&gt;B: 9 - Initiate Onboarding</code></pre>
+-->
+
+<p><strong>Q:</strong> How to test OBS connection?</p>
+<p><strong>A:</strong> Open web browser and connect to <code>https://obs.services.igel.com/auth/user@domain.com</code>. Use the browser developer tools to look at returned content. Here is link to <a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a></p>
+<p><strong>Q:</strong> What do the error codes from onboarding mean?</p>
+<p><strong>A:</strong> <a href="https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding">Troubleshooting: Possible Error Codes During the Onboarding</a></p>
+<p><strong>Q:</strong> OBS connection issue for UMS server with long server name in cloud hosted server. How can I change UMS server name?</p>
+<p><strong>A:</strong> Open <code>UMS Console &gt; UMS Administration</code>, right click on <code>UMS Network &gt; Server &gt; your UMS server</code> choose edit and replace super long UMS hostname with shortened FQDN  - <code>Max length for FQDN is 32 characters</code>.</p>
+<hr />
+<h2 id="faq-microsoft-avd">FAQ - Microsoft AVD</h2>
+<p><strong>Q:</strong> How to pass Microsoft Excel keyboard shortcut keys?</p>
+<p><strong>A:</strong> <a href="https://www.computerhope.com/shortcut/excel.htm">Microsoft Excel keyboard shortcut keys</a> can be passed to AVD session by enabling <code>System &gt; app &gt; avd &gt; avd% &gt; options &gt; remote-keymapping</code>. In OS 11 (11.08.330) <code>System &gt; Registry &gt; sessions.wvd%.options.remote-keymapping</code></p>
+<hr />
+<h2 id="faq-vmware-horizon">FAQ - VMware Horizon</h2>
+<p><strong>Q:</strong> Having performance issues with VMware Horizon and BLAST protocol. What can be done?</p>
+<p><strong>A:</strong> Most performance issues are resolved in Horizon / BLAST with <a href="https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure#DRI3">dri3</a>. Enable the following in the registry:</p>
+<pre><code>x.drivers.use_dri3
+x.drivers.intel.force_dri3
+x.drivers.ati.force_dri3
+x.drivers.amdgpu.force_dri3
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

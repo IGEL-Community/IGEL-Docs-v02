@@ -14,6 +14,27 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-10 - [11.08.373](readme11.08.373.txt)
+
+```
+The new PRIVATE BUILD 11.08.373 for IGEL Workspace is ready.
+
+This build is based on 11.08.361.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Driver
+
+* Updated Philips Speech driver to version 13.1.14. Fixed a minor bug in the
+  Linux drivers which possibly caused unexpected error messages in some target
+  software products.
+```
+
+-----
+
 ## 2023-07-04 - [11.08.372](readme11.08.372.txt)
 
 ```

@@ -1,17 +1,17 @@
 # HOWTO Microsoft Teams
 
-# [IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
+## [IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
 
-# [Teams for Virtualized Desktop Infrastructure](https://learn.microsoft.com/en-us/microsoftteams/teams-for-vdi)
+## [Teams for Virtualized Desktop Infrastructure](https://learn.microsoft.com/en-us/microsoftteams/teams-for-vdi)
 
-# [Microsoft Teams optimization in a virtual desktop](https://www.go-euc.com/microsoft-teams-optimization-in-a-virtual-desktop/)
+## [Microsoft Teams optimization in a virtual desktop](https://www.go-euc.com/microsoft-teams-optimization-in-a-virtual-desktop/)
 
 -----
 
 ## Communication one-to-one vs. three (3) or more:
 
 - If there are two (2) participants, communication is established as peer connection between the two IGEL devices.
-- If there are three (3) or more, the peer is broken and all is orchestrated through the teams servers in the cloud. So, when 3 or more, IGEL OS sends the videos stream to a server in azure, that combine all video streams and send to all patisipants.
+- If there are three (3) or more, the peer is broken and all is orchestrated through the teams servers in the cloud. So, when 3 or more, IGEL OS sends the videos stream to a server in azure, that combine all video streams and send to all participants.
 
 -----
 

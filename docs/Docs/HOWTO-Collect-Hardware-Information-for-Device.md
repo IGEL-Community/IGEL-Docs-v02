@@ -12,6 +12,11 @@ Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 
 **NOTE:** Details on [UMS Logs](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/#ums-files)
 
+### Troubleshooting Links
+
+- [IGEL Communication Ports](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/?h=nc#ums-tofrom-igel-os-11-communication-ports-no-icg)
+- [Microsoft Teams]()
+
 -----
 
 ## Steps to collect the data

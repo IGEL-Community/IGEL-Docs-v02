@@ -271,27 +271,11 @@
 
 ## UMS-Files
 
-[Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-6.10/en/where-can-i-find-the-igel-ums-log-files-57320879.html)
+- [UMS 6 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-6.10/en/where-can-i-find-the-igel-ums-log-files-57320879.html)
 
-| file | UMS6 | UMS12 | description |
-|------|------|------|-------------|
-| api.log                                              | :material-check-bold: | :material-check-bold:| IMI interface log                                                                                                                                                                    |
-| catalina.log(.yyyy-mm-dd)                            | :material-check-bold: | :material-check-bold:| UMS log                                                                                                                                                                              |
-| localhost.log(.yyyy-mm-dd)                           | :material-check-bold: | :material-check-bold:| Tomcat log                                                                                                                                                                           |
-| communication.log                                    | :material-check-bold: | :material-check-bold:| communication between devices and UMS server / UMS console and UMS server log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active |
-| usgcommunication.log(.x)                             | :material-check-bold: | :material-check-bold:| communication between devices and ICG / UMS console and ICG log; empty / deactivated by default, has to be activated in log4j.properties; can be very huge when active               |
-| license_deployment.log                               | :material-check-bold: | :material-check-bold:| ALD log                                                                                                                                                                              |
-| stdout.log                                           | :material-check-bold: | :material-check-bold:| like catalina.log but only since last server start                                                                                                                                   |
-| stderr.log                                           | :material-check-bold: | :material-check-bold:| JVM error output log; critical VM messages                                                                                                                                           |
-| umsthreaddump                                        | :material-check-bold: | :material-check-bold:| UMS ThreadDump                                                                                                                                                                       |
-| igel-ums-admin.log                                   | :material-check-bold: | :material-check-bold:| UMS Administrator log                                                                                                                                                                |
-| install.log                                          | :material-check-bold: | :material-check-bold:| UMS installation log                                                                                                                                                                 |
-| ERP_PROCESS.log                                      | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
-| ERP_PROCESS_INFOS.log                                | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
-| Environment.txt                                      | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
-| thread_dump_start.\*                                 | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
-| thread_dump_end.\*                                   | :material-check-bold: | :material-check-bold:| support information                                                                                                                                                                  |
-| network.interfaces.ethernet.devices%.ieee8021x.debug | :material-check-bold: | :material-check-bold:| 802.1x debug                                                                                                                                                                         |
+- [UMS 12 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-12.01/en/where-can-i-find-the-igel-ums-log-files-77864314.html)
+
+- [UMS 12  Where Can I Find the IGEL UMS UMS Web App Logs?](https://kb.igel.com/endpointmgmt-12.01/en/logging-77865385.html)
 
 -----
 

@@ -14,6 +14,7 @@ Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 
 ### Troubleshooting Links
 
+- [IGEL COSMOS FAQ](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-COSMOS/)
 - [IGEL Communication Ports](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/?h=nc#ums-tofrom-igel-os-11-communication-ports-no-icg)
 - [Microsoft Teams](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/#how-to-check-communication-to-the-microsoft-api-urls-and-ips)
 

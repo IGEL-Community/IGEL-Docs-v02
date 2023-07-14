@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-14 - [11.08.346](readme11.08.346.txt)
+
+```
+The new PRIVATE BUILD 11.08.346 for IGEL Workspace is ready.
+
+This build is based on 11.08.345.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fixed instability in handling of certain webcam devices, e.g. Meeting Owl 3.
+```
+
+-----
+
 ## 2023-07-10 - [11.08.373](readme11.08.373.txt)
 
 ```

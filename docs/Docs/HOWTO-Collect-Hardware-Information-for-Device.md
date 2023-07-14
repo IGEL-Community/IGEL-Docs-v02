@@ -10,6 +10,8 @@ Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 /config/bin/create_support_information
 ```
 
+**NOTE:** Details on [UMS Logs](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/#ums-files)
+
 -----
 
 ## Steps to collect the data

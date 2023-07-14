@@ -9,6 +9,7 @@ Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 ```bash linenums="1"
 /config/bin/create_support_information
 ```
+
 -----
 
 ## Steps to collect the data

@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-18 - [11.08.374](readme11.08.374.txt)
+
+```
+The new PRIVATE BUILD 11.08.374 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Fixed pcsc-lite interoperability with VMWare Horizon client.
+```
+
+-----
+
 ## 2023-07-14 - [11.08.346](readme11.08.346.txt)
 
 ```

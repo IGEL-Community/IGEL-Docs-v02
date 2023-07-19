@@ -2,6 +2,11 @@
 
 ## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
+**Q:** How to manage users and roles in the IGEL Customer Portal?
+
+**A:** [IGEL KB: Managing Users and Roles in the IGEL Customer Portal](https://kb.igel.com/howtocosmos/en/managing-users-and-roles-in-the-igel-customer-portal-77865729.html)
+
+
 **NOTE:** [Minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
 ----------

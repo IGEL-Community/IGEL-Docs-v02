@@ -56,6 +56,9 @@ cp /var/log/Xorg.0.log Xorg.0.log
 cp /etc/os-release etc-os-release.txt
 cp /wfs/group.ini wfs-group.ini
 cp /wfs/setup.ini wfs-setup.ini
+cat /proc/bus/input/devices > proc_bus_input_devices.txt
+xrandr > xrandr.txt
+ip address > ip_address.txt
 tar cvjf var-log.tar.bz2 /var/log
 
 # uncomment following lines for Citrix

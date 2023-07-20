@@ -4,6 +4,87 @@
 
 -----
 
+## 2023-07-20 - [12.01.140](readme12.01.140.1.txt)
+
+```
+The new BUILD 12.01.140 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+# Changes since: 12.01.120 BUILD 1
+
+## New Features
+
+- Added handling of add-on license for IGEL Agent for Imprivata
+
+## Resolved Issues
+
+- Fixed AD passthrough authentication for Citrix sessions.
+- Fixed freeze during boot if more than 10 wireless interfaces were created.
+
+- **Hardware**
+
+	- Fixed system suspend on Lenovo K14 Gen1.
+
+- **Remote Management**
+
+	- Fixed: User interactions in UMS-triggered notifications are directly effective now (without timeout).
+
+## Known Issues
+
+- Display Configurator may show hotplugged monitors as disabled.
+- Issues may occur if monitors are connected via docking station.
+	- In general: Monitor hotplug not stable yet and can trigger misconfiguration.
+- If assigned app is not available in App Portal, there is no error notification on IGEL OS desktop.
+- The downgrade to base system 12.00.900 or 12.00.910 is not supported.
+- Display Settings setup page:
+	- There is no monitor info button available yet.
+- In very rare cases all apps are lost after an update. Should this be the case, an error message is shown "Opening system App Journal failed." - if the device is manged, the apps will be reinstalled after a reboot.
+- SSO with Okta user account does not work as expected if two or more Chromium sessions open the Okta web profile.
+- Network related warnings / error messages are shown for authentication of local user (which is not a network-based authentication).
+- Network disconnection during SSO requires a manual restart of SSO process via provided 'restart single sign-on' button - after (re-)established network connection.
+
+- **OSC Installer**
+
+	- Deployment of initial settings via OS Creator does not work reliable (yet).
+
+- **Open VPN**
+
+	- VMware Horizon Teams Optimization is not functional if connected via OpenVPN.
+
+- **Imprivata**
+
+	- After installation of IGEL Agent for Imprivata, an additional / second reboot is necessary to get the feature licensed and functional.
+
+- **Audio**
+
+	- Lenovo K14 Gen1 internal microphone is not working.
+	- LG 34CN650 Headset mic via jack is not working
+	- LG 27CN650 Headset mic via jack is not working
+
+- **Hardware**
+
+	- System suspend is not supported on
+		- LG 24CN650
+		- LG 27CN650
+		- LG 34CN650
+		- IGEL UD7-LX11 (H850C)
+	- Wake on LAN is not functional on Dell OptiPlex 3000 and Lenovo K14 Gen1
+
+- **IGEL Desktop**
+
+	- On-screen keyboard sporadically crashes when typing.
+	- On-screen keyboard is not supported in Setup Assistant yet.
+	- XFWM4 composite manager can break screen lock and enables sporadically access to open applications. It is recommended to not enable registry key windowmanager.wm0.variables.usecompositing. The composite manager is disabled by default.
+
+- **Licensing**
+
+	- UD Pocket Starter License is not deployed at first boot.
+	- Manual deployment of IGEL Agent for Imprivata licenses to devices in UMS is only possible after the installation of the IGEL Agent for Imprivata app on the device has finished.
+```
+
+-----
+
 ## 2023-06-12 - [12.01.120](readme12.01.120.1.txt)
 
 ```

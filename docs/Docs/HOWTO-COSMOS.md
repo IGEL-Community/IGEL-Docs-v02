@@ -49,6 +49,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - Licensing
 
+**Q:** What is the product lifecycle for IGEL products?
+
+**A:** [IGEL Product Lifecycle](https://kb.igel.com/licensesmore-igelos11/en/igel-product-lifecycle-90231044.html)
+
 **Q:** How do I convert OS 11 licenses to OS 12 licenses?
 
 **A:** No conversion needed. Your normal WE licenses work with OS 12. There is not a specific license type for OS 12.

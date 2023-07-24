@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-24 - [11.08.376](readme11.08.376.txt)
+
+```
+The new PRIVATE BUILD 11.08.376 for IGEL Workspace is ready.
+
+This build is based on 11.08.361.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### CUPS Printing
+
+* Updated PrinterLogic PrinterInstallerClient to version 25.1.0.637  
+  Fixes the determination of the AD user when Kerberos login is used.
+```
+
+-----
+
 ## 2023-07-18 - [11.08.374](readme11.08.374.txt)
 
 ```

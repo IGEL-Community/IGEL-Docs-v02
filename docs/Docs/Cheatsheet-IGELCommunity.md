@@ -37,8 +37,9 @@
 | [cat](Cheatsheet-Linux-General.md#cat)                     | :material-check-bold: | :material-check-bold: | display the content of a file              |
 | [cd](Cheatsheet-Linux-General.md#cd)                       | :material-check-bold: | :material-check-bold: | change folder                              |
 | [chmod](Cheatsheet-Linux-General.md#chmod)                 | :material-check-bold: | :material-check-bold: | change file attributes                     |
-| [comm](Cheatsheet-Linux-General.md#comm)             | :material-check-bold: | :material-check-bold: | compare two sorted files line by line |
+| [comm](Cheatsheet-Linux-General.md#comm)                   | :material-check-bold: | :material-check-bold: | compare two sorted files line by line |
 | [compgen](Cheatsheet-Linux-General.md#compgen)             | :material-check-bold: | :material-check-bold: | list all the linux commands                |
+| [conky](Cheatsheet-Linux-General.md#conky)                 | :material-check-bold: | :material-check-bold: | a system monitor |
 | [cp](Cheatsheet-Linux-General.md#cp)                       | :material-check-bold: | :material-check-bold: | copy files and folders                     |
 | [date](Cheatsheet-Linux-General.md#date)                   | :material-check-bold: | :material-check-bold: | date tool                                  |
 | [echo](Cheatsheet-Linux-General.md#echo)                   | :material-check-bold: | :material-check-bold: | output strings                             |

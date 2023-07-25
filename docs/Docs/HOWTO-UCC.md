@@ -82,7 +82,7 @@ Compatibility lists for Cisco Webex Meetings VDI & Cisco Webex App VDI:
 
 Sample profile to use with 11.08.360 and above for HDX webcam redirection. Tested with Logitech C920e, Logitech HD Pro C920 and Logitech C925.
 
-<a href="../Profiles/ HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920.xml" download> HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920</a> 
+<a href="../Profiles/HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920.xml" download> HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920</a> 
 
 [KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/igelos-11.08.330/en/hdx-multimedia-settings-for-an-igel-os-citrix-session-88021271.html)
  

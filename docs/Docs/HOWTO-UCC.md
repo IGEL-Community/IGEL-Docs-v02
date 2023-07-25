@@ -80,6 +80,14 @@ Compatibility lists for Cisco Webex Meetings VDI & Cisco Webex App VDI:
 
 ## [Citrix HDX Webcam redirection for 64-bit applications. HowTo guide!](https://virtualbrat.com/2023/02/23/citrix-hdx-webcam-redirection-for-64-bit-applications-how-to-guide/)
 
+Sample profile to use with 11.08.360 and above for HDX webcam redirection. Tested with Logitech C920e, Logitech HD Pro C920 and Logitech C925.
+
+<a href="../Profiles/ HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920.xml" download> HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920</a> 
+
+[KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/igelos-11.08.330/en/hdx-multimedia-settings-for-an-igel-os-citrix-session-88021271.html)
+ 
+Also, please note that if using Chromium to connect to Citrix to set the following in the registry for the session: sessions.chromium10256.gstreamer_version = 1.0
+
 -----
 
 ## [Cisco Webex App for VDI using IGEL OS and the known limitation with "ring all devices"](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_010.html#id_133267)

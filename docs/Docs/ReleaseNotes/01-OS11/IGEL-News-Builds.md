@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-26 - [11.08.378](readme11.08.378.txt)
+
+```
+The new PRIVATE BUILD 11.08.378 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Fixed pcsc-lite SCardTransmit with undefined protocol.
+```
+
+-----
+
 ## 2023-07-24 - [11.08.376](readme11.08.376.txt)
 
 ```

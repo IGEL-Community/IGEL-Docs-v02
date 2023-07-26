@@ -28,7 +28,7 @@
 | Microsoft Edge | 800M | https://[UMS_Server]:8443/ums_filetransfer/edge.inf | /custom/edge-cp-init-script.sh init | /custom/edge-cp-init-script.sh stop | /custom/edge/opt/microsoft/msedge-beta/product_logo_256_beta.png | /custom/edge/usr/bin/microsoft-edge-beta |
 | VLC | 300M | https://[UMS_Server]:8443/ums_filetransfer/vlc.inf | /custom/vlc-cp-init-script.sh init | /custom/vlc-cp-init-script.sh stop | /custom/vlc/usr/share/icons/hicolor/256x256/apps/vlc.png | /custom/vlc/usr/bin/vlc |
 | Webex | 1100M | https://[UMS_Server]:8443/ums_filetransfer/webex.inf | /custom/webex-cp-init-script.sh init | /custom/webex-cp-init-script.sh stop | /custom/webex/opt/Webex/bin/sparklogosmall.png | /custom/webex/opt/Webex/bin/CiscoCollabHost |
-| Zoom | 600M | https://[UMS_Server]:8443/ums_filetransfer/zoom.inf | /custom/zoom-cp-init-script.sh init | /custom/zoom-cp-init-script.sh stop | /custom/zoom/usr/share/pixmaps/Zoom.png | xdg-mime default Zoom.desktop x-scheme-handler/zoommtg && /custom/zoom/usr/bin/zoom |
+| Zoom | 800M | https://[UMS_Server]:8443/ums_filetransfer/zoom.inf | /custom/zoom-cp-init-script.sh init | /custom/zoom-cp-init-script.sh stop | /custom/zoom/usr/share/pixmaps/Zoom.png | xdg-mime default Zoom.desktop x-scheme-handler/zoommtg && /custom/zoom/usr/bin/zoom |
 
 ### IGEL Disclaimer
 

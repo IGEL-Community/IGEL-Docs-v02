@@ -115,6 +115,10 @@ If the client's clock is off, then it will break either or both of these functio
 
   ![image-howto-cosmos-01](Images/HOWTO-COSMOS-01.png)
 
+**Q:** I reset / rebuilt my OS 12 device and now get error (#38) when trying to connect to UMS.
+
+**A:** See [KB - Troubleshooting: Error 38 during the Onboarding of an IGEL OS 12 Device](https://kb.igel.com/howtocosmos/en/troubleshooting-error-38-during-the-onboarding-of-an-igel-os-12-device-90229885.html).
+
 **Q:** Trying to connect OS 12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
 
 **A:** You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to. Steps:

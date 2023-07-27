@@ -202,7 +202,7 @@
 | [iwgetid](Cheatsheet-IGELOS-Networking.md#iwgetid)                                     | :material-check-bold: | :material-check-bold:| report ESSID, NWID or AP/Cell Address of wireless network                                               |
 | [iwlist](Cheatsheet-IGELOS-Networking.md#iwlist)                                       | :material-check-bold: | :material-check-bold:| display some additional information from a wireless network interface that is not displayed by iwconfig |
 | [iwspy](Cheatsheet-IGELOS-Networking.md#iwspy)                                         | :material-check-bold: | :material-check-bold:| get wireless statistics from specific nodes                                                             |
-| [nc](Cheatsheet-IGELOS-Networking.md#nc)       | :material-check-bold: | :material-close-circle:| arbitrary TCP and UDP connections and listens |
+| [nc](Cheatsheet-IGELOS-Networking.md#nc)       | :material-check-bold: | :material-close-circle:| arbitrary TCP and UDP connections and listens (OS 12 - debugtools app) |
 | [netstat](Cheatsheet-IGELOS-Networking.md#netstat)         | :material-check-bold: | :material-check-bold:| display open connections |
 | [nmcli](Cheatsheet-IGELOS-Networking.md#nmcli)                                         | :material-check-bold: | :material-check-bold:| manage network connections via cli                                                                      |
 | [ping](Cheatsheet-IGELOS-Networking.md#ping)               | :material-check-bold: | :material-check-bold:| test the reachability of a host                                                                         |

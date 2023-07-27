@@ -263,7 +263,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** In the Customer Portal for OBS registration must the UMS hostname be entered in lowercase?
 
-**A:** Yes the UMS hostname must be entered in lowercase else Error #38 will occur during device onboarding.
+**A:** Please pay attention that hostnames should be spelled everywhere the same way (case-sensitive). The UMS hostname specified during the configuration of the IGEL Onboarding Service must be written exactly as in the UMS.
 
 **Q:** What are the steps to onboard an OS 12 device?
 

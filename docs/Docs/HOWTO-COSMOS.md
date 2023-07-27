@@ -261,6 +261,10 @@ https://yourICG:8443/usg/server-status
 
 **A:** [Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)
 
+**Q:** In the Customer Portal for OBS registration must the UMS hostname be entered in lowercase?
+
+**A:** Yes the UMS hostname must be entered in lowercase else Error #38 will occur during device onboarding.
+
 **Q:** What are the steps to onboard an OS 12 device?
 
 **A:** [Onboarding IGEL OS 12 Devices](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html)

@@ -296,7 +296,7 @@ sequenceDiagram
 - app.igel.com
 - Port 8443
 
-#### OBS
+#### IGEL Onboarding Service (OBS)
 
 - obs.services.igel.com
 - Port 8443

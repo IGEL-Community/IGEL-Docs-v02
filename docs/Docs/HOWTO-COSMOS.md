@@ -208,6 +208,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Currently OS 11 to OS 12 is a re-install. Upgrade from OS 11 to OS 12 will be availiable in the Fall - 2023.
 
+**Q:** Does OS 12 support SCCM deployments?
+
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.08.330/en/igel-os-sccm-add-on-88022481.html)
+
 **Q:** When will Citrix username / password auto login support in cloud environment be supported?
 
 **A:** As of May 10, this is being worked on with Citrix. Date pending for release.

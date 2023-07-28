@@ -293,7 +293,7 @@ sequenceDiagram
 
 #### IGEL App Portal
 
-- app.igel.com
+- [app.igel.com](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
 - Port 8443
 
 #### IGEL Onboarding Service (OBS)

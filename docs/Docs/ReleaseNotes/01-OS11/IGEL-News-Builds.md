@@ -295,6 +295,25 @@ Resolved Issues
 
 -----
 
+## 2023-06-26 - [11.08.364](readme11.08.364.txt)
+
+```
+The new PRIVATE BUILD 11.08.364 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Imprivata
+
+* Pre-Release of IGEL Agent for Imprivata.
+```
+
+-----
+
 ## 2023-06-23 - [11.08.344](readme11.08.344.txt)
 
 ```

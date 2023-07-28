@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-28 - [11.08.371](readme11.08.371.txt)
+
+```
+The new PRIVATE BUILD 11.08.371 for IGEL Workspace is ready.
+
+This build is based on 11.08.364.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Imprivata
+
+* Pre-Release of IGEL Agent for Imprivata.
+```
+
+-----
+
 ## 2023-07-26 - [11.08.378](readme11.08.378.txt)
 
 ```

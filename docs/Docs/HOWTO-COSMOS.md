@@ -2,6 +2,15 @@
 
 ## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
+### Where Are the IGEL COSMOS Cloud Services Data Stored?
+
+Currently, the IGEL COSMOS Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
+
+The Insight Service data are currently also stored in Frankfurt (Germany west central).
+
+All data centers and their operators are fully ISO/IEC 27001 certified.
+
+
 **Q:** How to manage users and roles in the IGEL Customer Portal?
 
 **A:** [IGEL KB: Managing Users and Roles in the IGEL Customer Portal](https://kb.igel.com/howtocosmos/en/managing-users-and-roles-in-the-igel-customer-portal-77865729.html)

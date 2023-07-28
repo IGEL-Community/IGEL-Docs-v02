@@ -291,6 +291,16 @@ sequenceDiagram
 - fwus.igel.com
 - Port 443 TCP Incoming
 
+#### IGEL App Portal
+
+- app.igel.com
+- Port 8443
+
+#### OBS
+
+- obs.services.igel.com
+- Port 8443
+
 #### [How to check communication ports](../HOWTO-Setup-Lab-Sandbox-Environment/#ums-tofrom-igel-os-11-communication-ports-no-icg)
 
 -----

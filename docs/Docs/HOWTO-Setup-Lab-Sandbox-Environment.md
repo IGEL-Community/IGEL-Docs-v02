@@ -339,6 +339,8 @@ Use pfSense to create firewall (DMZ)
 | ICG 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.02.100.bin" download>ICG 12</a> |
 | ICG 2 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-2.05.110.bin" download>ICG 2</a> |
 
+-----
+
 ```bash linenums="1"
 #!/bin/bash
 

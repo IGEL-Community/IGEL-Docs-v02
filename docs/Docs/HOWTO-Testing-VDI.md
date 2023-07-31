@@ -48,6 +48,9 @@ VMware TestDrive is a self-service, cloud-hosted product demonstration platform 
 
 ### [IGEL KB:  VMware Horizon Articles](https://kb.igel.com/igelos-11.08/en/vmware-horizon-63802798.html)
 
+- OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.discovery.vmware.com`
+
+
 -----
 
 ## Citrix  - Cloud Service Trails

@@ -14,6 +14,50 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-07-31 - [11.08.377](readme11.08.377.txt)
+
+```
+The new PRIVATE BUILD 11.08.377 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Situations where the hardware decoder has not enough memory to handle a
+  certain video format properly, are now better handled.
+* In rare situations (observed when using teams app sharing) there appear
+  intermixed video frames which come from different H264 streams. These frames
+  are now being separated from each other and will be decoded separately.  
+* Added a new registry key to suppress such secondary frames entirely, as they
+  render mostly duplicated content of the primary frames.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`In case of mixed up H264 streams: Don't display frames from secondary streams` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.hw-accelerated-h264-suppress-secondary-frames`              |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Refresh/Redraw issues with Citrix session windows are fixed. Resuming from
+  screensaver or uncovering a session window which was covered by another window
+  now works as expected.
+
+### H264
+
+* Situations where the hardware decoder has not enough memory to handle a
+  certain video format properly, are now better handled.
+```
+
+-----
+
 ## 2023-07-28 - [11.08.371](readme11.08.371.txt)
 
 ```

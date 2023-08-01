@@ -195,6 +195,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - OS 12
 
+**Q:** Is OS 12 considered an App?
+
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [KB IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/basesystem-12.1/en/igel-os-base-system-90231178.html).
+
 **Q:** What are the hardware requirements for OS 12?
 
 **A:** [Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)

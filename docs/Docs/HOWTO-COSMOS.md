@@ -96,6 +96,11 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [KB: What Is New in IGEL UMS 12.02.100?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html)
 
+**Q:** Is search Broken in 12.02.100 UMS Web?
+
+**A:** 
+If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [KB: UMS 12.02.100 Known issues](https://kb.igel.com/endpointmgmt-12.02/en/known-issues-igel-ums-12-02-100-90237920.html)) Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
+
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.

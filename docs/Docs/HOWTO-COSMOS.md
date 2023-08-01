@@ -82,15 +82,19 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
-**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html)
+**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.02/en/deployment-90236757.html).
 
 **Q:** How to automate license renewal?
 
-**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.01/en/deployment-77865002.html).
+**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.02/en/deployment-90236757.html).
 
 -----
 
 ## FAQ - UMS
+
+**Q:** What is new in UMS 12.02.100 released on 31 July 2023?
+
+**A:** [KB: What Is New in IGEL UMS 12.02.100?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html)
 
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
 
@@ -102,15 +106,15 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** When will proxy mode support for UMS 12 be released?
 
-**A:** As of 3 May, it is still in development and target release date by end of July. The work around for the UMS to access the App Portal is to manually import applications into the UMS.
+**A:** As of 31 July, UMS 12.02.100 has proxy mode support.
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
-**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.01/en/overview-of-the-igel-ums-81500680.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole)
+**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.02/en/overview-of-the-igel-ums-90235876.html)
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
-**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.01/en/ums-and-devices-secure-shadowing-77863778.html).
+**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.02/en/ums-and-devices-secure-shadowing-90235104.html).
 
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
@@ -143,7 +147,7 @@ If the client's clock is off, then it will break either or both of these functio
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
-  - Additional details [Creating the End Certificates ](https://kb.igel.com/endpointmgmt-12.01/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-77864040.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates)
+  - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.02/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-90235432.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-DeployingaCertificateChainwithaPublicRootCADeployingaCertificateChainwithaPublicRootCA)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
 
 
@@ -167,18 +171,17 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What are the steps to upgrade distributed UMS 6.10 to 12.01 on Windows?
 
-**A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.01/en/known-issues-ums-12-01-110-88023333.html)
+**A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.02/en/known-issues-ums-12-01-110-90237930.html)
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.01/en/installation-requirements-for-the-igel-ums-77864394.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.01/en/performance-optimizations-77864390.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.01/en/how-to-configure-java-heap-size-for-the-ums-server-77864106.html).
+**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.02/en/installation-requirements-for-the-igel-ums-90235884.html) , [performance optimizations](https://kb.igel.com/endpointmgmt-12.02/en/performance-optimizations-90235861.html) and [Java heap size](https://kb.igel.com/endpointmgmt-12.02/en/how-to-configure-java-heap-size-for-the-ums-server-90235506.html).
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 
-**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12.01.110](https://kb.igel.com/endpointmgmt-12.01/en/supported-environment-ums-12-01-110-81510942.html)
+**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12.02.100](https://kb.igel.com/endpointmgmt-12.02/en/supported-environment-igel-ums-12-02-100-90237917.html).
 
 **Q:** How to limit bulk actions for UMS help desk users?
-
 
 **A:** UMS WebApp has a layer of security to `only` allow actions on a single device - `Permission > General - WebApp > Device Bulk Action`.
 
@@ -240,7 +243,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / Azure Application Gateway with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.01/en/igel-cloud-gateway-icg-81512143.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.01/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-90222095.html).
+**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / Azure Application Gateway with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.02/en/igel-cloud-gateway-icg-90238150.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.02/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-90235862.html).
 
 **Q:** Does ICG 12 support OS 11 devices?
 
@@ -252,7 +255,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html)
+**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html). Fixed in [ICG 12.02.100](https://kb.igel.com/igelicg-12.02/en/resolved-issues-icg-12-02-100-90239446.html).
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 

@@ -4,9 +4,9 @@
 
 ## Collect Logs for IGEL Support
 
-[KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/endpointmgmt-12.02/en/save-support-information-send-log-files-to-support-90237102.html)
+- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/endpointmgmt-12.02/en/save-support-information-send-log-files-to-support-90237102.html)
 
-[KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/howtocosmos/en/debugging-how-to-collect-and-send-device-log-files-to-igel-support-81497527.html)
+- [KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/howtocosmos/en/debugging-how-to-collect-and-send-device-log-files-to-igel-support-81497527.html)
 
 Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 

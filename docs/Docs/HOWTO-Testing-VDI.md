@@ -90,3 +90,12 @@ App & Desktop Virtualization Made Easy.
 ### [OS 11 / 12 - Create Custom Partition for Frame](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/Nutanix_Frame)
 
 ### [OS 12 - IGEL App Portal - coming soon](https://app.igel.com/)
+
+-----
+
+## Microsoft Licensing Notes
+
+- [Licensing Windows 365 and Windows 11 Virtual Desktops for
+Remote Access](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_brief_PLT_Licensing%20Windows%20365%20and%20Windows%2011%20Virtual%20Desktops%20for%20Remote%20Access.pdf?sv=2020-08-04&se=2123-03-02T23:15:04Z&sr=b&sp=r&sig=FUIRPnEKBRQ9MmbP3OtySsARRj8AETIINoVMbImQ814%3D)
+
+- [Windows 11 commercial desktop operating systems](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Windows_11_Commercial_Licensing_Guide.pdf?sv=2020-08-04&se=2123-04-26T03:49:08Z&sr=b&sp=r&sig=ZOBNDMwTwi83nYr7LyGe3n4LoVTaPy7LfUV6KY6D%2BRo%3D)

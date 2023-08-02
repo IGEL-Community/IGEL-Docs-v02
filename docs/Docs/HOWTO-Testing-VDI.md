@@ -92,6 +92,7 @@ App & Desktop Virtualization Made Easy.
 ### [OS 12 - IGEL App Portal - coming soon](https://app.igel.com/)
 
 -----
+-----
 
 ## Microsoft Licensing Notes
 

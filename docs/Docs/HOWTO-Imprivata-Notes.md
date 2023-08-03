@@ -1,5 +1,7 @@
 # HOWTO Imprivata Notes
 
+## [IGEL Knowledge Base -- Configuration of the IGEL Agent for Imprivata on IGEL OS](https://kb.igel.com/iia-0.3.7/en/configuration-of-the-igel-agent-for-imprivata-on-igel-os-90241360.html)
+
 ## [IGEL Knowledge Base -- Imprivata](https://kb.igel.com/igelos-11.08/en/imprivata-63804438.html)
 
 ## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/igelos-11.08/en/imprivata-63802856.html)

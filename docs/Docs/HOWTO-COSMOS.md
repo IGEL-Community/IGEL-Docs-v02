@@ -96,6 +96,18 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [KB: What Is New in IGEL UMS 12.02.100?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html)
 
+**Q:** How to check the status of UMS server?
+
+**A:** Open browser and connect to server on installed port (8443 or 443):
+
+```bash linenums="1"
+https://UMS_SERVER_URL:8443/ums/check-status
+```
+
+```bash linenums="1"
+https://UMS_SERVER_URL:443/ums/check-status
+```
+
 **Q:** Is search Broken in 12.02.100 UMS Web?
 
 **A:** 

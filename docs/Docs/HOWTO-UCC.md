@@ -2,7 +2,10 @@
 
 ## [IGEL OS UCC Configuration Guide](https://www.uccguide.de/igelos_ucc_guide.pdf)
 
+<!---
+Remove for now
 ## [Alternate site for guide: IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
+-->
 
 -----
 

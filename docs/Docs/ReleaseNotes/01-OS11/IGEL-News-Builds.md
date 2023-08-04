@@ -14,6 +14,54 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-08-04 - [11.08.347](readme11.08.347.txt)
+
+```
+The new PRIVATE BUILD 11.08.347 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* The network events dhcp4-change and dhcp6-change check whether the IP address
+  has been changed. If no change has been made, the configuration is not
+  transferred to the UMS.
+```
+
+-----
+
+## 2023-08-04 - [11.08.382](readme11.08.382.txt)
+
+```
+The new PRIVATE BUILD 11.08.382 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed screenshare issue with direct MS-Teams calls when a screenshare is
+  already active.  
+* Fixed potential client crash when virtual backgrounds are enabled in MS-Teams.  
+* Fixed stale video window content in MS-Teams when video feeds are switched but
+  incoming video is not directly decodable.  
+* Adjusted the quantization range for the x264enc to allow a little more
+  quantization being applied to outgoing MS-Teams video streams.  
+* Avoid large display delay of incoming MS-Teams video streams by measuring NTP
+  latency.
+```
+
+-----
+
 ## 2023-08-02 - [11.08.381](readme11.08.381.txt)
 
 ```

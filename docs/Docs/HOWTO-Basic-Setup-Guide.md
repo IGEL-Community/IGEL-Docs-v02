@@ -162,6 +162,7 @@ flowchart TD
   C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
   C{UMS Server}-- DB Port--> E[(UMS DB)]
   C{UMS Server}-- Port 30022 TCP --> B[\Intranet OS 11 Devices/]
+  C{UMS Server}-- Port 30005 TCP UDP --> Q[\Intranet OS 12 Devices/]
   C{UMS Server}-- Port 30005 TCP UDP --> B[\Intranet OS 11 Devices/]
   C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
   B[\Intranet OS 11 Devices/]-- Port 30001 TCP --> C{UMS Server}
@@ -173,10 +174,10 @@ flowchart TD
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
-  M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
-  M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
-  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
+  H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]
+  M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]
+  M[[OBS]]<-- Port 443 TCP -->O[[Customer IDP]]
+  H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
 ```
 
 - OS 12 (No OS 11; No ICG; No OBS)
@@ -187,11 +188,12 @@ flowchart TD
   C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
   C{UMS Server}-- DB Port--> E[(UMS DB)]
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  C{UMS Server}-- Port 30005 TCP UDP --> K[/OS 12 Devices\]
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
+  H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
 ```
 
 - OS 12 (No OS 11; No ICG; OBS; IDP)
@@ -202,15 +204,16 @@ flowchart TD
   C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
   C{UMS Server}-- DB Port--> E[(UMS DB)]
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
+  C{UMS Server}-- Port 30005 TCP UDP --> K[/OS 12 Devices\]
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
   K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
-  H((Internet Connection))<-- Port 8443 TCP --> M[[OBS]]
-  M[[OBS]]<-- Port 8443 TCP -->N[[Service Hub]]
-  M[[OBS]]<-- Port 8443 TCP -->O[[Customer IDP]]
-  H((Internet Connection))<-- Port 8443 TCP --> P[[App Portal]]
+  H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]
+  M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]
+  M[[OBS]]<-- Port 443 TCP -->O[[Customer IDP]]
+  H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
 ```
 
 <!---
@@ -238,6 +241,7 @@ sequenceDiagram
 #### IGEL OS 12 Devices
 
 - Port 8443 (TCP) Incoming / Outgoing
+- Port 30005 (TCP/UDP) Incoming (Intranet discovery)
 
 -----
 
@@ -294,12 +298,12 @@ sequenceDiagram
 #### IGEL App Portal
 
 - [app.igel.com](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
-- Port 8443
+- Port 443
 
 #### IGEL Onboarding Service (OBS)
 
 - obs.services.igel.com
-- Port 8443
+- Port 443
 
 #### [How to check communication ports](../HOWTO-Setup-Lab-Sandbox-Environment/#ums-tofrom-igel-os-11-communication-ports-no-icg)
 

@@ -171,8 +171,6 @@ flowchart TD
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
-  K[/Internet OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
-  Q[\Intranet OS 12 Devices/]<-- Port 8443 TCP --> C{UMS Server}
   K[/Internet OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
   H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]

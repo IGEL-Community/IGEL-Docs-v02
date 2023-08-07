@@ -163,6 +163,7 @@ flowchart TD
   C{UMS Server}-- DB Port--> E[(UMS DB)]
   C{UMS Server}-- Port 30022 TCP --> B[\Intranet OS 11 Devices/]
   C{UMS Server}-- Port 30005 TCP UDP --> Q[\Intranet OS 12 Devices/]
+  C{UMS Server}-- Port 30005 TCP UDP --> Q[\Intranet OS 12 Devices/]
   C{UMS Server}-- Port 30005 TCP UDP --> B[\Intranet OS 11 Devices/]
   C{UMS Server}-- Port 8443/443 TCP --> F{IGEL Cloud Gateway}
   B[\Intranet OS 11 Devices/]-- Port 30001 TCP --> C{UMS Server}
@@ -171,8 +172,9 @@ flowchart TD
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
+  K[/Internet OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  Q[\Intranet OS 12 Devices/]<-- Port 8443 TCP --> C{UMS Server}
+  K[/Internet OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
   H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]

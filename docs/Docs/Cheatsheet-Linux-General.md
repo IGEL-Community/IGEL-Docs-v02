@@ -173,7 +173,14 @@ drwxr-xr-x  2 root root     60 Mai 20 13:49 chrony
 -rw-------  1 root root    214 Mai 20 13:49 updateconf.ini
 drwxr-xr-x 14 user users   440 Mai 20 13:50 user
 drwxr-xr-x  2 root root     40 Mai 20 13:49 zoneinfo
+```
 
+## lshw
+
+list hardware
+
+```bash linenums="1"
+lshw -short
 ```
 
 ## su

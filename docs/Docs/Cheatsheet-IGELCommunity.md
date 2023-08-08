@@ -54,6 +54,7 @@
 | lprm                                                       | :material-check-bold: | :material-check-bold: | Delete a print job                         |
 | lpstat                                                     | :material-check-bold: | :material-check-bold: | Show finished print jobs                   |
 | [ls](Cheatsheet-Linux-General.md#ls)                       | :material-check-bold: | :material-check-bold: | show directory content                     |
+| [lshw](Cheatsheet-Linux-General.md#lshw)                   | :material-check-bold: | :material-check-bold: | list hardware                              |
 | [mkdir](Cheatsheet-Linux-General.md#mkdir)                 | :material-check-bold: | :material-check-bold: | create a folder                            |
 | [more](Cheatsheet-Linux-General.md#more)                   | :material-check-bold: | :material-check-bold:| display the content of a file page by page |
 | [mount](Cheatsheet-Linux-General.md#mount)                 | :material-check-bold: | :material-check-bold:| mount a partition                          |

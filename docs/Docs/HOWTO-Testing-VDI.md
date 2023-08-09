@@ -53,7 +53,7 @@ VMware TestDrive is a self-service, cloud-hosted product demonstration platform 
 
 -----
 
-## Citrix  - Cloud Service Trails
+## Citrix  - Cloud Service Trials
 
 Trials for individual Citrix Cloud services are delivered through the Citrix Cloud management console. The functionality in a service trial is the same as the purchased service, so they’re suitable for a proof-of-concept (POC) or pilot deployment.
 

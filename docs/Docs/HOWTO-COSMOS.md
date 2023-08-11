@@ -156,7 +156,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
   - Start `UMS Console`
   - Open `UMS Administration`
   - Select `Global Configuration` > `Certificate Management` > `Web`
-  - Add new endpoint web certificate with all the IP addresses, fully qualified domain names (FQDN), and short names that the device can connect to
+  - Add new endpoint web certificate with all the IP addresses, fully qualified domain names (FQDN), short names, and localhost that the device can connect to
 
   ![image-howto-cosmos-02](Images/HOWTO-COSMOS-02.png)
 

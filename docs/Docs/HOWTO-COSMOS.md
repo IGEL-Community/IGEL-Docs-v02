@@ -151,7 +151,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Trying to connect OS 12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
 
-**A:** You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to. Steps:
+**A:** You may have to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. Steps:
 
   - Start `UMS Console`
   - Open `UMS Administration`

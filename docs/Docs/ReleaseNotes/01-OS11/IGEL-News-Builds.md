@@ -14,6 +14,52 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-08-14 - [11.08.385](readme11.08.385.txt)
+
+```
+The new PRIVATE BUILD 11.08.385 for IGEL Workspace is ready.
+
+This build is based on 11.08.381.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Create a log for device's support information if the rmagent has been
+  requested to release the device from UMS.  
+* Retrieve the device's unit id in more robust way.  
+* The log file is only accessible to root
+```
+
+-----
+
+## 2023-08-14 - [11.08.384](readme11.08.384.txt)
+
+```
+The new PRIVATE BUILD 11.08.384 for IGEL Workspace is ready.
+
+This build is based on 11.08.382.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed crash when last audio device was removed.  
+* Adaptive (average) MS-Teams video playback delay calculation and no key frame
+  skipping on decoding to make playback more reliable.
+* Raised net.core.wmem_max setting when AVD sessions are configured to avoid TCP
+  connection resets being triggered by the Linux Kernel on large RdClientSDK
+  data transfers.
+```
+
+-----
+
 ## 2023-08-04 - [11.08.347](readme11.08.347.txt)
 
 ```

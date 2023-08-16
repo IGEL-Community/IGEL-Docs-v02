@@ -334,8 +334,8 @@ Use pfSense to create firewall (DMZ)
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_6.10.140.exe" download>UMS 6 for Windows Server</a> |
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_6.10.140.bin" download>UMS 6 for Linux Server</a> |
 | OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.01.140.1.zip" download>OSC - OS 12</a> |
-| OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.360.zip" download>OSC - OS 11</a> |
-| OS Update - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.08.360_public.zip" download>OS Update Firmware - OS 11</a> |
+| OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.440.zip" download>OSC - OS 11</a> |
+| OS Update - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.08.440_public.zip" download>OS Update Firmware - OS 11</a> |
 | ICG 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.02.100.bin" download>ICG 12</a> |
 | ICG 2 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-2.05.110.bin" download>ICG 2</a> |
 
@@ -357,10 +357,10 @@ wget https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.02.100
 
 #IGEL OS 11 / UMS 6 / ICG 2)
 #OSC 11:
-wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.360.zip
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.08.440.zip
 
 #OS 11 Update:
-wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.08.360_public.zip
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.08.440_public.zip
 
 #UMS 6:
 wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_6.10.140.exe

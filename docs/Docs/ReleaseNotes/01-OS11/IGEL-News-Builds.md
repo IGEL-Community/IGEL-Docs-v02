@@ -14,6 +14,614 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-08-16 - [11.08.440](readme11.08.440.txt)
+
+```
+The new PUBLIC BUILD 11.08.440 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2307.  
+  Available Citrix Workspace Apps in this release: 2307 (default), 2305 and 2010
+* Added support for playing short tones in optimized Microsoft Teams - requires
+  update to the latest version of Microsoft Teams.
+* Changes with Citrix Workspace App 2305 and 2307:  
+  New features:  
+* Copy and paste files and folders between two virtual desktops [Technical
+  Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Copy and paste files and folders between two virtual desktops`  |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.vdgdt`                                               |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+* Enhancement on 32-bit cursor support [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhancement on 32-bit cursor support`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.Cursor32bitSupport`                                |
++------------+-----------------------------------------------------------------+
+|Value       |true(default)/ false                                             |
++------------+-----------------------------------------------------------------+
+
+* Change the default browser for FIDO2
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change the default browser for FIDO2`                           |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2authbrowser`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |CEB (default), chromium, firefox, chromium-browser               |
++------------+-----------------------------------------------------------------+
+
+* Support for authentication using FIDO2 when connecting to on-premises stores
+  [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for authentication using FIDO2 when connecting to on-premises stores` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.fido2enabled`                                       |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Fixed:  
+
+* App Protection works with all the Citrix session types including Firefox
+  browser. Reboot of system after enabling/disabling the feature
+  (ica.appprotection) is required.
+
+### AVD
+
+* Added WebRTC h264 encoder preset option:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.webrtcencoderpreset`                     |
++------------+-----------------------------------------------------------------+
+| Value      | none / ultrafast / superfast / veryfast / faster / fast / **medium** (default) / slow / slower / veryslow / placebo |
++------------+-----------------------------------------------------------------+
+
+* Added initial secondary ringer support. But since the RdClientSDK support for
+  it currently is non-functional (the sinkId does not change on the related MS-
+  Teams setting), we added a command line option "--webrtc-ring-all-devices" and
+  have set that as default in the cmd_ext setting. This makes MS-Teams ring on
+  all audio output devices. This default setting will be removed as soon as the
+  RdClientSDK implementation works as expected!
+* Added clock to appbar - enable via System > Registry >
+  sessions.wvd%.options.cmd_ext = -a  
+* If appbar is enabled, the workarea of the session is reduced accordingly  
+* The appbar is always visible now
+
+### VMware Horizon
+
+* Updated Horizon client to version 2306-8.10.0-21964631
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Open local files in published applications`                    |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.enable-file-association`                           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Auto-connect to remote desktop or published app in case there's only one of them` |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.single-auto-connect`                               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Automatically connect to the desktop if there is only one or connect to the one which name is given` |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.auto-connect-desktop`                              |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Automatically connect to this server when starting the client` |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.auto-connect-broker`                               |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Client behavior when all Sessions have been disconnected`      |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.all-sessions-disconnected-behavior`                |
++------------+-----------------------------------------------------------------+
+| Range      | [Unconfigured][Quit client][Logoff from server]                 |
+|            | [Keep current state]                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **Unconfigured**                                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Disconnect empty App session automatically`                    |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.auto-disconnect-empty-app-session`                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Maximum count of core dump files allowed`                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.maxcoredumps`                                      |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 **Default**                                                   |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Added MAC-address passthrough among Ethernet devices. With the following
+  registry key a LAN device can be specified from which the MAC address shall be
+  adopted. The donor device and any conflicting receiver device will be removed
+  (by unbinding the driver) as long as the receiving device is present.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`MAC address source`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.interfaces.ethernet.device%.mac_source`                 |
++------------+-----------------------------------------------------------------+
+|Range       | [none][LAN][LAN2][LAN3][LAN4]                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**none**                                                         |
++------------+-----------------------------------------------------------------+
+
+* Example: If LAN2 and LAN3 are configurations for docking stations that shall
+  adopt the MAC address from LAN, the following two parameters must be set to
+  "LAN":  
+  network.interfaces.ethernet.device1.mac_source  
+  network.interfaces.ethernet.device2.mac_source  
+  Warning: Misconfiguration may result in loss of connectivity
+* Added Lenovo FCC unlock tool for Quectel EM05
+
+### Open VPN
+
+* Updated cipher configuration of Open VPN. Now it is possible to specify the
+  data-ciphers list. By default the default cipher list
+  AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305 is active. Otherwise a custom list
+  can be specified in the Data ciphers parameter. Enter the ciphers separated
+  with ':'. The existing parameter 'Cipher' was renamed to 'Cipher (legacy
+  parameter)' and now has a new value 'unset' in range, which means that the
+  parameter cipher will be omitted in the configuration.
+
++------------+-----------------------------------------------------------------+
+|Setup       |`Network > VPN > Open VPN > Connection > Options`                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use default data cipher list`                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openvpn%.vpnopts.use_default_cipher_list`              |
++------------+-----------------------------------------------------------------+
+|Value       |**on** / off                                                     |
++------------+-----------------------------------------------------------------+
+|Setup       |`Network > VPN > Open VPN > Connection > Options`                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Data ciphers`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openvpn%.vpnopts.data_ciphers`                         |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+
+### OpenConnect VPN
+
+* Added further supported protocols for OpenConnect VPN client by adding
+  Fortinet, F5 and Array. OpenConnect VPN is a feature with limited support, and
+  the new protocols are not validated by IGEL.
+
++------------+-----------------------------------------------------------------+
+|Setup       |Network>VPN>OpenConnect VPN>Name>Session                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Protocol`                                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openconnect<INST>.vpnopts.protocol`                    |
++------------+-----------------------------------------------------------------+
+|Value       |{**}anyconnect{**}/nc/pulse/gp/f5/fortinet/array                 |
++------------+-----------------------------------------------------------------+
+
+### Imprivata
+
+* Added 'IGEL Agent for Imprivata'. This requires an addon license (request via
+  [https://www.igel.com/imprivata-agent/]).
+
+### CUPS Printing
+
+* Updated PrinterLogic PrinterInstallerClient to version 25.1.0.637  
+  Fixes the determination of the AD user when Kerberos login is used.
+
+### Cisco Webex
+
+* Updated Cisco Webex Meetings VDI plugin to version 43.6.0.158  
+** Available versions: 42.6.11.6, 42.10.8.14, 43.6.0.158
+* Updated Cisco Webex VDI plugin to version 43.6.0.26643
+
+### Base system
+
+* Added some additional resolutions to the webcam virtual background solution
+  (see changed registry keys).  
+* Enables to choose webcams for virtual background by device name and priority.  
+* Added new registry keys:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Select webcam by devicename for example /dev/video0 or video0 (only valid if choose by devicename is used)` |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.webcam.virtual_background.webcam_device`            |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Select webcam by priority list for example dev=video0;name=HD_Webcam_C270 (only valid if choose by priority is used)` |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.webcam.virtual_background.webcam_priority`          |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
+* Changed registry keys
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Select how the webcam to use should be choosen.`               |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.webcam.virtual_background.choose_webcam_by`         |
++------------+-----------------------------------------------------------------+
+| Range      | [Use first webcam][Choose by name]                              |
+|            | [Choose by vendor_id:product_id][Choose by number]              |
+|            | [Choose by devicename][Choose by priority]                      |
++------------+-----------------------------------------------------------------+
+| Value      | **Use first webcam**                                            |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Select resolution to use.`                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.webcam.virtual_background.resolution`               |
++------------+-----------------------------------------------------------------+
+| Range      | [webcam default][webcam max][1920x1080][1280x720][640x480]      |
+|            | [480x360][424x240][320x240][320x180]                            |
++------------+-----------------------------------------------------------------+
+| Value      | **webcam default**                                              |
++------------+-----------------------------------------------------------------+
+
+* Enabled Wifi Manager, Multi Monitor configuration and Display Switch to be
+  fully functional also when endpoint is unlicensed.
+
+### Driver
+
+* Updated Olympus driver for dictation to version 4.0.4.
+* Updated Philips Speech driver to version 13.2.3. Update fixes a minor bug in
+  the Linux drivers which possibly caused unexpected error messages in some
+  target software products. Furthermore, driver supports usage of PulseAudio
+  (contrary to ALSA) audio interface. To be enabled via following registry
+  parameter:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use PulseAudio`                                                 |
++------------+-----------------------------------------------------------------+
+|Registry    |`devices.philipsspeech.use_pulseaudio`                           |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+### zoomvdi
+
+* Updated ZoomVDI to version 5.14.10.23670. Available versions: 5.14.10.23670
+  (default), 5.13.10.23090 and 5.12.6.22200.
+
+### Hardware
+
+* Added hardware support for the Lenovo USB-C Universal Docking.
+* Added hardware support for Lenovo L14 (AMD) Gen 4
+* Added hardware support for Lenovo L15 (AMD) Gen 4.
+* Added hardware support for HP Pro mt440 G3 (excluding WWAN support).
+
+### Remote Management
+
+* Added: Transfer devices serial number to UMS on first boot of device.
+
+### Fabulatech
+
+* Updated FabulaTech USB for Remote Desktop to version 6.1.3.1.
+* Updated FabulaTech Plugins to version 3.10.1.5.
+* Updated FabulaTech Scanner for Remote Desktop to version 3.3.0.2.
+* Updated FabulaTech Webcam for Remote Desktop to version 2.8.11.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### IBM_5250
+
+* Updated IBM iAccess Client Solutions to version 1.1.9.2. Complete changelog
+  via [https://www.ibm.com/support/pages/ibm-i-access-acs-updates]
+
+### Chromium
+
+* Updated Chromium browser to version 114 (for fixing CVE-2023-3079).
+
+### Firefox
+
+* Updated Mozilla Firefox to version 102.13.0 ESR:  
+* Fixes for mfsa2023-23, also known as: CVE-2023-37201, CVE-2023-37202,
+  CVE-2023-37207, CVE-2023-37208, CVE-2023-37211.  
+* Fixes for mfsa2023-19, also known as: CVE-2023-34414, CVE-2023-34416.  
+* Fixes for mfsa2023-17, also known as: CVE-2023-32205, CVE-2023-32206,
+  CVE-2023-32207, CVE-2023-32211, CVE-2023-32212, CVE-2023-32213,
+  CVE-2023-32215.
+
+### Base system
+
+* Fixed cups security issue CVE-2023-32324.  
+* Fixed libx11 security issue CVE-2023-3138.  
+* Fixed libxml2 security issue CVE-2022-2309.  
+* Fixed openssh security issue CVE-2023-28531.  
+* Fixed dmidecode security issue CVE-2023-30630.  
+* Fixed opensc security issue CVE-2023-2977.  
+* Fixed texlive-bin security issue CVE-2023-32700.  
+* Fixed ncurses security issues CVE-2023-29491, CVE-2022-29458, CVE-2021-39537,
+  CVE-2019-17595 and CVE-2019-17594.  
+* Fixed perl security issue CVE-2023-31484.  
+* Fixed openssl1.0 security issue CVE-2023-2650.  
+* Fixed openssl security issue CVE-2023-2650.  
+* Fixed libuv1 security issue CVE-2021-22918.  
+* Fixed zulu8-ca security issues CVE-2023-22049, CVE-2023-22043 and
+  CVE-2023-22045.  
+* Fixed openssh security issue CVE-2023-38408.  
+* Fixed qemu security issues CVE-2023-2861, CVE-2023-1544, CVE-2023-0330 and
+  CVE-2022-1050.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed: Situations where hardware decoder has not enough memory to handle
+  certain video formats properly, are optimized / better handled now.
+* Fixed: In rare situations (observed when using teams app sharing) intermixed
+  video frames appear which come from different H.264 streams. These frames are
+  now being separated from each other and will be decoded separately.  
+* Added a new registry key to suppress such secondary frames entirely, as they
+  render mostly duplicated content of the primary frames.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`In case of mixed up H264 streams: Don't display frames from secondary streams` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.hw-accelerated-h264-suppress-secondary-frames`              |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Fixed: Refresh/Redraw issues of Citrix session windows. Resuming from
+  screensaver or uncovering a session window which was covered by another window
+  works as expected now.
+* Fixed dynamic e911 feature.
+* Added registry key ica.chrome-double-download to control flock feature at
+  wfica_wrapper. 'Enable flock' blocks double app starts (due to double
+  downloads by Chromium browser).
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Control download mechanic for Citrix applications for Chrome web access` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.chrome-double-download`                                     |
++------------+-----------------------------------------------------------------+
+|Range       | [Enable Lock][Disable Lock]                                     |
++------------+-----------------------------------------------------------------+
+|Value       |enable / **disable** (default)                                   |
++------------+-----------------------------------------------------------------+
+
+* Fixed: Web-based Citrix Cloud authentication pages.
+* Changed: Default for ica.module.audioredirectionv4=true due to connection
+  problems with some VDI versions.
+* Fixed: H.264 streams with multiple reference frames (as produced by hardware
+  encoders) are supported properly and do not lead to a potential crash anymore.
+* Fixed: In special situations certain frames did not show up on the screen when
+  VDPAU was configured.
+
+### AVD
+
+* Improved: MS Teams video quality optimizations applied.
+* Fixed broken appbar - which can be enabled with System > Registry >
+  sessions.wvd%.options.cmd_ext = -a
+* Changed the x264enc QP setting to do less aggressive video quantization to
+  improve outgoing video quality in MS Teams.
+* Fixed autostartsingle registry option.
+* Fixed screenshare issue with direct MS Teams calls when a screenshare is
+  already active.  
+* Fixed potential client crash when virtual backgrounds are enabled in MS Teams.  
+* Fixed stale video window content in MS Teams when video feeds are switched but
+  incoming video is not directly decodable.  
+* Adjusted the quantization range for the x264enc to allow a little more
+  quantization being applied to outgoing MS Teams video streams.  
+* Fixed: Avoid large display delay of incoming MS Teams video streams by
+  measuring NTP latency.
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP timezone redirection not working for some locations.
+* Fixed fullscreen RDP session not starting with no monitor connected.
+
+### VMware Horizon
+
+* Fixed: Horizon session starter cannot handle backslashes in password.
+
+### Chromium
+
+* Added registry key to toggle prompt to accept downloads:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Enable IGEL Download Dialog`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `chromiumglobal.app.enable_download_dialog`                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Fixed network configuration on HyperV
+* Added possibility to set a antenna bitmap to configure which antenna should be
+  used (for iwlwifi devices)  
+* Added new registry key to configure the antenna bitmap
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Tx antenna bitmap`                                             |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.antenna_bitmap_tx`      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Rx antenna bitmap`                                             |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.antenna_bitmap_rx`      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
+* Improved behaviour of WWAN devices on suspend/resume
+* Fixed setting credentials for system wide proxy.
+
+### Cisco Webex
+
+* Renamed libstdc++.so.6, Webex Meetings client expects the highest version of
+  libstdc++.so.6
+
+### Base system
+
+* Added new registry key to set acpi= kernel cmdline options (some devices needs
+  acpi=off).
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set ACPI kernel parameters.`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.kernel.bootparams.acpi`                                 |
++------------+-----------------------------------------------------------------+
+| Range      | [No setting][Force][On][Off][Noirq][Strict][Rsdt][Copy_dsdt]    |
++------------+-----------------------------------------------------------------+
+| Value      | **No setting**                                                  |
++------------+-----------------------------------------------------------------+
+
+* Added new registry key to set reboot kernel cmdline which can be used if
+  reboot or shutdown issues are present.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set reboot kernel parameters.`                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.kernel.bootparams.reboot`                               |
++------------+-----------------------------------------------------------------+
+| Range      | [Default][Bios][Triple][Kbd][Acpi][Efi][Pci]                    |
++------------+-----------------------------------------------------------------+
+| Value      | **Default**                                                     |
++------------+-----------------------------------------------------------------+
+
+* Fixed issue with ELO AccuTouch not picking up selection.
+* Changed the handle_brightness_keys default to enabled as this setting is
+  needed for most of the current laptops anyways.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Handle Brightness Keys`                                        |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.handle_brightness_keys`                             |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Fixed instability in handling of certain webcam devices, e.g. Meeting Owl 3.
+* Added licensing information for Lenovo's FCC unlock tool.
+* Use s2idle on HP mt440 G3 as it works better  
+* Changed registry key to be able to use mem sleep mode depending on hardware
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Set suspend mem sleep mode.`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.suspend.sleep_mode`                                     |
++------------+-----------------------------------------------------------------+
+| Range      | [Default][Suspend to RAM][Suspend to idle]                      |
++------------+-----------------------------------------------------------------+
+| Value      | **Default**                                                     |
++------------+-----------------------------------------------------------------+
+
+### H264
+
+* Fixed: H.264 streams with multiple reference frames (as produced by hardware
+  encoders) are supported properly and do not lead to a potential crash anymore.
+* Fixed: In special situations certain frames did not show up on the screen when
+  VDPAU was configured.
+
+### X11 system
+
+* Changed default setting for DisplayLink Quirk which solves a issue with long
+  startup times  
+* Registry key parameter now defaults to true:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Quirk to fix issues with Xorg start take ages with DisplayLink connected.` |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.quirks.displaylink_crash_workaround`                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+### Audio
+
+* Fixed: Sound preferences not getting saved over reboot.
+
+### Remote Management
+
+* Added: Create log for support information if rmagent has been requested to
+  release the device from UMS.  
+* Retrieve the device's unit id in more robust way.  
+* The log file is only accessible to root
+```
+
+-----
+
 ## 2023-08-14 - [11.08.385](readme11.08.385.txt)
 
 ```

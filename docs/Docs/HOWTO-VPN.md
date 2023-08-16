@@ -136,6 +136,12 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 +------------+-----------------------------------------------------------------+
 ```
 
+Use the following command to list ciphers:
+
+```bash linenums="1"
+openvpn --show-ciphers
+```
+
 -----
 
 ## Other VPN Clients (IGEL Community Custom Partitions on GitHub)

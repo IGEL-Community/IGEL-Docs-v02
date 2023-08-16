@@ -3,6 +3,7 @@
 
 -----
 
+- [12.02.110](Readme-12.02.110.txt) 16-August-2023
 - [12.02.100](Readme-12.02.100.txt) 31-July-2023
 - [12.01.110](Readme-12.01.110.txt) 18-April-2023
 - [6.10.150](Readme-6.10.150.txt) 21-February-2023 (private build that fixed a single issue around automatic device registration)

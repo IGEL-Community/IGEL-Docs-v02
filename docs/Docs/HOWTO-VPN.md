@@ -14,6 +14,26 @@ OpenConnect is a cross-platform multi-protocol SSL VPN client which supports a n
 - F5 Big-IP SSL VPN (--protocol=f5)
 - Fortinet Fortigate SSL VPN (--protocol=fortinet)
 
+### [11.08.440](ReleaseNotes/01-OS11/readme11.08.440.txt), released on 16-August-2023, added the following:
+
+```
+### OpenConnect VPN
+
+* Added further supported protocols for OpenConnect VPN client by adding
+  Fortinet, F5 and Array. OpenConnect VPN is a feature with limited support, and
+  the new protocols are not validated by IGEL.
+
++------------+-----------------------------------------------------------------+
+|Setup       |Network>VPN>OpenConnect VPN>Name>Session                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Protocol`                                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openconnect<INST>.vpnopts.protocol`                    |
++------------+-----------------------------------------------------------------+
+|Value       |{**}anyconnect{**}/nc/pulse/gp/f5/fortinet/array                 |
++------------+-----------------------------------------------------------------+
+```
+
 -----
 
 ## Steps to enable OpenConnect VPN Client
@@ -83,6 +103,38 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 - IGEL Knowledge Base: [OpenVPN](https://kb.igel.com/igelos-11.08/en/openvpn-63804963.html)
 
 - [Reference manual for OpenVPN](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/)
+
+- [11.08.440](ReleaseNotes/01-OS11/readme11.08.440.txt), released on 16-August-2023, added the following:
+
+```
+### Open VPN
+
+* Updated cipher configuration of Open VPN. Now it is possible to specify the
+  data-ciphers list. By default the default cipher list
+  AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305 is active. Otherwise a custom list
+  can be specified in the Data ciphers parameter. Enter the ciphers separated
+  with ':'. The existing parameter 'Cipher' was renamed to 'Cipher (legacy
+  parameter)' and now has a new value 'unset' in range, which means that the
+  parameter cipher will be omitted in the configuration.
+
++------------+-----------------------------------------------------------------+
+|Setup       |`Network > VPN > Open VPN > Connection > Options`                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use default data cipher list`                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openvpn%.vpnopts.use_default_cipher_list`              |
++------------+-----------------------------------------------------------------+
+|Value       |**on** / off                                                     |
++------------+-----------------------------------------------------------------+
+|Setup       |`Network > VPN > Open VPN > Connection > Options`                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Data ciphers`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.openvpn%.vpnopts.data_ciphers`                         |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+```
 
 -----
 

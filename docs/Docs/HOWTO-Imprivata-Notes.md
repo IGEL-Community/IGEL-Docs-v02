@@ -209,10 +209,10 @@ Prove ID Embedded needs the local windows that popup as you manage the device to
 
 Add the below  WM_Class strings in the Imprivata Admin console at "gear icon" -> ProveID Embeded -> "Add Application" (also enable allow access to all variants checkbox on each one)
 
-- For the UMS Send message:  qt_message
-- For reboot and UMS sent new configuration dialog boxes:  Gtkmessage
-- For desktop notification in lower right (network starting): Xfce4-notifyd
-- For the Display switcher and the confirm dialog: igel_display_switcher
+- For the UMS Send message: `qt_message`
+- For reboot and UMS sent new configuration dialog boxes: `Gtkmessage`
+- For desktop notification in lower right (network starting): `Xfce4-notifyd`
+- For the Display switcher and the confirm dialog: `igel_display_switcher`
 
 -----
 

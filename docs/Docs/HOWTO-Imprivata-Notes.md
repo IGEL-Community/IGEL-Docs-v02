@@ -201,6 +201,21 @@ App instance (WMAppinstance):  igel_screensaver
 
 -----
 
+## 28 August 2023 - Update
+
+### Prove ID Embedded Setup notes
+
+Prove ID Embedded needs the local windows that popup as you manage the device to show through the PIE lock screen.
+
+Add the below  WM_Class strings in the Imprivata Admin console at "gear icon" -> ProveID Embeded -> "Add Application" (also enable allow access to all variants checkbox on each one)
+
+- For the UMS Send message:  qt_message
+- For reboot and UMS sent new configuration dialog boxes:  Gtkmessage
+- For desktop notification in lower right (network starting): Xfce4-notifyd
+- For the Display switcher and the confirm dialog: igel_display_switcher
+
+-----
+
 ## 28 December 2022 - Update
 
 Imprivata has finished the qualification of OS 11.08.200 and backed it up to OneSign 7.8 or higher. Any IGEL / Imprivata customer/prospect should skip over 11.07.xx versions and use 11.08.200 or later. 11.08.200 contains fixes for the Persistent App workflow. There are other fixes for the PIE vendor helper script that have had positive results in VMWare environments on older / lower performing hardware.

@@ -14,6 +14,118 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-08-24 - [11.08.348](readme11.08.348.txt)
+
+```
+The new PRIVATE BUILD 11.08.348 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added BIOS tools support for HP t430.  
+* HP is responsible for the validation of the proper BIOS update and BIOS
+  settings change functionality.
+```
+
+-----
+
+## 2023-08-24 - [11.08.445](readme11.08.445.txt)
+
+```
+The new PRIVATE BUILD 11.08.445 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### WiFi
+
+* Added registry keys for restricting frequencies used by WPA Supplicant. See
+  the WPA Supplicant documentation regarding the network-specific settings
+  freq_list and scan_freq. In IGEL OS these settings globally affect all WLANs
+  configured. They may be useful when roaming requirements are a challenge.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `List of allowed frequencies`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.freq_list`              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
++------------+-----------------------------------------------------------------+
+| Parameter  | `List of frequencies to scan`                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.scan_freq`              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
+## 2023-08-21 - [11.08.443](readme11.08.443.txt)
+
+```
+The new PRIVATE BUILD 11.08.443 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed Issue: Can't start more than one Citrix session from Firefox with hybrid
+  launch config.  
+  
+Available Citrix workspace apps in this release:  23.02.0.10, 23.05.0.58, and
+  23.07.0.17  
+  
+Available Plugins in this release:  
+  
+WebEx Teams Plugin: 43.4.0.25788  
+  
+WebEx Meetings Plugins: 42.10.8.14, 43.2.1.18, and 43.6.0.158  
+  
+Zoom Plugins: 5.10.6.21295, 5.12.1.21950, and 5.14.10.23670
+```
+
+-----
+
+## 2023-08-21 - [11.08.442](readme11.08.442.txt)
+
+```
+The new PRIVATE BUILD 11.08.442 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.1.4
+```
+
+-----
+
 ## 2023-08-16 - [11.08.440](readme11.08.440.txt)
 
 ```

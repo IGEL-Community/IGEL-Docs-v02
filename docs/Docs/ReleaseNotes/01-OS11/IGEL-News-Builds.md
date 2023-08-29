@@ -14,6 +14,33 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-08-29 - [11.08.387](readme11.08.387.txt)
+
+```
+The new PRIVATE BUILD 11.08.387 for IGEL Workspace is ready.
+
+This build is based on 11.08.384.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Potential black video issue fix in MS Teams optimization.  
+* MS-Teams optimization shows video in fill-frame instead of fit-frame mode.
+
+### Remote Management
+
+* Added: Create log for support information if rmagent has been requested to
+  release the device from UMS.  
+* Retrieve the device's unit id in more robust way.  
+* The log file is only accessible to root
+```
+
+-----
+
 ## 2023-08-24 - [11.08.348](readme11.08.348.txt)
 
 ```

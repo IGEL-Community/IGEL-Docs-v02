@@ -14,6 +14,28 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-09-04 - [11.08.449](readme11.08.449.txt)
+
+```
+The new PRIVATE BUILD 11.08.449 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### zoomvdi
+
+* Integrated Zoom VDI plugin 5.15.2.23760  
+  
+  Available plugins in this release: 5.15.2.23760 (default), 5.14.10.23670 and
+  5.14.10.23670
+```
+
+-----
+
 ## 2023-08-29 - [11.08.387](readme11.08.387.txt)
 
 ```

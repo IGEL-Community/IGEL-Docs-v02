@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-09-06 - [11.08.451](readme11.08.451.txt)
+
+```
+The new PRIVATE BUILD 11.08.449 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firefox
+
+* Updated Mozilla Firefox to version 115.2.0
+```
+
+-----
+
 ## 2023-09-04 - [11.08.449](readme11.08.449.txt)
 
 ```

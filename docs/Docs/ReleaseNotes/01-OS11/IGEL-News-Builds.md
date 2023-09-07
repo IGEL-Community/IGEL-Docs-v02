@@ -14,10 +14,29 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-09-07 - [11.08.453](readme11.08.453.txt)
+
+```
+The new PRIVATE BUILD 11.08.453 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* web console shadowing is working again
+```
+
+-----
+
 ## 2023-09-06 - [11.08.451](readme11.08.451.txt)
 
 ```
-The new PRIVATE BUILD 11.08.449 for IGEL Workspace is ready.
+The new PRIVATE BUILD 11.08.451 for IGEL Workspace is ready.
 
 This build is based on 11.08.440.
 

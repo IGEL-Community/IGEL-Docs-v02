@@ -14,6 +14,60 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-09-08 - [11.08.454](readme11.08.454.txt)
+
+```
+The new PRIVATE BUILD 11.08.454 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2308.  
+  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2010
+* New features:  
+* HTTPS protocol support for proxy server
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HTTPS protocol support for proxy server`                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.hdxoverudp`                                        |
++------------+-----------------------------------------------------------------+
+|Value       |false(default)/ true                                             |
++------------+-----------------------------------------------------------------+
+
+* Note: Update \\"ica.wfclient.proxytype\\" = Secure, and \\"ica.wfclient.proxyhost\\"
+  in the following format = \\<IP>:\\<PORT>. For example “192.168.101.37:6153”.
+* Enable Packet Loss Concealment to improve audio performance
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Packet Loss Concealment to improve audio performance`    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PacketLossConcealmentEnabled`                        |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.2.0
+
+### Cisco Webex
+
+* Integrated Cisco Webex VDI 43.8
+```
+
+-----
+
 ## 2023-09-07 - [11.08.453](readme11.08.453.txt)
 
 ```

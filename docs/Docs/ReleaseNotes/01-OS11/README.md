@@ -38,6 +38,13 @@ flowchart LR
 
 ```mermaid
 flowchart LR
+    11.08.440-- 2023-09-21 -->11.08.441
+    11.08.440-- 2023-09-21 -->11.08.463
+    11.08.230-- 2023-09-20 -->11.08.279
+    11.08.440-- 2023-09-20 -->11.08.461
+    11.08.360-- 2023-09-18 -->11.08.388
+    11.08.457-- 2023-09-13 -->11.08.458
+    11.08.455-- 2023-09-11 -->11.08.457
     11.08.440-- 2023-09-08 -->11.08.455
     11.08.440-- 2023-09-08 -->11.08.454
     11.08.440-- 2023-09-07 -->11.08.453
@@ -118,6 +125,13 @@ flowchart LR
     11.08.110((11.08.110))-- 2022-09-22 -->11.08.112.DER>11.08.112.DER]
     11.08.100-- 2022-09-15 -->11.08.110-- 2022-09-20 -->11.08.111
     11.08.100((11.08.100))-- 2022-09-07 -->11.08.101
+    click 11.08.441 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.441.txt" _blank
+    click 11.08.463 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.463.txt" _blank
+    click 11.08.279 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.279.txt" _blank
+    click 11.08.461 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.461.txt" _blank
+    click 11.08.388 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.388.txt" _blank
+    click 11.08.458 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.458.txt" _blank
+    click 11.08.457 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.457.txt" _blank
     click 11.08.455 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.455.txt" _blank
     click 11.08.454 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.454.txt" _blank
     click 11.08.453 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.453.txt" _blank

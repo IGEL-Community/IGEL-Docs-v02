@@ -14,6 +14,185 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-09-21 - [11.08.441](readme11.08.441.txt)
+
+```
+The new PRIVATE BUILD 11.08.441 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added BIOS tools support for HP t430, t550, t655 and t740.  
+* HP is responsible for the validation of the proper BIOS update and BIOS
+  settings change functionality.
+```
+
+-----
+
+## 2023-09-21 - [11.08.463](readme11.08.463.txt)
+
+```
+The new PRIVATE BUILD 11.08.463 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Includes AVD version 1.1.30  
+* The MS-Teams secondary ringer feature currently requires the following
+  setting: sessions.wvd%.options.cmd_ext = --webrtc-ring-all-devices
+* Fixed crash when last audio device was removed.  
+* Adaptive (average) MS-Teams video playback delay calculation and no key frame
+  skipping on decoding to make playback more reliable.
+* Raised net.core.wmem_max setting when AVD sessions are configured to avoid TCP
+  connection resets being triggered by the Linux Kernel on large RdClientSDK
+  data transfers.
+* Potential black video issue fix in MS Teams optimization.  
+* MS-Teams optimization shows video in fill-frame instead of fit-frame mode.
+```
+
+-----
+
+## 2023-09-20 - [11.08.279](readme11.08.279.txt)
+
+```
+The new PRIVATE BUILD 11.08.279 for IGEL Workspace is ready.
+
+This build is based on 11.08.230.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added BIOS tools.  
+* HP is responsible for the validation of the proper BIOS update and BIOS
+  settings change functionality.
+```
+
+-----
+
+## 2023-09-20 - [11.08.461](readme11.08.461.txt)
+
+```
+The new PRIVATE BUILD 11.08.461 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Added: Create log for support information if rmagent has been requested to
+  release the device from UMS.  
+* Retrieve the device's unit id in more robust way.  
+* The log file is only accessible to root  
+* Also log when the UMS autoconnection is established
+```
+
+-----
+
+## 2023-09-18 - [11.08.388](readme11.08.388.txt)
+
+```
+The new PRIVATE BUILD 11.08.388 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added libwebkit in a debug version.
+```
+
+-----
+
+## 2023-09-13 - [11.08.458](readme11.08.458.txt)
+
+```
+The new PRIVATE BUILD 11.08.458 for IGEL Workspace is ready.
+
+This build is based on 11.08.457.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Fixed submitting device states to the UMS.
+```
+
+-----
+
+## 2023-09-11 - [11.08.457](readme11.08.457.txt)
+
+```
+The new PRIVATE BUILD 11.08.457 for IGEL Workspace is ready.
+
+This build is based on 11.08.455.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2308.  
+  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2305
+* New features:  
+* HTTPS protocol support for proxy server
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HTTPS protocol support for proxy server`                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.hdxoverudp`                                        |
++------------+-----------------------------------------------------------------+
+|Value       |true (default)/ false                                            |
++------------+-----------------------------------------------------------------+
+
+* Note: Update \\"ica.wfclient.proxytype\\" = Secure, and \\"ica.wfclient.proxyhost\\"
+  in the following format = \\<IP>:\\<PORT>. For example “192.168.101.37:6153”.  
+* Enable Packet Loss Concealment to improve audio performance
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Packet Loss Concealment to Improve Audio Performance`    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PacketLossConcealmentEnabled`                        |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+* |Parameter|`proxy bypass list`|  
+  |Registry|`ica.wfclient.proxybypasslist`|
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.
+```
+
+-----
+
 ## 2023-09-08 - [11.08.455](readme11.08.455.txt)
 
 ```

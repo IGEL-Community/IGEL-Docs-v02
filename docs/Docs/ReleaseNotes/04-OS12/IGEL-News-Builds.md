@@ -4,6 +4,32 @@
 
 -----
 
+## 2023-09-12 - [12.2.0](readme12.2.0.txt)
+
+```
+The new BUILD 12.01.140 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+# Changes since: 12.01.140
+
+## New Features
+
+- **Hardware**
+
+	- Added hardware support for LG CQ601I-6N.
+	- Added hardware support for HP t740.
+	- Added hardware support for Lenovo K14 Gen 1 (Intel).
+	- Added hardware support for Lenovo ThinkEdge SE10.
+	- Added hardware support for Lenovo neo 50q (I3)
+	- Added hardware support for HP Pro mt440 G3.
+	- Added hardware support for HP mt645 G7.
+	- Added hardware support for Lenovo neo 50q (Celeron).
+	- Added hardware support for HP Elite t755.
+```
+
+-----
+
 ## 2023-07-20 - [12.01.140](readme12.01.140.1.txt)
 
 ```

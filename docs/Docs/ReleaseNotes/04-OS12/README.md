@@ -28,12 +28,14 @@ flowchart LR
 
 -----
 
-## IGEL OS 12.01
+## IGEL OS 12
 
 ```mermaid
 flowchart LR
+    12.01.140-- 2023-09-12 -->12.2.0((12.2.0))
     12.01.120-- 2023-07-20 -->12.01.140((12.01.140))
     12.01.110((12.01.110))-- 2023-06-12 -->12.01.120((12.01.120))
+    click 12.2.0 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.2.0.txt" _blank
     click 12.01.140 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.140.1.txt" _blank
     click 12.01.120 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.120.1.txt" _blank
     click 12.01.110 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.110.1.txt" _blank

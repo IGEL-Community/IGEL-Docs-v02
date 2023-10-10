@@ -8,6 +8,18 @@
 
 -----
 
+## 5 October 2023 - Microsoft Teams VDI 2.0
+
+Microsoft recently released Microsoft Teams VDI 2.0 in public preview, a complete rewrite of Microsoft Teams. It offers a more streamlined interface, that requires fewer resources while used. 
+
+Regarding IGEL and Azure Virtual Desktop / Windows 365 - Microsoft Teams VDI 2.0 still uses the WebRTC redirection service, so it is compatible with the current implementation of Microsoft Teams Offloading that IGEL already has in AVD/Windows365.
+
+Additional details can be found here: [New Microsoft Teams for Virtualized Desktop Infrastructure (VDI)](https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy)
+
+**NOTE:** For Citrix and VMware, the support requirements are mentioned in the above Microsoft link.
+
+-----
+
 ## Communication one-to-one vs. three (3) or more:
 
 - If there are two (2) participants, communication is established as peer connection between the two IGEL devices.

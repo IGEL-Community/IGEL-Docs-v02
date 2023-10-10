@@ -1,6 +1,6 @@
 # HOWTO Microsoft Teams
 
-## [IGEL OS UCC Configuration Guide](http://files.igelcommunity.com/igelos_ucc_guide.pdf)
+## [IGEL OS UCC Configuration Guide](https://perusat.net/icbackup/igelos_ucc_guide.pdf)
 
 ## [Teams for Virtualized Desktop Infrastructure](https://learn.microsoft.com/en-us/microsoftteams/teams-for-vdi)
 

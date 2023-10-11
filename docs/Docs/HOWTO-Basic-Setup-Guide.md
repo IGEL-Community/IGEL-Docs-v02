@@ -274,6 +274,7 @@ sequenceDiagram
 
 #### Microsoft Active Directory Services
 
+- Active Directory Kerberos: Port 88 (TCP/UDP) Outgoing
 - LDAP: Port 389 (TCP) Outgoing
 - LDAPS: Port 636 (TCP) Outgoing
 

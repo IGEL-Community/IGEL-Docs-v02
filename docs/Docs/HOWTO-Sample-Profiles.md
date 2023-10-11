@@ -16,8 +16,9 @@ User Interface
 _Multi
 -->
 
-| Type | Profile | Name | Description | Date | Notes |
-|------|---------|------|-------------|------|-------|
+| Type | Name | Description | Date | Notes | Profile |
+|------|------|-------------|------|-------|---------|
+| Accessories | Terminals | Enable Terminal Generic | 231011 | |  <a href="../Profiles/Sample-Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Accessories_Enable_Terminal_Generic.xml" download>LINK to Profile</a> |
 
 -----
 

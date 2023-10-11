@@ -16,9 +16,11 @@ User Interface
 _Multi
 -->
 
-| Type | Name | Description | Date | Notes | Profile |
-|------|------|-------------|------|-------|---------|
-| Accessories | Terminals | Enable Terminal Generic | 231011 | |  <a href="../Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Accessories_Enable_Terminal_Generic.xml" download>LINK to Profile</a> |
+| Type | Profile | Name | Description | Date | Notes |
+|------|---------|------|-------------|------|-------|
+| Accessories | <a href="../Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Accessories_Enable_Terminal_Generic.xml" download>LINK to Profile</a> | Terminals | Enable Terminal Generic | 231011 | |
+| _Multi | <a href="../Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Multi_Enable_Desktop_Lockdown.xml" download>LINK to Profile</a> | Enable Desktop Lock Down | Overwrite Sessions (Un-checked - No) | 231011 | |
+| _Multi | <a href="../Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Multi_Enable_Desktop_Lockdown_Overwrite_Sessions.xml" download>LINK to Profile</a> | Enable Desktop Lock Down | Overwrite Sessions (Checked - Yes) | 231011 | |
 
 -----
 

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profile>
+    <profile_id>5080</profile_id>
+    <profilename>Enable_Desktop-Lockdown</profilename>
+    <firmware>
+        <model>IGEL OS 11</model>
+        <version>11.03.100.01</version>
+    </firmware>
+    <description>Removes icons and acess to default change items and controls.</description>
+    <overwritesessions>false</overwritesessions>
+    <is_master_profile>false</is_master_profile>
+    <is_igel_os>true</is_igel_os>
+    <settings>
+        <pclass name="sessions.device_manager%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.bluetooth%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.touchcalib%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.icgsetup%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="windowmanager.wm%.variables.startmenu.enable_system_tab">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.taskmanager%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.screenid%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.systemviewer%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.setup%.quick_start">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.webcaminfo%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.firmware_update%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.storage_dcdm%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.screenshooter%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.rmregister%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.screenshooter%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.icgsetup%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.launcher%.quick_start">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="windowmanager.wm%.variables.startmenu.enable_about_button">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.rmregister%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.storage_dcdm%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.scardgui%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.launcher%.pulldown">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.bluetooth%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.device_manager%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="auth.login.show_username">
+            <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.storage_info%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.setup%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="network.applet.lan1.enable_network_info_dialog">
+            <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.firmware_update%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.gnome-nettool%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.launcher%.startmenu">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.webcaminfo%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.screenid%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.setup%.pulldown">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.touchcalib%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.storage_info%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.setup%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.scardgui%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.gnome-nettool%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.taskmanager%.startmenu_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="sessions.systemviewer%.applaunch_system">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+    </settings>
+    <instancesettings/>
+</profile>

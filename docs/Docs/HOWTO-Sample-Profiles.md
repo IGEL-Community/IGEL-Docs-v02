@@ -18,7 +18,7 @@ _Multi
 
 | Type | Name | Description | Date | Notes | Profile |
 |------|------|-------------|------|-------|---------|
-| Accessories | Terminals | Enable Terminal Generic | 231011 | |  <a href="../Profiles/Sample-Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Accessories_Enable_Terminal_Generic.xml" download>LINK to Profile</a> |
+| Accessories | Terminals | Enable Terminal Generic | 231011 | |  <a href="../Profiles/HOWTO-Sample-Profiles/HOWTO-Sample-Profiles-OS11/OS11_Accessories_Enable_Terminal_Generic.xml" download>LINK to Profile</a> |
 
 -----
 

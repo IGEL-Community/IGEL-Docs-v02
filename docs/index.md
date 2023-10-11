@@ -61,6 +61,9 @@ Remove for now
 - [HOWTO Re-enable TLSv1 and TLSv1.1 on UMS](Docs/HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS.md)
 - [HOWTO Remove IGEL Device License](Docs/HOWTO-Remove-IGEL-Device-License.md)
 - [HOWTO Run VMs on MacOS Intel](Docs/HOWTO-Run-VMs-on-MacOS-Intel.md)
+<!---
+- [HOWTO Sample Profiles](Docs/HOWTO-Sample-Profiles.md)
+-->
 - [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 - [HOWTO Testing VDI](Docs/HOWTO-Testing-VDI.md)
 - [HOWTO UCC](Docs/HOWTO-UCC.md)

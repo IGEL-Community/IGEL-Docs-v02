@@ -14,6 +14,47 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-12 - [11.08.466.DER](readme11.08.466.DER.txt)
+
+```
+The new PRIVATE BUILD 11.08.466.DER for IGEL Workspace is ready.
+
+This build is based on 11.08.454.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace app 2309  
+  Available workspace apps in this release: 23.09 (default), 23.07, and 20.10  
+  New Features:
+* Enhancement to multiple monitors [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Multi Monitor enhancement`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.wfclient.MultiMonitorPnPEnabled`                   |
++------------+-----------------------------------------------------------------+
+|Value       |true / false (default)                                           |
++------------+-----------------------------------------------------------------+
+
+* Support for 32-bit cursor  
+* Copy and paste files and folders between two virtual desktops  
+* Improved error messages
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fix MS Teams for Citrix Workspace App 2307 and higher
+```
+
+-----
+
 ## 2023-10-11 - [11.08.465](readme11.08.465.txt)
 
 ```

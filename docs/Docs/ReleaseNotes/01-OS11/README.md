@@ -34,7 +34,21 @@ flowchart LR
 
 -----
 
+## IGEL OS 11.09
+
+**NOTE:** 11.09.XXX uses Ubuntu 22.04 libraries
+
+```mermaid
+flowchart LR
+11.09.100((11.09.100))
+    click 11.09.100 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.100.txt" _blank
+```
+
+-----
+
 ## IGEL OS 11.08
+
+**NOTE:** 11.08.XXX uses Ubuntu 18.04 libraries
 
 ```mermaid
 flowchart LR

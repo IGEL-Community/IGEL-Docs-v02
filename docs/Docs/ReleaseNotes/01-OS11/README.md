@@ -52,6 +52,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
+    11.08.440-- 2023-10-17 -->11.08.460
     11.08.454-- 2023-10-12 -->11.08.466.DER>11.08.466.DER]
     11.08.454-- 2023-10-11 -->11.08.465
     11.08.440-- 2023-09-21 -->11.08.441
@@ -141,6 +142,7 @@ flowchart LR
     11.08.110((11.08.110))-- 2022-09-22 -->11.08.112.DER>11.08.112.DER]
     11.08.100-- 2022-09-15 -->11.08.110-- 2022-09-20 -->11.08.111
     11.08.100((11.08.100))-- 2022-09-07 -->11.08.101
+    click 11.08.460 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.460.txt" _blank
     click 11.08.466.DER "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.466.DER.txt" _blank
     click 11.08.465 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.465.txt" _blank
     click 11.08.441 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/01-OS11/readme11.08.441.txt" _blank

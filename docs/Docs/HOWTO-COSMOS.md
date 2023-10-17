@@ -4,6 +4,10 @@
 
 ## [IGEL Advanced Services - IGEL COSMOS Migration Package](https://www.igel.com/wp-content/uploads/2023/06/IGEL_OS11_Migration_OS12_ew.pdf)
 
+----------
+
+----------
+
 ### Where Are the IGEL COSMOS Cloud Services Data Stored?
 
 Currently, the IGEL COSMOS Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).

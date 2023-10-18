@@ -14,6 +14,29 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-18 - [11.09.105](readme11.08.105.txt)
+
+```
+The new PRIVATE BUILD 11.09.105 for IGEL Workspace is ready.
+
+This build is based on 11.09.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### OSC Installer
+
+* Added support for custom Unit Id rules.
+
+### Base system
+
+* Added support for custom Unit Id rules.
+```
+
+-----
+
 ## 2023-10-16 - [11.08.460](readme11.08.460.txt)
 
 ```

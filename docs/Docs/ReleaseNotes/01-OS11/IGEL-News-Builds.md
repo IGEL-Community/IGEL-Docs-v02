@@ -14,6 +14,142 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-19 - [11.09.104](readme11.08.104.txt)
+
+```
+The new PRIVATE BUILD 11.09.104 for IGEL Workspace is ready.
+
+This build is based on 11.09.100.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* [https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/ear.html]
+* New Parameters:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`EDT Lossy protocol`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EdtUnreliableAllowed`                                |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Packet Loss Concealment to improve audio performance`    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PacketLossConcealmentEnabled`                        |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for keyboard shortcut to switch between Full-screen and Window mode` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.allregions.FullScreenShortcutSupport`                       |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |true / false / *** (default)                                     |
++------------+-----------------------------------------------------------------+
+
+* New Features with this Citrix Workspace app 2309
+* Support for MJPEG webcams
+* Support for EDT Lossy protocol [Technical Preview]  
+  > This feature increases the user experience for real-time streaming.  
+  > Therefore activate `app.cwa.module.clientaudio.EdtUnreliableAllowed`
+* Enable Packet Loss Concealment to improve audio performance [Technical
+  Preview]  
+  > Improve audio performance with Speex and Opus codec. Also, enable
+  JitterBufferEnabled.  
+  > Therefore enable `app.cwa.module.clientaudio.PacketLossConcealmentEnabled`
+  and `app.cwa.module.clientaudio.JitterBufferEnabled`
+* Supports system certificate paths for SSL connection  
+  > With this release, Citrix Workspace app supports system certificate paths
+  for SSL connection. This feature simplifies the certificate management process
+  on the client side and improves the user experience. With this feature, Citrix
+  Workspace can create a TLS connection with the certificate in the system
+  certificate path. This feature is enabled by default.
+* Multi-touch support [Technical Preview]  
+  > Select an item: Tap on the touchpad.  
+  > Scroll: Place two fingers on the touchpad and slide horizontally or
+  vertically.  
+  > Zoom in or out: Place two fingers on the touchpad and pinch in or stretch
+  out.  
+  > Show more commands (similar to right-clicking): Tap the touchpad with two
+  fingers, or press in the lower-right corner
+* Support for keyboard shortcut to switch between Full-screen and Window mode  
+  > Set the parameter
+  `app.cwa.allregions.client_engine.PacketLossConcealmentEnabled` to true.  
+  > By default, the keyboard shortcut is Ctrl+F2.
+* Updated Citrix Workspace App to version 2309.  
+  Available Citrix Workspace Apps in this release: 2309 (default), 2307 and 2010
+* Enhancement to multiple monitors [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Multi Monitor enhancement`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.MultiMonitorPnPEnabled`                            |
++------------+-----------------------------------------------------------------+
+|Value       |true / false (default)                                           |
++------------+-----------------------------------------------------------------+
+
+* HTTPS protocol support for proxy server
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HTTPS protocol support for proxy server`                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.hdxoverudp`                                        |
++------------+-----------------------------------------------------------------+
+|Value       |true (default)/ false                                            |
++------------+-----------------------------------------------------------------+
+
+* Note: Update "ica.allregions.proxytype" = Secure, and
+  "ica.allregions.proxyhost" in the following format = \<IP>:\<PORT>. For
+  example "192.168.101.37:6153".  
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.  
+* Support for 32-bit cursor  
+* Copy and paste files and folders between two virtual desktops  
+* Improved error messages
+* Existing Parameters:  
+  The following parameters are duplicated to All_regionis.ini from wfclient.ini  
+*  
+  |Parameter|`Proxy type`|  
+  |Registry|`ica.allregions.proxytype`|  
+  |Value| (default), Socks, and Secure |
+*  
+  |Parameter|`Proxy host`|  
+  |Registry|`ica.allregions.proxyhost`|
+*  
+  |Parameter|`Proxy port|  
+  |Registry|`ica.allregions.proxyport`|
+*  
+  |Parameter|`Proxy timeout`|  
+  |Registry|`ica.allregions.proxytimeout`|
+*  
+  |Parameter|`Proxy bypass list|  
+  |Registry|`ica.allregions.proxybypasslist`|
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.2.1
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Fixed Webex VDI/ Webex Meetings VDI not connecting to the enterprise site.
+```
+
+-----
+
 ## 2023-10-18 - [11.09.105](readme11.08.105.txt)
 
 ```

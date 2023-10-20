@@ -298,7 +298,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** Is OBS a substitute for ICG (IGEL Cloud Gateway)? 
 
-**A:** OSB is not an alternative for ICG or reverse proxy for secure device communication beyond your company network.
+**A:** OBS is not an alternative for ICG or reverse proxy for secure device communication beyond your company network.
 
 **Q:** What are the steps to setup OBS?
 

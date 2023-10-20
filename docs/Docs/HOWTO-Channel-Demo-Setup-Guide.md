@@ -5,6 +5,7 @@
 **NOTE:** North America Channel team has UMS / ICG environment in Microsoft Azure that certified IGEL channel partners can leverage to enroll devices with configured profiles. Administrative access to UMS is limited to IGEL Channel team.
 
 -----
+
 -----
 
 ## Steps to follow to setup IGEL OS device
@@ -28,6 +29,7 @@
 - Reboot
 
 -----
+
 -----
 
 ## SHI Connection Settings (IGEL Base)
@@ -47,4 +49,5 @@
 | Password | SHI-LG-EvalCenter |
 
 -----
+
 -----

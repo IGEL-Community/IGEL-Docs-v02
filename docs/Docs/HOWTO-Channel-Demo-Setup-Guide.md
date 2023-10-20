@@ -4,7 +4,7 @@
 
 ----------
 
-**NOTE:** North America Channel team has UMS / ICG environment in Microsoft Azure that certified IGEL channel partners can leverage to enroll devices with configured profiles. Administrative access to UMS is limited to IGEL Channel team.
+**NOTE:** North America Channel team have UMS / ICG environment in Microsoft Azure that certified IGEL channel partners can leverage to enroll devices with configured profiles. Administrative access to UMS is limited to IGEL Channel team.
 
 ----------
 

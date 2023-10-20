@@ -149,6 +149,14 @@ These documents can be used if IGEL KB site is offline for maintenance.
 - [IGEL Management Interface (IMI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/10-IGEL_Management_Interface_IMI.pdf)
 
 -----
+-----
+
+### IGEL Channel Partners
+
+- [HOWTO Channel Demo Setup Guide](Docs/HOWTO-Channel-Demo-Setup-Guide.md)
+
+-----
+-----
 
 ### How was this site created?
 

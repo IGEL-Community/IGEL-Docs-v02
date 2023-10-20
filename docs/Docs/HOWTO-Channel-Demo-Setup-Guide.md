@@ -1,12 +1,14 @@
 # HOWTO Channel Demo Setup Guide
 
------
+----------
+
+----------
 
 **NOTE:** North America Channel team has UMS / ICG environment in Microsoft Azure that certified IGEL channel partners can leverage to enroll devices with configured profiles. Administrative access to UMS is limited to IGEL Channel team.
 
------
+----------
 
------
+----------
 
 ## Steps to follow to setup IGEL OS device
 
@@ -28,9 +30,10 @@
 - Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
 - Reboot
 
------
+----------
 
------
+----------
+
 
 ## SHI Connection Settings (IGEL Base)
 
@@ -48,6 +51,6 @@
 | UMS Structure Tag | OS11-SHI-LG-CUP |
 | Password | SHI-LG-EvalCenter |
 
------
+----------
 
------
+----------

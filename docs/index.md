@@ -3,7 +3,9 @@
 IGEL Community Docs is a repository hosting of the IGEL Community related documentation.
 This documentation is without any warranty or support by IGEL Technology.
 
------
+----------
+
+----------
 
 <!---
 Remove for now
@@ -14,25 +16,35 @@ Remove for now
 
 ## [HOWTO COSMOS (FAQ)](Docs/HOWTO-COSMOS.md)
 
------
+----------
+
+----------
 
 ## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)
 
------
+----------
+
+----------
 
 ## [IGEL KB - IGEL Product Security Information](https://kb.igel.com/securitysafety/en/igel-product-security-information-10346597.html)
 
------
+----------
+
+----------
 
 ## [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 
------
+----------
+
+----------
 
 ## CheatSheets
 
 - [Cheatsheet IGELCommunity](Docs/Cheatsheet-IGELCommunity.md)
 
------
+----------
+
+----------
 
 ### Detailed
 
@@ -41,7 +53,9 @@ Remove for now
 - [Cheatsheet IGELOS Networking](Docs/Cheatsheet-IGELOS-Networking.md)
 - [Cheatsheet Linux General](Docs/Cheatsheet-Linux-General.md)
 
------
+----------
+
+----------
 
 ## HOWTOs
 
@@ -73,7 +87,9 @@ Remove for now
 - [HOWTO Write Config Files to OSC ISO image](Docs/HOWTO-Write-Config-Files-OSC-ISO.md)
 - [HOWTO Zero Trust Networking](Docs/HOWTO-Zero-Trust-Networking.md)
 
------
+----------
+
+----------
 
 ## Release Notes
 
@@ -84,7 +100,9 @@ Remove for now
 
 ### [IGEL Software Downloads](https://www.igel.com/software-downloads/)
 
------
+----------
+
+----------
 
 ## IGEL KB (PDF files)
 
@@ -108,7 +126,9 @@ These documents can be used if IGEL KB site is offline for maintenance.
 - [IGEL Cloud Gateway (ICG)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/06-IGEL_Cloud_Gateway_ICG.pdf)
 
 
------
+----------
+
+----------
 
 ### IGEL OS Apps
 
@@ -128,7 +148,9 @@ These documents can be used if IGEL KB site is offline for maintenance.
 - [FabulaTech Scanner for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/13-FabulaTech_Scanner_for_Remote_Desktop.pdf)
 - [Media Player Parole](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/14-Media_Player_Parole.pdf)
 
------
+----------
+
+----------
 
 ### IGEL OS 11
 
@@ -148,17 +170,17 @@ These documents can be used if IGEL KB site is offline for maintenance.
 - [IGEL OS Deployment Appliance](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/09-IGEL_OS_Deployment_Appliance.pdf)
 - [IGEL Management Interface (IMI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/10-IGEL_Management_Interface_IMI.pdf)
 
------
+----------
 
------
+----------
 
 ### IGEL Channel Partners
 
 - [HOWTO Channel Demo Setup Guide](Docs/HOWTO-Channel-Demo-Setup-Guide.md)
 
------
+----------
 
------
+----------
 
 ### How was this site created?
 

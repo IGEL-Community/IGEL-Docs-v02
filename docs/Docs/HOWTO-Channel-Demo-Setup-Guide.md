@@ -18,6 +18,8 @@
 4. Reboot device and reconnect to ICG (remember to enable NTP (pool.ntp.org)) – Make sure to set time / date
 5. Select the 90-day eval license
 
+[FAQ - Time Service](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-COSMOS/#faq-time-service)
+
 [IGEL KB - OS 11 - Getting a Demo License](https://kb.igel.com/licensesmore-igelos11/en/getting-a-demo-license-10334222.html)
 
 [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)

@@ -24,6 +24,8 @@
 
 [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)
 
+<!---
+This is a comment section
 ### Steps to get a demo license for OS 12
 
 - Boot device
@@ -31,6 +33,7 @@
 - Skip -- Use the one-time password to onboard this device?
 - Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
 - Reboot
+-->
 
 ----------
 
@@ -43,7 +46,11 @@
 |-----------|-------|
 | Address | https://cosmos-icg.igelcloud.com:443 |
 | UMS Structure Tag | OS11-SHI-LG-EvalCenter |
+| Password | `Contact IGEL Channel for password` |
+
+<!---
 | Password | SHI-LG-EvalCenter |
+-->
 
 ## SHI Connection Settings (IGEL Base + ControlUp)
 
@@ -51,7 +58,11 @@
 |-----------|-------|
 | Address | https://cosmos-icg.igelcloud.com:443 |
 | UMS Structure Tag | OS11-SHI-LG-CUP |
+| Password | `Contact IGEL Channel for password` |
+
+<!---
 | Password | SHI-LG-EvalCenter |
+-->
 
 ----------
 

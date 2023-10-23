@@ -12,7 +12,10 @@
 
 ## Steps to follow to setup IGEL OS device
 
-1. If device was previously in UMS, contact IGEL Channel team to remove device from IGEL UMS
+1. If device was previously in UMS, contact IGEL Channel team with the following picture from device to remove device from IGEL UMS
+
+![image01](Images/HOWTO-Channel-Demo-Setup-Guide-01.png)
+
 2. Once IGEL Channel team have removed device from UMS then continue to next steps
 3. On IGEL OS device, open a terminal window, remove device license, and reset to factory defaults. [Reset IGEL OS device (shortcut)](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Remove-IGEL-Device-License/#reset-igel-os-device-shortcut)
 4. Reboot device and reconnect to ICG (remember to enable NTP (pool.ntp.org)) – Make sure to set time / date

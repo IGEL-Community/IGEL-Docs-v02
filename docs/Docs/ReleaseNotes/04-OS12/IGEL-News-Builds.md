@@ -7,7 +7,7 @@
 ## 2023-09-12 - [12.2.0](readme12.2.0.txt)
 
 ```
-The new BUILD 12.01.140 for IGEL Workspace is ready.
+The new BUILD 12.02.0 for IGEL Workspace is ready.
 
 These are the release notes published with that release:
 

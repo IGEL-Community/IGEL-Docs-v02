@@ -236,7 +236,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** How do I update an OS 11 device to OS 12?
 
-**A:** OS 11.09.100 or higher is required to update to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-from-igel-os-11-to-igel-os-12-101063106.html).
+**A:** OS 11.09.100 or higher is required to update to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
 
 **Q:** Does OS 12 support SCCM deployments?
 

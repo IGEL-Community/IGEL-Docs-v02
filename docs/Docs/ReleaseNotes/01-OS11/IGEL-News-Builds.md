@@ -14,7 +14,82 @@ These are the release notes published with each release:
 
 -----
 
-## 2023-10-24 - [11.09.110](readme11.08.110.txt)
+## 2023-10-25 - [11.08.121](readme11.08.121.txt)
+
+```
+The new PRIVATE BUILD 11.08.121 for IGEL Workspace is ready.
+
+This build is based on 11.08.118.DER.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Available Cisco WebEx Meetings VDI Clients: 43.6 (default), 43.2, and 42.10
+Integrated Cisco JVDI Client 14.2
+```
+
+-----
+
+## 2023-10-25 - [11.09.111](readme11.09.111.txt)
+
+```
+The new PRIVATE BUILD 11.09.110 for IGEL Workspace is ready.
+
+This build is based on 11.09.110.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Added possibility to customize the time you have to wait after unplugging a
+device from a usb port before you re-plug to ensure automatic redirection to
+the remote desktop.
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Customize delay time needed between unplug and replug of usb devices` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb-reconnect-delay` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | enabled / **disabled** (default) |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Minimum time (in ms) you have to wait between unplug and replug of redirected usb devices` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb-reconnect-time` |
++------------+-----------------------------------------------------------------+
+| Type | int |
++------------+-----------------------------------------------------------------+
+| Value | 6000 **Default** |
++------------+-----------------------------------------------------------------+
+
+* Added possibility to enable automatic connection for redirected usb devices
+which are excluded from this mechanism like HID bootable devices by also
+setting the Device Quirk option in the devices allow rule.
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Device Quirk` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb.devicepolicy.product_rule%.devicequirk` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | enabled / **disabled** (default) |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
+## 2023-10-24 - [11.09.110](readme11.09.110.txt)
 
 ```
 The new PUBLIC BUILD 11.09.110 for IGEL Workspace is ready.
@@ -117,7 +192,7 @@ Resolved Issues
 
 -----
 
-## 2023-10-20 - [11.09.103](readme11.08.103.txt)
+## 2023-10-20 - [11.09.103](readme11.09.103.txt)
 
 ```
 The new PRIVATE BUILD 11.09.103 for IGEL Workspace is ready.
@@ -200,7 +275,7 @@ default)
 
 -----
 
-## 2023-10-19 - [11.09.104](readme11.08.104.txt)
+## 2023-10-19 - [11.09.104](readme11.09.104.txt)
 
 ```
 The new PRIVATE BUILD 11.09.104 for IGEL Workspace is ready.
@@ -336,7 +411,7 @@ Resolved Issues
 
 -----
 
-## 2023-10-18 - [11.09.105](readme11.08.105.txt)
+## 2023-10-18 - [11.09.105](readme11.09.105.txt)
 
 ```
 The new PRIVATE BUILD 11.09.105 for IGEL Workspace is ready.

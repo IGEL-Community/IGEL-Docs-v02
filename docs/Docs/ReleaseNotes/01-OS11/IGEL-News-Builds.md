@@ -37,7 +37,7 @@ Integrated Cisco JVDI Client 14.2
 ## 2023-10-25 - [11.09.111](readme11.09.111.txt)
 
 ```
-The new PRIVATE BUILD 11.09.110 for IGEL Workspace is ready.
+The new PRIVATE BUILD 11.09.111 for IGEL Workspace is ready.
 
 This build is based on 11.09.110.
 

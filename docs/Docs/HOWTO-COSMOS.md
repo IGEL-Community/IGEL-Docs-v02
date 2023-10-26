@@ -234,10 +234,6 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** See the following note:  [How to reset a device](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#optional-how-to-reset-a-device)
 
-**Q:** How do I update an OS 11 device to OS 12?
-
-**A:** OS 11.09.100 or higher is required to update to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
-
 **Q:** Does OS 12 support SCCM deployments?
 
 **A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.08.330/en/igel-os-sccm-add-on-88022481.html)
@@ -263,6 +259,30 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 **Q:** How to enable audio on Dell Wyse 5470 AIO?
 
 **A:** Change value in the registry to either 1 or 8 for `system.sound_driver.snd_hda_intel.probe_mask` and reboot.
+
+-----
+
+## FAQ - OS 11 to OS 12 Upgrade
+
+**Q:** What is required of OS 11 device to upgrade to OS 12?
+
+**A:** At least `4GB` RAM and `8GB` Disk is needed for OS 12. [Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
+
+**Q:** How do I upgrade an OS 11 device to OS 12?
+
+**A:** OS 11.09.100 and UMS 12.2.0 or higher is required to upgrade to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
+
+**Q:** How to debug OS 11 to OS 12 upgrade?
+
+**A:** Open a terminal window as root on OS 11 device and run the following command prior to starting the upgrade: `journalctl -f`
+
+**Q:** My device has less than `4GB` of RAM, is there a workaround for upgrading to OS 12?
+
+**A:** Yes, open the registry (`Setup > System > Registry`) and enable `system.upgrade_igelos.ignore_memory_requirement`
+
+**Q:** Can an OS 11 device with `Custom Partitions` be upgraded to OS 12?
+
+**A:** Custom Paritions will need to be removed prior to the upgrade to OS 12. OS 12 supports `Custom Partitions` but they have to be created for OS 12 in the `UMS Web App`. **NOTE:** There is a registry setting that can be enabled to delete `Custom Partions` as part of the upgrade process (`system.upgrade_igelos.delete_custom_partition`).
 
 -----
 

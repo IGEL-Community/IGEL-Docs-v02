@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-25 - [11.09.108](readme11.09.108.txt)
+
+```
+The new PRIVATE BUILD 11.09.108 for IGEL Workspace is ready.
+
+This build is based on 11.08.360.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Jabra
+
+* Updated Fabulatech USB for Remote Desktop to version 6.1.3.13
+```
+
+-----
+
 ## 2023-10-25 - [11.08.121](readme11.08.121.txt)
 
 ```

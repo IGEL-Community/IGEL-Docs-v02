@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-26 - [11.08.470](readme11.08.470.txt)
+
+```
+The new PRIVATE BUILD 11.08.470 for IGEL Workspace is ready.
+
+This build is based on 11.08.460.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### WiFi
+
+* Fixed issue with Mediatek WiFi not working after Suspend/Resume.
+```
+
+-----
+
 ## 2023-10-25 - [11.09.108](readme11.09.108.txt)
 
 ```

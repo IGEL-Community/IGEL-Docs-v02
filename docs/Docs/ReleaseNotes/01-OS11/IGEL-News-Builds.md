@@ -14,6 +14,61 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-27 - [11.08.351](readme11.08.351.txt)
+
+```
+The new PRIVATE BUILD 11.08.351 for IGEL Workspace is ready.
+
+This build is based on 11.08.330.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Added possibility to customize the time you have to wait after unplugging a
+device from a usb port before you re-plug to ensure automatic redirection to
+the remote desktop.
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Customize delay time needed between unplug and replug of usb devices` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb-reconnect-delay` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | enabled / **disabled** (default) |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Minimum time (in ms) you have to wait between unplug and replug of redirected usb devices` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb-reconnect-time` |
++------------+-----------------------------------------------------------------+
+| Type | int |
++------------+-----------------------------------------------------------------+
+| Value | 6000 **Default** |
++------------+-----------------------------------------------------------------+
+
+* Added possibility to enable automatic connection for redirected usb devices
+which are excluded from this mechanism like HID bootable devices by also
+setting the Device Quirk option in the devices allow rule.
+
++------------+-----------------------------------------------------------------+
+| Parameter | `Device Quirk` |
++------------+-----------------------------------------------------------------+
+| Registry | `vmware.view.usb.devicepolicy.product_rule%.devicequirk` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | enabled / **disabled** (default) |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2023-10-26 - [11.08.470](readme11.08.470.txt)
 
 ```

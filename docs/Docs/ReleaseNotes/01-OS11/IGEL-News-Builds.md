@@ -14,6 +14,65 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-10-31 - [11.09.114](readme11.09.114.txt)
+
+```
+The new PRIVATE BUILD 11.09.114 for IGEL Workspace is ready.
+
+This build is based on 11.09.110.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Upgraded Citrix EPA client to version 23.10.3
+* Updated Citrix Workspace App to version 2309.
+Available Citrix Workspace Apps in this release: 2309 (default), 2307 and 2010
+* Enhancement to multiple monitors [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter |`Multi Monitor enhancement` |
++------------+-----------------------------------------------------------------+
+|Registry |`ica.wfclient.MultiMonitorPnPEnabled` |
++------------+-----------------------------------------------------------------+
+|Value |true / false (default) |
++------------+-----------------------------------------------------------------+
+* HTTPS protocol support for proxy server
++------------+-----------------------------------------------------------------+
+|Parameter |`HTTPS protocol support for proxy server` |
++------------+-----------------------------------------------------------------+
+|Registry |`ica.wfclient.hdxoverudp` |
++------------+-----------------------------------------------------------------+
+|Value |true (default)/ false |
++------------+-----------------------------------------------------------------+
+
+* Note: Update \\"ica.allregions.proxytype\\" = Secure, and
+\\"ica.allregions.proxyhost\\" in the following format = \\<IP>:\\<PORT>. For
+example “192.168.101.37:6153”.
+* Policy tampering detection feature prevents the user from accessing the
+Virtual App or Desktop session if the App Protection anti-screen capture and
+anti-keylogging policies are tampered with. If policy tampering is detected.
+* Support for 32-bit cursor
+* Copy and paste files and folders between two virtual desktops
+* Improved error messages
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.2.1
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Fixed Webex VDI/ Webex Meetings VDI not connecting to the enterprise site.
+```
+
+-----
+
 ## 2023-10-27 - [11.08.351](readme11.08.351.txt)
 
 ```

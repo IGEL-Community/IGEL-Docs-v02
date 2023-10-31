@@ -240,7 +240,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Does OS 12 support PXE boot deployments?
 
-**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.2.1/en/how-to-deploy-igel-os-12-with-pxe-105087701.html)
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/os12-installation-pxe)
 
 **Q:** When will Citrix username / password auto login support in cloud environment be supported?
 

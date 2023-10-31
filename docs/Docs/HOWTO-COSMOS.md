@@ -238,6 +238,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.08.330/en/igel-os-sccm-add-on-88022481.html)
 
+**Q:** Does OS 12 support PXE boot deployments?
+
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.2.1/en/how-to-deploy-igel-os-12-with-pxe-105087701.html)
+
 **Q:** When will Citrix username / password auto login support in cloud environment be supported?
 
 **A:** As of May 10, this is being worked on with Citrix. Date pending for release.

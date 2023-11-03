@@ -242,9 +242,11 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/os12-installation-pxe)
 
-**Q:** When will Citrix username / password auto login support in cloud environment be supported?
+**Q:** How to enable Citrix username / password auto login support in cloud environment be supported?
 
-**A:** As of May 10, this is being worked on with Citrix. Date pending for release.
+**A:** Enable `HTTP Basic` in Storefront.
+
+![image-howto-cosmos-08](Images/HOWTO-COSMOS-08.png)
 
 **Q:** When using the first-time auth key to connect OS 12 to the UMS 12 it asks for a `communication token` - where is this found? 
 

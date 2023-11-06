@@ -14,6 +14,28 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-06 - [11.09.112](readme11.09.112.txt)
+
+```
+The new PRIVATE BUILD 11.09.112 for IGEL Workspace is ready.
+
+This build is based on 11.09.110.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Public UDP shortpath supported and enabled by default
+* Video resolution fix that fixes MS-Teams black video / video freezes
+* Timezone handling fix from latest RdClientSDK (with RDS AAD disabled)
+included.
+```
+
+-----
+
 ## 2023-10-31 - [11.09.114](readme11.09.114.txt)
 
 ```

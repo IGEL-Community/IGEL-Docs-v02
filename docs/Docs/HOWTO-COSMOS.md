@@ -266,6 +266,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** Change value in the registry to either 1 or 8 for `system.sound_driver.snd_hda_intel.probe_mask` and reboot.
 
+**Q:** Having issue with 802.1X authentication, what can be done?
+
+**A**: Change the following registry key from `1` to `5`: `network.interfaces.ethernet.device%.ieee8021x.auth_attempts`
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

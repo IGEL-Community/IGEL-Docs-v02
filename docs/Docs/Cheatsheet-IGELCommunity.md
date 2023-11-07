@@ -30,6 +30,14 @@
 
 -----
 
+## Cheat sheet for a UNIX/Linux command 
+
+Open the following link and type in command to get examples of useage - [Cheat Sheet](https://cheat.sh/:help)
+
+- [Cheat Sheet GitHub site](https://github.com/chubin/cheat.sh)
+
+-----
+
 ## [Linux General](Cheatsheet-Linux-General.md)
 
 | command | OS 11 | OS 12                                      | description                                |

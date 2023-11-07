@@ -32,7 +32,7 @@
 
 ## Cheat sheet for a UNIX/Linux command 
 
-Open the following link and type in command to get examples of useage - [Cheat Sheet](https://cheat.sh/:help)
+Open the following link and type in command to get examples of usage - [Cheat Sheet](https://cheat.sh/:help)
 
 - [Cheat Sheet GitHub site](https://github.com/chubin/cheat.sh)
 

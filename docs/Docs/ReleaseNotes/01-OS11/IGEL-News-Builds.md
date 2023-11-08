@@ -14,6 +14,27 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-08 - [11.09.116](readme11.09.116.txt)
+
+```
+The new PRIVATE BUILD 11.09.116 for IGEL Workspace is ready.
+
+This build is based on 11.09.114.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### zoomvdi
+
+* Integrated components:
+
+Zoom VDI Plugin: Version 5.10.6.21295
+```
+
+-----
+
 ## 2023-11-07 - [11.09.115](readme11.09.115.txt)
 
 ```

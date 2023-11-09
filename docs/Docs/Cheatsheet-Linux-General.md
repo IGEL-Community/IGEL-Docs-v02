@@ -518,6 +518,8 @@ system monitor
 
 [Conky Reference with Examples](http://www.ifxgroup.net/conky.htm#about)
 
+**NOTE:** To remove black rectangle on OS 12, enable the registry key `windowmanager.wm0.variables.usecompositing` in the registry part of your profile, and add a custom setting `config name = own_window_argb_value` and `config value = 0` to Conky profile.
+
 ## xinput
 
 utility to configure and test X input devices

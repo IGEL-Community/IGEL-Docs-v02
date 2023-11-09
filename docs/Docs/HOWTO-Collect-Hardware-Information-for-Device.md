@@ -24,6 +24,15 @@ Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 
 -----
 
+## Recommendation: Do not enable "Overwrite Session" on any profiles without explicit request from IGEL support
+
+- Profile(s) should `NEVER` have `Overwrite Sessions` set on it!
+- For example, enabling `Overwrite Sessions` in a profile means that `only` those settings will apply for all registry keys that have multiple session (end in a % in the registry).
+
+![image08](Images/HOWTO-Collect-Hardware-Information-for-Device-08.png)
+
+-----
+
 ## Steps to collect the data
 
 - Format a USB thumb drive on your PC (FAT or NTFS)

@@ -329,8 +329,8 @@ Use pfSense to create firewall (DMZ)
 
 | Name | Description - Link |
 |------|--------------------|
-| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.02.120.exe" download>UMS 12 for Windows Server</a> |
-| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.02.120.bin" download>UMS 12 for Linux Server</a> |
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.02.130.exe" download>UMS 12 for Windows Server</a> |
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.02.130.bin" download>UMS 12 for Linux Server</a> |
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_6.10.140.exe" download>UMS 6 for Windows Server</a> |
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_6.10.140.bin" download>UMS 6 for Linux Server</a> |
 | OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.2.1.zip" download>OSC - OS 12</a> |
@@ -349,8 +349,8 @@ Use pfSense to create firewall (DMZ)
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.2.1.zip
 
 #UMS 12:
-wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.02.120.exe
-wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.02.120.bin
+wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.02.130.exe
+wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.02.130.bin
 
 #ICG 12:
 wget https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.02.100.bin

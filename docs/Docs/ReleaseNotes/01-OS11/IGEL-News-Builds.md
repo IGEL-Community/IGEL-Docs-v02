@@ -14,6 +14,31 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-09 - [11.09.117](readme11.09.117.txt)
+
+```
+The new PRIVATE BUILD 11.09.117 for IGEL Workspace is ready.
+
+This build is based on 11.09.114.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Integrated required versions for private build:
+
+** Webex Teams Plugin: 43.6.0.26643
+** Webex Meetings Plugins: 43.6.5.20, 2.10.8.14 and 42.6.11.6
+** Citrix Workspace Apps: 23.05.0.58, 23.09.02.24 and 20.10.0.6
+** Zoom Plugins: 5.12.6.22200, 5.13.10.23090, 5.14.10.23670
+** Kernel with activated CONFIG_DEBUG_INFO_BTF option.
+```
+
+-----
+
 ## 2023-11-08 - [11.09.116](readme11.09.116.txt)
 
 ```

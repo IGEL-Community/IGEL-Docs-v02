@@ -24,7 +24,7 @@ Before you install IGEL OS, you must choose the hardware endpoint IGEL will inst
 
 1. Repurpose your existing hardware. IGEL can convert x86 CPU endpoints you already own.
 2. Purchase new 3rd-party hardware and install IGEL OS on it. Some hardware vendors can install IGEL OS at factory for you.
-3. Purchase IGEL hardware. We offer endpoints for a variety of use cases.
+3. Purchase IGEL hardware ([UD Pocket(https://www.igel.com/udpocket/)). These keychain-sized USB sticks can be plugged into an x86 computer and booted straight to IGEL OS.
 4. Purchase a UD Pocket from IGEL. These keychain-sized USB sticks can be plugged into an x86 computer and booted straight to IGEL OS.
 
 **NOTE:** Regardless of which hardware you choose, you will need to place a demo license on the endpoint once IGEL OS is installed! The last step of this guide will tell you how!

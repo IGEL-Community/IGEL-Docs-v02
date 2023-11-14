@@ -103,6 +103,14 @@ Also, please note that if using Chromium to connect to Citrix to set the followi
 
 -----
 
+## Wacom Tablets
+
+IGEL OS 11 includes drivers for Wacom tablets.
+
+The [Linux Wacom Project](https://linuxwacom.github.io/) manages the drivers, libraries, and documentation for configuring and running Wacom tablets under the Linux operating system. These drivers are pre-installed in IGEL OS 11 and provide out-of-the box support for a virtually all Wacom tablets and TabletPCs.
+
+-----
+
 ## Bandwidth Requirements for Various Types of Users
  
 When determining minimum bandwidth requirements for Citrix / VMware, plan with the following estimates:

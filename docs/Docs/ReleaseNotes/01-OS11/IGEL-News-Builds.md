@@ -14,6 +14,63 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-14 - [11.09.119](readme11.09.119.txt)
+
+```
+The new PRIVATE BUILD 11.09.119 for IGEL Workspace is ready.
+
+This build is based on 11.09.114.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### IGEL Agent for Imprivata
+
+* In FUS and Follow Policies mode, only Citrix sessions being started by the
+IGEL Agent for Imprivata will be disconnected / signed out, others remain
+intact
+* the resource chooser is now part of the lock screen (if lock screen is
+enabled)
+* changed chooser from a grid view to a list view
+* added reg key to hide horizon apps on the chooser (and thus show desktops
+only)
+
++------------+-----------------------------------------------------------------+
+| Registry | `iia.hide_horizon_apps_on_chooser` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | **enabled** (default) / disabled) |
++------------+-----------------------------------------------------------------+
+* added reg key to hide citrix apps on the chooser (and thus show desktops only)
++------------+-----------------------------------------------------------------+
+| Registry | `iia.hide_citrix_apps_on_chooser` |
++------------+-----------------------------------------------------------------+
+| Type | bool |
++------------+-----------------------------------------------------------------+
+| Value | **enabled** (default) / disabled |
++------------+-----------------------------------------------------------------+
+
+* added the ability to run Horizon Apps
+* changed reg key 'iia.query_moniker' from bool to string to hold the moniker
+name to query for
+
++------------+-----------------------------------------------------------------+
+| Registry | `iia.query_moniker` |
++------------+-----------------------------------------------------------------+
+| Type | string |
++------------+-----------------------------------------------------------------+
+| Value | \\"\\" |
++------------+-----------------------------------------------------------------+
+
+* bugfix: program rfideas also in FUS mode
+* bugfix: password change
+```
+
+-----
+
 ## 2023-11-10 - [11.09.118](readme11.09.118.txt)
 
 ```

@@ -286,6 +286,11 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** OS 11.09.100 and UMS 12.2.0 or higher is required to upgrade to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
 
+**Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
+
+**A:** [Steps to install new OS on UD Pocket](https://kb.igel.com/igelos-11.09/en/how-to-reflash-your-igel-ud-pocket-101060750.html)
+
+
 **Q:** How to debug OS 11 to OS 12 upgrade?
 
 **A:** Open a terminal window as root on OS 11 device and run the following command prior to starting the upgrade: `journalctl -f`

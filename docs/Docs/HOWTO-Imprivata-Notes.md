@@ -201,6 +201,14 @@ App instance (WMAppinstance):  igel_screensaver
 
 -----
 
+## 17 November 2023 - Update
+
+### Issue with TLS v1.3 (Windows Server 2019 and Windows 10)
+
+**NOTE: From Imprivata Support:** For an environment Windows Server 2019 and Windows 10. The 7.12 PiE agent on 11.09.X is failing to connect to Citrix farms due to authentication failures with TLS v1.3. There seems to be some kind of PiE agent 'fallback' feature to TLS v1.2 but at least in some cases that 'fallback to TLS 1.2' doesn't work as expected. Imprivata Support linked to this article: [TLS protocol version support](https://learn.microsoft.com/en-us/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-#tls-protocol-version-support)
+
+-----
+
 ## 28 August 2023 - Update
 
 ### Prove ID Embedded Setup notes

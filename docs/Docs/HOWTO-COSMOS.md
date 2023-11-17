@@ -274,6 +274,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A**: Change the following registry key from `1` to `5`: `network.interfaces.ethernet.device%.ieee8021x.auth_attempts`
 
+**Q:** How to automatically set timezone based on geo location the client is in?
+
+**A:** [IGEL OS automatic Time Zone sync based on geo location detection](https://virtualbrat.com/2023/11/17/igel-os-automatic-time-zone-sync-based-on-geo-location-detection-example-of-how-igel-os-scripting-can-help/)
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

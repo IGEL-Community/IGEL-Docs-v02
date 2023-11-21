@@ -4,6 +4,116 @@
 
 -----
 
+## 2023-11-20 - [12.2.2](readme12.2.2.txt)
+
+```
+The new BUILD 12.02.2 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+# Changes since: 12.2.1
+
+## New Features
+
+- **OSC Installer**
+
+	- Added support for custom Unit ID rules. This offers possibility to choose appropriate MAC address of an internal network interface as Unit ID. Please visit the Knowledge Base for further details and how to use this feature.
+
+- **HID**
+
+	- Updated ELO touch driver to version 5.2 for single-touch - and version 4.3 for multi-touch.
+	- Added support for usage of more than one touchscreen (without calibration for now).
+- **Hardware**
+
+	- Validated 256GB 2230 PCIe NVMe module for HP t550 and t655.
+	- Validated 256GB 2280 PCIe NVMe module for HP t550 and t655.
+	- Validated 512GB 2280 PCIe NVMe module for HP t550 and t655.
+
+## Security Fixes
+
+- Fixed open-vm-tools security issues CVE-2023-34059 and CVE-2023-34058.
+- Fixed vim security issues CVE-2023-5535, CVE-2023-5441, CVE-2023-5344, CVE-2023-4781, CVE-2023-4752, CVE-2023-4751, CVE-2023-4750, CVE-2023-4735, CVE-2023-4733, CVE-2022-4293, CVE-2022-4292, CVE-2022-3705, CVE-2022-3591, CVE-2022-3520, CVE-2022-3352, CVE-2022-3324, CVE-2022-3256 and CVE-2022-3234.
+- Fixed procps security issue CVE-2023-4016.
+- Fixed llvm-toolchain-15 security issues CVE-2023-29939, CVE-2023-29934, CVE-2023-29933 and CVE-2023-29932.
+- Fixed aom security issues CVE-2021-30475, CVE-2021-30474, CVE-2021-30473, CVE-2020-36135, CVE-2020-36133, CVE-2020-36131 and CVE-2020-36130.
+- Fixed mysql-8.0 security issues CVE-2023-22114, CVE-2023-22112, CVE-2023-22103, CVE-2023-22097, CVE-2023-22092, CVE-2023-22084, CVE-2023-22079,
+- Fixed samba security issues CVE-2023-42669, CVE-2023-4154 and CVE-2023-4091.
+- Fixed openssl security issues CVE-2023-3817 and CVE-2023-3446.
+- Fixed tiff security issue CVE-2023-1916.
+- Fixed opensc security issues CVE-2023-4535, CVE-2023-40661 and CVE-2023-40660.
+- Fixed python-urllib3 security issues CVE-2023-45803 and CVE-2023-43804.
+- **X server**
+	- Fixed X.Org-server security issues CVE-2023-5574, CVE-2023-5380 and CVE-2023-5367.
+
+## Resolved Issues
+
+- Fixed IGEL OS version showed in System Information accessory.
+
+- **Chromium**
+
+	- Fixed Chromium not being able to import certificates with spaces in file name.
+
+- **HID**
+
+	- Fixed handling of ELO touch devices in multi-monitor configuration.
+
+## Known Issues
+
+- Display Configurator may show hotplugged monitors as disabled.
+- Issues may occur if monitors are connected via docking station.
+	- In general: Monitor hotplug not stable yet and can trigger misconfiguration.
+- If assigned app is not available in App Portal, there is no error notification on IGEL OS desktop.
+- The downgrade to base system 12.00.900 or 12.00.910 is not supported.
+- In very rare cases all apps are lost after an update. Should this be the case, an error message is shown "Opening system App Journal failed." - if the device is manged, the apps will be reinstalled after a reboot.
+- Display Configurator: Rotation of displays connected to the Lenovo ThinkPad USB-C Hybrid Dock can fail.
+- Display configuration of displays connected to HP G5 Docking Station may fail on HP t655.
+- If different power plans are configured for battery and ac mode, change is not triggered to configured plan once power supply get plugged or unplugged. So far, this issue is known for following device:
+	- Lenovo K14 Gen1 (AMD)
+
+- **Citrix**
+
+	- In regards of CVE-2023-41993, CVE-2023-39928 & CVE-2023-41074: Older Webkit libraries are used in Citrix for compatibility reasons.
+	- More details in a Knowledge Base via [https://kb.igel.com/securitysafety/en/isn-2023-25-webkit-vulnerabilities-101066782.html]
+
+- **Network**
+
+	- The enumeration of ethernet-interfaces does not match between Setup and the system-tray.
+	- In some cases, network is not working in combination of Lenovo K14 Gen1 (AMD) and Lenovo Universal Dock. There is a kernel bugreport open but no proper fix so far.
+
+- **Audio**
+
+	- LG 34CN650 Headset mic via jack is not working
+	- LG 27CN650 Headset mic via jack is not working
+
+- **Hardware**
+
+	- Wake on LAN is not functional on Dell OptiPlex 3000 and Lenovo K14 Gen1
+	- Built-in fingerprint sensor is not supported on HP mt440 and mt645.
+	- If using 6 x 4K@60Hz monitors on a t755/t740 with the additional graphic card, one or two of the monitors may stay black after coming back from DPMS off state.
+	- This is caused by using the additional graphic card as primary, which only has 512MB VRAM (the VRAM is not sufficient in this configuration)
+	- The solution:
+	-* Open BIOS and increase the VRAM size of the iGPU to 2048MiB (maybe 1024MiB may also work)
+	-* Activation of IGEL registry key *x.drivers.swap_card0_with_card1,* so the iGPU will become the Primary GPU. Connector names will be changed with that!!
+	- Wake up from suspend via UMS does not work on HP mt645 devices. Workaround: Disable system suspend and use shutdown instead.
+
+- **IGEL Desktop**
+
+	- On-screen keyboard sporadically crashes when typing.
+	- XFWM4 composite manager can break screen lock and enables sporadically access to open applications. It is recommended to not enable registry key windowmanager.wm0.variables.usecompositing. The composite manager is disabled by default.
+	- Closing shutdown dialog requires a double ESC key press.
+	- If two monitors are configured in a vertical layout (one above the other), and those monitors are configured with "auto-detect" resolution, saving leads to a wrong layout order.
+
+- **Licensing**
+
+	- Manual deployment of add-on licenses for IGEL Agent for Imprivata licenses (via UMS) is only possible after finished installation of IGEL Agent for Imprivata app on device.
+
+- **igel-system-tray**
+
+	- Some touchpads are recognized as touchpad and mouse. This results in showing possible user settings for both variants.
+```
+
+-----
+
 ## 2023-10-31 - [12.2.1](readme12.2.1.txt)
 
 ```

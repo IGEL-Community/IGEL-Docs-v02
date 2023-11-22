@@ -14,6 +14,50 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-22 - [11.08.352](readme11.08.352.txt)
+
+```
+The new PRIVATE BUILD 11.08.352 for IGEL Workspace is ready.
+
+This build is based on 11.08.351.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Fixed Horizon USB redirection issues when used in Imprivata context.
+
+Added TCSetup 12.3.101 which supports setting quirks needed for some usb
+devices in the device Rule dialog of Horizon Client.
+
+Updated zulu jre providing a java17 environment (needed to run the new
+TCSetup).
+```
+
+-----
+
+## 2023-11-22 - [11.08.448](readme11.08.448.txt)
+
+```
+The new PRIVATE BUILD 11.08.448 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP session crash after pressing CTRL + ALT + ENTER.
+```
+
+-----
+
 ## 2023-11-17 - [11.09.122](readme11.09.122.txt)
 
 ```

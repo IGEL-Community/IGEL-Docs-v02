@@ -184,3 +184,13 @@ Steps to optimize Google Meet in VDI:
 -----
 
 ## [MS Teams Optimization Feature Compatibility Matrix for Horizon 7 and Horizon 8 Recent Releases. (86475)](https://kb.vmware.com/s/article/86475)
+
+-----
+
+## IGEL adds Citrix Device Posture Service support – Higher security and extended control of access
+
+IGEL has integrated with the Device Posture Service (DPS) team at Citrix to add the functionality of validating that the endpoint fulfills requirements set to access the Citrix Cloud environment.
+
+Device Posture service with IGEL OS offers conditional access control to your Citrix Cloud environment and is a key component to Zero Trust based access.
+
+[IGEL adds Citrix Device Posture Service support – Higher security and extended control of access. IGEL + Citrix = Better together!](https://virtualbrat.com/2023/11/22/igel-adds-citrix-device-posture-service-support-higher-security-and-extended-control-of-access-igel-citrix-better-together/)

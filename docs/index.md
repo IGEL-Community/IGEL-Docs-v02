@@ -68,6 +68,7 @@ Remove for now
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)
 - [HOWTO Edit Initial Settings Prior to OSC Install](Docs/HOWTO-Edit-Initial-Settings-OSC.md)
 - [HOWTO ICG Free Signed Certificate](Docs/HOWTO-ICG-Free-Signed-Certificate.md)
+- [HOWTO IGEL Management Interface (IMI)](Docs/HOWTO-IGEL-Management-Interface.md)
 - [HOWTO IGEL Static Template Keys](Docs/HOWTO-IGEL-Static-Template-Keys.md)
 - [HOWTO Imprivata Notes](Docs/HOWTO-Imprivata-Notes.md)
 - [HOWTO Microsoft Teams](Docs/HOWTO-Microsoft-Teams-Optimization.md)

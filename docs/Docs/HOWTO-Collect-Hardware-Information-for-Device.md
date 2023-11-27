@@ -58,6 +58,11 @@ Collection script (collect_data.sh) to copy onto thumb drive
 mkdir data_dump
 cd data_dump
 
+# For OS 12 list installed applications
+if [ -e /usr/bin/igelpkgctl ]; then
+  igelpkgctl list installed > igelpkgctl_list_installed.txt
+fi
+
 lshw > lshw_ouptut.txt
 lsusb > lsusb_output.txt
 lspci > lspci_output.txt
@@ -97,9 +102,6 @@ tar cvjf var-log.tar.bz2 /var/log
 /config/bin/create_support_information
 mkdir tclogs
 unzip /tmp/tclogs.zip -d tclogs
-
-# uncomment for OS 12
-#igelpkgctl list installed > igelpkgctl_list_installed.txt
 
 cd ..
 

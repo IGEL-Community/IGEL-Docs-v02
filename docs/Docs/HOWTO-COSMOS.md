@@ -102,9 +102,9 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.02/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-90235827.html)
 
-**Q:** What is new in UMS 12.02.100 released on 31 July 2023?
+**Q:** What is new in UMS 12?
 
-**A:** [KB: What Is New in IGEL UMS 12.02.100?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html)
+**A:** [KB: What Is New in IGEL UMS 12?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** How to check the status of UMS server?
 

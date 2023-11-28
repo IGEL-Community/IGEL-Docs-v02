@@ -72,6 +72,7 @@ Remove for now
 - [HOWTO IGEL Static Template Keys](Docs/HOWTO-IGEL-Static-Template-Keys.md)
 - [HOWTO Imprivata Notes](Docs/HOWTO-Imprivata-Notes.md)
 - [HOWTO Microsoft Teams](Docs/HOWTO-Microsoft-Teams-Optimization.md)
+- [HOWTO Nuance Dictation](Docs/HOWTO-Nuance-Dictation.md)
 - [HOWTO Nutanix Frame Setup](Docs/HOWTO-Nutanix-Frame-Setup.md)
 - [HOWTO Re-enable TLSv1 and TLSv1.1 on UMS](Docs/HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS.md)
 - [HOWTO Remove IGEL Device License](Docs/HOWTO-Remove-IGEL-Device-License.md)

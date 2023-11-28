@@ -98,6 +98,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - UMS
 
+**Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
+
+**A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.02/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-90235827.html)
+
 **Q:** What is new in UMS 12.02.100 released on 31 July 2023?
 
 **A:** [KB: What Is New in IGEL UMS 12.02.100?](https://kb.igel.com/endpointmgmt-12.02/en/what-is-new-in-igel-ums-12-02-100-90238768.html)

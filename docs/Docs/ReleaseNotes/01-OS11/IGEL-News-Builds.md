@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-11-28 - [11.08.468.DER](readme11.08.468.DER.txt)
+
+```
+The new PRIVATE BUILD 11.08.468.DER for IGEL Workspace is ready.
+
+This build is based on 11.08.466.DER.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Integrated Webex VDI 43.8.0.27945
+```
+
+-----
+
 ## 2023-11-22 - [11.09.123](readme11.09.123.txt)
 
 ```

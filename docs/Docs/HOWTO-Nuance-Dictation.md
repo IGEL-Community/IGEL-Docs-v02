@@ -2,6 +2,8 @@
 
 ## [Nuance Compatibility with Citrix](https://kb.igel.com/igelos-11.09/en/nuance-compatibility-101058639.html)
 
+## [Dragon Medical One Desktop Application 2023.4](https://isupportcontent.nuance.com/healthcare/documents/relnotes/direct/SOD_RELEASE_NOTES_2023.4_US.htm)
+
 ## USB Devices and UCC
 
 In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.

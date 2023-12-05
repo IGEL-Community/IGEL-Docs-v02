@@ -2,7 +2,7 @@
 
 - IGEL OS Firmware Base: 11.09.100, 11.09.104
 - IGEL UMS Version Base: 12.01.110
-- [IGEL Addendum to UCC Guide](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-UCC)
+- [IGEL Addendum to UCC Guide](HOWTO-UCC.md)
 -----
 
 -----
@@ -198,17 +198,17 @@ The new great function is now available for everyone – here are the steps to i
 
 ### Important Citrix Configuration Topics
 
-- Starting with Citrix VDA 2109, the default “virtual channel allow list” policy changed from “disabled” to “enabled”. This occurs even if you are upgrading an existing installation where you did not change the policy. Additional steps are required to allow Zoom, WebEx, and other tools to open a virtual channel.
+Starting with Citrix VDA 2109, the default `virtual channel allow list` policy changed from `disabled` to `enabled`. This occurs even if you are upgrading an existing installation where you did not change the policy. Additional steps are required to allow Zoom, WebEx, and other tools to open a virtual channel.
 
 Required steps:
 
-Changing the virtual channel allow list policy to “disabled”:
+Changing the virtual channel allow list policy to `disabled`:
 
-The easiest way to ensure that Zoom, WebEx, and other tools can create and open a virtual channel to connect to the VDI plugin, is to set the policy for the virtual channel allow list to “disabled”. 
+The easiest way to ensure that Zoom, WebEx, and other tools can create and open a virtual channel to connect to the VDI plugin, is to set the policy for the virtual channel allow list to `disabled`. 
 
-If the policy state was changed to “enabled” after updating to VDA release 2109, you can edit the policy to return the status to “disabled”.
+If the policy state was changed to `enabled` after updating to VDA release 2109, you can edit the policy to return the status to `disabled`.
 
-You will need to open Citrix Studio and navigate to the ICA policies section. The following dialog shows the virtual channel allow list policy configured for “disabled”.
+You will need to open Citrix Studio and navigate to the ICA policies section. The following dialog shows the virtual channel allow list policy configured for `disabled`.
 
 ![image031](Images/HOWTO-UCC-Guide-031.png)
 

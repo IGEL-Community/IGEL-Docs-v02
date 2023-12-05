@@ -13,7 +13,9 @@
 ### Steps
 
 1) Install USB drive
+
 2) Open Terminal
+
 3) Find device mount point (`diskutil list`)
 
 ```bash

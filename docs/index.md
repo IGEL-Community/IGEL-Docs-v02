@@ -82,7 +82,8 @@ Remove for now
 -->
 - [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 - [HOWTO Testing VDI](Docs/HOWTO-Testing-VDI.md)
-- [HOWTO UCC](Docs/HOWTO-UCC.md)
+- [HOWTO Addendum to UCC Guide ](Docs/HOWTO-UCC.md)
+- [HOWTO UCC Guide ](Docs/HOWTO-UCC-Guide.md)
 - [HOWTO VirtualBox Virtual Machines on IGEL OS](Docs/HOWTO-VirtualBox-VMs-on-IGELOS.md)
 - [HOWTO VPN](Docs/HOWTO-VPN.md)
 - [HOWTO Work from Home Notes](Docs/HOWTO-Work-from-Home-Notes.md)

@@ -221,7 +221,7 @@ Change it to disabled:
 ![image033](Images/HOWTO-UCC-Guide-033.png)
 ![image034](Images/HOWTO-UCC-Guide-034.png)
 
-- There was a long running Citrix ERROR which I was not possible to solve till today - it ends mostly with the message: Cannot add store (cannot validate certificate) `ERROR adding store 65147`.
+- There was a long running Citrix ERROR - it ends mostly with the message: Cannot add store (cannot validate certificate) `ERROR adding store 65147`.
 
 The root cause is, that Microsoft changed in 2021 the PKI provider to SHA2 - if you use Windows Server 2019 or Windows Server 2022 you need to migrate your Root CA from SHA to SHA2: 
 
@@ -279,7 +279,7 @@ Here are some additional topics which needs to be considered that the 64-bit red
 - Microsoft Skype 7 or higher
 - Media Foundation-based video applications on Windows 8.x or higher / Windows Server 2012 R2 or higher
 
-**NOTE:** Not officially supported by Citrix
+**NOTE:** * Not officially supported by Citrix
 
 ### Citrix Configuration for HDX -> Windows GPOs
 
@@ -287,17 +287,17 @@ Here are some additional topics which needs to be considered that the 64-bit red
 
 Computer Config > Admin Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host> Device and Resource Redirection
 
-Changed Allow audio and video playback redirection from Not Configured to Enabled
+Changed `Allow audio and video playback redirection` from `Not Configured` to `Enabled`
 
-Changed Allow audio recording redirection from Not Configured to Enabled
+Changed `Allow audio recording redirection` from `Not Configured` to `Enabled`
 
-- Computer Config > Admin Templates > Windows Components > App Privacy
+Computer Config > Admin Templates > Windows Components > App Privacy
 
 - Changed `Let Windows apps access the microphone` from `Not Configured` to `Enabled`.  Options > Default for all apps changed from `User is in control` to `Force Allow`.
 
-- Changed `Let Windows apps access the camera` from `Not Configured` to `Enabled`.  Options > Default for all apps changed from `User is in control` to `Force Allow`.
+Changed `Let Windows apps access the camera` from `Not Configured` to `Enabled`.  Options > Default for all apps changed from `User is in control` to `Force Allow`.
 
-- Computer Config > Admin Templates > Windows Components > Camera changed `Let Allow use of Camera` from `Not Configuredi` to `Enabled`.
+Computer Config > Admin Templates > Windows Components > Camera changed `Let Allow use of Camera` from `Not Configured` to `Enabled`.
 
 ![image039](Images/HOWTO-UCC-Guide-039.png)
 ![image040](Images/HOWTO-UCC-Guide-040.png)
@@ -414,9 +414,11 @@ In Citrix and Windows Virtual Desktop vGPU environments, Webex is not detected a
 
 These Windows registry entries on the HVDs are used to detect Webex in a VDI environment:
 
+```bash linenums="1"
 [HKEY_CURRENT_USER\Software\Cisco Systems, Inc.\CiscoVDI] "isVDIEnv" = "true", datatype:REG_EXPAND_SZ
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Cisco Spark Native] "isVDIEnv" = "true", datatype:REG_EXPAND_SZ
+```
 
 WebEx only support one Webex VDI client working together with one instance of Webex. Users can start multiple Citrix or VMWare sessions, but only one connection instance works, and the other instances fall back to non-VDI mode.
 
@@ -1084,7 +1086,7 @@ These workarounds will effectively disable the Audio Sandbox for Google Chrome i
 
 **VIDEO TEST**
 
-For this test I have prepared the following VM:
+For this test following VM was used:
 
 1) Windows 10, build 1803 VDI
 
@@ -1150,7 +1152,7 @@ There is also another document which describes how you merge all your contacts a
 
 ## Azure Virtual Desktop (AVD) on IGEL OS 11
 
-There is a good feature included in the AVD registry I recommend using:
+There is a good feature included in the AVD registry:
 
 ![image091](Images/HOWTO-UCC-Guide-091.png)
 

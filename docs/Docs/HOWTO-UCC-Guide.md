@@ -89,7 +89,7 @@ The new great function is now available for everyone – here are the steps to i
 
 ![image004](Images/HOWTO-UCC-Guide-004.png)
 
-- Choose full or part segmentation (I recommend the option segm_full)
+- Choose full or part segmentation (recommend the option segm_full)
 
 ![image005](Images/HOWTO-UCC-Guide-005.png)
 
@@ -184,7 +184,7 @@ The new great function is now available for everyone – here are the steps to i
 
 - Starting CWA 22.07 there are some new audio enhancements:
 
-**NOTE:** 1] When the audio throughput undergoes a sudden spike or is not enough for an unstable network, this value increases the output buffering value. This increase in the output buffering value provides smooth audio. However, the audio might be slightly delayed. This parameter is only valid when `AudioRedirectionV4`, and `AudioLatencyControlEnabled` is set to True.
+**NOTE:** [1] When the audio throughput undergoes a sudden spike or is not enough for an unstable network, this value increases the output buffering value. This increase in the output buffering value provides smooth audio. However, the audio might be slightly delayed. This parameter is only valid when `AudioRedirectionV4`, and `AudioLatencyControlEnabled` is set to True.
 
 ![image028](Images/HOWTO-UCC-Guide-028.png)
 
@@ -279,7 +279,7 @@ Here are some additional topics which needs to be considered that the 64-bit red
 - Microsoft Skype 7 or higher
 - Media Foundation-based video applications on Windows 8.x or higher / Windows Server 2012 R2 or higher
 
-**NOTE:** *Not official supported from Citrix
+**NOTE:** Not officially supported by Citrix
 
 ### Citrix Configuration for HDX -> Windows GPOs
 
@@ -293,19 +293,11 @@ Changed Allow audio recording redirection from Not Configured to Enabled
 
 - Computer Config > Admin Templates > Windows Components > App Privacy
 
-Changed Let Windows apps access the microphone from Not Configured to Enabled
+- Changed `Let Windows apps access the microphone` from `Not Configured` to `Enabled`.  Options > Default for all apps changed from `User is in control` to `Force Allow`.
 
-                Options > Default for all apps
-                Changed from User is in control to Force Allow
+- Changed `Let Windows apps access the camera` from `Not Configured` to `Enabled`.  Options > Default for all apps changed from `User is in control` to `Force Allow`.
 
-
-- Changed Let Windows apps access the camera from Not Configured to Enabled
-
-                Options > Default for all apps
-                Changed from User is in control to Force Allow
-
-- Computer Config > Admin Templates > Windows Components > Camera
-Changed Let Allow use of Camera from Not Configured to Enabled
+- Computer Config > Admin Templates > Windows Components > Camera changed `Let Allow use of Camera` from `Not Configuredi` to `Enabled`.
 
 ![image039](Images/HOWTO-UCC-Guide-039.png)
 ![image040](Images/HOWTO-UCC-Guide-040.png)
@@ -328,25 +320,23 @@ Install the right software at the backend infrastructure:
 
 - In IGEL OS 11.09.100 are 3 different versions available:
 
-[a] 42.6.11.6, please use https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi
+[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
 
-[b] 42.10.8.14, please use https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi
+[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
 
-[c] 43.6.0.158, not more separately available 
+43.6.0.158, not more separately available 
 
 - In IGEL OS 11.09.104 are also these 3 different versions available:
 
-[a] 42.6.11.6, please use https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi
+[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
 
-[b] 42.10.8.14, please use https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi
+[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
 
-[c] 43.6.0.158, not more separately available 
+43.6.0.158, not more separately available 
 
-use this document to check all what is needed for the installation:
+[Cisco Webex Meetings Virtual Desktop Software](https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software) to check all what is needed for the installation.
 
-https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software
-
-Citrix XenDesktop and Citrix XenApp are supported (no published app support) 
+- Citrix XenDesktop and Citrix XenApp are supported (no published app support) 
 
 add the following values under HKEY_USERS\.DEFAULT:
 
@@ -358,13 +348,11 @@ When you start Webex, it is only working with the redirection, if you can see th
 
 Check if you have the right Connection configuration:
 
-Test your WebEx Connection Configuration: https://mediatest.webex.com/ 
+[Test your WebEx Connection Configuration](https://mediatest.webex.com/)
 
-Further known issues and solved bugs: https://help.webex.com/en-us/c3r7uf/Open-and-Resolved-Bugs-for-the-Latest-Webex-Meetings-Updates 
+[Further known issues and solved bugs](https://help.webex.com/en-us/c3r7uf/Open-and-Resolved-Bugs-for-the-Latest-Webex-Meetings-Updates)
 
-Check the release notes for further information:
-
-https://help.webex.com/en-us/article/glj57y/Release-Notes-for-Cisco-Webex-Meetings-Virtual-Desktop-Software-Release-42.x 
+[Check the release notes for further information](https://help.webex.com/en-us/article/glj57y/Release-Notes-for-Cisco-Webex-Meetings-Virtual-Desktop-Software-Release-42.x)
 
 ### Cisco WebEx
 
@@ -379,18 +367,19 @@ Install the right software at the backend infrastructure:
 
 Cisco WebEx 43.6.0.26643 (for IGEL OS 11.09.100 and 11.09.104) 
 
-Only 64-bit installer: https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi 
+[Only 64-bit installer](https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi)
 
 Next, install the Host Installer package, Webex.msi, in the VDI image. 
 You can use the following commands to do this:
 
+```bash linenums="1"
 Persistent VDI: msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 /quiet /norestart
-
 Non-persistent VDI: msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 ROAMINGENABLED=1 /quiet /norestart
+```
 
-**NOTE:** The most important setting is ENABLEVDI=1. If you just simply double-click the MSI this option is not used, and redirection will not work.
+**NOTE:** The most important setting is `ENABLEVDI=1`. If you just simply double-click the MSI this option is not used, and redirection will not work.
 
-The other important setting is ROAMINGENABLED=1 for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by ALLUSERS=1, otherwise the ROAMINGENABLED argument is ignored.
+The other important setting is `ROAMINGENABLED=1` for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by `ALLUSERS=1`, otherwise the `ROAMINGENABLED` argument is ignored.
 
 Users may be in a Citrix environment and not have the thin client installed or the virtual channel is disconnected. We support this scenario with fallback to a non-virtual Webex App installation. In this mode, the app shows a warning that the quality of video may be affected. Once the virtual channel is connected, the app can change to VDI mode. 
 

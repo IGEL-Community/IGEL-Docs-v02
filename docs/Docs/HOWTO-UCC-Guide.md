@@ -587,20 +587,27 @@ Product Documentation:
 What’s new in version 6.1
 
 1) Revert to Chrome Extensions manifest v2 to circumvent a Chromium bug with manifest v3 extensions that causes high CPU utilization.
+
 2) Supports redirection in inactive Chrome tabs (Requires CVAD 2112 or higher)
+
 3) Supports migrating redirected tabs from one Chrome window to another (Requires CVAD 2112 or higher)
  
 What’s new in version 5.1 (The following features require CVAD 2109 or higher)
 
 1) Introduces an improved redirection mechanism that uses a page in the chrome extension to begin the redirection process and solves script injection timing issues 
+
 2) Solves issues with redirection of websites enforcing a Content Security Policy (CSP) policy 
+
 3) Solves issues with redirection of websites that perform JavaScript redirects to authentication page in their Single Sign On (SSO) mechanisms
+
 4) Solves issues with redirection of websites that perform 302 redirects
+
 5) Solves issues with acquisition of multimedia devices on the BCR overlay after webpage is redirected
  
 What’s new in version 5.0 
 
 1) Fixes high DPI and scaling issues on overlay and VDA
+
 2) Fixes some issues with redirected Angular websites
 
 
@@ -1014,7 +1021,9 @@ When creating the GPO, navigate to `Computer Configuration > Policies > Administ
 Enable the following settings:
 
 1) Enable VMware HTML5 Multimedia Redirection
+
 2) Enable Chrome and/or Edge Browser HTML5 Multimedia Redirection
+
 3) Enable the URL list and fill in the value name, for example: `https://www.youtube.com/*` and do not fill in any value (leave this empty). It is important to include the http:// or https:// prefix in the URLs. You can use wildcards.
 
 ![image078](Images/HOWTO-UCC-Guide-078.png)
@@ -1045,6 +1054,7 @@ If you have met all the requirements, it is time to test if the configuration is
 Note to the following:
 
 1) The icon must be green. Only then the plug-in is active and ready for use.
+
 2) If the icon is grey, then you have not met one of the requirements. For example, the Horizon Agent install parameter or Horizon Client version.
 
 Here is a quick tip on how to correct sound issues occurring in a VMware Horizon session running Google Chrome / Chromium or Microsoft Edge. It is possible, that inside a virtual desktop that had Google Chrome in it, when a user went to a website that had media (i.e., YouTube), the sound would be broken. No audio sound would play on the endpoint.
@@ -1077,7 +1087,9 @@ These workarounds will effectively disable the Audio Sandbox for Google Chrome i
 For this test I have prepared the following VM:
 
 1) Windows 10, build 1803 VDI
+
 2) Horizon Agent 7.10
+
 3) Specs: 2vCPU, 4GB Memory
 
 Let us first play a FULL HD (1080p) video without HTLM5 Redirection. We immediately see the CPU spiking to 100%. Furthermore, the image and audio quality are quite poor. Bandwidth consumption is around 200Kbps and 8Mbps, using BLAST Extreme.
@@ -1163,6 +1175,7 @@ Teams Optimization is included. Just use a profile with AVD activated – there 
 Before you can use Microsoft Teams on Azure Virtual Desktop, you'll need to do these things:
 
 1) Prepare your network for Microsoft Teams.
+
 2) Connect to a Windows 10 or 11 Multi-session or Windows 10 or 11 Enterprise virtual machine (VM).
 
 **Install the Teams desktop app**
@@ -1174,6 +1187,7 @@ This section will show you how to install the Teams desktop app on your Windows 
 To enable media optimization for Teams, set the following registry key on the host VM:
 
 1) From the start menu, run RegEdit as an administrator. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams. Create the Teams key if it doesn't already exist.
+
 2) Create the following value for the Teams key:
 
 ![image092](Images/HOWTO-UCC-Guide-092.png)

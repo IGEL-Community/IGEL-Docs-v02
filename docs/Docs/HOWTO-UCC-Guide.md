@@ -2,7 +2,7 @@
 
 - IGEL OS Firmware Base: 11.09.100, 11.09.104
 - IGEL UMS Version Base: 12.01.110
-
+- [IGEL Addendum to UCC Guide](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-UCC)
 -----
 
 -----

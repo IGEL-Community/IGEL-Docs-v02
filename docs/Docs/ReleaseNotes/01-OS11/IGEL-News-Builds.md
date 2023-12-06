@@ -14,6 +14,632 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-12-06 - [11.09.150](readme11.09.150.txt)
+
+```
+The new PUBLIC BUILD 11.09.150 for IGEL Workspace is ready.
+
+This build is based on 11.09.110.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace app 2309  
+  Available workspace apps in this release: 23.09 (default), 23.07, and 20.10  
+  New Features:
+* Enhancement to multiple monitors [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Multi Monitor enhancement`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.wfclient.MultiMonitorPnPEnabled`                   |
++------------+-----------------------------------------------------------------+
+|Value       |true / false (default)                                           |
++------------+-----------------------------------------------------------------+
+
+* Support for 32-bit cursor  
+* Copy and paste files and folders between two virtual desktops  
+* Improved error messages
+* Updated Citrix Workspace App to version 2308.  
+  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2010
+* New features:  
+* HDX Adaptive Transport over EDT
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HDX Adaptive Transport over EDT`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.allregions.hdxoverudp`                                      |
++------------+-----------------------------------------------------------------+
+|Value       |<>(default), true, and false                                     |
++------------+-----------------------------------------------------------------+
+
+* Note: Update "ica.wfclient.proxytype" = Secure, and "ica.wfclient.proxyhost"
+  in the following format = \<IP>:\<PORT>. For example "192.168.101.37:6153".
+* Enable Packet Loss Concealment to improve audio performance
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Packet Loss Concealment to improve audio performance`    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PacketLossConcealmentEnabled`                        |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.
+* Updated Citrix Workspace App to version 2309.  
+  Available Citrix Workspace Apps in this release: 2309 (default), 2307 and 2010
+* Enhancement to multiple monitors [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Multi Monitor enhancement`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.MultiMonitorPnPEnabled`                            |
++------------+-----------------------------------------------------------------+
+|Value       |true / false (default)                                           |
++------------+-----------------------------------------------------------------+
+
+* HTTPS protocol support for proxy server
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HTTPS protocol support for proxy server`                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.allregions.hdxoverudp`                                      |
++------------+-----------------------------------------------------------------+
+|Value       |true (default)/ false                                            |
++------------+-----------------------------------------------------------------+
+
+* Note: Update "ica.allregions.proxytype" = Secure, and
+  "ica.allregions.proxyhost" in the following format = \<IP>:\<PORT>. For
+  example "192.168.101.37:6153".  
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.  
+* Support for 32-bit cursor  
+* Copy and paste files and folders between two virtual desktops  
+* Improved error messages
+* Updated Citrix EPA client to version 23.10.3.
+* Updated Citrix Secure Access client to version 23.10.3.
+* Updated Citrix Workspace App to version 2308.  
+  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2010
+* New features:  
+* HDX Adaptive Transport over EDT
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`HDX Adaptive Transport over EDT`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.allregions.hdxoverudp`                                      |
++------------+-----------------------------------------------------------------+
+|Value       |<>(default), true, and false                                     |
++------------+-----------------------------------------------------------------+
+
+* Note: Update "ica.wfclient.proxytype" = Secure, and "ica.wfclient.proxyhost"
+  in the following format = \<IP>:\<PORT>. For example "192.168.101.37:6153".
+* Enable Packet Loss Concealment to improve audio performance
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable Packet Loss Concealment to improve audio performance`    |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PacketLossConcealmentEnabled`                        |
++------------+-----------------------------------------------------------------+
+|Value       |false (default)/ true                                            |
++------------+-----------------------------------------------------------------+
+
+* Policy tampering detection feature prevents the user from accessing the
+  Virtual App or Desktop session if the App Protection anti-screen capture and
+  anti-keylogging policies are tampered with. If policy tampering is detected.
+
+### OSC Installer
+
+* Added support for custom Unit ID rules. This offers possibility to choose
+  appropriate MAC address of an internal network interface as Unit ID. Please
+  visit the IGEL Knowledge Base for further details / how-to use this feature.
+
+### AVD
+
+* Updated IGEL AVD client to version 1.1.35.
+
+### Remote Desktop (RDP3)
+
+* Added new Remote Desktop client (RDP3) based on Microsoft's RdClientSDK. RDP3
+  sessions have basically the same options like AVD sessions except for their
+  connection details and their separate gateway settings.
+
+### Teradici PCoIP Client
+
+* Updated HP Anyware PCoIP Client to version 23.08.
+
+### WiFi
+
+* Added support for RTL8852CE WiFi chipset - validated on HP Pro t550 Thin
+  Client.
+
+### IGEL Agent for Imprivata
+
+* Added: In FUS and Follow Policies mode, only Citrix sessions being started by
+  the IGEL Agent for Imprivata will be disconnected / signed out, others remain
+  intact.
+* Added: the resource chooser is now part of the lock screen (if lock screen is
+  enabled).
+* Changed chooser from a grid view to list view
+* Added registry key for hiding horizon apps on chooser (and thus show desktops
+  only)
+
++------------+-----------------------------------------------------------------+
+|Registry    |`iia.hide_horizon_apps_on_chooser`                               |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled)                                |
++------------+-----------------------------------------------------------------+
+
+* Added reg key for hiding Citrix apps on chooser (and thus show desktops only)
+
++------------+-----------------------------------------------------------------+
+|Registry    |`iia.hide_citrix_apps_on_chooser`                                |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Added the ability to run Horizon Apps
+* Changed reg key 'iia.query_moniker' from bool to string to hold the moniker
+  name to query for
+
++------------+-----------------------------------------------------------------+
+|Registry    |`iia.query_moniker`                                              |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |""                                                               |
++------------+-----------------------------------------------------------------+
+
+* Fixed: Program rfideas also in FUS mode
+* Fixed: Password change
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 14.2.1.
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI plugin to version 43.10.0.27853.
+
+### Base system
+
+* Added registry keys for changing Intel kernel graphic driver settings:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change settings for Intel PSR (panel self refresh).`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.psr`                                            |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][Enable][Use only up to PSR1][Use up to PSR2] |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Allow PSR2 selective fetch.`                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.psr2_sel_fetch`                                 |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][Enable]                                      |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable GuC load for GuC submission and/or HuC load.`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.guc`                                            |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][GuC submission][HuC load]                    |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Disable display power wells when possible.`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.power_well`                                     |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Auto][always on][disable when possible]               |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+
+* Added further options for Intel kernel graphic driver - via registry keys:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Power saving display C-States to use.`                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.dc_setting`                                     |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][Up to DC5][Up to DC6][Up to DC5 with DC3C0]  |
+|            | [Up to DC6 with DC3C0]                                          |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use framebuffer compression.`                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.fbc_setting`                                    |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][Enable]                                      |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+
+* Enabled DEBUG_INFO_BTF in the kernel.
+* Added further registry keys for influencing power consumption:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use powertop auto tune to reduce power usage`                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.powertop_auto_tune`                            |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+|Value       |**Disable**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use laptop mode to reduce power usage`                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.laptop_mode`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+|Value       |**Disable**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clock down AMDGPU if system is idle (idle action time reached).` |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.clock_down_amdgpu_on_idle`                     |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Set Ryzen CPU to power save mode if system is idle (idle action time reached).` |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.use_ryzenadj_on_idle`                          |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Call idle actions on AC after this time of inactivity (greater 10 seconds, value 9 or lower is never)` |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.idle_action_on_ac`                             |
++------------+-----------------------------------------------------------------+
+|Type        |integer                                                          |
++------------+-----------------------------------------------------------------+
+|Value       |9 **Default**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Call idle actions on battery after this time of inactivity (greater 10 seconds, value 9 or lower is never)` |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.idle_action_on_battery`                        |
++------------+-----------------------------------------------------------------+
+|Type        |integer                                                          |
++------------+-----------------------------------------------------------------+
+|Value       |9 **Default**                                                    |
++------------+-----------------------------------------------------------------+
+
+* Integrated required versions for private build:  
+** Webex Teams Plugin: 43.6.0.26643  
+** Webex Meetings Plugins: 43.6.5.20, 2.10.8.14 and 42.6.11.6  
+** Citrix Workspace Apps: 23.05.0.58, 23.09.02.24 and 20.10.0.6  
+** Zoom Plugins: 5.12.6.22200, 5.13.10.23090, 5.14.10.23670  
+** Kernel with activated CONFIG_DEBUG_INFO_BTF option.
+
+### Driver
+
+* Updated Nuance Citrix Client Audio Extension for dictation to version B308.
+  This fixes several security issues and adds support for Nuance PowerMic 4.
+* Updated dpmuxd of HID Global fingerprint reader driver to version 1114. This
+  fixes sharing the reader in applications (rather than desktops) via Citrix.
+
+### Custom Partition
+
+* Enabled DEBUG_INFO_BTF in the kernel.
+
+### X11 system
+
+* Added new registry key quirk to fix screen stays black after reconfiguration
+  issue on NVIDIA graphic cards.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Quirk to fix NVIDIA issues with screen stays black after reconfiguration.` |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.quirks.nvidia_screen_stay_black`                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+
+### VNC Viewer
+
+* Updated TigerVNC Viewer to version 1.13.1. This adds support for new RSA-AES
+  connection security types. The list of connection security types to use is
+  configurable now.
+
++------------+-----------------------------------------------------------------+
+|Setup       |Sessions>VNC Viewer>VNC Viewer Sessions>Name>Connection          |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Security types`                                                 |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vncviewer<INST>.option.securitytype`                   |
++------------+-----------------------------------------------------------------+
+|Value       |{**}empty{**}                                                    |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Setup       |Sessions>VNC Viewer>VNC Viewer Sessions>Name>Connection          |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Pathname for CA certificates file`                              |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vncviewer<INST>.option.x509capath`                     |
++------------+-----------------------------------------------------------------+
+|Value       |{**}/etc/ssl/certs/ca-certificates.crt{**}                       |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Setup       |Sessions>VNC Viewer>VNC Viewer Sessions>Name>Connection          |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Pathname for certificate revocation list file`                  |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.vncviewer<INST>.option.x509crlpath`                    |
++------------+-----------------------------------------------------------------+
+|Value       |{**}empty{**}                                                    |
++------------+-----------------------------------------------------------------+
+
+### Audio
+
+* Updated EPOS Connect to version 7.7.
+
+### Evidian
+
+* Updated rsUserAuth to version 1.5.8705
+
+### Hardware
+
+* Validated 256GB 2230 PCIe NVMe module for HP t550 and t655.
+* Validated 256GB 2280 PCIe NVMe module for HP t550 and t655.
+* Validated 512GB 2280 PCIe NVMe module for HP t550 and t655.
+* Validated Fujitsu Futro S7011. 
+* Validated Fujitsu Lifebook E5412.
+* Added hardware support for LG 24CR670I-6N.
+* Added AMI BIOS tools support for HP t430, t550, t655 and t740. HP is
+  responsible for the validation and approval of the BIOS update and BIOS
+  settings change features.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Firefox
+
+* Updated Mozilla Firefox browser to version 115.4.0 ESR.  
+  
+  Fixes for mfsa2023-46, also known as: CVE-2023-5721, CVE-2023-5732,
+  CVE-2023-5724, CVE-2023-5725, CVE-2023-5728, CVE-2023-5730.
+
+### Chromium
+
+* Fixed Chromium browser security issues CVE-2023-5996, CVE-2023-5859,
+  CVE-2023-5858, CVE-2023-5857, CVE-2023-5856, CVE-2023-5855, CVE-2023-5854,
+  CVE-2023-5853, CVE-2023-5852, CVE-2023-5851, CVE-2023-5850, CVE-2023-5849,
+  CVE-2023-5482, CVE-2023-5480, CVE-2023-6112 and CVE-2023-5997  
+* Updated Chromium browser to current version 119.0.6045.159.
+
+### Base system
+
+* Fixed open-vm-tools security issues CVE-2023-34059, CVE-2023-34058,
+  CVE-2023-20900 and CVE-2023-20867.  
+* Fixed vim security issues CVE-2023-5535, CVE-2023-5441, CVE-2023-5344,
+  CVE-2023-4781, CVE-2023-4752, CVE-2023-4751, CVE-2023-4750, CVE-2023-4735,
+  CVE-2023-4734, CVE-2023-4733, CVE-2022-4293, CVE-2022-4292, CVE-2022-3705,
+  CVE-2022-3591, CVE-2022-3520, CVE-2022-3491, CVE-2022-3352, CVE-2022-3324,
+  CVE-2022-3297, CVE-2022-3278, CVE-2022-3256, CVE-2022-3235, CVE-2022-3234,
+  CVE-2022-3153, CVE-2022-3134, CVE-2022-3099, CVE-2022-3037, CVE-2022-3016,
+  CVE-2022-2982, CVE-2022-2889, CVE-2022-2874, CVE-2022-2862, CVE-2022-2819,
+  CVE-2022-2817, CVE-2022-2816, CVE-2022-2598, CVE-2022-2580 and CVE-2022-2522.  
+* Fixed krb5 security issue CVE-2023-36054.  
+* Fixed gawk security issue CVE-2023-4156.  
+* Fixed bind9 security issues CVE-2023-4236, CVE-2023-3341, CVE-2023-3341,
+  CVE-2023-2911 and CVE-2023-2828.  
+* Fixed flac security issue CVE-2020-22219.  
+* Fixed ghostscript security issues CVE-2023-38559 and CVE-2023-43115.  
+* Fixed file security issue CVE-2022-48554.  
+* Fixed postgresql-14 security issue CVE-2023-39417.  
+* Fixed libtommath security issue CVE-2023-36328.  
+* Fixed mysql-8.0 security issues CVE-2023-22114, CVE-2023-22112,
+  CVE-2023-22103, CVE-2023-22097, CVE-2023-22092, CVE-2023-22084,
+  CVE-2023-22079, CVE-2023-22078, CVE-2023-22070, CVE-2023-22068,
+  CVE-2023-22066, CVE-2023-22064, CVE-2023-22059, CVE-2023-22032,
+  CVE-2023-22058, CVE-2023-22057, CVE-2023-22056, CVE-2023-22054,
+  CVE-2023-22053, CVE-2023-22048, CVE-2023-22046, CVE-2023-22038,
+  CVE-2023-22033, CVE-2023-22008 and CVE-2023-22005.  
+* Fixed procps security issue CVE-2023-4016.  
+* Fixed cairo security issue CVE-2019-6462.  
+* Fixed cups security issues CVE-2023-4504 and CVE-2023-32360.  
+* Fixed curl security issues CVE-2023-38546, CVE-2023-38545 and CVE-2023-38039.  
+* Fixed qemu security issues CVE-2023-42467, CVE-2023-4135, CVE-2023-40360,
+  CVE-2023-3019, CVE-2021-3750 and CVE-2021-20255.  
+* Fixed webkit2gtk security issues CVE-2023-41993, CVE-2023-41074,
+  CVE-2023-40451, CVE-2023-39928, CVE-2023-39434 and CVE-2023-35074.  
+* Fixed samba security issues CVE-2023-42669, CVE-2023-4154 and CVE-2023-4091.  
+* Fixed tiff security issue CVE-2023-1916.  
+* Fixed aom security issue CVE-2023-39616.  
+* Fixed zulu8-ca security issues CVE-2023-22081 and CVE-2023-22025.  
+* Updated Chromium to version 118.0.5993.117 which fixes following security
+  issues CVE-2023-5472, CVE-2023-5487, CVE-2023-5486, CVE-2023-5485,
+  CVE-2023-5484, CVE-2023-5483, CVE-2023-5481, CVE-2023-5479, CVE-2023-5478,
+  CVE-2023-5477, CVE-2023-5476, CVE-2023-5475, CVE-2023-5474, CVE-2023-5473,
+  CVE-2023-5346, CVE-2023-5218, CVE-2023-5217, CVE-2023-5187, CVE-2023-5186,
+  CVE-2023-4909, CVE-2023-4908, CVE-2023-4907, CVE-2023-4906, CVE-2023-4905,
+  CVE-2023-4904, CVE-2023-4903, CVE-2023-4902, CVE-2023-4901, CVE-2023-4900,
+  CVE-2023-4764, CVE-2023-4763, CVE-2023-4762, CVE-2023-4761, CVE-2023-4572,
+  CVE-2023-4431, CVE-2023-4430, CVE-2023-4429, CVE-2023-4428, CVE-2023-4427,
+  CVE-2023-4368, CVE-2023-4367, CVE-2023-4366, CVE-2023-4365, CVE-2023-4364,
+  CVE-2023-4363, CVE-2023-4362, CVE-2023-4361, CVE-2023-4360, CVE-2023-4359,
+  CVE-2023-4358, CVE-2023-4357, CVE-2023-4356, CVE-2023-4355, CVE-2023-4354,
+  CVE-2023-4353, CVE-2023-4352, CVE-2023-4351, CVE-2023-4350, CVE-2023-4349 and
+  CVE-2023-2312.  
+* Fixed openssl security issues CVE-2023-5363, CVE-2023-3817, CVE-2023-3446 and
+  CVE-2023-2975.  
+* Fixed opensc security issues CVE-2023-4535, CVE-2023-40661 and CVE-2023-40660.  
+* Fixed python-urllib3 security issues CVE-2023-45803 and CVE-2023-43804.  
+* Fixed openvpn security issues CVE-2023-46850 and CVE-2023-46849.  
+* Fixed ffmpeg security issue CVE-2022-4907.  
+* Fixed libvpx security issue CVE-2023-44488.
+* Updated Intel-microcode to version 20231114 to fix security issue
+  CVE-2023-23583.
+
+### X server
+
+* Fixed X.Org-server security issues CVE-2023-5574, CVE-2023-5380 and
+  CVE-2023-5367.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed MS Teams for Citrix Workspace App 2307 and higher
+* Added registry key ica.chrome-double-download to control flock feature at
+  wfica_wrapper. 'Enable flock' blocks double app starts (due to double
+  downloads by Chromium browser).
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Control download mechanic for Citrix applications for Chrome web access` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.chrome-double-download`                                     |
++------------+-----------------------------------------------------------------+
+|Range       | [Enable Lock][Disable Lock]                                     |
++------------+-----------------------------------------------------------------+
+|Value       |enable / **disable** (default)                                   |
++------------+-----------------------------------------------------------------+
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDWeb Access using gateway when direct connection is possible.
+* Fixed RDP session crash after pressing CTRL + ALT + ENTER.
+
+### AVD
+
+* Fixed Pause key to work as expected.
+* Fixed: Calculator key on keyboards opens the calculator app in the AVD
+  session.
+
+### VMware Horizon
+
+* Added possibility to customize waiting time after unplugging a device from a
+  usb port before re-plug - to ensure automatic redirection to remote desktop.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Customize delay time needed between unplug and replug of usb devices` |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.usb-reconnect-delay`                                |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Minimum time (in ms) you have to wait between unplug and replug of redirected usb devices` |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.usb-reconnect-time`                                 |
++------------+-----------------------------------------------------------------+
+|Type        |int                                                              |
++------------+-----------------------------------------------------------------+
+|Value       |6000 **Default**                                                 |
++------------+-----------------------------------------------------------------+
+
+* Added possibility to enable automatic connection for redirected usb devices
+  which are excluded from this mechanism like HID bootable devices by also
+  setting the Device Quirk option in the devices allow rule.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Device Quirk`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`vmware.view.usb.devicepolicy.product_rule%.devicequirk`         |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Fixed mobile broadband support on Lenovo L14/L15 Gen3 AMD with Quectel EM05.
+* Fixed tcpdump debug logging functionality.
+
+### WiFi
+
+* Fixed Mediatek WiFi not working after Suspend / Resume.
+
+### HID
+
+* Fixed handling of ELO touch devices in multi-monitor configuration.
+* Fixed touchscreen configuration for devices using standard mouse interface.
+
+### CUPS Printing
+
+* Fixed CUPS printer model name used in IGEL OS.
+
+### ThinPrint
+
+* Added definition of printer device /dev/usblp which is used for Thinprint
+  printers.  
+  The need for such a device is due to the fact that a usb printer in some cases
+  does not always get named /dev/usblp0 - even if it's the only one.  
+  Note: With more than one usb printer connected at the same time, /dev/usblp
+  should not be used but rather a device specific name based on usb ids, the usb
+  port, or a usb class based device selection.
+
+### Base system
+
+* Fixed x.drivers.kms.debug_level configuration.
+* Fixed user permission configuration of editor mousepad.
+
+### Custom Partition
+
+* Fixed errors during removal of custom partitions.
+
+### X11 system
+
+* Fixed issues with 4K monitors on Lenovo m75n IoT.
+
+### IgelDesktop
+
+* Fixed hiding mouse cursor.
+
+### Audio
+
+* Fixed Sound Mixer default setting.
+
+### Multimedia
+
+* Fixed virtual webcam - choosing webcam by device name.  
+* Added 640x360 as 16:9 resolution to possible webcam resolutions registry key:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select resolution to use.`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.resolution`                |
++------------+-----------------------------------------------------------------+
+|Range       | [webcam default][webcam max][1920x1080][1280x720][640x480]      |
+|            | [640x360][480x360][424x240][320x240][320x180]                   |
++------------+-----------------------------------------------------------------+
+|Value       |**webcam default**                                               |
++------------+-----------------------------------------------------------------+
+
+### Java
+
+* Fixed java runtime environment integration (certificate store)
+```
+
+-----
+
 ## 2023-12-05 - [11.08.469.DER](readme11.08.469.DER.txt)
 
 ```

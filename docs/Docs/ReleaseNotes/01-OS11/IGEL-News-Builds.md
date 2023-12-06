@@ -44,8 +44,6 @@ New Features
 * Support for 32-bit cursor  
 * Copy and paste files and folders between two virtual desktops  
 * Improved error messages
-* Updated Citrix Workspace App to version 2308.  
-  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2010
 * New features:  
 * HDX Adaptive Transport over EDT
 
@@ -72,8 +70,6 @@ New Features
 * Policy tampering detection feature prevents the user from accessing the
   Virtual App or Desktop session if the App Protection anti-screen capture and
   anti-keylogging policies are tampered with. If policy tampering is detected.
-* Updated Citrix Workspace App to version 2309.  
-  Available Citrix Workspace Apps in this release: 2309 (default), 2307 and 2010
 * Enhancement to multiple monitors [Technical Preview]
 
 +------------+-----------------------------------------------------------------+
@@ -105,8 +101,6 @@ New Features
 * Improved error messages
 * Updated Citrix EPA client to version 23.10.3.
 * Updated Citrix Secure Access client to version 23.10.3.
-* Updated Citrix Workspace App to version 2308.  
-  Available Citrix Workspace Apps in this release: 2308 (default), 2307 and 2010
 * New features:  
 * HDX Adaptive Transport over EDT
 
@@ -326,7 +320,6 @@ New Features
 * Integrated required versions for private build:  
 ** Webex Teams Plugin: 43.6.0.26643  
 ** Webex Meetings Plugins: 43.6.5.20, 2.10.8.14 and 42.6.11.6  
-** Citrix Workspace Apps: 23.05.0.58, 23.09.02.24 and 20.10.0.6  
 ** Zoom Plugins: 5.12.6.22200, 5.13.10.23090, 5.14.10.23670  
 ** Kernel with activated CONFIG_DEBUG_INFO_BTF option.
 

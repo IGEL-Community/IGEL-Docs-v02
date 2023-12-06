@@ -154,10 +154,16 @@ UPDATE
 
 - [Citrix Workspace App for Linux 23.09](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#2309)
 
+<!--
+UPDATE
+-->
 ![image017](Images/HOWTO-UCC-Guide-017.png)
 
 - Make sure to configure the right version `Based on Firmware`:
 
+<!--
+UPDATE
+-->
 ![image018](Images/HOWTO-UCC-Guide-018.png)
 
 - If you choose UDP on Citrix, you need to enable UDP Audio on IGEL OS too:
@@ -323,6 +329,9 @@ Computer Config > Admin Templates > Windows Components > Camera changed `Let All
 
 You need to choose the version you want to use (now in the GUI under Unified Communications):
 
+<!--
+UPDATE
+-->
 ![image043](Images/HOWTO-UCC-Guide-043.png)
 
 - Citrix Desktop Configuration (XenApp and XenDesktop)
@@ -535,6 +544,9 @@ Change `Calls ring me` --> if unanswered --> Voicemail --> after 20 Seconds to `
 
 You need to choose the version you want to use, and you can select the use of Smart Virtual Background Support:
 
+<!--
+UPDATE
+-->
 ![image053](Images/HOWTO-UCC-Guide-053.png)
 
 - Citrix Desktop Configuration (XenApp and XenDesktop)
@@ -754,6 +766,9 @@ if you need USB Redirection, please make sure, it is right configured:
 
 You need to choose the version you want to use:
 
+<!--
+UPDATE
+-->
 ![image065](Images/HOWTO-UCC-Guide-065.png)
 
 - VMware VDI Configuration (Horizon 8.x)
@@ -1007,6 +1022,9 @@ Change `Calls ring me` --> if unanswered --> Voicemail --> after 20 Seconds to `
 
 You need to choose the version you want to use, and you can select the use of Smart Virtual Background Support:
 
+<!--
+UPDATE
+-->
 ![image076](Images/HOWTO-UCC-Guide-076.png)
 
 - VMware VDI Configuration (Horizon 8.x)
@@ -1314,6 +1332,9 @@ the Zoom plugins are included in IGEL OS 11.09.150
 
 You need to choose the version you want to use:
 
+<!--
+UPDATE
+-->
 ![image096](Images/HOWTO-UCC-Guide-096.png)
 
 - AVD Configuration

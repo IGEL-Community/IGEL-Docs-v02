@@ -1,7 +1,10 @@
 # HOWTO UCC Guide
 
-- IGEL OS Firmware Base: 11.09.100, 11.09.104
-- IGEL UMS Version Base: 12.01.110
+<!--
+UPDATE
+-->
+- IGEL OS Firmware Base: [11.09.150](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.150.txt)
+- IGEL UMS Version Base: [12.02.130](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.02.130.txt)
 - [IGEL Addendum to UCC Guide](HOWTO-UCC.md)
 -----
 
@@ -27,12 +30,17 @@ If you need additional help, you can contact [IGEL Community](https://www.igelco
 
 IGEL OS:
 
-- IGEL OS 11.09.100 - publicly available (download directly inside UMS)
+<!--
+UPDATE
+-->
+- IGEL OS 11.09.150 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+<!--
 - IGEL OS 11.09.104 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
+-->
 
 IGEL UMS:
 
-- IGEL UMS 12.01.110 - [IGEL download site](https://www.igel.com/software-downloads/)
+- IGEL UMS 12.02.130 - [IGEL download site](https://www.igel.com/software-downloads/)
 
 -----
 
@@ -139,6 +147,9 @@ The new great function is now available for everyone – here are the steps to i
 
 ## Citrix on IGEL OS 11
 
+<!--
+UPDATE
+-->
 ### Citrix Base configuration (HDX optimized) for CWA 23.09
 
 - [Citrix Workspace App for Linux 23.09](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#2309)
@@ -227,7 +238,7 @@ The root cause is, that Microsoft changed in 2021 the PKI provider to SHA2 - if 
 
 [Certificate Services - Migrate form SHA1 to SHA2 (SHA256) | PeteNetLive](https://www.petenetlive.com/KB/Article/0001243)
 
-- With Citrix 1912 LTSR CU5 and 2203 LTSR CU1 some screen artifacts are occurring if you don’t use the right configuration. The problem is now fixed with IGEL OS 11.08.230 but also this workaround helps to solve that:
+- With Citrix 1912 LTSR CU5 and 2203 LTSR CU1 some screen artifacts are occurring if you don’t use the right configuration. The problem is now fixed with IGEL OS 11.08.230 or greater but also this workaround helps to solve that:
 
 On Citrix you need to configure these 5 policies like this:
 
@@ -318,7 +329,10 @@ You need to choose the version you want to use (now in the GUI under Unified Com
 
 Install the right software at the backend infrastructure:
 
-- In IGEL OS 11.09.100 are 3 different versions available:
+<!--
+UPDATE
+-->
+- In IGEL OS 11.09.150 are 3 different versions available:
 
 [42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
 
@@ -326,6 +340,7 @@ Install the right software at the backend infrastructure:
 
 43.6.0.158, not more separately available 
 
+<!--
 - In IGEL OS 11.09.104 are also these 3 different versions available:
 
 [42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
@@ -333,6 +348,7 @@ Install the right software at the backend infrastructure:
 [42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
 
 43.6.0.158, not more separately available 
+-->
 
 [Cisco Webex Meetings Virtual Desktop Software](https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software) to check all what is needed for the installation.
 
@@ -365,7 +381,11 @@ Check if you have the right Connection configuration:
 
 Install the right software at the backend infrastructure: 
 
+<!--
+UPDATE
 Cisco WebEx 43.6.0.26643 (for IGEL OS 11.09.100 and 11.09.104) 
+-->
+Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.150) 
 
 [Only 64-bit installer](https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi)
 
@@ -527,7 +547,12 @@ To be compatible, the plugin version must be equal to or less than the Zoom VDI 
  [VDI backwards compatibility](https://support.zoom.us/hc/en-us/articles/360041602711-VDI-backwards-compatibility)
 
 All VDI Downloads are located here: VDI releases and downloads – Zoom Support 
+
+<!--
+UPDATE
 For IGEL OS 11.09.100 and 11.09.104 you need:
+-->
+For IGEL OS 11.09.150:
 
 [5.15.2.23760, the download is here](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
 
@@ -659,8 +684,11 @@ Clients are available on this page: [Cisco Jabber VDI](https://www.webex.com/dow
 
 **Note:** Only published desktops are supported (no published app support) 
 
+<!--
+UPDATE
 IGEL OS 11.08.360 and 11.08.307 include the client software: **Cisco JVDI 14.1.3**  
-(This is supporting LTSR 2203)
+-->
+IGEL OS 11.09.150 include the client software: **Cisco JVDI 14.2.1**  
 
 Find out which Collaboration Accessories are recommended: [Unified Communications Endpoint and Client Accessories - Cisco](https://www.cisco.com/c/en/us/products/unified-communications/uc_endpoints_accessories.html)
 
@@ -732,22 +760,27 @@ You need to choose the version you want to use:
 
 Install the right software at the backend infrastructure:
 
+<!--
+UPDATE
 In IGEL OS 11.09.100 are 3 different versions available:
-
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
+-->
+In IGEL OS 11.09.150 are 3 different versions available:
 
 [42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
 
+[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
+
 [43.6.0.158], no longer separately available 
 
-
+<!--
 In IGEL OS 11.09.104 are also these 3 different versions available:
 
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
-
 [42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
 
+[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
+
 [43.6.0.158], no longer separately available 
+-->
 
 Installation notes for [Cisco Webex Meetings Virtual Desktop Software](https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software)
 
@@ -779,7 +812,11 @@ Check if you have the right Connection configuration:
 
 Install the right software at the backend infrastructure: 
 
-Cisco WebEx 43.6.0.26643 (for IGEL OS 11.09.100 and 11.09.104) 
+<!--
+UPDATE
+Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.100 and 11.09.104) 
+-->
+Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.150)
 
 [Only 64-bit installer](https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi)
 
@@ -847,11 +884,13 @@ You can check if the connection is configured right:
 
 ![image071](Images/HOWTO-UCC-Guide-071.png)
 
+<!--
+UPDATE
 11.08.360 and 11.08.307 include the right client software: 
+-->
+11.09.150 include the right client software: 
 
-VMware Horizon Client 2206-8.6.0-20094634 support Microsoft Teams optimization 
-
-VMware Horizon Client 2303-8.9.0-21435420 support Microsoft Teams optimization 
+VMware Horizon client 2306-8.10.0-21964631 support Microsoft Teams optimization
 
 [Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2303/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
 
@@ -978,7 +1017,11 @@ If you want to use a perfect Zoom experience on VMware Horizon, you need the cor
 
 All VDI Downloads are located here: [VDI releases and downloads – Zoom Support](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
 
+<!--
+UPDATE
 For IGEL OS 11.09.100 and 11.09.104 you need:
+-->
+For IGEL OS 11.09.150:
 
 [5.15.2.23760](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
 
@@ -1128,7 +1171,11 @@ How to install: [Deployment and Installation Guide for Cisco Jabber Softphone fo
 
 all clients are available on this page [Cisco Jabber VDI](https://www.webex.com/downloads/jabber/jabber-vdi.html)
 
+<!--
+UPDATE
 IGEL OS 11.08.360 and 11.08.307 include the client software: **Cisco JVDI 14.1.3**  
+-->
+IGEL OS 11.09.150 include the client software: **Cisco JVDI 14.2.1**  
 
 Find out which Collaboration Accessories are recommended: [Unified Communications Endpoint and Client Accessories - Cisco](https://www.cisco.com/c/en/us/products/unified-communications/uc_endpoints_accessories.html)
 
@@ -1257,7 +1304,11 @@ If the media optimization is loaded correctly, you will see this banner:
 
 - IGEL OS Configuration (UMS based)
 
+<!--
+UPDATE
 the Zoom plugins are included in IGEL OS 11.08.290 and IGEL OS 11.08.211
+-->
+the Zoom plugins are included in IGEL OS 11.09.150
 
 ![image095](Images/HOWTO-UCC-Guide-095.png)
 
@@ -1275,7 +1326,11 @@ To be compatible, the plugin version must be equal to or less than the Zoom VDI 
 
 All VDI Downloads are located here: VDI releases and downloads – Zoom Support 
 
+<!--
+UPDATE
 For IGEL OS 11.09.100 and 11.09.104 you need:
+-->
+For IGEL OS 11.09.150:
 
 [5.15.2.23760](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
 

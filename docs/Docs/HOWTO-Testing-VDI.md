@@ -2,7 +2,11 @@
 
 VDI vendors provide testing / demo environments. Below are some notes on how to access these environments.
 
+<!---
 ## [IGEL Community UCC Guide](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-UCC/)
+-->
+
+## [IGEL Community UCC Guide](HOWTO-UCC-Guide.md)
 
 ----------
 

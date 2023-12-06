@@ -586,13 +586,17 @@ Close VMware window
 wmctrl -c VMware
 ```
 
-Execute the VMware Horizon client as maximized using wmctrl command
+Execute the VMware Horizon client as maximized for full screen using wmctrl command
 
 ```bash linenums="1"
 #!/bin/bash
 /config/sessions/vdm_client0 &
 sleep 2 &&
+
+#uncomment for maximized
 wmctrl -x -r vmware-view -b add,maximized_vert,maximized_horz
+#uncomment for fullscreen
+#wmctrl -x -r vmware-view -b add,fullscreen
 ```
 
 Bring IGEL UMS Console to the foreground

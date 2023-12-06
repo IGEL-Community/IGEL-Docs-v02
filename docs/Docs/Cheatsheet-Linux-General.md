@@ -586,7 +586,7 @@ Close VMware window
 wmctrl -c VMware
 ```
 
-Execute the VMware Horizon client as maximized for full screen using wmctrl command
+Execute the VMware Horizon client as maximized or full screen using wmctrl command
 
 ```bash linenums="1"
 #!/bin/bash

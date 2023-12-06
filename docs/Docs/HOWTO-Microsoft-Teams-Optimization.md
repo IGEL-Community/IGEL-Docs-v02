@@ -8,6 +8,16 @@
 
 -----
 
+## 6 December 2023 - Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)
+
+The new MS Teams for VDI is publicly available. If you’re using FSLogix as your profile solution, which was not supported during Teams public preview phase, you have to use the FSLogix 2210 hotfix 3 preview which is also available since last night.
+
+**NOTE:** The classic Teams for VDI will be supported until end of June 2024. 
+
+- [Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)](https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy)
+
+-----
+
 ## 5 October 2023 - Microsoft Teams VDI 2.0
 
 Microsoft recently released Microsoft Teams VDI 2.0 in public preview, a complete rewrite of Microsoft Teams. It offers a more streamlined interface, that requires fewer resources while used. 

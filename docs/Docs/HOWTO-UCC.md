@@ -29,6 +29,22 @@ Remove for now
 
 -----
 
+## Latest Known Good Settings for Citrix
+
+**NOTE:** If you are experiencing an issue with Citrix, test with one of these profiles assigned for OS 11 or OS 12. It may not fix the issue, but it is a good place to start.
+ 
+**Tested with IGEL OS 11.09.150 and IGEL OS 12.2.2.**
+
+These are known good settings for Citrix browser content redirection, HDX webcam redirection, and also a setting that if you are in a meeting (Zoom VDI, Teams, Webex Meetings VDI) and are inactive the screensaver will not kick in.
+ 
+This setting also work for VMware and may also work for AVD: `debug.tools.igel-screensaver-monitor.enable`
+ 
+- <a href="../Profiles/HOWTO-UCC-Citrix-Known-Good-Settings.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Citrix-Known-Good-Settings</a> 
+
+- <a href="../Profiles/HOWTO-UCC-Citrix-Known-Good-Settings.ipm" download> Profile OS 12 (.ipm) - HOWTO-UCC-Citrix-Known-Good-Settings</a> 
+
+-----
+
 ## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/igelos-11.08.330/en/virtual-background-for-unified-communication-apps-in-igel-os-88020980.html)
 
 -----

@@ -377,7 +377,7 @@ update
 [How to reset USB controllers](https://unix.stackexchange.com/questions/704341/how-to-reset-usb-controllers)
 
 ```bash linenums="1"
-#!/bin/#!/usr/bin/env bash
+#!/bin/bash
 #set -x
 #trap read debug
 # Resets all USB host controllers of the system.

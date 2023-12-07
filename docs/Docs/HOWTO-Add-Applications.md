@@ -148,13 +148,13 @@ The GitHub site for Custom Partitions (CP) uses build script to automate the cre
 
 There are videos in the link above showing steps to create a CP. In summary the steps are:
 
-- Create Ubuntu VM (18.04 for OS 11 & 20.04 for OS 12)
+- Create Ubuntu VM (18.04 for pre OS 11.09, 22.04 for OS 11.09+, and 20.04 for OS 12)
 - Get the builder script from GitHub and run it on the VM
 - Copy the CP to UMS / File server  (importing, `.inf`, `.tar.bz2`, `.xml`)
 - Update the UMS CP profile for file server name and file location
 - Assign profile to devices
 
-**NOTE:** As of 16 May, 2023 IGEL OS 11 uses Ubuntu 18.04 libraries and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version:
+**NOTE:** As of 12 October, 2023 IGEL OS pre 11.09 uses Ubuntu 18.04 libraries, OS 11.09+ users Ubuntu 22.04 libraries, and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version:
 
 ```bash linenums="1"
 cat /etc/os-release | grep "^VERSION_ID"
@@ -187,7 +187,7 @@ Let us take a look at the build script [build-vlc-cp.sh](https://github.com/IGEL
 #trap read debug
 
 # Creating an IGELOS CP
-## Development machine Ubuntu (OS11 = 18.04; OS12 = 20.04)
+## Development machine Ubuntu (pre OS11.09 = 18.04; OS11.09+ = 22.04; OS12 = 20.04)
 CP="vlc"
 ZIP_LOC="https://github.com/IGEL-Community/IGEL-Custom-Partitions/raw/master/CP_Packages/Apps"
 ZIP_FILE="VLC"
@@ -207,11 +207,14 @@ VERSION_ID=$(grep "^VERSION_ID" /etc/os-release | cut -d "\"" -f 2)
 if [ "${VERSION_ID}" = "18.04" ]; then
   MISSING_LIBS="${MISSING_LIBS_OS11}"
   IGELOS_ID="OS11"
+elif [ "${VERSION_ID}" = "22.04" ]; then
+  MISSING_LIBS="${MISSING_LIBS_OS11}"
+  IGELOS_ID="OS11"
 elif [ "${VERSION_ID}" = "20.04" ]; then
   MISSING_LIBS="${MISSING_LIBS_OS12}"
   IGELOS_ID="OS12"
 else
-  echo "Not a valid Ubuntu OS release. OS11 needs 18.04 (bionic) and OS12 needs 20.04 (focal)."
+  echo "Not a valid Ubuntu OS release. pre OS11.09 needs 18.04 (bionic), OS11.09+ needs 22.04 (jammy), and OS12 needs 20.04 (focal)."
   exit 1
 fi
 

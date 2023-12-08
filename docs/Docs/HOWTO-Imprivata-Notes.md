@@ -10,6 +10,16 @@
 
 -----
 
+## Imprivata Versions for IGEL OS
+
+![image04](Images/HOWTO-Imprivata-Notes-04.png)
+
+**NOTE:** See the following Imprivata document for details: 
+
+`Product Documentation: Supported Components - Imprivata OneSign Last Updated: December 04, 2023`
+
+-----
+
 ## Collect Imprivata Log Files
 
 -----

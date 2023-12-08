@@ -16,9 +16,9 @@ The following is used for the creation of this site:
 
 -----
 
-## GitHub Location
+## GitHub
 
-- GitHub Location: [https://github.com/IGEL-Community/IGEL-Docs-v02](https://github.com/IGEL-Community/IGEL-Docs-v02)
+- GitHub Location for this site: [https://github.com/IGEL-Community/IGEL-Docs-v02](https://github.com/IGEL-Community/IGEL-Docs-v02)
 
 - GitHub Docs: [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 

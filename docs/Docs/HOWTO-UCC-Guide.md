@@ -3,6 +3,8 @@
 <!--
 UPDATE
 -->
+- IGEL UMS Version Base: [12.02.130](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.02.130.txt)
+
 - IGEL OS Firmware Base: [11.09.150](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.150.txt)
 
 | Clients                                   | Version                          |
@@ -48,9 +50,6 @@ UPDATE
 - [Cisco Webex download 42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
 
 - [Cisco Webex download 42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
-
-- IGEL UMS Version Base: [12.02.130](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.02.130.txt)
-
 
 - [IGEL Addendum to UCC Guide](HOWTO-UCC.md)
 -----

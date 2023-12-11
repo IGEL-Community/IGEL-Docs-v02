@@ -19,6 +19,8 @@
     - corresponding Unit IDs will be removed from all registered Product Packs if the IGEL License Portal (ILP) can be reached (ILP level)
     - Thus, the affected licenses are completely removed and can be deployed to another device.
 
+- [Resetting a Device with Unknown Administrator Password](https://kb.igel.com/igelos-11.09/en/resetting-a-device-with-unknown-administrator-password-101059753.html)
+
 -----
 
 ## Summary of steps to remove IGEL device License

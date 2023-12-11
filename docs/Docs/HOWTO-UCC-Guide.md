@@ -4,7 +4,54 @@
 UPDATE
 -->
 - IGEL OS Firmware Base: [11.09.150](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.150.txt)
+
+| Clients                                   | Version                          |
+|-------------------------------------------|----------------------------------|
+| Cisco JVDI Client                         | 14.2.1                           |
+| Cisco Webex Meetings VDI plugin           | 42.10.8.14                       |
+| Cisco Webex Meetings VDI plugin           | 42.6.11.6                        |
+| Cisco Webex Meetings VDI plugin           | 43.6.0.158                       |
+| Cisco Webex VDI plugin                    | 43.10.0.27853                    |
+| Citrix HDX Realtime Media Engine          | 2.9.600                          |
+| Citrix Workspace App                      | 20.10.0.6                        |
+| Citrix Workspace App                      | 23.07.0.17                       |
+| Citrix Workspace App                      | 23.09.0.24                       |
+| IGEL AVD Client                           | 1.1.35igel1700067194             |
+| IGEL RDP Client                           | 2.2igel1700473865                |
+| VMware Horizon client                     | 2306-8.10.0-21964631             |
+| Zoom Media Plugin                         | [5.13.10.23090 - Download]        |
+| Zoom Media Plugin                         | 5.14.10.23670 - Download         |
+| Zoom Media Plugin                         | 5.15.2.23760 - Download          |
+
+- IGEL OS Firmware Base: [11.09.151](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.151.txt)
+
+| Clients                                   | Version                          |
+|-------------------------------------------|----------------------------------|
+| Cisco JVDI Client                         | 14.2.1                           |
+| Cisco Webex Meetings VDI plugin           | 42.10.8.14                       |
+| Cisco Webex Meetings VDI plugin           | 42.6.11.6                        |
+| Cisco Webex Meetings VDI plugin           | 43.6.8.4                         |
+| Cisco Webex VDI plugin                    | 43.10.0.27853                    |
+| Citrix HDX Realtime Media Engine          | 2.9.600                          |
+| Citrix Workspace App                      | 20.10.0.6                        |
+| Citrix Workspace App                      | 23.07.0.17                       |
+| Citrix Workspace App                      | 23.09.0.24                       |
+| IGEL AVD Client                           | 1.1.35igel1700067194             |
+| IGEL RDP Client                           | 2.2igel1700473865                |
+| VMware Horizon client                     | 2306-8.10.0-21964631             |
+| Zoom Media Plugin                         | 5.14.10.23670                    |
+| Zoom Media Plugin                         | 5.15.2.23760                     |
+| Zoom Media Plugin                         | 5.16.0.24280                     |
+
+- [Zoom VDI releases and downloads](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
+
+- [Cisco Webex download 42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
+
+- [Cisco Webex download 42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
+
 - IGEL UMS Version Base: [12.02.130](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.02.130.txt)
+
+
 - [IGEL Addendum to UCC Guide](HOWTO-UCC.md)
 -----
 
@@ -34,9 +81,7 @@ IGEL OS:
 UPDATE
 -->
 - IGEL OS 11.09.150 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-<!--
-- IGEL OS 11.09.104 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
--->
+- IGEL OS 11.09.151 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 
 IGEL UMS:
 
@@ -338,26 +383,7 @@ UPDATE
 
 Install the right software at the backend infrastructure:
 
-<!--
-UPDATE
--->
-- In IGEL OS 11.09.150 are 3 different versions available:
-
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
-
-[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
-
-43.6.0.158, not more separately available 
-
-<!--
-- In IGEL OS 11.09.104 are also these 3 different versions available:
-
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
-
-[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
-
-43.6.0.158, not more separately available 
--->
+**NOTE:** All VDI downloads are at the top of this guide
 
 [Cisco Webex Meetings Virtual Desktop Software](https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software) to check all what is needed for the installation.
 
@@ -390,11 +416,7 @@ Check if you have the right Connection configuration:
 
 Install the right software at the backend infrastructure: 
 
-<!--
-UPDATE
-Cisco WebEx 43.6.0.26643 (for IGEL OS 11.09.100 and 11.09.104) 
--->
-Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.150) 
+Cisco WebEx
 
 [Only 64-bit installer](https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi)
 
@@ -558,19 +580,7 @@ If you want to use a perfect Zoom experience on Citrix Desktop, you need the cor
 To be compatible, the plugin version must be equal to or less than the Zoom VDI application version. Installing a plugin with a version greater than the Zoom VDI application is not supported. Zoom always recommends updating the Zoom Plugin after updating the Zoom VDI application as many new features require an updated plugin.
  [VDI backwards compatibility](https://support.zoom.us/hc/en-us/articles/360041602711-VDI-backwards-compatibility)
 
-All VDI Downloads are located here: VDI releases and downloads – Zoom Support 
-
-<!--
-UPDATE
-For IGEL OS 11.09.100 and 11.09.104 you need:
--->
-For IGEL OS 11.09.150:
-
-[5.15.2.23760, the download is here](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
-
-[5.14.10.23670, you can download here](https://zoom.us/download/vdi/5.14.10.23670/ZoomInstallerVDI.msi)
-
-[5.13.10.23090, the download is here](https://zoom.us/download/vdi/5.13.10.23090/ZoomInstallerVDI.msi)
+**NOTE:** All VDI downloads are at the top of this guide
 
 For Citrix XenDesktop or Citrix XenApp installation you should use at least these parameters:
 
@@ -696,12 +706,6 @@ Clients are available on this page: [Cisco Jabber VDI](https://www.webex.com/dow
 
 **Note:** Only published desktops are supported (no published app support) 
 
-<!--
-UPDATE
-IGEL OS 11.08.360 and 11.08.307 include the client software: **Cisco JVDI 14.1.3**  
--->
-IGEL OS 11.09.150 include the client software: **Cisco JVDI 14.2.1**  
-
 Find out which Collaboration Accessories are recommended: [Unified Communications Endpoint and Client Accessories - Cisco](https://www.cisco.com/c/en/us/products/unified-communications/uc_endpoints_accessories.html)
 
 **Important hint:** You want to use Cisco WebEx and Cisco Jabber in parallel? 
@@ -775,27 +779,7 @@ UPDATE
 
 Install the right software at the backend infrastructure:
 
-<!--
-UPDATE
-In IGEL OS 11.09.100 are 3 different versions available:
--->
-In IGEL OS 11.09.150 are 3 different versions available:
-
-[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
-
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
-
-[43.6.0.158], no longer separately available 
-
-<!--
-In IGEL OS 11.09.104 are also these 3 different versions available:
-
-[42.10.8.14](https://akamaicdn.webex.com/client/WBXclient-42.10.8-14/webexapp.msi)
-
-[42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
-
-[43.6.0.158], no longer separately available 
--->
+**NOTE:** All VDI downloads are at the top of this guide
 
 Installation notes for [Cisco Webex Meetings Virtual Desktop Software](https://help.webex.com/en-us/nfjsqzbb/Cisco-Webex-Meetings-Virtual-Desktop-Software)
 
@@ -826,12 +810,6 @@ Check if you have the right Connection configuration:
 - VMware VDI Configuration (Horizon 8.x)
 
 Install the right software at the backend infrastructure: 
-
-<!--
-UPDATE
-Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.100 and 11.09.104) 
--->
-Cisco WebEx 43.10.0.27853 (for IGEL OS 11.09.150)
 
 [Only 64-bit installer](https://binaries.webex.com/Webex-Desktop-Windows-x64-Combined-VDI-Gold/20230711062013/WebexBundle.msi)
 
@@ -899,13 +877,7 @@ You can check if the connection is configured right:
 
 ![image071](Images/HOWTO-UCC-Guide-071.png)
 
-<!--
-UPDATE
-11.08.360 and 11.08.307 include the right client software: 
--->
-11.09.150 include the right client software: 
-
-VMware Horizon client 2306-8.10.0-21964631 support Microsoft Teams optimization
+IGEL OS 11 includes the right client software.
 
 [Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2303/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
 
@@ -1035,17 +1007,7 @@ If you want to use a perfect Zoom experience on VMware Horizon, you need the cor
 
 All VDI Downloads are located here: [VDI releases and downloads – Zoom Support](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
 
-<!--
-UPDATE
-For IGEL OS 11.09.100 and 11.09.104 you need:
--->
-For IGEL OS 11.09.150:
-
-[5.15.2.23760](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
-
-[5.14.10.23670](https://zoom.us/download/vdi/5.14.10.23670/ZoomInstallerVDI.msi)
-
-[5.13.10.23090](https://zoom.us/download/vdi/5.13.10.23090/ZoomInstallerVDI.msi)
+**NOTE:** All VDI downloads are at the top of this guide
 
 For VMware Horizon 7.x and 8.x installation you should use these parameters:
 
@@ -1189,12 +1151,6 @@ How to install: [Deployment and Installation Guide for Cisco Jabber Softphone fo
 
 all clients are available on this page [Cisco Jabber VDI](https://www.webex.com/downloads/jabber/jabber-vdi.html)
 
-<!--
-UPDATE
-IGEL OS 11.08.360 and 11.08.307 include the client software: **Cisco JVDI 14.1.3**  
--->
-IGEL OS 11.09.150 include the client software: **Cisco JVDI 14.2.1**  
-
 Find out which Collaboration Accessories are recommended: [Unified Communications Endpoint and Client Accessories - Cisco](https://www.cisco.com/c/en/us/products/unified-communications/uc_endpoints_accessories.html)
 
 **Important hint:**
@@ -1322,11 +1278,7 @@ If the media optimization is loaded correctly, you will see this banner:
 
 - IGEL OS Configuration (UMS based)
 
-<!--
-UPDATE
-the Zoom plugins are included in IGEL OS 11.08.290 and IGEL OS 11.08.211
--->
-the Zoom plugins are included in IGEL OS 11.09.150
+the Zoom plugins are included in IGEL OS 11
 
 ![image095](Images/HOWTO-UCC-Guide-095.png)
 
@@ -1347,17 +1299,7 @@ To be compatible, the plugin version must be equal to or less than the Zoom VDI 
 
 All VDI Downloads are located here: VDI releases and downloads – Zoom Support 
 
-<!--
-UPDATE
-For IGEL OS 11.09.100 and 11.09.104 you need:
--->
-For IGEL OS 11.09.150:
-
-[5.15.2.23760](https://zoom.us/download/vdi/5.15.2.23760/ZoomInstallerVDI.msi)
-
-[5.14.10.23670](https://zoom.us/download/vdi/5.14.10.23670/ZoomInstallerVDI.msi)
-
-[5.13.10.23090](https://zoom.us/download/vdi/5.13.10.23090/ZoomInstallerVDI.msi)
+**NOTE:** All VDI downloads are at the top of this guide
 
 For AVD installation you should use these parameters:
 

@@ -623,11 +623,10 @@ wmctrl -i -a $(wmctrl -l | grep igelums | cut -f 1)
 
 ## zenity
 
- Display dialog window, and return (either in the return code, or on standard output) the users input
+Display dialog window, and return (either in the return code, or on standard output) the users input
 
- ```bash linenums="1"
- #!/bin/bash
-
+```bash linenums="1"
+#!/bin/bash
 Zenity_String=$(zenity --forms --title="Create user" --text="Add new user" \
   --add-entry="First Name" \
   --add-entry="Last Name" \
@@ -642,4 +641,4 @@ Last_Name=$(echo $Zenity_String | cut -d "|" -f 2)
 echo "Zenity String: " $Zenity_String
 echo "First Name: " $First_Name
 echo "Last Name: " $Last_Name
- ```
+```

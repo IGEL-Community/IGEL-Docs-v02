@@ -642,3 +642,22 @@ echo "Zenity String: " $Zenity_String
 echo "First Name: " $First_Name
 echo "Last Name: " $Last_Name
 ```
+
+## dig
+
+DNS lookup utility
+
+```bash linenums="1"
+#!/bin/bash
+
+MACHINE="goober.mydomainname.com"
+
+# use the dig command to resolve an IP only on client network
+if [ "$(dig $MACHINE +short)" ]; then
+  echo "On the client network"
+  echo "do some on network work now"
+else
+  echo "Not on client network"
+  echo "do some off network work now"
+fi
+```

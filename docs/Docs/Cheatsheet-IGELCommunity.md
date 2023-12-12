@@ -50,6 +50,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [conky](Cheatsheet-Linux-General.md#conky)                 | :material-check-bold: | :material-check-bold: | a system monitor |
 | [cp](Cheatsheet-Linux-General.md#cp)                       | :material-check-bold: | :material-check-bold: | copy files and folders                     |
 | [date](Cheatsheet-Linux-General.md#date)                   | :material-check-bold: | :material-check-bold: | date tool                                  |
+| [dig](Cheatsheet-Linux-General.md#dig)                       | :material-check-bold: | :material-check-bold: | DNS lookup utility |
 | [echo](Cheatsheet-Linux-General.md#echo)                   | :material-check-bold: | :material-check-bold: | output strings                             |
 | [find](Cheatsheet-Linux-General.md#find)                   | :material-check-bold: | :material-check-bold: | search for files in a directory hierarchy  |
 | [grep](Cheatsheet-Linux-General.md#grep)                   | :material-check-bold: | :material-check-bold: | search for regular expression              |

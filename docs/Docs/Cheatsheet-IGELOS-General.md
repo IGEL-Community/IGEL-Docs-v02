@@ -254,26 +254,3 @@ Reset defined section of the IGEL registry
 /bin/killwait_postsetupd
 /sbin/write_rmsettings
 ```
-
-## zenity
-
- Display dialog window, and return (either in the return code, or on standard output) the users input
-
- ```bash linenums="1"
- #!/bin/bash
-
-Zenity_String=$(zenity --forms --title="Create user" --text="Add new user" \
-  --add-entry="First Name" \
-  --add-entry="Last Name" \
-  --add-entry="Username" \
-  --add-password="Password" \
-  --add-password="Confirm Password" \
-  --add-calendar="Expires")
-
-First_Name=$(echo $Zenity_String | cut -d "|" -f 1)
-Last_Name=$(echo $Zenity_String | cut -d "|" -f 2)
-
-echo "Zenity String: " $Zenity_String
-echo "First Name: " $First_Name
-echo "Last Name: " $Last_Name
- ```

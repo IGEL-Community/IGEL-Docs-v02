@@ -1,4 +1,4 @@
-# HOWTO Frame (Dizzin powered by Frame)
+# HOWTO Frame (Dizzion powered by Frame)
 
 [Dizzion Powered by Frame Test Drive](https://www.dizzion.com/test-drive)
 

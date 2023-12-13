@@ -25,7 +25,7 @@
 
 [IGEL KB - OS 11 - Getting a Demo License](https://kb.igel.com/licensesmore-igelos11/en/getting-a-demo-license-10334222.html)
 
-[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)
+[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.09/en/overview-first-steps-with-igel-os-11-101058650.html)
 
 <!---
 This is a comment section

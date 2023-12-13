@@ -157,10 +157,10 @@ sudo reboot now
 
 ## Install UMS on Linux
 
-- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-under-linux-81494549.html)
+- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-installation-under-linux-108340916.html)
 - sudo ./setup-igel-ums-linux-[version].bin
 
-**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-installation-under-windows-77864446.html)
+**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-installation-under-windows-108340967.html)
 
 - IGEL Community on GitHub UMS Console setup - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
 -----
@@ -183,7 +183,7 @@ VirtualBox > New
 - Disk file to install from: `path to IGEL OS 11 / 12 ISO file`
 - Start
 
-Follow IGEL OS 11 installation procedures - [LINK](https://kb.igel.com/igelos-11.08/en/installation-procedure-63805133.html)
+Follow IGEL OS 11 installation procedures - [LINK](https://kb.igel.com/igelos-11.09/en/installation-procedure-101061866.html)
 
 Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html)
 
@@ -191,20 +191,20 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosm
 
 ## Registering Devices on the UMS Server
 
-- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-12.01/en/registering-igel-os-devices-on-the-ums-server-77864528.html)
+- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-12.03/en/registering-igel-os-devices-on-the-ums-server-108341130.html)
 
 -----
 
 ## Run UMS Web App
 
 - Start UMS Web App - `https://<UMS-Server>:8443/webapp/#/login`
-- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-web-app-77865357.html)
+- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-web-app-108342253.html)
 
 -----
 
 ## UMS to/from IGEL OS 11 Communication ports (NO ICG)
 
-[UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html)
+[UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-communication-ports-108340029.html)
 
 ### Core Communication UMS / OS 11
 

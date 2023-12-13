@@ -162,9 +162,9 @@ login as "user" or "root": root
 
 These device profiles can be used to see all settings for a device and can also be used to compare two devices.
 
-[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.01/en/import-devices-as-profiles-77864828.html)
+[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.02/en/import-devices-as-profiles-90236548.html)
 
-[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.01/en/comparing-profiles-in-the-igel-ums-77864660.html)
+[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.03/en/comparing-profiles-in-the-igel-ums-108341379.html)
 
 The following steps will:
 
@@ -179,7 +179,7 @@ The following steps will:
 
 ## Tips for prepping PC for IGEL OS install
 
-- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/igelos-11.08/en/bios-update-for-devices-supported-by-lvfs-63806668.html).
+- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/igelos-11.09/en/bios-update-for-devices-supported-by-lvfs-101059165.html).
 - Make sure BIOS is set back to default settings.
 - Check for and apply BIOS settings for Ubuntu 18.04.
 
@@ -203,7 +203,7 @@ Save the change and reboot without the “Force VESA driver” option being set.
 
 [IGEL OS Boot Menu Explained – Video](https://videos.igelcommunity.com/igel-os-boot-menu-explained-video/)
 
-[IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.08/en/boot-menu-63804218.html)
+[IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.09/en/boot-menu-101060905.html)
 
 ### Try VESA only boot
 
@@ -262,7 +262,7 @@ rm -rf $tmp_dir
 
 The IGEL Linux Registry offers a number of extended logging options that can help customers, Support and PreSales debug system and network issues.
 
-[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/igelos-11.08/en/extended-logging-with-syslog-tcpdump-and-netlog-63803234.html)
+[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/igelos-11.09/en/extended-logging-with-syslog-tcpdump-and-netlog-101059833.html)
 
 -----
 
@@ -353,7 +353,8 @@ update
 
 | Under the igelos/amd64 and igelos/arm64 paths, the subpaths for the various versions of IGEL OS public and private. |
 |-----------------------|
-| igelos/amd64/11.08.360 |
+| igelos/amd64/11.09.150 |
+| igelos/amd64/11.08.440 |
 | igelos/amd64/11.07.920 |
 | igelos/amd64/11.07.170 |
 | igelos/arm64/11.02.120 |
@@ -370,7 +371,7 @@ update
 
 [Lenovo - BIOS simulator](https://download.lenovo.com/bsco/) shows how to navigate the BIOS for each hardware type.
 
-[Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/igelos-11.08/en/new-features-11-07-170-63805526.html). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
+[Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/igelos-11.09/en/new-features-11-07-170-101062351.html). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
 
 [Microsoft Surface](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
 

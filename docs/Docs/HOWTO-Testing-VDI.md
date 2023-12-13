@@ -24,11 +24,11 @@ Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions th
 
 ### [IGEL Ready Partner - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
 
-### [IGEL KB: AVD Session](https://kb.igel.com/igelos-11.08/en/avd-session-63804667.html)
+### [IGEL KB: AVD Session](https://kb.igel.com/igelos-11.09/en/avd-session-101061382.html)
 
-### [IGEL KB: AVD Global](https://kb.igel.com/igelos-11.08/en/avd-global-63804664.html)
+### [IGEL KB: AVD Global](https://kb.igel.com/igelos-11.09/en/avd-global-101061379.html)
 
-### [IGEL KB: AVD Articles](https://kb.igel.com/igelos-11.08/en/microsoft-azure-virtual-desktop-avd-63802873.html)
+### [IGEL KB: AVD Articles](https://kb.igel.com/igelos-11.09/en/microsoft-azure-virtual-desktop-avd-101059452.html)
 
 -----
 
@@ -48,9 +48,9 @@ VMware TestDrive is a self-service, cloud-hosted product demonstration platform 
 
 ### [Getting Started with TestDrive](https://kb.vmtestdrive.com/a/1543022-getting-started-with-testdrive)
 
-### [IGEL KB: VMware Horizon Session](https://kb.igel.com/igelos-11.08/en/horizon-client-session-63804424.html)
+### [IGEL KB: VMware Horizon Session](https://kb.igel.com/igelos-11.09/en/horizon-client-session-101061117.html)
 
-### [IGEL KB:  VMware Horizon Articles](https://kb.igel.com/igelos-11.08/en/vmware-horizon-63802798.html)
+### [IGEL KB:  VMware Horizon Articles](https://kb.igel.com/igelos-11.09/en/vmware-horizon-101059377.html)
 
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.discovery.vmware.com`
 
@@ -63,9 +63,9 @@ Trials for individual Citrix Cloud services are delivered through the Citrix Clo
 
 When you’re ready to buy Citrix Cloud services, your trial is converted to a production service. There’s no need to reconfigure anything or create a separate production account.
 
-### [IGEL KB: Citrix Sessions](https://kb.igel.com/igelos-11.08/en/citrix-63804297.html)
+### [IGEL KB: Citrix Sessions](https://kb.igel.com/igelos-11.09/en/citrix-101060984.html)
 
-### [IGEL KB: Citrix Articles](https://kb.igel.com/igelos-11.08/en/citrix-63802641.html)
+### [IGEL KB: Citrix Articles](https://kb.igel.com/igelos-11.09/en/citrix-101059202.html)
 
 ### For Citrix Partners
 

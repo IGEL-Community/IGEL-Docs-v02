@@ -4,7 +4,7 @@
 
 **NOTE:** This guide follows KB article -- First Steps with IGEL OS 11 and adds optional IGEL Cloud Gateway (ICG) setup.
 
-[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)
+[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.09/en/overview-first-steps-with-igel-os-11-101058650.html)
 
 -----
 
@@ -63,10 +63,10 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | IGEL   | ++delete++     |
 | LG     | ++f10++      |
 | Lenovo | ++fn+f12++ |
-| Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.08/en/ud-pocket-breaks-microsoft-surface-63804118.html) |
+| Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.09/en/ud-pocket-seems-to-break-microsoft-surface-101060747.html) |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
--	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.08/en/installation-procedure-63805133.html)
+-	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/igelos-11.09/en/installation-procedure-101061866.html)
 -	[OS 12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html). Choose the options best for you.
 -	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. [See a tutorial video for installing IGEL OS here](https://www.youtube.com/watch?v=w-EMUDS5Tb0).
 
@@ -110,7 +110,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 ### Prepare the Server
 
 - UMS can install on several 64-bit Windows and Linux operating systems.
-- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.01/en/installation-requirements-for-the-igel-ums-77864394.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
+- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.02/en/installation-requirements-for-the-igel-ums-90235884.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
 - The UMS can be installed on-prem or in the cloud (Azure, AWS, Hosting Providers, etc.) on a physical or virtual machine.
 
 ### Install the UMS Software
@@ -123,7 +123,7 @@ The Installation Wizard will cover the following setup items:
 -	End User License Agreement
 -	Target directory for installation (default recommended)
 -	Select Components (defaults recommended – this will install the UMS software, embedded database, Java console and web console)
--	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-12.01/en/changing-the-ums-superuser-77865352.html), which is a separate application from the UMS Console.)
+-	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-12.03/en/changing-the-ums-superuser-108342237.html), which is a separate application from the UMS Console.)
 -	UMS data directory (default recommended)
 -	Start menu folder (default recommended)
 -	Network Ports (UMS will do a port check and open required network ports on the local server for you if you allow it)
@@ -134,7 +134,7 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 ### Configure UMS Network Ports
 
-The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.01/en/igel-ums-communication-ports-77869550.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
+The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-communication-ports-108340029.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
 - Legend
 
@@ -423,7 +423,7 @@ From the endpoint running IGEL OS (not from the UMS):
 
 -	In UMS, go to UMS Administration > UMS Global Configuration > Licenses > Deployment and hit the refresh button in the top right menu and your licenses from the ILP should appear in the window.
 
--	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-12.01/en/automatic-license-deployment-ald-77863879.html).
+-	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-12.03/en/automatic-license-deployment-ald-108340185.html).
 
 -----
 
@@ -450,13 +450,13 @@ Setup of the ICG Server can be done in four steps:
 
 ### Prepare the Linux Machine
 
-[Here is a list of prerequisites](https://kb.igel.com/igelicg-12.01/en/prerequisites-81512147.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
+[Here is a list of prerequisites](https://kb.igel.com/igelicg-12.02/en/prerequisites-90238175.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
 
 For example, RHEL users may find it necessary to [install Python 3](https://www.scaler.com/topics/python/install-python-on-linux/) and set [SELinux to permissive mode](https://www.thegeekdiary.com/how-to-disable-or-set-selinux-to-permissive-mode/) in order for ICG to work correctly. Ubuntu 18.04 users may not require these additional steps. Depending on your level of expertise with Linux, [you may find additional help here](https://kb.igel.com/igelicg-2.05/en/preparing-a-linux-machine-for-installing-igel-cloud-gateway-icg-57324550.html) with things like creating the root account or setting a static IP. The version of Linux you use is entirely up to you if it is supported.
 
 Additionally, we recommend that the server/VM hosting ICG have 8GB of RAM/vRAM, 2 CPU cores, and 20GB of available disk space. 
 
-[We also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-12.01/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-81512461.html).
+[We also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-12.02/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-90238447.html).
 
 **NOTE:** Do NOT use “icg” as the name of your account in Linux!  This name is reserved for use by IGEL!
 
@@ -613,7 +613,7 @@ You may also refer to the IGEL KB for these instructions on installing ICG.
 
 Manual Installation via Linux Command Line
 
-It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-12.01/en/installing-the-icg-without-remote-installer-81512539.html)
+It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-12.02/en/installing-the-icg-without-remote-installer-90238526.html).
 
 ### Connecting an Endpoint to ICG
 
@@ -742,4 +742,4 @@ You can now manage devices that are outside the corporate network via UMS and IC
     * ~100kB per device
     * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
  
-[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-12.01/en/installation-and-sizing-guidelines-for-igel-ums-77864359.html)
+[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-12.03/en/installation-and-sizing-guidelines-for-igel-ums-108341012.html).

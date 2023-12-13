@@ -38,7 +38,7 @@ OpenConnect is a cross-platform multi-protocol SSL VPN client which supports a n
 
 ## Steps to enable OpenConnect VPN Client
 
-IGEL Knowledge Base: [OpenConnect VPN](https://kb.igel.com/igelos-11.08/en/openconnect-vpn-63804977.html)
+IGEL Knowledge Base: [OpenConnect VPN](https://kb.igel.com/igelos-11.09/en/openconnect-vpn-101061696.html)
 
 -----
 
@@ -100,7 +100,7 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 
 ## OpenVPN
 
-- IGEL Knowledge Base: [OpenVPN](https://kb.igel.com/igelos-11.08/en/openvpn-63804963.html)
+- IGEL Knowledge Base: [OpenVPN](https://kb.igel.com/igelos-11.09/en/openvpn-101061682.html)
 
 - [Reference manual for OpenVPN](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/)
 

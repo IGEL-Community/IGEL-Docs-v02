@@ -45,7 +45,7 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 -----
 
-## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/igelos-11.08.330/en/virtual-background-for-unified-communication-apps-in-igel-os-88020980.html)
+## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/igelos-11.09/en/virtual-background-for-unified-communication-apps-in-igel-os-101060714.html)
 
 -----
 
@@ -53,7 +53,7 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.
 
-- [When to use USB Redirection](https://kb.igel.com/igelos-11.08/en/when-to-use-usb-redirection-63804088.html)
+- [When to use USB Redirection](https://kb.igel.com/igelos-11.09/en/when-to-use-usb-redirection-101060695.html)
 
 -----
 
@@ -109,7 +109,7 @@ Sample profile to use with 11.08.360 and above for HDX webcam redirection. Teste
 
 <a href="../Profiles/HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920.xml" download> HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920</a> 
 
-[KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/igelos-11.08.330/en/hdx-multimedia-settings-for-an-igel-os-citrix-session-88021271.html)
+[KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/igelos-11.09/en/hdx-multimedia-settings-for-an-igel-os-citrix-session-101061004.html)
  
 Also, please note that if using Chromium to connect to Citrix to set the following in the registry for the session: sessions.chromium10256.gstreamer_version = 1.0
 

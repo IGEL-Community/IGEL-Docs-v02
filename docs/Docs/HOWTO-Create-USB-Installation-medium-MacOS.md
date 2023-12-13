@@ -2,9 +2,9 @@
 
 ## IGEL OS Creator Manual
 
-### [Create USB installation medium (Windows)](https://kb.igel.com/igelos-11.08/en/create-usb-installation-medium-windows-63805122.html)
+### [Create USB installation medium (Windows)](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-windows-101061855.html)
 
-### [Create USB installation medium (Linux)](https://kb.igel.com/igelos-11.08/en/create-usb-installation-medium-linux-63805129.html)
+### [Create USB installation medium (Linux)](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-linux-101061862.html)
 
 -----
 

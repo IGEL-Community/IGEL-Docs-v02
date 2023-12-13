@@ -22,7 +22,7 @@ VMware Fusion supports bridged networking.
 
 ## Steps to setup IGEL OS VM using VMware Fusion version
 
-- Create new Virtual Machine (select IGEL ISO image > OSC11.08.230.iso)
+- Create new Virtual Machine (select IGEL ISO image > OSC11.09.150.iso)
 - Choose Operating System (Other > Other 64-bit)
 - Choose Firmware Type (Legacy BIOS)
 - Change memory from 256 MB to 4096 MB

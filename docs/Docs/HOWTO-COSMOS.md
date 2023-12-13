@@ -244,7 +244,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Does OS 12 support SCCM deployments?
 
-**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.08.330/en/igel-os-sccm-add-on-88022481.html)
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.09/en/igel-os-sccm-add-on-101062241.html)
 
 **Q:** Does OS 12 support PXE boot deployments?
 
@@ -260,7 +260,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.01/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-77864040.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-DeployingaCertificateChainwithaPublicRootCADeployingaCertificateChainwithaPublicRootCA)
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.03/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-108340489.html)
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -329,7 +329,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.01/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-88016384.html). Fixed in [ICG 12.02.100](https://kb.igel.com/igelicg-12.02/en/resolved-issues-icg-12-02-100-90239446.html).
+**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.02/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-90238621.html).
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 
@@ -431,7 +431,7 @@ sequenceDiagram
 
 **Q:** How to pass Microsoft Excel keyboard shortcut keys?
 
-**A:** [Microsoft Excel keyboard shortcut keys](https://www.computerhope.com/shortcut/excel.htm) can be passed to AVD session by enabling `System > app > avd > avd% > options > remote-keymapping`. In OS 11 (11.08.330) `System > Registry > sessions.wvd%.options.remote-keymapping`
+**A:** [Microsoft Excel keyboard shortcut keys](https://www.computerhope.com/shortcut/excel.htm) can be passed to AVD session by enabling `System > app > avd > avd% > options > remote-keymapping`. In OS 11 `System > Registry > sessions.wvd%.options.remote-keymapping`
 
 -----
 

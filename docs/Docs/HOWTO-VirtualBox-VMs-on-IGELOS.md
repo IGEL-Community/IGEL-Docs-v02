@@ -21,7 +21,7 @@
 ### Steps to be done on PC:
 
 - Download ISO image [GParted Live iso](https://gparted.org/download.php)
-- Image USB device [Windows OS](https://kb.igel.com/igelos-11.08/en/create-usb-installation-medium-windows-63805122.html)
+- Image USB device [Windows OS](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-windows-101061855.html)
 or [MacOS](HOWTO-Create-USB-Installation-medium-MacOS)
 
 

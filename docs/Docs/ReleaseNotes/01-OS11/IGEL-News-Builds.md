@@ -14,6 +14,29 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-12-14 - [11.09.153](readme11.09.153.txt)
+
+```
+The new PRIVATE BUILD 11.09.153 for IGEL Workspace is ready.
+
+This build is based on 11.09.151.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Integrated Webex VDI 43.10.0.28101
+
+### zoomvdi
+
+* Integrated Zoom VDI 5.16.10.24420
+```
+
+-----
+
 ## 2023-12-11 - [11.09.151](readme11.09.151.txt)
 
 ```

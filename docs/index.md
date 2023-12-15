@@ -3,8 +3,6 @@
 IGEL Community Docs is a repository hosting of the IGEL Community related documentation.
 This documentation is without any warranty or support by IGEL Technology.
 
-![image001](Docs/Images/QR-igel-docs.png)
-
 ----------
 
 ----------
@@ -190,3 +188,21 @@ These documents can be used if IGEL KB site is offline for maintenance.
 ### How was this site created?
 
 - [HOWTO Tools Used for this Site](Docs/HOWTO-Tools-Used-for-this-Site.md)
+
+----------
+
+----------
+
+### QR Codes
+
+- IGEL Community Docs
+
+![image001](Docs/Images/QR-igel-docs.png)
+
+- IGEL Community Docs - UCC Guide
+
+![image002](Docs/Images/QR-igel-docs-ucc-guide.png)
+
+- IGEL Community Docs - Cosmos FAQ
+
+![image003](Docs/Images/QR-igel-docs-cosmos.png)

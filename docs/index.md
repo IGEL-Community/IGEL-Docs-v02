@@ -3,7 +3,7 @@
 IGEL Community Docs is a repository hosting of the IGEL Community related documentation.
 This documentation is without any warranty or support by IGEL Technology.
 
-![image001](Images/QR-igel-docs.png)
+![image001](Docs/Images/QR-igel-docs.png)
 
 ----------
 

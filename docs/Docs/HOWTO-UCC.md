@@ -33,7 +33,7 @@ Remove for now
 
 **NOTE:** If you are experiencing an issue with Citrix, test with one of these profiles assigned for OS 11 or OS 12. It may not fix the issue, but it is a good place to start.
  
-**Tested with IGEL OS 11.09.150 and IGEL OS 12.2.2.**
+**Tested with IGEL OS 11.09.150 and IGEL OS 12.3.0.**
 
 These are known good settings for Citrix browser content redirection, HDX webcam redirection, and also a setting that if you are in a meeting (Zoom VDI, Teams, Webex Meetings VDI) and are inactive the screensaver will not kick in.
  

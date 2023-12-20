@@ -211,6 +211,14 @@ App instance (WMAppinstance):  igel_screensaver
 
 -----
 
+## 20 December 2023 - Update
+
+### TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12
+
+When updating to IGEL OS 11.09.xxx and P and Prove ID Embedded 7.12 or later, ensure that TLS 1.3 is enabled on F5 or ADC/NetScaler. If it is not, then may no longer be able to connect to Citrix Virtual Apps and Desktops.
+
+-----
+
 ## 17 November 2023 - Update
 
 ### Issue with TLS v1.3 (Windows Server 2019 and Windows 10)

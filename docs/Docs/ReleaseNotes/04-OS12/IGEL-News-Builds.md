@@ -24,37 +24,45 @@ These are the release notes published with that release:
 - Changed default input driver to libinput.
 - Added parameter to enable/disable tray-icon and to enable/disable natural scrolling for mice:
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | Natural Scroll | `userinterface.mouse.naturalscroll` | bool | enabled / *disabled* (default) |
 | Show input settings tray icon on desktop | `userinterface.system_tray.input.desktop` | bool | *enabled* (default) / disabled |
 ```
+
 - Added: In Setup Assistant, user can enter optional structure tag during connection to UMS via one-time-password.
 - Added: If system gets automatically assigned to an UMS during firstboot, the Setup Assistant presents profile- and app-installation(s) and reboots automatically.
 - Added SSO support for Identity Providers using OpenID Connect. Configuration at IGEL Setup > Security > Logon > Single Sign-On > Identity Providers - select Identity Provider "OpenID Connect":
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Client secret` | `auth.cloudidp.oidc.client_secret` | string | empty *Default* |
 | `Issuer URL` | `auth.cloudidp.oidc.idpurl` | string | empty *Default* |
 | `Client ID` | `auth.cloudidp.oidc.client_id` | string | empty *Default* |
 ```
+
 - Added SSO support for VMware Workspace ONE Access as Identity Provider. Configuration at IGEL Setup > Security > Logon > Single Sign-On > Identity Providers - select Identity Provider "VMware Workspace ONE Access":
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Client secret`  |  `auth.cloudidp.vmwaccess.client_secret`  |  string  |  empty *Default*  |
 |  `Workspace ONE Access issuer URL`  |  `auth.cloudidp.vmwaccess.idpurl`  |  string  |  empty *Default*  |
 |  `Client ID`  |  `auth.cloudidp.vmwaccess.client_id`  |  string  |  empty *Default*  |
 ```
+
 - Added SSO support for Ping Identity / PingOne as Identity Provider. Configuration at IGEL Setup > Security > Logon > Single Sign-On > Identity Providers - select Identity Provider "Ping Identity | PingOne":
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Client secret` | `auth.cloudidp.pingone.client_secret` | string | empty *Default* |
 | `PingOne issuer URL` | `auth.cloudidp.pingone.idpurl` | string | empty *Default* |
 | `Client ID` | `auth.cloudidp.pingone.client_id` | string | empty *Default* |
 ```
+
 - Added support for post session commands. To configure and use post session commands, corresponding OS12 App must support post session commands as well.
 - Changed the initial default devicename and hostname of UD Pockets to UDP<UnitId>. Systems already in use will only be affected after reset to factory defaults.
 - Improved add-on license handling: A message is shown if OS12 App requires add-on license which is not present / available via UMS.
@@ -68,11 +76,13 @@ These are the release notes published with that release:
 
 	- Added support for automatic update on boot and automatic update on calendar time. The following parameters were introduced for corresponding configuration.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Check for and download updates for non pinned apps on given calendar time, use the crontab syntax to specify the calendar time` | `update.auto_update_calendar` | string | *empty* |
 | `Check for and download updates for non pinned apps on boot` | `update.auto_update_on_boot` | bool | *enabled* (default) / disabled |
 ```
+
 - **Network**
 
 	- Added MACsec (IEEE 802.1AE) support in dynamic CAK mode.
@@ -82,11 +92,13 @@ These are the release notes published with that release:
 
 	- Updated cipher configuration of Open VPN -  and added possibility to specify data-ciphers list. By default the default cipher list AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305 is active. Otherwise, custom list can be specified in the Data ciphers parameter. Enter the ciphers separated with ':'. The existing parameter 'Cipher' is outdated and therefore removed.
 ```
+
 | Setup | Parameter | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | `Network > VPN > Open VPN > Connection > Options` | `Data ciphers` | `sessions.openvpn%.vpnopts.data_ciphers` | empty *{*}Default{*}* |
 | `Network > VPN > Open VPN > Connection > Options` | `Use default data cipher list` | `sessions.openvpn%.vpnopts.use_default_cipher_list` | *on* / off |
 ```
+
 - **HID**
 
 	- Updated ELO touch driver to version 5.2 for single-touch - and version 4.3 for multi-touch.
@@ -95,10 +107,12 @@ These are the release notes published with that release:
 
 	- Changed registry default to activate DRI3 as default.
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Use DRI3`  |  `x.drivers.use_dri3`  |  bool  |  *enabled* (default) / disabled  |
 ```
+
 - **Multimedia**
 
 	- Added libcam-tools to base system.
@@ -175,6 +189,7 @@ These are the release notes published with that release:
 - Fixed known limitation: On some devices the cpu governor did not switch to set value when power supply is plugged or unplugged.
 - Added former Single Sign-On configuration parameters for backwards compatibility. These were used before 12.2.0.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Azure AD Tenant Name/ID (deprecated)` | `auth.cloudidp.aad_tenant` | string | empty *Default* |
@@ -182,6 +197,7 @@ These are the release notes published with that release:
 | `Client/Application ID (deprecated)` | `auth.cloudidp.client_id` | string | empty *Default* |
 | `Client secret (deprecated)` | `auth.cloudidp.client_secret` | string | empty *Default* |
 ```
+
 - Fixed immediate wakeup issue after shutdown on some HP mt645 G7.
 - Fixed not starting Lenovo docking station TBT 3
 - Fixed handling of proxy configurations with a protocol like "http://". If no protocol is specified, system adds "http://". Otherwise, specified protocol is used.
@@ -456,12 +472,15 @@ These are the release notes published with that release:
 - Fixed screen lagging issue with Dell Latitude 7430
 - Added possibility to configure Intel PSR setting over IGEL registry
 ```
+
 |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Change settings for intel PSR (panel self refresh).`  |  `x.drivers.intel.psr`  |  [Default][Disable][Enable][Use only up to PSR1][Use up to PSR2]  |  *Default*  |
 ```
+
 - Added old Single Sign-On configuration parameters for backward compatibility.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Azure AD Tenant Name/ID (deprecated)` | `auth.cloudidp.aad_tenant` | string | empty *Default* |
@@ -469,6 +488,7 @@ These are the release notes published with that release:
 | `Client/Application ID (deprecated)` | `auth.cloudidp.client_id` | string | empty *Default* |
 | `Client secret (deprecated)` | `auth.cloudidp.client_secret` | string | empty *Default* |
 ```
+
 - Fixed immediate wakeup issue after shutdown on some HP mt645 G7.
 - Fix handling of proxy configurations with a protocol like "http://". If no protocol is specified the system will add "http://" otherwise the specified protocol will be used.
 - The Setup Assistant now shows the base system version in the new scheme/format.
@@ -756,62 +776,80 @@ These are the release notes published with that release:
 
 - Added setup parameter, required to set if Okta is selected as IdP.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Client secret` | `auth.cloudidp.client_secret` | string | empty *Default* |
 ```
+
 - Introduced new setup parameter, required to be set if Azure AD is selected as IdP.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Azure AD Tenant Name/ID` | `auth.cloudidp.aad_tenant` | string | empty *Default* |
 ```
+
 - Added IGEL Add-On License support.
 
 - Changed touchpad parameter name from `Enable Touchpad` to `Enable Touchpad on Boot` which make it more obvious what is meant here.
 ```
+
 |  Setup  |  Parameter  |  Tooltip  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 |  `User Interface > Input > Touchpad`  |  `Enable Touchpad on Boot`  |  `Can be overruled by Hotkey.`  |  `userinterface.touchpad.general.TouchpadEnable`  |  bool  |  *enabled* (default) / disabled  |
 ```
+
 - Also changed function of TouchpadOff registry key to only be used to switch on and off the tapping.
 ```
+
 |  Setup  |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `User Interface > Input > Touchpad`  |  `Tapping Mode`  |  `userinterface.touchpad.general.TouchpadOff`  |  [With tapping][Without tapping]  |  *With tapping*  |
 ```
+
 - Added new registry key to set left-hand on touchpad devices
 ```
+
 |  Parameter  |  Registry  |  Type  |  Value  |
 | ------ | ------ | ------ | ------ |
 |  `Left hand`  |  `userinterface.touchpad.general.LeftHand`  |  bool  |  *disabled* (default)/enabled |
 ```
+
 - Added WiFi Regulatory Domain configuration to Setup Assistant.
 
 - Added setup parameter to enable/disable debugging mode of SSO related services and programs.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Enable Debugging of Single Sign-On` | `debug.auth.cloudidp_debug` | bool | enabled / *disabled* (default) |
 ```
+
 - Added registry key to enable natural scrolling
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Natural Scroll` | `userinterface.touchpad.general.naturalscroll` | bool | *disabled* (default)/enabled |
 ```
+
 - Added parameter to adjust position of shadow indicator popup window.
 ```
+
 | IGEL Setup | Parameter | Registry | Range |
 | ------ | ------ | ------ | ------ |
 | System > Remote Access > Shadow | `Position of the indicator` | `userinterface.vncserver.indicatorposition` | [Bottom left][ *Bottom right* ][Top left][Top right] |
 ```
+
 - Added setup option to disable Single-Sign-On URL restrictions for debugging purposes.
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Disable Single Sign-On URL Restrictions` | `debug.auth.cloudidp_disable_url_restrictions` | bool | enabled / *disabled* (default) |
 ```
+
 - Updated EULA to version of April 2023
 
 - **App Management**
@@ -822,10 +860,12 @@ These are the release notes published with that release:
 
 	- Fixed default mirror mode from Panning to Scale down
 ```
+
 |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Choose the mode which should be used for mirroring monitors if resolution differs.`  |  `x.xserver%.mirror_mode`  |  [Panning][Biggest common resolution][Scaling][Scaling down]  |  *Scaling down*  |
 ```
+
 ## Security Fixes
 
 - Fixed nss security issue CVE-2023-0767.

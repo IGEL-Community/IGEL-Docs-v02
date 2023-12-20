@@ -14,6 +14,33 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-12-20 - [11.09.160](readme11.09.160.txt)
+
+```
+The new PUBLIC BUILD 11.09.160 for IGEL Workspace is ready.
+
+This build is based on 11.09.150.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fixed libminizip1 security issue CVE-2023-45853.  
+* Fixed perl security issues CVE-2022-48522, CVE-2023-47038.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed possible error when starting Remote Desktop Web Access applications.
+```
+
+-----
+
 ## 2023-12-20 - [11.09.154](readme11.09.154.txt)
 
 ```

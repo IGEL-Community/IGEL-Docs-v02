@@ -110,7 +110,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 ### Prepare the Server
 
 - UMS can install on several 64-bit Windows and Linux operating systems.
-- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.02/en/installation-requirements-for-the-igel-ums-90235884.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
+- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-sizing-guidelines-architecture-diagrams-108341014.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
 - The UMS can be installed on-prem or in the cloud (Azure, AWS, Hosting Providers, etc.) on a physical or virtual machine.
 
 ### Install the UMS Software

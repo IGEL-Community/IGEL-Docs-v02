@@ -233,7 +233,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | free                                                 | :material-check-bold: | :material-check-bold:| Show memory details                 |
 | get-edid                                             | :material-check-bold: | :material-check-bold:| Display DDC details                 |
 | hardinfo                                             | :material-check-bold: | :material-check-bold:| Display Hardware Info's             |
-| [lblk](Cheatsheet-IGELOS-Hardware.md#lsblk)          | :material-check-bold: | :material-check-bold:| list block devices (file systems)   |
+| [lsblk](Cheatsheet-IGELOS-Hardware.md#lsblk)         | :material-check-bold: | :material-check-bold:| list block devices (file systems)   |
 | lspci                                                | :material-check-bold: | :material-check-bold:| List PCI devices                    |
 | [lsusb](Cheatsheet-IGELOS-Hardware.md#lsusb)         | :material-check-bold: | :material-check-bold:| list USB devices                    |
 | opensc-explorer                                      | :material-check-bold: | :material-check-bold:| Show available  Smart Cardeaders    |

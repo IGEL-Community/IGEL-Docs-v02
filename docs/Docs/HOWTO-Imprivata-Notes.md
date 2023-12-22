@@ -227,6 +227,60 @@ When updating to IGEL OS 11.09.xxx and Prove ID Embedded 7.12 or later, ensure t
 
 -----
 
+## 14 November 2023 - Bad Magic number in MainLoader
+
+### Installing PIE 7.12 on iGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
+
+- New G4 appliance and installed 23.2 HF2.
+
+- PIE Version: 7.12
+
+- IGEL environment: Current Firmware: 11.09.100 and 11.09.110
+
+- Steps to Reproduce
+
+```
+After upgrading to OneSign G4 appliance running 23.2 HF2. PIE Agent 7.12.
+
+IGEL OS is running 11.09.110.
+
+We are receiving the following error message.
+
+2023-11-08 01:06:20,255 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Check 'use python3 only' flag
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Use python3 only flag exists
+2023-11-08 01:06:27,062 - bootstrap - Level 1000: Imprivata Bootstrap version: 7.12.0.688624 built: Thu Aug 24 01:31:37 EEST 2023
+2023-11-08 01:06:27,126 - bootstrap - INFO: Trying to import main loader...
+2023-11-08 01:06:27,127 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
+```
+
+Resolution
+
+Please perform the following steps in order:
+
+```
+1. Run command to clear PIE data: ImprivataBootstrap -w
+
+2. Delete folders if they still exist:
+
+/.imprivata_data/runtime/lib/MainLoader
+/.imprivata_data/runtime/lib/proveid-embedded
+
+3. Go to IGEL Setup -> Sessions -> Appliance Mode -> Set Disabled for appliance mode
+
+4. Reboot device
+
+5. Enable Appliance Mode
+
+6. Make sure that appliance in step 5 has PIE 7.12 version. It should not contain PIE 7.11 or older.
+
+7. Test and see if this resolves the issue.
+
+If this doesn't help, you can also try to remove all PIE IPMs from appliance and then upload PIE 7.12 IPM to be sure that it is uploaded without issues into appliance.
+```
+
+-----
+
 ## 28 August 2023 - Update
 
 ### Prove ID Embedded Setup notes

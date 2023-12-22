@@ -233,6 +233,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | free                                                 | :material-check-bold: | :material-check-bold:| Show memory details                 |
 | get-edid                                             | :material-check-bold: | :material-check-bold:| Display DDC details                 |
 | hardinfo                                             | :material-check-bold: | :material-check-bold:| Display Hardware Info's             |
+| [lblk](Cheatsheet-IGELOS-Hardware.md#lsblk)          | :material-check-bold: | :material-check-bold:| list block devices (file systems)   |
 | lspci                                                | :material-check-bold: | :material-check-bold:| List PCI devices                    |
 | [lsusb](Cheatsheet-IGELOS-Hardware.md#lsusb)         | :material-check-bold: | :material-check-bold:| list USB devices                    |
 | opensc-explorer                                      | :material-check-bold: | :material-check-bold:| Show available  Smart Cardeaders    |
@@ -263,9 +264,10 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 ## IGELOS Files
 
 | file | OS 11 | OS 12                                      | description                                |
-|---------|------|-------------------------------------------|--------------------------------------------|
+|---------|------|-------------------------------------------|-------------------------------------------|
 | /config/sessions      | :material-check-bold: | :material-check-bold:| Generated sessions                       |
-| /tmp/wpa_debug.all    | :material-check-bold: | :material-check-bold:| network debug log                        |
+| /etc/os-release       | :material-check-bold: | :material-check-bold:| Details on IGEL OS version               |
+| /tmp/wpa_debug.all    | :material-check-bold: | :material-check-bold:| Network debug log                        |
 | /wfs/dhclient-*.lease | :material-check-bold: | :material-check-bold:| dhcp client lease; DHCP Option 224 + 226 |
 | /wfs/group.ini        | :material-check-bold: | :material-check-bold:| Configuration from UMS                   |
 | /wfs/server.crt       | :material-check-bold: | :material-check-bold:| UMS Server certificate                   |

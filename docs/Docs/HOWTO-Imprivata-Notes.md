@@ -117,7 +117,7 @@ If this doesn't help, you can also try to remove all PIE IPMs from appliance and
 
 ### Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX
 
-- <a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a>
+- <a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a>
 
 - <a href="../Profiles/HOWTO-Imprivata-Notes-Update-Wait-for-Network-profile.xml" download>LINK to Imprivata Update Wait for Network Profile</a>
 

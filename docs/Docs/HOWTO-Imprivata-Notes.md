@@ -229,7 +229,7 @@ When updating to IGEL OS 11.09.xxx and Prove ID Embedded 7.12 or later, ensure t
 
 ## 14 November 2023 - Bad Magic number in MainLoader
 
-### Installing PIE 7.12 on iGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
+### Installing PIE 7.12 on IGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
 
 - New G4 appliance and installed 23.2 HF2.
 
@@ -278,6 +278,14 @@ Please perform the following steps in order:
 
 If this doesn't help, you can also try to remove all PIE IPMs from appliance and then upload PIE 7.12 IPM to be sure that it is uploaded without issues into appliance.
 ```
+
+### Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX
+
+- <a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a>
+
+- <a href="../Profiles/HOWTO-Imprivata-Notes-Update-Wait-for-Network-profile.xml" download>LINK to Imprivata Update Wait for Network Profile</a>
+
+**NOTE:** From the Imprivata Appliance side, the customer can already have 7.12 or older PIE agents installed and the Computer Policy on the 11.08.xx or 11.09.xx devices can be set to install the latest PIE version. Customers should not have to modify their computer policy settings. Disabling appliance mode needs to occur either before or after the upgrade and then reenable it on 11.09.100 or higher to install the 7.12 agent.
 
 -----
 

@@ -47,6 +47,148 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 -----
 
+## 20 December 2023 - Update
+
+### TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12
+
+When updating to IGEL OS 11.09.xxx and Prove ID Embedded 7.12 or later, ensure that TLS 1.3 is enabled on F5 or ADC/NetScaler. If it is not, then may no longer be able to connect to Citrix Virtual Apps and Desktops.
+
+-----
+
+## 17 November 2023 - Update
+
+### Issue with TLS v1.3 (Windows Server 2019 and Windows 10)
+
+**NOTE: From Imprivata Support:** For an environment Windows Server 2019 and Windows 10. The 7.12 PiE agent on 11.09.X is failing to connect to Citrix farms due to authentication failures with TLS v1.3. There seems to be some kind of PiE agent 'fallback' feature to TLS v1.2 but at least in some cases that 'fallback to TLS 1.2' doesn't work as expected. Imprivata Support linked to this article: [TLS protocol version support](https://learn.microsoft.com/en-us/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-#tls-protocol-version-support)
+
+-----
+
+## 14 November 2023 - Bad Magic number in MainLoader
+
+### Installing PIE 7.12 on IGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
+
+- New G4 appliance and installed 23.2 HF2.
+
+- PIE Version: 7.12
+
+- IGEL environment: Current Firmware: 11.09.100 and 11.09.110
+
+- Steps to Reproduce
+
+```
+After upgrading to OneSign G4 appliance running 23.2 HF2. PIE Agent 7.12.
+
+IGEL OS is running 11.09.110.
+
+We are receiving the following error message.
+
+2023-11-08 01:06:20,255 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Check 'use python3 only' flag
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Use python3 only flag exists
+2023-11-08 01:06:27,062 - bootstrap - Level 1000: Imprivata Bootstrap version: 7.12.0.688624 built: Thu Aug 24 01:31:37 EEST 2023
+2023-11-08 01:06:27,126 - bootstrap - INFO: Trying to import main loader...
+2023-11-08 01:06:27,127 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
+```
+
+Resolution
+
+Please perform the following steps in order:
+
+```
+1. Run command to clear PIE data: ImprivataBootstrap -w
+
+2. Delete folders if they still exist:
+
+/.imprivata_data/runtime/lib/MainLoader
+/.imprivata_data/runtime/lib/proveid-embedded
+
+3. Go to IGEL Setup -> Sessions -> Appliance Mode -> Set Disabled for appliance mode
+
+4. Reboot device
+
+5. Enable Appliance Mode
+
+6. Make sure that appliance in step 5 has PIE 7.12 version. It should not contain PIE 7.11 or older.
+
+7. Test and see if this resolves the issue.
+
+If this doesn't help, you can also try to remove all PIE IPMs from appliance and then upload PIE 7.12 IPM to be sure that it is uploaded without issues into appliance.
+```
+
+### Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX
+
+- <a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a>
+
+- <a href="../Profiles/HOWTO-Imprivata-Notes-Update-Wait-for-Network-profile.xml" download>LINK to Imprivata Update Wait for Network Profile</a>
+
+**NOTE:** From the Imprivata Appliance side, the customer can already have 7.12 or older PIE agents installed and the Computer Policy on the 11.08.xx or 11.09.xx devices can be set to install the latest PIE version. Customers should not have to modify their computer policy settings. Disabling appliance mode needs to occur either before or after the upgrade and then reenable it on 11.09.100 or higher to install the 7.12 agent.
+
+-----
+
+## 28 August 2023 - Update
+
+### Prove ID Embedded Setup notes
+
+Prove ID Embedded needs the local windows that popup as you manage the device to show through the PIE lock screen.
+
+Add the below  WM_Class strings in the Imprivata Admin console at "gear icon" -> ProveID Embeded -> "Add Application" (also enable allow access to all variants checkbox on each one)
+
+- For the UMS Send message: `qt_message`
+- For reboot and UMS sent new configuration dialog boxes: `Gtkmessage`
+- For desktop notification in lower right (network starting): `Xfce4-notifyd`
+- For the Display switcher and the confirm dialog: `igel_display_switcher`
+
+-----
+
+## 28 December 2022 - Update
+
+Imprivata has finished the qualification of OS 11.08.200 and backed it up to OneSign 7.8 or higher. Any IGEL / Imprivata customer/prospect should skip over 11.07.xx versions and use 11.08.200 or later. 11.08.200 contains fixes for the Persistent App workflow. There are other fixes for the PIE vendor helper script that have had positive results in VMWare environments on older / lower performing hardware.
+
+Combination to test with:
+
+- IGEL OS 11.08.200 +
+- Imprivata Appliance version 7.9 HF3
+- Imprivata PIE Agent 7.9.003.0039
+
+-----
+
+## 8 September 2022 - Using default directory rules with appliance mode
+
+An issue may occur when using default directory rules with appliance mode, where appliance mode starts, but Imprivata does not start. This also occurs with all the other appliance modes, but most frequently comes up with Imprivata. The following profile can be assigned to the default directory, and then Imprivata (or other session) will start normally. This makes the device reboot one extra time, but the reboot happens automatically. This may be resolved by IGEL in a future release of IGEL OS, but the root cause has not yet been identified.
+
+<a href="../Profiles/HOWTO-Imprivata-Notes-Appliance-Mode-DDR-Workaround-profile.xml" download>LINK to Imprivata Appliance Mode DDR Workaround Profile</a>
+
+-----
+
+## 22 August 2022 - Unable to access OS feature menus after upgrading the Linux thin clients to PIE 7.7 and above
+
+- Issue: After upgrading the IGEL clients with ProveID Embedded 7.7 we are unable to access the menus from the IGEL OS, preventing our users to accessing the Display Switch and Sound Settings functionality.
+
+- Cause: This is caused by a security feature that has been implemented in Imprivata 7.7 that hides any application that tries to be displayed on top of the PIE lock screen if it hasn't been previously allowed.
+
+- Resolution: In order to allow an application to be displayed on top of the PIE lock screen, some information will need to be collected previously for the PIE agent to detect this screen correctly.
+    - The fastest way to collect this information is to exit the PIE agent by pressing Ctrl + Power Menu Arrow Up, this should display the option to Exit the PIE agent. Please note that the Computer Policy applied to this Linux Thin Client will need to allow the users to exit the OneSign agent.
+    - Once the PIE agent has been exited, the Linux Thin Client lock screen will be shown, we should now be able to invoke the desired OS feature (Display Switch, Sound Settings), launch the desired menu that needs to be allowed and then SSH with root access to the Linux device.
+    - In the SSH session, execute the following two commands to start gathering the information about the window menu that needs to be allowed, when this is executed the cursor will change to a cross symbol.
+
+    ```bash linenums="1"
+    export DISPLAY=:0
+    xprop
+    ```
+
+    - Click on the desired window, and then collect the following information from the SSH session, note that many more lines will be shown.
+
+    ```bash linenums="1"
+    WM_CLASS(STRING) = "sun-awt-X11-XFramePeer", "IGEL Setup"
+    WM_NAME(STRING) = "IGEL Setup 11.05.133.01 (Build 6.7.5)"
+    ```
+
+    - Please note that the above information is only an example.
+    - With the information gathered, navigate to the Imprivata Admin Console, and then on the Gear icon, select the ProveID Embedded option. In this menu you will have the option to create an allowed application with the information gathered.
+    - For more detailed information on the above steps or different methods to gather this information, please visit the Imprivata Documentation regarding this functionality on the page below: [Allowing an Application Window Atop the ProveID Embedded Lock Screen](https://support.imprivata.com/CommunitySecureHelpRedirect?helpLink=Topics/ImprivataPlatform/VDA/ProveIDEmbedded/App_Atop_PIE_Lock_Screen.htm)
+
+-----
+
 ## Change Imprivata ReadTimeout and WriteTimeout
 
 -----
@@ -208,149 +350,6 @@ Name (WMName):  igel_screensaver
 Class (WMClass):  Igel_screensaver
 App instance (WMAppinstance):  igel_screensaver
 ```
-
------
-
-## 20 December 2023 - Update
-
-### TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12
-
-When updating to IGEL OS 11.09.xxx and Prove ID Embedded 7.12 or later, ensure that TLS 1.3 is enabled on F5 or ADC/NetScaler. If it is not, then may no longer be able to connect to Citrix Virtual Apps and Desktops.
-
------
-
-## 17 November 2023 - Update
-
-### Issue with TLS v1.3 (Windows Server 2019 and Windows 10)
-
-**NOTE: From Imprivata Support:** For an environment Windows Server 2019 and Windows 10. The 7.12 PiE agent on 11.09.X is failing to connect to Citrix farms due to authentication failures with TLS v1.3. There seems to be some kind of PiE agent 'fallback' feature to TLS v1.2 but at least in some cases that 'fallback to TLS 1.2' doesn't work as expected. Imprivata Support linked to this article: [TLS protocol version support](https://learn.microsoft.com/en-us/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-#tls-protocol-version-support)
-
------
-
-## 14 November 2023 - Bad Magic number in MainLoader
-
-### Installing PIE 7.12 on IGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
-
-- New G4 appliance and installed 23.2 HF2.
-
-- PIE Version: 7.12
-
-- IGEL environment: Current Firmware: 11.09.100 and 11.09.110
-
-- Steps to Reproduce
-
-```
-After upgrading to OneSign G4 appliance running 23.2 HF2. PIE Agent 7.12.
-
-IGEL OS is running 11.09.110.
-
-We are receiving the following error message.
-
-2023-11-08 01:06:20,255 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
-2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Check 'use python3 only' flag
-2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Use python3 only flag exists
-2023-11-08 01:06:27,062 - bootstrap - Level 1000: Imprivata Bootstrap version: 7.12.0.688624 built: Thu Aug 24 01:31:37 EEST 2023
-2023-11-08 01:06:27,126 - bootstrap - INFO: Trying to import main loader...
-2023-11-08 01:06:27,127 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in 'MainLoader': b'\x03\xf3\r\n'
-```
-
-Resolution
-
-Please perform the following steps in order:
-
-```
-1. Run command to clear PIE data: ImprivataBootstrap -w
-
-2. Delete folders if they still exist:
-
-/.imprivata_data/runtime/lib/MainLoader
-/.imprivata_data/runtime/lib/proveid-embedded
-
-3. Go to IGEL Setup -> Sessions -> Appliance Mode -> Set Disabled for appliance mode
-
-4. Reboot device
-
-5. Enable Appliance Mode
-
-6. Make sure that appliance in step 5 has PIE 7.12 version. It should not contain PIE 7.11 or older.
-
-7. Test and see if this resolves the issue.
-
-If this doesn't help, you can also try to remove all PIE IPMs from appliance and then upload PIE 7.12 IPM to be sure that it is uploaded without issues into appliance.
-```
-
-### Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX
-
-- <a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a>
-
-- <a href="../Profiles/HOWTO-Imprivata-Notes-Update-Wait-for-Network-profile.xml" download>LINK to Imprivata Update Wait for Network Profile</a>
-
-**NOTE:** From the Imprivata Appliance side, the customer can already have 7.12 or older PIE agents installed and the Computer Policy on the 11.08.xx or 11.09.xx devices can be set to install the latest PIE version. Customers should not have to modify their computer policy settings. Disabling appliance mode needs to occur either before or after the upgrade and then reenable it on 11.09.100 or higher to install the 7.12 agent.
-
------
-
-## 28 August 2023 - Update
-
-### Prove ID Embedded Setup notes
-
-Prove ID Embedded needs the local windows that popup as you manage the device to show through the PIE lock screen.
-
-Add the below  WM_Class strings in the Imprivata Admin console at "gear icon" -> ProveID Embeded -> "Add Application" (also enable allow access to all variants checkbox on each one)
-
-- For the UMS Send message: `qt_message`
-- For reboot and UMS sent new configuration dialog boxes: `Gtkmessage`
-- For desktop notification in lower right (network starting): `Xfce4-notifyd`
-- For the Display switcher and the confirm dialog: `igel_display_switcher`
-
------
-
-## 28 December 2022 - Update
-
-Imprivata has finished the qualification of OS 11.08.200 and backed it up to OneSign 7.8 or higher. Any IGEL / Imprivata customer/prospect should skip over 11.07.xx versions and use 11.08.200 or later. 11.08.200 contains fixes for the Persistent App workflow. There are other fixes for the PIE vendor helper script that have had positive results in VMWare environments on older / lower performing hardware.
-
-Combination to test with:
-
-- IGEL OS 11.08.200 +
-- Imprivata Appliance version 7.9 HF3
-- Imprivata PIE Agent 7.9.003.0039
-
------
-
-## 8 September 2022 - Using default directory rules with appliance mode
-
-An issue may occur when using default directory rules with appliance mode, where appliance mode starts, but Imprivata does not start. This also occurs with all the other appliance modes, but most frequently comes up with Imprivata. The following profile can be assigned to the default directory, and then Imprivata (or other session) will start normally. This makes the device reboot one extra time, but the reboot happens automatically. This may be resolved by IGEL in a future release of IGEL OS, but the root cause has not yet been identified.
-
-<a href="../Profiles/HOWTO-Imprivata-Notes-Appliance-Mode-DDR-Workaround-profile.xml" download>LINK to Imprivata Appliance Mode DDR Workaround Profile</a>
-
------
-
-## 22 August 2022 - Unable to access OS feature menus after upgrading the Linux thin clients to PIE 7.7 and above
-
-- Issue: After upgrading the IGEL clients with ProveID Embedded 7.7 we are unable to access the menus from the IGEL OS, preventing our users to accessing the Display Switch and Sound Settings functionality.
-
-- Cause: This is caused by a security feature that has been implemented in Imprivata 7.7 that hides any application that tries to be displayed on top of the PIE lock screen if it hasn't been previously allowed.
-
-- Resolution: In order to allow an application to be displayed on top of the PIE lock screen, some information will need to be collected previously for the PIE agent to detect this screen correctly.
-    - The fastest way to collect this information is to exit the PIE agent by pressing Ctrl + Power Menu Arrow Up, this should display the option to Exit the PIE agent. Please note that the Computer Policy applied to this Linux Thin Client will need to allow the users to exit the OneSign agent.
-    - Once the PIE agent has been exited, the Linux Thin Client lock screen will be shown, we should now be able to invoke the desired OS feature (Display Switch, Sound Settings), launch the desired menu that needs to be allowed and then SSH with root access to the Linux device.
-    - In the SSH session, execute the following two commands to start gathering the information about the window menu that needs to be allowed, when this is executed the cursor will change to a cross symbol.
-
-    ```bash linenums="1"
-    export DISPLAY=:0
-    xprop
-    ```
-
-    - Click on the desired window, and then collect the following information from the SSH session, note that many more lines will be shown.
-
-    ```bash linenums="1"
-    WM_CLASS(STRING) = "sun-awt-X11-XFramePeer", "IGEL Setup"
-    WM_NAME(STRING) = "IGEL Setup 11.05.133.01 (Build 6.7.5)"
-    ```
-
-    - Please note that the above information is only an example.
-    - With the information gathered, navigate to the Imprivata Admin Console, and then on the Gear icon, select the ProveID Embedded option. In this menu you will have the option to create an allowed application with the information gathered.
-    - For more detailed information on the above steps or different methods to gather this information, please visit the Imprivata Documentation regarding this functionality on the page below: [Allowing an Application Window Atop the ProveID Embedded Lock Screen](https://support.imprivata.com/CommunitySecureHelpRedirect?helpLink=Topics/ImprivataPlatform/VDA/ProveIDEmbedded/App_Atop_PIE_Lock_Screen.htm)
-
 
 -----
 

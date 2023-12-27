@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2023-12-26 - [11.08.459](readme11.08.459.txt)
+
+```
+The new PRIVATE BUILD 11.08.459 for IGEL Workspace is ready.
+
+This build is based on 11.08.458.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix workspace app 23.09.  
+  Available workspace apps in this release: 23.09 (default), 23.08, and 23.05
+```
+
+-----
+
 ## 2023-12-20 - [11.09.160](readme11.09.160.txt)
 
 ```

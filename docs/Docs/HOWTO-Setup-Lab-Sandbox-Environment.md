@@ -338,9 +338,8 @@ Use pfSense to create firewall (DMZ)
 
 ### Install DBeaver (Ubuntu)
 
--	Download DBeaver (https://dbeaver.io/download)
--	Install onto UMS server
--	sudo dpkg -i dbeaver-<version>.deb
+-	[Download DBeaver](https://dbeaver.io/download)
+-	Install onto UMS server: `sudo dpkg -i dbeaver-<version>.deb`
 
 **Note:** If you have errors (such as missing java), then fix `sudo apt --fix-broken install`
 

@@ -318,6 +318,73 @@ Use pfSense to create firewall (DMZ)
 
 -----
 
+## Optional - Setup DBeaver to Access UMS Internal DB
+
+**NOTE:** Do `NOT` do this on your production UMS Server!!
+
+An Entity Relationship (ER) Diagram is a type of flowchart that illustrates how entities relate to each other within a system. In terms of a database management system, an entity is a table. So by showing relationships among tables, the ER diagram represents the complete logical structure of a database.
+
+![image12](Images/HOWTO-Setup-Lab-Sandbox-Environment-13.png)
+![image13](Images/HOWTO-Setup-Lab-Sandbox-Environment-12.gif)
+
+Here is the ERD for UMS 12.3.0 Database.
+
+### Summary of Steps to Connect DBeaver to UMS Internal DB
+
+-	Install DBeaver
+-	Add IGEL UMS Derby client jar file to Database `->` Driver Manager
+-	Make read-only connection to UMS database
+
+### Install DBeaver (Ubuntu)
+
+-	Download DBeaver (https://dbeaver.io/download)
+-	Install onto UMS server
+-	sudo dpkg -i dbeaver-<version>.deb
+
+**Note:** If you have errors (such as missing java), then fix `sudo apt --fix-broken install`
+
+### Add IGEL UMS Derby Client JAR File to DBeaver Driver Manager
+
+-	Start DBeaver
+-	Add UMS Derby client jar file. If you do not add the UMS version of Derby client jar file, then an error may occur when you try to connect.
+-	Find the UMS version of Derby client jar file (derbyclient.jar)
+
+```bash linenums="1"
+sudo find /opt/IGEL -name "derbyclient*.jar"
+```
+
+-	Copy file out of the UMS folder - `sudo cp file_above /tmp`
+-	Add the copied file to DBeaver Driver Manager Derby Server
+
+![image05](Images/HOWTO-Setup-Lab-Sandbox-Environment-05.png)
+![image06](Images/HOWTO-Setup-Lab-Sandbox-Environment-06.png)
+![image07](Images/HOWTO-Setup-Lab-Sandbox-Environment-07.png)
+
+### Make Read-Only Connection to the IGEL UMS Database
+
+-	Make Read-only connection to the IGEL UMS database and test connection
+- Database -> New Database Connection
+-	Port: 1528
+-	Database/Schema: rmdb
+-	User name & Password
+-	Test connection
+
+![image08](Images/HOWTO-Setup-Lab-Sandbox-Environment-08.png)
+![image09](Images/HOWTO-Setup-Lab-Sandbox-Environment-09.png)
+![image10](Images/HOWTO-Setup-Lab-Sandbox-Environment-10.png)
+
+### Sample DB Query
+
+![image11](Images/HOWTO-Setup-Lab-Sandbox-Environment-11.png)
+
+This SQL query can be used in [UMS SQL Console](https://kb.igel.com/endpointmgmt-12.03/en/menu-bar-of-the-igel-ums-console-108341169.html).
+
+```sql linenums="1"
+SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERSION, THINCLIENT.PRODUCTID, THINCLIENT.LASTKNOWNIP, THINCLIENT.LAST_INFO_UPDATETIME FROM THINCLIENT LEFT JOIN FIRMWARE FW ON THINCLIENT.FIRMWAREID=FW.FIRMWAREID LEFT JOIN HARDWARE_INFORMATION  HW ON THINCLIENT.MACADDRESS=HW.MAC ORDER BY FW.VERSION
+```
+
+-----
+
 ## Appendix - Linux Scripts
 
 - [Linux Scripts](https://github.com/rneher-igel/Linux-Scripts/tree/master)

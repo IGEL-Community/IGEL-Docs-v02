@@ -24,6 +24,8 @@ flowchart TD
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
 ```
 
+**NOTE:** Additional diagrams can be found in the [HOWTO Basic Setup Guide](HOWTO-Basic-Setup-Guide.md#configure-ums-network-ports).
+
 -----
 
 ### IGEL OS 12 Devices

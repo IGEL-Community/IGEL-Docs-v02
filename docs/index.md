@@ -20,7 +20,7 @@ Remove for now
 
 ----------
 
-## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.08/en/overview-first-steps-with-igel-os-11-63802221.html)
+## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.09/en/overview-first-steps-with-igel-os-11-101058650.html)
 
 ----------
 

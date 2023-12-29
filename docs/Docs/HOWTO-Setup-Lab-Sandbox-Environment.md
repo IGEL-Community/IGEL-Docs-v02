@@ -322,12 +322,13 @@ Use pfSense to create firewall (DMZ)
 
 **NOTE:** Do `NOT` do this on your production UMS Server!!
 
-An Entity Relationship (ER) Diagram is a type of flowchart that illustrates how entities relate to each other within a system. In terms of a database management system, an entity is a table. So by showing relationships among tables, the ER diagram represents the complete logical structure of a database.
+[An Entity Relationship (ER) Diagram](https://dbeaver.com/2022/06/30/two-ways-to-use-erd-in-dbeaver/) is a type of flowchart that illustrates how entities relate to each other within a system. In terms of a database management system, an entity is a table. So by showing relationships among tables, the ER diagram represents the complete logical structure of a database.
+
+### Entity Relationship (ER) Diagrams for UMS 12.3.0 Database
 
 ![image12](Images/HOWTO-Setup-Lab-Sandbox-Environment-13.png)
 ![image13](Images/HOWTO-Setup-Lab-Sandbox-Environment-12.gif)
 
-Here is the ERD for UMS 12.3.0 Database.
 
 ### Summary of Steps to Connect DBeaver to UMS Internal DB
 

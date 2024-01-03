@@ -83,6 +83,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [user_shutdown](Cheatsheet-Linux-General.md#user_shutdown) | :material-check-bold: | :material-check-bold:| shutdown the system                        |
 | [vi](Cheatsheet-Linux-General.md#vi)                       | :material-check-bold: | :material-check-bold:| texteditor                                 |
 | [watch](Cheatsheet-Linux-General.md#watch)                 | :material-check-bold: | :material-check-bold:| repeat periodic a command                  |
+| [wget](Cheatsheet-Linux-General.md#wget)                   | :material-check-bold: | :material-check-bold:| non-interactive network downloader         |
 | [which](Cheatsheet-Linux-General.md#which)                 | :material-check-bold: | :material-check-bold:| locate command                             |
 | [wmctrl](Cheatsheet-Linux-General.md#wmctrl) | :material-check-bold: | :material-check-bold:| interact with X window manager |
 | [xinput](Cheatsheet-Linux-General.md#xinput)               | :material-check-bold: | :material-check-bold:| utility to configure and test X input devices |

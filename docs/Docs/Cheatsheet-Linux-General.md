@@ -661,3 +661,19 @@ else
   echo "do some off network work now"
 fi
 ```
+
+## wget
+
+non-interactive network downloader
+
+- Obtain internet IP address for device
+
+```bash linenums="1"
+wget -qO- http://ipv4.icanhazip.com; echo
+```
+
+- Download IGEL OS 12.3.0 OSC installer
+
+```bash linenums="1"
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.3.0.zip
+```

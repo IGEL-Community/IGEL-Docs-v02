@@ -61,6 +61,7 @@ Remove for now
 
 - [HOWTO Add Applications](Docs/HOWTO-Add-Applications.md)
 - [HOWTO Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
+- [HOWTO Browsers](Docs/HOWTO-Browsers.md)
 - [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
 - [HOWTO COSMOS](Docs/HOWTO-COSMOS.md)
 - [HOWTO Create USB installation medium MacOS](Docs/HOWTO-Create-USB-Installation-medium-MacOS.md)

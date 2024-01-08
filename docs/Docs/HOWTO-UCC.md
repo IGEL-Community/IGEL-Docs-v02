@@ -214,3 +214,9 @@ IGEL has integrated with the Device Posture Service (DPS) team at Citrix to add 
 Device Posture service with IGEL OS offers conditional access control to your Citrix Cloud environment and is a key component to Zero Trust based access.
 
 [IGEL adds Citrix Device Posture Service support – Higher security and extended control of access. IGEL + Citrix = Better together!](https://virtualbrat.com/2023/11/22/igel-adds-citrix-device-posture-service-support-higher-security-and-extended-control-of-access-igel-citrix-better-together/)
+
+-----
+
+## [Unexpected Keyboard Layout in a Citrix Session](https://kb.igel.com/igelos-11.09/en/unexpected-keyboard-layout-in-a-citrix-session-101059332.html)
+
+When a Citrix session has started, the keyboard layout changes in an unexpected way. On the local system, the keyboard layout may still be as expected.

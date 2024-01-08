@@ -225,7 +225,7 @@ When a Citrix session has started, the keyboard layout changes in an unexpected 
 
 ## [Touchpad pressure-based touch detection](https://wayland.freedesktop.org/libinput/doc/1.11.3/touchpad_pressure.html)
 
-Sample profiles to address mouse sensitivity issue.
+Sample profiles to address touchpad sensitivity issue.
 
 - <a href="../Profiles/HOWTO-UCC-Disable-Touchpad-While-Typing.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Disable-Touchpad-While-Typing</a> 
 - <a href="../Profiles/HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled</a> 

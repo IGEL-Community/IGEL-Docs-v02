@@ -220,3 +220,12 @@ Device Posture service with IGEL OS offers conditional access control to your Ci
 ## [Unexpected Keyboard Layout in a Citrix Session](https://kb.igel.com/igelos-11.09/en/unexpected-keyboard-layout-in-a-citrix-session-101059332.html)
 
 When a Citrix session has started, the keyboard layout changes in an unexpected way. On the local system, the keyboard layout may still be as expected.
+
+-----
+
+## [Touchpad pressure-based touch detection](https://wayland.freedesktop.org/libinput/doc/1.11.3/touchpad_pressure.html)
+
+Sample profiles to address mouse sensitivity issue.
+
+- <a href="../Profiles/HOWTO-UCC-Disable-Touchpad-While-Typing.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Disable-Touchpad-While-Typing</a> 
+- <a href="../Profiles/HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled</a> 

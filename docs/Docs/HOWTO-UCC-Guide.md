@@ -7,15 +7,15 @@ UPDATE
 
 - IGEL OS Firmware Base: [11.09.160](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.160.txt)
 
-- IGEL OS Firmware Base: [11.09.153](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.153.txt)
+- IGEL OS Firmware Base: [11.09.162](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.162.txt)
 
-| Clients                          | 11.09.160            | 11.09.153            |
+| Clients                          | 11.09.160            | 11.09.162            |
 |----------------------------------|----------------------|----------------------|
-| Cisco JVDI Client                | 14.2.1               | 14.2.1               |
+| Cisco JVDI Client                | 14.2.1               | 14.3.0               |
 | Cisco Webex Meetings VDI plugin  | 42.10.8.14           | 42.10.8.14           |
 | Cisco Webex Meetings VDI plugin  | 42.6.11.6            | 42.6.11.6            |
 | Cisco Webex Meetings VDI plugin  | 43.6.0.158           | 43.6.8.4             |
-| Cisco Webex VDI plugin           | 43.10.0.27853        | 43.10.0.28101        |
+| Cisco Webex VDI plugin           | 43.10.0.27853        | 43.12.0.28141        |
 | Citrix HDX Realtime Media Engine | 2.9.600              | 2.9.600              |
 | Citrix Workspace App             | 20.10.0.6            | 20.10.0.6            |
 | Citrix Workspace App             | 23.07.0.17           | 23.07.0.17           |
@@ -64,7 +64,7 @@ IGEL OS:
 UPDATE
 -->
 - IGEL OS 11.09.160 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.09.153 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
+- IGEL OS 11.09.162 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 
 IGEL UMS:
 

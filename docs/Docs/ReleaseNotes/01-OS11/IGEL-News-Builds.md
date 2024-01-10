@@ -14,6 +14,100 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-01-10 - [11.09.162](readme11.09.162.txt)
+
+```
+The new PRIVATE BUILD 11.09.162 for IGEL Workspace is ready.
+
+This build is based on 11.09.160.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated to Citrix Workspace app 2311  
+
+  Available Citrix Workspace Apps in this release: 2311 (default), 2309 and 2010
+
+* New Features:
+
+* Fast Smart Card Feature
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`SmartCardCryptographicRedirection`                              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.virtualdriver.smartcard.SmartCardCryptographicRedirection` |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+** Fast smart card is an improvement over the existing HDX PC/SC‑based smart
+  card redirection. It improves performance when smart cards are used in
+  high‑latency WAN environments.  
+* Improved loading experience for shared user mode
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`KioskFUIEnhanced`                                               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.KioskFUIEnhanced`                                   |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+** The time taken to load the store is reduced and thus the loading experience
+  for the shared user mode is improved.  
+* Collecting user activity logs
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UserActivityLogsDisabled`                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.UserActivityLogsDisabled`                           |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+** You can collect the user activity logs. Activities related to most of the
+  Storebrowse commands are saved in the log file
+  “/userhome/.ICAClient/logs/userActivitylog/”.
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.3.0
+
+### Cisco Webex
+
+* Integrated Cisco Webex Meetings VDI 43.6.8.4
+* Available Cisco Webex Meetings Clients: 43.6.8.4 (default), 42.10.8.14, and
+  42.6.11.6
+* Integrated Cisco Webex VDI 43.12.0.28141
+
+### zoomvdi
+
+* Integrated Zoom VDI 5.16.10.24420
+* Available Zoom VDI clients: 5.16.10.24420 (default), 5.15.2.23760, and
+  5.14.10.23670
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* The error message **_Broken Pipe_* should no longer appear during the login
+  process.
+* Fixed the use of ctrl+alt+end for Citrix sessions
+```
+
+-----
+
 ## 2023-12-26 - [11.08.459](readme11.08.459.txt)
 
 ```

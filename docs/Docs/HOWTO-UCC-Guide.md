@@ -18,15 +18,14 @@ UPDATE
 | Cisco Webex VDI plugin           | 43.10.0.27853        | 43.12.0.28141        |
 | Citrix HDX Realtime Media Engine | 2.9.600              | 2.9.600              |
 | Citrix Workspace App             | 20.10.0.6            | 20.10.0.6            |
-| Citrix Workspace App             | 23.07.0.17           | 23.07.0.17           |
-| Citrix Workspace App             | 23.09.0.24           | 23.09.0.24           |
+| Citrix Workspace App             | 23.07.0.17           | 23.09.0.24           |
+| Citrix Workspace App             | 23.09.0.24           | 23.11.0.82           |
 | IGEL AVD Client                  | 1.1.35igel1700067194 | 1.1.35igel1700067194 |
 | IGEL RDP Client                  | 2.2igel1700473865    | 2.2igel1700473865    |
 | VMware Horizon client            | 2306-8.10.0-21964631 | 2306-8.10.0-21964631 |
 | Zoom Media Plugin                | 5.13.10.23090        | 5.14.10.23670        |
 | Zoom Media Plugin                | 5.14.10.23670        | 5.15.2.23760         |
 | Zoom Media Plugin                | 5.15.2.23760         | 5.16.10.24420        |
-
 
 - [Zoom VDI releases and downloads](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
 

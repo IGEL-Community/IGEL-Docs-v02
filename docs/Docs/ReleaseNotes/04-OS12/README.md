@@ -46,3 +46,9 @@ flowchart LR
     click 12.01.120 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.120.1.txt" _blank
     click 12.01.110 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.110.1.txt" _blank
 ```
+
+-----
+
+## IGEL OS 12 App Portal
+
+The latest release notes for IGEL OS 12 Apps can be found on the [IGEL App Portal](https://app.igel.com).

@@ -65,6 +65,8 @@ OpenSSL command line tool
 cd /etc; find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -exec echo "FILE NAME: ==> " {} \; -exec openssl x509 -enddate -noout -in {} \;
 ```
 
+- [How to Check Certificate with OpenSSL](https://linuxhandbook.com/check-certificate-openssl/)
+
 ## tr
 
 translates, deletes, and squeezes characters

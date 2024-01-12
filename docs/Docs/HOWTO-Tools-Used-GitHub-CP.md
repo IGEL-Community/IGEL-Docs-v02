@@ -8,7 +8,7 @@
 
 ![image01](Images/HOWTO-Tools-Used-GitHub-CP-01.png)
 
-- Respository name
+- Repository name
 - Public
 - Initialized with README
 - Create repository

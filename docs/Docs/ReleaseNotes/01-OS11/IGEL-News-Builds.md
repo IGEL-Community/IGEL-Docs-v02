@@ -14,6 +14,35 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-01-12 - [11.09.164](readme11.09.164.txt)
+
+```
+The new PRIVATE BUILD 11.09.164 for IGEL Workspace is ready.
+
+This build is based on 11.09.160.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Implemented full support for the secondary ringer feature for MS-Teams
+optimization.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed issues when multiple workspace resources have the same name.
+* Fixed AVD app taskbar issues when apps are closed.
+* AVD client version 1.1.92 implemented.
+```
+
+-----
+
 ## 2024-01-10 - [11.09.162](readme11.09.162.txt)
 
 ```

@@ -26,40 +26,28 @@ apparmor module is loaded.
    /usr/sbin/haveged (366)
 ```
 
-## kinit
+## chromium-browser
 
-Active Directory login
+Start Chromium browser in App Mode for Citrix Storefront and similar pages - to use with Custom App function
 
 ```bash linenums="1"
+chromium-browser --app=https://storefront-url.domain.org --start-maximized
+```
 
+## curl
+
+Check for trusted certificate or download files
+
+**Download script from Github and save it:**
+
+```bash linenums="1"
+curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/master/CP_Source/Unified_Communications/Zoom/build/build-zoom-cp.sh
 ```
 
 ```bash linenums="1"
-
-```
-
-## klist
-
-Display kerberos tickets
-
-```bash linenums="1"
-
-```
-
-```bash linenums="1"
-
-```
-
-## getmyip
-
-show device IP
-
-```bash linenums="1"
-getmyip && echo
-```
-
-```bash linenums="1"
-192.168.1.2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   982  100   982    0     0   3494      0 --:--:-- --:--:-- --:--:--  3494
 ```
 
 ## get
@@ -75,26 +63,6 @@ get system.remotemanager.ums_structure_tag
 ```bash linenums="1"
 Building1
 ```
-
-## setparam
-
-Write variable to registry
-
-**Write variable system.remotemanager.ums_structure_tag with Value Building1:**
-
-```bash linenums="1"
-setparam system.remotemanager.ums_structure_tag "Building1"
-write_rmsettings
-```
-
-**Write and read variable system.remotemanager.ums_structure_tag with MAC Address of all network interfaces:**
-
-```bash linenums="1"
-setparam system.remotemanager.ums_structure_tag $(ip a | grep ether | tr -s ' ' | cut -d " " -f 3 | paste -d " "  - -)
-write_rmsettings
-get system.remotemanager.ums_structure_tag
-```
-
 
 ## get_unit_id
 
@@ -127,28 +95,16 @@ Manually set new Unit ID
 Choose number to abort or set new Unit ID:
 ```
 
-## chromium-browser
+## getmyip
 
-Start Chromium browser in App Mode for Citrix Storefront and similar pages - to use with Custom App function
-
-```bash linenums="1"
-chromium-browser --app=https://storefront-url.domain.org --start-maximized
-```
-
-## curl
-
-Check for trusted certificate or download files
-
-**Download script from Github and save it:**
+show device IP
 
 ```bash linenums="1"
-curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/master/CP_Source/Unified_Communications/Zoom/build/build-zoom-cp.sh
+getmyip && echo
 ```
 
 ```bash linenums="1"
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   982  100   982    0     0   3494      0 --:--:-- --:--:-- --:--:--  3494
+192.168.1.2
 ```
 
 ## icg-config
@@ -163,43 +119,16 @@ IGEL Cloud Gateway config; with url and mass deployment key
 
 ```
 
-## vdm_client0
+## kinit
 
-After creating a VMware Horizon session, you can get it to run fully as User from command line with the following command.
+Active Directory login
 
-```bash linenums="1"
-su -c "XDG_RUNTIME_DIR=/run/user/777 /config/sessions/vdm_client0" user &
-```
+[Kinit command explained](https://www.ionos.com/digitalguide/server/configuration/kinit-command/)
 
-## xrandr
+## klist
 
-Controls the Screens from command line
+Display kerberos tickets
 
-Scale down a 4k-monitor in conference room to match laptop display resolution.
-
-- Find the outputs
-
-```bash linenums="1"
-su user -c xrandr
-```
-
-- Example 1:
-
-```bash linenums="1"
-su user -c xrandr --output DISPLAY1 --rate 60 --mode 1920x1080 --fb 1920x1080 --panning 1920x1080* --output DISPLAY2 --mode 1920x1080 --same-as DISPLAY1
-```
-
-- Example 2:
-
-```bash linenums="1"
-su user -c xrandr —output HDMI-1 —rate 60 —mode 1920x1080 —fb 1920x1080 —panning 1920x1080* —output eDP-1 —mode 1920x1080 —same-as HDMI-1
-```
-
-Create a virtual monitor to be used for applications, such as VMware Horizon, that expect a monitor to be attached. This can be added to `Setup > System > Firmware Customization > Custom Commands > Desktop > Final desktop command`
-
-```bash linenums="1"
-xrandr --setmonitor virtual 640/64x480/48+1680+0 none
-```
 
 ## resetvalue_tree
 
@@ -253,4 +182,61 @@ Reset defined section of the IGEL registry
 /bin/resetvalue_tree xen
 /bin/killwait_postsetupd
 /sbin/write_rmsettings
+```
+
+## setparam
+
+Write variable to registry
+
+**Write variable system.remotemanager.ums_structure_tag with Value Building1:**
+
+```bash linenums="1"
+setparam system.remotemanager.ums_structure_tag "Building1"
+write_rmsettings
+```
+
+**Write and read variable system.remotemanager.ums_structure_tag with MAC Address of all network interfaces:**
+
+```bash linenums="1"
+setparam system.remotemanager.ums_structure_tag $(ip a | grep ether | tr -s ' ' | cut -d " " -f 3 | paste -d " "  - -)
+write_rmsettings
+get system.remotemanager.ums_structure_tag
+```
+
+## vdm_client0
+
+After creating a VMware Horizon session, you can get it to run fully as User from command line with the following command.
+
+```bash linenums="1"
+su -c "XDG_RUNTIME_DIR=/run/user/777 /config/sessions/vdm_client0" user &
+```
+
+## xrandr
+
+Controls the Screens from command line
+
+Scale down a 4k-monitor in conference room to match laptop display resolution.
+
+- Find the outputs
+
+```bash linenums="1"
+su user -c xrandr
+```
+
+- Example 1:
+
+```bash linenums="1"
+su user -c xrandr --output DISPLAY1 --rate 60 --mode 1920x1080 --fb 1920x1080 --panning 1920x1080* --output DISPLAY2 --mode 1920x1080 --same-as DISPLAY1
+```
+
+- Example 2:
+
+```bash linenums="1"
+su user -c xrandr —output HDMI-1 —rate 60 —mode 1920x1080 —fb 1920x1080 —panning 1920x1080* —output eDP-1 —mode 1920x1080 —same-as HDMI-1
+```
+
+Create a virtual monitor to be used for applications, such as VMware Horizon, that expect a monitor to be attached. This can be added to `Setup > System > Firmware Customization > Custom Commands > Desktop > Final desktop command`
+
+```bash linenums="1"
+xrandr --setmonitor virtual 640/64x480/48+1680+0 none
 ```

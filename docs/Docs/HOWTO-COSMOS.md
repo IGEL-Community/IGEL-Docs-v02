@@ -76,8 +76,6 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** EMP will need to be created from WP licensing.  [Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
 
-  - **NOTE:** ~~This is currently only accessible by the primary account users, anyone with Service Provider access will not see this button.~~
-
 **Q:** Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?
 
 **A:** Yes! Details can be found here - [HOWTO Remove IGEL Device License](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Remove-IGEL-Device-License/#ums-12)

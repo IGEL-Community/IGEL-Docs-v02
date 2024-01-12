@@ -194,6 +194,14 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ----------
 
+### How was GitHub Custom Partition created?
+
+- [HOWTO Tools Used for GitHub Custom Partition](Docs/HOWTO-Tools-Used-GitHub-CP.md)
+
+----------
+
+----------
+
 ### QR Codes
 
 - IGEL Community Docs

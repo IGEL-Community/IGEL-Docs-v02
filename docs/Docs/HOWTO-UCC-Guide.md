@@ -686,7 +686,7 @@ These workarounds will effectively disable the Audio Sandbox for Google Chrome o
 
 Install the right software at the backend infrastructure: [Jabber Softphone for VDI - Windows](https://software.cisco.com/download/home/286304684/type/283802941/release/14.1(3))
 
-[How to install: Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release 14.0](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_0/dig/jvdi_b_deploy-install-jvdi-14-0.pdf)
+[Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release 14.1](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.html)
 
 Clients are available on this page: [Cisco Jabber VDI](https://www.webex.com/downloads/jabber/jabber-vdi.html)
 

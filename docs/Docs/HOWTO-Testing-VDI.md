@@ -84,7 +84,7 @@ Once your account is created, you will receive email with your login details.
 <!---
 - Citrix Storefront Server: [https://demo.cloud.com/](https://demo.cloud.com/)
 -->
-- Citrix Storefront Server: [https://demo.cloud.com/](https://democloud.cloud.com/)
+- Citrix Storefront Server: [https://democloud.cloud.com/](https://democloud.cloud.com/)
 
 -----
 

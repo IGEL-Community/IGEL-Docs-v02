@@ -77,11 +77,14 @@ When you’re ready to buy Citrix Cloud services, your trial is converted to a p
 
 Once your account is created, you will receive email with your login details.
 
-- [Provision Citrix demo (takes around 15 minutes to setup)](htts://demo.citrix.com/provision)
+- [Provision Citrix demo (takes around 15 minutes to setup)](https://demo.citrix.com/provision)
 
 - Once your demo environment is provisioned, you will receive email with your login details.
 
+<!---
 - Citrix Storefront Server: [https://demo.cloud.com/](https://demo.cloud.com/)
+-->
+- Citrix Storefront Server: [https://demo.cloud.com/](https://democloud.cloud.com/)
 
 -----
 

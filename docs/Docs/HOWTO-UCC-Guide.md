@@ -181,9 +181,9 @@ The new great function is now available for everyone – here are the steps to i
 <!--
 UPDATE
 -->
-### Citrix Base configuration (HDX optimized) for CWA 23.09
+### Citrix Base configuration (HDX optimized) for CWA 23.11
 
-- [Citrix Workspace App for Linux 23.09](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#2309)
+- [Citrix Workspace App for Linux 23.11](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#2311)
 
 <!--
 UPDATE

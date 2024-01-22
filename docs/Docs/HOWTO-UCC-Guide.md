@@ -865,7 +865,10 @@ You can check if the connection is configured right:
 
 IGEL OS 11 includes the right client software.
 
-[Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2303/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
+<!--
+UPDATE
+-->
+[Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2309/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
 
 - VMware VDI Configuration (Horizon 8.x)
 
@@ -925,7 +928,10 @@ Go to Computer Configuration -> Policies -> Administrative Templates -> VMware V
 
 Enable the Media Optimization for Microsoft Teams setting
 
-Additional information you will find here: [Configuring Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2106/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
+<!--
+UPDATE
+-->
+Additional information you will find here: [Configuring Media Optimization for Microsoft Teams](https://docs.vmware.com/en/VMware-Horizon/2309/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html)
 
 **Troubleshooting**
 
@@ -1025,7 +1031,10 @@ The BLAST (Extreme) or PCoIP protocols must be used.
 
 Redirecting HTML5 multimedia content from a VDI or RDSH session to the local client system requires installing the HTML5 Multimedia Redirection feature and the Chrome or Edge browser within the VDI or RDSH image, enabling the HTML5 Multimedia Redirection plug-in, and specifying which websites will use this feature.
 
-Assuming you already copied the `vdm_agent.admx` file (which is part of the [VMware Horizon GPO bundle](https://docs.vmware.com/en/VMware-Horizon-7/7.7/horizon-remote-desktop-features/GUID-76498F8F-BAD5-4835-86F1-2981EBA6ECF9.html)) in the SYSVOL folder of your Active Directory server, you can go ahead and configure the required VMware Horizon settings.
+<!--
+UPDATE
+-->
+Assuming you already copied the `vdm_agent.admx` file (which is part of the [VMware Horizon GPO bundle](https://customerconnect.vmware.com/downloads/details?downloadGroup=HZ-2309-STD&productId=1474&rPId=114074) in the SYSVOL folder of your Active Directory server, you can go ahead and configure the required VMware Horizon settings.
 
 When creating the GPO, navigate to `Computer Configuration > Policies > Administrative Templates > VMware View Agent Configuration > VMware HTML5 Features`
 
@@ -1055,7 +1064,7 @@ Enable the setting â€œConfigure the list of force-installed apps and extensionsâ
 
 ![image082](Images/HOWTO-UCC-Guide-082.png)
 
-To automatically enable the Edge browser plugin, please follow [Horizon Release Notes](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-remote-desktop-features/GUID-976321F6-AE76-42F7-B3F2-B4352D88415E.html#GUID-976321F6-AE76-42F7-B3F2-B4352D88415E)
+To automatically enable the Edge browser plugin, please follow [Horizon Release Notes](https://docs.vmware.com/en/VMware-Horizon/index.html)
 
 If you have met all the requirements, it is time to test if the configuration is working! Within the VDI or RDSH session, launch the Chrome or Edge browser, and look for the VMware Horizon HTML5 Redirection Extension icon in the right-upper corner.
 

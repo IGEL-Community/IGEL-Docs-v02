@@ -5,7 +5,7 @@
         <profilename>Citrix Known Good Settings</profilename>
         <firmware>
             <model>IGEL OS 11</model>
-            <version>11.09.150.01</version>
+            <version>11.09.160.01</version>
         </firmware>
         <description></description>
         <overwritesessions>false</overwritesessions>

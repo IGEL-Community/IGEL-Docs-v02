@@ -40,7 +40,7 @@ UPDATE
 
 **NOTES:**
 
-- For Cisco Webex testing, you need an Webex account.
+- For Cisco Webex testing, you need an Webex account. Testing Webex in guest mode may cause issues with validating optimization.
 
 -----
 

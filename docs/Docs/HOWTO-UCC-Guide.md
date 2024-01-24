@@ -38,6 +38,10 @@ UPDATE
 
 - [IGEL Addendum to UCC Guide](HOWTO-UCC.md)
 
+**NOTES:**
+
+- For Cisco Webex testing, you need an Webex account.
+
 -----
 
 -----

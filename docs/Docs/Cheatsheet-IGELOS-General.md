@@ -240,3 +240,15 @@ Create a virtual monitor to be used for applications, such as VMware Horizon, th
 ```bash linenums="1"
 xrandr --setmonitor virtual 640/64x480/48+1680+0 none
 ```
+
+Rotate window 90 degrees
+
+```bash linenums="1"
+xrandr -o left
+```
+
+To revert back
+
+```bash linenums="1"
+xrandr -o normal
+```

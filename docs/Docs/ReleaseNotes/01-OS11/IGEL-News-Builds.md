@@ -14,6 +14,315 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-01-25 - [11.09.210](readme11.09.210.txt)
+
+```
+The new PUBLIC BUILD 11.09.210 for IGEL Workspace is ready.
+
+This build is based on 11.09.150.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Added: Notification handling for applications launched via Citrix Self-
+  Service, Browser or Storebrowse.
+* Added Citrix Workspace App 2311  
+  Available Citrix Workspace Apps in this release: 2311, 2309 (default) and 2010
+* Fast SmartCard Feature
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`SmartCardCryptographicRedirection`                              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.virtualdriver.smartcard.SmartCardCryptographicRedirection` |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+  > Fast smartcard is an improvement over the existing HDX PC/SC-based smartcard
+  > redirection. It improves performance when smartcards are used in
+  > high-latency WAN environments.
+
+* Improved loading experience for shared user mode
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`KioskFUIEnhanced`                                               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.KioskFUIEnhanced`                                   |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+  > The time taken to load the store is reduced and thus the loading experience
+  > for the shared user mode is improved.
+
+* Collecting user activity logs
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UserActivityLogsDisabled`                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.UserActivityLogsDisabled`                           |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+
+  > It is now possible to collect the user activity logs. Activities related to
+  > most of the Storebrowse commands are saved in the log file.
+
+  > /userhome/.ICAClient/logs/userActivitylog/
+
+
+### AVD
+
+* Added full support for the secondary ringer feature for MS-Teams optimization.
+* Updated IGEL AVD client to version 1.1.37.
+
+### VMware Horizon
+
+* Updated VMware Horizon Client to version 2309 8.11.0-22660930
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Disable network state display`                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.blast-network-state`                               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Allow Blast connections to use proxy settings`                 |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.blast-proxy`                                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Allow changing the use of HEVC decoding`                       |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.allow-enable-hevc`                                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Blast HEVC decoding`                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.blast-hevc`                                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Blast AV1 decoding`                                            |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.blast-av1`                                         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `High Color Accuracy mode for Blast/HEVC`                       |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.high-color-accuracy-mode-hevc`                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+
+### Chromium
+
+* Updated Chromium Browser to version 120.0.6099.216.
+
+### Network
+
+* Added Quectel EM05-G support for Lenovo ThinkPad L13 AMD Gen4 and L13 Intel
+  Gen4.  
+* Added regional support with Quectel EM05-G for US SIM cards on supported
+  Lenovo Laptop devices.
+
+### Smartcard
+
+* Updated Pointsharp (SecMaker) Net iD Enterprise to version 6.9.1.17.
+* Updated 90meter PKCS#11 library to version 3.0.0.45. Besides the SIPR version
+  of the library, the NIPR version is added now. Additional smartcard types,
+  specified by ATR, are possible to add to allow list.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Library type`                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.library_type`                              |
++------------+-----------------------------------------------------------------+
+|Value       |**SIPR**, NIPR                                                   |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Log level`                                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.loglevel`                                  |
++------------+-----------------------------------------------------------------+
+|Value       |**none**, error, warn, trace                                     |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Log file`                                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.logfile`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**/var/log/lib90meterpk11.log**                                  |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Card name`                                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.card%.name`                                |
++------------+-----------------------------------------------------------------+
+|Value       |**(empty)**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`ATR`                                                            |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.card%.atr`                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**(empty)**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`ATR mask`                                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.pkcs11.90meter.card%.mask`                                |
++------------+-----------------------------------------------------------------+
+|Value       |**(empty)**                                                      |
++------------+-----------------------------------------------------------------+
+
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 14.3.0.
+
+### Cisco Webex
+
+* Integrated Cisco Webex Meetings VDI 43.6.8.4
+* Updated Cisco Webex VDI to version 43.12.0.28141.
+
+### zoomvdi
+
+* Added Zoom VDI 5.16.10.24420.
+* Available Zoom VDI plugins: 5.16.10.24420 (default), 5.15.2.23760, and
+  5.14.10.23670
+
+### Hardware
+
+* Added hardware support for LG AiO 27CQ650.
+* Added hardware support for LG AiO 34CR650.
+* Removed: Support ended for UD2-LX 40 (D220), UD2-LX 50 (M250C 4GB eMMC),
+  UD3-LX 51 (M340C) and UD6-LX 51 (H830C) .
+* Added hardware support for Lenovo ThinkPad L13 Intel Gen4.
+* Added hardware support for Lenovo ThinkPad L13 AMD Gen4.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fixed webkit2gtk issues CVE-2023-42916, CVE-2023-42917, CVE-2023-42883 and
+  CVE-2023-42890.  
+* Fixed vim security issues CVE-2023-48706, CVE-2023-48237, CVE-2023-48236,
+  CVE-2023-48235, CVE-2023-48234, CVE-2023-48233, CVE-2023-48231,
+  CVE-2023-46246, CVE-2022-2042, CVE-2022-2000, CVE-2022-1897, CVE-2022-1886,
+  CVE-2022-1771 and CVE-2022-1725.  
+* Fixed curl security issues CVE-2023-46219 and CVE-2023-46218.  
+* Fixed avahi security issues CVE-2023-38473, CVE-2023-38472, CVE-2023-38471,
+  CVE-2023-38470 and CVE-2023-38469.  
+* Fixed glibc security issues CVE-2023-5156, CVE-2023-4813 and CVE-2023-4806.  
+* Fixed gnutls28 security issue CVE-2023-5981.  
+* Fixed ghostscript security issue CVE-2023-46751.  
+* Fixed nghttp2 security issue CVE-2023-44487.  
+* Fixed poppler security issues CVE-2022-38349, CVE-2022-37052, CVE-2022-37051
+  and CVE-2022-37050.  
+* Fixed postgresql-14 security issues CVE-2023-5870, CVE-2023-5869 and
+  CVE-2023-5868.  
+* Fixed python3.10 security issue CVE-2023-40217.  
+* Fixed sqlite3 security issues CVE-2023-7104 and CVE-2022-46908.  
+* Fixed tiff security issues CVE-2023-3576 and CVE-2022-40090.  
+* Fixed yajl security issues CVE-2023-33460, CVE-2022-24795 and CVE-2017-16516.  
+* Fixed python-cryptography security issues CVE-2023-49083 and CVE-2023-23931.  
+* Fixed tar security issue CVE-2023-39804.
+* Fixed libssh2 security issue CVE-2023-48795.  
+* Fixed libssh security issues CVE-2023-6918, CVE-2023-6004 and CVE-2023-48795.  
+* Fixed openssh security issues CVE-2023-51385, CVE-2023-51384 and
+  CVE-2023-48795.
+
+### X server
+
+* Fixed xorg-server security issues CVE-2023-6478 and CVE-2023-6377.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed: The error message **_Broken Pipe_* should no longer appears during
+  login process.
+* Fixed usage of Ctrl+Alt+End in Citrix sessions.
+
+### AVD
+
+* Fixed issues when multiple workspace resources have the same name.
+* Fixed AVD app taskbar issues when apps are closed.
+
+### RD Web Access
+
+* Fixed possible error when starting Remote Desktop Web Access applications.
+
+### VMware Horizon
+
+* Fixed switch for serial port- and scanner redirection in UMS Web App by using
+  a checkbox instead of customized on/off dropdown box.
+
+### Network
+
+* Added new registry key to switch between 8852be and rtw_8852be WiFi driver
+  (Auto will use the 8852be on HP mt645 G7)
+
++------------+-----------------------------------------------------------------+
+|Parameter   |Use 8852be driver instead of rtw_8852be for WLAN.                |
++------------+-----------------------------------------------------------------+
+|Registry    |network.drivers.realtek.use_8852be                               |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |_Auto_                                                           |
++------------+-----------------------------------------------------------------+
+
+### HID
+
+* Fixed handling / calibration of ELO touch devices in multi-monitor
+  configuration.
+
+### CUPS Printing
+
+* Fixed handling of SMB network printers.
+
+### Base system
+
+* Fixed: Post-Session Command for VMware Horizon and protocol RDP.
+```
+
+-----
+
 ## 2024-01-10 - [11.09.163](readme11.09.163.txt)
 
 ```

@@ -2,6 +2,18 @@
 
 -----
 
+## OS 11 and 12 VPN
+
+### [OS 12: NCP Secure Enterprise Client](https://app.igel.com/#/api/ncp)
+
+### [OS 11: NCP Secure Enterprise Client](https://kb.igel.com/igelos-11.09/en/ncp-vpn-client-101061695.html)
+
+- The [NCP Secure Enterprise Client](https://www.ncp-e.com/en/) is a component of NCP’s Network Access Technology” the holistic NCP Secure Enterprise Solution. Highly secure data connections to VPN gateways from all well-known suppliers can be established using IPsec standards. The teleworker works transparently and securely at any location (mobile or stationary) in the same manner as he works at his office within his corporate environment.
+
+-----
+
+-----
+
 ## OpenConnect VPN Client
 
 OpenConnect is a cross-platform multi-protocol SSL VPN client which supports a number of VPN protocols:

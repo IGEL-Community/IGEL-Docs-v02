@@ -5,7 +5,7 @@ UPDATE
 -->
 - IGEL UMS Version Base: [12.03.100](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.03.100.txt)
 
-- IGEL OS Firmware Base: [11.09.210](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.210.txt)
+- IGEL OS Firmware Base: [11.09.211](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.211.txt)
 
 - IGEL OS Firmware Base: [11.09.160](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.160.txt)
 
@@ -14,7 +14,7 @@ UPDATE
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
 
 
-| Clients                          | 11.09.210            |
+| Clients                          | 11.09.211            |
 |----------------------------------|----------------------|
 | Cisco JVDI Client                | 14.3.0               |
 | Cisco Webex Meetings VDI plugin  | 42.10.8.14           |
@@ -90,7 +90,7 @@ IGEL OS:
 <!--
 UPDATE
 -->
-- IGEL OS 11.09.210 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.09.211 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.160 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.163 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.164 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)

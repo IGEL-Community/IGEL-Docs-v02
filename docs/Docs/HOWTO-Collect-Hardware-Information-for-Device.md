@@ -409,3 +409,9 @@ do
 done
 echo "done."
 ```
+
+-----
+
+## KVM (Keybaord Video Monitor) Switch
+
+- [ATEN CS1924m KVM](https://assets.aten.com/product/manual/cs1922m-cs1924m_um_w_2021-10-08.pdf)

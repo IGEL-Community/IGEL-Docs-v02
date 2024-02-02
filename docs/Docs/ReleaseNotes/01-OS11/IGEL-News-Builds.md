@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-02-01 - [11.09.167](readme11.09.167.txt)
+
+```
+The new PRIVATE BUILD 11.09.167 for IGEL Workspace is ready.
+
+This build is based on 11.09.160.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 14.3.0.
+```
+
+-----
+
 ## 2024-01-31 - [11.09.211](readme11.09.211.txt)
 
 ```

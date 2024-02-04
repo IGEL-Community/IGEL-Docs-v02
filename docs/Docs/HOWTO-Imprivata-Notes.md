@@ -47,6 +47,25 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 -----
 
+## 3 February 2024 - Update
+
+Imprivata made a change in the PIE 7.12 agent by updating their Python version which in turn required IGEL to update the PIE bootstrap loader starting in 11.09.100.
+
+This bootstrap loader is not backwards compatible with 11.08.xx or lower and also requires the 7.12 PIE agent or higher.
+ 
+IGEL recommends to disable appliance mode `BEFORE` upgrading to 11.09.100.
+
+**NOTES:** 
+
+- Imprivata’s KB article may state to disable applicance mode `AFTER` the IGEL OS upgrade.
+ 
+- This issue does not impact the IGEL Agent.  For IGEL agent, the current IGEL OS versions to use are:
+ 
+    - 11.09.150 (or any higher version based on this version)
+    - OS 12 app 0.3.8 or higher
+
+-----
+
 ## 20 December 2023 - Update
 
 ### TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12

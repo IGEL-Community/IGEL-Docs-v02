@@ -316,6 +316,8 @@ There are multiple ways to register your IGEL endpoints with UMS:
 1. Manually Scan for your IGEL Endpoints.
 2. Set up a DNS Record or DHCP Tag for automatic registration.
 
+**Note:** [Registration of a Device in the IGEL UMS Fails](https://kb.igel.com/endpointmgmt-12.03/en/registration-of-a-device-in-the-igel-ums-fails-108340682.html)
+
 ### Manually Scan for your IGEL Endpoints
 
 A manual scan is an easy way to register up to a handful of IGEL endpoints.

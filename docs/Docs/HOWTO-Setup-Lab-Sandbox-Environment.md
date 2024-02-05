@@ -398,8 +398,8 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 
 | Name | Description - Link |
 |------|--------------------|
-| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.03.100.exe" download>UMS 12 for Windows Server</a> |
-| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.03.100.bin" download>UMS 12 for Linux Server</a> |
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.03.110.exe" download>UMS 12 for Windows Server</a> |
+| UMS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.03.110.bin" download>UMS 12 for Linux Server</a> |
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_6.10.140.exe" download>UMS 6 for Windows Server</a> |
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_6.10.140.bin" download>UMS 6 for Linux Server</a> |
 | OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.3.0.zip" download>OSC - OS 12</a> |
@@ -418,8 +418,8 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc_12.3.0.zip
 
 #UMS 12:
-wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.03.100.exe
-wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.03.100.bin
+wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.03.110.exe
+wget https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.03.110.bin
 
 #ICG 12:
 wget https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.03.100.bin

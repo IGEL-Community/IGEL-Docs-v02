@@ -6,6 +6,11 @@
 
 ## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/igelos-11.09/en/imprivata-101059435.html)
 
+**Notes:**
+
+- Certificate path for IGEL Agent for Imprivata: `/wfs/ca-certs/`
+- Certificate path for PIE Imprivata: `/wfs/ca-certs/<cert>`
+
 -----
 
 -----

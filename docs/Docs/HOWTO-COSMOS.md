@@ -280,6 +280,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** [IGEL OS automatic Time Zone sync based on geo location detection](https://virtualbrat.com/2023/11/17/igel-os-automatic-time-zone-sync-based-on-geo-location-detection-example-of-how-igel-os-scripting-can-help/)
 
+**Q:** How to reduce reduce network traffic back to UMS when WIFI roaming?
+
+**A:** Set `network.interfaces.wirelesslan.device0.roam_refresh_dhcp` to False in the Registry to reduce connections back to the UMS servers. Without setting to false as the device travels, it may download profiles and settings from UMS every time it switches WIFI access point.
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

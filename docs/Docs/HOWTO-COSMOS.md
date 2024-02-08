@@ -321,6 +321,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / ~~Azure Application Gateway~~ with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.02/en/igel-cloud-gateway-icg-90238150.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.03/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-108341045.html).
 
+**Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
+
+**A:** [KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.03/en/igel-universal-management-suite-network-configuration-115084368.html)
+
 **Q:** Does ICG 12 support OS 11 devices?
 
 **A:** Yes!

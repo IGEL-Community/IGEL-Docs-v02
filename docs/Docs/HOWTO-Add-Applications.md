@@ -64,6 +64,8 @@ Use at your own risk!
 
 ## Want to test out OS 12 with App Portal without UMS12?
 
+### [Video show steps to add applications to OS 12 without UMS12](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-Add-Applications-IGEL_OS_12_wo_UMS_AppPortal.mp4)
+
 Here are some steps to try out
 
 Steps to test out your UDPocket or OS 12 installed device

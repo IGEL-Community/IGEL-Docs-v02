@@ -1,6 +1,6 @@
 # HOWTO Write config files to IGEL OSC ISO file from Linux
 
-## [Rolling out Initial Settings with IGEL OSC](https://kb.igel.com/igelos-11.09/en/rolling-out-initial-settings-with-igel-osc-116066874.html)
+## [KB: Rolling out Initial Settings with IGEL OSC](https://kb.igel.com/igelos-11.09/en/rolling-out-initial-settings-with-igel-osc-116066874.html)
 
 -----
 

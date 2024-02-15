@@ -1,5 +1,11 @@
 # HOWTO Write config files to IGEL OSC ISO file from Linux
 
+## [Rolling out Initial Settings with IGEL OSC](https://kb.igel.com/igelos-11.09/en/rolling-out-initial-settings-with-igel-osc-116066874.html)
+
+-----
+
+-----
+
 ## Determine mount point in ISO image
 
 ```bash linenums="1"
@@ -24,23 +30,27 @@ osc<version>.iso2        300    102699  102400   50M ef EFI (FAT-12/16/32)
 iso2 is the second partition and is writeable.
 
 ```bash linenums="1"
-mkdir /tmp/IGEL
-mount -o loop,offset=$((300*512)) osc<version>.iso /tmp/IGEL
+mkdir /tmp/osc-data
+mount -o loop,offset=$((300*512)) osc<version>.iso /tmp/osc-data
 ```
 
-## Create wfs template folder and copy files
+## Create initial-settings directory and copy files and directories
 
-Create wfs_template directory and copy files that will go into /wfs (such as setup.init, .ovpn files, ca-certs, etc.)
+Create initial-settings directory and copy files that will go into /wfs (such as setup.init, .ovpn files, ca-certs, etc.)
 
 ```bash linenums="1"
-mkdir -p /tmp/IGEL/igel/wfs_template  
-cp files /tmp/IGEL/igel/wfs_template
+mkdir -p /tmp/osc-data/initial-settings/ca-certs
+mkdir -p /tmp/osc-data/initial-settings/wfs-templates
+cp setup.ini /tmp/osc-data/initial-settings/
+cp 782DAFC836185589DD6212375DC33C22.lic D5F47E9338C3A46A0D0F785B9F6A6926.lic /tmp/osc-data/initial-settings/
+cp SSL+VPN+CA.crt /tmp/osc-data/initial-settings/ca-certs/
+cp wallpaper.jpg /tmp/osc-data/initial-settings/wfs-templates
 ```
 
 ## Unmount file system  
 
 ```bash linenums="1"
-umount /tmp/IGEL
+umount /tmp/osc-data
 ```
 
 ## Create bootable USB of OSC ISO  

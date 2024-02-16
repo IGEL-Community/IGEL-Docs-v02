@@ -175,6 +175,9 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
   - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.03/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-108340489.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
 
+  <video controls>
+<source src="../Videos/HOWTO-COSMOS-New_Web_Cert.mp4" type="video/mp4">
+</video>
 
 **Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?
 

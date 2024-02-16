@@ -176,7 +176,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
 
   <video controls>
-<source src="../Videos/HOWTO-COSMOS-New_Web_Cert.mp4" type="video/mp4">
+<source src="../videos/HOWTO-COSMOS-New_Web_Cert.mp4" type="video/mp4">
 </video>
 
 **Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?

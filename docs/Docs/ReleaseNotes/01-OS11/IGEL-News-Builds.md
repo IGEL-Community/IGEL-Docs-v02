@@ -14,6 +14,27 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-02-16 - [11.09.216](readme11.09.216.txt)
+
+```
+The new PRIVATE BUILD 11.09.216 for IGEL Workspace is ready.
+
+This build is based on 11.09.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Support Okta IDP username/password auto-fill and form submit.  
+* Improved AAD login speed.  
+* AVD version 1.1.39
+```
+
+-----
+
 ## 2024-02-01 - [11.09.167](readme11.09.167.txt)
 
 ```

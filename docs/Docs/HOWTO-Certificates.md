@@ -63,7 +63,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 
 - Windows server role – typically on standalone machine(s) in a multi-tiered configuration, but can be installed alongside your DC for lab purposes
 - Will generate a CA certificate upon role setup – this CA certificate is used to issue endpoint certificates
-- By default, domain joined Windows devices will add Enterprise CA certificates to their trust store.
+- By default, domain joined Windows devices will add Enterprise CA certificates to your trust store.
 - Certificate issuance is usually handled via templates
 
 ![05](Images/HOWTO-Certificates-05.png)
@@ -74,7 +74,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 
 ### Common Scenario 1 – LDAPS in UMS
 
-- Confirm that you have an Enterprise CA and an endpoint cert bound to their domain controller
+- Confirm that you have an Enterprise CA and an endpoint cert bound to your domain controller
 - We are looking for the ROOTMOST certificate, not an individual domain controller certificate!
 - From a domain controller, we can go to certificates.mmc and follow the endpoint cert up:
 

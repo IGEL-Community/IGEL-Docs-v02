@@ -478,6 +478,8 @@ In addition to opening ports, it is necessary to give the ICG server a public IP
 
 ### Choose and Prepare the ICG Certificate
 
+**NOTE:** [HOWTO Certificates](HOWTO-Certificates.md)
+
 ICG uses a certificate to authenticate any new devices connecting from outside the LAN that you wish to manage. You must choose what type of certificate to use in this workflow. The certificate is created/imported as part of the ICG installation process – but it’s important to choose which type of certificate you want to use beforehand.
 
 Your options are:

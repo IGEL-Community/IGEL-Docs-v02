@@ -1,5 +1,7 @@
 # HOWTO ICG Free Signed Certificate Option
 
+**NOTE:** [HOWTO Certificates](HOWTO-Certificates.md)
+
 ## Recommendation for a Free Signed Certificate for ICG Testing
 
 **NOTE:** This article provides a solution that has not been approved by the IGEL Research and Development department. Therefore, official support cannot be provided by IGEL.

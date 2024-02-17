@@ -12,6 +12,13 @@
 
 ### Asymmetric vs. Symmetric Encryption
 
+Symmetric and asymmetric encryption are two types of keys that have different features and uses:
+
+- Symmetric encryption uses the same key to encrypt and decrypt data.
+- Asymmetric encryption uses two separate keys, one for encryption (public key) and one for decryption (private key).
+- Symmetric encryption is faster and uses shorter keys (usually 128 or 256 bits).
+- Asymmetric encryption is more secure and uses longer keys (sometimes 2048 bits or longer).
+
 ![02](Images/HOWTO-Certificates-02.png)
 
 ### x.509 Certificates

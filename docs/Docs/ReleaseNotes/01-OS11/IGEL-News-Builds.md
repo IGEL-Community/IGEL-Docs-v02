@@ -14,6 +14,67 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-02-19 - [11.09.129.DER](readme11.09.129.DER.txt)
+
+```
+The new PRIVATE BUILD 11.09.129.DER for IGEL Workspace is ready.
+
+This build is based on 11.09.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Power Term
+
+* Added Ericom PowerTerm version 12.0.1.020170219 again.
+```
+
+-----
+
+## 2024-02-19 - [11.09.217](readme11.09.217.txt)
+
+```
+The new PRIVATE BUILD 11.09.217 for IGEL Workspace is ready.
+
+This build is based on 11.09.211.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* The missing icons should now be displayed.
+```
+
+-----
+
+## 2024-02-19 - [11.09.128](readme11.09.128.txt)
+
+```
+The new PRIVATE BUILD 11.09.128 for IGEL Workspace is ready.
+
+This build is based on 11.09.117.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI to version 43.10.0.28101.
+
+### zoomvdi
+
+* Integrated Zoom Plugins: 5.14.10.23670, 5.15.2.23760, 5.16.10.24420
+```
+
+-----
+
 ## 2024-02-16 - [11.09.216](readme11.09.216.txt)
 
 ```

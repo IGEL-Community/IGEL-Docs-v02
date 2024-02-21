@@ -10,7 +10,7 @@
 
 - Certificate path for IGEL Agent for Imprivata: `/wfs/ca-certs/`
 - Certificate path for PIE Imprivata: `/wfs/ca-certs/<cert>`
-- Imprivata appliance needs to have constant contact with devices. Off network devices will either need VPN or internet facing Imprivata appliance
+- Imprivata appliance needs to have constant contact with devices. Off network devices will either need [VPN](HOWTO-VPN.md) or internet facing Imprivata appliance
 
 -----
 

@@ -174,6 +174,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
   - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.03/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-108340489.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
+  - Delete the obsolete (automatically created) UMS web certificates and restart the UMS server.
 
   <video controls>
 <source src="../videos/HOWTO-COSMOS-New_Web_Cert.mp4" type="video/mp4">

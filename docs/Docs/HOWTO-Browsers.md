@@ -30,3 +30,11 @@ Custom Partitions (CP) can be created for the following browsers:
 - Island
 
 ### [IGEL Community GitHub CP Builders for Browsers](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Browsers)
+
+-----
+
+## [Island Enterprise Browser](https://www.island.io/)
+
+![image01](Images/HOWTO-Browsers-01.png)
+
+- [Automated Application Builder for Island Enterprise Browser](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Browsers/Island)

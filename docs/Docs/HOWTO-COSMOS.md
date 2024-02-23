@@ -131,7 +131,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** When will proxy mode support for UMS 12 be released?
 
-**A:** As of 31 July, UMS 12.02.100 has proxy mode support.
+**A:** As of 31 July 2023, UMS 12.02.100 has proxy mode support.
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
@@ -230,7 +230,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Is OS 12 considered an App?
 
-**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [KB IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/basesystem-12.1/en/igel-os-base-system-90231178.html).
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [KB IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/base_system/12.3.0/en/igel-os-base-system-108346390.html).
 
 **Q:** What are the hardware requirements for OS 12?
 
@@ -250,7 +250,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Does OS 12 support PXE boot deployments?
 
-**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/os12-installation-pxe)
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.3.0/en/how-to-deploy-igel-os-12-with-pxe-108346831.html)
 
 **Q:** How to enable Citrix username / password auto login support in cloud environment be supported?
 
@@ -323,7 +323,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / ~~Azure Application Gateway~~ with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.02/en/igel-cloud-gateway-icg-90238150.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.03/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-108341045.html).
+**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / ~~Azure Application Gateway~~ with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.03/en/igel-cloud-gateway-icg-111642065.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.03/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-108341045.html).
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
@@ -339,7 +339,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.02/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-90238621.html).
+**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.03/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-111642581.html)
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 

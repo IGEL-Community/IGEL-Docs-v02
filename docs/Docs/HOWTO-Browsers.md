@@ -10,6 +10,7 @@ IGEL OS 11 includes Chromium and Firefox browsers.
 IGEL OS 12 has Chromium browser. Other browsers are planned.
 
 - [KB: Chromium Browser](https://kb.igel.com/chromium-111/chromium-browser-81507068.html)
+- [App Portal: Firefox Browser](https://app.igel.com/#/api/firefox)
 
 -----
 

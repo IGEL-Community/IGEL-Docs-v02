@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-02-26 - [11.09.218](readme11.09.218.txt)
+
+```
+The new PRIVATE BUILD 11.09.218 for IGEL Workspace is ready.
+
+This build is based on 11.09.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* AVD 1.1.97 with MMR (browser webrtc redirection) in RdClientSDK. No libwebrtc-
+plugin.so needed anymore.
+```
+
+-----
+
 ## 2024-02-19 - [11.09.129.DER](readme11.09.129.DER.txt)
 
 ```

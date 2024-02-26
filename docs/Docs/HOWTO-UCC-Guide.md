@@ -5,7 +5,7 @@ UPDATE
 -->
 - IGEL UMS Version Base: [12.03.110](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.03.110.txt)
 
-- IGEL OS Firmware Base: [11.09.216](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.216.txt)
+- IGEL OS Firmware Base: [11.09.218](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.218.txt)
 
 - IGEL OS Firmware Base: [11.09.160](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.160.txt)
 
@@ -14,7 +14,7 @@ UPDATE
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
 
 
-| Clients                          | 11.09.216            |
+| Clients                          | 11.09.218            |
 |----------------------------------|----------------------|
 | Cisco JVDI Client                | 14.3.0               |
 | Cisco Webex Meetings VDI plugin  | 42.10.8.14           |
@@ -25,7 +25,7 @@ UPDATE
 | Citrix Workspace App             | 20.10.0.6            |
 | Citrix Workspace App             | 23.09.0.24           |
 | Citrix Workspace App             | 23.11.0.82           |
-| IGEL AVD Client                  | 1.1.39igel1707390042 |
+| IGEL AVD Client                  | 1.1.97igel1708937599 |
 | IGEL RDP Client                  | 2.2igel1700473865    |
 | VMware Horizon client            | 2309-8.11.0-22660930 |
 | Zoom Media Plugin                | 5.14.10.23670        |
@@ -90,7 +90,7 @@ IGEL OS:
 <!--
 UPDATE
 -->
-- IGEL OS 11.09.216 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
+- IGEL OS 11.09.218 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.160 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.163 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.164 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)

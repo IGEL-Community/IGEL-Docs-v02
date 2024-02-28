@@ -8,6 +8,15 @@
 
 -----
 
+## 28 February 2024 - Microsoft Teams Progressive Web App for OS 12
+
+- Use [Microsoft Teams as a Progressive Web App](https://app.igel.com/#/api/ms_teams_pwa) via Chromium.
+- Chromium app is required on IGEL OS
+- Progressive Web Apps run in a standalone window instead of a browser tab and can be launched separately.
+- For full support, the app Chromium 120.0.6099.216 BUILD 4.0 or newer must be installed (provides OpenH264).
+
+-----
+
 ## 6 December 2023 - Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)
 
 The new MS Teams for VDI is publicly available. If you’re using FSLogix as your profile solution, which was not supported during Teams public preview phase, you have to use the FSLogix 2210 hotfix 3 preview which is also available since 5 December 2023.
@@ -58,7 +67,7 @@ nc -v -z aka.ms 443
 
 -----  
 
-## Microsoft Teams progressive web app (PWA) via Chromium
+## Microsoft Teams progressive web app (PWA) via Chromium OS 11
 
 The PWA provides the latest Microsoft Teams features via a native IGEL client.
 
@@ -68,7 +77,7 @@ The PWA offers access to more capabilities, including custom backgrounds, galler
 
 -----  
 
-## Microsoft Teams progressive web app (PWA) via Edge
+## Microsoft Teams progressive web app (PWA) via Edge OS 11 / 12
 
 The PWA provides the latest Microsoft Teams features via a native IGEL client.
 
@@ -95,7 +104,7 @@ Steps to install the PWA into Microsoft Edge:
 
 -----
 
-### Create shortcut for Teams PWA application
+### Create shortcut for Teams PWA application OS 11
 
 **NOTE:** A reboot may be needed for the Teams icon to show up.
 

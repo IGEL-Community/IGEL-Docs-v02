@@ -229,3 +229,19 @@ Sample profiles to address touchpad sensitivity issue.
 
 - <a href="../Profiles/HOWTO-UCC-Disable-Touchpad-While-Typing.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Disable-Touchpad-While-Typing</a> 
 - <a href="../Profiles/HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Touchpad-Libinput-Adjustments-Clickpad-Disabled</a> 
+
+-----
+
+## Citrix HDX service fails on 29th February
+
+- [Citrix HDX HTML5 video redirection service crashing on 29th February.](https://support.citrix.com/article/CTX617043/citrix-hdx-service-fails-on-29th-february)
+
+- This can be achieved through the command mentioned below:
+
+```
+>> Run the below command from an administrative command prompt [Start > cmd > right click and run as admin]
+```
+
+```bash linenums="1"
+net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net start w32time
+```

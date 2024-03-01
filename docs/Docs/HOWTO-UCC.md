@@ -245,3 +245,14 @@ Sample profiles to address touchpad sensitivity issue.
 ```bash linenums="1"
 net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net start w32time
 ```
+
+-----
+
+## IGEL OS 11.09.217 Citrix Multiple Audio Device Support / Unified Communications Issue
+
+- Issue is the multiple audio device support is not working 
+- Zoom VDI/Microsoft Teams will not work when the device is in the problem state
+
+**Workaround:** Configure the Citrix Client selection as 2311 and use the following system registry setting to disable adaptive audio.
+
+```ica.module.enableadaptiveaudio = disabled```

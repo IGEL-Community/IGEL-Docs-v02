@@ -92,6 +92,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.03/en/deployment-deploying-licenses-through-the-igel-ums-108341767.html).
 
+**Q:** How does hardware-bundled IGEL licenses work?
+
+**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html)
+
 -----
 
 ## FAQ - UMS

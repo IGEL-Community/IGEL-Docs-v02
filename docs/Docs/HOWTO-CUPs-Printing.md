@@ -52,13 +52,44 @@ lpadmin -p USBPRINTER -E -v "${USBDEVICE}" -m /wfs/USBPRINTER.ppd
 
 -----
 
+## How to query paper size and set default paper size
+
+Determine default paper size
+
+```bash linenums="1"
+driverless ipp://IP-ADDRESS-of-PRINTER/ipp/print | grep -i paperdimension
+```
+
+Output from query:
+
+```bash linenums="1"
+*DefaultPaperDimension: Letter
+*PaperDimension 215x345mm: "609.448818897638 977.952755905512"
+*PaperDimension 3x5: "216 360"
+*PaperDimension A4: "595.275590551181 841.889763779528"
+*PaperDimension A5: "419.527559055118 595.275590551181"
+*PaperDimension A6: "297.637795275591 419.527559055118"
+*PaperDimension Env10: "296.985826771654 684"
+*PaperDimension EnvC5: "459.212598425197 649.133858267717"
+*PaperDimension EnvDL: "311.811023622047 623.622047244094"
+*PaperDimension EnvMonarch: "278.985826771654 540"
+*PaperDimension Executive: "522 756"
+*PaperDimension FanFoldGermanLegal: "612 936"
+*PaperDimension ISOB5: "498.897637795276 708.661417322835"
+*PaperDimension Legal: "612 1008"
+*PaperDimension Letter: "612 792"
+*PaperDimension Oficio: "612 964.8"
+```
+
+-----
+
 ## Registry key to change settings
 
 IGEL OS registry key `print.cups.printer%.lpoptions:`
 
 The expected format is like so:
 
-`-o InputSlot=Tray3 -o HPOption_Tray3=HP550SheetInputTray -o OutputBin=FrontBin`
+`-o InputSlot=Tray3 -o HPOption_Tray3=HP550SheetInputTray -o OutputBin=FrontBin -o DefaultPaperDimension=Legal` 
 
 To test by using use the browser's print dialog (and choose the systems dialog).
 

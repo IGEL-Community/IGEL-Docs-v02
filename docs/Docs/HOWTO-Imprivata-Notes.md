@@ -53,6 +53,27 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 -----
 
+## 7 March 2024 - Update
+
+**IMPORTANT INFO:  IGEL Agent for Imprivata and VMWare Auth Only workflows**
+ 
+- **Do Not Upgrade to 11.09.260**
+ 
+- **How this works:**  In the Auth Only mode, IGEL OS receive encrypted credentials back from the Imprivata appliance (username, password, domain) and then “stuff” them into the right parameter fields for the different applications IGEL support for the Auth Only workflow (AVD, Citrix WSA, Horizon, MS RDP). 
+ 
+- **CAUSE:**  In 11.09.260, there’s a parameter change with the Horizon Client that will likely break the “stuffing of credentials” mechanism IGEL use for Auth Only.  IGEL is looking into this and they will have additional guidance later.
+ 
+**NOTE:** AVD, Citrix WSA and MS RDP clients are not impacted for the Auth Only workflow.
+ 
+**GUIDANCE:** IAFI customers testing / using VMWare Auth Only should remain on 11.09.150 (or any branch based on that release).
+ 
+**For example:**
+
+- 11.09.210 is OK to use as it’s based off 11.09.150. 
+- Any [branch](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/) based off 11.09.210 (with the exception of 11.09.260) is ok to use.
+
+-----
+
 ## 3 February 2024 - Update
 
 Imprivata made a change in the PIE 7.12 agent by updating their Python version which in turn required IGEL to update the PIE bootstrap loader starting in 11.09.100.

@@ -14,6 +14,559 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-03-07 - [11.09.260](readme11.09.260.txt)
+
+```
+The new PUBLIC BUILD 11.09.260 for IGEL Workspace is ready.
+
+This build is based on 11.09.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Updated AVD client to version 1.1.40.  
+* Improved login speed.  
+* Added support for Okta and Ping Identity IDPs.  
+* Fixed resizing if external monitor is disconnected while laptop lid is closed
+  and opened again.
+
+### VMware Horizon
+
+* Updated VMware Horizon client to version 2312-8.12.0-23149323
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Lock user name`                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | `vmware.view.lock-user-name`                                    |
++------------+-----------------------------------------------------------------+
+| Range      | [on][off]                                                       |
++------------+-----------------------------------------------------------------+
+| Value      | **off**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Lock user name`                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.vdm_client%.options.lock-user-name`                   |
++------------+-----------------------------------------------------------------+
+| Range      | [Global setting][on][off]                                       |
++------------+-----------------------------------------------------------------+
+| Value      | **Global setting**                                              |
++------------+-----------------------------------------------------------------+
+
+### ThinLinc
+
+* Updated ThinLinc to version 4.16.0 to fix CVE-2023-3446, CVE-2023-3817,
+  CVE-2023-4807, CVE-2023-5678.
+
+### deviceTRUST
+
+* Updated deviceTRUST Client Extension to version 23.1.200.  
+* Added support for IGEL Remote Desktop (RDP3) sessions.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |deviceTRUST                                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |sessions.msigelrdp<inst>.plugins.devicetrust                     |
++------------+-----------------------------------------------------------------+
+|Value       |disabled (default)/ enabled                                      |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Added WWAN support on HP mt440 device with BIOS v1.08.00 and Intel XMM7560
+  module Firmware v1.16.48.
+
+### Smartcard
+
+* Updated Pointsharp Net iD Client to version 1.1.3.37. All details via
+  https://docs.pointsharp.com/net-id-client/latest/nic-release-
+  notes/nic-113-release-notes.html
+
+### Base system
+
+* Added ready-made challenge password retrieval for Microsoft NDES
+* Set the following to NDES for enabling the feature:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Ready-made Challenge Password Command`                         |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.use_ready_made_challenge_password_command` |
++------------+-----------------------------------------------------------------+
+| Range      | [none][NDES]                                                    |
++------------+-----------------------------------------------------------------+
+| Value      | **none**                                                        |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `User name`                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.ndes.challenge_password_retrieval.user` |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Password`                                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.ndes.challenge_password_retrieval.crypt_password` |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty **Default**                                               |
++------------+-----------------------------------------------------------------+
+
+* If the following is not 'none', https will be used. The default "getca" means
+  the CA certificate received in the SCEP GetCA operation. The full path to a
+  different CA certificate may also be specified.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `CA certificate`                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.ndes.challenge_password_retrieval.cacert` |
++------------+-----------------------------------------------------------------+
+| Range      | [none (not using https)][from getca operation]                  |
++------------+-----------------------------------------------------------------+
+| Value      | **from getca operation**                                        |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Debug level`                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.scepclient.cert%.ndes.challenge_password_retrieval.debuglevel` |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 **Default**                                                   |
++------------+-----------------------------------------------------------------+
+
+* Added registry key to prevent terrapin attack (mitigation is not active as
+  default) on the SSH server:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Disable weak MACs and Chipers to prevent terrapin attack.       |
++------------+-----------------------------------------------------------------+
+| Registry   | network.ssh_server.enable_terrapin_mitigation                   |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+* Added registry key to prevent terrapin attack (mitigation is not active as
+  default) on the SSH client:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Disable weak MACs and Chipers to prevent terrapin attack.       |
++------------+-----------------------------------------------------------------+
+| Registry   | network.ssh_client.enable_terrapin_mitigation                   |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+* Added power saving settings for Intel and AMD devices.  
+* Changed some powersave settings defaults to _Auto_ so powersave is enabled as
+  default on Lenovo laptops:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use powertop auto tune to reduce power usage                    |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.powertop_auto_tune                             |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use laptop mode to reduce power usage                           |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.laptop_mode                                    |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Clock down AMDGPU if system is idle (idle action time reached). |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.clock_down_amdgpu_on_idle                      |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Set Ryzen CPU to power save mode if system is idle (idle action time reached). |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.use_ryzenadj_on_idle                           |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
+* Set idle action default time to 50 seconds:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Call idle actions on AC after this time of inactivity (greater 10 seconds, value 9 or lower is never) |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.idle_action_on_ac                              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 50 _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Call idle actions on battery after this time of inactivity (greater 10 seconds, value 9 or lower is never) |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.idle_action_on_battery                         |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 50 _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
+* Added registry keys for Intel system specific power saving settings:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Clock down Intel GPU if system is idle (idle action time reached). |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.clock_down_i915_on_idle                        |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Set Intel CPU to power save mode if system is idle (idle action time reached). |
++------------+-----------------------------------------------------------------+
+| Registry   | system.powersave.use_energy_policy_on_idle                      |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Enable][Disable]                                         |
++------------+-----------------------------------------------------------------+
+| Value      | _Auto_                                                          |
++------------+-----------------------------------------------------------------+
+
+* Changed default of power saving settings for screen getting dimmed to 20%
+  after 120 seconds inactivity.
+
++------------+-----------------------------------------------------------------+
+| Setup page | `System > Power Options > Display > Brightness Reduction`       |
++------------+-----------------------------------------------------------------+
+| Parameter  | `Reduce after`                                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.brightness_on_ac`                                   |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 120 **Default**                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Reduce after`                                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.brightness_on_battery`                              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 120 **Default**                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `On inactivity reduce to`                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.xserver%.brightness_level_ac`                                |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 20 **Default**                                                  |
++------------+-----------------------------------------------------------------+
+
+### Driver
+
+* Updated Thales SafeNet Authentication Client to version 10.8.1050.
+
+### zoomvdi
+
+* Updated Zoom VDI plugin to version 5.17.5 (24500).
+
+### Hardware
+
+* Added support for Lenovo USB-C to Ethernet Adapter
+* Added hardware support for HP Elite t755.
+* Added BIOS configuration support for HP Elite t755. IGEL supports the BIOS
+  update mechanism. The BIOS update itself is validated by the device
+  manufacturer and performed at your own risk.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Firefox
+
+* Updated Mozilla Firefox to 115.7 ESR  
+  Fixes for mfsa2024-02, also known as:  
+  CVE-2024-0741, CVE-2024-0742, CVE-2024-0746, CVE-2024-0747,  
+  CVE-2024-0749, CVE-2024-0750, CVE-2024-0751, CVE-2024-0753,  
+  CVE-2024-0755.  
+  Fixes for mfsa2023-54, also known as:  
+  CVE-2023-6856, CVE-2023-6865, CVE-2023-6857, CVE-2023-6858,  
+  CVE-2023-6859, CVE-2023-6860, CVE-2023-6867, CVE-2023-6861,  
+  CVE-2023-6862, CVE-2023-6863, CVE-2023-6864.  
+  Fixes for mfsa2023-50, also known as:  
+  CVE-2023-6204, CVE-2023-6205, CVE-2023-6206, CVE-2023-6207,  
+  CVE-2023-6208, CVE-2023-6209, CVE-2023-6212.
+
+### Base system
+
+* Fixed a privilege escalation in setup_cmd utility.
+* Fixed bluez security issue CVE-2023-45866.
+* Fixed pam security issue CVE-2024-22365.  
+* Fixed xorg-server security issues CVE-2024-21886, CVE-2024-21885,
+  CVE-2024-0409, CVE-2024-0408, CVE-2024-0229 and CVE-2023-6816.  
+* Fixed gnutls28 security issues CVE-2024-0567 and CVE-2024-0553.  
+* Fixed openldap security issue CVE-2023-2953.  
+* Fixed openssl security issues CVE-2024-0727, CVE-2023-6237, CVE-2023-6129 and
+  CVE-2023-5678.  
+* Fixed xerces-c security issues CVE-2023-37536 and CVE-2018-1311.  
+* Fixed mysql-8.0 security issues CVE-2024-20985, CVE-2024-20984,
+  CVE-2024-20983, CVE-2024-20982, CVE-2024-20981, CVE-2024-20978,
+  CVE-2024-20977, CVE-2024-20976, CVE-2024-20974, CVE-2024-20973,
+  CVE-2024-20972, CVE-2024-20971, CVE-2024-20970, CVE-2024-20969,
+  CVE-2024-20967, CVE-2024-20966, CVE-2024-20965, CVE-2024-20964,
+  CVE-2024-20963, CVE-2024-20962, CVE-2024-20961 and CVE-2024-20960.  
+* Fixed paramiko security issue CVE-2023-48795.  
+* Fixed pillow security issues CVE-2023-50447 and CVE-2023-44271.  
+* Fixed pycryptodome security issue CVE-2023-52323.  
+* Fixed qtbase-opensource-src security issue CVE-2023-51714.  
+* Fixed qemu security issues CVE-2023-6693 and CVE-2023-6683.  
+* Fixed zulu17-ca security issues CVE-2024-20932, CVE-2024-20926,
+  CVE-2024-20925, CVE-2024-20923, CVE-2024-20922, CVE-2024-20918,
+  CVE-2024-20952, CVE-2024-20945, CVE-2024-20921 and CVE-2024-20919.  
+* Fixed curl security issue CVE-2024-0853.  
+* Fixed expat security issues CVE-2023-52426 and CVE-2023-52425.  
+* Fixed webkit2gtk security issues CVE-2024-23222, CVE-2024-23213,
+  CVE-2024-23206, CVE-2023-42833, CVE-2023-40414 and CVE-2014-1745.  
+* Fixed libde265 security issues CVE-2022-43253, CVE-2022-43252, CVE-2022-43248,
+  CVE-2022-43243, CVE-2022-43242, CVE-2022-43241, CVE-2022-43240,
+  CVE-2022-43239, CVE-2022-43238, CVE-2022-43237, CVE-2022-43236,
+  CVE-2022-43235, CVE-2022-1253, CVE-2021-36411, CVE-2021-36410, CVE-2021-36409,
+  CVE-2021-36408 and CVE-2021-35452.  
+* Fixed gst-plugins-bad1.0 security issues CVE-2024-0444, CVE-2023-44446,
+  CVE-2023-44429, CVE-2023-40476, CVE-2023-40475 and CVE-2023-40474.  
+* Fixed bind9 security issues CVE-2023-5679, CVE-2023-5517, CVE-2023-50868,
+  CVE-2023-50387 and CVE-2023-4408.  
+* Fixed shadow security issue CVE-2023-4641.  
+* Fixed qtbase-opensource-src security issue CVE-2024-25580.
+* Updated ca-certificates to version 20240203.
+* Fixed libde265 security issues CVE-2023-25221, CVE-2023-24758, CVE-2023-24757,
+  CVE-2023-24756, CVE-2023-24755, CVE-2023-24754, CVE-2023-24752,
+  CVE-2023-24751, CVE-2022-47665, CVE-2022-43250, CVE-2022-43249, CVE-2022-43245
+  and CVE-2022-43244.  
+* Fixed libpq5 security issue CVE-2024-0985.  
+* Fixed libtiff5 security issues CVE-2023-6228, CVE-2023-6277 and
+  CVE-2023-52356.  
+* Fixed dnsmasq security issues CVE-2023-50868 and CVE-2023-50387.  
+* Fixed python-cryptography security issue CVE-2023-50782.  
+* Fixed less security issue CVE-2022-48624.  
+* Fixed libuv1 security issue CVE-2024-24806.  
+* Fixed libssh1.1 security issues 2023-3446 and CVE-2023-3817.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Missing icons are now displayed.
+
+### Remote Desktop (RDP3)
+
+* Fixed IGEL Remote Desktop (RDP3) audio input redirection.
+
+### VMware Horizon
+
+* Updated VMware Horizon Client to version 2312-8.12.0-23149323 which fixes
+  setting the relative mouse feature
+
+### Network
+
+* Added registry key for ignoring hostname received via DHCP
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Ignore hostname received via DHCP                               |
++------------+-----------------------------------------------------------------+
+| Registry   | network.dns.hostname_ignore_dhcp                                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+### WiFi
+
+* Added certain module options for configuration of iwlwifi/iwlmvm drivers. For
+  details the output of the modinfo command can be used.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | 11n_disable                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.o_11n_disable                   |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_11ac                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.disable_11ac                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_11ax                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.disable_11ax                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_11be                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.disable_11be                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | bt_coex_active                                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.bt_coex_active                  |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | power_save                                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.power_save                      |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | power_level                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.power_level                     |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | swcrypto                                                        |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlwifi.options.swcrypto                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | power_scheme                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.iwlmvm.options.power_scheme                     |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 2 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
+### HID
+
+* Improved palm detection on certain newer laptops via change of default for
+  parameter "userinterface.touchpad.driver". This has changed from "Synaptics"
+  to 'Auto'. 'Auto' setting will set the actual driver to Synaptics for most
+  devices but to Libinput for HP mt440 G3 and HP mt645 G7 notebooks. By changing
+  'userinterface.touchpad.driver' to 'Synaptics' or 'Libinput', the auto
+  mechanism is overwritten.
+
+### Firmware update
+
+* Fixed firmware update process on encrypted devices. The PIN prompt is shown
+  now before update starts - in case a reboot is needed during the update
+  process.
+* Fixed OS12 migration on devices with 4GB IGEL Partition.
+* Fixed OS 12 Migration with HP_TOOLS partition present.
+* Fixed fallback to IGEL App Portal in case of migrating to OS12 and usage UMS
+  as App Proxy but UMS is not reachable.
+* Fixed sporadic premature break while writing downloaded firmware data to the
+  local storage.
+
+### VirtualBox
+
+* Fixed mouse offset if using multimonitor setup as VirtualBox guest.
+
+### Audio
+
+* Fixed internal microphone on Fujitsu E5412.
+* Fixed: The headphone jack port on front of HP t755 is now the prioritized one
+  - in case the port on the back is also used.
+
+### Hardware
+
+* Fixed screen lagging issue with Dell Latitude 7430  
+* Added possibility to configure Intel PSR setting via registry
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Change settings for intel PSR (panel self refresh).`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.drivers.intel.psr`                                            |
++------------+-----------------------------------------------------------------+
+|Range       | [Default][Disable][Enable][Use only up to PSR1][Use up to PSR2] |
++------------+-----------------------------------------------------------------+
+|Value       |**Default**                                                      |
++------------+-----------------------------------------------------------------+
+
+### Remote Management
+
+* Fixed handling of CA chains missing certificates of public CAs.  
+* Reworked the EST protocol implementing the TLS certificate enrollement.
+* Fixed certificate verifying of the UMS server in case of using legacy weak
+  keys.
+* Fixed: Required session renegotiation on TLS v1.2 connections used in the IGEL
+  remote management.
+```
+
+-----
+
 ## 2024-02-26 - [11.09.218](readme11.09.218.txt)
 
 ```

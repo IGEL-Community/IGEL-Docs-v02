@@ -253,8 +253,9 @@ net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net star
 - Issue is the multiple audio device support is not working 
 - Zoom VDI/Microsoft Teams will not work when the device is in the problem state
 
-**Workaround for 11.09.217:** Configure the Citrix Client selection as 2311 and use the following system registry setting to disable adaptive audio.
+**Workaround:** Configure the Citrix Client selection as 2311 and use the following system registry setting to disable adaptive audio.
 
-```ica.module.enableadaptiveaudio = disabled```
-
-**NOTE:** This workaround does not work for 11.09.260.
+```
+ica.module.enableudpaudio = enabled
+ica.module.enableudpthroughgateway = enabled
+```

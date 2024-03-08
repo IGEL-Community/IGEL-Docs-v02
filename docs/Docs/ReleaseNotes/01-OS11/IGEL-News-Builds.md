@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-03-08 - [11.09.261](readme11.09.261.txt)
+
+```
+The new PRIVATE BUILD 11.09.261 for IGEL Workspace is ready.
+
+This build is based on 11.09.260.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* AVD client version 1.1.84 with UDP shortpath enabled by default
+```
+
+-----
+
 ## 2024-03-07 - [11.09.260](readme11.09.260.txt)
 
 ```

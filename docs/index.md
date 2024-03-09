@@ -8,8 +8,17 @@ This documentation is without any warranty or support by IGEL Technology.
 ----------
 
 <!---
-Remove for now
-## [IGEL Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
+Comments
+
+https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
+
+https://analytics.google.com/analytics/web/#/p431187557/reports/intelligenthome
+
+Stream Name: IGEL-Community-Docs
+Stream URL: https://igel-community.github.io/IGEL-Docs-v02
+Stream ID: 7617562864
+Measurement Id: G-PTNHLB3WSX
+
 -->
 
 ## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)

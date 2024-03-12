@@ -41,10 +41,16 @@ Create initial-settings directory and copy files that will go into /wfs (such as
 ```bash linenums="1"
 mkdir -p /tmp/osc-data/initial-settings/ca-certs
 mkdir -p /tmp/osc-data/initial-settings/wfs-templates
-cp setup.ini /tmp/osc-data/initial-settings/
+cp setup.ini /tmp/osc-data/initial-settings/wfs-templates
 cp 782DAFC836185589DD6212375DC33C22.lic D5F47E9338C3A46A0D0F785B9F6A6926.lic /tmp/osc-data/initial-settings/
 cp SSL+VPN+CA.crt /tmp/osc-data/initial-settings/ca-certs/
 cp wallpaper.jpg /tmp/osc-data/initial-settings/wfs-templates
+```
+- Add the following file to skip first boot wizard to prevent the dialog from opening and user will be on the empty IGEL desktop screen.
+
+```bash linenums="1"
+mkdir -p /tmp/osc-data/initial-settings/wfs-templates/user
+touch /tmp/osc-data/initial-settings/wfs-templates/user/.igel_firstboot_wizard_done
 ```
 
 ## Unmount file system  

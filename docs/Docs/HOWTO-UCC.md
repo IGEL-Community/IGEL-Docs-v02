@@ -259,3 +259,7 @@ net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net star
 ica.module.enableudpaudio = enabled
 ica.module.enableudpthroughgateway = enabled
 ```
+
+-----
+
+## [How to disconnect all Bluetooth devices at reboot / shutdown](https://www.igelcommunity.com/post/how-to-disconnect-all-bluetooth-devices-at-reboot-shutdown)

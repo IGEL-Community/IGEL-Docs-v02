@@ -129,6 +129,10 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+extra:
+  analytics:
+    provider: google
+    property: G-PTNHLB3WSX
 ```
 
 -----

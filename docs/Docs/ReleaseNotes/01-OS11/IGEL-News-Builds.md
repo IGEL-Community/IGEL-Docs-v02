@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-03-16 - [11.08.471](readme11.08.471.txt)
+
+```
+The new PRIVATE BUILD 11.08.471 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Hardware
+
+* Updated hardware recognition to include LG 24CN670IK6N. This should fix the
+audio issues.
+```
+
+-----
+
 ## 2024-03-08 - [11.09.261](readme11.09.261.txt)
 
 ```

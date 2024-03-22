@@ -542,6 +542,12 @@ wget -qO- http://ipv4.icanhazip.com; echo
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.3.2.zip
 ```
 
+- Download a file from UMS
+
+```bash linenums="1"
+wget https://<server:port>/ums_filetransfer/file_name --no-check-certificate --user=username --password=password
+```
+
 ## which
 
 locate command

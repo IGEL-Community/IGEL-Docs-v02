@@ -27,21 +27,23 @@
 
 [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/igelos-11.09/en/overview-first-steps-with-igel-os-11-101058650.html)
 
+----------
+
+----------
+
+### Steps to Test OS 12
+
+**NOTE:** Until UMS is setup for OS 12 testing, setup OS 12 device as standalone and install apps from IGEL app portal.
+
+[Want to test out OS 12 with App Portal without UMS12?](HOWTO-Add-Applications.md#want-to-test-out-os-12-with-app-portal-without-ums12)
+
 <!---
 This is a comment section
-### Steps to get a demo license for OS 12
-
-- Boot device
-- Skip -- Let's connect to the company network
-- Skip -- Use the one-time password to onboard this device?
-- Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
-- Reboot
 -->
 
 ----------
 
 ----------
-
 
 ## SHI Connection Settings (IGEL Base)
 

@@ -53,7 +53,7 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 -----
 
-## 11 March 2024 - Note on Self healing for IGEL 11.09 & Imprivata PIE 7.12
+## 11 March 2024 - Self healing for IGEL 11.09 & Imprivata PIE 7.12
 
 [When upgrading to IGEL 11.09 you may find Imprivata PIE 7.11 will not upgrade to 7.12](https://mwood.substack.com/p/self-healing-for-igel-1109-and-imprivata)
 

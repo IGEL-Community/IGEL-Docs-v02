@@ -31,7 +31,7 @@
 
 ----------
 
-### Steps to Test OS 12
+## Steps to Test OS 12
 
 **NOTE:** Until UMS is setup for OS 12 testing, setup OS 12 device as standalone and install apps from IGEL app portal.
 

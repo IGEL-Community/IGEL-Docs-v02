@@ -129,6 +129,19 @@ find . -type f -exec echo "File NAME:  ===>> " {} \; -exec grep -i audio {} \; >
 
 -----
 
+## Use Microsoft Visual Studio Code to View Log Files
+
+- Install [Microsoft Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=vscom_downloads) on your PC
+- Add Extension to Microsoft Visual Studio Code [Log File Highlighter](https://github.com/emilast/vscode-logfile-highlighter)
+- Un-Zip log files
+- Open the folder in Microsoft Visual Studio Code
+- Search for string in Microsoft Visual Studio Code, such as `audio`
+
+![image09](Images/HOWTO-Collect-Hardware-Information-for-Device-09.png)
+
+-----
+
+
 ## Enable Storage Hotplug (Devices > Storage Devices > Storage Hotplug)
 
 ![image01](Images/HOWTO-Collect-Hardware-Information-for-Device-01.png)

@@ -111,7 +111,10 @@ Sample profile to use with 11.08.360 and above for HDX webcam redirection. Teste
 
 [KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/igelos-11.09/en/hdx-multimedia-settings-for-an-igel-os-citrix-session-101061004.html)
  
-Also, please note that if using Chromium to connect to Citrix to set the following in the registry for the session: sessions.chromium10256.gstreamer_version = 1.0
+Also, please note that if using Chromium to connect to Citrix to set the following in the registry for the session:
+
+  - Set `multimedia.gstreamer.version` to 1.x
+  - Set `sessions.chromium%.gstreamer_version` to 1.0
 
 -----
 

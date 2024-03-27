@@ -14,6 +14,26 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-03-27 - [11.09.264](readme11.09.264.txt)
+
+```
+The new PRIVATE BUILD 11.09.264 for IGEL Workspace is ready.
+
+This build is based on 11.09.260.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Licensing
+
+* fixed IGEL license detection on hardware where network interface
+initialization takes more time.
+```
+
+-----
+
 ## 2024-03-16 - [11.08.471](readme11.08.471.txt)
 
 ```

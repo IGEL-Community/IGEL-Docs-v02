@@ -85,6 +85,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Imprivata Notes](Docs/HOWTO-Imprivata-Notes.md)
 - [HOWTO Microsoft Teams](Docs/HOWTO-Microsoft-Teams-Optimization.md)
 - [HOWTO Nuance Dictation](Docs/HOWTO-Nuance-Dictation.md)
+- [HOWTO Powershell IGEL API](Docs/HOWTO-Powershell-IGEL-API.md)
 - [HOWTO Re-enable TLSv1 and TLSv1.1 on UMS](Docs/HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS.md)
 - [HOWTO Remove IGEL Device License](Docs/HOWTO-Remove-IGEL-Device-License.md)
 - [HOWTO Run VMs on MacOS Intel](Docs/HOWTO-Run-VMs-on-MacOS-Intel.md)

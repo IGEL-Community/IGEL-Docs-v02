@@ -14,7 +14,33 @@ These are the release notes published with each release:
 
 -----
 
-## 2024-03-27 - [11.09.264](readme11.09.264.txt)
+## 2024-03-28 - [11.09.265](readme11.09.265.txt)
+
+```
+The new PRIVATE BUILD 11.09.265 for IGEL Workspace is ready.
+
+This build is based on 11.09.261.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* The following features have been added to this build:
+* Citrix Workspace App: 23.05.0.58 ( Available in this release: 23.09.0.24
+  (default), 23.11.0.82, and 23.05.0.58)  
+* Zoom Media Plugin: 5.14.10.23670 ( Available in this release: 5.17.5.24630
+  (default), 5.16.10.24420, and 5.14.10.23670)  
+* Cisco Webex Meetings VDI plugin: 43.2.1.18 ( Available in this release:
+  43.6.8.4 (default), 43.2.1.18, and 42.10.8.14)  
+* Cisco Webex VDI plugin: 43.10
+```
+
+-----
+
+## 2024-03-28 - [11.09.264](readme11.09.264.txt)
 
 ```
 The new PRIVATE BUILD 11.09.264 for IGEL Workspace is ready.

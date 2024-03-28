@@ -258,10 +258,8 @@ net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net star
 
 **Workaround:**
 
-```
-ica.module.enableudpaudio = enabled
-ica.module.enableudpthroughgateway = enabled
-```
+- Configure the following as a final desktop command: `systemctl restart igel-citrix-icaconfig.service`
+- If you have a session that is configured to autostart, also add an autostart delay of 5 seconds.
 
 -----
 

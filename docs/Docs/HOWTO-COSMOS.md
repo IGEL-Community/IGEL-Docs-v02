@@ -224,6 +224,10 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **A:** Change the public address of UMS server: `UMS Administration > UMS Network > Server > Your_UMS`. Create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, and short names that the device can connect to `see details above`.
 
+- Verify UMS Server settings for IP addresses and ports:
+
+  ![image-howto-cosmos-09](Images/HOWTO-COSMOS-09.png)
+
 **Q:** How to add Microsoft Entra ID Auth in front of the IGEL WebUMS?
 
 **A:** [Use Microsoft Entra ID authentication and MFA in front of the WebUMS by leveraging your NetScaler capabilities](https://virtualbrat.com/2023/10/27/do-you-want-to-add-microsoft-entra-id-auth-in-front-of-the-igel-webums-console-when-accessed-from-the-internet-read-how-you-can-use-microsoft-entra-id-authentication-and-mfa-in-front-of-the-webums-by/)

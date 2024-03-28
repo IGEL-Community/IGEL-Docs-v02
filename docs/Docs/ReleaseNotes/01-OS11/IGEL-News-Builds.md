@@ -14,6 +14,77 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-03-28 - [11.09.263](readme11.09.263.txt)
+
+```
+The new PRIVATE BUILD 11.09.263 for IGEL Workspace is ready.
+
+This build is based on 11.09.261.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2402.  
+  Available Citrix Workspace Apps in this release: 2402 (default), 2311 and 2010
+
+* New features:  
+
+* Synchronize multiple keyboards at session start. All available keyboards on
+  the client are synchronized with VDA after the session starts in full-screen
+  mode.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Synchronize multiple keyboards at session start`                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.SyncKbdLayoutList`                                 |
++------------+-----------------------------------------------------------------+
+|Value       | false (default) /  true                                         |
++------------+-----------------------------------------------------------------+
+
+* Enhanced Desktop Viewer toolbar [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhanced Desktop Viewer toolbar`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.ToolbarVersion`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | 1 (default)/ 0                                                  |
++------------+-----------------------------------------------------------------+
+
+* Note: Switch Value to '0' for the old Toolbar.
+* Support for Audio volume synchronization. Synchronize audio volume between the
+  VDA and your audio devices.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for Audio volume synchronization`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeSync`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | true (default)/ false                                           |
++------------+-----------------------------------------------------------------+
+
+* Use system Audio in MS Teams while screen sharing.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use system Audio in MS Teams while screen sharing`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeListener`                                |
++------------+-----------------------------------------------------------------+
+|Value       | false (default)/ true                                           |
++------------+-----------------------------------------------------------------+
+
+* Default values of the following have been changed as per Citrix.  
+* Enable Packet Loss Concealment to improve audio performance.
+  "ica.module.PacketLossConcealmentEnabled = True"  
+* Loss tolerant mode for audio. "ica.module.EdtUnreliableAllowed = True"
+```
+
+-----
+
 ## 2024-03-28 - [11.09.265](readme11.09.265.txt)
 
 ```

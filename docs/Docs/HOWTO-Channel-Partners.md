@@ -15,9 +15,9 @@ This is a comment section
 
 ----------
 
-## IGEL Education
+## IGEL Education for Partners
 
-Please enroll in [IGEL Academy](https://www.igel.com/learn-and-connect/igel-education/) for formal training courses on IGEL products geared towards beginners and experienced users alike.
+Please enroll in [IGEL Academy - Partner](https://learn.igel.com/partner/learn) for formal training courses on IGEL products geared towards beginners and experienced users alike.
 
 Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
 
@@ -43,11 +43,11 @@ Contact IGEL channel team for options to access [IGEL Academy Premium](https://w
 - 2+ hours for course and labs
 - 45-60 min for the exam
 
-### IGEL Certified Architect (ICA) (10-12 hours)
+### IGEL Certified Architect (ICA) (2-3 hours)
 
 **NOTE:** Requires IGEL Academy Premium.
 
-- 9+ hours for course and labs
+- 2+ hours for course and labs
 - 60 min for the exam
 
 ----------

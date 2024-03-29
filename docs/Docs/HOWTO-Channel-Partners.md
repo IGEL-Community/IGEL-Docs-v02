@@ -1,0 +1,102 @@
+# HOWTO Channel and MSP Partners
+
+<!---
+This is a comment section
+-->
+## [IGEL Velocity Partner Program](https://www.igel.com/velocity-partner-program/)
+
+## IGEL Velocity Partner Level
+
+| Authorized | Expert | Elite |
+|------------|--------|-------|
+| Enter the program to be a registered IGEL partner. Obtain fundamental sales and technical proficiencies in IGEL products and solutions to develop pipeline and first sale. | Develop a dedicated IGEL practice with designated sales and technical staff, leading to new customer acquisitions, co-sell opportunities with IGEL and growing competency in providing services. | Sell the IGEL portfolio consistently, nationwide or globally, with a fully dedicated IGEL practice, driving sales, acquiring new logos, increasing wallet share, and delivering services and support. |
+
+----------
+
+----------
+
+## IGEL Education
+
+Please enroll in [IGEL Academy](https://www.igel.com/learn-and-connect/igel-education/) for formal training courses on IGEL products geared towards beginners and experienced users alike.
+
+Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
+
+----------
+
+## IGEL Academy Course Duration
+
+### IGEL Certified Sales Professional (ICSP) (60-90 min)
+
+- 20 min Foundations course
+- 20 min ICSP course
+- 40 min for exam
+
+### IGEL Certified Professional (ICP) (2.5 hours)
+
+- 2 hours for course
+- 30 min for the exam
+
+### IGEL Certified Engineer (ICE) (3-4 hours)
+
+**NOTE:** Requires IGEL Academy Premium.
+
+- 2+ hours for course and labs
+- 45-60 min for the exam
+
+### IGEL Certified Architect (ICA) (10-12 hours)
+
+**NOTE:** Requires IGEL Academy Premium.
+
+- 9+ hours for course and labs
+- 60 min for the exam
+
+----------
+
+## IGEL Services Specialization 
+
+For Expert and Elite Channel Partners who desire to deliver their own IGEL Services and Support.
+
+**NOTE:** Duration will depend on the body of work to review and includes POC's (proof of concept) or projects worked on.
+
+- 3-5 hours for demo session prep
+- 1.5 hours for demo to IGEL channel team
+
+### Step 1:  Presales Required Demo 
+
+- LIVE Demo – delivered by Partner ICP/ICE certified individual(s) 
+
+- Audience from IGEL:  
+
+    - Channel Sales Manager / Director / VP 
+    - Channel SE 
+    - SE Team-Lead / VP / Field SE 
+
+- Duration: 1 hour to 90 minutes 
+
+    - Session will be recorded 
+
+### Step 2: Presales Custom Demo 
+
+- LIVE or Recorded Demo – delivered by Partner ICP/ICE certified individual(s) 
+
+- Customer:  IGEL 
+
+- Audience from IGEL:  
+
+    - Channel Sales Manager / Director / VP 
+    - Channel SE 
+    - SE Team-Lead / VP / Field SE 
+
+- Suggested Duration:  10-15 min 
+
+    - Session will be recorded
+
+----------
+
+## IGEL Managed Service Provider (MSP)
+
+Build and deliver valuable and secure managed endpoint services to your Customers.
+
+- [Register for the MSP Enablement path training sessions](https://www.igel.com/learn-and-connect/webinars/igel-msp-technical-enablement-path/)
+
+**NOTE:** MSP should already support endpoint services.

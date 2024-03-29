@@ -264,3 +264,13 @@ net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net star
 -----
 
 ## [How to disconnect all Bluetooth devices at reboot / shutdown](https://www.igelcommunity.com/post/how-to-disconnect-all-bluetooth-devices-at-reboot-shutdown)
+
+-----
+
+## Horizon with Black Screen with Flickering White Spots
+
+This is a quirk of current Horizon linux clients which show this when there's no compositor in the window manager.
+
+In IGEL OS the compositor is off by default because it may have side effects on older / slower devices.
+
+Here is registry setting: `windowmanager.wm0.variables.usecompositing`

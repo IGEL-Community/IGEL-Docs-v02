@@ -14,6 +14,45 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-04-02 - [11.08.472](readme11.08.472.txt)
+
+```
+The new PRIVATE BUILD 11.08.472 for IGEL Workspace is ready.
+
+This build is based on 11.08.440.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Hardware
+
+* Updated hardware recognition to include LG 24CN670IK6N. This should fix the
+audio issues.
+```
+
+-----
+
+## 2024-04-02 - [11.09.131.DER](readme11.09.131.DER.txt)
+
+```
+The new PRIVATE BUILD 11.09.131.DER for IGEL Workspace is ready.
+
+This build is based on 11.09.129.DER.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Power Term
+
+* fixed missing system fonts in PowerTerm 12.0.1.020170219.
+```
+
+-----
+
 ## 2024-03-28 - [11.09.263](readme11.09.263.txt)
 
 ```

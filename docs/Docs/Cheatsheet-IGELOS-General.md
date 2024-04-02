@@ -95,6 +95,12 @@ Manually set new Unit ID
 Choose number to abort or set new Unit ID:
 ```
 
+**reset it to the correct ID, Reboot, and then license it.**
+
+```bash linenums="1"
+get_unit_id -if
+```
+
 ## getmyip
 
 show device IP

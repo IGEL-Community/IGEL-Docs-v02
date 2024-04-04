@@ -14,6 +14,303 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-04-03 - [11.09.310](readme11.08.310.txt)
+
+```
+The new PUBLIC BUILD 11.09.310 for IGEL Workspace is ready.
+
+This build is based on 11.09.260.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Added parameters for enhanced configuration of Teams optimization within
+  Citrix. Further details via Citrix documentation:  
+```
+
+- [Citrix Workspace app for Linux](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/configure-xenapp.html#optimization-for-microsoft-teams|https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/configure-xenapp.html#optimization-for-microsoft-teams)
+
+```
+* Configure MS Teams either via custom or predefined options.
+* Custom options:
+
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.config%.enabled                                        |
++------------+-----------------------------------------------------------------+
+|Value       |**disabled** (default) / enabled                                 |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.config%.name                                           |
++------------+-----------------------------------------------------------------+
+|Value       |“ “                                                              |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.config%.type                                           |
++------------+-----------------------------------------------------------------+
+|Range       | [**String**] [Integer]                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.config%.value                                          |
++------------+-----------------------------------------------------------------+
+|Value       |“ “                                                              |
++------------+-----------------------------------------------------------------+
+
+* Predefined options:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |AdaptResolutionAllowCroppingVideo                                |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.adaptresolutionallowcroppingvideo.enabled              |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enable if video in optimized MS Teams call is stretched
+
++------------+-----------------------------------------------------------------+
+|Parameter   |EnableAEC                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.enableaec.enabled                                      |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enables echo cancellation; used for troubleshooting audio issues
+
++------------+-----------------------------------------------------------------+
+|Parameter   |EnableAGC                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.enableagc.enabled                                      |
++------------+-----------------------------------------------------------------+
+|Value       |**Enabled** (default) / Disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Disables gain control; used for troubleshooting audio issues
+
++------------+-----------------------------------------------------------------+
+|Parameter   |EnableNS                                                         |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.enablens.enabled                                       |
++------------+-----------------------------------------------------------------+
+|Value       |**Enabled** (default) / Disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Disables noise suppression; used for troubleshooting audio issues
+
++------------+-----------------------------------------------------------------+
+|Parameter   |ms_teams_remote_audio_notifications                              |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.remoteaudionotifications.enabled                       |
++------------+-----------------------------------------------------------------+
+|Value       |**Enabled** (default) / Disabled                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |ms_teams_secondary_audio_notifications                           |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.secondaryaudionotifications.enabled                    |
++------------+-----------------------------------------------------------------+
+|Value       |**Enabled** (default) / Disabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Disables secondary ringtone
+
++------------+-----------------------------------------------------------------+
+|Parameter   |UseGbufferScreenSharing                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.usegbufferscreensharing.enabled                        |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enables desktop share option while app protection is active
+
++------------+-----------------------------------------------------------------+
+|Parameter   |VideoHwEncode                                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.videohwencode.enabled                                  |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enables hardware acceleration support
+
++------------+-----------------------------------------------------------------+
+|Parameter   |WebrpcLogLevel                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.webrpcloglevel.enabled                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enables log collection for webrpc library
+
++------------+-----------------------------------------------------------------+
+|Parameter   |WebrtcLogLevel                                                   |
++------------+-----------------------------------------------------------------+
+|Registry    |ica.teams.webrtcloglevel.enabled                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Disabled** (default) / Enabled                                 |
++------------+-----------------------------------------------------------------+
+
+* Enables log collection for virtual channel
+
+### Firefox
+
+* Added BTRFS (improved / more efficient storage format) for Firefox profile
+  partition.  
+* Changed default of system.customization.ffpro.fs_type registry key from ntfs
+  to btrfs.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Firefox Profiles Partition Filesystem Type                      |
++------------+-----------------------------------------------------------------+
+| Registry   | system.customization.ffpro.fs_type                              |
++------------+-----------------------------------------------------------------+
+| Range      | [ext4]                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | _btrfs_                                                         |
++------------+-----------------------------------------------------------------+
+
+### WiFi
+
+* Added options for configuration of rtw89core and rtw89pci kernel modules (used
+  e.g by the rtw_8852be driver).
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_clkreq                                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.rtw89pci.options.disable_clkreq                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_aspm_l1                                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.rtw89pci.options.disable_aspm_l1                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_aspm_l1ss                                               |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.rtw89pci.options.disable_aspm_l1ss              |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | disable_ps_mode                                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | network.drivers.rtw89core.options.disable_ps_mode               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
+* Changed default for DHCP refresh after roaming (within the same network).
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Refresh DHCP after roaming`                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.interfaces.wirelesslan.device0.roam_refresh_dhcp`      |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI plugin to version 44.2.0.28744.
+
+### zoomvdi
+
+* Updated Zoom VDI plugin to version 5.17.6 (24660).
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated Chromium Browser to version 122.0.6261.128
+
+### Firefox
+
+* Updated Mozilla Firefox to 115.9.1 ESR  
+* Fixes for mfsa2024-16, also known as CVE-2024-29944.  
+* Fixes for mfsa2024-13, also known as:  
+  CVE-2024-0743, CVE-2024-2607, CVE-2024-2608, CVE-2024-2616,  
+  CVE-2023-5388, CVE-2024-2610, CVE-2024-2611, CVE-2024-2612,  
+  CVE-2024-2614.  
+* Fixes for mfsa2024-06, also known as:  
+  CVE-2024-1546, CVE-2024-1547, CVE-2024-1548, CVE-2024-1549,  
+  CVE-2024-1550, CVE-2024-1551, CVE-2024-1552, CVE-2024-1553.
+
+### Base system
+
+* Fixed libxml2 security issue CVE-2024-25062
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Citrix keyboard layout synchronization requires set of
+  ica.wfclient.keyboardmappingfile to the new value `automatic`. With that, the
+  local keystrokes are locally interpreted and correctly sent to the Citrix
+  session. Icon in taskbar (within Citrix session) of set language may be wrong
+  displayed but input is correct. It it also required to set the following
+  parameters: ica.wfclient.keyboardeventmode=Unicode and
+  ica.wfclient.keyboardsyncmode=Dynamic.
+* Change the parameter `Keyboard mapping file` to automatic:
+
++------------+-----------------------------------------------------------------+
+|Setup page  |`Sessions > Citrix > Citrix Global > Keyboard`                   |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Keyboard mapping file`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.keyboardmappingfile`                               |
++------------+-----------------------------------------------------------------+
+|Type        |range                                                            |
++------------+-----------------------------------------------------------------+
+|Value       |**generic** (default) / linux / automatic                        |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Fixed respecting NTP server from DHCP
+
+### WiFi
+
+* On HP mt645 network.drivers.realtek.use_8852be=auto is now equal to false
+  (same as on other devices / platforms)
+
+### Base system
+
+* Fixed startup of System Log Viewer.
+
+### Audio
+
+* Increased master volume for internal speaker in HP t755
+
+### Misc
+
+* Fixed IGEL Agent for Imprivata in auth only mode with VMware Horizon.
+```
+
+-----
+
 ## 2024-04-02 - [11.08.472](readme11.08.472.txt)
 
 ```

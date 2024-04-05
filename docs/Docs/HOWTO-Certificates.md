@@ -138,7 +138,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 
 ## Starting with UMS 12.04 - Improvements for Certificate Import
 
-Starting with UMS 12.04, certificate management adds sanity check to the imported chains:
+Starting with UMS 12.04, certificate management now adds sanity check to the imported chains:
 
 - Make sure chain is complete
 - Required private keys are present

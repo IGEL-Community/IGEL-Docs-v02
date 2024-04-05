@@ -133,3 +133,25 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - [OpenSSL Reference](https://www.sslshopper.com/article-most-common-openssl-commands.html)
 - [IGEL Community LetsEncrypt/Certbot tutorial](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-ICG-Free-Signed-Certificate/?h=)
 - [Building an AD CS Server in Your Lab](https://virtuallythere.blog/2018/04/24/making-things-a-bit-more-secure-part-1/)
+
+-----
+
+## Starting with UMS 12.04 - Improvements for Certificate Import
+
+Starting with UMS 12.04, certificate management adds sanity check to the imported chains:
+
+- Make sure chain is complete
+- Required private keys are present
+- Leaves need to have valid `subject alternative names`
+
+Will now allow the import of `jks` and `pkcs12` key stores and builds chain automatically:
+
+- Highlight missing elements in the imported result (e.g. private keys)
+- Add missing root certificates from the java trust store, if available
+
+Can now manage certificates via the command line:
+
+- Set chain of web certificates
+- Automate process of UMS installation
+- Add certificates, keypairs, or complete keystores
+- Remove existing certificates, web certificates, and key stores from the database

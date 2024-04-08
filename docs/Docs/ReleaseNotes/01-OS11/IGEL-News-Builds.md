@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-04-08 - [11.09.268](readme11.09.268.txt)
+
+```
+The new PRIVATE BUILD 11.09.268 for IGEL Workspace is ready.
+
+This build is based on 11.09.263.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Chromium
+
+- Updated Chromium Browser to version 123.0.6312.105 (critical fix)
+```
+
+-----
+
 ## 2024-04-03 - [11.09.310](readme11.08.310.txt)
 
 ```

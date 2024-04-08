@@ -446,7 +446,7 @@ user 23915 23860 0 10:44 pts/0 00:00:00 grep --color=auto terminal
 **Remove all non-numeric characters**
 
 ```bash linenums="1"
-echo "IGEL Priority Plus phone number for US and Canada is 415-813-3933" | tr -cd [:digit:]
+echo "IGEL support for Priority or Plus support phone number for US and Canada is 415-813-3933" | tr -cd [:digit:]
 ```
 
 ```bash linenums="1"

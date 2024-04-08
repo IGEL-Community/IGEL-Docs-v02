@@ -62,7 +62,11 @@ If the client's clock is off, then it will break either or both of these functio
 
 -----
 
-## FAQ - Licensing
+## FAQ - Licensing and Support
+
+**Q:** What are the levels of IGEL Support Services?
+
+**A:** IGEL offers three levels of support – Select, Priority and Plus. [IGEL Support Services](https://www.igel.com/wp-content/uploads/2023/04/IGEL_Support_EN.pdf)
 
 **Q:** What is the product lifecycle for IGEL products?
 

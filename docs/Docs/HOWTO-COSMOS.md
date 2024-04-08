@@ -470,3 +470,15 @@ sequenceDiagram
     x.drivers.intel.force_dri3
     x.drivers.ati.force_dri3
     x.drivers.amdgpu.force_dri3
+
+-----
+
+## FAQ - Microsoft Windows 365
+
+**Q:** Looking for setup and notes for Microsoft Windows 365
+
+**A:** [IGEL KB: IGEL Windows 365](https://kb.igel.com/cpc/1.1.90/en/igel-windows-365-117246742.html)
+
+**Q:** User gets prompt "Need admin approval" on IGEL Windows 365 startup.
+
+**A:** [IGEL KB: Steps to grant tenant-wide admin consent to the IGEL Windows 365 app](https://kb.igel.com/cpc/1.1.90/en/troubleshooting-user-gets-prompt-need-admin-approval-on-igel-windows-365-startup-119880136.html)

@@ -103,7 +103,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | custompart                                              | :material-check-bold: | :material-check-bold:| Delete/Create a custom partition                            |
 | delinstance                                             | :material-check-bold: | :material-check-bold:| Delete a session or instance                                |
 | df -h                                                   | :material-check-bold: | :material-check-bold:| Shows Partition usage                                       |
-| florence(Cheatsheet-IGELOS-General.md#florence)         | :material-check-bold: | :material-check-bold:| OnScreen Keyboard                                           |
+| [florence](Cheatsheet-IGELOS-General.md#florence)         | :material-check-bold: | :material-check-bold:| OnScreen Keyboard                                           |
 | [get](Cheatsheet-IGELOS-General.md#get)                 | :material-check-bold: | :material-check-bold:| Get Variable from registry                                  |
 | [get_unit_id](Cheatsheet-IGELOS-General.md#get_unit_id) | :material-check-bold: | :material-check-bold:| Get the Unit ID                                             |
 | [getmyip](Cheatsheet-IGELOS-General.md#getmyip)         | :material-check-bold: | :material-check-bold:| show device IP                                              |

@@ -50,6 +50,18 @@ curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/
 100   982  100   982    0     0   3494      0 --:--:-- --:--:-- --:--:--  3494
 ```
 
+## florence
+
+Onscreen keyboard
+
+Sample settings in configuration file: `/wfs/user/florence.store`
+
+```bash linenums="1"
+window_xpos=9
+window_ypos=71
+window_zoom=33
+```
+
 ## get
 
 Read variable from registry

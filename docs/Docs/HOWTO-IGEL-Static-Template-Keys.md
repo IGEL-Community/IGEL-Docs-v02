@@ -30,4 +30,4 @@ Please note that you will need to enable the "template profiles" in order to see
 
 ![image03](Images/HOWTO-Use-IGEL-Static-Template-Keys-03.jpeg)
 
-[IGEL Knowledge Base - Using Template Keys in Profiles](https://kb.igel.com/endpointmgmt-6.10/en/using-template-keys-in-profiles-57321406.html)
+[IGEL Knowledge Base - Using Template Keys in Profiles](https://kb.igel.com/endpointmgmt-12.04/en/using-template-keys-in-profiles-122458278.html)

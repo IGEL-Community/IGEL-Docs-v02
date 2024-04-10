@@ -452,13 +452,13 @@ Setup of the ICG Server can be done in four steps:
 
 ### Prepare the Linux Machine
 
-[Here is a list of prerequisites](https://kb.igel.com/igelicg-12.02/en/prerequisites-90238175.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
+[Here is a list of prerequisites](https://kb.igel.com/igelicg-12.04/en/prerequisites-122465184.html) for the ICG server. ICG must be installed on a Linux OS. Supported environments are listed above. Depending on the operating system you choose, you may have additional configuration steps required to get ICG to function correctly.
 
-For example, RHEL users may find it necessary to [install Python 3](https://www.scaler.com/topics/python/install-python-on-linux/) and set [SELinux to permissive mode](https://www.thegeekdiary.com/how-to-disable-or-set-selinux-to-permissive-mode/) in order for ICG to work correctly. Ubuntu 18.04 users may not require these additional steps. Depending on your level of expertise with Linux, [you may find additional help here](https://kb.igel.com/igelicg-2.05/en/preparing-a-linux-machine-for-installing-igel-cloud-gateway-icg-57324550.html) with things like creating the root account or setting a static IP. The version of Linux you use is entirely up to you if it is supported.
+For example, RHEL users may find it necessary to [install Python 3](https://www.scaler.com/topics/python/install-python-on-linux/) and set [SELinux to permissive mode](https://www.thegeekdiary.com/how-to-disable-or-set-selinux-to-permissive-mode/) in order for ICG to work correctly. Ubuntu 18.04 users may not require these additional steps. Depending on your level of expertise with Linux, [you may find additional help here](https://kb.igel.com/igelicg-12.04/en/preparing-a-linux-machine-for-installing-igel-cloud-gateway-icg-122465572.html) with things like creating the root account or setting a static IP. The version of Linux you use is entirely up to you if it is supported.
 
 Additionally, we recommend that the server/VM hosting ICG have 8GB of RAM/vRAM, 2 CPU cores, and 20GB of available disk space. 
 
-[We also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-12.02/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-90238447.html).
+[IGEL also offer a guide on how to create the Linux VM in Azure here](https://kb.igel.com/igelicg-12.04/en/using-igel-cloud-gateway-on-microsoft-azure-marketplace-122465511.html).
 
 **NOTE:** Do NOT use “icg” as the name of your account in Linux!  This name is reserved for use by IGEL!
 
@@ -617,7 +617,7 @@ You may also refer to the IGEL KB for these instructions on installing ICG.
 
 Manual Installation via Linux Command Line
 
-It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-12.02/en/installing-the-icg-without-remote-installer-90238526.html).
+It is recommended to use the remote ICG installer. If you cannot use the remote installer via UMS for some reason, you can still install ICG manually. [Follow the steps on this KB article to install ICG manually](https://kb.igel.com/igelicg-12.04/en/installing-the-icg-without-remote-installer-122465591.html).
 
 ### Connecting an Endpoint to ICG
 

@@ -149,7 +149,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
-**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.02/en/ums-and-devices-secure-shadowing-90235104.html).
+**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.04/en/ums-and-devices-secure-shadowing-122456742.html).
 
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
@@ -264,7 +264,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Does OS 12 support PXE boot deployments?
 
-**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.3.0/en/how-to-deploy-igel-os-12-with-pxe-108346831.html)
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.3.2/en/how-to-deploy-igel-os-12-with-pxe-119867282.html)
 
 **Q:** How to enable Citrix username / password auto login support in cloud environment be supported?
 

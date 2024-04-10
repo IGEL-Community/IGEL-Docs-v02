@@ -14,6 +14,30 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-04-10 - [11.09.312](readme11.09.312.txt)
+
+```
+The new PRIVATE BUILD 11.09.312 for IGEL Workspace is ready.
+
+This build is based on 11.09.311.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace app. Available versions: 24.02 [default], 23.11,
+23.09
+
+### Chromium
+
+* Updated Chromium Browser to version 123.0.6312.105
+```
+
+-----
+
 ## 2024-04-09 - [11.09.311](readme11.09.311.txt)
 
 ```

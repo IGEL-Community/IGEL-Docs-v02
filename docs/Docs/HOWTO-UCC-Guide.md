@@ -60,7 +60,7 @@ UPDATE
 | Zoom Media Plugin                | 5.15.2.23760         | 5.16.10.24420        | 5.16.10.24420        |
 
 
-- [Zoom VDI releases and downloads](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
+- [Zoom VDI 64bit releases and downloads](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063810)
 
 - [Cisco Webex download 42.6.11.6](https://akamaicdn.webex.com/client/WBXclient-42.6.11-6/webexapp.msi)
 

@@ -161,10 +161,10 @@ sudo reboot now
 
 ## Install UMS on Linux
 
-- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-installation-under-linux-108340916.html)
+- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-installation-under-linux-122457602.html)
 - sudo ./setup-igel-ums-linux-[version].bin
 
-**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-installation-under-windows-108340967.html)
+**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-installation-under-windows-122457653.html)
 
 - IGEL Community on GitHub UMS Console setup - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
 -----
@@ -195,20 +195,20 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/howtocosm
 
 ## Registering Devices on the UMS Server
 
-- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-12.03/en/registering-igel-os-devices-on-the-ums-server-108341130.html)
+- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/endpointmgmt-12.04/en/registering-igel-os-devices-on-the-ums-server-122457889.html)
 
 -----
 
 ## Run UMS Web App
 
 - Start UMS Web App - `https://<UMS-Server>:8443/webapp/#/login`
-- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-web-app-108342253.html)
+- UMS Web App help - [LINK](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-web-app-122459159.html)
 
 -----
 
 ## UMS to/from IGEL OS 11 Communication ports (NO ICG)
 
-[UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-communication-ports-108340029.html)
+[UMS Communication Ports](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-communication-ports-122456500.html)
 
 ### Core Communication UMS / OS 11
 
@@ -296,7 +296,7 @@ sudo systemctl enable sshd.service
 echo "******* Ending -- apt install openssh-server"
 ```
 
-- Follow IGEL ICG install from UMS - [LINK](https://kb.igel.com/igelicg-2.05/en/installing-the-igel-cloud-gateway-57324362.html)
+- Follow IGEL ICG install from UMS - [LINK](https://kb.igel.com/igelicg-12.04/en/installing-the-igel-cloud-gateway-122465368.html)
 - IGEL Community GitHub ICG setup script - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/ICG_Ubuntu_Build)
 
 -----
@@ -381,7 +381,7 @@ sudo find /opt/IGEL -name "derbyclient*.jar"
 
 ![image11](Images/HOWTO-Setup-Lab-Sandbox-Environment-11.png)
 
-This SQL query can be used in [UMS SQL Console](https://kb.igel.com/endpointmgmt-12.03/en/menu-bar-of-the-igel-ums-console-108341169.html).
+This SQL query can be used in [UMS SQL Console](https://kb.igel.com/endpointmgmt-12.04/en/menu-bar-of-the-igel-ums-console-122457931.html).
 
 ```sql linenums="1"
 SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERSION, THINCLIENT.PRODUCTID, THINCLIENT.LASTKNOWNIP, THINCLIENT.LAST_INFO_UPDATETIME FROM THINCLIENT LEFT JOIN FIRMWARE FW ON THINCLIENT.FIRMWAREID=FW.FIRMWAREID LEFT JOIN HARDWARE_INFORMATION  HW ON THINCLIENT.MACADDRESS=HW.MAC ORDER BY FW.VERSION

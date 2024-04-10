@@ -4,7 +4,7 @@
 
 ## Collect Logs for IGEL Support
 
-- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/endpointmgmt-12.02/en/save-support-information-send-log-files-to-support-90237102.html)
+- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/endpointmgmt-12.04/en/save-support-information-send-log-files-to-support-122459029.html)
 
 - [KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/howtocosmos/en/debugging-how-to-collect-and-send-device-log-files-to-igel-support-81497527.html)
 
@@ -177,9 +177,9 @@ login as "user" or "root": root
 
 These device profiles can be used to see all settings for a device and can also be used to compare two devices.
 
-[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.02/en/import-devices-as-profiles-90236548.html)
+[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.04/en/import-devices-as-profiles-122458416.html)
 
-[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.03/en/comparing-profiles-in-the-igel-ums-108341379.html)
+[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.04/en/comparing-profiles-in-the-igel-ums-122458147.html)
 
 The following steps will:
 

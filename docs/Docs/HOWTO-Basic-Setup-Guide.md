@@ -110,7 +110,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 ### Prepare the Server
 
 - UMS can install on several 64-bit Windows and Linux operating systems.
-- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-sizing-guidelines-architecture-diagrams-108341014.html). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
+- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-sizing-guidelines-architecture-diagrams-122457702.html) . A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
 - The UMS can be installed on-prem or in the cloud (Azure, AWS, Hosting Providers, etc.) on a physical or virtual machine.
 
 ### Install the UMS Software
@@ -123,7 +123,7 @@ The Installation Wizard will cover the following setup items:
 -	End User License Agreement
 -	Target directory for installation (default recommended)
 -	Select Components (defaults recommended – this will install the UMS software, embedded database, Java console and web console)
--	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-12.03/en/changing-the-ums-superuser-108342237.html), which is a separate application from the UMS Console.)
+-	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/endpointmgmt-12.04/en/changing-the-ums-superuser-122459141.html) , which is a separate application from the UMS Console.)
 -	UMS data directory (default recommended)
 -	Start menu folder (default recommended)
 -	Network Ports (UMS will do a port check and open required network ports on the local server for you if you allow it)
@@ -134,7 +134,7 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 ### Configure UMS Network Ports
 
-The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-communication-ports-108340029.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
+The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-communication-ports-122456500.html) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
 - Legend
 
@@ -316,7 +316,7 @@ There are multiple ways to register your IGEL endpoints with UMS:
 1. Manually Scan for your IGEL Endpoints.
 2. Set up a DNS Record or DHCP Tag for automatic registration.
 
-**Note:** [Registration of a Device in the IGEL UMS Fails](https://kb.igel.com/endpointmgmt-12.03/en/registration-of-a-device-in-the-igel-ums-fails-108340682.html)
+**Note:** [Registration of a Device in the IGEL UMS Fails](https://kb.igel.com/endpointmgmt-12.04/en/troubleshooting-registration-of-a-device-via-scanning-for-devices-fails-122457356.html)
 
 ### Manually Scan for your IGEL Endpoints
 
@@ -425,7 +425,7 @@ From the endpoint running IGEL OS (not from the UMS):
 
 -	In UMS, go to UMS Administration > UMS Global Configuration > Licenses > Deployment and hit the refresh button in the top right menu and your licenses from the ILP should appear in the window.
 
--	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-12.03/en/automatic-license-deployment-ald-108340185.html).
+-	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/endpointmgmt-12.04/en/automatic-license-deployment-ald-122456883.html).
 
 -----
 
@@ -746,4 +746,4 @@ You can now manage devices that are outside the corporate network via UMS and IC
     * ~100kB per device
     * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
  
-[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-12.03/en/installation-and-sizing-guidelines-for-igel-ums-108341012.html).
+[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/endpointmgmt-12.04/en/installation-and-sizing-guidelines-for-igel-ums-122457701.html).

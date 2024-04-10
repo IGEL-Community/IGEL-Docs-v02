@@ -343,7 +343,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
-**A:** [KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.03/en/igel-universal-management-suite-network-configuration-115084368.html)
+**A:** [KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.04/en/igel-universal-management-suite-network-configuration-122456501.html)
 
 **Q:** Does ICG 12 support OS 11 devices?
 

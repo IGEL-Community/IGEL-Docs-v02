@@ -339,6 +339,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
+- [Reverse Proxy / Load Balancer Example Configurations](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html#WhatisnewinIGELUMS12.03.100-ReverseProxy/LoadBalancerExampleConfigurations)
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 

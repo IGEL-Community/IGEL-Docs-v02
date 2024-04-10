@@ -90,15 +90,15 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
-**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.03/en/deployment-deploying-licenses-through-the-igel-ums-108341767.html).
+**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
 
 **Q:** How to automate license renewal?
 
-**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.03/en/deployment-deploying-licenses-through-the-igel-ums-108341767.html).
+**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
 
 **Q:** How does hardware-bundled IGEL licenses work?
 
-**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html)
+**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html).
 
 -----
 
@@ -106,11 +106,12 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
-**A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.03/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-108340892.html)
+**A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.04/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-122457574.html).
 
 **Q:** What is new in UMS 12?
 
-**A:** [KB: What Is New in IGEL UMS 12?](https://kb.igel.com/endpointmgmt-12.03/en/what-is-new-knowledge-base-updates-for-igel-ums-12-3-100-108343149.html).  [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
+**A:** [KB: What Is New in IGEL UMS 12?](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html)
+. [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** How to check the status of UMS server?
 
@@ -127,7 +128,8 @@ https://UMS_SERVER_URL:443/ums/check-status
 **Q:** Is search Broken in 12.02.100 UMS Web?
 
 **A:** 
-If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [KB: UMS 12.02.100 Known issues](https://kb.igel.com/endpointmgmt-12.03/en/known-issues-igel-ums-12-02-100-108342900.html) Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
+If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [KB: UMS 12.02.100 Known issues](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-igel-ums-12-02-100-122460239.html))
+Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
 
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
 
@@ -143,7 +145,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
-**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.03/en/overview-of-the-igel-ums-108340897.html)
+**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.04/en/overview-of-the-igel-ums-122457581.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole).
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
@@ -180,7 +182,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
-  - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.03/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-108340489.html#UsingYourOwnCertificatesforCommunicationovertheWebPort(Default:8443)-CreatingtheEndCertificates)
+  - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
   - Delete the obsolete (automatically created) UMS web certificates and restart the UMS server.
 
@@ -208,15 +210,15 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** What are the steps to upgrade distributed UMS 6.10 to 12.01 on Windows?
 
-**A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.03/en/known-issues-ums-12-01-110-108342912.html)
+**A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-ums-12-01-110-122460258.html).
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.03/en/igel-ums-sizing-guidelines-architecture-diagrams-108341014.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.03/en/performance-optimizations-in-igel-ums-108341044.html) and [Java heap size](https://kb.igel.com/endpointmgmt-12.03/en/how-to-configure-java-heap-size-for-the-ums-server-108340564.html).
+**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-sizing-guidelines-architecture-diagrams-122457702.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.04/en/performance-optimizations-in-igel-ums-122457737.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.04/en/how-to-configure-java-heap-size-for-the-ums-server-122457267.html).
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 
-**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12](https://kb.igel.com/endpointmgmt-12.03/en/supported-environment-igel-ums-12-03-100-108344753.html).
+**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12](https://kb.igel.com/endpointmgmt-12.04/en/supported-environment-igel-ums-12-03-100-122460222.html).
 
 **Q:** How to limit bulk actions for UMS help desk users?
 
@@ -274,7 +276,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.03/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-108340489.html)
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html).
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -335,7 +337,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / Azure Application Gateway with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.03/en/igel-cloud-gateway-icg-111642065.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.03/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-108341045.html).
+**A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via load balancer with SSL pass through (such as F5 / NetScaler / Azure Application Gateway with end to end SSL/TLS encryption and WebSocket support) that forwards encrypted SSL traffic to the UMS without decryption. If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.04/en/igel-cloud-gateway-icg-122465168.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.04/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-122457741.html).
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
@@ -355,7 +357,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.03/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-111642581.html)
+**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.04/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-122465718.html)
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 

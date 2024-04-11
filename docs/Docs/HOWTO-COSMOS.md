@@ -430,13 +430,13 @@ sequenceDiagram
 
 **Q:** How IGEL SSO Work?
 
-**A:** With IGEL single sign-on, users sign in once with a single account and get access to multiple applications. The application can be a local client (e.g., AVD), web, or single page application (on browser), regardless of platform or domain name.  When the user initially signs into the IGEL login screen, Identity Providers (Azure AD, Okta) persists a cookie-based session. Upon subsequent authentication requests, the Identity Provider reads and validates the cookie-based session and issues an access token, without prompting the user to sign in again. If the cookie-based session expires or becomes invalid, the user is prompted to sign-in again.  A web, local app, or single page application can be protected by an OAuth2 access token, ID token, or SAML token. When a user tries to access a protected resource on the app, the app checks whether there is an active session on the application side. If there is no app session or the session has expired, the app will take the user to the IdP's sign-in page.
+**A:** With IGEL single sign-on, users sign in once with a single account and get access to multiple applications. The application can be a local client (e.g., AVD), web, or single page application (on browser), regardless of platform or domain name.  When the user initially signs into the IGEL login screen, Identity Providers (Microsoft Entra ID (aka Azure AD), Okta) persists a cookie-based session. Upon subsequent authentication requests, the Identity Provider reads and validates the cookie-based session and issues an access token, without prompting the user to sign in again. If the cookie-based session expires or becomes invalid, the user is prompted to sign-in again.  A web, local app, or single page application can be protected by an OAuth2 access token, ID token, or SAML token. When a user tries to access a protected resource on the app, the app checks whether there is an active session on the application side. If there is no app session or the session has expired, the app will take the user to the IdP's sign-in page.
 
 **Q:** How to enable SSO via a cloud-based identity provider (IdP) to enable access to the local OS 12 device and applications?
 
 **A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [Configuring Single Sign-On (SSO)](https://kb.igel.com/howtocosmos/en/configuring-single-sign-on-sso-77865982.html).
 
-**Q:** What is the process workflow for how SSO works between web apps, Azure AD / Okta and IGEL OS 12?
+**Q:** What is the process workflow for how SSO works between web apps, Microsoft Entra ID (aka Azure AD) / Okta and IGEL OS 12?
 
 **A:** Here is the workflow.
 
@@ -444,7 +444,7 @@ sequenceDiagram
 sequenceDiagram
   participant A as Unauthenticated OS 12 Device
   participant B as Authenticated OS 12 Device
-  participant C as Identity Provided (Azure AD / Okta)
+  participant C as Identity Provided (Microsoft Entra ID / Okta)
   participant D as Web Application / VDI
   A->>C: 1 - User inputs credentials and MFA details if required
   C->>B: 2 - Authenticated user receives a session cookie and gains access to IGEL Desktop

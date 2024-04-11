@@ -6,6 +6,8 @@
 
 ### [Create USB installation medium (Linux)](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-linux-101061862.html)
 
+**NOTE:** Another tool that can be used to copy ISO image onto USB stick is [Rufus](https://rufus.ie/en/)
+
 -----
 
 ## Create USB installation medium (Appe MacOS)

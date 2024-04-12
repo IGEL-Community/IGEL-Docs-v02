@@ -104,6 +104,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - UMS
 
+**Q:** UMS cannot connect to the database after the update to UMS 12.04.100
+
+**A:** [Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/endpointmgmt-12.04/en/known-issue-ums-cannot-connect-to-the-ms-sql-database-122880601.html)
+
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
 **A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.04/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-122457574.html).

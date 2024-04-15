@@ -14,6 +14,126 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-04-12 - [11.09.269](readme11.09.269.txt)
+
+```
+The new PRIVATE BUILD 11.09.269 for IGEL Workspace is ready.
+
+This build is based on 11.09.263.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2402.  
+  Available Citrix Workspace Apps in this release: 2402 (default), 2311 and 2010
+* New features:  
+* Synchronize multiple keyboards at session start. All available keyboards on
+  the client are synchronized with VDA after the session starts in full-screen
+  mode.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Synchronize multiple keyboards at session start`                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.SyncKbdLayoutList`                                 |
++------------+-----------------------------------------------------------------+
+|Value       | false (default) /  true                                         |
++------------+-----------------------------------------------------------------+
+
+* Support for Audio volume synchronization. Synchronize audio volume between the
+  VDA and your audio devices.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for Audio volume synchronization`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeSync`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | true (default)/ false                                           |
++------------+-----------------------------------------------------------------+
+
+* Default values of the following have been changed as per Citrix.  
+* Enable Packet Loss Concealment to improve audio performance.
+  "ica.module.PacketLossConcealmentEnabled = True"  
+* Loss tolerant mode for audio. "ica.module.EdtUnreliableAllowed = True"
+* Use system Audio in MS Teams while screen sharing.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use system Audio in MS Teams while screen sharing`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeListener`                                |
++------------+-----------------------------------------------------------------+
+|Value       | false (default)/ true                                           |
++------------+-----------------------------------------------------------------+
+
+* Enhanced Desktop Viewer toolbar [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhanced Desktop Viewer toolbar`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.ToolbarVersion`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | 0 (default)/ 1                                                  |
++------------+-----------------------------------------------------------------+
+
+* Customize toolbar [Technical Preview]. From this version onwards, you can
+  activate or deactivate each button individually instead of the entire toolbar.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Show USB device button`                                         |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.DevicesButtonVisible`                                |
++------------+-----------------------------------------------------------------+
+|Value       | true (default)/ false                                           |
++------------+-----------------------------------------------------------------+
+
+* Note: Similarly, you can activate or deactivate the following buttons in the
+  toolbar. They are all activated by default.  
+  ica.module.CloseButtonVisible  
+  ica.module.FullscreenButtonVisible  
+  ica.module.MinimizeButtonVisible  
+  ica.module.PinButtonVisible  
+  ica.module.PreferencesButtonVisible  
+  ica.module.ShortcutsButtonVisible  
+  ica.module.SwitchDesktopButtonVisible
+* Include system audio while screen sharing in MS Teams
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Share system audio`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.sharesystemaudio`                                     |
++------------+-----------------------------------------------------------------+
+|Value       | false (default)/ true                                           |
++------------+-----------------------------------------------------------------+
+
+* Specify the minimum and maximum range of UDP ports for Microsoft Teams
+  optimization. If the UDP Port cannot be allocated for any reason, the WebRTC
+  falls back to TCP. Minimum range of UDP ports for Microsoft Teams
+  optimization.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UDP Port range minimum`                                         |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.PortRangeMin`                                         |
++------------+-----------------------------------------------------------------+
+|Value       | 3000                                                            |
++------------+-----------------------------------------------------------------+
+
+* Maximum range of UDP ports for Microsoft Teams optimization.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UDP Port range max`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.PortRangeMax`                                         |
++------------+-----------------------------------------------------------------+
+|Value       | 3100                                                            |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2024-04-10 - [11.09.312](readme11.09.312.txt)
 
 ```

@@ -284,7 +284,7 @@ starts and then error message: `Citrix Workspace cannot find a valid smart card 
 
  If the smart card is removed and reinserted then Citrix Workspace app recognizes the smart card and login can proceed.
 
-Issue the following command via `Before Desktop Start` 
+Issue the following command via [IGEL KB: Before Desktop Start](https://kb.igel.com/base_system/12.3.2/en/desktop-119868685.html)
 
 ```bash linenums="1"
 sed -i "/SinglePin=0/c SinglePin=1" /etc/netid.conf

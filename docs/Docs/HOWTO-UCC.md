@@ -274,3 +274,18 @@ This is a quirk of current Horizon linux clients which show this when there's no
 In IGEL OS the compositor is off by default because it may have side effects on older / slower devices.
 
 Here is registry setting: `windowmanager.wm0.variables.usecompositing`
+
+-----
+
+## Citrix Workspace cannot find a valid smart card certificate
+
+OS 12 issue inserting smart card and Citrix Workspace 
+starts and then error message: `Citrix Workspace cannot find a valid smart card certificate`.
+
+ If the smart card is removed and reinserted then Citrix Workspace app recognizes the smart card and login can proceed.
+
+Issue the following command via `Before Desktop Start` 
+
+```bash linenums="1"
+sed -i "/SinglePin=0/c SinglePin=1" /etc/netid.conf
+```

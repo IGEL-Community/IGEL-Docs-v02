@@ -306,7 +306,7 @@ New Features
 
 -----
 
-## 2024-04-03 - [11.09.310](readme11.08.310.txt)
+## 2024-04-03 - [11.09.310](readme11.09.310.txt)
 
 ```
 The new PUBLIC BUILD 11.09.310 for IGEL Workspace is ready.

@@ -350,6 +350,18 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
 - [Reverse Proxy / Load Balancer Example Configurations](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html#WhatisnewinIGELUMS12.03.100-ReverseProxy/LoadBalancerExampleConfigurations)
 
+- Citrix NetScaler SSL offloading Notes
+
+    - Steps to do first on IGEL side
+        - Configure your UMS
+            - Activate Forwarding Client Certificate Processing
+            - Set Cluster Address
+        - Create and Export Certificates
+            - Create UMS Web Certificates
+            - Export UMS Web Certificate Chain and extract private key and certificate chain.
+            - Export Client Certificate Chain
+    - Configure NetScaler for [SSL Offloading](https://docs.netscaler.com/en-us/citrix-adc/current-release/ssl/config-ssloffloading)
+
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
 **A:** [KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.04/en/igel-universal-management-suite-network-configuration-122456501.html)

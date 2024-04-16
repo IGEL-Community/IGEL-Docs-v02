@@ -1,6 +1,6 @@
 # HOWTO COSMOS
 
-## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
+## [IGEL KB: How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
 ## [IGEL Advanced Services - IGEL COSMOS Migration Package](https://www.igel.com/wp-content/uploads/2023/06/IGEL_OS11_Migration_OS12_ew.pdf)
 
@@ -70,7 +70,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What is the product lifecycle for IGEL products?
 
-**A:** [IGEL Product Lifecycle](https://kb.igel.com/licensesmore-igelos11/en/igel-product-lifecycle-90231044.html)
+**A:** [IGEL KB: IGEL Product Lifecycle](https://kb.igel.com/licensesmore-igelos11/en/igel-product-lifecycle-90231044.html)
 
 **Q:** How do I convert OS 11 licenses to OS 12 licenses?
 
@@ -78,7 +78,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What is needed for UMS 12 to support OS 11 licensing?
 
-**A:** EMP will need to be created from WP licensing.  [Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
+**A:** EMP will need to be created from WP licensing.  [IGEL KB: Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
 
 **Q:** Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?
 
@@ -86,19 +86,19 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What happens when a license expires?
 
-**A:** Details can be found here - [Entitlements that Come with an IGEL COSMOS Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html)
+**A:** Details can be found here - [IGEL KB: Entitlements that Come with an IGEL COSMOS Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html)
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
-**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
+**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [IGEL KB: UMS 12 License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
 
 **Q:** How to automate license renewal?
 
-**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [KB - License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
+**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [IGEL KB - License Deployment](https://kb.igel.com/endpointmgmt-12.04/en/deployment-deploying-licenses-through-the-igel-ums-122458646.html).
 
 **Q:** How does hardware-bundled IGEL licenses work?
 
-**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html).
+**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [IGEL KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html).
 
 -----
 
@@ -106,15 +106,15 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
-**A:** [Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/endpointmgmt-12.04/en/known-issue-ums-cannot-connect-to-the-ms-sql-database-122880601.html)
+**A:** [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/endpointmgmt-12.04/en/known-issue-ums-cannot-connect-to-the-ms-sql-database-122880601.html)
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
-**A:** [KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.04/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-122457574.html).
+**A:** [IGEL KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/endpointmgmt-12.04/en/which-ums-directories-should-be-scanned-for-viruses-which-can-be-excluded-122457574.html).
 
 **Q:** What is new in UMS 12?
 
-**A:** [KB: What Is New in IGEL UMS 12?](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html)
+**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html)
 . [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** How to check the status of UMS server?
@@ -132,7 +132,7 @@ https://UMS_SERVER_URL:443/ums/check-status
 **Q:** Is search Broken in 12.02.100 UMS Web?
 
 **A:** 
-If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [KB: UMS 12.02.100 Known issues](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-igel-ums-12-02-100-122460239.html))
+If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [IGEL KB: UMS 12.02.100 Known issues](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-igel-ums-12-02-100-122460239.html))
 Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
 
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
@@ -149,11 +149,11 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
-**A:** Here is link to [Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.04/en/overview-of-the-igel-ums-122457581.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole).
+**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.04/en/overview-of-the-igel-ums-122457581.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole).
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
-**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.04/en/ums-and-devices-secure-shadowing-122456742.html).
+**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [IGEL KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/endpointmgmt-12.04/en/ums-and-devices-secure-shadowing-122456742.html).
 
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
@@ -169,7 +169,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** I reset / rebuilt my OS 12 device and now get error (#38) when trying to connect to UMS.
 
-**A:** See [KB - Troubleshooting: Error 38 during the Onboarding of an IGEL OS 12 Device](https://kb.igel.com/howtocosmos/en/troubleshooting-error-38-during-the-onboarding-of-an-igel-os-12-device-90229885.html).
+**A:** See [IGEL KB - Troubleshooting: Error 38 during the Onboarding of an IGEL OS 12 Device](https://kb.igel.com/howtocosmos/en/troubleshooting-error-38-during-the-onboarding-of-an-igel-os-12-device-90229885.html).
 
 **Q:** Trying to connect OS 12 to UMS using the one-time password method but I get this message: `could not manage your device because of an internal error (#45)`.
 
@@ -186,7 +186,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
-  - Additional details [Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html)
+  - Additional details [IGEL KB: Creating the End Certificates](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
   - Delete the obsolete (automatically created) UMS web certificates and restart the UMS server.
 
@@ -214,15 +214,15 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What are the steps to upgrade distributed UMS 6.10 to 12.01 on Windows?
 
-**A:** [Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-ums-12-01-110-122460258.html).
+**A:** [IGEL KB: Upgrade Distributed UMS from 6.10 to 12.01.110 on Windows Server](https://kb.igel.com/endpointmgmt-12.04/en/known-issues-ums-12-01-110-122460258.html).
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-sizing-guidelines-architecture-diagrams-122457702.html), [performance optimizations](https://kb.igel.com/endpointmgmt-12.04/en/performance-optimizations-in-igel-ums-122457737.html), and [Java heap size](https://kb.igel.com/endpointmgmt-12.04/en/how-to-configure-java-heap-size-for-the-ums-server-122457267.html).
+**A:** Make sure you have met requirements for [IGEL KB: RAM and vCPUs](https://kb.igel.com/endpointmgmt-12.04/en/igel-ums-sizing-guidelines-architecture-diagrams-122457702.html), [IGEL KB: performance optimizations](https://kb.igel.com/endpointmgmt-12.04/en/performance-optimizations-in-igel-ums-122457737.html), and [IGEL KB: Java heap size](https://kb.igel.com/endpointmgmt-12.04/en/how-to-configure-java-heap-size-for-the-ums-server-122457267.html).
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 
-**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [Supported Environment UMS 12](https://kb.igel.com/endpointmgmt-12.04/en/supported-environment-igel-ums-12-03-100-122460222.html).
+**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [IGEL KB: Supported Environment UMS 12](https://kb.igel.com/endpointmgmt-12.04/en/supported-environment-igel-ums-12-03-100-122460222.html).
 
 **Q:** How to limit bulk actions for UMS help desk users?
 
@@ -248,11 +248,11 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Is OS 12 considered an App?
 
-**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [KB IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/base_system/12.3.0/en/igel-os-base-system-108346390.html).
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/base_system/12.3.0/en/igel-os-base-system-108346390.html).
 
 **Q:** What are the hardware requirements for OS 12?
 
-**A:** [Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
+**A:** [IGEL KB: Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
 
 **Q:** I want to quickly test out OS 12. What are the steps to test?
 
@@ -264,7 +264,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Does OS 12 support SCCM deployments?
 
-**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.09/en/igel-os-sccm-add-on-101062241.html)
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/cosmos/). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/igelos-11.09/en/igel-os-sccm-add-on-101062241.html)
 
 **Q:** Does OS 12 support PXE boot deployments?
 
@@ -280,7 +280,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html).
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/endpointmgmt-12.04/en/using-your-own-certificates-for-communication-over-the-web-port-default-8443-122457193.html).
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -312,15 +312,15 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What is required of OS 11 device to upgrade to OS 12?
 
-**A:** At least `4GB` RAM and `8GB` Disk is needed for OS 12. [Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
+**A:** At least `4GB` RAM and `8GB` Disk is needed for OS 12. [IGEL KB: Requirements for IGEL OS 12](https://kb.igel.com/hardware/en/devices-officially-supported-by-igel-os-12-81496425.html)
 
 **Q:** How do I upgrade an OS 11 device to OS 12?
 
-**A:** OS 11.09.100 and UMS 12.2.0 or higher is required to upgrade to OS 12. Additional details can be found here: [KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
+**A:** OS 11.09.100 and UMS 12.2.0 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09/en/upgrading-migration-from-igel-os-11-to-igel-os-12-101063106.html)
 
 **Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
 
-**A:** [Steps to install new OS on UD Pocket](https://kb.igel.com/igelos-11.09/en/how-to-reflash-your-igel-ud-pocket-101060750.html)
+**A:** [IGEL KB: Steps to install new OS on UD Pocket](https://kb.igel.com/igelos-11.09/en/how-to-reflash-your-igel-ud-pocket-101060750.html)
 
 
 **Q:** How to debug OS 11 to OS 12 upgrade?
@@ -341,16 +341,16 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [NGINX: Example Configuration for as Reverse Proxy in IGEL OS with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/nginx-example-configuration-for-as-reverse-proxy-in-igel-os-with-ssl-offloading-122456528.html).
+**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [IGEL KB: NGINX: Example Configuration for as Reverse Proxy in IGEL OS with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/nginx-example-configuration-for-as-reverse-proxy-in-igel-os-with-ssl-offloading-122456528.html).
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via reverse proxy
-(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [ICG 12 KB](https://kb.igel.com/igelicg-12.04/en/igel-cloud-gateway-icg-122465168.html) and [KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.04/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-122457741.html).
+(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/igelicg-12.04/en/igel-cloud-gateway-icg-122465168.html) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/endpointmgmt-12.04/en/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices-122457741.html).
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
-- [Reverse Proxy / Load Balancer Example Configurations](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html#WhatisnewinIGELUMS12.03.100-ReverseProxy/LoadBalancerExampleConfigurations)
+- [IGEL KB: Reverse Proxy / Load Balancer Example Configurations](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html#WhatisnewinIGELUMS12.03.100-ReverseProxy/LoadBalancerExampleConfigurations)
 
-- Citrix NetScaler SSL offloading (follow settings from [F5 BIG IP: Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/f5-big-ip-example-configuration-as-reverse-proxy-in-igel-ums-with-ssl-offloading-122456560.html))
+- Citrix NetScaler SSL offloading (follow settings from [IGEL KB: F5 BIG IP: Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/f5-big-ip-example-configuration-as-reverse-proxy-in-igel-ums-with-ssl-offloading-122456560.html))
 
     - Steps to do first on IGEL side
         - Configure your UMS
@@ -364,7 +364,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
-**A:** [KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.04/en/igel-universal-management-suite-network-configuration-122456501.html)
+**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/endpointmgmt-12.04/en/igel-universal-management-suite-network-configuration-122456501.html)
 
 **Q:** Does ICG 12 support OS 11 devices?
 
@@ -376,7 +376,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.04/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-122465718.html)
+**A:** Details on fix can be found here: [IGEL KB: Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/igelicg-12.04/en/known-issues-configuration-of-unlimited-session-timeout-for-icg-12-01-100-122465718.html)
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 
@@ -396,7 +396,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** What are the steps to setup OBS?
 
-**A:** [Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)
+**A:** [IGEL KB: Initial Configuration of the IGEL Onboarding Service (OBS)](https://kb.igel.com/howtocosmos/en/initial-configuration-of-the-igel-onboarding-service-obs-77865754.html)
 
 **Q:** In the Customer Portal for OBS registration must the UMS hostname be entered in lowercase?
 
@@ -404,7 +404,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** What are the steps to onboard an OS 12 device?
 
-**A:** [Onboarding IGEL OS 12 Devices](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html)
+**A:** [IGEL KB: Onboarding IGEL OS 12 Devices](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html)
 
 **Q:** What is the OBS sequence for registering an OS 12 device?
 
@@ -437,7 +437,7 @@ sequenceDiagram
 
 **Q:** What do the error codes from onboarding mean?
 
-**A:** [Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding)
+**A:** [IGEL KB: Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding)
 
 **Q:** OBS connection issue for UMS server with long server name in cloud hosted server. How can I change UMS server name?
 
@@ -447,13 +447,17 @@ sequenceDiagram
 
 ## FAQ - Single Sign On (SSO)
 
+**Q:** Does IGEL SSO with OS 12 work with OpenID Connect?
+
+**A:** Yes! IGEL SSO with OS 12 will work with identity provider (IdP) that supports [OpenID Connect](https://openid.net/developers/how-connect-works/). [IGEL KB: Apps and Utilities for IGEL OS 12 That Support SSO with OpenID Connect (Generic)](https://kb.igel.com/base_system/12.3.0/en/how-to-configure-single-sign-on-sso-on-igel-os-12-112731582.html#HowtoConfigureSingleSignOn(SSO)onIGELOS12-AppsandUtilitiesforIGELOS12ThatSupportSSOwithOpenIDConnect(Generic)AppsandUtilitiesforIGELOS12thatSupportSSOwithGenericOpenID)
+
 **Q:** How IGEL SSO Work?
 
 **A:** With IGEL single sign-on, users sign in once with a single account and get access to multiple applications. The application can be a local client (e.g., AVD), web, or single page application (on browser), regardless of platform or domain name.  When the user initially signs into the IGEL login screen, Identity Providers (Microsoft Entra ID (aka Azure AD), Okta) persists a cookie-based session. Upon subsequent authentication requests, the Identity Provider reads and validates the cookie-based session and issues an access token, without prompting the user to sign in again. If the cookie-based session expires or becomes invalid, the user is prompted to sign-in again.  A web, local app, or single page application can be protected by an OAuth2 access token, ID token, or SAML token. When a user tries to access a protected resource on the app, the app checks whether there is an active session on the application side. If there is no app session or the session has expired, the app will take the user to the IdP's sign-in page.
 
 **Q:** How to enable SSO via a cloud-based identity provider (IdP) to enable access to the local OS 12 device and applications?
 
-**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [Configuring Single Sign-On (SSO)](https://kb.igel.com/howtocosmos/en/configuring-single-sign-on-sso-77865982.html).
+**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [IGEL KB: Configuring Single Sign-On (SSO)](https://kb.igel.com/howtocosmos/en/configuring-single-sign-on-sso-77865982.html).
 
 **Q:** What is the process workflow for how SSO works between web apps, Microsoft Entra ID (aka Azure AD) / Okta and IGEL OS 12?
 

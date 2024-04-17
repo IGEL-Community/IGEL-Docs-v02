@@ -27,109 +27,108 @@ New Features
 --------------------------------------------------------------------------------
 
 ### Citrix
-* Updated Citrix Workspace App to version 2402.
-Available Citrix Workspace Apps in this release: 2402 (default), 2311 and 2309
 
-* New features:
-
+* Updated Citrix Workspace App to version 2402.  
+  Available Citrix Workspace Apps in this release: 2402 (default), 2311 and 2309
+* New features:  
 * Synchronize multiple keyboards at session start. All available keyboards on
-the client are synchronized with VDA after the session starts in full-screen
-mode.
+  the client are synchronized with VDA after the session starts in full-screen
+  mode.
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Synchronize multiple keyboards at session start` |
+|Parameter   |`Synchronize multiple keyboards at session start`                |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.wfclient.SyncKbdLayoutList` |
+|Registry    |`ica.wfclient.SyncKbdLayoutList`                                 |
 +------------+-----------------------------------------------------------------+
-|Value | false (default) / true |
+|Value       | false (default) /  true                                         |
 +------------+-----------------------------------------------------------------+
 
 * Support for Audio volume synchronization. Synchronize audio volume between the
-VDA and your audio devices.
+  VDA and your audio devices.
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Support for Audio volume synchronization` |
+|Parameter   |`Support for Audio volume synchronization`                       |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.module.EnableVolumeSync` |
+|Registry    |`ica.module.EnableVolumeSync`                                    |
 +------------+-----------------------------------------------------------------+
-|Value | true (default)/ false |
+|Value       | true (default)/ false                                           |
 +------------+-----------------------------------------------------------------+
 
-* Default values of the following have been changed as per Citrix.
+* Default values of the following have been changed as per Citrix.  
 * Enable Packet Loss Concealment to improve audio performance.
-\\"ica.module.PacketLossConcealmentEnabled = True\\"
-* Loss tolerant mode for audio. \\"ica.module.EdtUnreliableAllowed = True\\"
+  "ica.module.PacketLossConcealmentEnabled = True"  
+* Loss tolerant mode for audio. "ica.module.EdtUnreliableAllowed = True"
 * Use system Audio in MS Teams while screen sharing.
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Use system Audio in MS Teams while screen sharing` |
+|Parameter   |`Use system Audio in MS Teams while screen sharing`              |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.module.EnableVolumeListener` |
+|Registry    |`ica.module.EnableVolumeListener`                                |
 +------------+-----------------------------------------------------------------+
-|Value | false (default)/ true |
+|Value       | false (default)/ true                                           |
 +------------+-----------------------------------------------------------------+
 
 * Enhanced Desktop Viewer toolbar [Technical Preview]
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Enhanced Desktop Viewer toolbar` |
+|Parameter   |`Enhanced Desktop Viewer toolbar`                                |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.wfclient.ToolbarVersion` |
+|Registry    |`ica.wfclient.ToolbarVersion`                                    |
 +------------+-----------------------------------------------------------------+
-|Value | 0 (default)/ 1 |
+|Value       | 0 (default)/ 1                                                  |
 +------------+-----------------------------------------------------------------+
 
 * Customize toolbar [Technical Preview]. From this version onwards, you can
-activate or deactivate each button individually instead of the entire toolbar.
+  activate or deactivate each button individually instead of the entire toolbar.
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Show USB device button` |
+|Parameter   |`Show USB device button`                                         |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.module.DevicesButtonVisible` |
+|Registry    |`ica.module.DevicesButtonVisible`                                |
 +------------+-----------------------------------------------------------------+
-|Value | true (default)/ false |
+|Value       | true (default)/ false                                           |
 +------------+-----------------------------------------------------------------+
 
 * Note: Similarly, you can activate or deactivate the following buttons in the
-toolbar. They are all activated by default.
-
-ica.module.CloseButtonVisible
-ica.module.FullscreenButtonVisible
-ica.module.MinimizeButtonVisible
-ica.module.PinButtonVisible
-ica.module.PreferencesButtonVisible
-ica.module.ShortcutsButtonVisible
-ica.module.SwitchDesktopButtonVisible
-
+  toolbar. They are all activated by default.  
+  ica.module.CloseButtonVisible  
+  ica.module.FullscreenButtonVisible  
+  ica.module.MinimizeButtonVisible  
+  ica.module.PinButtonVisible  
+  ica.module.PreferencesButtonVisible  
+  ica.module.ShortcutsButtonVisible  
+  ica.module.SwitchDesktopButtonVisible
 * Include system audio while screen sharing in MS Teams
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`Share system audio` |
+|Parameter   |`Share system audio`                                             |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.teams.sharesystemaudio` |
+|Registry    |`ica.teams.sharesystemaudio`                                     |
 +------------+-----------------------------------------------------------------+
-|Value | false (default)/ true |
+|Value       | false (default)/ true                                           |
 +------------+-----------------------------------------------------------------+
 
 * Specify the minimum and maximum range of UDP ports for Microsoft Teams
-optimization. If the UDP Port cannot be allocated for any reason, the WebRTC
-falls back to TCP. Minimum range of UDP ports for Microsoft Teams
-optimization.
+  optimization. If the UDP Port cannot be allocated for any reason, the WebRTC
+  falls back to TCP. Minimum range of UDP ports for Microsoft Teams
+  optimization.
 
 +------------+-----------------------------------------------------------------+
-|Parameter |`UDP Port range minimum` |
+|Parameter   |`UDP Port range minimum`                                         |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.teams.PortRangeMin` |
+|Registry    |`ica.teams.PortRangeMin`                                         |
 +------------+-----------------------------------------------------------------+
-|Value | 3000 |
+|Value       | 3000                                                            |
 +------------+-----------------------------------------------------------------+
+
 * Maximum range of UDP ports for Microsoft Teams optimization.
+
 +------------+-----------------------------------------------------------------+
-|Parameter |`UDP Port range max` |
+|Parameter   |`UDP Port range max`                                             |
 +------------+-----------------------------------------------------------------+
-|Registry |`ica.teams.PortRangeMax` |
+|Registry    |`ica.teams.PortRangeMax`                                         |
 +------------+-----------------------------------------------------------------+
-|Value | 3100 |
+|Value       | 3100                                                            |
 +------------+-----------------------------------------------------------------+
 
 Resolved Issues
@@ -138,7 +137,7 @@ Resolved Issues
 ### Citrix
 
 * After connecting to Citrix VDA, support for multiple audio devices sometimes
-may not work. This problem has been fixed.
+  may not work. This problem has been fixed.
 ```
 
 -----

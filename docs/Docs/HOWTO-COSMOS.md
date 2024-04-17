@@ -306,6 +306,16 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **A:** Set `network.interfaces.wirelesslan.device0.roam_refresh_dhcp` to False in the Registry to reduce connections back to the UMS servers. Without setting to false as the device travels, it may download profiles and settings from UMS every time it switches WIFI access point.
 
+**Q:** Can the IGEL OS install from USB drive be customized with settings to speed up the imaging process?
+
+**A:** Yes! Here are some links with steps to customize IGEL OS install from USB stick:
+
+- [HOWTO Edit Initial Settings for OSC](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Edit-Initial-Settings-OSC/)
+
+- [HOWTO Write Configuration Files to OSC ISO](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Write-Config-Files-OSC-ISO/)
+
+- [HOWTO Make OSC Unattended ISO Boot](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/Make_OSC_Unattended_ISO_Boot)
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

@@ -253,6 +253,8 @@ net stop w32time & date 03-01-2024 & net start CtxHdxWebSocketService & net star
 
 ## IGEL OS 11.09.217 / 11.09.260 Citrix Multiple Audio Device Support / Unified Communications Issue
 
+**NOTE:** Fixed with 11.09.313 release on 17 April 2024
+
 - Issue is the multiple audio device support is not working 
 - Zoom VDI/Microsoft Teams will not work when the device is in the problem state
 

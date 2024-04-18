@@ -64,6 +64,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - Licensing and Support
 
+**Q:** How to troubleshoot licesning problems?
+
+**A:** [Troubleshooting Common IGEL Licensing Problems](https://kb.igel.com/igel_cosmos_pas/en/troubleshooting-common-igel-licensing-problems-122892043.html)
+
 **Q:** What are the levels of IGEL Support Services?
 
 **A:** IGEL offers three levels of support – Select, Priority and Plus. [IGEL Support Services](https://www.igel.com/wp-content/uploads/2023/04/IGEL_Support_EN.pdf)

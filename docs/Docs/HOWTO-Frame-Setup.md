@@ -10,7 +10,13 @@
 
 -----
 
-## Frame on IGEL (steps to build custom partition)
+## Frame App on OS 12
+
+- IGEL App Portal - [Frame App](https://app.igel.com/#/api/frame)
+
+-----
+
+## Frame on OS 11 (steps to build custom partition)
 
 Over a year ago (December 2020) we jointly developed automated custom partition (CP) builder for Frame.
 

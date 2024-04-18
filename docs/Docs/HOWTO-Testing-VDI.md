@@ -94,9 +94,9 @@ App & Desktop Virtualization Made Easy.
 
 ### [Take Frame for a spin](https://www.dizzion.com/test-drive)
 
-### [OS 11 / 12 - Create Custom Partition for Frame](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/Frame)
+### [OS 11 - Create Custom Partition for Frame](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/Frame)
 
-### [OS 12 - IGEL App Portal - coming soon](https://app.igel.com/)
+### [OS 12 - IGEL App Portal](https://app.igel.com/#/api/frame)
 
 -----
 

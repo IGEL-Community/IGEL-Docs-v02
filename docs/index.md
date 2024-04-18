@@ -147,21 +147,24 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ### IGEL OS Apps
 
-- [IGEL OS Base System](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/00-IGEL_OS_Base_System.pdf)
-- [Citrix Workspace App](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/01-Citrix_Workspace_App.pdf)
-- [IGEL Azure Virtual Desktop Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/02-IGEL_Azure_Virtual_Desktop_Client.pdf)
-- [VMware Horizon Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/03-VMware_Horizon_Client.pdf)
+- [CUPS Printing](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/15-CUPS_Printing_App.pdf)
 - [Chromium Browser](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/04-Chromium_Browser.pdf)
-- [Cisco Webex VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/05-Cisco_Webex_VDI.pdf)
-- [Cisco Webex Meetings VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/06-Cisco_Webex_Meetings_VDI.pdf)
 - [Cisco Jabber VDI (JVDI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/07-Cisco_Jabber_VDI_JVDI.pdf)
-- [Zoom Media Plugins for VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/08-Zoom_Media_Plugins_for_VDI.pdf)
-- [IGEL Agent for Imprivata](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/09-IGEL_Agent_for_Imprivata.pdf)
-- [FabulaTech USB for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/10-FabulaTech_USB_for_Remote_Desktop.pdf)
+- [Cisco Webex Meetings VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/06-Cisco_Webex_Meetings_VDI.pdf)
+- [Cisco Webex VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/05-Cisco_Webex_VDI.pdf)
+- [Citrix Workspace App](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/01-Citrix_Workspace_App.pdf)
 - [FabulaTech Plugins](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/11-FabulaTech_Plugins.pdf)
-- [FabulaTech Webcam for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/12-FabulaTech_Webcam_for_Remote_Desktop.pdf)
 - [FabulaTech Scanner for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/13-FabulaTech_Scanner_for_Remote_Desktop.pdf)
+- [FabulaTech USB for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/10-FabulaTech_USB_for_Remote_Desktop.pdf)
+- [FabulaTech Webcam for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/12-FabulaTech_Webcam_for_Remote_Desktop.pdf)
+- [IGEL Agent for Imprivata](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/09-IGEL_Agent_for_Imprivata.pdf)
+- [IGEL Azure Virtual Desktop Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/02-IGEL_Azure_Virtual_Desktop_Client.pdf)
+- [IGEL OS Base System](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/00-IGEL_OS_Base_System.pdf)
+- [IGEL Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/16-IGEL_Remote_Desktop.pdf)
+- [IGEL Windows 365](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/17-IGEL_Windows_365.pdf)
 - [Media Player Parole](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/14-Media_Player_Parole.pdf)
+- [VMware Horizon Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/03-VMware_Horizon_Client.pdf)
+- [Zoom Media Plugins for VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/08-Zoom_Media_Plugins_for_VDI.pdf)
 
 ----------
 

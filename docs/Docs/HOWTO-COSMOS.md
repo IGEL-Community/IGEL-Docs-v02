@@ -502,6 +502,10 @@ sequenceDiagram
 
 **A:** [Microsoft Excel keyboard shortcut keys](https://www.computerhope.com/shortcut/excel.htm) can be passed to AVD session by enabling `System > app > avd > avd% > options > remote-keymapping`. In OS 11 `System > Registry > sessions.wvd%.options.remote-keymapping`
 
+**Q:** How to restrict AVD access `ONLY` from IGEL endpoints?
+
+**A:** [Raise the level of security for your AVD and Windows 365 access – Make sure that ONLY your managed IGEL OS endpoints can access your environment](https://virtualbrat.com/2024/04/18/raise-the-level-of-security-for-your-avd-and-windows-365-access-make-sure-that-only-your-managed-igel-os-endpoints-can-access-your-environment-this-is-the-why-and-how/)
+
 -----
 
 ## FAQ - VMware Horizon

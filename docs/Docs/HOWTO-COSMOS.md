@@ -60,6 +60,11 @@ If the client's clock is off, then it will break either or both of these functio
   - OS 12: Check that time NTP is enabled: `get system.time.ntp_enabled`
   - OS 12: Check NTP time server: `get system.time.ntp_timeserver`
 
+  Additional details on setting up time and date:
+
+  - [IGEL KB: OS 11 Time and Date](https://kb.igel.com/igelos-11.09.310/en/time-and-date-119878103.html)
+  - [IGEL KB: OS 12 Time and Date](https://kb.igel.com/base_system/12.3.2/en/time-and-date-119868630.html)
+
 -----
 
 ## FAQ - Licensing and Support

@@ -115,7 +115,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
-**A:** [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/endpointmgmt-12.04/en/known-issue-ums-cannot-connect-to-the-ms-sql-database-122880601.html)
+**A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/endpointmgmt-12.04/en/known-issue-ums-cannot-connect-to-the-ms-sql-database-122880601.html)
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 

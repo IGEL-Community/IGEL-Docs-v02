@@ -5,7 +5,7 @@ UPDATE
 -->
 - IGEL UMS Version Base: [12.04.110](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.04.110.txt)
 
-- IGEL OS Firmware Base: [11.09.311](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.311.txt)
+- IGEL OS Firmware Base: [11.09.313](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.313.txt)
 
 - IGEL OS Firmware Base: [11.09.310](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.310.txt)
 
@@ -21,7 +21,7 @@ UPDATE
 
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
 
-| Clients                          | 11.09.260            | 11.09.261            | 11.09.269            | 11.09.310            | 11.09.311            |
+| Clients                          | 11.09.260            | 11.09.261            | 11.09.269            | 11.09.310            | 11.09.313            |
 |----------------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 | Cisco JVDI Client                | 14.3.0               | 14.3.0               | 14.3.0               | 14.3.0               | 14.3.0               |
 | Cisco Webex Meetings VDI plugin  | 42.10.8.14           | 42.10.8.14           | 42.10.8.14           | 42.10.8.14           | 42.10.8.14           |
@@ -38,6 +38,7 @@ UPDATE
 | Zoom Media Plugin                | 5.15.2.23760         | 5.15.2.23760         | 5.15.2.23760         | 5.16.10.24420        | 5.15.2.23760         |
 | Zoom Media Plugin                | 5.16.10.24420        | 5.16.10.24420        | 5.16.10.24420        | 5.17.5.24630         | 5.16.10.24420        |
 | Zoom Media Plugin                | 5.17.5.24630         | 5.17.5.24630         | 5.17.5.24630         | 5.17.6.24660         | 5.17.5.24630         |
+
 
 | Clients                          | 11.09.160            | 11.09.163            | 11.09.164            |
 |----------------------------------|----------------------|----------------------|----------------------|
@@ -97,7 +98,7 @@ IGEL OS:
 <!--
 UPDATE
 -->
-- IGEL OS 11.09.311 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
+- IGEL OS 11.09.313 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.310 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.260 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.261 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)

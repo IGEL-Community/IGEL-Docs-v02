@@ -23,8 +23,8 @@ These are the release notes published with that release:
 - Added (enhanced) settings for kernel cmdline options
 
   - New registry keys:
-
 ```
+
 | Parameter | Registry | Type | Value | Range |
 | ------ | ------ | ------ | ------ | ------ |
 | Set reboot kernel parameters. | system.kernel.bootparams.reboot |  | _Default_ | [Default][Bios][Triple][Kbd][Acpi][Efi][Pci] |
@@ -37,27 +37,27 @@ These are the release notes published with that release:
 | Ignore timeout signaled by controller for i8042 driver. | system.kernel.bootparams.i8042.notimeout | bool | enabled / _disabled_ (default) |  |
 | Reset controller during init for i8042 driver. | system.kernel.bootparams.i8042.reset | bool | enabled / _disabled_ (default) |  |
 | Set ACPI kernel parameters. | system.kernel.bootparams.acpi |  | _No setting_ | [No setting][Force][On][Off][Noirq][Strict][Rsdt][Copy_dsdt] |
-```
 
+```
   - Changed registry keys:
-
 ```
+
 | Parameter | Registry | Range | Value |
 | ------ | ------ | ------ | ------ |
 | Various PCI subsystem options | system.kernel.bootparams.pci | [Default][Conf Mechanism 1][Conf Mechanism 2][Disable multiple PCI domains][Disable use of MMCONFIG][Disable MSI][Ignore ACPI PCI host bridge window][Ignore ACPI IRQ routing][Route IRQ for all PCI devices] | _Default_ |
 | Set maximum allowed cstate on intel cpus. | system.kernel.bootparams.max_cstate | [No limit][0][1][2][3][4][5][6] | _No limit_ |
-```
 
+```
 - Updated IGEL logo within IGEL Setup Assistant
 - Changed logo on default wallpaper.
 - Added support for User Login History for login types AD/Kerberos, Single Sign-On (ID Provider) and Local User. If enabled, login and logoff events of corresponding types are logged in UMS.
-
 ```
+
 | Setup | Parameter | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | System > Remote Management > Options | Log login and logoff events | system.remotemanager.log_authentication | *disabled* (default) / enabled |
-```
 
+```
 - Added checkbox and corresponding text for accepting EULA on IGEL OS.
 - Changed: Base system requires Citrix CWAL version 2311 or newer for Citrix Cloud login. Old libwebkit library is removed due to security reasons.
 - Added / enhanced post session command support: Besides Logoff and Shutdown, customized commands can be configured.
@@ -69,43 +69,43 @@ These are the release notes published with that release:
 - **Network**
 
 	- SCEP: Improved handling of client certificate subject change (particularly if the hostname is part of the subject). Registry key:
-
 ```
+
 |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Hostname change handling`  |  `network.scepclient.cert%.hostname_change_handling`  |  [Ignore][Reset]  |  *Ignore*  |
-```
 
+```
 	- A notification is shown, when SCEP server is reachable but certificate renewal fails. The notification includes any deviation of the desired subject from the old one.
 	- Added check if BIOS has Wake-on-LAN disabled. If disabled, it is not recommended to configure network interface to use WoL. This check is only supported / possible on Lenovo devices with official IGEL OS hardware support. Parameter:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Respect the BIOS WoL setting so if disabled reflect this for the linux network devices settings.` | `network.interfaces.respect_bios_wol_setting` | bool | *enabled* (default) / disabled |
-```
 
+```
 	- Added: The`Automatic switch of network connection` parameter (network.applet.wireless.enable_wifi_auto_switch) is renamed and handles Ethernet, WiFi and Mobile Broadband connections. Furthermore, the parameter was moved to a new section in Setup: `Network > Common Settings`, together with `Computer Name` (network.dns.hostname) and `Host List` (network.hosts%).
 	- Added support for MACsec with preshared key. NetworkManager currently requires that the CAK consists of 32 hexadecimal digits and the CKN consists of 64 hexadecimal digits.
 
 - **Audio**
 
 	- Added input overamplification parameter to complement the existing overamplification parameter.
-
 ```
+
 |  Setup  |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `Devices > Audio > Options`  |  `Enable input volume overamplification`  |  `userinterface.sound.input_overamplification`  |  bool  |  enabled / *disabled* (default)  |
-```
 
+```
 	- Added new Audio tray app. The Sound Preferences dialog is not available anymore.
-
 ```
+
 |  Setup  |  Parameter  |  Registry   |  Type      |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `User Interface > Desktop > Taskbar Items`  |  `Show audio tray icon on desktop`  |  `userinterface.system_tray.audio.desktop`  |  bool  |  *enabled (default)*/disabled  |
-```
 
+```
 - **Hardware**
 
 	- Added support for Lenovo USB-C to Ethernet Adapter
@@ -121,28 +121,28 @@ These are the release notes published with that release:
 	- Added compatibility for remote management via F5 Reverse Proxy / SSL Offloading (requires UMS 12.04.100 or later).
 	- Added compatibility for remote management via Microsoft's Azure Application Gateway (requires UMS 12.04.100 or later).
 	- Added: RSA-4096 key is created as device key by default. The key type can be changed via IGEL setup:
-
 ```
+
 |  Registry    |  Value       |
 | ------ | ------ |
 |  `system.remotemanager.device_key_type`  |  *RSA-4096* (default) / EC-P521R1  |
-```
 
+```
 - **IGEL Desktop**
 
 	- Replaced Display Switcher with new Display Tray App.
-
 ```
+
 |  Setup  |  Parameter  |  Registry   |  Type      |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `User Interface > Desktop > Taskbar Items`  |  `Show display tray icon on desktop`  |  `userinterface.system_tray.display.desktop`  |  bool  |  *enabled (default)*/disabled  |
-```
 
+```
 	- Added switch for changing display modes: Custom, External, Internal and Mirror.
 	- Technically reworked monitor handling. Monitors are now identified by their EDID data.
 	- Changed: Tray Apps are used in login and lock screen. Configurable on setup page `User Interface > Screenlock / Screensaver > Taskbar`:
-
 ```
+
 |  Parameter  |  Registry   |  Type      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Show input settings tray icon on lockscreen`  |  `userinterface.system_tray.input.lockscreen`  |  bool  |  enabled/*disabled (default)*  |
@@ -152,85 +152,86 @@ These are the release notes published with that release:
 |  `Show wifi connection status tray icon on lockscreen`  |  `userinterface.system_tray.wifi.lockscreen`  |  bool  |  *enabled (default)*/disabled  |
 |  `Show mobile-broadband connection status tray icon on lockscreen`  |  `userinterface.system_tray.mobile_broadband.lockscreen`  |  bool  |  *enabled (default)*/disabled  |
 |  `Show audio tray icon on lockscreen`  |  `userinterface.system_tray.audio.lockscreen`  |  bool  |  enabled/*disabled (default)*  |
-```
 
+```
 	- Changed default values for taskbar and icon position, new defaults are:
 ```
+
 |  Setup   |  Parameter   |  Registry    |  Type        |  Value       |
 | ------ | ------ | ------ | ------ | ------ |
 |  User Interface > Desktop > Taskbar  |  `Monitor`        |  `windowmanager.wm0.variables.taskbarxineramamonitor`              |  range                            |   *[Primary monitor] (default)* [1st monitor] [2nd monitor] [3rd monitor] [4th monitor] [5th monitor] [6th monitor] [7th monitor] [8th monitor] |
 |  User Interface > Desktop  |  `Monitor for Desktop Icons`        |  `windowmanager.wm0.variables.desktopxineramamonitor`              |  range                            |   [All monitors] *[Same as taskbar] (default)* [1st monitor] [2nd monitor] [3rd monitor] [4th monitor] [5th monitor] [6th monitor] [7th monitor] [8th monitor] |
-```
 
+```
 - **Mobile Broadband**
 
 	- Added Quectel EM05-G support for Lenovo ThinkPad L13 AMD Gen4 and L13 Intel Gen4.
 	- Added regional support with Quectel EM05-G for US SIM cards on supported Lenovo ThinkPad devices.
 	- Added option to establish Mobile Broadband connection automatically.
-
 ```
+
 |  Setup  | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ | ------ |
 |  Network > Mobile Broadband  | `Enable automatically connect` | `network.interfaces.mobile_broadband.auto_connect` | bool | *enabled* (default) / disabled |
-```
 
+```
 	- Added roaming parameter for WWAN connection.
-
 ```
+
 |  Setup  | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ | ------ |
 |  Network > Mobile Broadband  | `Roaming` | `network.interfaces.mobile_broadband.roaming` | bool | *enabled* (default) / disabled |
-```
 
+```
 	- Added configurable request for entering PIN of SIM-card within the Mobile Broadband tray app.
-
 ```
+
 |  Setup  | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ | ------ |
 |  Network > Mobile Broadband  | `Allow changing the request for the PIN of the SIM-card after boot in the tray application` | `network.interfaces.mobile_broadband.changing_pin_request_allowed` | bool | *enabled* (default) / disabled |
-```
 
+```
 	- Changed: Mobile Broadband (network.interfaces.mobile_broadband.enabled) is now enabled per default (configurable on setup page `Network > Mobile Broadband`).
 	- The `Automatic switch of network connection` parameter (network.applet.wireless.enable_wifi_auto_switch) now handles the automatic blocking and unblocking not only for WiFi but also for Mobile Broadband connections. In Setup the parameter was moved to a new section `Network > Common Settings`, along with `Computer Name` (network.dns.hostname) and `Host List` (network.hosts%).
 	- Added reworked Tray App for Mobile Broadband support.
-
 ```
+
 |  Setup  |  Parameter  |  Registry   |  Type      |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `User Interface > Desktop > Taskbar Items`  |  `Show mobile-broadband connection status tray icon on desktop`  |  `userinterface.system_tray.mobile_broadband.desktop`  |  bool  |  *enabled (default)*/disabled  |
-```
 
+```
 	- Added: Mobile internet Access Point Name with username and password can be defined on setup page `Network > Mobile Broadband`. This APN has higher priority than any auto-detected provider.
 	- Added configurable permission to change PIN of SIM-card within Mobile Broadband Tray App.
-
 ```
+
 |  Setup  | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ | ------ |
 |  Network > Mobile Broadband  | `Allow changing the PIN of the SIM-card in the tray application` | `network.interfaces.mobile_broadband.changing_pin_allowed` | bool | *enabled* (default) / disabled |
-```
 
+```
 	- Added: Possibilty to unlock SIM card with PUK (if needed).
 
 - **SSO**
 
 	- Added support for automatical Single Sign-on (SSO) login with given user credentials. All our Identity Providers except the generic OpenID Connect provider are supported.
-
 ```
+
 |  Setup      |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  Security > Logon > Single Sign-on  |  `Password for autologin`  |  `auth.cloudidp.password`  |  string  |  empty *Default*  |
 |  Security > Logon > Single Sign-on  |  `Automatically perform login`  |  `auth.cloudidp.autologin`  |  bool  |  enabled / *disabled* (default)  |
 |  Security > Logon > Single Sign-on  |  `Username for autologin`  |  `auth.cloudidp.username`  |  string  |  empty *Default*  |
-```
 
+```
 	- Added password-less guest-user login with limited access to applications. Each application session can be made available in normal user login, guest login, or both with Registry parameters sessions.<instance>.login_method or app.<app-name>.sessions.<instance>.login_method - requires Chromium Browser 120.0.6099.216 Build 5.0 or later.
-
 ```
+
 |  Setup  |  Parameter  |  Registry  |  Value  |
 | ------ | ------ | ------ | ------ |
 |  Security > Logon > Guest |  Present session to  |  `sessions.<instance>.login_method` <br> `app.<app-name>.sessions.<instance>.login_method`  |  "User" (default) / "Guest" / "All"  |
-```
 
+```
 	- This is the default for any session including app sessions. Latter ones inherit to `app.<app-name>.sessions.<app_%_or_instance#>.login_method`. Standard sessions inherit to `sessions.<name_%_or_instance#>.login_method`.
 	- Choose applications to be available in a guest session by setting the above parameters to 'Guest' or 'All'. On command-line usage of nodelist sessions to get a currently defined list of sessions.
 
@@ -290,21 +291,21 @@ These are the release notes published with that release:
 - Fixed zlib security issues CVE-2023-45853, CVE-2022-37434 and CVE-2018-25032.
 - Updated ca-certificates.
 - Added registry key to prevent terrapin attack (mitigation is not active as default) on the SSH server:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | Disable weak MACs and Chipers to prevent terrapin attack. | network.ssh_server.enable_terrapin_mitigation | bool | enabled / _disabled_ (default) |
-```
 
+```
 - Added registry key to prevent terrapin attack (mitigation is not active as default) on the SSH client:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | Disable weak MACs and Chipers to prevent terrapin attack. | network.ssh_client.enable_terrapin_mitigation | bool | enabled / _disabled_ (default) |
-```
 
+```
 - Fixed a privilege escalation issue in the starter license. Acknowledgements to Zack Didcott for responsible disclosure.
 - Fixed a privilege escalation in setup_cmd utility.
 - For security reasons the accessory 'Network Tools' is enforced to run with Administrator (root) privileges only. Therefore, parameter 'Password protection on page Accessories>Network Tools was removed.
@@ -330,23 +331,24 @@ These are the release notes published with that release:
 
 - **WiFi**
 	- Added registry key to switch between 8852be and rtw_8852be WiFi driver. Switching to 8852be driver possibly fixes some WiFi issues. (Auto uses 8852be on HP mt645 G7).
-
 ```
+
 | Parameter | Registry | Range | Value |
 | ------ | ------ | ------ | ------ |
 | Use 8852be driver instead of rtw_8852be for WLAN. | network.drivers.realtek.use_8852be | [Auto][Yes][No] | _Auto_ |
-```
-	- Added options for configuration of rtw89core and rtw89pci kernel modules (used e.g by the rtw_8852be driver).
 
 ```
+	- Added options for configuration of rtw89core and rtw89pci kernel modules (used e.g by the rtw_8852be driver).
+```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  disable_ps_mode  |  network.drivers.rtw89core.options.disable_ps_mode  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_clkreq  |  network.drivers.rtw89pci.options.disable_clkreq  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_aspm_l1  |  network.drivers.rtw89pci.options.disable_aspm_l1  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_aspm_l1ss  |  network.drivers.rtw89pci.options.disable_aspm_l1ss  |  bool  |  _enabled_ (default) / disabled  |
-```
 
+```
 - **HID**
 
 	- Fixed touchscreen calibration issues when multiple monitors are connected.
@@ -364,13 +366,13 @@ These are the release notes published with that release:
 - **Audio**
 
 	- Added parameter to disable timer scheduling in pulseaudio module-udev-detect.
-
 ```
+
 | Parameter | Registry | Range | Value |
 | ------ | ------ | ------ | ------ |
 | Disable timer scheduling for module-udev | multimedia.pulseaudio.daemon.disable-module-udev-tsched | [auto][true][false] | *auto* |
-```
 
+```
 - **Remote Management**
 
 	- Custom device attributes can now be showed and changed as user.
@@ -387,13 +389,13 @@ These are the release notes published with that release:
 
 	- Added registry key to define a semicolon separated list of allowed hostnames
 	for URL-redirections during the SSO login view:
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `List of allowed hosts for redirection`  |  `auth.cloudidp.host_allowlist`  |  string  |  empty *Default*  |
-```
 
+```
 ## Known Issues
 
 - Browser apps may not recognize custom certificates rolled out via UMS file transfer. The certificates are not correctly synchronized in the browser specific certificate stores/databases.
@@ -467,21 +469,21 @@ These are the release notes published with that release:
 - Added checkbox and corresponding text for accepting EULA on IGEL OS.
 - **Network**
 	- Added check if BIOS has Wake-on-LAN disabled. If disabled, it is not recommended to configure network interface to use WoL. This check is only supported / possible on Lenovo devices with official IGEL OS hardware support. Parameter:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | `Respect the BIOS WoL setting so if disabled reflect this for the linux network devices settings.` | `network.interfaces.respect_bios_wol_setting` | bool | *enabled* (default) / disabled |
-```
 
+```
 - SCEP: Improved handling of client certificate subject change (particularly if the hostname is part of the subject). Registry key:
-
 ```
+
 |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Hostname change handling`  |  `network.scepclient.cert%.hostname_change_handling`  |  [Ignore][Reset]  |  *Ignore*  |
-```
 
+```
 	- A notification is shown, when SCEP server is reachable but certificate renewal fails. The notification includes any deviation of the desired subject from the old one.
 
 - **Hardware**
@@ -495,46 +497,46 @@ These are the release notes published with that release:
 	- Added compatibility for remote management via F5 Reverse Proxy / SSL Offloading (requires UMS 12.04.100 or later).
 	- Added support for system-wide proxy configuration.
 	- Added: RSA-4096 key is created as device key by default. The key type can be changed via IGEL setup:
-
 ```
+
 |  Registry    |  Value       |
 | ------ | ------ |
 |  `system.remotemanager.device_key_type`  |  *RSA-4096* (default) / EC-P521R1  |
-```
 
+```
 - **SSO**
 
 	- Added support for automatical Single Sign-on (SSO) login with given user credentials. All our Identity Providers except the generic OpenID Connect provider are supported.
-
 ```
+
 |  Setup      |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ | ------ |
 |  Security > Logon > Single Sign-on  |  `Password for autologin`  |  `auth.cloudidp.password`  |  string  |  empty *Default*  |
 |  Security > Logon > Single Sign-on  |  `Automatically perform login`  |  `auth.cloudidp.autologin`  |  bool  |  enabled / *disabled* (default)  |
 |  Security > Logon > Single Sign-on  |  `Username for autologin`  |  `auth.cloudidp.username`  |  string  |  empty *Default*  |
-```
 
+```
 	- Added password-less guest-user login with limited access to applications. Each application session can be made available in normal user login, guest login, or both with Registry parameters sessions.<instance>.login_method or app.<app-name>.sessions.<instance>.login_method - requires Chromium Browser 120.0.6099.216 Build 5.0 or later.
-
 ```
+
 |  Setup  |  Parameter  |  Registry  |  Value  |
 | ------ | ------ | ------ | ------ |
 |  Security>Logon>Guest |  Present session to  |  `sessions.<instance>.login_method` <br> `app.<app-name>.sessions.<instance>.login_method`  |  "User" (default) / "Guest" / "All"  |
-```
 
+```
 	- This is the default for any session including app sessions. Latter ones inherit to `app.<app-name>.sessions.<app_%_or_instance#>.login_method`. Standard sessions inherit to `sessions.<name_%_or_instance#>.login_method`.
 	- Choose applications to be available in a guest session by setting the above parameters to 'Guest' or 'All'. On command-line usage of nodelist sessions to get a currently defined list of sessions.
 
 ## Security Fixes
 
 - Added registry key to prevent terrapin attack (mitigation is not active as default) on the SSH client:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | Disable weak MACs and Chipers to prevent terrapin attack. | network.ssh_client.enable_terrapin_mitigation | bool | enabled / _disabled_ (default) |
-```
 
+```
 - Updated gst-plugins-base1.0 packages:
 - gstreamer1.0-alsa from 1.22.6-1igel1701244602 to 1.22.9-1igel1707141227 version
 - gir1.2-gst-plugins-base-1.0 from 1.22.6-1igel1701244602 to 1.22.9-1igel1707141227 version
@@ -578,13 +580,13 @@ These are the release notes published with that release:
 - Removed custom command selection from application start dialog of file manager to prevent the execution of arbitrary commands by user.
 - Fixed a privilege escalation in setup_cmd utility.
 - Added registry key to prevent terrapin attack (mitigation is not active as default) on the SSH server:
-
 ```
+
 | Parameter | Registry | Type | Value |
 | ------ | ------ | ------ | ------ |
 | Disable weak MACs and Chipers to prevent terrapin attack. | network.ssh_server.enable_terrapin_mitigation | bool | enabled / _disabled_ (default) |
-```
 
+```
 - **X server**
 
 	- Fixed xorg-server security issues CVE-2024-21886, CVE-2024-21885, CVE-2024-0409, CVE-2024-0408, CVE-2024-0229 and CVE-2023-6816.
@@ -596,16 +598,16 @@ These are the release notes published with that release:
 - **WiFi**
 
 	- Added options for rtw89core and rtw89pci kernel modules (used e.g by the rtw_8852be driver) configurable.
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  disable_ps_mode  |  network.drivers.rtw89core.options.disable_ps_mode  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_clkreq  |  network.drivers.rtw89pci.options.disable_clkreq  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_aspm_l1  |  network.drivers.rtw89pci.options.disable_aspm_l1  |  bool  |  _enabled_ (default) / disabled  |
 |  disable_aspm_l1ss  |  network.drivers.rtw89pci.options.disable_aspm_l1ss  |  bool  |  _enabled_ (default) / disabled  |
-```
 
+```
 - **VirtualBox**
 
 	- Fixed mouse offset if using multi-monitor setup as a VirtualBox guest.
@@ -621,13 +623,13 @@ These are the release notes published with that release:
 
 	- Added registry key to define a semicolon separated list of allowed hostnames
 	for URL-redirections during the SSO login view:
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `List of allowed hosts for redirection`  |  `auth.cloudidp.host_allowlist`  |  string  |  empty *Default*  |
-```
 
+```
 ## Known Issues
 
 - Shutdown via Post Session Command not yet supported.
@@ -680,7 +682,6 @@ These are the release notes published with that release:
 
 	- Manual deployment of add-on licenses for IGEL Agent for Imprivata licenses (via UMS) is only possible after finished installation of IGEL Agent for Imprivata app on device.
 ```
-
 -----
 
 ## 2023-02-06 - [12.3.1](readme12.3.1.txt)

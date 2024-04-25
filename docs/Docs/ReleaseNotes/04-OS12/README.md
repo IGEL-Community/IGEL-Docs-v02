@@ -14,41 +14,18 @@ Lists what changes are in the build.
 
 -----
 
-## Legend
-```mermaid
-flowchart LR
-    A === B === C === D === E  
-    A((Public Build))
-    B[Private Build]
-    C>Dead End Release]
-    D[[Unreleased]]
-    E[No Release Notes]
-    style E fill:#828282
-```
-
------
-
 ## IGEL OS 12
 
-```mermaid
-flowchart LR
-    12.3.1-- 2024-03-21 -->12.3.2((12.3.2))
-    12.3.0-- 2024-02-06 -->12.3.1((12.3.1))
-    12.2.2-- 2023-12-19 -->12.3.0((12.3.0))
-    12.2.1-- 2023-11-20 -->12.2.2((12.2.2))
-    12.2.0-- 2023-10-31 -->12.2.1((12.2.1))
-    12.01.140-- 2023-09-12 -->12.2.0((12.2.0))
-    12.01.120-- 2023-07-20 -->12.01.140((12.01.140))
-    12.01.110((12.01.110))-- 2023-06-12 -->12.01.120((12.01.120))
-    click 12.3.1 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.3.1.txt" _blank
-    click 12.3.0 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.3.0.txt" _blank
-    click 12.2.2 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.2.2.txt" _blank
-    click 12.2.1 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.2.1.txt" _blank
-    click 12.2.0 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.2.0.txt" _blank
-    click 12.01.140 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.140.1.txt" _blank
-    click 12.01.120 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.120.1.txt" _blank
-    click 12.01.110 "https://github.com/IGEL-Community/IGEL-Docs-v02/tree/main/docs/Docs/ReleaseNotes/04-OS12/readme12.01.110.1.txt" _blank
-```
+- [12.4.0](readme12.4.0.txt) 24-April-2024
+- [12.3.2](readme12.3.2.txt) 21-March-2024
+- [12.3.1](readme12.3.1.txt) 06-February-2024
+- [12.3.0](readme12.3.0.txt) 19-December-2023
+- [12.2.2](readme12.2.2.txt) 20-November-2023
+- [12.2.1](readme12.2.1.txt) 31-October-2023
+- [12.2.0](readme12.2.0.txt) 12-September-2023
+- [12.01.140](readme12.01.140.1.txt) 20-July-2023
+- [12.01.120](readme12.01.120.1.txt) 05-June-2023
+- [12.01.110](readme12.01.110.1.txt) 17-April-2023
 
 -----
 

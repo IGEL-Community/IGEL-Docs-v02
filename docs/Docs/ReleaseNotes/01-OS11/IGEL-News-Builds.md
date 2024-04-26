@@ -19,7 +19,7 @@ These are the release notes published with each release:
 ```
 The new PRIVATE BUILD 11.99.997 for IGEL Workspace is ready.
 
-This build is based on 11.09.360.
+This build is based on 11.08.360.
 
 These are the release notes published with that release:
 

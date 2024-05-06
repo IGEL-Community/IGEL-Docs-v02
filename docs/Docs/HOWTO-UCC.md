@@ -291,3 +291,16 @@ Issue the following command via [IGEL KB: Before Desktop Start](https://kb.igel.
 ```bash linenums="1"
 sed -i "/SinglePin=0/c SinglePin=1" /etc/netid.conf
 ```
+
+-----
+
+## Citrix Workspace App (CWA) for Linux – ICA File Not Launching Automatically
+
+The removal of NPAPI support by Firefox will affect user experience for users who access Citrix Receiver for Web using the Firefox browser on Linux. The impact to the users are as follows:
+
+- Users will be prompted to install Citrix Receiver every time they access the Receiver for web site.
+- An ICA file will be saved when users try to launch an application or desktop. They will have to click the ICA file at the bottom of the browser to activate the launch.
+
+**Note:** This article is also applicable for Google Chrome browser users.
+
+[Citrix Workspace App (CWA) for Linux – ICA File Not Launching Automatically](https://support.citrix.com/article/CTX237727/citrix-workspace-app-cwa-for-linux-ica-file-not-launching-automatically?recommended)

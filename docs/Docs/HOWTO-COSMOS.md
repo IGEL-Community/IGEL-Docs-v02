@@ -1,5 +1,9 @@
 # HOWTO COSMOS
 
+<!---
+This is a comment section
+-->
+
 ## [IGEL KB: How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
 ## [IGEL Advanced Services - IGEL COSMOS Migration Package](https://www.igel.com/wp-content/uploads/2023/06/IGEL_OS11_Migration_OS12_ew.pdf)
@@ -295,9 +299,13 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** OS 12 missing `System > System Customization > Custom Commands > Post Session`. Need to `logoff/reboot` the endpoint when a user disconnects from a Citrix Self-Service session. When will this feature be released?
 
+**A:** For OS 12 this feature is pending release.
+
+<!---
 **A:** For OS 12 this can be found here: `System > Registry > auth > login > autologoff > Session type`
 
 ![image-howto-cosmos-07](Images/HOWTO-COSMOS-07.png)
+-->
 
 **Q:** How to enable audio on Dell Wyse 5470 AIO?
 

@@ -199,6 +199,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 
 ## [IGELOS Networking](Cheatsheet-IGELOS-Networking.md)
 
+
 | command | OS 11 | OS 12                                      | description                                |
 |---------|------|-------------------------------------------|--------------------------------------------|
 | [/lib/systemd/system/NetworkManager.service](Cheatsheet-IGELOS-Networking.md#libsystemdsystemnetworkmanagerservice) | :material-check-bold: | :material-check-bold:| manage network service                                                                                  |
@@ -219,6 +220,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [nmcli](Cheatsheet-IGELOS-Networking.md#nmcli)                                         | :material-check-bold: | :material-check-bold:| manage network connections via cli                                                                      |
 | [ping](Cheatsheet-IGELOS-Networking.md#ping)               | :material-check-bold: | :material-check-bold:| test the reachability of a host                                                                         |
 | [probeport](Cheatsheet-IGELOS-Networking.md#probeport)                                 | :material-check-bold: | :material-check-bold:| test network port on a host                                                                             |
+| [/proc/sys/net/ipv4/ip_local_port_range](Cheatsheet-IGELOS-Networking.md#udpportrange) | :material-check-bold: | :material-check-bold:| UDP high port range |
 | [route](Cheatsheet-IGELOS-Networking.md#route)                                         | :material-check-bold: | :material-check-bold:| display/config network routes                                                                           |
 
 -----

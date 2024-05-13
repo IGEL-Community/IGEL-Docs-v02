@@ -25,6 +25,15 @@ The new MS Teams for VDI is publicly available. If you’re using FSLogix as you
 
 - [Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)](https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy)
 
+- Registry key to set:
+
+```bash linenums="1"
+HKLM\SOFTWARE\Microsoft\Teams:
+Name: IsWVDEnvironment
+Type: DWORD
+Value: 1
+```
+
 -----
 
 ## 5 October 2023 - Microsoft Teams VDI 2.0

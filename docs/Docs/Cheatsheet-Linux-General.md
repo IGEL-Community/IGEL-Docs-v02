@@ -163,6 +163,12 @@ find /services -type f -name "*snmp*" | less
 /services/cups/share/cups/snmp.conf.default
 ```
 
+copy all files in `/userhome` that end in .log to /tmp/foo folder
+
+```bash linenums="1"
+mkdir /tmp/foo; find /userhome -name "*.log" | xargs cp -t /tmp/foo
+```
+
 ## grep
 
 search for regular expression

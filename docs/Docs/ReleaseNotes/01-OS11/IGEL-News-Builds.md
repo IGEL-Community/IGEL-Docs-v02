@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-05-14 - [11.09.317](readme11.09.317.txt)
+
+```
+The new PRIVATE BUILD 11.09.317 for IGEL Workspace is ready.
+
+This build is based on 11.09.310.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Updated Webex VDI to version 44.4.0.29324
+```
+
+-----
+
 ## 2024-04-26 - [11.99.997](readme11.99.997.txt)
 
 ```

@@ -162,7 +162,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
-**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.04/en/overview-of-the-igel-ums-122457581.html#Overview-FeatureMatrix:UMSWebAppvs.UMSConsole).
+**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/endpointmgmt-12.04/en/feature-matrix-ums-web-app-vs-ums-console-126846582.html).
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 

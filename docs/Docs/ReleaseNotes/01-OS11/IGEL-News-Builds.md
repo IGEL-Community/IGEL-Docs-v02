@@ -14,6 +14,31 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-05-15 - [11.09.168](readme11.09.168.txt)
+
+```
+The new PRIVATE BUILD 11.09.168 for IGEL Workspace is ready.
+
+This build is based on 11.09.160.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Hardware
+
+* New setup registry parameter to turn on / off USB power when device is in
+power-off state. Please note that this is an experimental feature to resolve a
+specific issue with UD3 devices. Use this to update BIOS settings at your own
+risk. This feature will not be available in future releases. The setup
+parameter is fwtools.insyde_bios_tools.turn_off_usb_when_device_is_off.
+Changing it via UMS or on the device will immediately update the corresponding
+BIOS setting.
+```
+
+-----
+
 ## 2024-05-14 - [11.09.318](readme11.09.318.txt)
 
 ```

@@ -147,6 +147,11 @@ Active Directory login
 
 Display kerberos tickets
 
+Get current domain user (if logged in via kerberos)
+
+```bash linenums="1"
+klist --json | jq -r .principal
+```
 
 ## resetvalue_tree
 

@@ -14,6 +14,624 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-05-15 - [11.10.100](readme11.10.100.txt)
+
+```
+The new PUBLIC BUILD 11.10.100 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2402.  
+  Available Citrix Workspace Apps in this release: 2402 (default), 2311 and 2010
+
+* New features:  
+
+* Synchronize multiple keyboards at session start. All available keyboards on
+  client are synchronized with VDA after the session starts in full-screen mode.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Synchronize multiple keyboards at session start`                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.SyncKbdLayoutList`                                 |
++------------+-----------------------------------------------------------------+
+|Value       | false (default) /  true                                         |
++------------+-----------------------------------------------------------------+
+
+* Support for Audio volume synchronization. Synchronize audio volume between the
+  VDA and connected audio devices.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for Audio volume synchronization`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeSync`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | true (default)/ false                                           |
++------------+-----------------------------------------------------------------+
+
+* Default values of the following have been changed as per Citrix.  
+* Enable Packet Loss Concealment to improve audio performance.
+  "ica.module.PacketLossConcealmentEnabled = True"  
+* Loss tolerant mode for audio. "ica.module.EdtUnreliableAllowed = True"
+* Use system Audio in MS Teams while screen sharing.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use system Audio in MS Teams while screen sharing`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.EnableVolumeListener`                                |
++------------+-----------------------------------------------------------------+
+|Value       | false (default)/ true                                           |
++------------+-----------------------------------------------------------------+
+
+* Enhanced Desktop Viewer toolbar [Technical Preview]
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enhanced Desktop Viewer toolbar`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.ToolbarVersion`                                    |
++------------+-----------------------------------------------------------------+
+|Value       | 0 (default)/ 1                                                  |
++------------+-----------------------------------------------------------------+
+
+* Customize toolbar [Technical Preview]. From this version onwards, it is
+  possible to activate or deactivate each button individually instead of the
+  entire toolbar.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Show USB device button`                                         |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.DevicesButtonVisible`                                |
++------------+-----------------------------------------------------------------+
+|Value       | true (default)/ false                                           |
++------------+-----------------------------------------------------------------+
+
+* Note: Similarly, you can activate or deactivate the following buttons in the
+  toolbar. They are all activated by default.  
+  ica.module.CloseButtonVisible  
+  ica.module.FullscreenButtonVisible  
+  ica.module.MinimizeButtonVisible  
+  ica.module.PinButtonVisible  
+  ica.module.PreferencesButtonVisible  
+  ica.module.ShortcutsButtonVisible  
+  ica.module.SwitchDesktopButtonVisible
+* Include system audio while screen sharing in MS Teams
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Share system audio`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.sharesystemaudio`                                     |
++------------+-----------------------------------------------------------------+
+|Value       | false (default)/ true                                           |
++------------+-----------------------------------------------------------------+
+
+* Specify the minimum and maximum range of UDP ports for Microsoft Teams
+  optimization. If the UDP Port cannot be allocated for any reason, the WebRTC
+  falls back to TCP. Minimum range of UDP ports for Microsoft Teams
+  optimization.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UDP Port range minimum`                                         |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.PortRangeMin`                                         |
++------------+-----------------------------------------------------------------+
+|Value       | 3000                                                            |
++------------+-----------------------------------------------------------------+
+
+* Maximum range of UDP ports for Microsoft Teams optimization.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`UDP Port range max`                                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.teams.PortRangeMax`                                         |
++------------+-----------------------------------------------------------------+
+|Value       | 3100                                                            |
++------------+-----------------------------------------------------------------+
+
+
+### Firefox
+
+* Fixed lock of browser in kiosk mode, when URL or navigation bar are blocked:  
+  Firefox asks the user using a dialog to query for permissions of the current
+  website for location access, microphone and camera use, notifications and
+  auto-play of media streams.  
+  In recent Firefox versions this locks the browser in case the URL-input or
+  even the whole navigation bar are not shown.
+* To prevent, following policies / parameters are added:
+* If permissions are needed, these must be granted for the specific websites in
+  advance. Note that wild-cards in the URLs cannot be used.  
+  These websites, depending on the type of permission, must be added here:  
+  browserglobal.app.permissions.microphone.allowed%.origin  
+  browserglobal.app.permissions.webcam.allowed%.origin  
+  browserglobal.app.permissions.location.allowed%.origin  
+  browserglobal.app.permissions.notification.allowed%.origin  
+  browserglobal.app.permissions.autoplay.allowed%.origin
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website with microphone access}}                              |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.microphone.allowed%.origin}}    |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website without microphone access}}                           |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.microphone.blocked%.origin}}    |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Block new requests for microphone access}}                    |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.microphone.blocknew}}           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Microphone access settings locked}}                           |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.microphone.locked}}             |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website with webcam access}}                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.camera.allowed%.origin}}        |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website without webcam access}}                               |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.camera.blocked%.origin}}        |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Block new requests for webcam access}}                        |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.camera.blocknew}}               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Webcam access settings locked}}                               |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.camera.locked}}                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Allow Website to send notifications}}                         |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.notification.allowed%.origin}}  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Deny Website to send notifications}}                          |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.notification.blocked%.origin}}  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Block new notification requests}}                             |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.notification.blocknew}}         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Notification settings locked}}                                |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.notification.locked}}           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Allow autoplay on Website}}                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.autoplay.allowed%.origin}}      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Block autoplay on Website}}                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.autoplay.blocked%.origin}}      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Autoplay Default}}                                            |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.autoplay.default}}              |
++------------+-----------------------------------------------------------------+
+| Range      | [Allow Audio and Video][Block Audio][Block Audio and Video]     |
++------------+-----------------------------------------------------------------+
+| Value      | _Block Audio_                                                   |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Autoplay settings locked}}                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.autoplay.locked}}               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website with location access}}                                |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.location.allowed%.origin}}      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Website without location access}}                             |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.location.blocked%.origin}}      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Block new location requests }}                                |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.location.blocknew}}             |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Location settings locked}}                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | {{browserglobal.app.permissions.location.locked}}               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+
+### IGEL Agent for Imprivata
+
+* Updated IGEL Agent for Imprivata to version 1.0.0.
+* Added Features:  
+* Changed FUS (Fast User Switching) to be a standalone IGEL Session.  
+* Removed 'rfideas-only barrier' for virtual channel.  
+* Changed running text to show only the username.  
+* Improved logging.  
+* Introduced new parameter to insert command to execute on FUS user switch or
+  logout:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `iia.fus_user_change_cmd`                                       |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | "" (default)                                                    |
++------------+-----------------------------------------------------------------+
+
+* Introduced new reg key to configure the LockScreen shortcut:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `iia.lockscreen_shortcut`                                       |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | ""(default)                                                     |
++------------+-----------------------------------------------------------------+
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated Chromium browser to version 124.0.6367.78. (ISN 2024-11)
+
+### Base system
+
+* Fixed aom security issues CVE-2021-30475, CVE-2021-30474, CVE-2021-30473,
+  CVE-2020-36135, CVE-2020-36133, CVE-2020-36131 and CVE-2020-36130.  
+* Fixed openssl security issues CVE-2024-0727, CVE-2023-5678, CVE-2023-3817 and
+  CVE-2023-3446.  
+* Fixed zlib security issues CVE-2022-37434 and CVE-2018-25032.  
+* Fixed pipewire security issue CVE-2022-4964.  
+* Fixed libuv1 security issue CVE-2024-24806.  
+* Fixed libwebp security issue CVE-2023-4863.  
+* Fixed iwd security issue CVE-2024-28084.  
+* Fixed qemu security issue CVE-2023-6683.  
+* Fixed opensc security issues CVE-2024-1454 and CVE-2023-5992.  
+* Fixed libde265 security issues CVE-2023-49468, CVE-2023-49467, CVE-2023-49465,
+  CVE-2023-47471, CVE-2023-43887, CVE-2023-27103, CVE-2023-27102,
+  CVE-2023-25221, CVE-2023-24758, CVE-2023-24757, CVE-2023-24756,
+  CVE-2023-24755, CVE-2023-24754, CVE-2023-24752, CVE-2023-24751,
+  CVE-2022-47665, CVE-2022-43250, CVE-2022-43249, CVE-2022-43245 and
+  CVE-2022-43244.  
+* Fixed postgresql-14 security issue CVE-2024-0985.  
+* Fixed tiff security issues CVE-2023-6277, CVE-2023-6228 and CVE-2023-52356.  
+* Fixed dnsmasq security issues CVE-2023-50868 and CVE-2023-50387.  
+* Fixed python-cryptography security issue CVE-2023-50782.  
+* Fixed less security issue CVE-2022-48624.  
+* Fixed expat security issue CVE-2024-28757.  
+* Fixed libxml2 security issue CVE-2024-25062.  
+* Fixed texlive-bin security issues CVE-2024-25262 and CVE-2023-32668.  
+* Fixed vim security issues CVE-2024-22667 and CVE-2023-2426.  
+* Fixed unixodbc security issue CVE-2024-1013.  
+* Fixed bash security issue CVE-2022-3715.  
+* Fixed util-linux security issue CVE-2024-28085.  
+* Fixed curl security issues CVE-2024-2398 and CVE-2024-2004.  
+* Fixed libvirt security issue CVE-2024-1441.
+* Updated intel-microcode to version 20240312.
+* Removed custom command selection from application start dialog of file manager
+  to prevent execution of arbitrary commands by user. (ISN 2024-09)
+* Fixed a privilege escalation issue in the starter license. Acknowledgements to
+  Zack Didcott for responsible disclosure. (ISN-2014-12)
+
+Resolved Issues:  
+* Fixed display of German Umlauts (non-ascii chars).  
+* Fixed password change after 2nd factor is submitted.
+
+### Base system
+
+* Changed initial default device name and hostname of UD Pockets to  
+  "UDP<Unit ID>". Systems already in use will only be affected after reset to
+  factory defaults.
+* Updated OpenVPN client to version 2.6.9.  
+* Updated GStreamer to version 1.24.1.  
+* Updated Virtualbox guest tools to version 7.0.14.
+* Updated MESA OpenGL Stack to version 24.0.4  
+* Updated ATI/RADEON Graphics Driver to version 22.0.0  
+* Updated NVIDIA Graphics Driver to version 525.147.05  
+* Updated VESA Graphics Driver to version 2.6.0  
+* Updated ModemManager to version 1.22.0.
+* Updated kernel to version 6.6.22.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Added registry key ica.chrome-double-download to control flock feature at
+  wfica_wrapper. 'Enable flock' blocks double app starts (due to double
+  downloads by Chromium browser).
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Control download mechanic for Citrix applications for Chrome web access` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.chrome-double-download`                                     |
++------------+-----------------------------------------------------------------+
+|Range       | [Enable Lock][Disable Lock]                                     |
++------------+-----------------------------------------------------------------+
+|Value       |enable / **disable** (default)                                   |
++------------+-----------------------------------------------------------------+
+
+* After connecting to Citrix VDA, support for multiple audio devices sometimes
+  may not work. This problem has been fixed.
+* New parameter since CWAL-2402: Availability of Credential Insertion SDK for
+  cloud stores (see: https://docs.citrix.com/en-us/citrix-workspace-app-for-
+  linux/sdk-and-api.html)
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`CredentialInsertionEnabled`                                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.CredentialInsertionEnabled`                         |
++------------+-----------------------------------------------------------------+
+|Value       | false (default) /  true                                         |
++------------+-----------------------------------------------------------------+
+
+* Changed / corrected parameter name from KioskFUIEnhanced to KioskSFUIEnhanced
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`KioskSFUIEnhanced`                                              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.KioskSFUIEnhanced`                                  |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+* Added parameter ica.authman.longLivedTokenSupport. Previously the value was
+  set to constant "false", now it is possible to set / configure. "true" enables
+  re-login with Selfservice.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`longLivedTokenSupport`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.authman.longLivedTokenSupport`                              |
++------------+-----------------------------------------------------------------+
+|Value       | false (default) /  true                                         |
++------------+-----------------------------------------------------------------+
+
+### RD Web Access
+
+* Fixed RD Web Access failing with Error 400 by providing a new RD Web Tool. A
+  switch back to the old tool is possible via IGEL Setup Registry:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `rdp.rd_web_access.options.legacy_rdweb`                        |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### Chromium
+
+* Fixed blocking file access was not working if URLBlocklist was defined as
+  custom policy.
+* Fixed RDP sessions did not properly start from Chromium Browser.
+
+### Firefox
+
+* Fixed automatic restart of Firefox sessions.
+* Fixed microphone pop-up.
+
+### Network
+
+* Added configuration for PKCS#7 encryption and signature algorithms (see sscep
+  options -E and -S)
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{PKCS#7 encryption algorithm}}                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.scepclient.cert%.encalg}}                             |
++------------+-----------------------------------------------------------------+
+| Range      | [automatic][des][3des][blowfish][aes128][aes192][aes256]        |
++------------+-----------------------------------------------------------------+
+| Value      | __ (automatic)                                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{PKCS#7 signature algorithm}}                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.scepclient.cert%.signalg}}                            |
++------------+-----------------------------------------------------------------+
+| Range      | [automatic][md5][sha1][sha224][sha256][sha384][sha512]          |
++------------+-----------------------------------------------------------------+
+| Value      | __ (automatic)                                                  |
++------------+-----------------------------------------------------------------+
+
+* Fixed sporadic network connection problems on Lenovo L14/L15 Gen4 AMD if
+  ethernet cable is un- and re-plugged.
+
+### Open VPN
+
+* Added configuration to enable legacy cryptographic algorithms for openssl.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Enable legacy cryptographic algorithms`                        |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.openssl.legacy-cryptographic-algorithms`                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **disabled** (default) / enabled                                |
++------------+-----------------------------------------------------------------+
+
+### OpenConnect VPN
+
+* Removed dependency on ipsec-tools
+
+### HID
+
+* Fixed touchpad activation/deactivation via hotkey.
+
+### CUPS Printing
+
+* Fixed PrinterLogic startup.
+
+### Base system
+
+* Fixed OS12 migration issues.
+
+### X11 system
+
+* Fixed crash with HP t655 and two monitors connected to G5 docking station.
+* Added registry key to change the connector order of intel GPUs. Newer kernels
+  changed the order, this can be used to revert it to former state.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Reverse the connector enumeration.}}                          |
++------------+-----------------------------------------------------------------+
+| Registry   | {{x.drivers.intel.reverse_connector_enumeration}}               |
++------------+-----------------------------------------------------------------+
+| Range      | [Default][No][Yes]                                              |
++------------+-----------------------------------------------------------------+
+| Value      | _Default_                                                       |
++------------+-----------------------------------------------------------------+
+
+### Audio
+
+* Fixed audio on HP t240: Removed internal speaker and microphone devices as not
+  supported. Fixed hotplug of external headsets.
+* Added new entry in registry to prevent automatic switching of bluetooth
+  profile.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Set pulseaudio auto switching headset to A2DP}}               |
++------------+-----------------------------------------------------------------+
+| Registry   | {{multimedia.pulseaudio.daemon.module-bluetooth-autoswitch-to-a2dp}} |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
+* Changed: On first boot (after installation) all devices are set to 50% volume.
+* Fixed headset at LG CK500
+
+### Licensing
+
+* Fixed IGEL license detection on hardware where network interface
+  initialization takes more time.
+
+### Hardware
+
+* Fixed missing firmware file for intel 9462ngw WiFi.
+* Added hardware recognition to include LG 24CN670IK6N for fixing related audio
+  issues.
+```
+
+-----
+
 ## 2024-05-15 - [11.09.168](readme11.09.168.txt)
 
 ```

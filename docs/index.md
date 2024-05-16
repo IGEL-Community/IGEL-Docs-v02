@@ -70,6 +70,7 @@ Measurement Id: G-PTNHLB3WSX
 
 - [HOWTO Add Applications](Docs/HOWTO-Add-Applications.md)
 - [HOWTO Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
+- [HOWTO Best Practices](Docs/HOWTO-Best-Practices.md)
 - [HOWTO Browsers](Docs/HOWTO-Browsers.md)
 - [HOWTO Certificates](Docs/HOWTO-Certificates.md)
 - [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)

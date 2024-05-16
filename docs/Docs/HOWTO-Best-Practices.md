@@ -10,6 +10,10 @@ This is a comment section
 
 ## OS 12
 
+### Initial Testing without UMS
+
+- [Want to test out OS 12 with App Portal without UMS12?](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#want-to-test-out-os-12-with-app-portal-without-ums12)
+
 ### Security / Password
 
 

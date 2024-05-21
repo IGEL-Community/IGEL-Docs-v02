@@ -39,3 +39,9 @@ Custom Partitions (CP) can be created for the following browsers:
 ![image01](Images/HOWTO-Browsers-01.png)
 
 - [Automated Application Builder for Island Enterprise Browser](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Browsers/Island)
+
+-----
+
+## Citrix Enterprise Browser
+
+- [Take a Sneak Peak of Citrix Enterprise Browser and IGEL OS 12](https://www.igel.com/blog/take-a-sneak-peak-of-citrix-enterprise-browser-and-igel-os-12/)

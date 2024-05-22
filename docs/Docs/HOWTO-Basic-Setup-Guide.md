@@ -85,7 +85,7 @@ If a device does not appear on either the IGEL Ready Showcase or the IGEL list o
 
 ### Option 3: Purchase a UD Pocket from IGEL
 
-The [UD Pocket (UDP)](https://kb.igel.com/hardware/en/ud-pocket) is a keychain-sized USB drive that comes preloaded with IGEL OS. You can plug it into an x86 device that meets the minimum requirements and boot from USB to access the same IGEL OS experience you’d get if you converted the device. The difference? The UD Pocket is portable and preserves the underlying OS on the hardware you plug it into, making it the perfect BYOD solution.
+The [UD Pocket (UDP)](https://kb.igel.com/hardware/en/ud-pocket-powered-by-igel-ud-pocket-19170328.html) is a keychain-sized USB drive that comes preloaded with IGEL OS. You can plug it into an x86 device that meets the minimum requirements and boot from USB to access the same IGEL OS experience you’d get if you converted the device. The difference? The UD Pocket is portable and preserves the underlying OS on the hardware you plug it into, making it the perfect BYOD solution.
 
 Once you’ve chosen your hardware and installed or booted IGEL OS on it, you are now ready to install the UMS server and put a Demo License on your IGEL endpoints!
 

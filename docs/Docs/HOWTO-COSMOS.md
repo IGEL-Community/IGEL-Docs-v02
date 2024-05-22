@@ -67,7 +67,7 @@ If the client's clock is off, then it will break either or both of these functio
   Additional details on setting up time and date:
 
   - [IGEL KB: OS 11 Time and Date](https://kb.igel.com/igelos-11.09.310/en/time-and-date-119878103.html)
-  - [IGEL KB: OS 12 Time and Date](https://kb.igel.com/base_system/12.3.2/en/time-and-date-119868630.html)
+  - [IGEL KB: OS 12 Time and Date](https://kb.igel.com/base_system/12.4/en/time-and-date-122896178.html)
 
 -----
 
@@ -261,7 +261,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Is OS 12 considered an App?
 
-**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/base_system/12.3.0/en/igel-os-base-system-108346390.html).
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/base_system/12.4/en/igel-os-base-system-122895867.html).
 
 **Q:** What are the hardware requirements for OS 12?
 
@@ -281,7 +281,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** Does OS 12 support PXE boot deployments?
 
-**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.3.2/en/how-to-deploy-igel-os-12-with-pxe-119867282.html)
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/base_system/12.4/en/how-to-deploy-igel-os-12-with-pxe-122896396.html)
 
 **Q:** How to enable Citrix username / password auto login support in cloud environment be supported?
 
@@ -375,8 +375,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
-- [IGEL KB: Reverse Proxy / Load Balancer Example Configurations](https://kb.igel.com/endpointmgmt-12.04/en/what-is-new-knowledge-base-updates-for-igel-ums-12-04-100-122457579.html#WhatisnewinIGELUMS12.04.100-ReverseProxy/LoadBalancerExampleConfigurations)
-- [Citrix Netscaler: Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/citrix-netscaler-example-configuration-as-reverse-proxy-in-igel-ums-with-ssl-offloading-126846487.html)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading-126846455.html)
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
@@ -453,7 +452,7 @@ sequenceDiagram
 
 **Q:** What do the error codes from onboarding mean?
 
-**A:** [IGEL KB: Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-Troubleshooting:PossibleErrorCodesDuringtheOnboarding)
+**A:** [IGEL KB: Troubleshooting: Possible Error Codes During the Onboarding](https://kb.igel.com/howtocosmos/en/troubleshooting-possible-error-codes-during-the-onboarding-122885331.html).
 
 **Q:** OBS connection issue for UMS server with long server name in cloud hosted server. How can I change UMS server name?
 
@@ -465,7 +464,7 @@ sequenceDiagram
 
 **Q:** Does IGEL SSO with OS 12 work with OpenID Connect?
 
-**A:** Yes! IGEL SSO with OS 12 will work with identity provider (IdP) that supports [OpenID Connect](https://openid.net/developers/how-connect-works/). [IGEL KB: Apps and Utilities for IGEL OS 12 That Support SSO with OpenID Connect (Generic)](https://kb.igel.com/base_system/12.3.0/en/how-to-configure-single-sign-on-sso-on-igel-os-12-112731582.html#HowtoConfigureSingleSignOn(SSO)onIGELOS12-AppsandUtilitiesforIGELOS12ThatSupportSSOwithOpenIDConnect(Generic)AppsandUtilitiesforIGELOS12thatSupportSSOwithGenericOpenID)
+**A:** Yes! IGEL SSO with OS 12 will work with identity provider (IdP) that supports [OpenID Connect](https://openid.net/developers/how-connect-works/). [IGEL KB: Apps and Utilities for IGEL OS 12 That Support SSO with OpenID Connect (Generic)](https://kb.igel.com/base_system/12.4/en/how-to-configure-single-sign-on-sso-on-igel-os-12-122896911.html)
 
 **Q:** How IGEL SSO Work?
 
@@ -481,7 +480,7 @@ sequenceDiagram
 
 **Q:** How to enable SSO via a cloud-based identity provider (IdP) to enable access to the local OS 12 device and applications?
 
-**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [IGEL KB: Configuring Single Sign-On (SSO)](https://kb.igel.com/howtocosmos/en/configuring-single-sign-on-sso-77865982.html).
+**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [IGEL KB: Configuring Single Sign-On (SSO)](https://kb.igel.com/base_system/12.4/en/how-to-configure-single-sign-on-sso-on-igel-os-12-122896911.html).
 
 **Q:** What is the process workflow for how SSO works between web apps, Microsoft Entra ID (aka Azure AD) / Okta and IGEL OS 12?
 

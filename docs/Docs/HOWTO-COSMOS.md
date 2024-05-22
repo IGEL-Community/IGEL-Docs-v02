@@ -536,3 +536,20 @@ sequenceDiagram
 **Q:** User gets prompt "Need admin approval" on IGEL Windows 365 startup.
 
 **A:** [IGEL KB: Steps to grant tenant-wide admin consent to the IGEL Windows 365 app](https://kb.igel.com/cpc/1.1.90/en/troubleshooting-user-gets-prompt-need-admin-approval-on-igel-windows-365-startup-119880136.html)
+
+-----
+
+## FAQ - Networking
+
+**Q:** How to setup Cisco ISE (IEEE 802.1x)
+
+**A:** The setup:
+ 
+  - The devices must meet (DHCP IGEL tag) + (Port 30001) requirements
+   - Then allowed to access the UMS, SCEP, Imprivata servers for initial Imaging
+   - Then, 802.1x LAN IGEL policy is applied and they Authenticate via TLS properly to LAN.
+   - Then the network is open for the device.
+ 
+Have Cisco ISE engineer use (DHCP IGEL tag) + (ITC* hostname) to fingerprint the device and apply an "IGEL Device for Imaging" ISE Policy. This allows access to SCEP, UMS, Imprivata, etc until 802.1x kicked in. Use the same certificates that is already setup for Cisco ISE Wireless. If 802.1x Auth fails, then it attempts a normal LAN connection. So it's safe to test.  You'll need a Cisco ISE engineer to see in their logs that it was successful.
+
+- [SCEP Client (NDES)](https://kb.igel.com/base_system/12.4/en/scep-client-ndes-122896074.html)

@@ -2,7 +2,7 @@
 
 Shows the branches of IGEL OS.
 
-[What is the Meaning of IGEL Release Names?](https://kb.igel.com/licensesmore-igelos11/en/what-is-the-meaning-of-igel-release-names-10325217.html)
+[What is the Meaning of IGEL Release Names?](https://kb.igel.com/licensesmore-igelos11/en/what-is-the-meaning-of-igel-release-names-10325217.html).
 
 -----
 

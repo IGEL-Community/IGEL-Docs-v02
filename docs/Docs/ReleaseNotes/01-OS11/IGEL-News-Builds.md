@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-05-28 - [11.10.103](readme11.10.103.txt)
+
+```
+The new PRIVATE BUILD 11.10.103 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Fixed resources leak in the ICG reconnect mechanism.
+```
+
+-----
+
 ## 2024-05-15 - [11.10.100](readme11.10.100.txt)
 
 ```

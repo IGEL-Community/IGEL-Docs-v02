@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-06-03 - [11.10.104](readme11.10.104.txt)
+
+```
+The new PRIVATE BUILD 11.10.104 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed Passthrough and Kerberos Authentication for RD Web Access.
+```
+
+-----
+
 ## 2024-05-28 - [11.10.103](readme11.10.103.txt)
 
 ```

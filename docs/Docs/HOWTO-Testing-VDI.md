@@ -54,9 +54,10 @@ VMware TestDrive is a self-service, cloud-hosted product demonstration platform 
 
 <!---
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.discovery.vmware.com`
+- OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.vmtestdrive.com`
 -->
 
-- OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.vmtestdrive.com`
+- OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.td.omnissa.com`
 
 -----
 

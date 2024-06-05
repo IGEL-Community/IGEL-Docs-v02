@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-06-05 - [11.10.105](readme11.10.105.txt)
+
+```
+The new PRIVATE BUILD 11.10.105 for IGEL Workspace is ready.
+
+This build is based on 11.10.103.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Added Webex VDI Plugin 43.10.0.27853
+```
+
+-----
+
 ## 2024-06-03 - [11.10.104](readme11.10.104.txt)
 
 ```

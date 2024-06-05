@@ -3,7 +3,9 @@
 <!--
 UPDATE
 -->
-- IGEL UMS Version Base: [12.04.110](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.04.110.txt)
+- IGEL UMS Version Base: [12.04.120](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.04.120.txt)
+
+- IGEL OS Firmware Base: [11.10.100](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.100.txt)
 
 - IGEL OS Firmware Base: [11.09.313](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.313.txt)
 
@@ -20,6 +22,26 @@ UPDATE
 - IGEL OS Firmware Base: [11.09.163](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.163.txt)
 
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
+
+
+| Clients                          | 11.10.100            |
+|----------------------------------|----------------------|
+| Cisco JVDI Client                | 14.3.0               |
+| Cisco Webex Meetings VDI plugin  | 42.10.8.14           |
+| Cisco Webex Meetings VDI plugin  | 42.6.11.6            |
+| Cisco Webex Meetings VDI plugin  | 43.6.8.4             |
+| Cisco Webex VDI plugin           | 44.2.0.28744         |
+| Citrix HDX Realtime Media Engine | 2.9.600              |
+| Citrix Workspace App             | 20.10.0.6            |
+| Citrix Workspace App             | 23.11.0.82           |
+| Citrix Workspace App             | 24.02.0.65           |
+| IGEL AVD Client                  | 1.1.40igel1708088233 |
+| IGEL RDP Client                  | 2.2igel1707744600    |
+| VMware Horizon client            | 2312-8.12.0-23149323 |
+| Zoom Media Plugin                | 5.16.10.24420        |
+| Zoom Media Plugin                | 5.17.5.24630         |
+| Zoom Media Plugin                | 5.17.6.24660         |`
+
 
 | Clients                          | 11.09.260            | 11.09.261            | 11.09.269            | 11.09.310            | 11.09.313            |
 |----------------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
@@ -98,6 +120,7 @@ IGEL OS:
 <!--
 UPDATE
 -->
+- IGEL OS 11.10.100 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.313 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.310 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.260 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
@@ -109,7 +132,7 @@ UPDATE
 
 IGEL UMS:
 
-- IGEL UMS 12.04.110 - [IGEL download site](https://www.igel.com/software-downloads/)
+- IGEL UMS 12.04.120 - [IGEL download site](https://www.igel.com/software-downloads/)
 
 -----
 

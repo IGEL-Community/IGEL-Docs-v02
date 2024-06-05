@@ -523,6 +523,7 @@ sequenceDiagram
     x.drivers.intel.force_dri3
     x.drivers.ati.force_dri3
     x.drivers.amdgpu.force_dri3
+    x.drivers.amdgpu.use_tear_free
 
 -----
 

@@ -154,13 +154,13 @@ The GitHub site for Custom Partitions (CP) uses build script to automate the cre
 
 There are videos in the link above showing steps to create a CP. In summary the steps are:
 
-- Create Ubuntu VM (18.04 for pre OS 11.09, 22.04 for OS 11.09+, and 20.04 for OS 12)
+- Create Ubuntu VM (18.04 for pre OS 11.09, 22.04 for OS 11.09+/10+, and 20.04 for OS 12)
 - Get the builder script from GitHub and run it on the VM
 - Copy the CP to UMS / File server  (importing, `.inf`, `.tar.bz2`, `.xml`)
 - Update the UMS CP profile for file server name and file location
 - Assign profile to devices
 
-**NOTE:** As of 12 October, 2023 IGEL OS pre 11.09 uses Ubuntu 18.04 libraries, OS 11.09+ users Ubuntu 22.04 libraries, and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version:
+**NOTE:** As of 5 May, 2024 IGEL OS pre 11.09 uses Ubuntu 18.04 libraries, OS 11.09+/10+ users Ubuntu 22.04 libraries, and IGEL OS 12 uses Ubuntu 20.04 libraries. To check the OS version:
 
 ```bash linenums="1"
 cat /etc/os-release | grep "^VERSION_ID"

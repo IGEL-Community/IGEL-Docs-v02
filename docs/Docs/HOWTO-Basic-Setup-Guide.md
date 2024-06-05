@@ -101,8 +101,8 @@ To get the UMS up and running, you can divide the work into these main sections:
 
 #### UMS Supported Environments (64 bit)
 
-- Windows Server (2012, 2016, 2019, 2022)
-- Ubuntu (16.04, 18.04, 20.04, 22.04)
+- Windows Server (2016, 2019, 2022)
+- Ubuntu (20.04, 22.04)
 - Oracle Linux 7
 - Red Hat Enterprise Linux (RHEL) (7, 8)
 - Amazon Linux 2

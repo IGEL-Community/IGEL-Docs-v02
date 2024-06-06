@@ -14,6 +14,49 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-06-06 - [11.10.106](readme11.10.106.txt)
+
+```
+The new PRIVATE BUILD 11.10.106 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### IGEL Agent for Imprivata
+
+* New Features:  
+
+    - Teardown screensaver on badge event  
+    - Show the computername in lockscreen's upper right corner  
+    - Added a feature to support cookieinsert method for Citrix virtual server
+      on NetScaler.
+
++------------+-----------------------------------------------------------------+
+| Registry   | `iia.cookieinsert`                                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | ""(default)                                                     |
++------------+-----------------------------------------------------------------+
+
+* Resolved Issues:  
+
+    - Fixed Device Control Button's visibility not in sync with Computer Policy
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed AVD session when driven from IGEL Imprivata Agent
+```
+
+-----
+
 ## 2024-06-05 - [11.10.105](readme11.10.105.txt)
 
 ```

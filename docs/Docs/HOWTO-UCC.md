@@ -304,3 +304,11 @@ The removal of NPAPI support by Firefox will affect user experience for users wh
 **Note:** This article is also applicable for Google Chrome browser users.
 
 [Citrix Workspace App (CWA) for Linux – ICA File Not Launching Automatically](https://support.citrix.com/article/CTX237727/citrix-workspace-app-cwa-for-linux-ica-file-not-launching-automatically?recommended)
+
+-----
+
+## Adding FabulaTech to the Virtual Channel Allow List of Citrix
+
+There are two options how to configure the virtual channel allow list for enabling FabulaTech in a Citrix Virtual Apps and Desktops environment: Allowing all virtual channels or Allowing all Citrix channels and FabulaTech channel. Both settings need to be set on VDA level. The required configuration can be found in the Citrix farm policies. The setting’s name is "Virtual channel allow list".
+
+- [FabulaTech Support: Adding FabulaTech to the Virtual Channel Allow List of Citrix](https://www.fabulatech.com/support-articles/citrix-allow-list.html)

@@ -416,7 +416,7 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 ```bash linenums="1"
 #!/bin/bash
 
-#IGEL Cosmos (OS 12 / UMS 12 / ICG 12):
+#IGEL 12 (OS 12 / UMS 12 / ICG 12):
 #OSC 12: 
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.4.1.zip
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.4.0.zip

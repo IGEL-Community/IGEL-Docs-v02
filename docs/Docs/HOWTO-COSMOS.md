@@ -1,20 +1,20 @@
-# HOWTO COSMOS
+# HOWTO IGEL
 
 <!---
 This is a comment section
 -->
 
-## [IGEL KB: How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
+## [IGEL KB: How to Start with IGEL](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
-## [IGEL Advanced Services - IGEL COSMOS Migration Package](https://www.igel.com/wp-content/uploads/2023/06/IGEL_OS11_Migration_OS12_ew.pdf)
-
-----------
+## [IGEL Advanced Services - IGEL Migration Package](https://www.igel.com/wp-content/uploads/2023/06/IGEL_OS11_Migration_OS12_ew.pdf)
 
 ----------
 
-### Where Are the IGEL COSMOS Cloud Services Data Stored?
+----------
 
-Currently, the IGEL COSMOS Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
+### Where Are the IGEL Cloud Services Data Stored?
+
+Currently, the IGEL Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
 
 The Insight Service data are currently also stored in Frankfurt (Germany west central).
 
@@ -34,7 +34,7 @@ All data centers and their operators are fully ISO/IEC 27001 certified.
 
 ## FAQ - IGEL Education
 
-**Q:** What are the training options for IGEL COSMOS?
+**Q:** What are the training options for IGEL?
 
 **A:** Please enroll in [IGEL Academy](https://www.igel.com/learn-and-connect/igel-education/) for formal training courses on IGEL products geared towards beginners and experienced users alike.
 
@@ -91,7 +91,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What is needed for UMS 12 to support OS 11 licensing?
 
-**A:** EMP will need to be created from WP licensing.  [IGEL KB: Using IGEL OS 11 with Cosmos PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
+**A:** EMP will need to be created from WP licensing.  [IGEL KB: Using IGEL OS 11 with IGEL PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/licensesmore-igelos11/en/using-igel-os-11-with-cosmos-pas-creating-an-emp-product-pack-from-a-we-product-pack-81506422.html)
 
 **Q:** Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?
 
@@ -99,7 +99,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What happens when a license expires?
 
-**A:** Details can be found here - [IGEL KB: Entitlements that Come with an IGEL COSMOS Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html)
+**A:** Details can be found here - [IGEL KB: Entitlements that Come with an IGEL Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/licensesmore-igelos11/en/entitlements-that-come-with-an-igel-cosmos-platform-access-subscription-pas-and-effects-of-expiry-81516637.html)
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
@@ -111,7 +111,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** How does hardware-bundled IGEL licenses work?
 
-**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a COSMOS PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [IGEL KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html).
+**A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a IGEL PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [IGEL KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/licensesmore-igelos11/en/hardware-bundled-igel-license-deployment-112731204.html).
 
 -----
 

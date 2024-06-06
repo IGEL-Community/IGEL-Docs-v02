@@ -21,9 +21,9 @@ Measurement Id: G-PTNHLB3WSX
 
 -->
 
-## [IGEL KB - How to Start with IGEL COSMOS](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
+## [IGEL KB - How to Start with IGEL](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
 
-## [HOWTO COSMOS (FAQ)](Docs/HOWTO-COSMOS.md)
+## [HOWTO IGEL (FAQ)](Docs/HOWTO-COSMOS.md)
 
 ----------
 
@@ -74,7 +74,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Browsers](Docs/HOWTO-Browsers.md)
 - [HOWTO Certificates](Docs/HOWTO-Certificates.md)
 - [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
-- [HOWTO COSMOS](Docs/HOWTO-COSMOS.md)
+- [HOWTO IGEL](Docs/HOWTO-COSMOS.md)
 - [HOWTO Create USB installation medium MacOS](Docs/HOWTO-Create-USB-Installation-medium-MacOS.md)
 - [HOWTO CUPs Printing](Docs/HOWTO-CUPs-Printing.md)
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)
@@ -125,10 +125,10 @@ A snapshot in time, in PDF format, of the [kb.igel.com](https://kb.igel.com) sit
 
 These documents can be used if IGEL KB site is offline for maintenance.
 
-### COSMOS Platform
+### IGEL Platform
 
-- [How to Start with IGEL COSMOS](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/01-How_to_Start_with_IGEL_COSMOS.pdf)
-- [IGEL COSMOS PAS](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/02-IGEL_COSMOS_PAS.pdf)
+- [How to Start with IGEL](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/01-How_to_Start_with_IGEL_COSMOS.pdf)
+- [IGEL PAS](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/02-IGEL_COSMOS_PAS.pdf)
 - [UMS 12 - Articles](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03a-UMS_Articles.pdf)
 - [UMS 12 - Installation and Sizing Guidelines](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03b-Installation_and_Sizing_Guidelines_for_IGEL_UMS.pdf)
 - [UMS 12 - Reference Manual](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03c-UMS_Reference_Manual.pdf)
@@ -228,6 +228,6 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ![image002](Docs/Images/QR-igel-docs-ucc-guide.png)
 
-- IGEL Community Docs - Cosmos FAQ
+- IGEL Community Docs - IGEL FAQ
 
 ![image003](Docs/Images/QR-igel-docs-cosmos.png)

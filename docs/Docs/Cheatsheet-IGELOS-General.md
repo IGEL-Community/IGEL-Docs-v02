@@ -275,3 +275,9 @@ To revert back
 ```bash linenums="1"
 xrandr -o normal
 ```
+
+Resize virtual machine
+
+```bash linenums="1"
+xrandr --output Virtual-1 --auto
+```

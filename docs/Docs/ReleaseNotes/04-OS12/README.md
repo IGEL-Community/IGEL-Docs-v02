@@ -16,6 +16,7 @@ Lists what changes are in the build.
 
 ## IGEL OS 12
 
+- [12.4.1](readme12.4.1.txt) 31-May-2024
 - [12.4.0](readme12.4.0.txt) 24-April-2024
 - [12.3.2](readme12.3.2.txt) 21-March-2024
 - [12.3.1](readme12.3.1.txt) 06-February-2024

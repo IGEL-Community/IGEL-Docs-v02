@@ -690,3 +690,30 @@ echo "Zenity String: " $Zenity_String
 echo "First Name: " $First_Name
 echo "Last Name: " $Last_Name
 ```
+
+Suspend system dialog window
+
+```bash linenums="1"
+#!/bin/bash
+(
+echo "10" ; sleep 1
+echo "# Suspending countdown" ; sleep 1
+echo "20" ; sleep 1
+echo "# Suspending countdown" ; sleep 1
+echo "50" ; sleep 1
+echo "# Suspending countdown" ; sleep 1
+echo "75" ; sleep 1
+echo "# Suspending countdown" ; sleep 1
+echo "100" ; sleep 1
+auto_suspend
+) |
+zenity --progress \
+  --title="Suspending system" \
+  --text="Suspending system..." \
+  --percentage=0
+
+if [ "$?" = -1 ] ; then
+  zenity --error \
+  --text="Suspending canceled."
+fi
+```

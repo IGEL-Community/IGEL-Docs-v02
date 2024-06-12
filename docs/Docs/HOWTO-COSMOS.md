@@ -343,7 +343,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** How do I upgrade an OS 11 device to OS 12?
 
-**A:** OS 11.09.100 and UMS 12.2.0 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.09.310/en/upgrading-migration-from-igel-os-11-to-igel-os-12-119874499.html)
+**A:** OS 11.09.260 and UMS 12.04.120 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/igelos-11.10/en/upgrading-migration-from-igel-os-11-to-igel-os-12-126853836.html)
 
 **Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
 

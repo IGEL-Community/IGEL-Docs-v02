@@ -14,6 +14,47 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-06-14 - [11.09.169](readme11.09.169.txt)
+
+```
+The new PRIVATE BUILD 11.09.169 for IGEL Workspace is ready.
+
+This build is based on 11.09.160.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Hardware
+
+* Updated bios-tools to fix BIOS updates on Lenovo ThinkCentre M70q gen3  
+* Updated fwupd to version 1.9.19  
+* Updated IGEL bios-tools to allow controlling CapsuleOnDisk updates via the
+  parameter fwtools.bios-tools.disable_capsule_on_disk (default: true)
+```
+
+-----
+
+## 2024-06-14 - [11.09.132](readme11.09.132.txt)
+
+```
+The new PRIVATE BUILD 11.09.132 for IGEL Workspace is ready.
+
+This build is based on 11.09.112.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* fix: All connections are used during the connect during migration
+```
+
+-----
+
 ## 2024-06-06 - [11.10.106](readme11.10.106.txt)
 
 ```

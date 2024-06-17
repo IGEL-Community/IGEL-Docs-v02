@@ -48,7 +48,7 @@ The log files for IGEL Agent for Imprivata on IGEL OS
 
 -----
 
-### Steps to collect the log files (as root)
+### Steps to collect the log files (as root) for Imprivata ProveID Embedded agent
 
 ```bash linenums="1"
 #!/bin/bash

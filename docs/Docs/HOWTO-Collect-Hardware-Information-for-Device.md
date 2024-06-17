@@ -94,6 +94,9 @@ tar cvjf var-log.tar.bz2 /var/log
 # uncomment following line if using Imprivata
 #/services/imprivata/bin/fetch_support_info imprivata_logs_$(date +%y%m%d%H%M).zip
 
+#The log files for IGEL Agent for Imprivata on IGEL OS
+#/var/log/user/IGELImprivataAgent.log
+
 # uncomment following lines for Cisco JDVI
 #/usr/bin/collect-files
 #cp /tmp/VXC-* .

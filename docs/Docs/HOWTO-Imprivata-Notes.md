@@ -40,6 +40,12 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 **NOTE: Need to be root to access**  
 
+The log files for IGEL Agent for Imprivata on IGEL OS
+
+```
+/var/log/user/IGELImprivataAgent.log
+```
+
 -----
 
 ### Steps to collect the log files (as root)

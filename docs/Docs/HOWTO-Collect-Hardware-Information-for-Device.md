@@ -84,6 +84,11 @@ tar cvjf var-log.tar.bz2 /var/log
 #cp -R /userhome/.ICAClient/logs citrix-logs
 
 # uncomment following lines for VMware Horizon
+# When you gather horizon logs manually from /tmp/vmware-user/
+# then the Horizon client needs to be running: The remote session
+# can be over or have failed, but the client window must still be there.
+# After the client ends the logs will be gathered and the last 3 runs can
+# be found in /var/log/vmware-view/ as tar archives.
 #mkdir vmware-logs
 #cp -R /tmp/vmware-user vmware-logs
 

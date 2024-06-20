@@ -36,7 +36,7 @@ flowchart LR
 
 ## IGEL OS 11.10
 
-**NOTE:** 11.10.XXX uses Ubuntu 22.04 libraries
+**NOTE:** 11.10.XXX uses Ubuntu 22.04 libraries.
 
 ```mermaid
 flowchart LR
@@ -62,7 +62,7 @@ flowchart LR
 
 ## IGEL OS 11.09
 
-**NOTE:** 11.09.XXX uses Ubuntu 22.04 libraries
+**NOTE:** 11.09.XXX uses Ubuntu 22.04 libraries.
 
 ```mermaid
 flowchart LR
@@ -180,7 +180,7 @@ flowchart LR
 
 ## IGEL OS 11.08
 
-**NOTE:** 11.08.XXX uses Ubuntu 18.04 libraries
+**NOTE:** 11.08.XXX uses Ubuntu 18.04 libraries.
 
 ```mermaid
 flowchart LR

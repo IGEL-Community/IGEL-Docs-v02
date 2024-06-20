@@ -2,6 +2,90 @@
 
 **NOTE:**
 
+----
+
+## 2023-06-19 - [12.4.1 PR1 (Patch Release)](https://app.igel.com/base_system/12.4.1+1)
+
+```
+The new BUILD 12.4.1 PR1 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+Changes since: 12.4.1
+
+## New Features
+
+- Improved power consumption on Lenovo L14 Gen5 Intel.
+
+- Setup Assistant:
+
+    Changed label of WiFi configuration dialogue in Setup Assistant (Country or Region).
+
+## Resolved Issues
+
+- Fixed screen lock countdown-done command execution.
+
+- Hardware
+
+    Fixed microphone mute function key led on Lenovo L14 Gen5 Intel.
+    Fixed microphone mute function key on HP mt645 G8.
+    Fixed wake up from suspend on HP mt645 G8.
+
+## Known Issues
+
+- Browser apps may not recognize custom certificates rolled out via UMS file transfer. The certificates are not correctly synchronized in the browser specific certificate stores/databases.
+- Increased writeable cache partition size (by default). First boot with 12.4.x may take more time (once) when updating from a 12.2.x or older base system app.
+- In very rare cases all apps are lost after an update. Should this be the case, an error message is shown "Opening system App Journal failed." - if the device is manged, the apps will be reinstalled after a reboot.
+- The downgrade to base system 12.00.900 or 12.00.910 is not supported.
+
+- Chromium
+
+    Downgrading base system to earlier versions may result in reset of the Chromium profile partition.
+
+- Network
+
+    In some cases, network is not working in combination of Lenovo K14 Gen1 (AMD) and Lenovo Universal Dock. There is a kernel bugreport open but no proper fix so far.
+
+- WiFi
+
+    Globally configured WiFi static IP is not used if establishing WiFi connection via WiFi system tray
+
+- HID
+
+    Some touchpads are recognized as touchpad and mouse. This results in showing possible user settings for both variants.
+
+- Setup Assistant
+
+    Timezone auto-detection is currently not functional (due to discontinued location service). The timezone must be set manually (as interims / alternative solution).
+
+- Audio
+
+    Headset mic via jack is not working on LG 27CN650 and LG 34CN650.
+
+- Hardware
+
+    Lenovo L14 Gen5 Intel video codec errors (graphic glitches during accelerated video playback)
+    Display configuration of displays connected to HP G5 Docking Station may fail on HP t655.
+    Rotation of displays connected to the Lenovo ThinkPad USB-C Hybrid Dock may fail.
+    Wake up from suspend via UMS does not work on HP mt645 G7 devices. Workaround: Disable system suspend and use shutdown instead.
+    If using 6 x 4K@60Hz monitors on HP t755/t740 with the additional graphic card, one or two of the monitors may stay black after coming back from DPMS off state.
+    This is caused by using the additional graphic card as primary, which only has 512MB VRAM (the VRAM is not sufficient in this configuration). Possible solution: Increasing the VRAM size of the iGPU to 2048MiB in BIOS (maybe 1024MiB may also work) and activate IGEL registry key x.drivers.swap_card0_with_card1 so the iGPU will become the Primary GPU. Connector names will be changed with that!
+    Built-in fingerprint sensor is not supported on HP mt440 G3 and mt645 G7/G8.
+    Wake on LAN is not functional on Dell OptiPlex 3000 and Lenovo K14 Gen1
+
+- IGEL Desktop
+
+    Connecting a new audio device during running audio playback / stream may result in failure of audio tray.
+    External display mode not functional on ThinkPad L14 Gen3 AMD
+    Disabled compositing (transparency effects) in window manager to circumvent issues with screen lock. Registry key windowmanager.wm0.variables.usecompositing is not configurable anymore.
+    If two monitors are configured in a vertical layout (one above the other), and those monitors are configured with "auto-detect" resolution, saving leads to a wrong layout order.
+    On-screen keyboard sporadically crashes when typing.
+
+- Licensing
+
+    Manual deployment of add-on licenses for IGEL Agent for Imprivata licenses (via UMS) is only possible after finished installation of IGEL Agent for Imprivata app on device.
+```
+
 -----
 
 ## 2023-05-31 - [12.4.1](readme12.4.1.txt)

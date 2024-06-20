@@ -14,6 +14,133 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-06-20 - [11.10.108](readme11.10.108.txt)
+
+```
+The new PRIVATE BUILD 11.10.108 for IGEL Workspace is ready.
+
+This build is based on 11.10.106.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* AVD 1.2.0
+* Based on the latest RdClientSDK from Microsoft
+* UI update for AVD sessions
+* UDP shortpath
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.udp-short-path`                          |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Smartcard support
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enable-smartcard`                        |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Added network status
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.network-status-in-toolbar`               |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.network-status-on-startpage`             |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Added battery status (if battery exists)
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.battery-status-in-toolbar`               |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.battery-status-on-startpage`             |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Hidden login
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.hidden-login`                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.hidden-login-timeout`                    |
++------------+-----------------------------------------------------------------+
+| Value      | **5000** (default)                                              |
++------------+-----------------------------------------------------------------+
+
+* Preliminary experimental webcam redirection
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enable-webcam-redirection`               |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* FPS (frames per second) indicator
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.show-fps`                                |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* UPD shortpath fix from RdClientSDK included
+* Fixed issues when multiple workspace resources have the same name.
+* MMR (browser webrtc redirection) in RdClientSDK included. No libwebrtc-
+  plugin.so needed anymore.
+```
+
+-----
+
+## 2024-06-20 - [11.09.321](readme11.09.321.txt)
+
+```
+The new PRIVATE BUILD 11.09.321 for IGEL Workspace is ready.
+
+This build is based on 11.09.310.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.3.1
+
+### Cisco Webex
+
+* Integrated Cisco Webex VDI 44.2.0.29959
+```
+
+-----
+
 ## 2024-06-18 - [11.10.109](readme11.10.109.txt)
 
 ```

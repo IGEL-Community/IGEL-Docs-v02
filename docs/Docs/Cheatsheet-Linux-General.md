@@ -487,6 +487,8 @@ reboot the system
 user_reboot
 ```
 
+- [How to Perform an Emergency Reboot with IGEL UMS](https://www.igelcommunity.com/post/how-to-perform-an-emergency-reboot-with-igel-ums)
+
 ## vi
 
 texteditor

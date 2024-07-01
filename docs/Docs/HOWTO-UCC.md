@@ -55,6 +55,8 @@ In general, USB redirection is not needed for standard functionality such as aud
 
 - [When to use USB Redirection](https://kb.igel.com/igelos-11.09/en/when-to-use-usb-redirection-101060695.html)
 
+- [Citrix 2405 - Composite USB device redirection using DDC policies](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#composite-usb-device-redirection-using-ddc-policies)
+
 -----
 
 ## Citrix with the Jabra Evolve 20 to enable the call button on the headset:

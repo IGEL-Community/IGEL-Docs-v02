@@ -396,6 +396,8 @@ update
 
 [Lenovo - ThinkLMI - Lenovo BIOS Setup using Linux WMI - Deployment Guide](https://download.lenovo.com/pccbbs/mobiles_pdf/lenovo_bios_setup_linux_wmi_sysfs_1.2.pdf)
 
+  - <a href="../Scripts/HOWTO-Collect-Hardware-Information-for-Device-set-BOOT-PWD.sh" download>Sample script to set BIOS password</a>
+
 [Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/igelos-11.09/en/new-features-11-07-170-101062351.html). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
 
 [Microsoft Surface](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)

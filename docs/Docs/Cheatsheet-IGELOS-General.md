@@ -281,3 +281,5 @@ Resize virtual machine
 ```bash linenums="1"
 xrandr --output Virtual-1 --auto
 ```
+
+- [How to duplicate desktop with xrandr?](https://unix.stackexchange.com/questions/371793/how-to-duplicate-desktop-in-linux-with-xrandr)

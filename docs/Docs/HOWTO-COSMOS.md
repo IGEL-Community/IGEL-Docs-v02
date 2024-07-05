@@ -362,6 +362,10 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **A:** Custom Paritions will need to be removed prior to the upgrade to OS 12. OS 12 supports `Custom Partitions` but they have to be created for OS 12 in the `UMS Web App`. **NOTE:** There is a registry setting that can be enabled to delete `Custom Partions` as part of the upgrade process (`system.upgrade_igelos.delete_custom_partition`).
 
+**Q:** What is the command line used on OS 11 device to start the upgrade to OS 12?
+
+**A:** Once you have validated, as noted above, that the system is ready for upgrade, then the following command is called: `/etc/igel/upgrade-igelos/upgrade`
+
 -----
 
 ## FAQ - ICG 12

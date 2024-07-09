@@ -133,6 +133,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - [OpenSSL Reference](https://www.sslshopper.com/article-most-common-openssl-commands.html)
 - [IGEL Community LetsEncrypt/Certbot tutorial](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-ICG-Free-Signed-Certificate/?h=)
 - [Building an AD CS Server in Your Lab](https://virtuallythere.blog/2018/04/24/making-things-a-bit-more-secure-part-1/)
+- [KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading-126846455.html)
 
 -----
 

@@ -65,6 +65,14 @@ The log files for IGEL Agent for Imprivata on IGEL OS
 
 -----
 
+## 8 July 2024 - Update
+
+**Proximity Readers Become Unavailable**
+
+Imprivata PIE 7.12 HF5 resolves issue with PIE 7.11 HF3 and above.
+
+-----
+
 ## 7 March 2024 - Update
 
 **IMPORTANT INFO:  IGEL Agent for Imprivata and VMWare Auth Only workflows**

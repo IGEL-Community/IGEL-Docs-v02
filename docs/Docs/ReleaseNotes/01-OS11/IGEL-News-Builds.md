@@ -14,6 +14,426 @@ These are the release notes published with each release:
 
 -----
 
+## 2024-07-11 - [11.10.111](readme11.10.111.txt)
+
+```
+The new PRIVATE BUILD 11.10.111 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed wrong domain priority in RD Web Access passthrough login.
+```
+
+-----
+
+## 2024-07-11 - [11.10.150](readme11.10.150.txt)
+
+```
+The new PUBLIC BUILD 11.10.150 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+Release Notes 11.10.150 (Based On 11.10.100)
+--------------------------------------------------------------------------------
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Updated IGEL AVD to version 1.2.0
+* Based on the latest RdClientSDK from Microsoft
+* UI update for AVD sessions
+* Added UDP shortpath
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.udp-short-path`                          |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Added smartcard support
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enable-smartcard`                        |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Added network status
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.network-status-in-toolbar`               |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.network-status-on-startpage`             |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Added battery status (if battery exists)
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.battery-status-in-toolbar`               |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.battery-status-on-startpage`             |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Added hidden login
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.hidden-login`                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.hidden-login-timeout`                    |
++------------+-----------------------------------------------------------------+
+| Value      | **5000** (default)                                              |
++------------+-----------------------------------------------------------------+
+
+* Added preliminary / experimental webcam redirection
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enable-webcam-redirection`               |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Added FPS (frames per second) indicator
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.show-fps`                                |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### VMware Horizon
+
+* Updated VMware Horizon Client to version 2312.1-8.12.1-23543969.
+
+### IGEL Agent for Imprivata
+
+- Added teardown screensaver on badge event  
+    - Added showing computername in lockscreen's upper right corner  
+    - Added  support for cookieinsert method for Citrix virtual server on
+      NetScaler.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `NetScaler�COOKIEINSERT`                                        |
++------------+-----------------------------------------------------------------+
+| Registry   | `iia.cookieinsert`                                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | ""(default)                                                     |
++------------+-----------------------------------------------------------------+
+
+- Fixed Device Control Button's visibility not in sync with Computer Policy
+
+### Smartcard
+
+* Updated Pointsharp Net iD Client to version 1.1.4.38. Detailed release notes
+  via https://docs.pointsharp.com/net-id-client/latest/nic-release-
+  notes/nic-114-release-notes.html  
+* Net iD user service now is configurable and disabled by default - set / enable
+  via following registry parameter:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Net iD Client user service                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | scard.pkcs11.netid-client.userservice                           |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+* Fixed AD/Kerberos login with username and password when login with Net iD
+  Client smartcard is active. For this, Net iD SessionToken was disabled by
+  default. It can be enabled via the following registry parameter:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | SessionToken                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | scard.pkcs11.netid-client.sessiontoken                          |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI to version 44.4.0.29960
+
+### Base system
+
+* Added HP BIOS tools to update the BIOS version, BIOS settings and BIOS
+  password on supported HP mobile devices HP Pro mt440 G3, HP Elite mt645 G7 and
+  HP Elite mt645 G8. IGEL supports the BIOS update mechanism only - all BIOS
+  updates are performed / executed at own risk!
+* Added option to set hardware clock. The default, Auto, will look for Windows
+  partitions and, if present, assume that Windows is installed and the real time
+  clock is set to local time.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `HW clock timezone`                                             |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.time.hwclock_timezone`                                  |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto (default)] [UTC] [localtime]                              |
++------------+-----------------------------------------------------------------+
+
+### X11 system
+
+* Added alternative Display Switcher implementation to solve issues with
+  multiscreen setups on docking stations. This alternative implementation must
+  be enabled by following parameter:
+
++------------+-----------------------------------------------------------------+
+| Parameter  |  `Use new user_display_xrandr`                                  |
++------------+-----------------------------------------------------------------+
+| Registry   |  `x.new_user_display_xrandr`                                    |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* The alternative implementation is only used if "Smart display configuration"
+  parameter is enabled:
+
++------------+-----------------------------------------------------------------+
+| IGEL Setup |  `Accessories / Display Switch / Options`                       |
++------------+-----------------------------------------------------------------+
+| Parameter  |  `Smart display configuration`                                  |
++------------+-----------------------------------------------------------------+
+| Registry   |  `x.auto_associate`                                             |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default)  / disabled                               |
++------------+-----------------------------------------------------------------+
+
+* This implementation can not yet be used in multi GPU scenarios.
+
+### IgelDesktop
+
+* Replaced IGEL company logo with new design in wallpaper and Setup Assistant.
+* Replaced IGEL company logo with new design in screensaver.
+
+### Audio
+
+* Added parameter to enable or disable audio overamplification:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Output overamplification`                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `userinterface.sound.overamplification`                         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Input overamplification`                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | `userinterface.sound.input_overamplification`                   |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
+### Evidian
+
+* Updated Evidian's rsUserAuth to version 1.5.8825.  
+    - Added RFIDeas PC/SC Mixed-Mode.  
+      Set "RFIDMixMode=on" in rsUserAuth.ini configuration file and handle
+      RFIDeas badges as PC/SC one.  
+    - Added support for Read-only protection on the domain field.   
+      Set "GreyOutDomainField=on" in rsUserAuth.ini configuration file to set
+      Domain field uneditable.  
+    - Fixed welcome screen not properly displayed with different DPI Settings.
+      Homogenization of the entire interface.
+
+### Hardware
+
+* IGEL UD7 H850C (UD7-LX 10, UD7-LX 11): Removed hardware support.
+* Added support for Intel EC1000R network device.
+* Added hardware support for HP Elite mt645 G8 Mobile Thin Client.
+* Added hardware support for Lenovo Thinkpad L14 Intel Gen 5.
+* Updated fwupd to version 1.9.19  
+* Updated IGEL LVFS bios tools to allow controlling CapsuleOnDisk updates via
+  the new parameter: fwtools.bios-tools.disable_capsule_on_disk (default: true)
+* Improved hardware detection of supported LG devices.
+* Added support for Quectel CAT16 WW SKU - EM160R-GL Gen2 and Quectel CAT 6 WW
+  SKU - EM061K-GL on Lenovo ThinkPad L14 Intel Gen5
+
+### Fabulatech
+
+* Updated FabulaTech plugins to version 4.0.0.2
+* Updated FabulaTech Scanner for Remote Desktop to version 3.6.1.3
+* Updated FabulaTech USB for Remote Desktop to version 6.2.0.0
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed Chromium security issues CVE-2024-6103, CVE-2024-6102, CVE-2024-6101,
+  CVE-2024-6100, CVE-2024-5847, CVE-2024-5846, CVE-2024-5845, CVE-2024-5844,
+  CVE-2024-5843, CVE-2024-5842, CVE-2024-5841, CVE-2024-5840, CVE-2024-5839,
+  CVE-2024-5838, CVE-2024-5837, CVE-2024-5836, CVE-2024-5835, CVE-2024-5834,
+  CVE-2024-5833, CVE-2024-5832, CVE-2024-5831, CVE-2024-5830, CVE-2024-5499,
+  CVE-2024-5498, CVE-2024-5497, CVE-2024-5496, CVE-2024-5495, CVE-2024-5494,
+  CVE-2024-5493, CVE-2024-5274, CVE-2024-5160, CVE-2024-5159, CVE-2024-5158,
+  CVE-2024-5157, CVE-2024-4950, CVE-2024-4949, CVE-2024-4948, CVE-2024-4947,
+  CVE-2024-4761, CVE-2024-4671, CVE-2024-4559, CVE-2024-4558, CVE-2024-4368 and
+  CVE-2024-4331.
+* Updated Chromium browser to version 126.0.6478.114.
+
+### Firefox
+
+* Updated Mozilla Firefox to version 115.12 ESR  
+* Fixes for mfsa2024-26, also known as:  
+  CVE-2024-5702, CVE-2024-5688, CVE-2024-5690, CVE-2024-5691,  
+  CVE-2024-5693, CVE-2024-5696, CVE-2024-5700.  
+* Fixes for mfsa2024-22, also known as:  
+  CVE-2024-4367, CVE-2024-4767, CVE-2024-4768, CVE-2024-4769,  
+  CVE-2024-4770, CVE-2024-4777.  
+* Fixes for mfsa2024-19, also known as:  
+  CVE-2024-3852, CVE-2024-3854, CVE-2024-3857, CVE-2024-2609,  
+  CVE-2024-3859, CVE-2024-3861, CVE-2024-3302, CVE-2024-3864.
+
+### Base system
+
+* Fixed glibc security issues CVE-2024-33602, CVE-2024-33601, CVE-2024-33600,
+  CVE-2024-33599 and CVE-2024-2961.  
+* Fixed gnutls28 security issues CVE-2024-28835 and CVE-2024-28834.  
+* Fixed nghttp2 security issue CVE-2024-28182.  
+* Fixed pillow security issue CVE-2024-28219.  
+* Fixed less security issue CVE-2024-32487.  
+* Fixed tpm2-tss security issue CVE-2024-29040.  
+* Fixed libvirt security issues CVE-2024-4418 and CVE-2024-2494.  
+* Fixed qemu security issues CVE-2024-3567, CVE-2024-3447, CVE-2024-3446,
+  CVE-2024-26328 and CVE-2024-26327.  
+* Fixed tpm2-tools security issues CVE-2024-29039 and CVE-2024-29038.  
+* Fixed xorg-server security issues CVE-2024-31083, CVE-2024-31082,
+  CVE-2024-31081 and CVE-2024-31080.  
+* Fixed glib2.0 security issue CVE-2024-34397.  
+* Fixed zulu17-ca security issues CVE-2024-21012, CVE-2023-41993,
+  CVE-2024-21011, CVE-2024-21005, CVE-2024-21004, CVE-2024-21003,
+  CVE-2024-21002, CVE-2024-21094 and CVE-2024-21068.  
+* Fixed webkit2gtk security issues CVE-2024-27834, CVE-2024-23284,
+  CVE-2024-23280, CVE-2024-23263, CVE-2024-23254, CVE-2024-23252,
+  CVE-2023-42956, CVE-2023-42950 and CVE-2023-42843.  
+* Fixed python-idna security issue CVE-2024-3651.  
+* Fixed libxml2 security issue CVE-2024-34459.  
+* Fixed postgresql-14 security issue CVE-2024-4317.  
+* Fixed iperf3 security issue CVE-2024-26306.  
+* Fixed libarchive security issue CVE-2024-26256.  
+* Fixed aom security issue CVE-2024-5171.  
+* Fixed gdk-pixbuf security issue CVE-2022-48622.  
+* Fixed giflib security issues CVE-2022-28506 and CVE-2021-40633.  
+* Fixed tiff security issue CVE-2023-3164.  
+* Fixed cups security issue CVE-2024-35235.  
+* Fixed mysql-8.0 security issues CVE-2024-21102, CVE-2024-21096,
+  CVE-2024-21087, CVE-2024-21069, CVE-2024-21062, CVE-2024-21060,
+  CVE-2024-21054, CVE-2024-21047, CVE-2024-21013, CVE-2024-21009,
+  CVE-2024-21008, CVE-2024-21000, CVE-2024-20998 and CVE-2024-20994.  
+* Fixed libndp security issue CVE-2024-5564.  
+* Fixed ntfs-3g security issue CVE-2023-52890.  
+* Fixed ffmpeg security issues CVE-2023-50010, CVE-2023-51793, CVE-2023-51794,
+  CVE-2023-51795, CVE-2023-51798 and CVE-2024-31585.  
+* Fixed ghostscript security issues CVE-2024-33871, CVE-2024-33870,
+  CVE-2024-33869, CVE-2024-29510 and CVE-2023-52722.
+* Fixed privilege escalation in network management.
+* Fixed openssh security issue CVE-2024-6387.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed not working HDX webcam redirection for Citrix 2203 and later.
+* Fixed Browser Content Redirection.
+
+### AVD
+
+* Fixed AVD session when driven from IGEL Imprivata Agent
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP Session dropping characters when input occurs too fast.
+
+### RD Web Access
+
+* Fixed Passthrough and Kerberos Authentication for RD Web Access.
+* Added block for keyboard shortcuts containing windows key for RD Web Access
+  apps. Can be disabled in IGEL Setup
+
++------------+-----------------------------------------------------------------+
+| Registry   | `rdp.rd_web_access.suppress-windows-key-shortcuts`              |
++------------+-----------------------------------------------------------------+
+| Value      |  **enabled** (default) / disabled                               |
++------------+-----------------------------------------------------------------+
+
+* Fixed RD Web Access failing with Error 400 by providing a new RD Web Tool. A
+  switch back to the old tool is possible via IGEL Setup Registry:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `rdp.rd_web_access.options.legacy_rdweb`                        |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+
+### Chromium
+
+* Fixed still being able to download files if file access was disabled - occured
+  in combination with empty download directory.
+
+### Network
+
+* On devices that support mobile broadband and eSim an automatic switch to the
+  physical sim slot is now performed if eSim has no profile assigned
+
+### Base system
+
+* Fixed Post Session Command 'Shutdown'.
+* Fixed wrong assignment of socks proxy port
+
+### Hardware
+
+* Fixed missing firmware file for Intel 9462NGW Wi-Fi.
+* Fixed LVFS BIOS update on Lenovo ThinkCentre M70q Gen3.
+* Fixed microphone mute function key on HP mt645 G8.
+
+### Remote Management
+
+* Fixed resource leak in ICG reconnect mechanism.
+* Fixed: All connections / device connectors are used during OS 12 migration
+  now.
+* Fixed ICG reconnecting - now it reliably invokes a reconnect whenever a device
+  is not connected to configured ICG server.
+* Fixed UMS registering via UMS registration tool in IGEL OS - if device is
+  registered to root directory in UMS.
+```
+
+-----
+
 ## 2024-06-20 - [11.10.108](readme11.10.108.txt)
 
 ```

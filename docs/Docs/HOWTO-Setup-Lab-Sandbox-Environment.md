@@ -406,8 +406,8 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 | UMS 6 | <a href="https://az743625.vo.msecnd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_6.10.140.bin" download>UMS 6 for Linux Server</a> |
 | OSC - OS 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.4.1.zip" download>OSC - OS 12</a> |
 | OSC - OS 12 PXE | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_12/PXE/osc-12.4.1_pxe.zip" download>OSC - OS 12 PXE</a> |
-| OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.10.100.zip" download>OSC - OS 11</a> |
-| OS Update - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.10.120_public.zip" download>OS Update Firmware - OS 11</a> |
+| OSC - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.10.150.zip" download>OSC - OS 11</a> |
+| OS Update - OS 11 | <a href="https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.10.150_public.zip" download>OS Update Firmware - OS 11</a> |
 | ICG 12 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.04.100.bin" download>ICG 12</a> |
 | ICG 2 | <a href="https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-2.05.110.bin" download>ICG 2</a> |
 
@@ -434,11 +434,11 @@ wget https://az743625.vo.msecnd.net/files/IGEL_CLOUD_GATEWAY/installer-12.04.100
 
 #IGEL OS 11 / UMS 6 / ICG 2)
 #OSC 11:
-wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.10.100.zip
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.10.150.zip
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/OSC/OSC_11.09.310.zip
 
 #OS 11 Update:
-wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.10.120_public.zip
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.10.150_public.zip
 wget https://az743625.vo.msecnd.net/files/IGEL_OS_11/updates/lxos_11.09.310_public.zip
 
 #UMS 6:

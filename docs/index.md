@@ -80,6 +80,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)
 - [HOWTO Edit Initial Settings Prior to OSC Install](Docs/HOWTO-Edit-Initial-Settings-OSC.md)
 - [HOWTO Frame Setup](Docs/HOWTO-Frame-Setup.md)
+- [HOWTO GitHub with Microsoft Visual Studio Code](Docs/HOWTO-GitHub-with-VS-Code.md)
 - [HOWTO ICG Free Signed Certificate](Docs/HOWTO-ICG-Free-Signed-Certificate.md)
 - [HOWTO IGEL Management Interface (IMI)](Docs/HOWTO-IGEL-Management-Interface.md)
 - [HOWTO IGEL Static Template Keys](Docs/HOWTO-IGEL-Static-Template-Keys.md)

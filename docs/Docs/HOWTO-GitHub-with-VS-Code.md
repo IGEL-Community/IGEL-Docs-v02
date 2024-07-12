@@ -8,6 +8,8 @@
 
 - GitHub Location for IGEL Community Custom Partitions: [https://github.com/IGEL-Community/IGEL-Custom-Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
+- GitHub Location for IGEL Community OS 12 Application Recipes (**CURRENTLY RESTRICTED and release set for Q4 2024**): [https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
+
 - GitHub Docs: [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 - GitHub Docs: [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)

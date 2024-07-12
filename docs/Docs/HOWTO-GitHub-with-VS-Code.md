@@ -17,7 +17,7 @@
 ## Install Microsoft Visual Studio Code and Extensions
 
 - Install [Microsoft Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=vscom_downloads) on your PC
-- Add extension [GitHub Pull Requests](ihttps://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+- Add extension [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 - Add extension [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
 - Add extension [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - Add extension [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)

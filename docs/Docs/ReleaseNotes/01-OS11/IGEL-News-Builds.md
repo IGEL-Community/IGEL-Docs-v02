@@ -12,6 +12,45 @@ Please keep in mind a Private Build is a fully supported firmware!
 These are the release notes published with each release:
 ```
 
+----
+
+## 2024-07-15 - [11.10.152](readme11.10.152.txt)
+
+```
+The new PRIVATE BUILD 11.10.152 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RDP/IGEL RDP Client 2
+
+* Fixed generic USB redirection to allow Yubikey redirection to work with it.
+* Additional generic USB redirection stability fixes applied.
+```
+
+-----
+
+## 2024-07-03 - [11.09.323](readme11.09.323.txt)
+
+```
+The new PRIVATE BUILD 11.09.323 for IGEL Workspace is ready.
+
+This build is based on 11.09.321.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed not working HDX webcam redirection for Citrix 2203.
+```
+
 -----
 
 ## 2024-07-11 - [11.10.111](readme11.10.111.txt)

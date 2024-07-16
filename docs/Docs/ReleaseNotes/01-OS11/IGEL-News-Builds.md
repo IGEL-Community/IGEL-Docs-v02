@@ -51,6 +51,7 @@ New Features
 +------------+-----------------------------------------------------------------+
 
 * Resolved Issues:  
+
   fixed handling of special character in passwords with Citrix  
   Fixed umlauts for StoreFront login in Follow Policies mode
 

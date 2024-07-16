@@ -14,6 +14,57 @@ These are the release notes published with each release:
 
 ----
 
+## 2024-07-16 - [11.10.151](readme11.10.151.txt)
+
+```
+The new PRIVATE BUILD 11.10.151 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### IGEL Agent for Imprivata
+
+* New Features:
+* Introduced Kiosk Mode, a passive mode to just pick up virtual channel requests
+
++------------+-----------------------------------------------------------------+
+| Registry   | `iia.kiosk`                                                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Introduced registry key to enabled or disable the visibility of the
+  computername on the lock screen
+
++------------+-----------------------------------------------------------------+
+| Registry   | ``iia.cmpname_on_lockscreen                                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
+* Resolved Issues:  
+  fixed handling of special character in passwords with Citrix  
+  Fixed umlauts for StoreFront login in Follow Policies mode
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Imprivata
+
+* updated Imprivata bootstrap loader to version 7.12.6.703733, this fixes
+  CVE-2022-37454
+```
+
+----
+
 ## 2024-07-15 - [11.10.152](readme11.10.152.txt)
 
 ```

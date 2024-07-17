@@ -431,7 +431,12 @@ From the endpoint running IGEL OS (not from the UMS):
 
 ## OPTIONAL: Setup IGEL Cloud Gateway for Managing External Endpoints
 
-With UMS installed and configured, you are prepared to manage devices on the LAN. To manage devices which are outside the LAN, you must install and configure the IGEL Cloud Gateway (ICG) to act as a public-facing broker between the external devices and the internal UMS server.
+With UMS installed and configured, you are prepared to manage devices on the LAN. To manage OS 11 devices which are outside the LAN, you must install and configure the IGEL Cloud Gateway (ICG) to act as a public-facing broker between the external devices and the internal UMS server.
+
+**Notes:**
+
+- ICG needed for OS 11 devices
+- ICG or reverse proxy for OS 12 devices - [FAQ ICG](./HOWTO-COSMOS.md/#faq---icg-12)
 
 Setup of the ICG Server can be done in four steps:
 

@@ -436,6 +436,7 @@ With UMS installed and configured, you are prepared to manage devices on the LAN
 **Notes:**
 
 - ICG needed for OS 11 devices
+- [KB: IGEL Limitations](https://kb.igel.com/igelicg-12.04/en/limitations-122465246.html)
 - ICG or reverse proxy for OS 12 devices - [FAQ ICG](./HOWTO-COSMOS.md/#faq---icg-12)
 
 Setup of the ICG Server can be done in four steps:

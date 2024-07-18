@@ -219,6 +219,17 @@ flowchart TD
 ```
 
 <!---
+- OS 12 with Azure Application Gateway (No OS 11; No ICG; No OBS, No IDP)
+
+```mermaid
+flowchart TD
+A[/OS 12 Devices\]<-- Public IP Address Port 443 --B((Azure Application Gateway))
+B((Azure Application Gateway))-- Listeners --C{Onboarding}
+C{Onbarding}
+```
+-->
+
+<!---
 - OBS sequence for registering an OS 12 device
 
 ```mermaid

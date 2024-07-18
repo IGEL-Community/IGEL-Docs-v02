@@ -8,7 +8,7 @@
 ## 2023-07-18 - [12.4.2](https://app.igel.com/base_system/12.4.2)
 
 ```
-The new BUILD 12.4.1 for IGEL Workspace is ready.
+The new BUILD 12.4.2 for IGEL Workspace is ready.
 
 These are the release notes published with that release:
 

@@ -8,7 +8,7 @@
 ## 2023-07-18 - [12.4.2](https://app.igel.com/base_system/12.4.2)
 
 ```
-The new BUILD 12.4.1 PR1 for IGEL Workspace is ready.
+The new BUILD 12.4.1 for IGEL Workspace is ready.
 
 These are the release notes published with that release:
 
@@ -16,7 +16,7 @@ These are the release notes published with that release:
 
 ## New Features
 
-- Added possiblibility to define post-session commands for generic processes in base_system.
+- Added possibility to define post-session commands for generic processes in base_system.
 ```
 
 |  Parameter  |  Registry   |  Type       |  Value      |  Range      |
@@ -88,7 +88,7 @@ These are the release notes published with that release:
 - **Network**
 
 	- Added Wake on LAN support via USB-C-to-LAN adapters
-		- Activatation by enabling any of the Wake on LAN settings of the LAN Interfaces
+		- Activation by enabling any of the Wake on LAN settings of the LAN Interfaces
 		- Only Wake on LAN from Suspend is supported
 
 - **Setup Assistant**

@@ -177,6 +177,8 @@ flowchart TD
   M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 443 TCP -->O[[Customer IDP]]
   H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
+  H((Internet Connection))<-- Port 443 TCP --> Q[\Intranet OS 12 Devices/]
+  H((Internet Connection))<-- Port 443 TCP --> K[/Internet OS 12 Devices\]
 ```
 
 - OS 12 (No OS 11; No ICG; No OBS)
@@ -193,6 +195,7 @@ flowchart TD
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
   H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
+  H((Internet Connection))<-- Port 443 TCP --> K[/OS 12 Devices\]
 ```
 
 - OS 12 (No OS 11; No ICG; OBS; IDP)
@@ -208,7 +211,7 @@ flowchart TD
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
   K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
+  K[/OS 12 Devices\]<-- Port 443 TCP --> H((Internet Connection))
   H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 443 TCP -->O[[Customer IDP]]

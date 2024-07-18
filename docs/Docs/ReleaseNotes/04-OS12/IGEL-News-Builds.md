@@ -17,8 +17,8 @@ These are the release notes published with that release:
 ## New Features
 
 - Added possiblibility to define post-session commands for generic processes in base_system.
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |  Range      |
 | ------ | ------ | ------ | ------ | ------ |
 |  `Ignore command lines`  |  `userinterface.postsession.process%.ignoredargs`  |  string  |  empty *Default*  |  |
@@ -27,56 +27,56 @@ These are the release notes published with that release:
 |  `This session will have priority in executing the post-session command`  |  `userinterface.postsession.force`  |  bool  |  enabled / *disabled* (default)  |  |
 |  `Process name`  |  `userinterface.postsession.process%.name`  |  string  |  empty *Default*  |  |
 |  `Valid return codes`  |  `userinterface.postsession.process%.validrcs`  |  string  |  empty *Default*  |  |
-```
 
+```
 - Added Chinese input support with Intelligent Pinyin method (experimental).
 
   - Enable Input Methods with parameter
-
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Keyboard Input Methods (experimental) | User Interface>Input>Keyboard>Input Methods | userinterface.keyboard.ibus.enable | false(default) / true |
-```
 
+```
   - Enable Pinyin method:
-
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Chinese Intelligent Pinyin | User Interface>Input>Keyboard>Input Methods>Methods | userinterface.keyboard.ibus.general.preload-engine-libpinyin | false(default) / true |
-```
 
+```
   - Enable Bopomofo method:
-
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Chinese Bopomofo | User Interface>Input>Keyboard>Input Methods>Methods | userinterface.keyboard.ibus.general.preload-engine-libbopomofo | false(default) / true |
-```
 
+```
   - Further properties:
-
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Auto hide timeout | User Interface>Input>Keyboard>Input Methods | userinterface.keyboard.ibus.panel.auto-hide-timeout | 10000 (default) |
 | Next Input method | User Interface>Input>Keyboard>Input Methods | userinterface.keyboard.ibus.general.hotkeys.triggers | <Super>space (default) |
 | Candidates orientation | User Interface>Input>Keyboard>Input Methods | userinterface.keyboard.ibus.panel.lookup-table-orientation | vertical (default) / horizontal |
 | Show property panel | User Interface>Input>Keyboard>Input Methods | userinterface.keyboard.ibus.panel.show | do not show (default) / hide automatically / always |
-```
 
+```
   - Intelligent Pinyin properties:
-
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Initial state Simplified Chinese | User Interface>Input>Keyboard>Input Methods>Intelligent Pinyin | userinterface.keyboard.ibus.libpinyin.pinyin.init-simplified-chinese | false / true(default) |
 | Initial state Chinese | User Interface>Input>Keyboard>Input Methods>Intelligent Pinyin | userinterface.keyboard.ibus.libpinyin.pinyin.init-chinese | false / true(default) |
 | Initial state full width | User Interface>Input>Keyboard>Input Methods>Intelligent Pinyin | userinterface.keyboard.ibus.libpinyin.pinyin.init-full | false(default) / true |
 | Initial state full punctuations | User Interface>Input>Keyboard>Input Methods>Intelligent Pinyin | userinterface.keyboard.ibus.libpinyin.pinyin.init-full-punct | false / true(default) |
-```
 
+```
 - Improved multisession support for post-session commands: In case multiple sessions run in parallel with a set post-session command, command is only triggered when all sessions are finished successfully.
   If session has the 'force' post-session command parameter set, the command is triggered immediately once the session is finished.
 
@@ -104,22 +104,22 @@ These are the release notes published with that release:
 - **SSO**
 
 	- Added: Configurable list of allowed hosts for redirection:
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `List of allowed hosts for redirection`  |  `auth.cloudidp.host_allowlist`  |  string  |  empty *Default*  |
-```
 
+```
 	- Added a parameter to Entra ID SSO which allows to add additional scopes.
 	- The OpenID Connect scope value for the authentication request is now configurable:
-
 ```
+
 |  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `OpenID Connect scope`  |  `auth.cloudidp.scope`  |  string  |  openid profile email *Default*  |
-```
 
+```
 ## Security Fixes
 
 - Fixed libarchive security issue CVE-2024-26256.

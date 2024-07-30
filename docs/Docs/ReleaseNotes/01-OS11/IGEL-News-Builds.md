@@ -14,6 +14,184 @@ These are the release notes published with each release:
 
 ----
 
+## 2024-07-30 - [11.10.156](readme11.10.156.txt)
+
+```
+The new PRIVATE BUILD 11.10.156 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Network
+
+* Added ACME client for use with HTTP-01 challenges
+* Registry keys:
+* This determines whether the feature is enabled as a whole:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Manage certificates with ACME}}                               |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.enable}}                                   |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+* The rest are members of instances of network.acmeclient.cert%. Instance 0 is
+  available from the start.
+* This is the name of the subdirectory of /wfs/acme_certificates/ where data for
+  the respective instance is stored - only letters, digits, underscores, dashes
+  and dots are allowed:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Directory}}                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.directory}}                          |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | default _Default_                                               |
++------------+-----------------------------------------------------------------+
+
+* The following are names (space-separated) for which a certificate shall be
+  requested. In the case of success each will appear as subject alt name, the
+  first one also as the common name (This is true at least with the Smallstep CA
+  with default settings). %H will be replaced by `hostname -f`, %h by `hostname
+  -s`.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Names}}                                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.names}}                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | %H _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
+* This is the ACME server URL (something like https://my-
+  stepca.example.com/acme/acme/directory):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{ACME server URL}}                                             |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.serverurl}}                          |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Account key length (bits)}}                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.accountkeylength}}                   |
++------------+-----------------------------------------------------------------+
+| Range      | [1024][2048][4096]                                              |
++------------+-----------------------------------------------------------------+
+| Value      | _4096_                                                          |
++------------+-----------------------------------------------------------------+
+
+* This is for verifying the ACME server's certificate (installing any such
+  certificate on the system is beyond the scope of the ACME client):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{CA Bundle}}                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.cabundle}}                           |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+* This may be necessary for creating an account on the ACME server:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Email address}}                                               |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.email}}                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+* The following is the length of the client key for which a certificate will be
+  requested. Those with ecc-prefix mean ellipic curve keys, the remaining ones
+  RSA keys.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Key length (bits)}}                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.keylength}}                          |
++------------+-----------------------------------------------------------------+
+| Range      | [1024][2048][4096][8192][ec-256][ec-384][ec-512]                |
++------------+-----------------------------------------------------------------+
+| Value      | _4096_                                                          |
++------------+-----------------------------------------------------------------+
+
+* This is the number of days between expiry checks:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Certificate expiry check interval (days)}}                    |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.checkinterval}}                      |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 1 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
+* This is the period before the certificates' expiry in which renewal attempts
+  are performed:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Certificate renewal period (days)}}                           |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.renewalperiod}}                      |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 30 _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
+* This is the debug level for acme.sh:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Debug level}}                                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.acmeclient.cert%.debuglevel}}                         |
++------------+-----------------------------------------------------------------+
+| Range      | [0][1][2][3]                                                    |
++------------+-----------------------------------------------------------------+
+| Value      | _0_                                                             |
++------------+-----------------------------------------------------------------+
+
+* The resulting client.cert and client.key can be used for EAP/TLS and
+  EAP/PEAP/TLS via Ethernet and WLAN.  
+  Example:  
+  We assume the above is configured with directory="default" and we want
+  EAP/TLS.  
+  Then on the respective setup panel the following should be configured:  
+  EAP Type: TLS  
+  Validate Server Certificate/CA Root Certificate: for verifying the RADIUS
+  server's certificate, a separate topic  
+  Manage certificates with SCEP (NDES): no  
+  Client Certificate: /wfs/acme_certificates/default/client.cert  
+  Private Key:  /wfs/acme_certificates/default/client.key  
+  Identity: <empty>, will be automatically derived from the client certificate's
+  subject  
+  Private Key Password: <empty>
+```
+
+----
+
 ## 2024-07-29 - [11.10.155](readme11.10.155.txt)
 
 ```

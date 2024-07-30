@@ -21,7 +21,7 @@ Measurement Id: G-PTNHLB3WSX
 
 -->
 
-## [IGEL KB - How to Start with IGEL](https://kb.igel.com/howtocosmos/en/how-to-start-with-igel-cosmos-77865726.html)
+## [IGEL KB - How to Start with IGEL](https://kb.igel.com/en/how-to-start-with-igel/current/)
 
 ## [HOWTO IGEL (FAQ)](Docs/HOWTO-COSMOS.md)
 
@@ -29,13 +29,13 @@ Measurement Id: G-PTNHLB3WSX
 
 ----------
 
-## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/igelos-11.09/en/overview-first-steps-with-igel-os-11-101058650.html)
+## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
 
 ----------
 
 ----------
 
-## [IGEL KB - IGEL Product Security Information](https://kb.igel.com/securitysafety/en/igel-product-security-information-10346597.html)
+## [IGEL KB - IGEL Product Security Information](https://kb.igel.com/security-safety/current/igel-product-security-information)
 
 ----------
 

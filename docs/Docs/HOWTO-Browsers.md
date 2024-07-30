@@ -2,15 +2,15 @@
 
 IGEL OS 11 includes Chromium and Firefox browsers.
 
-- [KB: Chromium Browser Global](https://kb.igel.com/igelos-11.09/en/chromium-browser-global-session-in-igel-os-101061321.html)
-- [KB: Chromium Sessions](https://kb.igel.com/igelos-11.09/en/chromium-sessions-101061347.html)
-- [KB Firefox Browser Global ](https://kb.igel.com/igelos-11.09/en/firefox-browser-global-101061252.html)
-- [KB: Firefox Browser Session](https://kb.igel.com/igelos-11.09/en/firefox-browser-session-101061317.html)
+- [KB: Chromium Browser Global](https://kb.igel.com/en/igel-os/11.10/chromium-browser-global-session-in-igel-os)
+- [KB: Chromium Sessions](https://kb.igel.com/en/igel-os/11.10/chromium-sessions)
+- [KB Firefox Browser Global](https://kb.igel.com/en/igel-os/11.10/firefox-browser-global)
+- [KB: Firefox Browser Session](https://kb.igel.com/en/igel-os/11.10/firefox-browser-session)
 
 IGEL OS 12 has the following browsers. Other browsers are planned.
 
-- [KB: Chromium Browser](https://kb.igel.com/chromium-111/chromium-browser-81507068.html)
-- [App Portal: Firefox Browser](https://app.igel.com/#/api/firefox)
+- [KB: Chromium Browser](https://kb.igel.com/en/igel-apps/current/chromium-browser)
+- [App Portal: Firefox Browser](https://app.igel.com/firefox/115.12.0+1)
 
 -----
 

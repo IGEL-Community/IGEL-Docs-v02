@@ -50,7 +50,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - How can we trust that the identity information within a certificate is true and accurate?
 - It's impossible to verify each endpoint certificate, so modern operating systems instead rely on a trusted third party to sign these certs – a certificate authority
 - Modern operating systems contain a list trusted Root CAs – from those Root CAs, trust propagates downward
-    - [KB: CA Certificates in IGEL OS](https://kb.igel.com/igelos-11.09/en/which-ca-certificates-are-contained-in-igel-os-101060008.html)
+    - [KB: CA Certificates in IGEL OS](https://kb.igel.com/en/igel-os/11.10/which-ca-certificates-are-contained-in-igel-os)
     - [Microsoft Trusted CAs](https://learn.microsoft.com/en-us/security/trusted-root/participants-list)
 
 ![03](Images/HOWTO-Certificates-03.png)
@@ -133,7 +133,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - [OpenSSL Reference](https://www.sslshopper.com/article-most-common-openssl-commands.html)
 - [IGEL Community LetsEncrypt/Certbot tutorial](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-ICG-Free-Signed-Certificate/?h=)
 - [Building an AD CS Server in Your Lab](https://virtuallythere.blog/2018/04/24/making-things-a-bit-more-secure-part-1/)
-- [KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/endpointmgmt-12.04/en/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading-126846455.html)
+- [KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.04.120/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 -----
 

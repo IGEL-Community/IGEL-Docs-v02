@@ -86,7 +86,7 @@ igel-shutdown-inhibitor
 
 system monitor
 
-[KB: Conky](https://kb.igel.com/igelos-11.09/en/conky-system-monitor-101061558.html)
+[KB: Conky](https://kb.igel.com/en/igel-os/11.10/conky-system-monitor)
 
 [Conky Reference with Examples](http://www.ifxgroup.net/conky.htm#about)
 

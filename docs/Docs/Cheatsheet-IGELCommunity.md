@@ -12,7 +12,7 @@
 | IGEL   | ++delete++     |
 | LG     | ++f10++      |
 | Lenovo | ++fn+f12++ |
-| Microsoft | [Steps to setup](https://kb.igel.com/igelos-11.09/en/ud-pocket-seems-to-break-microsoft-surface-101060747.html) |
+| Microsoft | [Steps to setup](https://kb.igel.com/en/igel-os/11.10/ud-pocket-seems-to-break-microsoft-surface) |
 
 -----
 
@@ -288,11 +288,11 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 
 ## UMS-Files
 
-- [UMS 6 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-6.10/en/where-can-i-find-the-igel-ums-log-files-57320879.html)
+- [UMS 6 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/en/universal-management-suite/12.04.120/where-can-i-find-the-igel-ums-log-files)
 
-- [UMS 12 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/endpointmgmt-12.04/en/where-can-i-find-the-igel-ums-log-files-122457528.html)
+- [UMS 12 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/en/universal-management-suite/12.04.120/where-can-i-find-the-igel-ums-log-files)
 
-- [UMS 12  Where Can I Find the IGEL UMS UMS Web App Logs?](https://kb.igel.com/endpointmgmt-12.04/en/logging-in-the-igel-ums-web-app-122459853.html)
+- [UMS 12  Where Can I Find the IGEL UMS UMS Web App Logs?](https://kb.igel.com/en/universal-management-suite/12.04.120/logging-in-the-igel-ums-web-app)
 
 -----
 

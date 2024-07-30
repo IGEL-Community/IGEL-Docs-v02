@@ -48,7 +48,7 @@ Use at your own risk!
 
 -----
 
-## [OS 12 App Portal](https://kb.igel.com/howtocosmos/en/igel-app-portal-77865794.html)
+## [OS 12 App Portal](https://kb.igel.com/en/how-to-start-with-igel/current/igel-app-portal)
 
 - With IGEL OS 12, the modular principle is introduced – you can install and update single applications like Citrix or AVD client, Chromium browser, etc. individually. All applications currently available for IGEL OS 12 can be found in the IGEL App Portal. 
 
@@ -142,7 +142,7 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
     - One-time password: `TRY-IGEL`
     - Communication token: `94ad777f5b5894a7`
 
-[IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/howtocosmos/en/onboarding-igel-os-12-devices-77865898.html#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)
+[IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/en/how-to-start-with-igel/current/onboarding-igel-os-12-devices#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)
 
 -----
 

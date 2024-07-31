@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 ----
 
+## 2024-07-31 - [11.10.158.DER](readme11.10.158.DER.txt)
+
+```
+The new PRIVATE BUILD 11.10.158.DER for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Power Term
+
+* Added Ericom PowerTerm version 12.0.1.020170219 again.
+```
+
+----
+
 ## 2024-07-30 - [11.10.156](readme11.10.156.txt)
 
 ```

@@ -528,6 +528,8 @@ sequenceDiagram
     x.drivers.amdgpu.force_dri3
     x.drivers.amdgpu.use_tear_free
 
+- [Horizon Blast Protocol : Deprecation of the Switch Encoder Feature from 2312 & onwards. (96214)](https://kb.omnissa.com/s/article/96214)
+
 -----
 
 ## FAQ - Microsoft Windows 365

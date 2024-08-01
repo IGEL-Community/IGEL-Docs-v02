@@ -14,6 +14,25 @@ These are the release notes published with each release:
 
 ----
 
+## 2024-08-01 - [11.09.272](readme11.09.272.txt)
+
+```
+The new PRIVATE BUILD 11.09.272 for IGEL Workspace is ready.
+
+This build is based on 11.09.260.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fix: bluetooth scan do not longer block UMS settings.
+```
+
+----
+
 ## 2024-08-01 - [11.10.162](readme11.10.162.txt)
 
 ```

@@ -14,6 +14,110 @@ These are the release notes published with each release:
 
 ----
 
+## 2024-08-01 - [11.10.162](readme11.10.162.txt)
+
+```
+The new PRIVATE BUILD 11.10.162 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Hardware
+
+* Fixed issue with intel and additional graphic card issue:  
+* All graphic cards are now detected properly,  
+* All screens attached to all graphic cards should now be active.
+```
+
+----
+
+## 2024-08-01 - [11.10.161](readme11.10.161.txt)
+
+```
+The new PRIVATE BUILD 11.10.161 for IGEL Workspace is ready.
+
+This build is based on 11.10.151.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Added support for Horizon next-gen API  
+  If the server URL of a Horizon session matches the host name pattern defined
+  in vmware.view.v2_host, next-gen API will be used for this session.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Next-gen host name pattern}}                                  |
++------------+-----------------------------------------------------------------+
+| Registry   | {{vmware.view.v2_host}}                                         |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | .workspaceoneaccess.com                                         |
++------------+-----------------------------------------------------------------+
+```
+
+----
+
+## 2024-08-01 - [11.10.159](readme11.10.159.txt)
+
+```
+The new PRIVATE BUILD 11.10.159 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Fabulatech
+
+* Updated Fabulatech USB redirection to version 6.2.0.9  
+* Added interfaces parameter to configure Fabulatech USB redirection to only
+  redirect certain interfaces. The value is a space separated list of interface
+  indices. The interfaces parameter can only be accessed through the IGEL
+  registry. First create a device rule with VID and PID for the related device.
+  Then go to the IGEL registry under
+  rdp.usbredirection.devicepolicy.product_rule0.interfaces configure the
+  interface indices to redirect! Leave interfaces empty to redirect the whole
+  device.
+
++------------+-----------------------------------------------------------------+
+| Registry   | `rdp.usbredirection.devicepolicy.product_rule%.interfaces`      |
++------------+-----------------------------------------------------------------+
+| Value      | "" (default) / space separated list of interface indices to redirect, ie. "2 3" |
++------------+-----------------------------------------------------------------+
+```
+
+----
+
+## 2024-08-01 - [11.10.157](readme11.10.157.txt)
+
+```
+The new PRIVATE BUILD 11.10.157 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Firmware update
+
+* Lowers disk size limit for migration
+```
+
+----
+
 ## 2024-07-31 - [11.10.158.DER](readme11.10.158.DER.txt)
 
 ```

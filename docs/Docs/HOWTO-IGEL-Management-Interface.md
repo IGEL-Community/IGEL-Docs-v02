@@ -6,7 +6,7 @@ IGEL Management Interface (IMI) enables you to connect UMS to systems management
 
 ## IMI Documentation
 
-- [KB: IGEL Management Interface (IMI)](https://kb.igel.com/igelimi-v2/en/igel-management-interface-imi-4233737.html)
+- [KB: IGEL Management Interface (IMI)](https://kb.igel.com/en/igel-management-interface/current/imi-manual)
 
 -----
 

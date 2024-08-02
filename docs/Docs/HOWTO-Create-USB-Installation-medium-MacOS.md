@@ -2,9 +2,9 @@
 
 ## IGEL OS Creator Manual
 
-### [Create USB installation medium (Windows)](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-windows-101061855.html)
+### [Create USB installation medium (Windows)](https://kb.igel.com/en/igel-os/11.10/create-usb-installation-medium-windows)
 
-### [Create USB installation medium (Linux)](https://kb.igel.com/igelos-11.09/en/create-usb-installation-medium-linux-101061862.html)
+### [Create USB installation medium (Linux)](https://kb.igel.com/en/igel-os/11.10/create-usb-installation-medium-linux)
 
 **NOTE:** Another tool that can be used to copy ISO image onto USB stick is [Rufus](https://rufus.ie/en/)
 

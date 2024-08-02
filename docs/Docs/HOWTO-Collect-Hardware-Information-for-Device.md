@@ -4,9 +4,9 @@
 
 ## Collect Logs for IGEL Support
 
-- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/endpointmgmt-12.04/en/save-support-information-send-log-files-to-support-122459029.html)
+- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/en/universal-management-suite/12.04.120/save-support-information-send-log-files-to-support)
 
-- [KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/howtocosmos/en/debugging-how-to-collect-and-send-device-log-files-to-igel-support-81497527.html)
+- [KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/en/how-to-start-with-igel/current/debugging-how-to-collect-and-send-device-log-files)
 
 Command to run to collect logs, `/tmp/tclogs.zip`, for IGEL support.
 
@@ -185,9 +185,9 @@ login as "user" or "root": root
 
 These device profiles can be used to see all settings for a device and can also be used to compare two devices.
 
-[IGEL KB - Import Devices as Profiles](https://kb.igel.com/endpointmgmt-12.04/en/import-devices-as-profiles-122458416.html)
+[IGEL KB - Import Devices as Profiles](https://kb.igel.com/en/universal-management-suite/12.04.120/how-to-import-devices-as-profiles-in-the-igel-ums)
 
-[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.04/en/comparing-profiles-in-the-igel-ums-122458147.html)
+[IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.04.120/comparing-profiles-in-the-igel-ums)
 
 The following steps will:
 
@@ -202,7 +202,7 @@ The following steps will:
 
 ## Tips for prepping PC for IGEL OS install
 
-- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/igelos-11.09/en/bios-update-for-devices-supported-by-lvfs-101059165.html).
+- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/en/igel-os/11.10/bios-update-for-devices-supported-by-lvfs)
 - Make sure BIOS is set back to default settings.
 - Check for and apply BIOS settings for Ubuntu 18.04.
 
@@ -226,7 +226,7 @@ Save the change and reboot without the “Force VESA driver” option being set.
 
 [IGEL OS Boot Menu Explained – Video](https://videos.igelcommunity.com/igel-os-boot-menu-explained-video/)
 
-[IGEL KB - Boot Menu](https://kb.igel.com/igelos-11.09/en/boot-menu-101060905.html)
+[IGEL KB - Boot Menu](https://kb.igel.com/en/igel-os/11.10/boot-menu)
 
 ### Try VESA only boot
 
@@ -285,7 +285,7 @@ rm -rf $tmp_dir
 
 The IGEL Linux Registry offers a number of extended logging options that can help customers, Support and PreSales debug system and network issues.
 
-[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/igelos-11.09/en/extended-logging-with-syslog-tcpdump-and-netlog-101059833.html)
+[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/en/igel-os/11.10/extended-logging-with-syslog-tcpdump-and-netlog)
 
 -----
 
@@ -386,7 +386,7 @@ update
 
 ## Hardware Notes
 
-[Secured-Core PCs: Microsoft 3d-Party UEFI Certificate for Secure Boot](https://kb.igel.com/securitysafety/en/secured-core-pcs-microsoft-3d-party-uefi-certificate-for-secure-boot-70156597.html)
+[Secured-Core PCs: Microsoft 3d-Party UEFI Certificate for Secure Boot](https://kb.igel.com/security-safety/current/secured-core-pcs-microsoft-3rd-party-uefi-certific)
 
 [Dynabook Setup TECRA A40-J (PMM10U) || Version: PMM10U-00101U](https://github.com/IGEL-Community/IGEL-Docs/blob/main/Docs/HOWTO-Dynabook-Setup.md)
 
@@ -398,7 +398,7 @@ update
 
   - <a href="../Scripts/HOWTO-Collect-Hardware-Information-for-Device-set-BOOT-PWD.sh" download>Sample script to set BIOS password</a>
 
-[Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/igelos-11.09/en/new-features-11-07-170-101062351.html). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
+[Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/en/igel-os/11.10/resolved-issues-11-10-100). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
 
 [Microsoft Surface](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
 

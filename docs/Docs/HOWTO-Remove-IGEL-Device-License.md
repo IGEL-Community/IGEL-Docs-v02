@@ -4,9 +4,9 @@
 
 ## UMS 12
 
-[Resetting a Device to Factory Defaults via the IGEL UMS Web App](https://kb.igel.com/endpointmgmt-12.04/en/resetting-a-device-to-factory-defaults-via-the-igel-ums-web-app-122459384.html)
+[Resetting a Device to Factory Defaults via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.04.120/how-to-reset-a-device-to-factory-defaults-via-the-)
 
-[Recycle Bin - Deleting Objects in the IGEL UMS](https://kb.igel.com/endpointmgmt-12.04/en/recycle-bin-deleting-objects-in-the-igel-ums-122458548.html)
+[Recycle Bin - Deleting Objects in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.04.120/recycle-bin-deleting-objects-in-the-igel-ums)
 
 **Notes:**
 
@@ -19,7 +19,7 @@
     - corresponding Unit IDs will be removed from all registered Product Packs if the IGEL License Portal (ILP) can be reached (ILP level)
     - Thus, the affected licenses are completely removed and can be deployed to another device.
 
-- [Resetting a Device with Unknown Administrator Password](https://kb.igel.com/igelos-11.09/en/resetting-a-device-with-unknown-administrator-password-101059753.html)
+- [Resetting a Device with Unknown Administrator Password](https://kb.igel.com/en/igel-os/11.10/how-to-reset-a-device-with-unknown-administrator-p)
 
 -----
 
@@ -30,7 +30,7 @@
 - Remove the License Pack from the IGEL Device
 - Reset IGEL Device to Factory Defaults
 
-**Note:** [IGEL Knowledge Base: Removing an IGEL License Completely](https://kb.igel.com/licensesmore-igelos11/en/removing-an-igel-license-completely-24391359.html)
+**Note:** [IGEL Knowledge Base: Removing an IGEL License Completely](https://kb.igel.com/en/igel-subscription-and-more/current/how-to-remove-an-igel-license-completely)
 
 -----
 

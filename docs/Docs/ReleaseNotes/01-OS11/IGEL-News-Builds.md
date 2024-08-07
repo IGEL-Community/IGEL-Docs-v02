@@ -9,7 +9,18 @@ the integrated features or bugfixes.
  
 Please keep in mind a Private Build is a fully supported firmware!
 ********************************************************************************
-These are the release notes published with each release:
+```
+
+----
+
+## 2024-08-07 - [11.10.164](readme11.10.164.txt)
+
+```
+The new PRIVATE BUILD 11.10.164 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
 
 Resolved Issues
 --------------------------------------------------------------------------------
@@ -26,18 +37,6 @@ Resolved Issues
 
 * When enabled this setting fixes barcode reader dropping inputs when scanning
   labels with reoccuring characters.
-```
-
-----
-
-## 2024-08-01 - [11.10.162](readme11.10.162.txt)
-
-```
-The new PRIVATE BUILD 11.10.162 for IGEL Workspace is ready.
-
-This build is based on 11.10.150.
-
-These are the release notes published with that release:
 ```
 
 ----

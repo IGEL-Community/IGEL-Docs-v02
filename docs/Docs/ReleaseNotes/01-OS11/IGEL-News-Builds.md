@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-08-19 - [11.10.165](readme11.10.165.txt)
+
+```
+The new PRIVATE BUILD 11.10.165 for IGEL Workspace is ready.
+
+This build is based on 11.10.154.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Integrated AVD 1.3.0 with MSAL enabled
+```
+
+----
+
 ## 2024-08-07 - [11.10.164](readme11.10.164.txt)
 
 ```

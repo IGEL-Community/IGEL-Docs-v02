@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-08-22 - [11.10.166](readme11.10.166.txt)
+
+```
+The new PRIVATE BUILD 11.10.166 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Fix: rmagent Device registration
+```
+
+----
+
 ## 2024-08-19 - [11.10.165](readme11.10.165.txt)
 
 ```

@@ -458,6 +458,18 @@ echo "IGEL support for Priority or Plus support phone number for US and Canada i
 ```bash linenums="1"
 4158133933
 ```
+**Print strings with `; ` separator on separate lines**
+
+```bash linenums="1"
+echo "this; is; a; test" | tr -d ' ' | tr ';' '\n'
+```
+
+```bash linenums="1"
+this
+is
+a
+test
+```
 
 ## uname
 

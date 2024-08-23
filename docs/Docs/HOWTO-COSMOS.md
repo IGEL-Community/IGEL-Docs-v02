@@ -380,6 +380,37 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
 - [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.04.120/configure-the-ums-to-integrate-reverse-proxy-with-)
 
+**Q:** To secure reverse proxy, what are the paths that need to be enabled?
+
+**A:** UMS endpoint paths for Reverse Proxy integration. The used/required paths for OS12 and UMS Web App:
+
+- The paths required for OS 12 device connections to the UMS (via a Reverse Proxy) are:
+
+```bash linenums="1"
+The root path is:
+
+/device-connector/device/*
+
+in more details it would be:
+
+/device-connector/device/ws-connect
+/device-connector/device/portforwarding
+/device-connector/device/.well-known/est/*
+
+and also the appproxy path is required:
+
+/ums-appproxy/*
+
+The device communication is always TLSv1.3.
+
+In case the UMS Web App should be used via a Reverse Proxy the following paths are required:
+
+/wums-app/*
+/webapp/*
+
+Here TLSv1.2 or TLSv1.3 is used.
+```
+
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
 **A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-universal-management-suite-network-configurat)

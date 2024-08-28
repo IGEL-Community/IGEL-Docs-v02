@@ -593,3 +593,41 @@ sequenceDiagram
 Have Cisco ISE engineer use (DHCP IGEL tag) + (ITC* hostname) to fingerprint the device and apply an "IGEL Device for Imaging" ISE Policy. This allows access to SCEP, UMS, Imprivata, etc until 802.1x kicked in. Use the same certificates that is already setup for Cisco ISE Wireless. If 802.1x Auth fails, then it attempts a normal LAN connection. So it's safe to test.  You'll need a Cisco ISE engineer to see in their logs that it was successful.
 
 - [SCEP Client (NDES)](https://kb.igel.com/en/igel-os-base-system/12.4/scep-client-ndes-in-igel-os-12)
+
+-----
+
+## FAQ - Device Specific Data
+
+**Q:** How to extend UMS for device specific data like location, department, or attached hardware?
+
+**A:** [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/12.04.120/how-to-manage-igel-os-devices-by-device-specific-d)
+
+- Set UMS Structure Tag with the city the device is currently in
+
+```bash linenums="1"
+#!/bin/bash
+
+# Get Geo Location
+# Find City
+# Set system.remotemanager.ums_structure_tag to City
+
+CITY=$(curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null | cut -d ":" -f 7 | cut -d "\"" -f 2)
+
+setparam \
+system.remotemanager.ums_structure_tag \
+"${CITY}"
+killwait_postsetupd
+write_rmsettings
+```
+
+- Public facing IP
+
+```bash linenums="1"
+curl https://ipinfo.io/ip
+```
+
+- All information on device location
+
+```bash linenums="1"
+curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
+```

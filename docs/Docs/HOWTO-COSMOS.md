@@ -435,6 +435,10 @@ Here TLSv1.2 or TLSv1.3 is used.
 https://yourICG:8443/usg/server-status
 ```
 
+**Q:** Having issue with ICG remote installer from UMS.
+
+**A:** Make sure that SSH is running on ICG and that the account used from UMS has `sudo` rights. [IGEL KB: ICG How-Tos - Giving a User sudo Privileges](https://kb.igel.com/en/igel-cloud-gateway/12.05/giving-a-user-sudo-privileges). Linux setup example can be found in [IGEL Community Docs HOWTO Setup Lab Sandbox Environment - Optional - Install ICG from UMS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#optional-install-icg-from-ums-os-11)
+
 -----
 
 ## FAQ - Onboarding Service (OBS)

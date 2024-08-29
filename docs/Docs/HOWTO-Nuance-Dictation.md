@@ -10,6 +10,14 @@ In general, USB redirection is not needed for standard functionality such as aud
  
 [When to use USB Redirection](https://kb.igel.com/en/igel-os/11.10/when-to-use-usb-redirection)
 
+- Citrix made a change in CWAL 2405 that affects USB redirection. In order to support the new method, Citrix Virtual Apps and Desktops 2206 or later is needed. Then the following Citrix policies must be configured and enabled.
+
+    - Allow Existing USB Devices to automatically be connected: `Automatically redirect all available USB Devices`
+    - Allow Newly Arrived USB Devices to be automatically connected: `Automatically redirect all available USB Devices`
+    - Client USB Redirection Rules: `Allowed`
+
+![image32](Images/HOWTO-Nuance-Dictation-32.png)
+
 -----
 
 -----

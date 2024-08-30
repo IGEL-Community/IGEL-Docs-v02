@@ -25,11 +25,11 @@ Contact IGEL channel team for options to access [IGEL Academy Premium](https://w
 
 ## IGEL Academy Course Duration
 
-### IGEL Certified Sales Professional (ICSP) (60-90 min)
+### IGEL Certified Sales Professional (ICSP) (2.5 hours)
 
-- 20 min Foundations course
-- 20 min ICSP course
-- 40 min for exam
+- 50 min Foundations course
+- 50 min ICSP course
+- 50 min for exam
 
 ### IGEL Certified Professional (ICP) (2.5 hours)
 

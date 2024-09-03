@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-09-03 - [11.10.168](readme11.10.168.txt)
+
+```
+The new PRIVATE BUILD 11.10.168 for IGEL Workspace is ready.
+
+This build is based on 11.10.100.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Audio
+
+* Fix for USB Headsets at LG CQ600i
+```
+
+----
+
 ## 2024-08-22 - [11.10.166](readme11.10.166.txt)
 
 ```

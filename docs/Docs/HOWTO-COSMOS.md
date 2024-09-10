@@ -167,6 +167,12 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [IGEL KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-ums-and-devices-secure-shadowing-communicatio)
 
+**Q:** How to fix Slow VNC shadowing with 4K screens?
+
+**A:** Enable `network.vncserver.snapfb` VNC option in registry.
+
+  ![image-howto-cosmos-10](Images/HOWTO-COSMOS-10.png)
+
 **Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
 
 **A:** Open `UMS Console` and add `General - WebApp > App Management > Allow`  permission to account(s). Steps:

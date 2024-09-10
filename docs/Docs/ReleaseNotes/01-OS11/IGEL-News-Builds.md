@@ -13,6 +13,32 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-09-10 - [11.10.172](readme11.10.172.txt)
+
+```
+The new PRIVATE BUILD 11.10.172 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Updated chromium browser to version 128.0.6613.119.  
+* Fixed chromium security issues CVE-2024-8362, CVE-2024-7970, CVE-2024-8198,
+  CVE-2024-8194, CVE-2024-8193, CVE-2024-8035, CVE-2024-8034, CVE-2024-8033,
+  CVE-2024-7981, CVE-2024-7980, CVE-2024-7979, CVE-2024-7978, CVE-2024-7977,
+  CVE-2024-7976, CVE-2024-7975, CVE-2024-7974, CVE-2024-7973, CVE-2024-7972,
+  CVE-2024-7971, CVE-2024-7969, CVE-2024-7968, CVE-2024-7967, CVE-2024-7966,
+  CVE-2024-7965 and CVE-2024-7964.
+* Fixed expat security issues CVE-2024-45490, CVE-2024-45491 and CVE-2024-45492.
+```
+
+----
+
 ## 2024-09-05 - [11.10.169](readme11.10.169.txt)
 
 ```

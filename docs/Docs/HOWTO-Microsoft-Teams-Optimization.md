@@ -1,5 +1,7 @@
 # HOWTO Microsoft Teams
 
+## [Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)](https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy#citrix-virtual-apps-and-desktops-and-citrix-daas-requirements)
+
 ## [IGEL OS UCC Configuration Guide](HOWTO-UCC-Guide.md)
 
 ## [Teams for Virtualized Desktop Infrastructure](https://learn.microsoft.com/en-us/microsoftteams/teams-for-vdi)

@@ -45,6 +45,14 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 -----
 
+## IGEL + Citrix = HEVC
+
+Citrix recently shared an Early Access Release of the Citrix Workspace App for Linux 2408 (CWAL2408) with IGEL. One of the biggest features that are added, that I have been waiting for a very long time, is the H.265 enablement for Hardware Acceleration of the session delivery. 
+
+- [Citrix Workspace App for Linux 2408 (CWAL2408) with IGEL](https://virtualbrat.com/2024/09/13/igel-citrix-hevc/)
+
+-----
+
 ## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/en/igel-os/11.10/virtual-background-for-unified-communication-apps-)
 
 -----

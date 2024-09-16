@@ -322,3 +322,10 @@ The removal of NPAPI support by Firefox will affect user experience for users wh
 There are two options how to configure the virtual channel allow list for enabling FabulaTech in a Citrix Virtual Apps and Desktops environment: Allowing all virtual channels or Allowing all Citrix channels and FabulaTech channel. Both settings need to be set on VDA level. The required configuration can be found in the Citrix farm policies. The setting’s name is "Virtual channel allow list".
 
 - [FabulaTech Support: Adding FabulaTech to the Virtual Channel Allow List of Citrix](https://www.fabulatech.com/support-articles/citrix-allow-list.html)
+
+-----
+
+## Citrix testing tools for Webcam and Audio/Mic redirection
+
+- [Webcam Preview Test Application](https://support.citrix.com/s/article/CTX547245-webcam-preview-test-application?language=en_US)
+- [Citrix Audio Diagnostic Tool](https://support.citrix.com/s/article/CTX579089-citrix-audio-diagnostic-tool?language=en_US)

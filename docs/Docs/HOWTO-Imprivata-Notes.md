@@ -520,3 +520,41 @@ Monitor the log file: `tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log`
 Once the above option is enabled in computer policy (sync and reboot IGEL device(s)) you can right click on turn off button right hand side of the screen:
 
   - Hold down ++ctrl++ and right click on the power button
+
+-----
+
+## Sample Scripts
+
+### Reset Imprivata
+
+```bash linenums="1"
+#!/bin/bash
+
+#view logged messages
+#journalctl | reset_imprivata
+#Eike Schwoeppe
+#braincon GmbH
+#05.09.2024
+#IGEL Community rocks#
+
+#Logging action
+ACTION="reset_imprivata_${1}"
+#output to systemlog with ID and tag
+LOGGER="logger -it ${ACTION}"
+#Starting script
+$LOGGER "Starting reset imprivata Script in 5 min"
+sleep 300
+
+if [ -a /.imprivata_data/runtime/offline/Agent/FirstDomain.txt ]
+then
+	$LOGGER "Imprivata successfully deployed"
+
+else
+	$LOGGER "Imprivata not successfully deployed. Reset  / Update and Reboot"
+	ImprivataBootstrap -w
+    rm -r /.imprivata_data/runtime/lib
+    update
+	reboot
+fi
+$LOGGER "End"
+exit 0

@@ -56,7 +56,10 @@ Use at your own risk!
 
 ## OS 12 App SDK (Coming soon)
 
-- Build your own IGEL OS App with IGEL OS App SDK
+Build your own IGEL OS App with IGEL OS App SDK.
+
+- [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal)
+- [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 
 -----
 

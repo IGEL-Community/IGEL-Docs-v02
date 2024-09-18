@@ -30,6 +30,14 @@ driverless ipp://IP-address-of-printer/ipp/print | sed -e '/IP-address-of-printe
 
 -----
 
+### FInd the name of the driver for your printer model that has 1536 in name
+
+```bash linenums="1"
+lpinfo --make-and-model '1536' -m
+```
+
+-----
+
 ## USB always on (Printer, Scanner, etc.)
 
 System > Firmware Customization > Custom Commands > Desktop

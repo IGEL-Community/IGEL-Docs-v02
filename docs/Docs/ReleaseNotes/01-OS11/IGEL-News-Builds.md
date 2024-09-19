@@ -13,6 +13,37 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-09-19 - [11.10.174](readme11.10.174.txt)
+
+```
+The new PRIVATE BUILD 11.10.174 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+- Add setup parameter to set connect timeout
+
++------------+-----------------------------------------------------------------+
+| IGEL Setup | system > remotemanager                                          |
++============+=================================================================+
+| Parameter  | `IGEL Remote Management Connect Timeout`                        |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.remotemanager.connect_timeout`                          |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | timeout in sec / **45** (default)                               |
++------------+-----------------------------------------------------------------+
+```
+
+----
+
 ## 2024-09-10 - [11.10.172](readme11.10.172.txt)
 
 ```

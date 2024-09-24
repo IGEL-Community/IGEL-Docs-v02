@@ -83,6 +83,7 @@ Changelog for IGEL OS Base System @ 12.5.0
 ```
   - Enable Pinyin method:
 ```
+
 | Parameter | Setup | Registry | Value |
 | ------ | ------ | ------ | ------ |
 | Chinese Intelligent Pinyin | User Interface>Input>Keyboard>Input Methods>Methods | userinterface.keyboard.ibus.general.preload-engine-libpinyin | false(default) / true |

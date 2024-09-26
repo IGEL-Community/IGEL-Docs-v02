@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-09-26 - [11.10.175](readme11.10.175.txt)
+
+```
+The new PRIVATE BUILD 11.10.175 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### RD Web Access
+
+* Fixed Remote Desktop Web Access login not working reliably.
+```
+
+----
+
 ## 2024-09-25 - [11.09.273](readme11.09.273.txt)
 
 ```

@@ -567,6 +567,10 @@ sequenceDiagram
 
 **A:** [Raise the level of security for your AVD and Windows 365 access – Make sure that ONLY your managed IGEL OS endpoints can access your environment](https://virtualbrat.com/2024/04/18/raise-the-level-of-security-for-your-avd-and-windows-365-access-make-sure-that-only-your-managed-igel-os-endpoints-can-access-your-environment-this-is-the-why-and-how/)
 
+**Q:** How to enable smart card authentication support for Azure Virtual Desktop (AVD)?
+
+**A:** [IGEL smart card Auth to Azure Virtual Desktop](https://virtualbrat.com/2024/09/27/igel-smart-card-auth-to-azure-virtual-desktop-soon-in-the-igel-app-portal-you-can-take-it-for-a-test-drive-already-now/)
+
 -----
 
 ## FAQ - VMware Horizon

@@ -338,6 +338,14 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 - [HOWTO Make OSC Unattended ISO Boot](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/Make_OSC_Unattended_ISO_Boot)
 
+**Q:** Having issue installing applications and getting error: `Update: Failed getting metadata from all APP Portals`
+
+**A:** This error message typically indicates that there is something blocking access to the remote IGEL App Portal, or that there is a proxy server that is doing SSL inspection. Run the following command to check for blocking or proxy server that is doing SSL inspection (send results to your network team to review):
+
+```bash linenums="1"
+curl -v -k https://app.igel.com
+```
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

@@ -62,6 +62,8 @@ Build your own IGEL OS App with IGEL OS App SDK.
 - [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal)
 - [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 
+**Please Note:** Currently, for security requirements, the IGEL App Creator Portal only allows for debian and ubuntu official repository URLs. IGEL is planning to allow for non-official URLs with a future release.
+
 -----
 
 ## Do you have a UD Pocket with IGEL OS 12 from Disrupt?

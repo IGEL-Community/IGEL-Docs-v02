@@ -13,6 +13,34 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-09-28 - [11.10.177](readme11.10.177.txt)
+
+```
+The new PRIVATE BUILD 11.10.177 for IGEL Workspace is ready.
+
+This build is based on 11.10.154.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### TC Setup (Java)
+
+* Upgraded to TC Setup version 12.6.1  
+* Added deviceTRUST and Cisco WebEx VDI options to the Sessions > AVD > AVD
+  Sessions > AVD Session > Plugins page
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed dynamic virtual channel initialization
+```
+
+----
+
 ## 2024-09-26 - [11.10.175](readme11.10.175.txt)
 
 ```

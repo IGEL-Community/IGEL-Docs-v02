@@ -116,6 +116,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - UMS
 
+**Q:** What steps to perform post install of UMS?
+
+**A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/12.05.100/post-installation-configuration-of-the-igel-ums-se). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
+
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
 **A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/en/universal-management-suite/12.04.120/known-issue-ums-cannot-connect-to-the-ms-sql-datab)

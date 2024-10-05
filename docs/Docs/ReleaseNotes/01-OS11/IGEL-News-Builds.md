@@ -13,6 +13,39 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-10-04 - [11.10.179](readme11.10.179.txt)
+
+```
+The new PRIVATE BUILD 11.10.179 for IGEL Workspace is ready.
+
+This build is based on 11.10.172.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Network
+
+* SCEP: When the CA fingerprint or the CA identifier is changed the client
+  certificate and the client key are not discarded anymore. Just new CA and RA
+  certificates will be downloaded.
+* SCEP: Content-Type: application/x-pki-message is sent according to RFC 8894 if
+  the following new option is enabled:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Send Content-Type}}                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | {{network.scepclient.cert%.sscep.send_content_type}}            |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+```
+
+----
+
 ## 2024-09-28 - [11.10.177](readme11.10.177.txt)
 
 ```

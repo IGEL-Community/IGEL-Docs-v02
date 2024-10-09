@@ -66,6 +66,7 @@ Build your own IGEL OS App with IGEL OS App SDK.
 
 - The IGEL App Creator portal runs the IGEL SDK to create and sign your application for OS12
 - Currently, for security requirements, the IGEL App Creator Portal only allows for debian and ubuntu official repository URLs. IGEL is planning to allow for non-official URLs with a future release
+- For OS 12.5.0+ need to have the app `Compatibility layer for 12.0.x apps` installed or you may get error message about app not found.
 
 
 -----

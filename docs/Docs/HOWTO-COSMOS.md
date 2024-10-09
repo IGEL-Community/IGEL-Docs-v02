@@ -575,6 +575,13 @@ sequenceDiagram
 
 **A:** [IGEL smart card Auth to Azure Virtual Desktop](https://virtualbrat.com/2024/09/27/igel-smart-card-auth-to-azure-virtual-desktop-soon-in-the-igel-app-portal-you-can-take-it-for-a-test-drive-already-now/)
 
+**Q:** Having issues logging into AVD and getting error code 50058
+
+**A:** Enable the following AVD session number `%` in the registry for AVD app:
+app.avd.sessions.avd%.options.compact-login-view
+
+![image-howto-cosmos-11](Images/HOWTO-COSMOS-11.png)
+
 -----
 
 ## FAQ - VMware Horizon

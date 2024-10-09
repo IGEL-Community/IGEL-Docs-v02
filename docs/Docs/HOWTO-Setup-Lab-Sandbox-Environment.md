@@ -2,6 +2,12 @@
 
 -----
 
+My 4+ year old home lab server: 
+
+- Intel NUC (NUC8i3BEH) 32GB RAM and 1TB SSD (such as - Kingston SKC2500M8/1000G)
+
+-----
+
 ## IGEL Security Ports One Pager
 
 ```mermaid

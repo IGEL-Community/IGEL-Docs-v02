@@ -664,3 +664,11 @@ curl https://ipinfo.io/ip
 ```bash linenums="1"
 curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 ```
+
+-----
+
+## FAQ - OS 12 App Creator Portal
+
+**Q:** How can I create and distribute my own applications for OS 12?
+
+**A:** The [IGEL App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#os-12-app-sdk-coming-soon) can be used to create OS 12 applications

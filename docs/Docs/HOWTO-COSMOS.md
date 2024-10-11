@@ -274,7 +274,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What are the hardware requirements for OS 12?
 
-**A:** [IGEL KB: Requirements for IGEL OS 12](https://kb.igel.com/en/hardware/current/devices-supported-by-igel-os-12)
+**A:** [IGEL KB: Devices Supported by IGEL OS 12](https://kb.igel.com/hardware/current/devices-supported-by-igel-os-12-1)
 
 **Q:** I want to quickly test out OS 12. What are the steps to test?
 

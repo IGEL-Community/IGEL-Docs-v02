@@ -95,6 +95,8 @@ Steps to test out your UDPocket or OS 12 installed device
 
 ### Optional - Use igelpkgctl command line
 
+- [Options for igelpkgctl](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/?h=igelpkgctl#igelos-12-packages-igelpkgctl)
+
 - Open a Terminal Window as root (add terminal session from setup)
 
 - List packages to install:
@@ -125,8 +127,21 @@ igelpkgctl install chromium
 
 - Open Setup to add a Chromium session: ++ctrl+alt+s++ 
 
-[Options for igelpkgctl](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/?h=igelpkgctl#igelos-12-packages-igelpkgctl)
+- Create comma separated list of installed applications :
 
+```bash linenums="1"
+igelpkgctl list installed | sed '1d' | sed 's/-.*$//' | tr -d '.0-9\t+-' | awk '{print}' ORS=','
+```
+
+```bash linenums="1"
+avahi_daemon,avd,base_system,chromium,chromium_libva,chromium_multimedia_codec,citrix_multimedia_codec,compatlayer,cups_printing,cwa,debugtools,horizon,intune
+```
+
+- Uninstall AVD:
+
+```bash linenums="1"
+echo "Y" | igelpkgctl uninstall avd
+```
 
 ### Optional - How to reset a device
 

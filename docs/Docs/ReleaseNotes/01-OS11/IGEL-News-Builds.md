@@ -13,6 +13,38 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 ----
 
+## 2024-10-17 - [11.10.121](readme11.10.121.txt)
+
+```
+The new PRIVATE BUILD 11.10.121 for IGEL Workspace is ready.
+
+This build is based on 11.10.120.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Following plugins are available in this release:
+* Citrix Workspace App: 20.10.0.6,  24.02.0.65, and 24.05.0.76
+* Citrix EPA/NSGW: 24.10
+* Cisco Webex VDI plugin: 44.6.0.30048�
+* Cisco Webex Meetings VDI plugin: 42.10.8.14, 42.6.11.6, and 43.6.8.4
+* Zoom Media Plugin: 5.17.13.25060, 5.16.10.24420, and 5.17.6.24660
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed issue with Citrix App Protection not working with Selfservice. . Enable
+  registry key "ica.selfservice.Selfservice_tray_icon"
+```
+
+----
+
 ## 2024-10-14 - [11.10.182](readme11.10.182.txt)
 
 ```

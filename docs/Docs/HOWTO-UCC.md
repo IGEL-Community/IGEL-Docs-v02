@@ -61,6 +61,8 @@ Citrix recently shared an Early Access Release of the Citrix Workspace App for L
 
 In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.
 
+**Note from IGEL Support:** Native USB redirection should be a means of last resort - it's pretty much the equivalent of plugging that device directly into the session via a long, virtual USB cable. The virtual session has direct access to the device, which is nice, but you lose compression, flow control, and any other optimizations that may occur via a dedicated virtual channel.
+
 - [When to use USB Redirection](https://kb.igel.com/en/igel-os/11.10/when-to-use-usb-redirection)
 
 - [Citrix 2405 - Composite USB device redirection using DDC policies](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#composite-usb-device-redirection-using-ddc-policies)

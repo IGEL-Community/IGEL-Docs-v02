@@ -136,6 +136,11 @@ igelpkgctl list installed | sed '1d' | sed 's/-.*$//' | tr -d '.0-9\t+-' | awk '
 ```bash linenums="1"
 avahi_daemon,avd,base_system,chromium,chromium_libva,chromium_multimedia_codec,citrix_multimedia_codec,compatlayer,cups_printing,cwa,debugtools,horizon,intune
 ```
+- List unique applications
+
+```bash linenums="1"
+igelpkgctl list | sed 's/-.*//' | uniq
+```
 
 - Uninstall AVD:
 

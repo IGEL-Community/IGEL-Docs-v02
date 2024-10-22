@@ -11,6 +11,8 @@ This is a comment section
 |------------|--------|-------|
 | Enter the program to be a registered IGEL partner. Obtain fundamental sales and technical proficiencies in IGEL products and solutions to develop pipeline and first sale. | Develop a dedicated IGEL practice with designated sales and technical staff, leading to new customer acquisitions, co-sell opportunities with IGEL and growing competency in providing services. | Sell the IGEL portfolio consistently, nationwide or globally, with a fully dedicated IGEL practice, driving sales, acquiring new logos, increasing wallet share, and delivering services and support. |
 
+![image01](Images/HOWTO-Channel-Partners-01.png)
+
 ----------
 
 ----------

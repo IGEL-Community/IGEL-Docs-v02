@@ -11,6 +11,60 @@ Please keep in mind a Private Build is a fully supported firmware!
 ********************************************************************************
 ```
 
+-----
+
+## 2024-10-24 - [11.10.190](readme11.10.190.txt)
+
+```
+The new PUBLIC BUILD 11.10.190 for IGEL Workspace is ready.
+
+These are the release notes published with that release:
+
+Release Notes 11.10.190 (Based On 11.10.150)
+--------------------------------------------------------------------------------
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated chromium browser to current mainline version 129.0.6668.100.  
+* Fixed chromium security issues CVE-2024-9603, CVE-2024-9602, CVE-2024-9370,
+  CVE-2024-9369, CVE-2024-9123, CVE-2024-9122, CVE-2024-9121, CVE-2024-9120,
+  CVE-2024-8909, CVE-2024-8908, CVE-2024-8907, CVE-2024-8906, CVE-2024-8905,
+  CVE-2024-8904, CVE-2024-8639, CVE-2024-8638, CVE-2024-8637, CVE-2024-8636,
+  CVE-2024-8362, CVE-2024-8198, CVE-2024-8194, CVE-2024-8193, CVE-2024-8035,
+  CVE-2024-8034, CVE-2024-8033, CVE-2024-7981, CVE-2024-7980, CVE-2024-7979,
+  CVE-2024-7978, CVE-2024-7977, CVE-2024-7976, CVE-2024-7975, CVE-2024-7974,
+  CVE-2024-7973, CVE-2024-7972, CVE-2024-7971, CVE-2024-7970, CVE-2024-7969,
+  CVE-2024-7968, CVE-2024-7967, CVE-2024-7966, CVE-2024-7965, CVE-2024-7964,
+  CVE-2024-7550, CVE-2024-7536, CVE-2024-7535, CVE-2024-7534, CVE-2024-7533,
+  CVE-2024-7532, CVE-2024-7256, CVE-2024-7255, CVE-2024-7025, CVE-2024-7005,
+  CVE-2024-7004, CVE-2024-7003, CVE-2024-7001, CVE-2024-7000, CVE-2024-6999,
+  CVE-2024-6998, CVE-2024-6997, CVE-2024-6996, CVE-2024-6995, CVE-2024-6994,
+  CVE-2024-6993, CVE-2024-6992, CVE-2024-6991, CVE-2024-6990, CVE-2024-6989,
+  CVE-2024-6988, CVE-2024-6779, CVE-2024-6778, CVE-2024-6777, CVE-2024-6776,
+  CVE-2024-6775, CVE-2024-6774, CVE-2024-6773, CVE-2024-6772, CVE-2024-6293,
+  CVE-2024-6292, CVE-2024-6291 and CVE-2024-6290.
+
+### Firefox
+
+* Updated Mozilla Firefox to version 115.16.1 ESR  
+* Fixes for mfsa2024-30, also known as:  
+  CVE-2024-7652, CVE-2024-6600, CVE-2024-6601, CVE-2024-6602,  
+  CVE-2024-6603, CVE-2024-6604.  
+* Fixes for mfsa2024-34, also known as:  
+  CVE-2024-7519, CVE-2024-7521, CVE-2024-7522, CVE-2024-7524,  
+  CVE-2024-7525, CVE-2024-7526, CVE-2024-7527, CVE-2024-7529,  
+  CVE-2024-7531.  
+* Fixes for mfsa2024-41, also known as:  
+  CVE-2024-8381, CVE-2024-8382, CVE-2024-8383, CVE-2024-8384.  
+* Fixes for mfsa2024-48, also known as:  
+  CVE-2024-9392, CVE-2024-9393, CVE-2024-9394, CVE-2024-9401.  
+* Fixes for mfsa2024-51, also known as:  
+  CVE-2024-9680.
+```
+
 ----
 
 ## 2024-10-16 - [11.10.121](readme11.10.121.txt)

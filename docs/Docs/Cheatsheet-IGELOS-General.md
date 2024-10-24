@@ -50,6 +50,16 @@ curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/
 100   982  100   982    0     0   3494      0 --:--:-- --:--:-- --:--:--  3494
 ```
 
+Find geo location of device
+
+```bash linenums="1"
+curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
+```
+
+```bash linenums="1"
+{"status":"success","country":"United States","countryCode":"US","region":"NM","regionName":"New Mexico","city":"Corrales","zip":"87048","lat":35.2358,"lon":-106.6177,"timezone":"America/Denver","isp":"Comcast Cable Communications, LLC","org":"Comcast Cable Communications, LLC","as":"AS7922 Comcast Cable Communications, LLC","query":"73.242.149.67"}
+```
+
 ## florence
 
 Onscreen keyboard

@@ -5,7 +5,7 @@ UPDATE
 -->
 - IGEL UMS Version Base: [12.06.100](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.06.100.txt)
 
-- IGEL OS Firmware Base: [11.10.150](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.150.txt)
+- IGEL OS Firmware Base: [11.10.190](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.190.txt)
 
 - IGEL OS Firmware Base: [11.10.100](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.100.txt)
 
@@ -26,7 +26,7 @@ UPDATE
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
 
 
-| Clients                          | 11.10.100            | 11.10.150              |
+| Clients                          | 11.10.100            | 11.10.190              |
 |----------------------------------|----------------------|------------------------|
 | Cisco JVDI Client                | 14.3.0               | 14.3.0                 |
 | Cisco Webex Meetings VDI plugin  | 42.10.8.14           | 42.10.8.14             |
@@ -122,7 +122,7 @@ IGEL OS:
 <!--
 UPDATE
 -->
-- IGEL OS 11.10.150 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.10.190 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.10.100 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
 - IGEL OS 11.09.313 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.310 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))

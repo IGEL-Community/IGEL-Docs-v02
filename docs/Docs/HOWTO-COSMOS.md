@@ -112,6 +112,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Hardware-bundled IGEL license will be purchased together with hardware manufactured by an IGEL Hardware Partner. This type of license, will be a IGEL PAS (Platform Access Subscription) which is deployed based on the serial number of the device it is sold with. The license can be deployed automatically through the Universal Management Suite (UMS) or manually through the IGEL Licensing Portal (ILP). The license can be separated from its hardware and can be deployed on a different device. [IGEL KB: Hardware-Bundled IGEL License Deployment](https://kb.igel.com/en/igel-subscription-and-more/current/hardware-bundled-igel-license-deployment)
 
+**Q:** How to remove expired / unused licenses from UMS?
+
+**A:** There is also a new Administrative Task available in UMS 12.06 that will remove expired / unused licenses from UMS.
+
 -----
 
 ## FAQ - UMS

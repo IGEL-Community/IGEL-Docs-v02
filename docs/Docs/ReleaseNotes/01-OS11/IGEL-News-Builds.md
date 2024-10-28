@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-10-28 - [11.10.192](readme11.10.192.txt)
+
+```
+The new PRIVATE BUILD 11.10.192 for IGEL Workspace is ready.
+
+This build is based on 11.10.190.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Updated PrinterLogic Installer Client to version 25.1.0.695
+```
+
+-----
+
 ## 2024-10-24 - [11.10.190](readme11.10.190.txt)
 
 ```

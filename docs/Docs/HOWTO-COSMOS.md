@@ -116,6 +116,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** There is also a new Administrative Task available in UMS 12.06 that will remove expired / unused licenses from UMS.
 
+**Q:** We have a customer, which is migrating to another provider. How can we migrate an entire Product Pack from one licensing portal to another?
+
+**A:** Reach out to your IGEL Sales Rep or partner. There are legalities to this that need to be confirmed, and paperwork that needs to be submitted by both sides. Once everyone approves, usually the licenses can then be transferred. If you don't have a direct IGEL Sales contact, you can try submitting a license question request via the [IGEL Customer Portal](https://support.igel.com/). There is a button for this on the landing page.
+
 -----
 
 ## FAQ - UMS

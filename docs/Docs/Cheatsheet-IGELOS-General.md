@@ -50,19 +50,14 @@ curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/
 100   982  100   982    0     0   3494      0 --:--:-- --:--:-- --:--:--  3494
 ```
 
-Find geo location of device
+Find location of device
 
 ```bash linenums="1"
 curl -s "http://worldtimeapi.org/api/ip/"
 ```
 
-<!---
-This is a comment section
-curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
--->
-
 ```bash linenums="1"
-{"status":"success","country":"United States","countryCode":"US","region":"NM","regionName":"New Mexico","city":"Corrales","zip":"87048","lat":35.2358,"lon":-106.6177,"timezone":"America/Denver","isp":"Comcast Cable Communications, LLC","org":"Comcast Cable Communications, LLC","as":"AS7922 Comcast Cable Communications, LLC","query":"73.242.149.67"}
+{"utc_offset":"-06:00","timezone":"America/Denver","day_of_week":2,"day_of_year":303,"datetime":"2024-10-29T14:20:43.282300-06:00","utc_datetime":"2024-10-29T20:20:43.282300+00:00","unixtime":1730233243,"raw_offset":-25200,"week_number":44,"dst":true,"abbreviation":"MDT","dst_offset":3600,"dst_from":"2024-03-10T09:00:00+00:00","dst_until":"2024-11-03T08:00:00+00:00","client_ip":"162.142.58.63"}
 ```
 
 Find timezone for current location
@@ -86,6 +81,16 @@ do
 done
 timedatectl set-timezone $TZ
 ntpdate pool.ntp.org
+```
+
+Find geo location of device
+
+```bash linenums="1"
+curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
+```
+
+```bash linenums="1"
+{"status":"success","country":"United States","countryCode":"US","region":"NM","regionName":"New Mexico","city":"Corrales","zip":"87048","lat":35.2358,"lon":-106.6177,"timezone":"America/Denver","isp":"Comcast Cable Communications, LLC","org":"Comcast Cable Communications, LLC","as":"AS7922 Comcast Cable Communications, LLC","query":"73.242.149.67"}
 ```
 
 ## florence

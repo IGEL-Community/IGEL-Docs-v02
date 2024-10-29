@@ -53,11 +53,22 @@ curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/
 Find geo location of device
 
 ```bash linenums="1"
-curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
+curl -s "http://worldtimeapi.org/api/ip/"
 ```
+
+<!---
+This is a comment section
+curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
+-->
 
 ```bash linenums="1"
 {"status":"success","country":"United States","countryCode":"US","region":"NM","regionName":"New Mexico","city":"Corrales","zip":"87048","lat":35.2358,"lon":-106.6177,"timezone":"America/Denver","isp":"Comcast Cable Communications, LLC","org":"Comcast Cable Communications, LLC","as":"AS7922 Comcast Cable Communications, LLC","query":"73.242.149.67"}
+```
+
+Find timezone for current location
+
+```bash linenums="1"
+curl -s "http://worldtimeapi.org/api/ip/" | jq --raw-output '(.timezone)'
 ```
 
 ## florence

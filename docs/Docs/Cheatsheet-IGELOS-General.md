@@ -71,6 +71,23 @@ Find timezone for current location
 curl -s "http://worldtimeapi.org/api/ip/" | jq --raw-output '(.timezone)'
 ```
 
+Script to update timezone
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+TZ=
+while [ -z "$TZ" ]
+do
+	sleep 5s;
+	TZ=$(curl -s "http://worldtimeapi.org/api/ip/" | jq --raw-output '(.timezone)');
+done
+timedatectl set-timezone $TZ
+ntpdate pool.ntp.org
+```
+
 ## florence
 
 Onscreen keyboard

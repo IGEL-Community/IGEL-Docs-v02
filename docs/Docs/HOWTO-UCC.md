@@ -357,4 +357,5 @@ ica.wfclient.gstread_encoder (for 64 bit) - enabled
 ica.wfclient.hdxh264enablenative - enabled
 ica.wfclient.hdxh264inputenabled - enabled
 ica.wfclient.hdxwebcamenabled - enabled
+sessions.pnlogin0.gstreamer_version  either
 ```

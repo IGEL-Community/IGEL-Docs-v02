@@ -331,3 +331,30 @@ There are two options how to configure the virtual channel allow list for enabli
 
 - [Webcam Preview Test Application](https://support.citrix.com/s/article/CTX547245-webcam-preview-test-application?language=en_US)
 - [Citrix Audio Diagnostic Tool](https://support.citrix.com/s/article/CTX579089-citrix-audio-diagnostic-tool?language=en_US)
+
+-----
+
+## Citrix working webcam config (64 bit Chrome/Zoom/Etc.) for ASUS Laptop
+
+
+```bash linenums="1"
+Hardware: ASUS Laptop
+Platform: Citrix Cloud DaaS
+
+IGEL: v11.10.190.01
+
+IGEL Citrix Workspace Settings:
+
+IGEL Citrix Workspace: 24.02.0
+Citrix Global/Native USB Redirection - Disabled
+Citrix Global/HDX Multimedia Redirection - Enabled
+Citrix Global/HDX Multimedia Redirection/Automatic Configuration - Disabled (the core issue)
+Citrix Global/HDX RealTime Media Engine - Disabled
+
+IGEL Registry Settings:
+
+ica.wfclient.gstread_encoder (for 64 bit) - enabled
+ica.wfclient.hdxh264enablenative - enabled
+ica.wfclient.hdxh264inputenabled - enabled
+ica.wfclient.hdxwebcamenabled - enabled
+```

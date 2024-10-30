@@ -74,7 +74,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** How to troubleshoot licesning problems?
 
-**A:** [Troubleshooting Common IGEL Licensing Problems](https://kb.igel.com/igel_cosmos_pas/en/troubleshooting-common-igel-licensing-problems-122892043.html)
+**A:** [Troubleshooting Common IGEL Licensing Problems](https://kb.igel.com/en/igel-subscription-and-more/current/troubleshooting-common-igel-licensing-problems)
 
 **Q:** What are the levels of IGEL Support Services?
 

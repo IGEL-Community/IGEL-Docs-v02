@@ -11,6 +11,7 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 - [KB: Chromium Browser](https://kb.igel.com/en/igel-apps/current/chromium-browser)
 - [App Portal: Firefox Browser](https://app.igel.com/firefox/115.12.0+1)
+- [Microsoft Edge](https://virtualbrat.com/2024/11/01/igel-makes-microsoft-edge-available-now-in-the-igel-app-portal/)
 
 -----
 

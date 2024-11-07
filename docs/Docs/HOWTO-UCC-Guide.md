@@ -748,9 +748,9 @@ These workarounds will effectively disable the Audio Sandbox for Google Chrome o
 
 - Citrix Desktop Configuration (XenApp and XenDesktop)
 
-Install the right software at the backend infrastructure: [Jabber Softphone for VDI - Windows](https://software.cisco.com/download/home/286304684/type/283802941/release/14.1(3))
+Install the right software at the backend infrastructure: [Jabber Softphone for VDI - Windows](https://software.cisco.com/download/home/286304684/type/283802941/release/15.0(0))
 
-[Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release 14.1](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.html)
+[Deployment and Installation Guide for Cisco Jabber Softphone for VDI](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.html)
 
 Clients are available on this page: [Cisco Jabber VDI](https://www.webex.com/downloads/jabber/jabber-vdi.html)
 
@@ -1204,9 +1204,9 @@ Even when using a 1vCPU, 2GB Memory Windows 7 VDI, we notice a great multimedia 
 
 - VMware Horizon 8.x
 
-Install the right software at the backend infrastructure [Jabber Softphone for VDI - Windows](https://software.cisco.com/download/home/286304684/type/283802941/release/14.1(3))
+Install the right software at the backend infrastructure [Jabber Softphone for VDI - Windows](https://software.cisco.com/download/home/286304684/type/283802941/release/15.0(0))
 
-How to install: [Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release 14.0](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_0/dig/jvdi_b_deploy-install-jvdi-14-0.pdf)
+How to install: [Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.pdf)
 
 all clients are available on this page [Cisco Jabber VDI](https://www.webex.com/downloads/jabber/jabber-vdi.html)
 

@@ -100,3 +100,15 @@ delete_igel_licenses ALL && reset_to_defaults && reboot
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jWhoUIgI3HM?si=cfF1d5zKvsjoWzwV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -----
+
+ ## IGEL OS 12 FastOnboarding with Citrix 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ore9a9f5A0I?si=GRBvYrbwu-bCu99r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
+ ## How to onboard an IGEL UD Pocket with OS 12 without a UMS in place?
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/CJFEAlpGh24?si=FVu9AcoVh249oAta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ -----

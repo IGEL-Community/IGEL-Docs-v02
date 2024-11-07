@@ -83,7 +83,7 @@ delete_igel_licenses ALL && reset_to_defaults && reboot
 
 -----
 
- ## Installing the ZOOM desktop application on IGEL OS 
+## Installing the ZOOM desktop application on IGEL OS 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ejWUeQ4i46E?si=HLpwlqcqn5diCQRD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

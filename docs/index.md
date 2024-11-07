@@ -197,6 +197,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 ### IGEL Channel Partners
 
 - [HOWTO Channel Partners](Docs/HOWTO-Channel-Partners.md)
+- [HOWTO Channel Demos](Docs/HOWTO-Channel-Demos.md)
 - [HOWTO Channel Demo Setup Guide](Docs/HOWTO-Channel-Demo-Setup-Guide.md)
 
 ----------

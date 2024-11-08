@@ -64,3 +64,15 @@ The remote security logging feature for the IGEL Universal Management Suite (UMS
 ## How to Collect IGEL information for input into CMDB
 
 Instead of installing a 3rd party agent onto IGEL OS, use data collected by UMS to feed into [CMDB](https://en.wikipedia.org/wiki/Configuration_management_database).
+
+If the data needed is not currently being collected, then use IGEL UMS Device Attributes to collect the information.
+
+- [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-manage-igel-os-devices-by-device-specific-d)
+
+Now that you have the information in the IGEL UMS, create view and administrative task that will generate data file used in [ETL Job](https://en.wikipedia.org/wiki/Extract,_transform,_load).
+
+- [IGEL KB: Views - Filtering for Devices in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.06.100/views-filtering-for-devices-in-the-igel-ums)
+
+- [IGEL KB: Export View or Advanced Search Result via Mail as an Administrative Task in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.06.100/export-view-or-advanced-search-result-via-mail-as-)
+
+Now use the data file as input for your ETL job into your CMDB. Follow guidance from you CMDB vendor for setting up ETL job.

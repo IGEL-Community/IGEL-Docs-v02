@@ -194,7 +194,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ----------
 
-### IGEL Channel Partners
+## IGEL Channel Partners
 
 - [HOWTO Channel Partners](Docs/HOWTO-Channel-Partners.md)
 - [HOWTO Channel Demos](Docs/HOWTO-Channel-Demos.md)
@@ -204,7 +204,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ----------
 
-### How was this site created?
+## How was this site created?
 
 - [HOWTO Tools Used for this Site](Docs/HOWTO-Tools-Used-for-this-Site.md)
 
@@ -212,7 +212,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ----------
 
-### How was GitHub Custom Partition created?
+## How was GitHub Custom Partition created?
 
 - [HOWTO Tools Used for GitHub Custom Partition](Docs/HOWTO-Tools-Used-GitHub-CP.md)
 
@@ -220,7 +220,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ----------
 
-### QR Codes
+## QR Codes
 
 - IGEL Community Docs
 

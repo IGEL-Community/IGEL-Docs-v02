@@ -50,3 +50,17 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
     With the launch of IGEL Universal Management Suite (UMS) 12, the Unified Protocol used for all communication between the UMS and IGEL OS 12 devices was introduced. The Unified Protocol is a secure protocol that uses TCP 8443. However, depending on the structure of your UMS environment, company's security policies, etc., it may be insufficient, and the use of the IGEL Cloud Gateway (ICG) or reverse proxy may be required.
+
+-----
+
+## Remote Security Logging in IGEL
+
+The remote security logging feature for the IGEL Universal Management Suite (UMS), the IGEL Cloud Gateway (ICG) and the IGEL Management Interface (IMI). The remote security logging feature logs security relevant events in a separate log files that can be picked up by a configured log collector/SIEM.
+
+- [IGEL KB: Remote Security Logging in IGEL](https://kb.igel.com/en/universal-management-suite/12.06.100/remote-security-logging-in-igel)
+
+-----
+
+## How to Collect IGEL information for input into CMDB
+
+Instead of installing a 3rd party agent onto IGEL OS, use data collected by UMS to feed into [CMDB](https://en.wikipedia.org/wiki/Configuration_management_database).

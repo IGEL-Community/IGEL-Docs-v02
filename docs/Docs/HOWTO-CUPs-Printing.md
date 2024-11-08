@@ -132,3 +132,9 @@ lpoptions -d wifiprinter1
 ```bash linenums="1"
 http://localhost:631/printers
 ```
+
+-----
+
+## Add Driver files to /wfs/ppd folder
+
+Add CUPS Drivers to `/wfs/ppd/` folder and this folder will be linked into the CUPS folder. Drivers will be available after a 2nd reboot or after restarting CUPS.

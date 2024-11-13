@@ -286,10 +286,6 @@ APP_VERSION.DISPLAY_VERSION as 'APP-Version' from PROFILES
 inner join PROFILE_BASED_ON_APP ON PROFILES.PROFILEID = PROFILE_BASED_ON_APP.PROFILEID
 inner join APP_VERSION ON PROFILE_BASED_ON_APP.APP_VERSION_ID = APP_VERSION.APP_VERSION_ID
 where APP_VERSION.APP_NAME like 'base_system' and DISPLAY_VERSION like '12.5%'
-This helped a lot to determin the Profile.
-After changing the fixed app version to another one, I was able to delete the unwanted App from my UMS.
-In case you stumble accross similar issues, but with other apps, not only the IGEL OS Base System, you will get a list of all "App Names" using this SQL Query:
-SELECT DISTINCT APP_NAME FROM APP_VERSION
 ```
 
 Changing the where clause of the SQL query to the appropriate `APP_NAME` and `APP_VERSION` will help to identify similar cases with other Apps.

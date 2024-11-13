@@ -276,6 +276,30 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **A:** [Use Microsoft Entra ID authentication and MFA in front of the WebUMS by leveraging your NetScaler capabilities](https://virtualbrat.com/2023/10/27/do-you-want-to-add-microsoft-entra-id-auth-in-front-of-the-igel-webums-console-when-accessed-from-the-internet-read-how-you-can-use-microsoft-entra-id-authentication-and-mfa-in-front-of-the-webums-by/)
 
+**Q:** How to remove apps from UMS?
+
+**A:** [IGEL KB: How to Delete Apps in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-delete-apps-in-the-igel-ums-web-app). The following SQL query can be used to search for profiles using an app.
+
+```bash linenums="1"
+select PROFILES.NAME as 'Profile-Name',
+APP_VERSION.DISPLAY_VERSION as 'APP-Version' from PROFILES
+inner join PROFILE_BASED_ON_APP ON PROFILES.PROFILEID = PROFILE_BASED_ON_APP.PROFILEID
+inner join APP_VERSION ON PROFILE_BASED_ON_APP.APP_VERSION_ID = APP_VERSION.APP_VERSION_ID
+where APP_VERSION.APP_NAME like 'base_system' and DISPLAY_VERSION like '12.5%'
+This helped a lot to determin the Profile.
+After changing the fixed app version to another one, I was able to delete the unwanted App from my UMS.
+In case you stumble accross similar issues, but with other apps, not only the IGEL OS Base System, you will get a list of all "App Names" using this SQL Query:
+SELECT DISTINCT APP_NAME FROM APP_VERSION
+```
+
+Changing the where clause of the SQL query to the appropriate `APP_NAME` and `APP_VERSION` will help to identify similar cases with other Apps.
+
+For other apps get a list of all "App Names" using this SQL query:
+
+```bash linenums="1"
+SELECT DISTINCT APP_NAME FROM APP_VERSION
+```
+
 -----
 
 ## FAQ - OS 12

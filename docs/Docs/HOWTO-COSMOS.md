@@ -296,6 +296,10 @@ For other apps get a list of all "App Names" using this SQL query:
 SELECT DISTINCT APP_NAME FROM APP_VERSION
 ```
 
+- [IGEL KB: General Administrator Rights in IGEL UMS - Misc Menu - SQL Console](https://kb.igel.com/en/universal-management-suite/12.06.100/general-administrator-rights-in-igel-ums)
+
+- [IGEL KB: Menu Bar of the IGEL UMS Console - Misc - SQL Console](https://kb.igel.com/en/universal-management-suite/12.04.120/menu-bar-of-the-igel-ums-console)
+
 -----
 
 ## FAQ - OS 12

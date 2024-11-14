@@ -4,14 +4,12 @@
 
 ----
 
-## 2023-09-24 - [12.5.0](https://app.igel.com/base_system/12.5.0)
+## 2024-11-14 - [12.5.1](https://app.igel.com/base_system/12.5.1)
 
 ```
-The new BUILD 12.5.0 for IGEL Workspace is ready.
+The new BUILD 12.5.1 for IGEL Workspace is ready.
 
 These are the release notes published with that release:
-
-Changelog for IGEL OS Base System @ 12.5.0
 
 # Changes since: 12.5.0
 
@@ -111,7 +109,7 @@ Changelog for IGEL OS Base System @ 12.5.0
 		 - Fn+F8: Thermal profile mode (L13 Gen5 Intel: Flight mode)
 		 - Fn+Ctrl+F9: Screenshot (L13 Gen5 Intel: not mapped to any function)
 		 - Fn+Ctrl+F10: Snipping Tool (L13 Gen5 Intel: not mapped to any function)
-		 - Fn+Ctrl+F11: Maximise focused window (L13 Gen5 Intel: not mapped to any function)
+		 - Fn+Ctrl+F11: Maximize focused window (L13 Gen5 Intel: not mapped to any function)
 	- Added hardware support for Lenovo ThinkPad L13 Gen5 Intel
 	- Added hardware support for HP Elite t660 thin client.
 	- Validated support for Intel i226, 2.5Gbps ethernet card (copper and fiber) for HP t755 devices.
@@ -319,7 +317,7 @@ Changelog for IGEL OS Base System @ 12.5.0
 
 ----
 
-## 2023-09-24 - [12.5.0](https://app.igel.com/base_system/12.5.0)
+## 2024-09-24 - [12.5.0](https://app.igel.com/base_system/12.5.0)
 
 ```
 The new BUILD 12.5.0 for IGEL Workspace is ready.
@@ -890,7 +888,7 @@ Changelog for IGEL OS Base System @ 12.5.0
 
 ----
 
-## 2023-08-14 - [12.4.2 PR1 (Patch Release)](https://app.igel.com/base_system/12.4.2+1)
+## 2024-08-14 - [12.4.2 PR1 (Patch Release)](https://app.igel.com/base_system/12.4.2+1)
 
 ```
 The new BUILD 12.4.2 PR1 for IGEL Workspace is ready.
@@ -977,7 +975,7 @@ Changes since: 12.4.2
 
 ----
 
-## 2023-07-18 - [12.4.2](https://app.igel.com/base_system/12.4.2)
+## 2024-07-18 - [12.4.2](https://app.igel.com/base_system/12.4.2)
 
 ```
 The new BUILD 12.4.2 for IGEL Workspace is ready.
@@ -1199,7 +1197,7 @@ These are the release notes published with that release:
 
 ----
 
-## 2023-06-19 - [12.4.1 PR1 (Patch Release)](https://app.igel.com/base_system/12.4.1+1)
+## 2024-06-19 - [12.4.1 PR1 (Patch Release)](https://app.igel.com/base_system/12.4.1+1)
 
 ```
 The new BUILD 12.4.1 PR1 for IGEL Workspace is ready.
@@ -1283,7 +1281,7 @@ Changes since: 12.4.1
 
 -----
 
-## 2023-05-31 - [12.4.1](readme12.4.1.txt)
+## 2024-05-31 - [12.4.1](readme12.4.1.txt)
 
 ```
 The new BUILD 12.4.1 for IGEL Workspace is ready.
@@ -1533,7 +1531,7 @@ These are the release notes published with that release:
 
 -----
 
-## 2023-04-24 - [12.4.0](readme12.4.0.txt)
+## 2024-04-24 - [12.4.0](readme12.4.0.txt)
 
 ```
 The new BUILD 12.4.0 for IGEL Workspace is ready.
@@ -1981,7 +1979,7 @@ These are the release notes published with that release:
 
 -----
 
-## 2023-03-21 - [12.3.2](readme12.3.2.txt)
+## 2024-03-21 - [12.3.2](readme12.3.2.txt)
 
 ```
 The new BUILD 12.3.2 for IGEL Workspace is ready.
@@ -2213,7 +2211,7 @@ These are the release notes published with that release:
 ```
 -----
 
-## 2023-02-06 - [12.3.1](readme12.3.1.txt)
+## 2024-02-06 - [12.3.1](readme12.3.1.txt)
 
 ```
 The new BUILD 12.3.1 for IGEL Workspace is ready.

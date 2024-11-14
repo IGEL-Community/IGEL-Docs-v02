@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-11-14 - [11.09.156](readme11.09.156.txt)
+
+```
+The new PRIVATE BUILD 11.09.156 for IGEL Workspace is ready.
+
+This build is based on 11.09.150.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Integrated new RdClientSDK to fix issues when connecting to host pools that
+  use private endpoint.
+```
+
+-----
+
 ## 2024-10-28 - [11.10.192](readme11.10.192.txt)
 
 ```

@@ -620,6 +620,10 @@ app.avd.sessions.avd%.options.compact-login-view
 
 ![image-howto-cosmos-11](Images/HOWTO-COSMOS-11.png)
 
+**Q:** Can Yubikey be used for connecting to AVD?
+
+**A:** As of 14 November 2024, the Microsoft Linux RDP SDK is pending implementation of a return channel for the use of FIDO tokens within the session. Once this is implemented by Microsoft then development can proceed.
+
 -----
 
 ## FAQ - VMware Horizon

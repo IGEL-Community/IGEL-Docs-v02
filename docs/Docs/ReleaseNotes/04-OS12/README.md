@@ -16,6 +16,7 @@ Lists what changes are in the build.
 
 ## IGEL OS 12
 
+- [12.5.1](readme12.5.1.txt) 14-November-2024
 - [12.5.0](readme12.5.0.txt) 24-October-2024
 - [12.4.2 PR1 (Patch Releasea)](https://app.igel.com/base_system/12.4.2+1) 14-August-2024
 - [12.4.2](readme12.4.2.txt) 18-July-2024

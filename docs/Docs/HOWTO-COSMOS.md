@@ -388,6 +388,16 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 curl -v -k https://app.igel.com
 ```
 
+**Q:** How to setup a restricted web browser?
+
+**A:** With OS 12.5.1 or greater there is an `igel-minibroswer` that can be used.
+
+- Launch `minibroswer` pointing to IGEL Community Docs
+
+```bash linenums="1"
+/usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
+```
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

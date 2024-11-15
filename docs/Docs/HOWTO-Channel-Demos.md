@@ -112,3 +112,11 @@ delete_igel_licenses ALL && reset_to_defaults && reboot
  <iframe width="560" height="315" src="https://www.youtube.com/embed/CJFEAlpGh24?si=FVu9AcoVh249oAta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
  -----
+
+## How to IGEL OS 12 + Microsoft EntraID + Microsoft EDGE + Fido2 + YubiKey
+
+Demonstrates using a YubiKey with Fido2 authentication and EntraID as identity provider to log into Microsoft Office Apps.
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/G6l0qIXes1k?si=c4tOpRwfTu-mMQI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ -----

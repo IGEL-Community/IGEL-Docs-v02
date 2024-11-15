@@ -13,7 +13,7 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
-## 2024-11-15 - [11.10.194](readme11.09.194.txt)
+## 2024-11-15 - [11.10.194](readme11.10.194.txt)
 
 ```
 The new PRIVATE BUILD 11.10.194 for IGEL Workspace is ready.

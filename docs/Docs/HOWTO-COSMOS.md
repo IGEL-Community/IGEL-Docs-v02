@@ -124,6 +124,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** Reach out to your IGEL Sales Rep or partner. There are legalities to this that need to be confirmed, and paperwork that needs to be submitted by both sides. Once everyone approves, usually the licenses can then be transferred. If you don't have a direct IGEL Sales contact, you can try submitting a license question request via the [IGEL Customer Portal](https://support.igel.com/). There is a button for this on the landing page.
 
+**Q:** How to remove an IGEL license completely?
+
+**A:** [IGEL KB: How To Remove an IGEL License Completely](https://kb.igel.com/en/igel-subscription-and-more/current/how-to-remove-an-igel-license-completely)
+
 -----
 
 ## FAQ - UMS
@@ -300,9 +304,17 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 - [IGEL KB: Menu Bar of the IGEL UMS Console - Misc - SQL Console](https://kb.igel.com/en/universal-management-suite/12.04.120/menu-bar-of-the-igel-ums-console)
 
+**Q:** How to make devices download from App Portal when UMS is configured as the App Proxy as the Global Setting?
+
+**A:** [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-make-devices-download-from-app-portal-when-)
+
 -----
 
 ## FAQ - OS 12
+
+**Q:** How can a user change settings on IGEL OS?
+
+**A:** [IGEL KB: Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/tray-applications-in-igel-os-12)
 
 **Q:** Is OS 12 considered an App?
 
@@ -602,6 +614,10 @@ sequenceDiagram
   D->>B: 4 - Session cookie is validated and grants secure access to the requested web app / VDI resource
   B->>A: 5 - Session cookie is cleared on logout / reboot / shutdown
 ```
+
+**Q:** How to configure SSO on IGEL OS?
+
+**A:** [IGEL KB: Single Sign-On in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/single-sign-on-in-igel-os-12)
 
 -----
 

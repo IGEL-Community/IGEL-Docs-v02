@@ -14,6 +14,10 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 - [Island Browser](https://app.igel.com/island/1.50.25)
 - [Microsoft Edge Browser](https://virtualbrat.com/2024/11/01/igel-makes-microsoft-edge-available-now-in-the-igel-app-portal/)
 
+**Q:** How to set default browser in IGEL OS 12?
+
+**A:** [IGEL KB: How to Set the Default Browser in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-set-the-default-browser-in-igel-os-12)
+
 -----
 
 ## [IGEL OS with Chromium – Guide](https://leon-beitsch.de/shared/IGEL_OS_with_Chromium.pdf)

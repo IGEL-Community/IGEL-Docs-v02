@@ -88,3 +88,24 @@
 ![image-10](Images/HOWTO-Light_Zero_Touch_Deployments-10.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hHQHppONuxU?si=zNoKoyBqW2Ju3lxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
+## IGEL OSCW Enhanced - Under the Hood
+
+OSCW cannot register with UMS through ICG and so you can't do the normal OCSW procedure (register, apply profile, send conversion command).
+
+Here is a method to use the unattended OSC .iso
+ 
+- [IGEL OSCW Enhanced - Under the Hood](https://workspace-it.com/blog/igel-oscw-enhanced-under-the-hood/)
+ 
+Summary of steps:
+
+- Install OSCW
+- Rename the osc-12.5.0.iso to osc.iso (Make sure this is the unattended version of the ISO you created earlier)
+- Copy the osc.iso into the C:\OSC folder
+- Rename grub.cfg to grub.cfg.old
+- Rename osc.cfg to grub.cfg
+- Restart the device
+
+The device will boot using the GRUB boot loader which will trigger the IGEL installation from the ISO.

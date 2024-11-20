@@ -5,6 +5,8 @@ UPDATE
 -->
 - IGEL UMS Version Base: [12.06.100](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.06.100.txt)
 
+- IGEL OS Firmware Base: [11.10.195](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.195.txt)
+
 - IGEL OS Firmware Base: [11.10.190](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.190.txt)
 
 - IGEL OS Firmware Base: [11.10.100](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.100.txt)

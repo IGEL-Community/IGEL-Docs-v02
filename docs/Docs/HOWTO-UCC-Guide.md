@@ -26,23 +26,23 @@ UPDATE
 - IGEL OS Firmware Base: [11.09.164](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.09.164.txt)
 
 
-| Clients                          | 11.10.100            | 11.10.190              |
-|----------------------------------|----------------------|------------------------|
-| Cisco JVDI Client                | 14.3.0               | 14.3.0                 |
-| Cisco Webex Meetings VDI plugin  | 42.10.8.14           | 42.10.8.14             |
-| Cisco Webex Meetings VDI plugin  | 42.6.11.6            | 42.6.11.6              |
-| Cisco Webex Meetings VDI plugin  | 43.6.8.4             | 43.6.8.4               |
-| Cisco Webex VDI plugin           | 44.2.0.28744         | 44.4.0.29960           |
-| Citrix HDX Realtime Media Engine | 2.9.600              | 2.9.600                |
-| Citrix Workspace App             | 20.10.0.6            | 20.10.0.6              |
-| Citrix Workspace App             | 23.11.0.82           | 23.11.0.82             |
-| Citrix Workspace App             | 24.02.0.65           | 24.02.0.65             |
-| IGEL AVD Client                  | 1.1.40igel1708088233 | 1.2.0igel1718803791    |
-| IGEL RDP Client                  | 2.2igel1707744600    | 2.2igel1717589021      |
-| VMware Horizon client            | 2312-8.12.0-23149323 | 2312.1-8.12.1-23543969 |
-| Zoom Media Plugin                | 5.16.10.24420        | 5.16.10.24420          |
-| Zoom Media Plugin                | 5.17.5.24630         | 5.17.5.24630           |
-| Zoom Media Plugin                | 5.17.6.24660         | 5.17.6.24660           |
+| Clients                          | 11.10.100            | 11.10.190              | 11.10.195              |
+|----------------------------------|----------------------|------------------------|------------------------|
+| Cisco JVDI Client                | 14.3.0               | 14.3.0                 | 14.3.0                 |
+| Cisco Webex Meetings VDI plugin  | 42.10.8.14           | 42.10.8.14             | 42.10.8.14             |
+| Cisco Webex Meetings VDI plugin  | 42.6.11.6            | 42.6.11.6              | 43.6.8.4               |
+| Cisco Webex Meetings VDI plugin  | 43.6.8.4             | 43.6.8.4               | 44.6.5.1               |
+| Cisco Webex VDI plugin           | 44.2.0.28744         | 44.4.0.29960           | 44.6.0.30048           |
+| Citrix HDX Realtime Media Engine | 2.9.600              | 2.9.600                | 2.9.600                |
+| Citrix Workspace App             | 20.10.0.6            | 20.10.0.6              | 20.10.0.6              |
+| Citrix Workspace App             | 23.11.0.82           | 23.11.0.82             | 24.05.0.76             |
+| Citrix Workspace App             | 24.02.0.65           | 24.02.0.65             | 24.08.0.98             |
+| IGEL AVD Client                  | 1.1.40igel1708088233 | 1.2.0igel1718803791    | 1.2.0igel1718803791    |
+| IGEL RDP Client                  | 2.2igel1707744600    | 2.2igel1717589021      | 2.2igel1717589021      |
+| VMware Horizon client            | 2312-8.12.0-23149323 | 2312.1-8.12.1-23543969 | 2312.1-8.12.1-23543969 |
+| Zoom Media Plugin                | 5.16.10.24420        | 5.16.10.24420          | 5.14.10.23670          |
+| Zoom Media Plugin                | 5.17.5.24630         | 5.17.5.24630           | 5.17.13.25060          |
+| Zoom Media Plugin                | 5.17.6.24660         | 5.17.6.24660           | 6.1.12.25370           |
 
 
 | Clients                          | 11.09.260            | 11.09.261            | 11.09.269            | 11.09.310            | 11.09.313            |

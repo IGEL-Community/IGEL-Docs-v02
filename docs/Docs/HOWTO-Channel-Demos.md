@@ -120,3 +120,10 @@ Demonstrates using a YubiKey with Fido2 authentication and EntraID as identity p
  <iframe width="560" height="315" src="https://www.youtube.com/embed/G6l0qIXes1k?si=c4tOpRwfTu-mMQI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
  -----
+
+## How to Microsoft Intune on IGEL – Entra Conditional Access with IGEL OS 12 to control access to Azure Virtual Desktop and Windows 365
+
+- IGEL OS 12 with Intune App provides conditional access to Azure Virtual Desktop and Windows 365
+- Additional details can be found on this [Blog Post](https://virtualbrat.com/2024/11/20/microsoft-intune-on-igel-entra-conditional-access-with-igel-os-12-to-control-access-to-azure-virtual-desktop-and-windows-365-check-this-demo/)
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/XwtP3cbVs1o?si=95EzgncTKV5rv3H7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

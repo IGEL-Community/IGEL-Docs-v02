@@ -205,6 +205,10 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
   ![image-howto-cosmos-01](Images/HOWTO-COSMOS-01.png)
 
+**Q:** Having permission issues for some accounts pulled from Active Directory (AD)
+
+**A:** If you are using multiple domain groups for rights, then check to make sure the accounts are not in domain groups that do not have the correct permissions
+
 **Q:** I reset / rebuilt my OS 12 device and now get error (#38) when trying to connect to UMS.
 
 **A:** See [IGEL KB - Troubleshooting: Error 38 during the Onboarding of an IGEL OS 12 Device](https://kb.igel.com/en/how-to-start-with-igel/current/troubleshooting-error-38-during-the-onboarding-of-)

@@ -74,7 +74,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What are the IGEL OS editions and feature packs?
 
-**A:** [IGEL Web Site: IGEL OS Editions and Feature Packs](https://www.igel.com/licensing). Existing customers will be migrated to `Standard Edition`.
+**A:** [IGEL Web Site: IGEL OS Editions and Feature Packs](https://www.igel.com/licensing). Existing customers will be migrated to `Standard Edition`. [IGEL KB: IGEL OS Editions](https://kb.igel.com/en/igel-subscription-and-more/current/igel-os-editions)
 
 **Q:** How to troubleshoot licensing problems?
 
@@ -186,6 +186,8 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
 **A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [IGEL KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/en/universal-management-suite/12.06.100/igel-ums-and-devices-secure-shadowing-communicatio)
+
+- **NOTE:** If web app shadow in browser is lost / hung, then try refreshing the web page.
 
 **Q:** How to fix Slow VNC shadowing with 4K screens?
 

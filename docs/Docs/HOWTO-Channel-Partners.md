@@ -31,26 +31,26 @@ Contact IGEL channel team for options to access [IGEL Academy Premium](https://w
 
 - 50 min Foundations course
 - 50 min ICSP course
-- 50 min for exam
+- 45 min for exam
 
-### IGEL Certified Professional (ICP) (2.5 hours)
+### IGEL Certified Professional (ICP) (3 hours)
 
 - 2 hours for course
-- 30 min for the exam
+- 60 min for the exam
 
 ### IGEL Certified Engineer (ICE) (3-4 hours)
 
 **NOTE:** Requires IGEL Academy Premium.
 
 - 2+ hours for course and labs
-- 45-60 min for the exam
+- 90 min for the exam
 
 ### IGEL Certified Architect (ICA) (2-3 hours)
 
 **NOTE:** Requires IGEL Academy Premium.
 
 - 2+ hours for course and labs
-- 60 min for the exam
+- 40 min for the exam
 
 ----------
 

@@ -13,6 +13,723 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-11-27 - [11.10.210](readme11.10.210.txt)
+
+```
+The new PUBLIC BUILD 11.10.210 for IGEL Workspace is ready.
+
+This build is based on 11.10.150.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2405.  
+  Available Citrix Workspace Apps in this release: 2405 (default), 2402, and
+  2010
+* Changed:  
+* The default value of the parameter ica.authman.kiosksfuienhanced has been
+  changed to true and thus corresponds to the value of Citrix.
+* Added:  
+* [Technical Preview] Provision to manage multiple proxy servers  
+  You can use multiple proxy servers that allow the HDX sessions to select
+  appropriate proxy servers for accessing specific resources.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | ProxyAutoConfigURL                                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.allregions.proxyautoconfigurl                               |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | ""                                                              |
++------------+-----------------------------------------------------------------+
+
+  > Extend parameter range ica.allregions.proxytype with "Script".
+
+* [Technical Preview] Multiple webcam resolutions support  
+  Webcam streaming supports all webcam resolutions that are available on the
+  client side.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | HDXWebcamEnablePnp                                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.hdxwebcamenablepnp                                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+### Citrix NSGClient
+
+* Updated Citrix EPA Client to version 24.10.1
+
+### RD Web Access
+
+* Added IGEL RDP3-based RD Web Access incl. support of seamless app(s).
+
+### VMware Horizon
+
+* Updated Horizon Client to version 2406
+* Added support for Horizon next-gen (v2) API  
+  If server URL of Horizon session matches the host name pattern defined in
+  vmware.view.v2_host, next-gen API will be used for this session.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Next-gen host name pattern                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | vmware.view.v2_host                                             |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | .workspaceoneaccess.com�.workspaceair.com�                      |
++------------+-----------------------------------------------------------------+
+|            | .vmwareidentity.eu�.vmwareidentity.de�                          |
++------------+-----------------------------------------------------------------+
+|            | .vmwareidentity.co.uk�.vmwareidentity.com.au�                   |
++------------+-----------------------------------------------------------------+
+|            | .vmwareidentity.com�.vmwareidentity.ca�                         |
++------------+-----------------------------------------------------------------+
+|            | .vmwareidentity.asia�.vidmpreview.com _Default_                 |
++------------+-----------------------------------------------------------------+
+
+### Network
+
+* Added ACME client - for usage of HTTP-01 challenges
+* Registry keys:
+* This determines whether the feature is enabled as a whole:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Manage certificates with ACME                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.enable                                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+* The rest are members of instances of network.acmeclient.cert%. Instance 0 is
+  available from the start.
+* This is the name of the subdirectory of /wfs/acme_certificates/ where data for
+  the respective instance is stored - only letters, digits, underscores, dashes
+  and dots are allowed:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Directory                                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.directory                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | default _Default_                                               |
++------------+-----------------------------------------------------------------+
+
+* The following are names (space-separated) for which a certificate shall be
+  requested. In the case of success each will appear as subject alt name, the
+  first one also as the common name (This is true at least with the Smallstep CA
+  with default settings). %H will be replaced by `hostname -f`, %h by `hostname
+  -s`.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Names                                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.names                                  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | %H _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
+* This is the ACME server URL (something like https://my-
+  stepca.example.com/acme/acme/directory):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | ACME server URL                                                 |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.serverurl                              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Account key length (bits)                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.accountkeylength                       |
++------------+-----------------------------------------------------------------+
+| Range      | [1024][2048][4096]                                              |
++------------+-----------------------------------------------------------------+
+| Value      | _4096_                                                          |
++------------+-----------------------------------------------------------------+
+
+* This is for verifying the ACME servers certificate (installing any such
+  certificate on the system is beyond the scope of the ACME client):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | CA Bundle                                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.cabundle                               |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+* This may be necessary for creating an account on the ACME server:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Email address                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.email                                  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+* The following is the length of the client key for which a certificate will be
+  requested. Those with ecc-prefix mean ellipic curve keys, the remaining ones
+  RSA keys.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Key length (bits)                                               |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.keylength                              |
++------------+-----------------------------------------------------------------+
+| Range      | [1024][2048][4096][8192][ec-256][ec-384][ec-512]                |
++------------+-----------------------------------------------------------------+
+| Value      | _4096_                                                          |
++------------+-----------------------------------------------------------------+
+
+* This is the number of days between expiry checks:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Certificate expiry check interval (days)                        |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.checkinterval                          |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 1 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
+* This is the period before the certificates' expiry in which renewal attempts
+  are performed:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Certificate renewal period (days)                               |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.renewalperiod                          |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 30 _Default_                                                    |
++------------+-----------------------------------------------------------------+
+
+* This is the debug level for acme.sh:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Debug level                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | network.acmeclient.cert%.debuglevel                             |
++------------+-----------------------------------------------------------------+
+| Range      | [0][1][2][3]                                                    |
++------------+-----------------------------------------------------------------+
+| Value      | _0_                                                             |
++------------+-----------------------------------------------------------------+
+
+* The resulting client.cert and client.key can be used for EAP/TLS and
+  EAP/PEAP/TLS via Ethernet and WLAN.  
+  Example:  
+  Assume the above is configured with directory="default" and EAP/TLS is wanted.  
+  On the respective setup panel the following should be configured then:  
+  EAP Type: TLS  
+  Validate Server Certificate/CA Root Certificate: for verifying the RADIUS
+  server's certificate, a separate topic  
+  Manage certificates with SCEP (NDES): no  
+  Client Certificate: /wfs/acme_certificates/default/client.cert  
+  Private Key:  /wfs/acme_certificates/default/client.key  
+  Identity: <empty>, will be automatically derived from the client certificate's
+  subject  
+  Private Key Password: <empty>
+* Added Wake on LAN support via USB-C-to-LAN adapters  
+* Activated by enabling any of the Wake on LAN settings of LAN Interfaces  
+* Only Wake on LAN from Suspend is supported
+* Updated Lenovo FCC Unlock Tool to version 2.4
+
+### IGEL Agent for Imprivata
+
+* Updated iia to 0.6.2igel1728370169 (content of IAFI 1.1.0).
+
+### Imprivata
+
+* Updated Imprivata bootstrap loader to fix CVE-2022-37454.
+* Updated PIE bootstrap loader to 23.2.0.711883
+
+### HID
+
+* Added new registry keys to influence mouse acceleration settings:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use new mouse accel variant                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.mouse.use_new_accel_variant                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enable mouse acceleration (only for new accel variant)          |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.mouse.enable_acceleration                         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 15.0.0
+
+### Cisco Webex
+
+* Updated Webex VDI to version 44.8.1.30603  
+  Added support for AVD  
+  Fixed two critical issues (Crash, Audio for Webex Calling)
+* Updated Webex Meetings VDI to version 44.6.5.1, available versions: 44.6.5.1,
+  43.6.8.4 and 42.10.8.14.
+
+### Base system
+
+* Removed support for BioSec BS Login Hand Vein Sensor due to technical reasons
+  (necessary removal of QT4).
+* Updated grub bootloader to 2.12 version.
+* Updated StepOver Client to version 2.4.3
+
+### Firmware update
+
+* Added progress notification shown during migration from OS 11 to OS 12.
+
+### zoomvdi
+
+* Updated Zoom VDI Client to version 6.1.12. Available versions in this release:
+  6.1.12.25370, 5.17.13.25060 and 5.17.6.24660.
+
+### Hardware
+
+* Improved hardware detection of supported LG devices.
+* Validated support for Intel i226, 2.5Gbps ethernet card (copper and fiber) for
+  HP t755 devices.  
+  Validated support for Allied Telesis 2914SP Gbps PCIe network adapter with SFP
+  Port for HP t755 devices.
+
+### TC Setup (Java)
+
+* Upgraded TC Setup to version 12.6.1  
+* Added deviceTRUST and Cisco Webex VDI options to Sessions > AVD > AVD Sessions
+  > AVD Session > Plugins page.
+
+### Remote Management
+
+* Improved migration from OS 11 to OS 12.  
+  Upgrade of the remote management protocols is invoked as a separate step
+  returning a specific reason in case of failure.
+
+### Fabulatech
+
+* Updated Fabulatech USB redirection to version 6.2.0.9  
+* Added interfaces parameter to configure Fabulatech USB redirection to redirect
+  certain interfaces only. The value is a space separated list of interface
+  indices. The interfaces parameter is available in IGEL registry. After
+  creation of device rule with VID and PID for the related device, the IGEL
+  registry under rdp.usbredirection.devicepolicy.product_rule0.interfaces must
+  be used to configure the interface indices to redirect. Leave interfaces empty
+  to redirect the whole device.
+
++------------+-----------------------------------------------------------------+
+| Registry   | `rdp.usbredirection.devicepolicy.product_rule%.interfaces`      |
++------------+-----------------------------------------------------------------+
+| Value      | "" (default) / space separated list of interface indices to redirect, ie. "2 3" |
++------------+-----------------------------------------------------------------+
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated Chromium browser to current mainline version 130.0.6723.91.  
+* Fixed Chromium security issues CVE-2024-10488, CVE-2024-10487, CVE-2024-10231,
+  CVE-2024-10230, CVE-2024-10229, CVE-2024-9966, CVE-2024-9965, CVE-2024-9964,
+  CVE-2024-9963, CVE-2024-9962, CVE-2024-9961, CVE-2024-9960, CVE-2024-9959,
+  CVE-2024-9958, CVE-2024-9957, CVE-2024-9956, CVE-2024-9955, CVE-2024-9954,
+  CVE-2024-9603, CVE-2024-9602, CVE-2024-9370, CVE-2024-9369, CVE-2024-9123,
+  CVE-2024-9122, CVE-2024-9121, CVE-2024-9120, CVE-2024-8909, CVE-2024-8908,
+  CVE-2024-8907, CVE-2024-8906, CVE-2024-8905, CVE-2024-8904, CVE-2024-8639,
+  CVE-2024-8638, CVE-2024-8637, CVE-2024-8636 and CVE-2024-7025.  
+* Fixed Chromium security issues CVE-2024-8362, CVE-2024-7970, CVE-2024-8198,
+  CVE-2024-8194, CVE-2024-8193, CVE-2024-8035, CVE-2024-8034, CVE-2024-8033,
+  CVE-2024-7981, CVE-2024-7980, CVE-2024-7979, CVE-2024-7978, CVE-2024-7977,
+  CVE-2024-7976, CVE-2024-7975, CVE-2024-7974, CVE-2024-7973, CVE-2024-7972,
+  CVE-2024-7971, CVE-2024-7969, CVE-2024-7968, CVE-2024-7967, CVE-2024-7966,
+  CVE-2024-7965 and CVE-2024-7964.
+
+### Firefox
+
+* Updated Mozilla Firefox to version 115.16.1 ESR  
+* Fixes for mfsa2024-30, also known as:  
+  CVE-2024-7652, CVE-2024-6600, CVE-2024-6601, CVE-2024-6602,  
+  CVE-2024-6603, CVE-2024-6604.  
+* Fixes for mfsa2024-34, also known as:  
+  CVE-2024-7519, CVE-2024-7521, CVE-2024-7522, CVE-2024-7524,  
+  CVE-2024-7525, CVE-2024-7526, CVE-2024-7527, CVE-2024-7529,  
+  CVE-2024-7531.  
+* Fixes for mfsa2024-41, also known as:  
+  CVE-2024-8381, CVE-2024-8382, CVE-2024-8383, CVE-2024-8384.  
+* Fixes for mfsa2024-48, also known as:  
+  CVE-2024-9392, CVE-2024-9393, CVE-2024-9394, CVE-2024-9401.  
+* Fixes for mfsa2024-51, also known as:  
+  CVE-2024-9680.
+
+### Imprivata
+
+* Updated Imprivata bootstrap loader to fix CVE-2022-37454.
+
+### Base system
+
+* Fixed bind9 security issues CVE-2024-4076, CVE-2024-1975, CVE-2024-1737,
+  CVE-2024-0760, CVE-2023-5679, CVE-2023-5517, CVE-2023-50868, CVE-2023-50387,
+  CVE-2023-4408, CVE-2023-4236 and CVE-2023-3341.  
+* Fixed python3.10 security issues CVE-2024-8088, CVE-2024-7592, CVE-2024-6923,
+  CVE-2024-6232, CVE-2023-27043, CVE-2024-0450 and CVE-2023-6597.  
+* Fixed openssl security issue CVE-2022-40735.  
+* Fixed wget security issue CVE-2024-38428.  
+* Fixed aom security issue CVE-2024-5171.  
+* Fixed cups security issues CVE-2024-47175 and CVE-2024-35235.  
+* Fixed krb5 security issues CVE-2024-37371 and CVE-2024-37370.  
+* Fixed openvpn security issues CVE-2024-5594 and CVE-2024-28882.  
+* Fixed wpa security issues CVE-2024-5290 and CVE-2023-52160.  
+* Fixed ghostscript security issues CVE-2024-29511, CVE-2024-29509,
+  CVE-2024-29508 and CVE-2024-29506.  
+* Fixed zulu17-ca security issues CVE-2024-21131, CVE-2024-21138,
+  CVE-2024-21140, CVE-2024-21145 and CVE-2024-21147.  
+* Fixed gtk+2.0 security issue CVE-2024-6655.  
+* Fixed gtk+3.0 security issue CVE-2024-6655.  
+* Fixed openvpn security issue CVE-2024-5594.  
+* Fixed qtbase-opensource-src security issue CVE-2024-39936.  
+* Fixed python-zipp security issue CVE-2024-5569.  
+* Fixed poppler security issue CVE-2024-6239.  
+* Fixed openssl1.1 security issues CVE-2024-5535, CVE-2024-4741 and
+  CVE-2024-2511.  
+* Fixed openssh security issue CVE-2024-39894.  
+* Fixed python3.10 security issues CVE-2024-4032 and CVE-2024-0397.  
+* Fixed openssl security issues CVE-2024-6119, CVE-2024-5535, CVE-2024-4741,
+  CVE-2024-4603 and CVE-2024-2511.  
+* Fixed mysql-8.0 security issues CVE-2024-21185, CVE-2024-21179,
+  CVE-2024-21177, CVE-2024-21173, CVE-2024-21171, CVE-2024-21165,
+  CVE-2024-21163, CVE-2024-21162, CVE-2024-21142, CVE-2024-21134,
+  CVE-2024-21130, CVE-2024-21129, CVE-2024-21127, CVE-2024-21125 and
+  CVE-2024-20996.  
+* Fixed gnome-shell security issue CVE-2024-36472.  
+* Fixed orc security issue CVE-2024-40897.  
+* Fixed postgresql-14 security issue CVE-2024-7348.  
+* Fixed bubblewrap security issue CVE-2024-42472.  
+* Fixed curl security issues CVE-2024-8096, CVE-2024-7264, CVE-2024-6874 and
+  CVE-2024-6197.  
+* Fixed vim security issues CVE-2024-43802, CVE-2024-43374 and CVE-2024-41957.  
+* Fixed webkit2gtk security issues CVE-2024-44187, CVE-2024-40866,
+  CVE-2024-27851, CVE-2024-27838, CVE-2024-27833, CVE-2024-27820,
+  CVE-2024-27808, CVE-2024-23271, CVE-2024-4558, CVE-2024-40794, CVE-2024-40789,
+  CVE-2024-40785, CVE-2024-40782, CVE-2024-40780, CVE-2024-40779, CVE-2024-40776
+  and CVE-2024-27834.  
+* Fixed ffmpeg security issues CVE-2024-7272 and CVE-2024-7055.  
+* Fixed expat security issues CVE-2024-50602, CVE-2024-45492, CVE-2024-45491 and
+  CVE-2024-45490.  
+* Fixed tiff security issue CVE-2024-7006.  
+* Fixed setuptools security issue CVE-2024-6345.  
+* Fixed apparmor security issue CVE-2016-1585.  
+* Fixed libvirt security issue CVE-2024-8235.  
+* Fixed qemu security issues CVE-2024-8612, CVE-2024-4467, CVE-2024-7409 and
+  CVE-2024-6505.  
+* Fixed cups-filters security issues CVE-2024-47176 and CVE-2024-47076.  
+* Fixed nano security issue CVE-2024-5742.  
+* Fixed zulu17-ca security issues CVE-2023-42950, CVE-2024-25062,
+  CVE-2024-21235, CVE-2024-21217, CVE-2024-21210 and CVE-2024-21208.  
+* Fixed libheif security issues CVE-2024-25269, CVE-2023-49464, CVE-2023-49463,
+  CVE-2023-49462, CVE-2023-49460 and CVE-2023-0996.  
+* Fixed libvpx6 security issue CVE-2024-5197.  
+* Fixed xorg-server security issue CVE-2024-9632.  
+* Fixed python-urllib3 security issue CVE-2024-37891.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed ica.module.EnableVolumeListener has an effect at EnableAudioListener of
+  file module.ini
+* Fixed: Citrix processes does not run if no sessions are configured. The
+  processes are restarted with changed configuration.
+
+### AVD
+
+* Fixed PAUSE and Ctrl+PAUSE=BREAK keys to work as expected
+* Fixed  dynamic virtual channel initialization
+
+### RDP/IGEL RDP Client 2
+
+* Added parameter to disable X11 autorepeat detection and handling:
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.winconnect%.option.disable-autorepeat-detection`      |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled**(default)                                 |
++------------+-----------------------------------------------------------------+
+
+* This fixes barcode reader dropping inputs when scanning labels with reoccuring
+  characters.
+* Fixed generic USB redirection for some devices (ie. ID 046d:0825 Logitech,
+  Inc. Webcam C270)
+* Fixed serial port redirection not working for COM10 and above.
+
+### RD Web Access
+
+* Fixed RDP desktop session not working when published as a remote app.
+* Fixed Remote Desktop Web Access login not working reliably.
+* Fixed display filters not working for Rd Web Access.
+* Fixed disabling Verify Certificates not working for RD Web Access.
+
+### VMware Horizon
+
+* Fixed collection of logs.
+* Fixed handling of audio preferences (vmware.view.audio-out-option)
+
+### Chromium
+
+* Fixed custom policy URLBlocklist not working properly if file access and using
+  IGEL Setup for configuration was disabled.
+* Fixed system volume being automatically adjusted by Chromium Browser.
+
+### Firefox
+
+* Fixed on-screen keyboard auto show / hide functionality.
+
+### Network
+
+* Fixed SCEP: When the CA fingerprint or the CA identifier is changed, client
+  certificate and client key are not discarded anymore. Only new CA and RA
+  certificates will be downloaded.
+* Added for SCEP: Content-Type: application/x-pki-message is sent according to
+  RFC 8894 if the following option is enabled:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Send Content-Type                                               |
++------------+-----------------------------------------------------------------+
+| Registry   | network.scepclient.cert%.sscep.send_content_type                |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+* Improved shutdown time by removing loopback interface from NetworkManager's
+  managed interfaces.
+* Fixed sporadic no-link messages regarding a deactivated Ethernet interface
+
+### HID
+
+* Fixed auto-suspend of HID devices after reboot.
+* Fixed touchscreen right click by using touchegg gesture recognition for two
+  finger tap. Further gestures are not supported.  
+  Added registry key to enable touchegg multitouch gesture support.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use touchegg for multitouch gestures handling.                  |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.touchscreen.touchegg                              |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+### Base system
+
+* Fixed: Wrong assignment of socks proxy port
+* Fixed issue with license is not detected on some devices.
+* Fixed issue with not using 2.5 Gbit/s or 5 Gbit/s if it would be possible.
+* Fixed not functional proxy if system-wide proxy was configured.
+* Fixed: Taskbar items blinking several times.
+* Removed QT4 libraries from firmware.
+* Changed configuration of webcam priority. V4L Name is used for identifying the
+  webcam. If only one webcam is present, no entry is needed. If multiple webcams
+  are present without set priority, the first one is used.
+* ## Added parameters in registry
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Camera name                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.name                                  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | camera _Default_                                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | priority                                                        |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.priority                              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | V4L2 name                                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.v4lname                               |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | v4l2-string _Default_                                           |
++------------+-----------------------------------------------------------------+
+
+* Lower number means higher priority.
+* ## Obsolete Registry Parameters
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select how the webcam to use should be choosen.                 |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.choose_webcam_by           |
++------------+-----------------------------------------------------------------+
+| Range      | [Use first webcam][Choose by name]                              |
+|            | [Choose by vendor_id:product_id][Choose by number]              |
+|            | [Choose by devicename][Choose by priority]                      |
++------------+-----------------------------------------------------------------+
+| Value      | _Use first webcam_                                              |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by number (only valid if choose by number is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_number              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 1 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by name (only valid if choose by name is used)    |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_name                |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by vendor_id:product_id (only valid if choose by vendor_id:product_id is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_vendor_product      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by devicename for example /dev/video0 or video0 (only valid if choose by devicename is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_device              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by priority list for example dev=video0;name=HD_Webcam_C270 (only valid if choose by priority is used)}} |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_priority            |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+### Firmware update
+
+* Fixed disk size detection of 8 GB flash sizes for OS 12 migration. With this
+  fix migration works on UD Pockets again.
+* Fixed OS11 to OS12 migration issue due to repartition not always working with
+  non GPT partition tables.
+* Fixed FTP server configuration to properly reflect the configured maxim number
+  of connections. Please note that there's a hard limit of 100 concurrent
+  connections in the FTP server.
+* Fixed migration dbus timeout on slower devices if migration prepare is needed.
+
+### X11 system
+
+* Fixed primary monitor configuration with new Display switcher implementation.
+  The panel appears on the proper monitor again.
+
+### Audio
+
+* Fixed USB headset support on LG CQ600i
+* Added parameter to set output level of a headphone in ALSA to maximum at every
+  start.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Set headphone in alsa to maximum                                |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.alsa.headphone_max_volume                            |
++------------+-----------------------------------------------------------------+
+| Range      | [auto][true][false]                                             |
++------------+-----------------------------------------------------------------+
+| Value      | _auto_                                                          |
++------------+-----------------------------------------------------------------+
+
+### Hardware
+
+* Fixed issue with Intel and additional graphic cards:  
+* All graphic cards are now detected properly,  
+* All screens attached to all graphic cards are active.
+* Fixed WiFi on Lenovo Ideapad devices. The last ON/OFF state of the WiFi is
+  restored on each boot or reboot.
+* Changed: Disabled suspend on HP t240.
+
+### Remote Management
+
+* Fixed rmagent device registration.
+* Added setup parameter to set connect timeout
+
++------------+-----------------------------------------------------------------+
+| IGEL Setup | system > remotemanager                                          |
++============+=================================================================+
+| Parameter  | `IGEL Remote Management Connect Timeout`                        |
++------------+-----------------------------------------------------------------+
+| Registry   | `system.remotemanager.connect_timeout`                          |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | timeout in sec / **45** (default)                               |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2024-11-20 - [11.10.195](readme11.10.195.txt)
 
 ```

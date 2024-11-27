@@ -155,14 +155,15 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [icg-config](Cheatsheet-IGELOS-General.md#icgconfig)    | :material-check-bold: | :material-close-circle:| IGEL Cloud Gateway config; with url and mass deployment key |
 | icg-setup                                               | :material-check-bold: | :material-close-circle:| Start the ICG GUI Setup or with parameters the CLI          |
 | rmagent_cli                                             | :material-check-bold: | :material-close-circle:| UMS Agent commandline                                       |
-| rmagent-devattrs-enum | :material-check-bold: | :material-close-circle:| Lists all device attributes including the current value for this device. The enumeration is ordered according to the attribute's order id. |
-| rmagent-devattrs-enum-range <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Enumerates entries of the given range. The enumeration is ordered according to the range item's order id. |
-| rmagent-devattrs-get-type <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Prints the type of the given attribute |
-| rmagent-devattrs-get <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Prints the current value of the given attribute |
-| rmagent-devattrs-set <ATTRIBUTE_NAME> <ATTRIBUTE_VALUE> | :material-check-bold: | :material-close-circle:| Sets the given attribute to the specified value |
-| rmagent-devattrs-reset <ATTRIBUTE_NAME> | :material-check-bold: | :material-close-circle:| Resets the given attribute to an empty value |
-| rmagent-devattrs-sync | :material-check-bold: | :material-close-circle:| Send Attributes to UMS If a Value Has Been Changed by Device |
+| rmagent-devattrs-enum | :material-check-bold: | :material-check-bold:| Lists all device attributes including the current value for this device. The enumeration is ordered according to the attribute's order id. |
+| rmagent-devattrs-enum-range <ATTRIBUTE_NAME> | :material-check-bold: | :material-check-bold:| Enumerates entries of the given range. The enumeration is ordered according to the range item's order id. |
+| rmagent-devattrs-get-type <ATTRIBUTE_NAME> | :material-check-bold: | :material-check-bold:| Prints the type of the given attribute |
+| rmagent-devattrs-get <ATTRIBUTE_NAME> | :material-check-bold: | :material-check-bold:| Prints the current value of the given attribute |
+| rmagent-devattrs-set <ATTRIBUTE_NAME> <ATTRIBUTE_VALUE> | :material-check-bold: | :material-check-bold:| Sets the given attribute to the specified value |
+| rmagent-devattrs-reset <ATTRIBUTE_NAME> | :material-check-bold: | :material-check-bold:| Resets the given attribute to an empty value |
+| rmagent-devattrs-sync | :material-check-bold: | :material-check-bold:| Send Attributes to UMS If a Value Has Been Changed by Device |
 | rmagent-write-device-attributes | :material-check-bold: | :material-close-circle:| The complete set of attributes is sent to the UMS |
+| rmagent-push-device-attributes | :material-close-circle: | :material-check-bold:| The complete set of attributes is sent to the UMS |
 | rmregister                                              | :material-check-bold: | :material-close-circle:| Start tool to register @ UMS                                |
 | rmagent-check-reenroll | :material-close-circle: | :material-check-bold: | Check the validity of the device’s certificate and reenroll a new one if the specified number of days are left before expiring date or the certificate is already expired |
 | rmagent-connect | :material-close-circle: | :material-check-bold: | Connects to the UMS where the device is registered |

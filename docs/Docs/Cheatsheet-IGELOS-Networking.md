@@ -151,7 +151,7 @@ iptables -S
 -P OUTPUT ACCEPT
 ```
 
-OS 12 script launches on boot, blocks all traffic except what is explicitly allowed
+OS 12.5.0+ script launches on boot, blocks all traffic except what is explicitly allowed
 
 ```bash linenums="1"
 #!/bin/sh

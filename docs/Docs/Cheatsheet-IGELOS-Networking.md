@@ -158,19 +158,16 @@ OS 12 script launches on boot, blocks all traffic except what is explicitly allo
 #set -x
 #trap read debug
 
-# OS 11 is iptables
-# OS 12 is iptables-legacy
+iptables -F
 
-iptables-legacy -F
-
-iptables-legacy -P INPUT DROP
-iptables-legacy -P FORWARD DROP
-iptables-legacy -P OUTPUT DROP
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
 Variable="Network,Resources,needed,for,management" #(DNS names, server names, IP address, etc)
-iptables-legacy -A INPUT -s $Variable -j ACCEPT
-iptables-legacy -A OUTPUT -d $Variable -j ACCEPT
-iptables-legacy -A OUTPUT -p tcp --dport (PORTNUM) -j ACCEPT
-iptables-legacy -A OUTPUT -p udp --dport (PORTNUM) -j ACCEPT
+iptables -A INPUT -s $Variable -j ACCEPT
+iptables -A OUTPUT -d $Variable -j ACCEPT
+iptables -A OUTPUT -p tcp --dport (PORTNUM) -j ACCEPT
+iptables -A OUTPUT -p udp --dport (PORTNUM) -j ACCEPT
 ```
 
 ## iwconfig

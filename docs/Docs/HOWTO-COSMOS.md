@@ -461,7 +461,10 @@ curl -v -k https://app.igel.com
 (such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.06.100/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
-- [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
+- Video: Proxy vs. Reverse Proxy
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4NB0NDtOwIQ?si=Mgyqc6OruOseTC1C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.06.100/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 **Q:** To secure reverse proxy, what are the paths that need to be enabled?

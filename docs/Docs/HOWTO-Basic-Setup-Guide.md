@@ -49,7 +49,9 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 **ADDITIONAL NOTE:** Some USB sticks may conflict with the preparestick.exe utility. If this happens, we recommend using Balena Etcher to format the USB stick instead of Preparestick. [You can download Etcher here](https://www.balena.io/etcher/). When you run it, choose the .iso file from the unzipped OSC download folder and target your USB stick.
 
 -	Allow the wizard to format the USB stick, following the prompts.
--	You can also [watch this tutorial video on how to create an OSC USB](https://www.youtube.com/watch?v=4hEokxorLUQ).
+-	You can also watch this tutorial video on how to create an OSC USB
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4hEokxorLUQ?si=_fq4RDrBEk2JJqnP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Convert the target endpoint
 
@@ -68,7 +70,9 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
 -	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/en/igel-os/11.10/installation-procedure)
 -	[OS 12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/en/how-to-start-with-igel/current/installing-the-base-system-via-igel-os-creator-osc). Choose the options best for you.
--	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. [See a tutorial video for installing IGEL OS here](https://www.youtube.com/watch?v=w-EMUDS5Tb0).
+-	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. Tutorial video for installing IGEL OS 11.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w-EMUDS5Tb0?si=Ng7OxiOdV6PqSMZ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Option 2: Purchase New 3rd-Party Hardware and Install IGEL OS 
 

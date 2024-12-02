@@ -340,7 +340,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** Does OS 12 support SCCM deployments?
 
-**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/igel-os-12-secure-endpoint/). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os/11.10/igel-os-sccm-add-on)
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/igel-os-12-secure-endpoint/). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os/11.10/igel-os-sccm-add-on). [HOWTO Light and Zero Touch Deployments of OS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Light_Zero_Touch_Deployments/)
 
 **Q:** Does OS 12 support PXE boot deployments?
 
@@ -356,7 +356,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/12.04.120/how-to-use-your-own-certificates-for-communication)
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-use-your-own-certificates-for-communication)
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -455,14 +455,14 @@ curl -v -k https://app.igel.com
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.04.120/configure-the-ums-to-integrate-reverse-proxy-with-)
+**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.06.100/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via reverse proxy
-(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/12.04/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
+(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.06.100/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - [Video: Proxy vs. Reverse Proxy](https://youtu.be/4NB0NDtOwIQ?si=-vsOKKGMn6dVgqiu)
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.04.120/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.06.100/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 **Q:** To secure reverse proxy, what are the paths that need to be enabled?
 
@@ -497,7 +497,7 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
-**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-universal-management-suite-network-configurat)
+**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/12.06.100/igel-universal-management-suite-network-configurat)
 
 **Q:** Does ICG 12 support OS 11 devices?
 
@@ -509,7 +509,7 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 **Q:** IGEL OS devices are reconnecting to ICG 12.01.100 every 30 minutes. How can this be fixed?
 
-**A:** Details on fix can be found here: [IGEL KB: Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/en/igel-cloud-gateway/12.04/known-issues-configuration-of-unlimited-session-ti)
+**A:** Details on fix can be found here: [IGEL KB: Configuration of Unlimited Session Timeout for ICG 12.01.100](https://kb.igel.com/en/igel-cloud-gateway/current/known-issues-configuration-of-unlimited-session-ti)
 
 **Q:** Having issues connecting to ICG. How to check ICG server status?
 
@@ -521,7 +521,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** Having issue with ICG remote installer from UMS.
 
-**A:** Make sure that SSH is running on ICG server and that the account used from UMS has `sudo` rights. [IGEL KB: ICG How-Tos - Giving a User sudo Privileges](https://kb.igel.com/en/igel-cloud-gateway/12.05/giving-a-user-sudo-privileges). Linux setup example can be found in [IGEL Community Docs HOWTO Setup Lab Sandbox Environment - Optional - Install ICG from UMS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#optional-install-icg-from-ums-os-11)
+**A:** Make sure that SSH is running on ICG server and that the account used from UMS has `sudo` rights. [IGEL KB: ICG How-Tos - Giving a User sudo Privileges](https://kb.igel.com/en/igel-cloud-gateway/current/giving-a-user-sudo-privileges). Linux setup example can be found in [IGEL Community Docs HOWTO Setup Lab Sandbox Environment - Optional - Install ICG from UMS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#optional-install-icg-from-ums-os-11)
 
 -----
 

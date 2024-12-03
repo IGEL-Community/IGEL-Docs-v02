@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-03 - [11.10.213](readme11.10.213.txt)
+
+```
+The new PRIVATE BUILD 11.10.213 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Fabulatech
+
+* Updated Fabulatech USB to version 6.2.1.8  
+* Updated Fabulatech Plugins to version 4.1.0.3
+```
+
+-----
+
 ## 2024-11-27 - [11.10.210](readme11.10.210.txt)
 
 ```

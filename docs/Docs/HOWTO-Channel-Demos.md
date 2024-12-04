@@ -2,6 +2,21 @@
 
 -----
 
+## Demo: UMS
+
+What is shown in this demo:
+
+- Customizing the appearance (light vs. dark mode)
+- Show menu items (such as Apps, Configuration, and Devices)
+- Connecting to IGEL App Portal and searching for apps
+- Configurations for Apps
+- Shadow Device
+- Assign Profile (Edge) 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/he-gN4dFZ9Q?si=NAL_4G94l4SBcwj2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Demo: iPhone Like Experience
 
 Like the iPhone, allow user to choose applications to install and configure. 

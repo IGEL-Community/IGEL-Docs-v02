@@ -40,7 +40,7 @@
 
 The the log files for Imprivata ProveID Embedded agent are located in:
 
-```
+```bash linenums="1"
 /.imprivata_data_runtime/log
 ```
 
@@ -48,7 +48,7 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 The log files for IGEL Agent for Imprivata on IGEL OS
 
-```
+```bash linenums="1"
 /var/log/user/IGELImprivataAgent.log
 ```
 
@@ -61,6 +61,20 @@ The log files for IGEL Agent for Imprivata on IGEL OS
 # Need to be run as root
 
 /services/imprivata/bin/fetch_support_info /tmp/imprivata_logs_$(date +%y%m%d%H%M).zip
+```
+
+-----
+
+## 5 December 2024 - Registry settings for Windows virtual machine for Imprivata on IGEL
+
+These can be set / unset via group policy.
+
+In HKLM\Software\SSOProvider\General the three keys to be added:
+
+```bash linenums="1"
+HKLM\Software\SSOProvider\General VCC_SendTimeoutSeconds
+HKLM\Software\SSOProvider\General VCC_TraceMessages
+HKLM\Software\SSOProvider\General VCS_TraceMessages
 ```
 
 -----

@@ -72,10 +72,14 @@ These can be set / unset via group policy.
 In HKLM\Software\SSOProvider\General the three keys to be added:
 
 ```bash linenums="1"
-HKLM\Software\SSOProvider\General VCC_SendTimeoutSeconds
-HKLM\Software\SSOProvider\General VCC_TraceMessages
-HKLM\Software\SSOProvider\General VCS_TraceMessages
+HKLM\Software\SSOProvider\General VCC_TraceMessages (DWORD, default: 0) - specify if we should log VC related messages to the trace
+HKLM\Software\SSOProvider\General VCC_OpenTimeoutSeconds (DWORD, default: 15, range: 1-60 seconds) - VC Open Timeout: total time to open VC and send a connect request
+HKLM\Software\SSOProvider\General VCC_ConnectTimeoutSeconds (DWORD, default: 12, range: 1-58 seconds) - VC Connect Request Timeout
+HKLM\Software\SSOProvider\General VCC_ConnectRetriesQty (DWORD, default: 0) - VC Connect Request Retries
+HKLM\Software\SSOProvider\General VCC_SendTimeoutSeconds (DWORD, default: 10, range: 1-58 seconds) - VC Data Send Timeout
+HKLM\Software\SSOProvider\General VCC_SendRetriesQty (DWORD, default: 0) - VC Data Send Retries
 ```
+
 These keys were noted by Imprivata support to correct errors around 10 second delay in the IGEL logs and communicating back to the card reader.
 
 -----

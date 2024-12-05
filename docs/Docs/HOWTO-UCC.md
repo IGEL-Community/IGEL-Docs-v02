@@ -97,6 +97,13 @@ VDI client in a non-persistent VDI setting with autoupgrade disabled
 
 `msiexec /i c:\users\[username]\Downloads\WebexBundle.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 ROAMINGENABLED=1 FORCELOCKDOWN=NeverUpdate`
 
+**NOTE:** To control the optimized VDI solution
+
+| Argument | Notes |
+|----------|-------|
+| ENABLEVDI=1 | 1 enforces optimized VDI mode |
+| ENABLEVDI=2 | 2 enables optimized VDI mode automatically with environment detection |
+	
 -----
 
 ## Cisco Webex Meetings VDI & Cisco Webex App VDI Compatibility Lists

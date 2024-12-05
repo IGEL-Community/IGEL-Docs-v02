@@ -486,6 +486,13 @@ Non-persistent VDI: msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABL
 
 **NOTE:** The most important setting is `ENABLEVDI=1`. If you just simply double-click the MSI this option is not used, and redirection will not work.
 
+**NOTE:** To control the optimized VDI solution
+
+| Argument | Notes |
+|----------|-------|
+| ENABLEVDI=1 | 1 enforces optimized VDI mode |
+| ENABLEVDI=2 | 2 enables optimized VDI mode automatically with environment detection |
+
 The other important setting is `ROAMINGENABLED=1` for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by `ALLUSERS=1`, otherwise the `ROAMINGENABLED` argument is ignored.
 
 Users may be in a Citrix environment and not have the thin client installed or the virtual channel is disconnected. We support this scenario with fallback to a non-virtual Webex App installation. In this mode, the app shows a warning that the quality of video may be affected. Once the virtual channel is connected, the app can change to VDI mode. 
@@ -877,6 +884,13 @@ Persistent VDI: `msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=
 Non-persistent VDI: `msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 ROAMINGENABLED=1 /quiet /norestart`
 
 **Note:** The most important setting is ENABLEVDI=2. If you just simply double-click the MSI this option is not used, and redirection will not work.
+
+**NOTE:** To control the optimized VDI solution
+
+| Argument | Notes |
+|----------|-------|
+| ENABLEVDI=1 | 1 enforces optimized VDI mode |
+| ENABLEVDI=2 | 2 enables optimized VDI mode automatically with environment detection |
 
 **Note:** Use this table to understand the different installation combinations and how they affect media optimization for Unified CM, Webex Calling, and calls on Webex App. 
 

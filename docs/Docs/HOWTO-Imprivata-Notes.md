@@ -1,10 +1,16 @@
 # HOWTO Imprivata Notes
 
-## [IGEL Knowledge Base -- Configuration of the IGEL Agent for Imprivata on IGEL OS](https://kb.igel.com/en/igel-apps/current/configuration-of-the-igel-agent-for-imprivata-on-i)
+## [IGEL KB: Configuration of the IGEL Agent for Imprivata on IGEL OS](https://kb.igel.com/en/igel-apps/current/configuration-of-the-igel-agent-for-imprivata-on-i)
 
-## [IGEL Knowledge Base -- Imprivata](https://kb.igel.com/en/igel-os/11.10/imprivata-1)
+## [IGEL KB: Imprivata on OS 11](https://kb.igel.com/en/igel-os/11.10/imprivata-1)
 
-## [IGEL Knowledge Base -- Imprivata Articles](https://kb.igel.com/en/igel-os/11.10/imprivata-1)
+## [IGEL KB: Imprivata Articles on OS 11](https://kb.igel.com/en/igel-os/11.10/imprivata-1)
+
+## [IGEL KB: IGEL Agent for Imprivata (IAFI) - General Feature Overview](https://kb.igel.com/en/imprivata/current/igel-agent-for-imprivata-iafi-general-feature-over)
+
+## [IGEL KB: IGEL Agent for Imprivata (IAFI) Configuration Guide](https://kb.igel.com/en/imprivata/current/igel-agent-for-imprivata-iafi-configuration-guide)
+
+## [IGEL KB: IGEL Agent for Imprivata (IAFI) Articles](https://kb.igel.com/en/imprivata/current/igel-agent-for-imprivata-iafi-articles)
 
 **Notes:**
 

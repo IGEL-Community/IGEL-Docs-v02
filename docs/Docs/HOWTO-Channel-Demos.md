@@ -148,6 +148,7 @@ Demonstrates using a YubiKey with Fido2 authentication and EntraID as identity p
 ## Using VueScan application to scan on OS 12
 
 - [VueScan](https://www.hamrick.com/) supports over 7400 scanners and included built in drivers in VueScan so you can keep using the scanner you already have.
+- [IGEL Community GitHub Builder for VueScan](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Apps/VueScan)
 
 This demo shows VueScan connecting to network attached Brother MFC-L2750DW and scanning a post card.
 

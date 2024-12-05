@@ -13,6 +13,68 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-05 - [11.10.215](readme11.10.215.txt)
+
+```
+The new PRIVATE BUILD 11.10.215 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix workspace app 24.08.0.98  
+  Available workspace apps in this release: 24.08(default), 24.05, and 20.10
+* New Features:  
+* Enhanced virtual desktop screen resizing experience:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enhanced virtual desktop screen resizing experience             |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.EnhancedResizingEnabled                            |
++------------+-----------------------------------------------------------------+
+| Value      | false / true (default)                                          |
++------------+-----------------------------------------------------------------+
+
+* Performance improvement of graphics usage by supporting OpenGL library:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | OpenGLEnabled                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.OpenGLEnabled                                      |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+* Performance improvement using H265 encoding (requires OpenGLEnabled=true):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | H265Enabled                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.H265Enabled                                        |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+* Multiple webcam resolutions support:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | HDXWebcamEnablePnp                                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.hdxwebcamenablepnp                                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | true (default) / false                                          |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2024-12-03 - [11.10.213](readme11.10.213.txt)
 
 ```

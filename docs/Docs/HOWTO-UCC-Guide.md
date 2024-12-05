@@ -502,11 +502,11 @@ Unified CM, Webex Calling, and calls on Webex App.
 
 |HVD VDI argument | Thin client plugin | Call service-enabled User | Calls on Webex App |
 |-----------------|--------------------|---------------------------|---------------|
-| ENABLEDVDI=0 | Not installed | Media is not optimized | Media is not optimized |
-| ENABLEDVDI=0 | Installed | Media is not optimized | Media is not optimized |
-| ENABLEDVDI=1 * | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
-| ENABLEDVDI=2 ** | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
-| ENABLEDVDI=1 * | Not installed | Fallback to non-optimized media | Fallback to non-optimized media |
+| ENABLEVDI=0 | Not installed | Media is not optimized | Media is not optimized |
+| ENABLEVDI=0 | Installed | Media is not optimized | Media is not optimized |
+| ENABLEVDI=1 * | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
+| ENABLEVDI=2 ** | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
+| ENABLEVDI=1 * | Not installed | Fallback to non-optimized media | Fallback to non-optimized media |
 
 * This argument does not detect the VDI environment automatically.
 
@@ -896,11 +896,11 @@ Non-persistent VDI: `msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENAB
 
 |HVD VDI argument | Thin client plugin | Call service-enabled User | Calls on Webex App |
 |-----------------|--------------------|---------------------------|---------------|
-| ENABLEDVDI=0 | Not installed | Media is not optimized | Media is not optimized |
-| ENABLEDVDI=0 | Installed | Media is not optimized | Media is not optimized |
-| ENABLEDVDI=1 * | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
-| ENABLEDVDI=2 ** | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
-| ENABLEDVDI=1 * | Not installed | Fallback to non-optimized media | Fallback to non-optimized media |
+| ENABLEVDI=0 | Not installed | Media is not optimized | Media is not optimized |
+| ENABLEVDI=0 | Installed | Media is not optimized | Media is not optimized |
+| ENABLEVDI=1 * | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
+| ENABLEVDI=2 ** | Installed | Supported deployment; Media is optimized | Supported deployment; Media is optimized |
+| ENABLEVDI=1 * | Not installed | Fallback to non-optimized media | Fallback to non-optimized media |
 
 * This argument does not detect the VDI environment automatically.
 

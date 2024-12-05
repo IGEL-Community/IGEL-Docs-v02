@@ -76,6 +76,7 @@ HKLM\Software\SSOProvider\General VCC_SendTimeoutSeconds
 HKLM\Software\SSOProvider\General VCC_TraceMessages
 HKLM\Software\SSOProvider\General VCS_TraceMessages
 ```
+These keys were noted by Imprivata support to correct errors around 10 second delay in the IGEL logs and communicating back to the card reader.
 
 -----
 

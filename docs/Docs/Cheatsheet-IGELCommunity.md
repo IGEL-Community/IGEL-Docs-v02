@@ -75,6 +75,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [sleep](Cheatsheet-Linux-General.md#sleep)                 | :material-check-bold: | :material-check-bold:| wait                                       |
 | [su](Cheatsheet-Linux-General.md#su)                       | :material-check-bold: | :material-check-bold:| change to root                             |
 | [systemctl](Cheatsheet-Linux-General.md#systemctl)         | :material-check-bold: | :material-check-bold:| service handler                            |
+| [tee](Cheatsheet-Linux-General.md#tee)                     | :material-check-bold: | :material-check-bold:|  read from standard input and write to standard output and files |
 | [top](Cheatsheet-Linux-General.md#top)                     | :material-check-bold: | :material-check-bold:| task monitor                               |
 | [touch](Cheatsheet-Linux-General.md#touch)                 | :material-check-bold: | :material-check-bold:| create a file                              |
 | [tr](Cheatsheet-Linux-General.md#tr)                       | :material-check-bold: | :material-check-bold:| translates, deletes, and squeezes characters |

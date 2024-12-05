@@ -387,6 +387,16 @@ service handler
 systemctl restart network-manager
 ```
 
+## tee
+
+read from standard input and write to standard output and files
+
+**Run a program to redirect standard error to standard output and standard output to /tmp/debug.txt and print it to standard output.**
+
+```bash linenums="1"
+program_to_run 2>&1 | tee -a /tmp/debug.txt
+```
+
 ## top
 
 task monitor

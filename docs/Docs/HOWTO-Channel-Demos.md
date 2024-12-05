@@ -142,3 +142,13 @@ Demonstrates using a YubiKey with Fido2 authentication and EntraID as identity p
 - Additional details can be found on this [Blog Post](https://virtualbrat.com/2024/11/20/microsoft-intune-on-igel-entra-conditional-access-with-igel-os-12-to-control-access-to-azure-virtual-desktop-and-windows-365-check-this-demo/)
 
  <iframe width="560" height="315" src="https://www.youtube.com/embed/XwtP3cbVs1o?si=95EzgncTKV5rv3H7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
+## Using VueScan application to scan on OS 12
+
+- [VueScan](https://www.hamrick.com/) supports over 7400 scanners and included built in drivers in VueScan so you can keep using the scanner you already have.
+
+This demo shows VueScan connecting to network attached Brother MFC-L2750DW and scanning a post card.
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/DKAR2hqaltY?si=zmEumFUzfxDAJe_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

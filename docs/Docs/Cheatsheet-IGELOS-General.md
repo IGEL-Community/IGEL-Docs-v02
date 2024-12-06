@@ -250,6 +250,18 @@ Reset defined section of the IGEL registry
 /sbin/write_rmsettings
 ```
 
+## setcryptparam
+
+Saves encrypted Data like password to IGEL registry
+
+**Set password for OS 11 Horizon**
+
+```bash linenums="1"
+setcryptparam app.horizon.sessions.vdm_client0.options.crypt_password "$EncryptedPW"
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XfVq3Hxe0-4?si=mZ2-QI_VQX8dOZpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## setparam
 
 Write variable to registry

@@ -128,7 +128,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | pkcs11getloginname                                      | :material-check-bold: | :material-check-bold:| Shows extracted smart card login name                       |
 | reset_to_defaults                                       | :material-check-bold: | :material-check-bold:| Factory reset                                               |
 | [resetvalue_tree](Cheatsheet-IGELOS-General.md#resetvalue_tree) | :material-check-bold: | :material-check-bold:| Reset all settings under each of the registry classes back to default                   |
-| [setcryptparam](Cheatsheet-IGELOS-General.md#setcryptparam | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to IGEL Registry      |
+| [setcryptparam](Cheatsheet-IGELOS-General.md#setcryptparam) | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to IGEL Registry      |
 | [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
 | setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                         |
 | setup-assistant | :material-close-circle: | :material-check-bold: | Start IGEL Setup (start as user) |

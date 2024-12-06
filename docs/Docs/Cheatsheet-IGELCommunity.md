@@ -100,11 +100,11 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [apparmor_status](Cheatsheet-IGELOS-General.md#apparmor_status)                                       | :material-check-bold: | :material-check-bold:| Lists all services protected by apparmor                    |
 | applauncher                                             | :material-check-bold: | :material-check-bold:| Starts the application launcher                             |
 | [chromium-browser](Cheatsheet-IGELOS-General.md#chromium-browser) | :material-check-bold: | :material-check-bold:| Start Chromium Browser |
-| [curl](Cheatsheet-IGELOS-General.md#curl)               | :material-check-bold: | :material-check-bold:| Check for trusted certificate or download files         |
+| [curl](Cheatsheet-IGELOS-General.md#curl)               | :material-check-bold: | :material-check-bold:| Check for trusted certificate or download files             |
 | custompart                                              | :material-check-bold: | :material-check-bold:| Delete/Create a custom partition                            |
 | delinstance                                             | :material-check-bold: | :material-check-bold:| Delete a session or instance                                |
 | df -h                                                   | :material-check-bold: | :material-check-bold:| Shows Partition usage                                       |
-| [florence](Cheatsheet-IGELOS-General.md#florence)         | :material-check-bold: | :material-check-bold:| OnScreen Keyboard                                           |
+| [florence](Cheatsheet-IGELOS-General.md#florence)         | :material-check-bold: | :material-check-bold:| OnScreen Keyboard                                         |
 | [get](Cheatsheet-IGELOS-General.md#get)                 | :material-check-bold: | :material-check-bold:| Get Variable from registry                                  |
 | [get_unit_id](Cheatsheet-IGELOS-General.md#get_unit_id) | :material-check-bold: | :material-check-bold:| Get the Unit ID                                             |
 | [getmyip](Cheatsheet-IGELOS-General.md#getmyip)         | :material-check-bold: | :material-check-bold:| show device IP                                              |
@@ -112,7 +112,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | icaconncenter                                           | :material-check-bold: | :material-check-bold:| ICA Connection Center                                       |
 | igel_buddy_update_server_scan                           | :material-check-bold: | :material-check-bold:| Search for Buddy Masters in network                         |
 | igel_display_switcher                                   | :material-check-bold: | :material-check-bold:| Start the new Display Switcher                              |
-| igel_firstboot_wizard                                   | :material-check-bold: | :material-close-circle:| Starts the First Boot Wizard                                |
+| igel_firstboot_wizard                                   | :material-check-bold: | :material-close-circle:| Starts the First Boot Wizard                              |
 | igel_gamma                                              | :material-check-bold: | :material-check-bold:| TOCHECK Should influence the brightness                     |
 | journalctl -f                                           | :material-check-bold: | :material-check-bold:| Sys logs anzeigen und folgen.                               |
 | killwait_postsetupd                                     | :material-check-bold: | :material-check-bold:| reset and applay setup changes set by "setparam"            |
@@ -128,9 +128,9 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | pkcs11getloginname                                      | :material-check-bold: | :material-check-bold:| Shows extracted smart card login name                       |
 | reset_to_defaults                                       | :material-check-bold: | :material-check-bold:| Factory reset                                               |
 | [resetvalue_tree](Cheatsheet-IGELOS-General.md#resetvalue_tree) | :material-check-bold: | :material-check-bold:| Reset all settings under each of the registry classes back to default                   |
-| setcryptparam                                           | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to Igel Registry         |
+| [setcryptparam](Cheatsheet-IGELOS-General.md#setcryptparam | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to IGEL Registry      |
 | [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
-| setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                            |
+| setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                         |
 | setup-assistant | :material-close-circle: | :material-check-bold: | Start IGEL Setup (start as user) |
 | show_usbconfig                                          | :material-check-bold: | :material-check-bold:| List configs from USB Storage                               |
 | start-wireless-manager                                  | :material-check-bold: | :material-check-bold:| Starts the Wireless cafe menu (start as user)               |

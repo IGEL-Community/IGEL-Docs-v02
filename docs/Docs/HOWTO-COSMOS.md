@@ -675,6 +675,14 @@ app.avd.sessions.avd%.options.compact-login-view
 
 - [Horizon Blast Protocol : Deprecation of the Switch Encoder Feature from 2312 & onwards. (96214)](https://kb.omnissa.com/s/article/96214)
 
+**Q:** How to configure Chromium to sign in and switch over to VMware without the `xdg-open` prompt?
+
+**A:** Set the following Chromium custom policy:
+
+```bash linenums="1"
+[{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
+```
+
 -----
 
 ## FAQ - Microsoft Windows 365

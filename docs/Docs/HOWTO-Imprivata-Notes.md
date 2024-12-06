@@ -69,7 +69,7 @@ The log files for IGEL Agent for Imprivata on IGEL OS
 
 These can be set / unset via group policy.
 
-In HKLM\Software\SSOProvider\General the three keys to be added:
+In HKLM\Software\SSOProvider\General the keys to be added (if needed):
 
 ```bash linenums="1"
 HKLM\Software\SSOProvider\General VCC_TraceMessages (DWORD, default: 0) - specify if we should log VC related messages to the trace

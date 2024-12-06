@@ -416,6 +416,10 @@ curl -v -k https://app.igel.com
 /usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
 ```
 
+**Q:** How to create shortcuts to tray applications?
+
+**A:** [How to Create Shortcuts to Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-create-shortcuts-to-tray-applications-in-ig)
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

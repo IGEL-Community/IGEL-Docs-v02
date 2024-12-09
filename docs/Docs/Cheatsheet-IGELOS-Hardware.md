@@ -34,6 +34,12 @@ dmidecode -t system | grep 'Product Name' | cut -c 16-
 M350C
 ```
 
+**get BIOS version**
+
+```bash linenums="1"
+dmidecode -t bios -q
+```
+
 ## lsblk
 
 list block devices (file system)

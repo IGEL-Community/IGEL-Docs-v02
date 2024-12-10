@@ -1,4 +1,4 @@
-# Cheatsheet IGELCommunity
+# Cheatsheet IGEL Community
 
 -----
 

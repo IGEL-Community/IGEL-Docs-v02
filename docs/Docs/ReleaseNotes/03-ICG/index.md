@@ -1,7 +1,6 @@
 
 # IGEL ICG Release Notes
 
-- [12.06.110](Readme-12.06.110.txt) 10-December-2024
 - [12.06.100](Readme-12.06.100.txt) 23-October-2024
 - [12.05.120](Readme-12.05.120.txt) 27-August-2024
 - [12.05.110](Readme-12.05.110.txt) 07-August-2024

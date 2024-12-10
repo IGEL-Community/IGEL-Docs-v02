@@ -13,6 +13,44 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-10 - [11.10.217](readme11.10.217.txt)
+
+```
+The new PRIVATE BUILD 11.10.217 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Evidian
+
+* Updated Horizon Exec script
+```
+
+-----
+
+## 2024-12-10 - [11.10.216](readme11.10.216.txt)
+
+```
+The new PRIVATE BUILD 11.10.216 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### X11 system
+
+* Fixed a bug that reset the display configuration to default on reboot.
+```
+
+-----
+
 ## 2024-12-05 - [11.10.215](readme11.10.215.txt)
 
 ```

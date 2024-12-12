@@ -13,6 +13,42 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-12 - [11.10.218](readme11.10.218.txt)
+
+```
+The new PRIVATE BUILD 11.10.218 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Updated AVD client to version 1.2.1
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Integrated new RdClientSDK to fix issues when connecting to host pools that
+  use private endpoint.
+
+### RD Web Access
+
+* Fixed RD Web Access start from external scripts
+
+### Smartcard
+
+* Fixed smart card resource manager pcsc-lite making smart cards work with
+  certain applications inside AVD, Remote Desktop and Cloud PC sessions.
+```
+
+-----
+
 ## 2024-12-10 - [11.10.217](readme11.10.217.txt)
 
 ```

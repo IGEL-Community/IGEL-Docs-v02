@@ -65,6 +65,16 @@ The log files for IGEL Agent for Imprivata on IGEL OS
 
 -----
 
+## 13 December 2024 - IGEL Agent for Imprivata (IAFI) on OS 12 - No VDI available for user
+
+There is a setting in the user policy that needs to be enabled under "Virtual Desktops".
+
+- `Automate access to full VDI desktops`
+
+![image05](Images/HOWTO-Imprivata-Notes-05.png)
+
+-----
+
 ## 5 December 2024 - Registry settings for Windows virtual machine for Imprivata on IGEL
 
 These can be set / unset via group policy.

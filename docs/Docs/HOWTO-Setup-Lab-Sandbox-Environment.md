@@ -156,6 +156,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt autoremove -y
 sudo apt-get install build-essential gcc make perl dkms -y
+sudo apt-get install gdebi -y
 sudo reboot now
 ```
 

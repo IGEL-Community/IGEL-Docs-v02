@@ -13,6 +13,31 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-16 - [11.10.219](readme11.10.219.txt)
+
+```
+The new PRIVATE BUILD 11.10.219 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### VMware Horizon
+
+* Fixed bug in the Horizon logon dialog for next-gen sessions where the username
+  couldn't be changed
+
+### CUPS Printing
+
+* Fixed printing on DYMO LaserWriter 450
+* Fixed CUPS printing service not starting at boot-up
+```
+
+-----
+
 ## 2024-12-12 - [11.10.218](readme11.10.218.txt)
 
 ```

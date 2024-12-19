@@ -6,6 +6,18 @@
 
 -----
 
+## 18 December 2024 - 11.10.210 and derived builds have CUPS start up issue
+
+- 11.10.210 and derived builds have a starting problem with the CUPS printing service. Only PB 11.10.219 has currently a fix for it.
+
+- Work-around by adding this line in System > Registry > Custom Commands > Desktop > Final Desktop Commands:
+
+```bash linenums="1"
+systemctl restart cups 
+```
+
+-----
+
 ## USB attached printers - Use PPD file
 
 If printer is not network attached, then follow IGEL note on setting up CUPs printer with USB connection with PPD file.

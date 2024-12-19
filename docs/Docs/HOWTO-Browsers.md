@@ -20,11 +20,19 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 -----
 
+## OS 12: Running Progressive Web Apps (PWA)
+
+- [IGEL App Portal: Progressive Web App](https://app.igel.com/pwa)
+
+- [IGEL App Portal: Microsoft Teams Progressive Web App](https://app.igel.com/pwa)
+
+- [IGEL KB: Example: Microsoft Outlook as a Progressive Web App (PWA) on IGEL OS 12](https://kb.igel.com/en/igel-apps/current/example-microsoft-outlook-as-a-progressive-web-app)
+
+- [IGEL KB: Example: Google Maps as a Progressive Web App (PWA) on IGEL OS 12](https://kb.igel.com/en/igel-apps/current/example-google-maps-as-a-progressive-web-app-pwa-o)
+
+-----
+
 ## [IGEL OS with Chromium – Guide](https://leon-beitsch.de/shared/IGEL_OS_with_Chromium.pdf)
-
-## [Running Microsoft Teams as a Progressive Web App (PWA)](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/#microsoft-teams-progressive-web-app-pwa-via-chromium)
-
-## OS 12: Running Microsoft Teams as a Progressive Web App (PWA) - Coming soon to the [IGEL App Portal](https://app.igel.com)
 
 -----
 

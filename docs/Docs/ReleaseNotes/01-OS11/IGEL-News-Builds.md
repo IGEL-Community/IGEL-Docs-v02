@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-19 - [11.10.223](readme11.10.223.txt)
+
+```
+The new PRIVATE BUILD 11.10.223 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed password change within Citrix Workspace App with German user interface
+  language.
+```
+
+-----
+
 ## 2024-12-18 - [11.10.222](readme11.10.222.txt)
 
 ```

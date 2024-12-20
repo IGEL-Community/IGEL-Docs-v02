@@ -13,6 +13,30 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2024-12-20 - [11.10.224](readme11.10.224.txt)
+
+```
+The new PRIVATE BUILD 11.10.224 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Backported a kernel patch for devices with the Intel Goldmont
+  microarchitecture, which is used for low-power Atom, Celeron and Pentium
+  branded processors.  
+    - This fixes a potential freeze during the OSC installation process.  
+    - Additionally, this fixes an issue where affected devices were not shutting
+      down correctly.
+```
+
+-----
+
 ## 2024-12-19 - [11.10.223](readme11.10.223.txt)
 
 ```

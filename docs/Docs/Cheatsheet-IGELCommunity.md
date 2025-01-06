@@ -87,6 +87,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [wget](Cheatsheet-Linux-General.md#wget)                   | :material-check-bold: | :material-check-bold:| non-interactive network downloader         |
 | [which](Cheatsheet-Linux-General.md#which)                 | :material-check-bold: | :material-check-bold:| locate command                             |
 | [wmctrl](Cheatsheet-Linux-General.md#wmctrl) | :material-check-bold: | :material-check-bold:| interact with X window manager |
+| [xdotool](Cheatsheet-Linux-General.md#xdotool)               | :material-check-bold: | :material-check-bold:| command-line X11 automation tool         |
 | [xinput](Cheatsheet-Linux-General.md#xinput)               | :material-check-bold: | :material-check-bold:| utility to configure and test X input devices |
 | [xset](Cheatsheet-Linux-General.md#xset)               | :material-check-bold: | :material-check-bold:| user preference utility for X |
 | [zenity](Cheatsheet-Linux-General.md#zenity)               | :material-check-bold: | :material-check-bold:| display dialog window, and return (either in the return code, or on standard output) the users input |

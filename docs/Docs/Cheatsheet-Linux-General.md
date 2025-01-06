@@ -642,6 +642,12 @@ wmctrl -l
 wmctrl -i -a $(wmctrl -l | grep igelums | cut -f 1)
 ```
 
+## xdotool
+
+command-line X11 automation tool
+
+- [Automating X11 with xdotool (with examples)](https://commandmasters.com/commands/xdotool-linux/)
+
 ## xinput
 
 utility to configure and test X input devices

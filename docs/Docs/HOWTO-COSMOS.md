@@ -420,6 +420,22 @@ curl -v -k https://app.igel.com
 
 **A:** [How to Create Shortcuts to Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-create-shortcuts-to-tray-applications-in-ig)
 
+**Q:** Getting `xdg-open` popup from browser. How to remove `xdg-open` popup?
+
+**A:** Set custom policy to remove the popup.
+
+- Citrix:
+
+```bash linenums="1"
+AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["*"], "protocol": "citrixauthwebviewdone"}]
+```
+
+- Horizon:
+
+```bash linenums="1"
+AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
+```
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

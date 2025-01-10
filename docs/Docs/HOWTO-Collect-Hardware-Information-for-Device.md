@@ -331,6 +331,9 @@ update
 
 -----
 
+<!---
+This is a comment section
+
 ## Updating to IGEL OS - Current Version
 
 Configure Firmware Update settings with the following parameters and then select "Update firmware":
@@ -383,6 +386,8 @@ update
 | igelos/amd64/11.07.920 |
 | igelos/amd64/11.07.170 |
 | igelos/arm64/11.02.120 |
+
+-->
 
 -----
 

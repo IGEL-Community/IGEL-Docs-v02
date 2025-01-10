@@ -44,6 +44,8 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 ## [IGEL OS with Chromium – Guide](https://leon-beitsch.de/shared/IGEL_OS_with_Chromium.pdf)
 
+## [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
+
 -----
 
 ## Other Browsers

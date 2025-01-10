@@ -18,6 +18,16 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 **A:** [IGEL KB: How to Set the Default Browser in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-set-the-default-browser-in-igel-os-12)
 
+**Q:** How to configure Edge Browser in Kiosk Mode
+
+**A:** Apps -> Edge Browser > Sessions -> Settings -> Startup pages:
+
+```bash linenums="1"
+--kiosk "https://www.igel.com" --edge-kiosk-type=public-browsing--not-first-run
+```
+
+![image02](Images/HOWTO-Browsers-02.png)
+
 -----
 
 ## OS 12: Running Progressive Web Apps (PWA)

@@ -86,6 +86,33 @@ delete_igel_licenses ALL && reset_to_defaults && reboot
 
 -----
 
+## IGEL App Creator Portal - Steps to build SpeedCrunch
+
+The App creator portal replaces Custom Partitions by using recipe
+to create OS 12 application that can be deployed from your UMS.
+
+The IGEL Community provides a GitHub site with recipes.
+
+This video will show the steps to take recipe from GitHub, use IGEL
+App creator portal to create application, and finally to add it to
+UMS and deploy to OS 12 device.
+
+- Show web site to SpeedCrunch
+- Show GitHub recipe for SpeedCruch
+- Take SpeedCrunch.zip and use in IGEL App Creator Portal
+- Download app
+- Download certificate 
+- Setup in UMS
+- Deploy to OS 12 device
+
+- [SpeedCrunch Web site](https://heldercorreia.bitbucket.io/speedcrunch/)
+- [IGEL Community App Recipes](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
+- [HOWTO: Add Applications - App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#os-12-app-sdk-coming-soon)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hZZLVqsvAjs?si=6zweUwuXxVXmYX5m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Direct Boot to Microsoft AVD with IGEL OS in 33 seconds 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JxuK7DHiqY8?si=sQTsbgktEcqXmKgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

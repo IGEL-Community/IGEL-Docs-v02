@@ -62,6 +62,7 @@ Build your own IGEL OS App with IGEL OS App SDK.
 - [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal)
 - [IGEL KB: Upload and Assign Files in the IGEL UMS Web App - Classification - App signing certificate](https://kb.igel.com/en/universal-management-suite/12.06.100/upload-and-assign-files-in-the-igel-ums-web-app)
 - [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
+- [IGEL Community GitHub: SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
 
 **Please Note:** 
 

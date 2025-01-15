@@ -105,9 +105,12 @@ UMS and deploy to OS 12 device.
 - Setup in UMS
 - Deploy to OS 12 device
 
+Links for additional information:
+
 - [SpeedCrunch Web site](https://heldercorreia.bitbucket.io/speedcrunch/)
 - [IGEL Community App Recipes](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 - [HOWTO: Add Applications - App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#os-12-app-sdk-coming-soon)
+- [HOWTO: Add Application - SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hZZLVqsvAjs?si=6zweUwuXxVXmYX5m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

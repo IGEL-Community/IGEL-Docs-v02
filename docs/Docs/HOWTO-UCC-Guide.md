@@ -3,7 +3,7 @@
 <!--
 UPDATE
 -->
-- IGEL UMS Version Base: [12.06.110](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.06.110.txt)
+- IGEL UMS Version Base: [12.06.120](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/Readme-12.06.120.txt)
 
 - IGEL OS Firmware Base: [11.10.222](https://github.com/IGEL-Community/IGEL-Docs-v02/blob/main/docs/Docs/ReleaseNotes/01-OS11/readme11.10.222.txt)
 
@@ -147,7 +147,7 @@ UPDATE
 
 IGEL UMS:
 
-- IGEL UMS 12.06.110 - [IGEL download site](https://www.igel.com/software-downloads/)
+- IGEL UMS 12.06.120 - [IGEL download site](https://www.igel.com/software-downloads/)
 
 -----
 

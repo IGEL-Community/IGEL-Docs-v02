@@ -432,6 +432,7 @@ exit 0
 ## Building an OS 12 App Recipe for IGEL App Creator Portal -- SpeedCrunch
 
 - [GitHub App Recipes - SpeedCrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/speedcrunch)
+- [GitHub App Recipes - SpeedCruch Zip File](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip)
 
 ![image-howto-add-applications-01](Images/HOWTO-Add-Applications-01.png)
 

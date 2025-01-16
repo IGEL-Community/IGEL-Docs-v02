@@ -29,6 +29,14 @@ Remove for now
 
 -----
 
+## Setting DPI Display Scaling in Windows
+
+- [How to Change DPI Display Scaling in Windows 11](https://winaero.com/how-to-change-dpi-display-scaling-in-windows-11/)
+
+"Here is how you can change the DPI display scaling in Windows 11. Increasing or decreasing the display scaling in Windows 11 is how you make UI elements in Windows 11 smaller or bigger. Windows 11 calculates the scaling factor for your monitor automatically, that may not follow you preferences, especially if you have a large display with a high resolution."
+
+-----
+
 ## Latest Known Good Settings for Citrix
 
 **NOTE:** If you are experiencing an issue with Citrix, test with one of these profiles assigned for OS 11 or OS 12. It may not fix the issue, but it is a good place to start.

@@ -13,6 +13,32 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-01-22 - [11.10.225](readme11.10.225.txt)
+
+```
+The new PRIVATE BUILD 11.10.225 for IGEL Workspace is ready.
+
+This build is based on 11.10.222.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Updated AVD client to version 1.3.0
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Fixed: Cisco Webex VDI not applying for AVD sessions correctly
+```
+
+-----
+
 ## 2024-12-20 - [11.10.224](readme11.10.224.txt)
 
 ```

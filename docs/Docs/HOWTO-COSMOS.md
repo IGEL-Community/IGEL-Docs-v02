@@ -20,6 +20,9 @@ The Insight Service data are currently also stored in Frankfurt (Germany west ce
 
 All data centers and their operators are fully ISO/IEC 27001 certified.
 
+**Q:** How to contact IGEL for support?
+
+**A:** [IGEL KB: Using the IGEL Customer Portal](https://kb.igel.com/en/how-to-start-with-igel/current/using-the-igel-customer-portal)
 
 **Q:** How to manage users and roles in the IGEL Customer Portal?
 

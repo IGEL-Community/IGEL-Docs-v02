@@ -407,5 +407,5 @@ echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
 
 Enable the following reg key to True:
 
-For OS 12 – System -> Registry -> `app.cwa.authman.authmanlite.longlivedtokensupport`
-For OS 11 – System -> Registry -> `ica.authman.longlivedtokensupport`
+- OS 12 – System -> Registry -> `app.cwa.authman.authmanlite.longlivedtokensupport`
+- OS 11 – System -> Registry -> `ica.authman.longlivedtokensupport`

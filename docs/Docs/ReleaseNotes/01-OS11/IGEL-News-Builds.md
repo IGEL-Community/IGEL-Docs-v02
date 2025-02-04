@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-02-04 - [11.10.227.DER](readme11.10.227.DER.txt)
+
+```
+The new PRIVATE BUILD 11.10.227.DER for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Driver
+
+* Downgraded Philips Speech driver to version 12.9.1.
+```
+
+-----
+
 ## 2025-01-22 - [11.10.225](readme11.10.225.txt)
 
 ```

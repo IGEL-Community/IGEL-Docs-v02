@@ -115,9 +115,8 @@ App & Desktop Virtualization Made Easy.
 
 ## Microsoft Licensing Notes
 
-- [Licensing Windows 365 and Windows 11 Virtual Desktops for
-Remote Access](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Licensing_brief_PLT_Licensing%20Windows%20365%20and%20Windows%2011%20Virtual%20Desktops%20for%20Remote%20Access.pdf)
+- [Licensing Windows 365 and Windows 11 Virtual Desktops for Remote Access](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/Images/HOWTO-Testing-VDI-Licensing-Windows-VDI.pdf)
 
-- [Windows 11 commercial desktop operating systems](https://wwlpdocumentsearch.blob.core.windows.net/prodv2/Windows_11_Commercial_Licensing_Guide.pdf)
+- [Windows 11 commercial desktop operating systems](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/Images/HOWTO-Testing-VDI-Windows-Licensing.pdf)
 
 - [Microsoft Licensing Briefs](https://www.microsoft.com/licensing/docs/view/Licensing-Briefs)

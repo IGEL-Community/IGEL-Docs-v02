@@ -156,3 +156,16 @@ Can now manage certificates via the command line:
 - Automate process of UMS installation
 - Add certificates, keypairs, or complete keystores
 - Remove existing certificates, web certificates, and key stores from the database
+
+-----
+
+## Create a List of Certificates on IGEL OS and include End Date
+
+```bash linenums="1"
+#!/bin/bash
+ 
+# Find end date on certificates
+ 
+cd /etc
+find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -exec echo "FILE NAME: ==> " {} \; -exec openssl x509 -enddate -noout -in {} \;
+```

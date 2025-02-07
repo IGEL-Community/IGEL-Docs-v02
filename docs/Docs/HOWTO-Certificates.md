@@ -175,7 +175,5 @@ find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -exec echo 
 ## Validate Certificate Chains Supplied by the UMS Server
 
  ```bash linenums="1"
- echo "" | openssl s_client -showcerts umsserverfqdn:8443 | \
- openssl crl2pkcs7 -nocrl -certfile /dev/stdin | \
- openssl pkcs7 -noout -print_certs -text
+ echo "" | openssl s_client -showcerts UMS-SERVER-FQDN:8443 | openssl crl2pkcs7 -nocrl -certfile /dev/stdin | openssl pkcs7 -noout -print_certs -text
  ```

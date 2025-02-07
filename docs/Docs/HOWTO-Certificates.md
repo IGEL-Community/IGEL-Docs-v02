@@ -169,3 +169,13 @@ Can now manage certificates via the command line:
 cd /etc
 find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -exec echo "FILE NAME: ==> " {} \; -exec openssl x509 -enddate -noout -in {} \;
 ```
+
+-----
+
+## Validate Certificate Chains Supplied by the UMS Server
+
+ ```bash linenums="1"
+ echo "" | openssl s_client -showcerts umsserverfqdn:8443 | \
+ openssl crl2pkcs7 -nocrl -certfile /dev/stdin | \
+ openssl pkcs7 -noout -print_certs -text
+ ```

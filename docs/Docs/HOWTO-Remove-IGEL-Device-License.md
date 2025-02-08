@@ -4,9 +4,9 @@
 
 ## UMS 12
 
-[Resetting a Device to Factory Defaults via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.04.120/how-to-reset-a-device-to-factory-defaults-via-the-)
+[Resetting a Device to Factory Defaults via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.06.120/how-to-reset-a-device-to-factory-defaults-via-the-)
 
-[Recycle Bin - Deleting Objects in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.04.120/recycle-bin-deleting-objects-in-the-igel-ums)
+[Recycle Bin - Deleting Objects in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.06.120/recycle-bin-deleting-objects-in-the-igel-ums)
 
 **Notes:**
 

@@ -41,13 +41,13 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 **NOTE:** For small installations, a single UMS Server instance (standard UMS) with an embedded database is usually sufficient. If required, a single-instance installation can be easily extended anytime to a Distributed UMS installation by installing additional servers (and in the case of an embedded database, by switching preliminarily to an external data source).
 
-- [UMS Sizing Guidelines](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-ums-sizing-guidelines-architecture-diagrams)
+- [UMS Sizing Guidelines](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-ums-sizing-guidelines-architecture-diagrams)
 
 -----
 
 ## ICG vs. Reverse Proxy
 
-- [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.04.120/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
+- [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
     With the launch of IGEL Universal Management Suite (UMS) 12, the Unified Protocol used for all communication between the UMS and IGEL OS 12 devices was introduced. The Unified Protocol is a secure protocol that uses TCP 8443. However, depending on the structure of your UMS environment, company's security policies, etc., it may be insufficient, and the use of the IGEL Cloud Gateway (ICG) or reverse proxy may be required.
 

@@ -169,6 +169,12 @@ copy all files in `/userhome` that end in .log to /tmp/foo folder
 mkdir /tmp/foo; find /userhome -name "*.log" | xargs cp -t /tmp/foo
 ```
 
+find all files with `vnc` in the name and exclude searching the `/media` folder
+
+```bash linenums="1"
+find . -path "./media" -prune -o -type f -name "*vnc*" -print | less
+```
+
 ## grep
 
 search for regular expression

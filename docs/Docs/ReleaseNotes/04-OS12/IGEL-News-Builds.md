@@ -429,10 +429,8 @@ These are the release notes published with that release:
 | ------ | ------ | ------ | ------ |
 |  `Switch back jack to line-in`  |  `system.sound_driver.snd_hda_intel.hp_t660_back_microphone`  |  bool  |  enabled / *disabled* (default)  |
 
-```
-	- |  Parameter  |  Registry   |  Type       |  Value      |
-```
 
+|  Parameter  |  Registry   |  Type       |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Ignore dB`  |  `multimedia.pulseaudio.daemon.ignore-db`  |  bool  |  enabled / *disabled* (default)  |
 

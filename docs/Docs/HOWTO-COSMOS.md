@@ -671,6 +671,10 @@ sequenceDiagram
 
 **A:** [IGEL smart card Auth to Azure Virtual Desktop](https://virtualbrat.com/2024/09/27/igel-smart-card-auth-to-azure-virtual-desktop-soon-in-the-igel-app-portal-you-can-take-it-for-a-test-drive-already-now/)
 
+**Q:**: How to enable smart cart authentication support for Windows 365?
+
+**A:** [IGEL OS 12 Smart Card Authentication to Windows 365! – Here is the How-To!](https://virtualbrat.com/2025/02/11/igel-os-12-smart-card-authentication-to-windows-365-here-is-the-how-to/)
+
 **Q:** Having issues logging into AVD and getting error code 50058
 
 **A:** Enable the following AVD session number `%` in the registry for AVD app:

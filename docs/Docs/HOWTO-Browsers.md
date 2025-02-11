@@ -13,6 +13,11 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 - [App Portal: Firefox Browser](https://app.igel.com/firefox)
 - [Island Browser](https://app.igel.com/island)
 - [KB: Microsoft Edge Browser](https://kb.igel.com/en/igel-apps/current/configuration-of-microsoft-edge-on-igel-os)
+- IGEL built in browser:
+
+```bash linenums="1"
+/usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
+```
 
 **Q:** How to set default browser in IGEL OS 12?
 

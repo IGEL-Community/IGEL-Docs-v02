@@ -102,7 +102,7 @@ Here is a method to use the unattended OSC .iso
 Summary of steps:
 
 - Install OSCW
-- Rename the osc-12.5.0.iso to osc.iso (Make sure this is the unattended version of the ISO you created earlier)
+- Rename the osc-12.6.0.iso to osc.iso (Make sure this is the unattended version of the ISO you created earlier)
 - Copy the osc.iso into the C:\OSC folder
 - Rename grub.cfg to grub.cfg.old
 - Rename osc.cfg to grub.cfg

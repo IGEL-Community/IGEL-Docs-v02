@@ -4,7 +4,7 @@
 
 ----
 
-## 2024-12-17 - [12.5.2](https://app.igel.com/base_system/12.5.2)
+## 2025-02-11 - [12.6.0](https://app.igel.com/base_system/12.6.0)
 
 ```
 The new BUILD 12.5.2 for IGEL Workspace is ready.

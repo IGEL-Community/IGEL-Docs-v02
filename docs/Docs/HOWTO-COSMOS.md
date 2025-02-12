@@ -12,6 +12,14 @@ This is a comment section
 
 ----------
 
+## [Free Class: Introduction to Linux (LFS101)](https://training.linuxfoundation.org/training/introduction-to-linux/)
+ 
+ - Develop a good working knowledge of Linux using both the graphical interface and command line across the major Linux distribution families with this free training course.
+ 
+----------
+
+----------
+
 ### Where Are the IGEL Cloud Services Data Stored?
 
 Currently, the IGEL Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
@@ -320,6 +328,13 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 -----
 
 ## FAQ - OS 12
+
+**Q:** What version of Linux is IGEL OS 12?
+
+**A:** IGEL OS 12 is IGEL's own version of Linux. IGEL uses libraries from Debian. the following screen shot from IGEL OS 12.6.0 shows Linux kernel 6.6.60 with debian / ubuntu / 20.04 / focal:
+
+![image-howto-cosmos-12](Images/HOWTO-COSMOS-12.png)
+
 
 **Q:** How can a user change settings on IGEL OS?
 

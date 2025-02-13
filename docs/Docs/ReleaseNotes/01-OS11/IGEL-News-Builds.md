@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-02-12 - [11.10.199](readme11.10.199.txt)
+
+```
+The new PRIVATE BUILD 11.10.199 for IGEL Workspace is ready.
+
+This build is based on 11.10.190.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Cisco JVDI Client
+
+* Switched Cisco JVDI to version 14.1.2
+```
+
+-----
+
 ## 2025-02-04 - [11.10.227.DER](readme11.10.227.DER.txt)
 
 ```

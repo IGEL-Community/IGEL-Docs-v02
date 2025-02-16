@@ -690,6 +690,10 @@ sequenceDiagram
 
 **A:** [IGEL OS 12 Smart Card Authentication to Windows 365! – Here is the How-To!](https://virtualbrat.com/2025/02/11/igel-os-12-smart-card-authentication-to-windows-365-here-is-the-how-to/)
 
+**Q:** How to enable IGEL OS for secure certificate-based authentication with EntraID and smart cards in environments combining Windows 365 and Azure Virtual Desktop?
+
+**A:** [Are you using Windows 365 and Azure Virtual Desktop? Enabling strong and simple Authentication using smart cards? Do you want a clean Kiosk experience? Do flexibility matter?! Is Zero Trust of importance? Yes! to one of the questions – IGEL OS got you covered!](https://virtualbrat.com/2025/02/16/are-you-using-windows-365-and-azure-virtual-desktop-enabling-strong-and-simple-authentication-using-smart-cards-do-you-want-a-clean-kiosk-experience-do-flexibility-matter-is-zero-trust-of-importa/)
+
 **Q:** Having issues logging into AVD and getting error code 50058
 
 **A:** Enable the following AVD session number `%` in the registry for AVD app:

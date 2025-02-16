@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-02-14 - [11.10.228](readme11.10.228.txt)
+
+```
+The new PRIVATE BUILD 11.10.228 for IGEL Workspace is ready.
+
+This build is based on 11.10.219.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### CUPS Printing
+
+* Updated Vasion Print (former PrinterLogic) PrinterInstaller Client to version
+  25.2.0.16
+```
+
+-----
+
 ## 2025-02-12 - [11.10.199](readme11.10.199.txt)
 
 ```

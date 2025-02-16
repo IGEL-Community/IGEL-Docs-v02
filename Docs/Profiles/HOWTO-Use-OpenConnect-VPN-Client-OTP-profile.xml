@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles>
+    <profile>
+        <profile_id>179646</profile_id>
+        <profilename>OpenConnect with one-time password</profilename>
+        <firmware>
+            <model>IGEL OS 11</model>
+            <version>11.05.133.01</version>
+        </firmware>
+        <description>Modified oc-starter for OTP - added $X_TOKEN to prompt for OTP</description>
+        <overwritesessions>false</overwritesessions>
+        <is_master_profile>false</is_master_profile>
+        <is_igel_os>true</is_igel_os>
+        <settings>
+            <pclass name="services.unsupported02.enabled">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.rccustom.custom_cmd_0">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false"># Copy a modified version of the oc-starter script to overwrite the standard OS 11 oc-starter script
+# adding the $X_TOKEN to prompt the user for a one-time password
+cat &amp;lt&amp;lt 'EOF' &amp;gt /services/unsupported02/usr/sbin/oc-starter
+#!/bin/bash
+
+FM=/var/run/oc-vpn-running
+export DISPLAY=:0
+
+trap "rm -f $FM" EXIT
+
+startoc(){
+    touch $FM
+    notify-send-message -g 4711 -c "VPN"  "login in progress"
+    /bin/echo -e "$1" | openconnect $X_CA $X_UCERT $X_PRIVK $X_PROTOCOL "$GW" 2&amp;gt/tmp/oc.log &amp;gt/tmp/oc1.log
+    RV="$?"
+    rm -f $FM 
+    MSG="$(grep -v "^Enter" /tmp/oc.log|grep -v "stdin"|grep -v "Please enter"|grep -v "^Password:"|sort -u)"
+    &amp;lb "$RV" = 0 &amp;rb || notify-send-message -g 4711 "VPN failure" "$MSG"
+    if &amp;lb -n "$MSG" &amp;rb; then
+	echo "OC fail: $MSG" | logger 
+    else
+	echo "OC success" | logger 
+        cat /tmp/oc1.log | logger 
+    fi
+    rm -f /tmp/oc1.log /tmp/oc.log
+    echo -n "$RV"
+}
+
+case "$1" in
+
+&amp;lb0-9&amp;rb|&amp;lb1-9&amp;rb&amp;lb0-9&amp;rb|&amp;lb1-9&amp;rb&amp;lb0-9&amp;rb&amp;lb0-9&amp;rb)
+    &amp;lb -n "$(pidof openconnect)" &amp;rb &amp;amp&amp;amp exit 0
+    GW="$(get sessions.openconnect$1.vpnopts.gateway)"
+    CACERT="$(get sessions.openconnect$1.vpnopts.ca-cert)"
+    &amp;lb -n "$CACERT" &amp;rb &amp;amp&amp;amp X_CA="--cafile $CACERT"
+    
+    USERCERT="$(get sessions.openconnect$1.vpnopts.user-cert)"
+    &amp;lb -n "$USERCERT" &amp;rb &amp;amp&amp;amp X_UCERT="-c $USERCERT"
+
+    PRIVKEY="$(get sessions.openconnect$1.vpnopts.priv-key)"
+    &amp;lb -n "$PRIVKEY" &amp;rb &amp;amp&amp;amp X_PRIVK="-k $PRIVKEY"
+    
+    PROTOCOL="$(get sessions.openconnect$1.vpnopts.protocol)"
+    &amp;lb -n "$PROTOCOL" &amp;rb &amp;amp&amp;amp X_PROTOCOL="--protocol $PROTOCOL"
+
+    USERNAME="$(get sessions.openconnect$1.vpnopts.username)"
+
+    #"$(get sessions.openconnect$1.vpnopts.fsid-is-pass-key)"
+    #"$(get sessions.openconnect$1.vpnopts.proxy)"
+    IS_NAME_PWD="$( get sessions.openconnect$1.vpnopts.enable-name-pwd)"
+    PRIVKEYPWD="$(getcrypt sessions.openconnect$1.vpnopts.priv-key-pwd.crypt_password)"
+    CRED="$(getcrypt sessions.openconnect$1.vpnopts.crypt_password)"
+    
+   &amp;lb -n "$PRIVKEY" &amp;rb &amp;amp&amp;amp &amp;lb -z "$PRIVKEYPWD" &amp;rb &amp;amp&amp;amp interactive=1
+   &amp;lb -n "$IS_NAME_PWD" &amp;rb &amp;amp&amp;amp  &amp;lb -z "$CRED" -o -z "$USERNAME" &amp;rb &amp;amp&amp;amp interactive=1
+   
+
+    if &amp;lb -n "$interactive" &amp;rb; then
+        while &amp;lb "$RV" != 0 &amp;rb; do
+
+            if &amp;lb -n "$PRIVKEY" &amp;rb; then
+                if &amp;lb -z  "$PRIVKEYPWD" &amp;rb; then
+                    X_PRIVKEYPWD="$(/usr/bin/gtkmessage -q -t "VPN Authentication" -p dialog-password -m "Enter the private key password for VPN access" -P Password -c)"
+                    &amp;lb "$?" = 0 &amp;rb || exit 0
+                else
+                    X_PRIVKEYPWD="$PRIVKEYPWD"
+                fi
+                X_PRIVKEYPWD="${X_PRIVKEYPWD}\n"
+            fi
+
+            if &amp;lb "$( get sessions.openconnect$1.vpnopts.enable-name-pwd)" = true &amp;rb; then
+                if &amp;lb -z "$CRED" &amp;rb; then
+                    X_CRED="$(/usr/bin/gtkmessage -q -t "VPN Authentication" -p dialog-password -m "Specify user name and password for VPN access" -l "$USERNAME" -L -c)";
+                    &amp;lb "$?" = 0 &amp;rb || exit 0 ; 
+                    X_TOKEN="$(/usr/bin/gtkmessage -q -t "VPN Authentication" -p dialog-password -m "Enter the Time-based One-Time password for VPN access" -P Password -c)";
+                    &amp;lb "$?" = 0 &amp;rb || exit 0
+                    X_CRED="$X_CRED\n$X_TOKEN"
+                else
+                    X_CRED="$USERNAME\n$CRED"
+                fi
+            fi
+            RV=$(startoc "$X_PRIVKEYPWD${X_CRED}")
+            sleep 1
+        done
+    else
+        &amp;lb -n "$PRIVKEY" &amp;rb &amp;amp&amp;amp X_PRIVKEYPWD="$PRIVKEYPWD\n"
+        &amp;lb -n "$IS_NAME_PWD" &amp;rb &amp;amp&amp;amp X_CRED="$USERNAME\n$CRED" 
+        startoc "$X_PRIVKEYPWD${X_CRED}"
+    fi
+;;
+-k)
+
+    pkill -INT openconnect
+    sleep 1
+;;
+*)
+    logger "$0:'$1' is not understood" 
+;;
+esac
+EOF
+chmod a+x  /services/unsupported02/usr/sbin/oc-starter</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+        </settings>
+        <instancesettings/>
+    </profile>
+</profiles>

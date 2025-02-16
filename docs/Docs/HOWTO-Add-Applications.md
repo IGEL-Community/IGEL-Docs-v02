@@ -56,6 +56,8 @@ Use at your own risk!
 
 ## OS 12 App SDK (Coming soon)
 
+## IGEL App Creator Portal
+
 Build your own IGEL OS App with IGEL OS App SDK.
 
 - [IGEL App Creator Portal – the straightforward way to secure and deploy your third-party apps to IGEL OS12](https://www.igel.com/blog/igel-app-creator-portal-the-straightforward-way-to-secure-and-deploy-your-third-party-apps-to-igel-os12/)

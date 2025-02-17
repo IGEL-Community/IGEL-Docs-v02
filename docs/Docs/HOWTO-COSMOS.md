@@ -705,6 +705,10 @@ app.avd.sessions.avd%.options.compact-login-view
 
 **A:** As of 14 November 2024, the Microsoft Linux RDP SDK is pending implementation of a return channel for the use of FIDO tokens within the session. Once this is implemented by Microsoft then development can proceed.
 
+**Q:** Can IGEL OS use security keys with CAC/PIV?
+
+**A:**  Windows 365 access with YubiKeys? Do you use Windows 365 and/or AVD? Transitioning from CAC/PIV smart cards to YubiKey (or other security keys) with CAC/PIV functionality, or mixing both? IGEL OS can use security keys with CAC/PIV, here is how it is done!](https://virtualbrat.com/2025/02/17/windows-365-access-with-yubikeys-do-you-use-windows-365-and-or-avd-transitioning-from-cac-piv-smart-cards-to-yubikey-or-other-security-keys-with-cac-piv-functionality-or-mixing-both-igel-os-can/)
+
 -----
 
 ## FAQ - VMware Horizon

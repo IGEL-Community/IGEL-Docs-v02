@@ -13,6 +13,44 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-02-21 - [11.10.231](readme11.10.231.txt)
+
+```
+The new PRIVATE BUILD 11.10.231 for IGEL Workspace is ready.
+
+This build is based on 11.10.218.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+- Included fix to reduce workspace download times.
+```
+
+-----
+
+## 2025-02-20 - [11.10.229](readme11.10.229.txt)
+
+```
+The new PRIVATE BUILD 11.10.229 for IGEL Workspace is ready.
+
+This build is based on 11.10.225.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Desktop (RDP3)
+
+* Fixed RD Web Access autostart not working when using client version RDP3.
+```
+
+-----
+
 ## 2025-02-14 - [11.10.228](readme11.10.228.txt)
 
 ```

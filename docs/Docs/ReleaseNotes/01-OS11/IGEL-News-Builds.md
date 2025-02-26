@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-02-26 - [11.09.157](readme11.09.157.txt)
+
+```
+The new PRIVATE BUILD 11.09.157 for IGEL Workspace is ready.
+
+This build is based on 11.09.156.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+- Included fix to reduce workspace download times.
+```
+
+-----
+
 ## 2025-02-21 - [11.10.231](readme11.10.231.txt)
 
 ```

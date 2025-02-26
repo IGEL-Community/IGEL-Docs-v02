@@ -166,3 +166,22 @@ for category in $CATEGORIES; do
 
 done
 ```
+
+## GitHub + integration for Slack
+
+"The GitHub integration for Slack gives you and your teams full visibility into your GitHub projects right in Slack channels, where you can generate ideas, triage issues and collaborate with other teams to move projects forward. This integration is an open source project, built and maintained by GitHub."
+
+[Steps to setup GitHub integration with Slack](https://github.com/integrations/slack#configuration)
+
+- Signin
+
+```bash linenums="1"
+/github signin
+```
+
+- Subscribe to repositories
+
+```bash linenums="1"
+/github subscribe IGEL-Community/IGEL-Custom-Partitions
+/github subscribe IGEL-Community/IGEL-OS-APP-RECIPES
+```

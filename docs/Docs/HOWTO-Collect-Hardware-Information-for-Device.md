@@ -407,7 +407,7 @@ update
 
 [Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/en/igel-os/11.10/resolved-issues-11-10-100). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
 
-[Microsoft Surface](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
+[Microsoft Surface: If a feature requires linux-surface kernel then that feature will not work with IGEL](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
 
 [How to reset USB controllers](https://unix.stackexchange.com/questions/704341/how-to-reset-usb-controllers)
 

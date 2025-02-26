@@ -648,6 +648,21 @@ wmctrl -l
 wmctrl -i -a $(wmctrl -l | grep igelums | cut -f 1)
 ```
 
+## xev xmodmap
+
+- Find and disable a key. Run `xev` to find keycode for key (such as Control(CTRL)) and `xmodmap` to disable it
+
+```bash linenums="1"
+xev | grep --line-buffered keycode
+xmodmap -e 'keycode 37 = NoSymbol'
+```
+
+- Return use of Control
+
+```bash linenums="1"
+xmodmap -e 'keycode 37 = Control_L'
+```
+
 ## xdotool
 
 command-line X11 automation tool

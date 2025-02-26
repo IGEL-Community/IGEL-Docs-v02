@@ -654,6 +654,14 @@ wmctrl -i -a $(wmctrl -l | grep igelums | cut -f 1)
 
 ```bash linenums="1"
 xev | grep --line-buffered keycode
+```
+
+```bash linenums="1"
+state 0x10, keycode 37 (keysym 0xffe3, Control_L), same_screen YES,
+state 0x14, keycode 37 (keysym 0xffe3, Control_L), same_screen YES,
+```
+
+```bash linenums="1"
 xmodmap -e 'keycode 37 = NoSymbol'
 ```
 

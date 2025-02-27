@@ -36,23 +36,23 @@ In general, USB redirection is not needed for standard functionality such as aud
 
 | Rule | Vendor ID | Product ID | Interface Exclude List | Device Quirk | Name |
 |------|-----------|------------|------------------------|--------------|------|
-| Split | 0554 | 1001 | 00 01 02 | No | Split - PowerMic II & III |
-| Split | 0911 | 14a4 | 00 01 02 03  | No | Split - Philips SpeechMike II |
-| Split | 0911 | Oc1c | 00 01 02 03 | No | Split - Philips III |
+| Allow | 0554 | 0064 | | No | Allow - PowerMic4 |
 | Allow | 0554 | 1001 | | No | Allow - PowerMic II & III |
-| Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
-| Allow | 0911 | Oc1c | | No | Allow - Philips III |
-| Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
-| Allow | 15d8 | 0025 | | No | Allow - Grundig Digta SonicMic |
-| Split | 15d8 | 0025 | 00 01 02 04 05 | No | Split - Grundig Digta SonicMic |
+| Split | 0554 | 0064 | 01 03 04 05 06 07 | No | Split - PowerMic4 |
+| Split | 0554 | 1001 | 00 01 02 | No | Split - PowerMic II & III |
+| Allow | 07b4 | 0218 | | No | Allow - Olympus Footswitch |
 | Allow | 07b4 | 0256 | | No | Allow - Olympus DR 2300 |
 | Split | 07b4 | 0256 | 01 02 03 04 05 06 | No | Split - Olympus DR 2300 |
-| Allow | 0911 | 1844 | | No | Allow - Philips Foot Control LFH2300 |
 | Allow | 0911 | 091a | | No | Allow - Philips Foot Control LFH2330 |
+| Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
+| Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
+| Allow | 0911 | 1844 | | No | Allow - Philips Foot Control LFH2300 |
+| Allow | 0911 | Oc1c | | No | Allow - Philips III |
+| Split | 0911 | 14a4 | 00 01 02 03  | No | Split - Philips SpeechMike II |
+| Split | 0911 | Oc1c | 00 01 02 03 | No | Split - Philips III |
 | Allow | 15d8 | 0024 | | No | Allow - Grundig Digta Foot Control 540|
-| Allow | 07b4 | 0218 | | No | Allow - Olympus Footswitch |
-| Split | 0554 | 0064 | 01 03 04 05 06 07 | No | Split - PowerMic4 |
-| Allow | 0554 | 0064 | | No | Allow - PowerMic4 |
+| Allow | 15d8 | 0025 | | No | Allow - Grundig Digta SonicMic |
+| Split | 15d8 | 0025 | 00 01 02 04 05 | No | Split - Grundig Digta SonicMic |
 
 -----
 

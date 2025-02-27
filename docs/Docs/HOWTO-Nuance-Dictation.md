@@ -24,7 +24,7 @@ In general, USB redirection is not needed for standard functionality such as aud
 
 ## USB Redirection - Class and Device Rules
 
-- Class Rules
+### Class Rules
 
 | Rule | Family | Name |
 |------|--------|------|
@@ -32,7 +32,7 @@ In general, USB redirection is not needed for standard functionality such as aud
 | Deny | Audio | Deny Audio Output |
 | Deny | Audio | Deny Audio |
 
-- Device Rules
+### Device Rules
 
 | Rule | Vendor ID | Product ID | Interface Exclude List | Device Quirk | Name |
 |------|-----------|------------|------------------------|--------------|------|

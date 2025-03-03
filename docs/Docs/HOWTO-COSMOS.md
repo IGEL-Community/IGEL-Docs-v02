@@ -335,7 +335,6 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ![image-howto-cosmos-12](Images/HOWTO-COSMOS-12.png)
 
-
 **Q:** How can a user change settings on IGEL OS?
 
 **A:** [IGEL KB: Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/tray-applications-in-igel-os-12)
@@ -453,6 +452,10 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["*"], "protocol": "citrixa
 ```bash linenums="1"
 AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
 ```
+
+**Q:** When is Advanced Device Redirection (ADR) needed?
+
+**A:** If the native IGEL app or API supports the attached devices and any needed drivers are in IGEL OS then `Advanced Device Redirection` is `NOT` needed. The advantage of `Advanced Device Redirection` is that it will work without needing to add anything to IGEL OS or have IGEL app / API dependencies.
 
 -----
 

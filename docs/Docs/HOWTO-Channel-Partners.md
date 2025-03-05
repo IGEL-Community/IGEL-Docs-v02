@@ -107,9 +107,9 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 ## IGEL NFR Licenses and Trial Licenses
 
-- NFR (Not for resale) licenses for internal use are available for Velocity partner level `Expert` (Qty. 15) and `Elite` (Qty. 30)
+- NFR (Not for resale) licenses for internal use are available for Velocity partner level `Expert` (Qty. 15), `Elite` (Qty. 30), `MSP Partners` (Qty. 15), and `MSP Elite` (Qty. 30)
 
-- Staring with UMS 12.07.100, [UMS level](https://www.igel.com/licensing/) will default to `Essential`, if a higher level is needed, IGEL channel presales engineer can provide a 90 day UMS Enterprise license.
+- Staring with UMS 12.07.100, [UMS level](https://www.igel.com/licensing/) will default to `Essential`, if a higher level is needed, IGEL channel presales engineer can provide a 90 day UMS Enterprise license
 
     - If the UMS is registered with IGEL, then provide the IGEL channel presales engineer with company name that registered the UMS and the license will be added within the IGEL License Portal (ILP)
 

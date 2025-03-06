@@ -809,8 +809,16 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 
 -----
 
-## FAW - Advanced Device Redirection
+## FAQ - Advanced Device Redirection
+
+**Q:** What is Advanced Device Redirection (ADR)?
+
+**A:** [Enhance Your Virtual Desktop Experience with Advanced Device Redirection](https://www.igel.com/enhance-your-virtual-desktop-experience-with-advanced-device-redirection/)
 
 **Q:** When is Advanced Device Redirection (ADR) needed?
 
 **A:** If the native IGEL app or API supports the attached devices and any needed drivers are in IGEL OS then `Advanced Device Redirection` is `NOT` needed. The advantage of `Advanced Device Redirection` is that it will work without needing to add anything to IGEL OS or have IGEL app / API dependencies.
+
+**Q:** What is needed to setup Advanced Device Redirection (ADR)?
+
+**A:** [IGEL KB: IGEL Advanced Device Redirection USB](https://kb.igel.com/en/igel-apps/current/igel-advanced-device-redirection-usb)

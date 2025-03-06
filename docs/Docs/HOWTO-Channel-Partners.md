@@ -109,15 +109,15 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 - NFR (Not for resale) licenses for internal use are available for Velocity partner level `Expert` (Qty. 15), `Elite` (Qty. 30), `MSP Partners` (Qty. 15), and `MSP Elite` (Qty. 30)
 
-- Staring with UMS 12.07.100, [UMS level](https://www.igel.com/licensing/) will default to `Essential`, if a higher level is needed, IGEL channel presales engineer can provide a 90 day UMS Enterprise license
+- Staring with UMS 12.07.100, [UMS level](https://www.igel.com/licensing/) will default to `Essential`, if a higher level is needed, IGEL Channel Presales Engineer can provide a 90 day UMS Enterprise license
 
-    - If the UMS is registered with IGEL, then provide the IGEL channel presales engineer with company name that registered the UMS and the license will be added within the IGEL License Portal (ILP)
+    - If the UMS is registered with IGEL, then provide the IGEL Channel Presales Engineer with company name that registered the UMS and the license will be added within the IGEL License Portal (ILP)
 
-    - If the UMS is not registered with IGEL, then provide the IGEL channel presales engineer with an [exported UMS ID](https://kb.igel.com/en/universal-management-suite/12.06.120/ums-id). The presales engineer will create and provide a 90 day license
+    - If the UMS is not registered with IGEL, then provide the IGEL Channel Presales Engineer with an [exported UMS ID](https://kb.igel.com/en/universal-management-suite/12.06.120/ums-id). The presales engineer will create and provide a 90 day license
 
-- `IGEL Agent for Imprivata`: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL channel presales engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)
+- `IGEL Agent for Imprivata`: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL Channel Presales Engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)
 
-- `IGEL Addvanced Device Redirection (ADR)`: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL channel presales engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)
+- `IGEL Advanced Device Redirection (ADR)`: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL Channel Presales Engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)
 
 - For testing of IGEL OS without UMS, a 90-day license can be obtained during the setup of IGEL OS. Steps to test out your UDPocket or OS 12 installed device:
 

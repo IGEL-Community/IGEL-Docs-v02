@@ -453,10 +453,6 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["*"], "protocol": "citrixa
 AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
 ```
 
-**Q:** When is Advanced Device Redirection (ADR) needed?
-
-**A:** If the native IGEL app or API supports the attached devices and any needed drivers are in IGEL OS then `Advanced Device Redirection` is `NOT` needed. The advantage of `Advanced Device Redirection` is that it will work without needing to add anything to IGEL OS or have IGEL app / API dependencies.
-
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade
@@ -810,3 +806,11 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 **Q:** How can I create and distribute my own applications for OS 12?
 
 **A:** The [IGEL App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#igel-app-creator-portal) can be used to create OS 12 applications
+
+-----
+
+## FAW - Advanced Device Redirection
+
+**Q:** When is Advanced Device Redirection (ADR) needed?
+
+**A:** If the native IGEL app or API supports the attached devices and any needed drivers are in IGEL OS then `Advanced Device Redirection` is `NOT` needed. The advantage of `Advanced Device Redirection` is that it will work without needing to add anything to IGEL OS or have IGEL app / API dependencies.

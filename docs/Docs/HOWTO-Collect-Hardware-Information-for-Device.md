@@ -4,7 +4,7 @@
 
 ## Collect Logs for IGEL Support
 
-- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/en/universal-management-suite/12.06.100/save-support-information-send-log-files-to-support)
+- [KB: UMS - Save Support Information / Send Log Files to Support](https://kb.igel.com/en/universal-management-suite/12.07.100/save-support-information-send-log-files-to-support)
 
 - [KB: Debugging / How to Collect and Send Device Log Files to IGEL Support](https://kb.igel.com/en/how-to-start-with-igel/current/debugging-how-to-collect-and-send-device-log-files)
 
@@ -185,11 +185,11 @@ login as "user" or "root": root
 
 These device profiles can be used to see all settings for a device and can also be used to compare two devices.
 
-- [IGEL KB: How to Export Device Settings as a Profile in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-export-device-settings-as-a-profile-in-the-)
+- [IGEL KB: How to Export Device Settings as a Profile in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-export-device-settings-as-a-profile-in-the-)
 
-- [IGEL KB - Import Devices as Profiles](https://kb.igel.com/en/universal-management-suite/12.06.100/how-to-import-devices-as-profiles-in-the-igel-ums)
+- [IGEL KB - Import Devices as Profiles](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-import-devices-as-profiles-in-the-igel-ums)
 
-- [IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.06.100/comparing-profiles-in-the-igel-ums)
+- [IGEL KB - Comparing Profiles in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/comparing-profiles-in-the-igel-ums)
 
 The following steps will:
 

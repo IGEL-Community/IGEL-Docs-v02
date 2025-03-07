@@ -113,7 +113,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
     - If the UMS is registered with IGEL, then provide the IGEL Channel Presales Engineer with company name that registered the UMS and the license will be added within the IGEL License Portal (ILP)
 
-    - If the UMS is not registered with IGEL, then provide the IGEL Channel Presales Engineer with an [exported UMS ID](https://kb.igel.com/en/universal-management-suite/12.06.120/ums-id). The presales engineer will create and provide a 90 day license
+    - If the UMS is not registered with IGEL, then provide the IGEL Channel Presales Engineer with an [exported UMS ID](https://kb.igel.com/en/universal-management-suite/12.07.100/ums-id). The presales engineer will create and provide a 90 day license
 
 - `IGEL Agent for Imprivata`: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL Channel Presales Engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)
 

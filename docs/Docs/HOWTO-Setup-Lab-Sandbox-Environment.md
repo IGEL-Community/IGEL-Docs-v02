@@ -168,10 +168,10 @@ sudo reboot now
 
 ## Install UMS on Linux
 
-- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-ums-installation-under-linux)
+- Follow IGEL Linux installation notes -- [LINK](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-installation-under-linux)
 - sudo ./setup-igel-ums-linux-[version].bin
 
-**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-ums-installation-under-windows)
+**Note** Steps to install on Windows -- [LINK](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-installation-under-windows)
 
 - IGEL Community on GitHub UMS Console setup - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
 -----
@@ -202,20 +202,20 @@ Follow IGEL OS 12 installation procedures - [LINK](https://kb.igel.com/en/how-to
 
 ## Registering Devices on the UMS Server
 
-- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/en/universal-management-suite/12.06.120/registering-igel-os-devices-on-the-ums-server)
+- UMS endpoint management (see searching for devices) - [LINK](https://kb.igel.com/en/universal-management-suite/12.07.100/registering-igel-os-devices-on-the-ums-server)
 
 -----
 
 ## Run UMS Web App
 
 - Start UMS Web App - `https://<UMS-Server>:8443/webapp/#/login`
-- UMS Web App help - [LINK](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-ums-web-app)
+- UMS Web App help - [LINK](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-web-app)
 
 -----
 
 ## UMS to/from IGEL OS 11 Communication ports (NO ICG)
 
-[UMS Communication Ports](https://kb.igel.com/en/universal-management-suite/12.06.120/igel-ums-communication-ports)
+[UMS Communication Ports](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-communication-ports)
 
 ### Core Communication UMS / OS 11
 
@@ -388,7 +388,7 @@ sudo find /opt/IGEL -name "derbyclient*.jar"
 
 ![image11](Images/HOWTO-Setup-Lab-Sandbox-Environment-11.png)
 
-This SQL query can be used in [UMS SQL Console](https://kb.igel.com/en/universal-management-suite/12.06.120/menu-bar-of-the-igel-ums-console)
+This SQL query can be used in [UMS SQL Console](https://kb.igel.com/en/universal-management-suite/12.07.100/menu-bar-of-the-igel-ums-console)
 
 ```sql linenums="1"
 SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERSION, THINCLIENT.PRODUCTID, THINCLIENT.LASTKNOWNIP, THINCLIENT.LAST_INFO_UPDATETIME FROM THINCLIENT LEFT JOIN FIRMWARE FW ON THINCLIENT.FIRMWAREID=FW.FIRMWAREID LEFT JOIN HARDWARE_INFORMATION  HW ON THINCLIENT.MACADDRESS=HW.MAC ORDER BY FW.VERSION
@@ -407,15 +407,15 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 
 | Name | Description - Link |
 |------|--------------------|
-| UMS 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.06.120.exe" download>UMS 12 for Windows Server</a> |
-| UMS 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.06.120.bin" download>UMS 12 for Linux Server</a> |
+| UMS 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.07.100.exe" download>UMS 12 for Windows Server</a> |
+| UMS 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.07.100.bin" download>UMS 12 for Linux Server</a> |
 | UMS 6 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_6.10.140.exe" download>UMS 6 for Windows Server</a> |
 | UMS 6 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_6.10.140.bin" download>UMS 6 for Linux Server</a> |
 | OSC - OS 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_12/OSC/osc-12.6.0.zip" download>OSC - OS 12</a> |
 | OSC - OS 12 PXE | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_12/PXE/osc-12.6.0_pxe.zip" download>OSC - OS 12 PXE</a> |
 | OSC - OS 11 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_11/OSC/OSC_11.10.210.zip" download>OSC - OS 11</a> |
 | OS Update - OS 11 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_11/updates/lxos_11.10.210_public.zip" download>OS Update Firmware - OS 11</a> |
-| ICG 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_CLOUD_GATEWAY/installer-12.06.100.bin" download>ICG 12</a> |
+| ICG 12 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_CLOUD_GATEWAY/installer-12.07.100.bin" download>ICG 12</a> |
 | ICG 2 | <a href="https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_CLOUD_GATEWAY/installer-2.05.110.bin" download>ICG 2</a> |
 
 -----
@@ -431,11 +431,11 @@ wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_12/
 wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_OS_12/PXE/osc-12.6.0_pxe.zip
 
 #UMS 12:
-wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.06.120.exe
-wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.06.120.bin
+wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/WINDOWS/setup-igel-ums-windows_12.07.100.exe
+wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_UNIVERSAL_MANAGEMENT_SUITE/LINUX/setup-igel-ums-linux_12.07.100.bin
 
 #ICG 12:
-wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_CLOUD_GATEWAY/installer-12.06.100.bin
+wget https://igeldownloadprod-bydsc8hmbsaegvdy.a01.azurefd.net/files/IGEL_CLOUD_GATEWAY/installer-12.07.100.bin
 
 #IGEL OS 11 / UMS 6 / ICG 2)
 #OSC 11:

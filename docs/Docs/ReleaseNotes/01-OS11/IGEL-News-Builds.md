@@ -13,6 +13,898 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-03-11 - [11.10.250](readme11.10.250.txt)
+
+```
+The new PUBLIC BUILD 11.10.250 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace app 24.08.0.98
+* New Features:  
+* Enhanced virtual desktop screen resizing experience:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enhanced virtual desktop screen resizing experience             |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.EnhancedResizingEnabled                            |
++------------+-----------------------------------------------------------------+
+| Value      | false / true (default)                                          |
++------------+-----------------------------------------------------------------+
+
+* Performance improvement of graphics usage by supporting OpenGL library:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | OpenGLEnabled                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.OpenGLEnabled                                      |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+* Performance improvement using H265 encoding (requires OpenGLEnabled=true):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | H265Enabled                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.H265Enabled                                        |
++------------+-----------------------------------------------------------------+
+| Value      | false (default) / true                                          |
++------------+-----------------------------------------------------------------+
+
+* Multiple webcam resolutions support:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | HDXWebcamEnablePnp                                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.hdxwebcamenablepnp                                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | true (default) / false                                          |
++------------+-----------------------------------------------------------------+
+
+* Integrated Citrix Workspace app 24.11.0.85.  
+* The default value for the parameter "ica.module.enableechocancellation" was
+  set to True and thus corresponds to the Citrix default value.
+* Citrix Workspace app for Linux ensures a smooth transition and prevents black
+  screens and flickers when resizing or stretching your virtual desktop screen.  
+  The two parameters ica.wfclient.DesktopLaunchEnhancement and
+  ica.wfclient.EnhancedResizingEnabled are active by default.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enhanced desktop launch experience                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.DesktopLaunchEnhancement                           |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+
+* Support for redirecting Human Interface Device (HID) devices from endpoint to
+  Unified Communication SDK application on VDI
+
++------------+-----------------------------------------------------------------+
+| Parameter  |    EnableHDI                                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.teams.enablehid.enabled                                     |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **false** (default)/ true                                       |
++------------+-----------------------------------------------------------------+
+
+* The default value of the ica.wfclient.toolbarversion parameter has been
+  changed to "New" to avoid random session interruptions when resizing the
+  screen. This change will cause the newer Citrix toolbar to be used by default.  
+* Support for further customization of the new connection bar and new available
+  connection button
+
++------------+-----------------------------------------------------------------+
+| Parameter  | SwitchDesktopButtonVisible                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.switchdesktopbuttonvisible                         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+| Parameter  | FullscreenButtonVisible                                         |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.FullscreenButtonVisible                            |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+| Parameter  | MultiMonitorSelectionEnabled                                    |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.multimonitorselectionenabled                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+
+* The following 5 setlog parameters have been added.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Google Analytics                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.setlog.level.all_.an                                        |
++------------+-----------------------------------------------------------------+
+| Parameter  | Multi Touch                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.setlog.level.all_.mtch                                      |
++------------+-----------------------------------------------------------------+
+| Parameter  | Fido2                                                           |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.setlog.level.all_.fido2                                     |
++------------+-----------------------------------------------------------------+
+| Parameter  | Service Continuity                                              |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.setlog.level.all_.svccont                                   |
++------------+-----------------------------------------------------------------+
+| Parameter  | Storebrowse                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.setlog.level.all_.stb                                       |
++------------+-----------------------------------------------------------------+
+
+* In this version Citrix identifies monitor 1 as 0, so the code has been
+  adjusted with the following parameter to work exactly like previous workspace
+  apps.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Left Shift Monitor Number                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.destination_window.downshiftmonitors                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+
+### AVD
+
+* Updated AVD client to version 1.3.0
+
+### Horizon
+
+* Updated Horizon Client to version 2412-12437214089
+
+### HID
+
+* Added new registry keys to influence mouse acceleration settings:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use new mouse accel variant                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.mouse.use_new_accel_variant                       |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enable mouse acceleration (only for new accel variant)          |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.mouse.enable_acceleration                         |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | _enabled_ (default) / disabled                                  |
++------------+-----------------------------------------------------------------+
+
+### CUPS Printing
+
+* Updated Vasion Print (former PrinterLogic) Printer Installer Client to version
+  25.2.0.16.
+* Reset writable partition in case of IGEL OS updates but keep printer mapping.
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI version to 44.12.1.31417
+
+### Base system
+
+* Support for migration to IGEL OS 12 for the trust-based license (GOV) version
+  has been added.
+* Updated the End User License Agreement (EULA) to the February 2025 version.
+
+### Olympus
+
+* Updated Olympus driver to 4.0.5 and added a new udev rule.  
+* New device names mapping
+
++------------+-----------------------------------------------------------------+
+| Old device name| New device name                                             |
++============+=================================================================+
+|   Olympus DS9000|   OM SYSTEM DS9100                                         |
++------------+-----------------------------------------------------------------+
+|   Olympus RecMic II 4010p|   OM SYSTEM - RecMic II 4010n                     |
++------------+-----------------------------------------------------------------+
+|   Olympus RecMic II 4110s|   OM SYSTEM - RecMic II 4110n                     |
++------------+-----------------------------------------------------------------+
+|   Olympus RS28H|   OM SYSTEM RS28N                                           |
++------------+-----------------------------------------------------------------+
+|   Olympus RS31H|    OM SYSTEM RS31N                                          |
++------------+-----------------------------------------------------------------+
+
+### zoomvdi
+
+* Updated Zoom Media Plugins for VDI to version 6.2.10.25600.
+
+### Fabulatech
+
+* Updated FabulaTech USB to version 6.2.1.8.  
+* Updated FabulaTech Plugins to version 4.1.0.3.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed Chromium security issues CVE-2024-10488, CVE-2024-10487, CVE-2024-10231,
+  CVE-2024-10230, CVE-2024-10229, CVE-2024-9966, CVE-2024-9965, CVE-2024-9964,
+  CVE-2024-9963, CVE-2024-9962, CVE-2024-9961, CVE-2024-9960, CVE-2024-9959,
+  CVE-2024-9958, CVE-2024-9957, CVE-2024-9956, CVE-2024-9955, CVE-2024-9954,
+  CVE-2024-9603, CVE-2024-9602, CVE-2024-9370, CVE-2024-9369, CVE-2024-9123,
+  CVE-2024-9122, CVE-2024-9121, CVE-2024-9120, CVE-2024-8909, CVE-2024-8908,
+  CVE-2024-8907, CVE-2024-8906, CVE-2024-8905, CVE-2024-8904, CVE-2024-8639,
+  CVE-2024-8638, CVE-2024-8637, CVE-2024-8636 and CVE-2024-7025.  
+* Fixed Chromium security issues CVE-2024-8362, CVE-2024-7970, CVE-2024-8198,
+  CVE-2024-8194, CVE-2024-8193, CVE-2024-8035, CVE-2024-8034, CVE-2024-8033,
+  CVE-2024-7981, CVE-2024-7980, CVE-2024-7979, CVE-2024-7978, CVE-2024-7977,
+  CVE-2024-7976, CVE-2024-7975, CVE-2024-7974, CVE-2024-7973, CVE-2024-7972,
+  CVE-2024-7971, CVE-2024-7969, CVE-2024-7968, CVE-2024-7967, CVE-2024-7966,
+  CVE-2024-7965 and CVE-2024-7964.
+* Fixed chromium security issues CVE-2025-0451, CVE-2025-0445, CVE-2025-0444,
+  CVE-2025-0762, CVE-2025-0612, CVE-2025-0611, CVE-2025-0448, CVE-2025-0447,
+  CVE-2025-0446, CVE-2025-0443, CVE-2025-0442, CVE-2025-0441, CVE-2025-0440,
+  CVE-2025-0439, CVE-2025-0438, CVE-2025-0437, CVE-2025-0436, CVE-2025-0435,
+  CVE-2025-0434,  CVE-2025-0291, CVE-2024-12695, CVE-2024-12694, CVE-2024-12693,
+  CVE-2024-12692, CVE-2024-12382, CVE-2024-12381, CVE-2024-12053,
+  CVE-2024-11395, CVE-2024-11117, CVE-2024-11116, CVE-2024-11115,
+  CVE-2024-11114, CVE-2024-11113, CVE-2024-11112, CVE-2024-11111,
+  CVE-2024-11110, CVE-2024-10827 and CVE-2024-10826.  
+* Updated Chromium browser to version 133.0.6943.53.
+
+### Firefox
+
+* Updated Firefox ESR to version 115.20  
+    - Fix for mfsa2025-08, also known as CVE-2025-1009, CVE-2025-1010,
+      CVE-2025-1012 and CVE-2025-1016.  
+    - Fix for mfsa2025-03, also known as CVE-2025-0238 and CVE-2025-0242.  
+    - Fix for mfsa2024-65, also known as CVE-2024-11691 and CVE-2024-11694.  
+    - Fix for mfsa2024-57, also known as CVE-2024-10458, CVE-2024-10459 and
+      CVE-2024-10463.
+
+### Base system
+
+* Fixed bind9 security issues CVE-2024-4076, CVE-2024-1975, CVE-2024-1737,
+  CVE-2024-0760, CVE-2023-5679, CVE-2023-5517, CVE-2023-50868, CVE-2023-50387,
+  CVE-2023-4408, CVE-2023-4236 and CVE-2023-3341.  
+* Fixed python3.10 security issues CVE-2024-8088, CVE-2024-7592, CVE-2024-6923,
+  CVE-2024-6232, CVE-2023-27043, CVE-2024-0450 and CVE-2023-6597.  
+* Fixed openssl security issue CVE-2022-40735.  
+* Fixed wget security issue CVE-2024-38428.  
+* Fixed aom security issue CVE-2024-5171.  
+* Fixed cups security issues CVE-2024-47175 and CVE-2024-35235.  
+* Fixed krb5 security issues CVE-2024-37371 and CVE-2024-37370.  
+* Fixed openvpn security issues CVE-2024-5594 and CVE-2024-28882.  
+* Fixed wpa security issues CVE-2024-5290 and CVE-2023-52160.  
+* Fixed ghostscript security issues CVE-2024-29511, CVE-2024-29509,
+  CVE-2024-29508 and CVE-2024-29506.  
+* Fixed zulu17-ca security issues CVE-2024-21131, CVE-2024-21138,
+  CVE-2024-21140, CVE-2024-21145 and CVE-2024-21147.  
+* Fixed gtk+2.0 security issue CVE-2024-6655.  
+* Fixed gtk+3.0 security issue CVE-2024-6655.  
+* Fixed openvpn security issue CVE-2024-5594.  
+* Fixed qtbase-opensource-src security issue CVE-2024-39936.  
+* Fixed python-zipp security issue CVE-2024-5569.  
+* Fixed poppler security issue CVE-2024-6239.  
+* Fixed openssl1.1 security issues CVE-2024-5535, CVE-2024-4741 and
+  CVE-2024-2511.  
+* Fixed openssh security issue CVE-2024-39894.  
+* Fixed python3.10 security issues CVE-2024-4032 and CVE-2024-0397.  
+* Fixed openssl security issues CVE-2024-6119, CVE-2024-5535, CVE-2024-4741,
+  CVE-2024-4603 and CVE-2024-2511.  
+* Fixed mysql-8.0 security issues CVE-2024-21185, CVE-2024-21179,
+  CVE-2024-21177, CVE-2024-21173, CVE-2024-21171, CVE-2024-21165,
+  CVE-2024-21163, CVE-2024-21162, CVE-2024-21142, CVE-2024-21134,
+  CVE-2024-21130, CVE-2024-21129, CVE-2024-21127, CVE-2024-21125 and
+  CVE-2024-20996.  
+* Fixed gnome-shell security issue CVE-2024-36472.  
+* Fixed orc security issue CVE-2024-40897.  
+* Fixed postgresql-14 security issue CVE-2024-7348.  
+* Fixed bubblewrap security issue CVE-2024-42472.  
+* Fixed curl security issues CVE-2024-8096, CVE-2024-7264, CVE-2024-6874 and
+  CVE-2024-6197.  
+* Fixed vim security issues CVE-2024-43802, CVE-2024-43374 and CVE-2024-41957.  
+* Fixed webkit2gtk security issues CVE-2024-44187, CVE-2024-40866,
+  CVE-2024-27851, CVE-2024-27838, CVE-2024-27833, CVE-2024-27820,
+  CVE-2024-27808, CVE-2024-23271, CVE-2024-4558, CVE-2024-40794, CVE-2024-40789,
+  CVE-2024-40785, CVE-2024-40782, CVE-2024-40780, CVE-2024-40779, CVE-2024-40776
+  and CVE-2024-27834.  
+* Fixed ffmpeg security issues CVE-2024-7272 and CVE-2024-7055.  
+* Fixed expat security issues CVE-2024-50602, CVE-2024-45492, CVE-2024-45491 and
+  CVE-2024-45490.  
+* Fixed tiff security issue CVE-2024-7006.  
+* Fixed setuptools security issue CVE-2024-6345.  
+* Fixed apparmor security issue CVE-2016-1585.  
+* Fixed libvirt security issue CVE-2024-8235.  
+* Fixed qemu security issues CVE-2024-8612, CVE-2024-4467, CVE-2024-7409 and
+  CVE-2024-6505.  
+* Fixed cups-filters security issues CVE-2024-47176 and CVE-2024-47076.  
+* Fixed nano security issue CVE-2024-5742.  
+* Fixed zulu17-ca security issues CVE-2023-42950, CVE-2024-25062,
+  CVE-2024-21235, CVE-2024-21217, CVE-2024-21210 and CVE-2024-21208.  
+* Fixed libheif security issues CVE-2024-25269, CVE-2023-49464, CVE-2023-49463,
+  CVE-2023-49462, CVE-2023-49460 and CVE-2023-0996.  
+* Fixed libvpx6 security issue CVE-2024-5197.  
+* Fixed xorg-server security issue CVE-2024-9632.  
+* Fixed python-urllib3 security issue CVE-2024-37891.
+* Fixed libarchive security issue CVE-2024-20696.  
+* Fixed curl security issues CVE-2024-9681 and CVE-2024-11053.  
+* Fixed mpg123 security issue CVE-2024-10573.  
+* Fixed libgd2 security issue CVE-2021-40812.  
+* Fixed glib2.0 security issue CVE-2024-52533.  
+* Fixed ghostscript security issues CVE-2024-46956, CVE-2024-46955,
+  CVE-2024-46953, CVE-2024-46952 and CVE-2024-46951.  
+* Fixed python3.10 security issue CVE-2024-9287.  
+* Fixed mysql-8.0 security issues CVE-2025-21559, CVE-2025-21555,
+  CVE-2025-21546, CVE-2025-21540, CVE-2025-21529, CVE-2025-21523,
+  CVE-2025-21522, CVE-2025-21519, CVE-2025-21505, CVE-2025-21503,
+  CVE-2025-21501, CVE-2025-21500, CVE-2025-21497, CVE-2025-21491,
+  CVE-2025-21490, CVE-2024-21241, CVE-2024-21239, CVE-2024-21237,
+  CVE-2024-21236, CVE-2024-21231, CVE-2024-21230, CVE-2024-21219,
+  CVE-2024-21213, CVE-2024-21212, CVE-2024-21201, CVE-2024-21199,
+  CVE-2024-21198, CVE-2024-21197, CVE-2024-21196, CVE-2024-21194 and
+  CVE-2024-21193.  
+* Fixed libsoup2.4 security issues CVE-2024-52532, CVE-2024-52531 and
+  CVE-2024-52530.  
+* Fixed vim security issues CVE-2025-22134 and CVE-2024-47814.  
+* Fixed ngtcp2 security issue CVE-2024-52811.  
+* Fixed webkit2gtk security issues CVE-2024-54534, CVE-2024-54508,
+  CVE-2024-54505, CVE-2024-54502, CVE-2024-54479, CVE-2024-44309 and
+  CVE-2024-44308.  
+* Fixed iperf3 security issue CVE-2024-53580.  
+* Fixed libsndfile security issues CVE-2024-50612 and CVE-2022-33065.  
+* Fixed qemu security issue CVE-2023-2861.  
+* Fixed opensc security issues CVE-2024-8443, CVE-2024-45620, CVE-2024-45619,
+  CVE-2024-45618, CVE-2024-45617, CVE-2024-45616 and CVE-2024-45615.  
+* Fixed postgresql-14 security issues CVE-2024-10979, CVE-2024-10978,
+  CVE-2024-10977 and CVE-2024-10976.  
+* Fixed poppler security issue CVE-2024-56378.  
+* Fixed rsync security issues CVE-2024-12747, CVE-2024-12088, CVE-2024-12087,
+  CVE-2024-12086, CVE-2024-12085 and CVE-2024-12084.  
+* Fixed python3.10 security issue CVE-2024-11168.  
+* Fixed zulu17-ca security issue CVE-2025-21502.  
+* Fixed openjpeg2 security issues CVE-2024-56827, CVE-2024-56826, CVE-2023-39327
+  and CVE-2021-3575.  
+* Fixed bind9 security issues CVE-2024-12705 and CVE-2024-11187.  
+* Fixed harfbuzz security issue CVE-2023-25193.  
+* Fixed glibc security issue CVE-2025-0395.
+* Set nologin for system users tcpdump and unscd.
+* Fixed webkit2gtk security issues CVE-2025-24162, CVE-2025-24158,
+  CVE-2025-24150, CVE-2025-24143, CVE-2024-54658, CVE-2024-54543 and
+  CVE-2024-27856.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed ica.module.EnableVolumeListener has an effect on the EnableAudioListener
+  of the module.ini file.
+* Fixed mapping of  hotkey 'Ctrl + Alt + End' to 'Ctrl + Alt + Del',
+  configurable via IGEL Setup > Sessions > Citrix > Citrix Global > Keyboard >
+  'Mapping Ctrl + Alt + End to Ctrl + Alt + Del for Citrix sessions'.
+* Fixed password change within Citrix Workspace App with German user interface
+  language.
+* Option to disable Citrix connection dialogue
+  (ica.pnlogin.suppressconnectiondialog) is fixed.
+* Citrix: Configuration now works if no Citrix session is configured at all to
+  enable a proper environment for browser sessions.
+* In Citrix Workspace app 24.11, BCR cache is cleared after user
+  disconnects/signout from the VDA.
+* Enhanced Kerberos/AD and Last User/-Domain/Autologin for Citrix Cloud
+  Services.
+
+### AVD
+
+* Integrated new RdClientSDK to fix issues when connecting to host pools that
+  use private endpoint.
+
+### RDP/IGEL RDP Client 2
+
+* Fixed serial port redirection not working for COM10 and above.
+
+### Remote Desktop (RDP3)
+
+* Fixed RD Web Access autostart not working when using client version RDP3.
+
+### RD Web Access
+
+* Fixed disabling Verify Certificates not working for RD Web Access.
+
+### Horizon
+
+* Fixed log collection.
+* Fixed a bug in the Horizon login dialog for next-gen sessions where the user
+  name couldn't be changed.
+
+### Network
+
+* Fixed Ethernet hotplug issue with the Lenovo USB-C Dock Type 40A9.
+* Fixed sporadic no-link messages related to a deactivated Ethernet interface.
+* ACME client:  
+    - Fixed CA certificate permission issue.  
+    - Fixed potential inconsistency after change of settings.
+
+* Fixed issue with e1000e network card not working with powersave settings.  
+* Added new registry key to blacklist drivers for powersave settings:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`List of drivers seperated by space which have issues with powersave settings.` |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.powersave.powertop_drivers_blacklist`                    |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+
+### IGEL Agent for Imprivata
+
+* Adjustments have been made to the new integrated Omnissa Horizon 2412 client.
+
+### Smartcard
+
+* Fixed smart card resource manager pcsc-lite to make smart cards work with
+  certain applications inside AVD, Remote Desktop and Windows 365 sessions.
+
+### HID
+
+* Fixed touchscreen calibration not working.
+* Fixed auto-suspend of HID devices after reboot.
+* Fixed touchscreen right click by using touchegg gesture recognition for two
+  finger tap. Further gestures are not supported.  
+  Added registry key to enable touchegg multitouch gesture support:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Use touchegg for multitouch gestures handling.                  |
++------------+-----------------------------------------------------------------+
+| Registry   | userinterface.touchscreen.touchegg                              |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+### CUPS Printing
+
+* Fixed printing on DYMO LabelWriter 450.
+* Fixed CUPS printing service not starting on boot.
+* Added generic IPP Everywhere for driverless printing.
+
+### Cisco Webex
+
+* Fixed Cisco Webex VDI not correctly applying for AVD sessions.
+
+### Base system
+
+* Backported a kernel patch for devices with the Intel Goldmont
+  microarchitecture, which is used for low-power Atom, Celeron and Pentium
+  branded processors.  
+    - This fixes a potential freeze during the OSC installation process.  
+    - Additionally, this fixes an issue where affected devices were not shutting
+      down correctly.
+
+* Added new parameter to configure default for 'Connect after reboot':
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Connect after reboot`                                          |
++------------+-----------------------------------------------------------------+
+| Registry   | `devices.bluetooth.pair_on_reboot`                              |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled**  (default) / disabled                               |
++------------+-----------------------------------------------------------------+
+
+* Fixed not functional proxy if system-wide proxy was configured.
+* Fixed displaying of custom boot splash on AMD platforms.
+* Changed configuration of webcam priority. V4L Name is used for identifying the
+  webcam. If only one webcam is present, no entry is needed. If multiple webcams
+  are present without set priority, the first one is used.
+* ## Added parameters in registry
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Camera name                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.name                                  |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | camera _Default_                                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | priority                                                        |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.priority                              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 0 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | V4L2 name                                                       |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.camera%.v4lname                               |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | v4l2-string _Default_                                           |
++------------+-----------------------------------------------------------------+
+
+* Lower number means higher priority.
+* ## Obsolete Registry Parameters
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select how the webcam to use should be choosen.                 |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.choose_webcam_by           |
++------------+-----------------------------------------------------------------+
+| Range      | [Use first webcam][Choose by name]                              |
+|            | [Choose by vendor_id:product_id][Choose by number]              |
+|            | [Choose by devicename][Choose by priority]                      |
++------------+-----------------------------------------------------------------+
+| Value      | _Use first webcam_                                              |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by number (only valid if choose by number is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_number              |
++------------+-----------------------------------------------------------------+
+| Type       | integer                                                         |
++------------+-----------------------------------------------------------------+
+| Value      | 1 _Default_                                                     |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by name (only valid if choose by name is used)    |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_name                |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by vendor_id:product_id (only valid if choose by vendor_id:product_id is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_vendor_product      |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by devicename for example /dev/video0 or video0 (only valid if choose by devicename is used) |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_device              |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Select webcam by priority list for example dev=video0;name=HD_Webcam_C270 (only valid if choose by priority is used)}} |
++------------+-----------------------------------------------------------------+
+| Registry   | multimedia.webcam.virtual_background.webcam_priority            |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+### Firmware update
+
+* Fixed FTP the server configuration to properly reflect the configured maximum
+  number of connections. Please note that there's a hard limit of 100 concurrent
+  connections in the FTP server.
+* Fixed migration dbus timeout on slower devices if migration prepare is needed.
+
+### X11 system
+
+* Fixed a bug that reset the display configuration to default on reboot.
+
+### Audio
+
+* LG 24CN65x series audio fix for speaker and headphones.
+* Added registry key to ignore decibel information given by the ALSA driver
+  (useful if that information is wrong):
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Ignore dB`                                                     |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.pulseaudio.daemon.ignore-db`                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Fixed internal microphone on Fujitsu Lifebook E5412.
+
+### Multimedia
+
+* Fixed window distortions with video playback on Intel Meteor Lake chipsets.
+
+### Hardware
+
+* Fixed ignition off on ADS-TEC VMT-9010.
+* Fixed Wi-Fi on Lenovo Ideapad devices. The last ON/OFF state of the Wi-Fi is
+  restored on each boot or reboot.
+* Disabled system suspend on HP t240 as it is not supported.
+
+### Remote Management
+
+* Fixed unreliable ICG status icon.
+* Suppress confusing log messages while checking for upgrade readiness.
+* Improved fallback switch to ICG in case of UMS is preferred over ICG.
+
+Known Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Keyboard sync mode selection once/dynamic/off results in unexpected behavior.
+* Citrix Cloud login with Citrix Workspace app 20.10 not possible
+* Citrix StoreFront login to the cloud stores with Password authentication type
+  may not work due to the n-factor authentication enforced by Microsoft. Switch
+  to Citrix login type as a workaround.
+* If the user logs out via the Self-service drop down menu, the user data is not
+  deleted correctly by Citrix. As a result, a re-login can be performed without
+  new authentication. To remove all user credentials the self-service window
+  should always be closed when logging off.
+* Citrix proxy connections can fail if they are set up in an environment that
+  only allows external connections through a proxy and restricts DNS queries.
+* With the new Citrix toolbar, desktops may unexpectedly switch from windowed
+  mode to full-screen mode when a monitor was suspended. As a workaround, you
+  can revert to the previous version of the toolbar by setting the
+  ica.wfclient.toolbarversion parameter to "Old".
+* Adding smartcard readers during running / active session does not work. The
+  reader is visible, but cannot be used due to unknown reader status. Only
+  relevant for CWA versions earlier than 2112.
+* Browser Content Redirection (BCR) does not work if DRI3 and hardware
+  accelerated H.264 deep compression codec is enabled.
+* Citrix H.264 acceleration plugin does not work with **enabled** server policy
+  "Optimize for 3D graphics workload" in combination with server policy "Use
+  video codec compression" -> *"For the entire screen"**.
+* Currently H.264 for Citrix sessions cannot be used in parallel with video
+  input acceleration.
+* While starting Self-Service, it is possible that process ServiceRecord
+  segfaults -> Self-Service cannot be started afterwards.  
+  A cache cleanup with reboot is needed. In addition, the following parameters
+  should set to true.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up UI cache after Self-Service termination`               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupwebui`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up Store cache after Self-Service termination`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupstore`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+
+* Browser Content Redirection (BCR) may not work with Chrome version 105.0.* or
+  later. See https://support.citrix.com/article/CTX473065/hdx-browser-content-
+  redirection-broken-with-google-chrome-browser-version-105-or-higher
+* White / green fragments may appear during desktop launch if JPEG graphical
+  codec is used.
+* MS Teams calls may stop if blurred background is enabled. This affects Citrix
+  Workspace App 2305 and later.
+* ZoomVDI version 5.16 or newer is no longer supported with Citrix Workspace app
+  20.10
+* Browser Content Redirection (BCR) may not work with Citrix workspace app 23.11
+  and current Chrome versions.
+* If Self-Service is closed when the credential window is active, it may happen
+  that the session cannot be restarted. A reboot is necessary.
+
+### OSC Installer
+
+* OSC not deployable with IGEL Deployment Appliance: Version 11.3 or later is
+  required for deploying IGEL OS 11.06. and following.
+
+### AVD
+
+* When closing the AVD client while audio input (microphone redirection) is in
+  use, the client might crash. This will be fixed in future versions.
+* Webcam redirection support is preliminary / experimental and may not work with
+  all webcams yet.
+* AVD is not running on devices that don't support SSE4.1 at least. Use older
+  IGEL OS firmware versions like 11.09.xxx or older!
+* H.264 hardware decoding for MS-Teams optimization is currently limited to non-
+  AMD devices due to stability issues on AMD devices.
+
+### Remote Desktop (RDP3)
+
+* RDP3 is not running on devices that don't support SSE4.1 at least. Use the
+  legacy RDP client instead.
+
+### RD Web Access
+
+* Client is not running on devices that don't support SSE4.1 at least. Use
+  RdWebAccess with the legacy RDP client instead.
+
+### Horizon
+
+* Horizon session uses the configured system proxy, even if "Direct connection
+  to the Internet" is set for the session
+* Copying text from Horizon Blast sessions is not possible.
+* The on-screen keyboard in Horizon appliance mode does not work correctly with
+  local logon.  
+  It is necessary to switch off local logon and enable the following two keys
+  via IGEL registry:  
+  userinterface.softkeyboard.autoshow  
+  userinterface.softkeyboard.autohide
+* With usage of PCoIP protocol, the virtual channel provided by VMware used for
+  serial port and scanner redirection could freeze on logout from remote
+  session.
+* This happens only with enabled scanner or serial port redirection.  
+  The freeze does not occur if both redirection methods are enabled or none of
+  them. The Blast Protocol is not affected by this bug.
+* The respective settings can be found in the IGEL Registry:  
+  vmware.view.enable-serial-port-redir  
+  vmware.view.enable-scanner-redir
+* Keyboard Input Source Language Synchronization works only with usage of local
+  layout and deadkeys enabled.  
+  If a keyboard layout is used which has deadkeys disabled (which is the default
+  on IGEL OS), Horizon client falls back to en-US layout.
+* PCoIP sessions may crash in some cases, switch to Blast Protocol is
+  recommended then. H.264/HEVC encoding can be disabled when overall performance
+  is too low.
+* Client drive mapping and USB redirection for storage devices can be enabled at
+  the same time, but this could lead to sporadic problems.  
+  Horizon Client tracks the drives which are dynamically mounted and adds them
+  to the remote session using client drive mapping, means USB redirection is not
+  used for theses devices then.  
+  However, in case of devices like USB SD card readers, Horizon does not map
+  them as client drives but forcefully uses USB-redirection which results in an
+  unclean unmount.  
+  As a work-around, the IDs of these card readers can be added to IGEL USB
+  access rules and denied.
+
+### Parallels Client
+
+* Attached storage devices appear as network drives in the remote session  
+* USB device redirection is considered as experimental for the Parallels client
+  for Linux
+
+### Chromium
+
+* Hardware accelerated video decoding is currently not supported.
+
+### Firefox
+
+* With enabled Citrix Browser Content Redirection, Firefox has no H.264 and AAC
+  multimedia codec support. Means, when codec support is needed in Firefox, BCR
+  needs to be disabled. Citrix Browser Content Redirection is disabled by
+  default.
+
+### Network
+
+* Wakeup from system suspend fails on DELL Latitude 5510
+
+### IGEL Agent for Imprivata
+
+* Filter horizon apps on chooser does not work, apps will show in any case. The
+  recommendation is to set "iia.hide_horizon_apps_on_chooser" to "False"
+
+### Cisco JVDI Client
+
+* Citrix Workspace App 2010 may cause problems with Cisco JVDI. Newer ZoomVDI
+  versions and App Protection are no longer supported with CWA 2010.
+
+### Base system
+
+* After updating the BIOS on the HP mt645 G7 or HP mt645 G8, the device shuts
+  down instead of rebooting.
+* It is not possible to perform an unattended OS12 migration to base system
+  12.2.0 as an additional / manual reboot is necessary. The recommended upgrade
+  version for unattended migration is base system 12.2.1.
+* Due to suspend/resume issues of a Innodisk NVME we disabled the suspend
+  support for systems where this NVME is present. The issue otherwise will lead
+  to a complete loose of the storage device as the NVME will not work after
+  resume.
+
+### Conky
+
+* The right screen when using multiscreen environment may not be shown
+  correctly.  
+  Workaround: The horizontal offset should be set to the width of the monitor
+  (e.g. if the monitor has a width of 1920, the offset should be set to 1920)
+
+### Firmware update
+
+* A firmware update started on 11.10.100 can sporadically block, so that the
+  device must be rebooted manually. The update continues without problem after
+  reboot.
+* On devices with 4 GB flash storage or smaller it could happen that there is
+  not enough space for updating all features. In this case, a corresponding
+  error message occurs. Please visit https://kb.igel.com/igelos-11.09/en/error-
+  not-enough-space-on-local-drive-when-updating-to-igel-os-11-08-or-
+  higher-101059051.html  for a possible solution and additional information.
+
+### Appliance Mode
+
+* Appliance mode RHEV/Spice: spice-xpi firefox plugin is no longer supported.
+  The "Console Invocation" has to allow 'Native' client (auto is also possible)
+  and should be started in fullscreen to prevent any opening windows.
+* Browser Appliance mode can fail when the Web URL contains special control
+  characters like ampersand (& character).  
+  Workaround: Add quotes at the beginning and the end of an affected URL. E.g.:  
+  'https://www.google.com/search?q=aSearchTerm&source=lnms&tbm=isch'
+
+### Audio
+
+* UD3-M340C: Sound preferences are showing Headphone & Microphone, although not
+  connected.
+* Microphone (TRRS headset) is broken on LG 27CN650
+
+### Multimedia
+
+* Multimedia redirection with GStreamer could fail when using Nouveau GPU
+  driver.
+
+### Hardware
+
+* Some HP devices will shut down instead of restarting during the BIOS update
+  procedure. After manual boot of the devices, it may take up to three minutes
+  before anything is displayed on the screen (the only indicator is the power
+  LED). Wake on LAN (e.g. via UMS) does not seem to work in this state, either.  
+  The BIOS is still updated successfully. This is currently known for HP mt645
+  G7 and mt645 G8.
+* Some newer Delock 62599 active DisplayPort to DVI (4k) adapters only work on
+  INTEL-based devices.
+* Wake up from suspend via UMS does not work on HP mt645 devices. Workaround:
+  Disable system suspend and use shutdown instead.
+* Built-in fingerprint sensor is not supported on HP mt440 G3 and mt645 G7/G8.
+* MAC-Address Passthrough not supported on Lenovo USB-C Hybrid Docking Station.
+* Wake-on-Lan via docking stations is not supported.
+* In some rare cases it is possible that connecting or booting Lenovo USB-C
+  Hybrid Docking station over USB-C results in non working / faulty display
+  output.  
+** It may help to (re-)connect via USB-A. If this is the case, USB-C should be
+  also functional then.
+* Display configuration of displays connected to HP G5 Docking Station may fail
+  with HP t655.
+```
+
+-----
+
 ## 2025-03-11 - [11.10.234](readme11.10.234.txt)
 
 ```

@@ -13,6 +13,32 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-03-11 - [11.10.234](readme11.10.234.txt)
+
+```
+The new PRIVATE BUILD 11.10.234 for IGEL Workspace is ready.
+
+This build is based on 11.10.229.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Added parameter to enforce disabled redirections from AVD host pool RDP
+  properties.
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enforce-rdp-file-properties`             |
++------------+-----------------------------------------------------------------+
+| Value      |  enabled / **disabled** (default)                               |
++------------+-----------------------------------------------------------------+
+```
+
+-----
+
 ## 2025-03-03 - [11.10.232](readme11.10.232.txt)
 
 ```

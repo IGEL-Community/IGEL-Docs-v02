@@ -425,9 +425,10 @@ curl -v -k https://app.igel.com
 
 **Q:** How to setup a restricted web browser in full screen?
 
-**A:** With OS 12.5.1 or greater there is an `igel-minibroswer` that can be used.
+**A:** With OS 12.5.1 or greater there is an `igel-minibrowser` that can be used.
 
-- Launch `minibroswer` pointing to IGEL Community Docs
+- Launch `minibrowser` pointing to IGEL Community Docs
+- Set `minibrowser` to fullscreen
 
 ```bash linenums="1"
 /usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs

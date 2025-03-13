@@ -621,9 +621,9 @@ Execute the VMware Horizon client as maximized or full screen using wmctrl comma
 sleep 2 &&
 
 #uncomment for maximized
-wmctrl -x -r vmware-view -b add,maximized_vert,maximized_horz
+wmctrl -r vmware-view -b add,maximized_vert,maximized_horz
 #uncomment for fullscreen
-#wmctrl -x -r vmware-view -b add,fullscreen
+#wmctrl -r vmware-view -b add,fullscreen
 ```
 
 Bring IGEL UMS Console to the foreground

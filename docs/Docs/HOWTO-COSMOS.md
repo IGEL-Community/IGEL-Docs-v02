@@ -423,7 +423,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 curl -v -k https://app.igel.com
 ```
 
-**Q:** How to setup a restricted web browser?
+**Q:** How to setup a restricted web browser in full screen?
 
 **A:** With OS 12.5.1 or greater there is an `igel-minibroswer` that can be used.
 
@@ -431,7 +431,9 @@ curl -v -k https://app.igel.com
 
 ```bash linenums="1"
 /usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
+wmctrl -r "IGEL Minibrowser" -b add,fullscreen
 ```
+**NOTE:** How to stop minibrowser: Open terminal window (Ctrl+Alt+F11), kill process (pkill -f igel-minibrowser), and return to GUI (Ctrl+Alt+F1)
 
 **Q:** How to create shortcuts to tray applications?
 

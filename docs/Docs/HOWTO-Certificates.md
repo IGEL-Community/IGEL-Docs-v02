@@ -160,6 +160,20 @@ Can now manage certificates via the command line:
 
 -----
 
+## IGEL KB - Using AI Tool
+
+**Q:** IGEL KB: AI query
+
+```bash linenums="1"
+How to add public certificate to UMS?
+```
+
+**A:** IGEL KB: AI query response
+
+![10](Images/HOWTO-Certificates-10.png)
+
+-----
+
 ## Create a List of Certificates on IGEL OS and include End Date
 
 ```bash linenums="1"

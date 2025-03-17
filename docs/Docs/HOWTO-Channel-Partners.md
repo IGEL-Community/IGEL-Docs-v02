@@ -127,3 +127,11 @@ Build and deliver valuable and secure managed endpoint services to your Customer
     - Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
     - Reboot
     - Open the App Portal and install applications
+
+### Assigning Product Packs to UMS
+
+- Please go to your UMS ID in your ILP account and assign the Product Pack(s) to it via the + symbol:
+
+![image02](Images/HOWTO-Channel-Partners-02.png)
+
+- Perform a refresh in your UMS afterwards. The Product Pack(s) should show up in the UMS

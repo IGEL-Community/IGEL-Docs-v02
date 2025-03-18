@@ -38,9 +38,9 @@
 
 -----
 
-### Where are the log files?
+### Where are the log files for Imprivata PireID Embedded agent?
 
-The the log files for Imprivata ProveID Embedded agent are located in:
+- The the log files for Imprivata ProveID Embedded agent are located in:
 
 ```bash linenums="1"
 /.imprivata_data_runtime/log
@@ -48,11 +48,15 @@ The the log files for Imprivata ProveID Embedded agent are located in:
 
 **NOTE: Need to be root to access**  
 
+### Where are the log files for IGEL Agent for Imprivata?
+
 The log files for IGEL Agent for Imprivata on IGEL OS
 
 ```bash linenums="1"
 /var/log/user/IGELImprivataAgent.log
 ```
+
+- [IGEL KB: How to Enable and Export IAFI Debug Logging for Troubleshooting](https://kb.igel.com/en/igel-apps/current/how-to-enable-and-export-iafi-debug-logging-for-tr)
 
 -----
 

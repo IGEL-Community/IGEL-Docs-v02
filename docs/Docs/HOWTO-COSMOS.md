@@ -253,6 +253,10 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 <source src="../videos/HOWTO-COSMOS-New_Web_Cert.mp4" type="video/mp4">
 </video>
 
+**Q:** When changing the Root CA for UMS Web Certificate does that impact the IGEL OS 12 clients in any way?
+
+**A:** If you change the Root CA, you need to ensure it is distributed to the devices prior to swapping the chain on the UMS server itself
+
 **Q:** How do I use `rmagent-register` to register OS 12 device to my UMS?
 
 **A:** Follow steps to test `rmagent-register`

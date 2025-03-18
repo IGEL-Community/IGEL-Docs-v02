@@ -335,7 +335,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** What version of Linux is IGEL OS 12?
 
-**A:** IGEL OS 12 is IGEL's own version of Linux. IGEL uses libraries from Debian. the following screen shot from IGEL OS 12.6.0 shows Linux kernel 6.6.60 with debian / ubuntu / 20.04 / focal:
+**A:** IGEL OS is IGEL's own version of Linux. IGEL OS uses Debian / Ubuntu libs. Details on what is included in a specific build can be found in file `/etc/os-release`. Details on the kernel and device can be found by running `hostnamectrl`
 
 ![image-howto-cosmos-12](Images/HOWTO-COSMOS-12.png)
 

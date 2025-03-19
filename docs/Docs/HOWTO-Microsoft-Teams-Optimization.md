@@ -1,10 +1,16 @@
 # HOWTO Microsoft Teams
 
-## [Upgrade to new Teams for Virtualized Desktop Infrastructure (VDI)](https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy#citrix-virtual-apps-and-desktops-and-citrix-daas-requirements)
+## [New VDI solution for Teams](https://learn.microsoft.com/en-us/MicrosoftTeams/vdi-2)
+
+**NOTE::** Until Microsoft releases SlimCore for Linux, WebRTC optimization must not be disabled using the VDI Partner's policy engine:
+
+- [Citrix Studio](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#enable-optimization-of-microsoft-teams)
+- [Omnissa HTML5 ADMX template](https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesV2312/page/HTML5FeaturePolicySettings.html)
+- [AVD - Install WebRTC Redirection Service](https://learn.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service)
+
+## [Use Microsoft Teams on Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd)
 
 ## [IGEL OS UCC Configuration Guide](HOWTO-UCC-Guide.md)
-
-## [Teams for Virtualized Desktop Infrastructure](https://learn.microsoft.com/en-us/microsoftteams/teams-for-vdi)
 
 ## [Microsoft Teams optimization in a virtual desktop](https://www.go-euc.com/microsoft-teams-optimization-in-a-virtual-desktop/)
 

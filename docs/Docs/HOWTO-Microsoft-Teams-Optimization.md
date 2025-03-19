@@ -4,7 +4,7 @@
 
 **NOTE::** Until Microsoft releases SlimCore for Linux, WebRTC optimization must not be disabled using the VDI Partner's policy engine:
 
-- [Citrix Studio](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#enable-optimization-of-microsoft-teams)
+- [Citrix Studio](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams-new)
 - [Omnissa HTML5 ADMX template](https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesV2312/page/HTML5FeaturePolicySettings.html)
 - [AVD - Install WebRTC Redirection Service](https://learn.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service)
 

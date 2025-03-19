@@ -61,6 +61,8 @@ Additional details can be found here: [New Microsoft Teams for Virtualized Deskt
 
 If Microsoft Teams is not running in optimized mode, then check that the IGEL endpoint can communicate with the Microsoft API URLs and IPs?
 
+- [Microsoft Teams - URLs and IP address ranges](https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams)
+
 Run the following script in a local terminal window on IGEL endpoint:
 
 ```bash linenums="1"

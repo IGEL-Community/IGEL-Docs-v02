@@ -76,6 +76,8 @@ nc -v -z mlccdnprod.azureedge.net 443
 nc -v -z aka.ms 443
 ```
 
+**Note:** For OS 12, install app [Debug Tools](https://app.igel.com/debugtools) to get `nc` command
+
 -----  
 
 ## Microsoft Teams progressive web app (PWA) via Chromium OS 11

@@ -162,7 +162,7 @@ This is a comment section
 ```mermaid
 flowchart TD
  A((Assigned Profiles are Processed)) --> B[Chromium Browser Profile is Applied]
- B --> C{Desktop option users Template Key to control value}
+ B --> C{Desktop option uses Template Key to control value}
  C -- 'Active' Template Key Value --> D[Desktop option in profile is set to 'Active' and icon appears on desktop]
  C -- 'Inactive' Template Key Value --> E[Desktop option in profile is set to 'Inactive' and icon does not appear on desktop]
 ```

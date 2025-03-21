@@ -95,6 +95,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Sample Profiles](Docs/HOWTO-Sample-Profiles.md)
 -->
 - [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
+- [HOWTO Template Keys](Docs/HOWTO-Template-Keys.md)
 - [HOWTO Testing VDI](Docs/HOWTO-Testing-VDI.md)
 - [HOWTO Addendum to UCC Guide ](Docs/HOWTO-UCC.md)
 - [HOWTO UCC Guide ](Docs/HOWTO-UCC-Guide.md)

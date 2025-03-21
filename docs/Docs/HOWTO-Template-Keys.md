@@ -154,5 +154,15 @@ Now when a computer is placed in the `Testing` folder the Chromium Browser icon 
 
 Here is a flow chart to show the logic flow.
 
+<!---
+This is a comment section
 ![image22](Images/HOWTO-Template-Keys-22.png)
+-->
  
+```mermaid
+flowchart TD
+ A((Assigned Profiles are Processed)) --> B[Chromium Browser Profile is Applied]
+ B --> C{Desktop option users Template Key to control value}
+ C -- 'Active' Template Key Value --> D[Desktop option in profile is set to 'Active' and icon appears on desktop]
+ C -- 'Inactive' Template Key Value --> E[Desktop option in profile is set to 'Inactive' and icon does not appear on desktop]
+```

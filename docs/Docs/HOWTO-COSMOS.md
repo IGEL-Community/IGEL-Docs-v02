@@ -713,7 +713,7 @@ app.avd.sessions.avd%.options.compact-login-view
 
 **Q:** Can Yubikey be used for connecting to AVD?
 
-**A:** As of 14 November 2024, the Microsoft Linux RDP SDK is pending implementation of a return channel for the use of FIDO tokens within the session. Once this is implemented by Microsoft then development can proceed.
+**A:** [IGEL Announces FIDO2 Auth to Windows 365 and Azure Virtual Desktop! And it is around the corner!](https://virtualbrat.com/2025/03/25/igel-announces-fido2-auth-to-windows-365-and-azure-virtual-desktop-and-it-is-around-the-corner/)
 
 **Q:** Can IGEL OS use security keys with CAC/PIV?
 

@@ -45,6 +45,15 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 - [IGEL KB: Example: Google Maps as a Progressive Web App (PWA) on IGEL OS 12](https://kb.igel.com/en/igel-apps/current/example-google-maps-as-a-progressive-web-app-pwa-o)
 
+### PWA URLs
+
+| Name | Progressive Web App Url |
+|------|-------------------------|
+| Microsoft 365 Copilot | https://m365.cloud.microsoft |
+| Microsoft Outlook | https://outlook.office365.com/mail/ |
+
+
+
 -----
 
 ## [IGEL OS with Chromium – Guide](https://leon-beitsch.de/shared/IGEL_OS_with_Chromium.pdf)

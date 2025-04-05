@@ -13,6 +13,30 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-04-03 - [11.10.270](readme11.10.270.txt)
+
+```
+The new PUBLIC BUILD 11.10.270 for IGEL Workspace is ready.
+
+This build is based on 11.10.250.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated Chromium to version 134.0.6998.117  
+* Fixed Chromium security issues CVE-2025-2476, CVE-2025-24201, CVE-2025-2137,
+  CVE-2025-2136, CVE-2025-2135, CVE-2025-1923, CVE-2025-1922, CVE-2025-1921,
+  CVE-2025-1920, CVE-2025-1919, CVE-2025-1918, CVE-2025-1917, CVE-2025-1916,
+  CVE-2025-1915, CVE-2025-1914, CVE-2025-1426, CVE-2025-1006, CVE-2025-0999,
+  CVE-2025-0998, CVE-2025-0997, CVE-2025-0996 and CVE-2025-0995.
+```
+
+-----
+
 ## 2025-03-11 - [11.10.250](readme11.10.250.txt)
 
 ```

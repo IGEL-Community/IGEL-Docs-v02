@@ -49,6 +49,7 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 | Name | Progressive Web App Url |
 |------|-------------------------|
+| Google Maps | https://www.google.de/maps?force=tt&source=ttpwa |
 | Microsoft 365 Copilot | https://m365.cloud.microsoft |
 | Microsoft Outlook | https://outlook.office365.com/mail/ |
 

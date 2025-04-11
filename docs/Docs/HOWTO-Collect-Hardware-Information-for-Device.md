@@ -130,8 +130,15 @@ zip -r data_dump.zip data_dump
 
 ## Search for string (audio) in data_dump files
 
+- Create a listing of files that has string
+
 ```bash linenums="1"
-cd data_dump
+grep -irl audio
+```
+
+- Create a file with content of search results by file name
+
+```bash linenums="1"
 find . -type f -exec echo "File NAME:  ===>> " {} \; -exec grep -i audio {} \; > /tmp/find_string_in_data_dump.txt
 ```
 

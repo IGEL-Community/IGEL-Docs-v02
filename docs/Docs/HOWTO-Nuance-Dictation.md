@@ -47,9 +47,9 @@ In general, USB redirection is not needed for standard functionality such as aud
 | Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
 | Allow | 0911 | 14a4 | | No | Allow - Philips SpeechMike II |
 | Allow | 0911 | 1844 | | No | Allow - Philips Foot Control LFH2300 |
-| Allow | 0911 | Oc1c | | No | Allow - Philips III |
+| Allow | 0911 | 0c1c | | No | Allow - Philips III |
 | Split | 0911 | 14a4 | 00 01 02 03  | No | Split - Philips SpeechMike II |
-| Split | 0911 | Oc1c | 00 01 02 03 | No | Split - Philips III |
+| Split | 0911 | 0c1c | 00 01 02 03 | No | Split - Philips III |
 | Allow | 15d8 | 0024 | | No | Allow - Grundig Digta Foot Control 540|
 | Allow | 15d8 | 0025 | | No | Allow - Grundig Digta SonicMic |
 | Split | 15d8 | 0025 | 00 01 02 04 05 | No | Split - Grundig Digta SonicMic |

@@ -33,6 +33,15 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 ![image02](Images/HOWTO-Browsers-02.png)
 
+**Q:** How to configure Firefox to open Citrix ICA file?
+
+**A** In the Firefox profile / global settings / custom setup, create a policy;
+
+```bash linenums="1"
+Policy Name: Handlers
+Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
+```
+
 -----
 
 ## OS 12: Running Progressive Web Apps (PWA)

@@ -89,7 +89,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What are the IGEL OS editions and feature packs?
 
-**A:** [IGEL Web Site: IGEL OS Editions and Feature Packs](https://www.igel.com/licensing). Existing customers will be migrated to `Standard Edition`. [IGEL KB: IGEL OS Editions](https://kb.igel.com/en/igel-subscription-and-more/current/igel-os-editions)
+**A:** [IGEL KB: IGEL OS Editions](https://kb.igel.com/en/igel-subscription-and-more/current/igel-os-editions). Existing customers will be migrated to `Standard Edition`.
 
 **Q:** How to troubleshoot licensing problems?
 

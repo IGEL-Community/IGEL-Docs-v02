@@ -836,6 +836,22 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 
 -----
 
+## FAQ - Distributed App Repositories in IGEL UMS
+
+Distributed App Repositories can help to securely distribute apps to locations with no internet connection or low bandwith. You can find more information on the benefits, use cases and best practices in the [IGEL Blog: The Power of a Distributed App Repository: Enabling Access for Offline and Low-Bandwidth Environments](https://www.igel.com/blog/the-power-of-a-distributed-app-repository-enabling-access-for-offline-and-low-bandwidth-environments/).
+
+By enabling and configuring this feature, binaries of apps will be stored on a self-hosted WebDAV server. Devices can then download the binaries of those apps from the WebDAV server, but the metadata will still be downloaded from the UMS Integrated App Repository or the IGEL App Repository. 
+
+**Q:** How to setup Distributed App Repositories in IGEL UMS?
+
+**A:** Please review the following links:
+
+- [IGEL KB: How to Use Distributed App Repositories in IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-use-distributed-app-repositories-in-igel-um)
+- [Setting Up a WebDAV Server on Ubuntu and Debian](https://linuxconfig.org/webdav-server-setup-on-ubuntu-linux)
+- [APACHE web server and SSL authentication](https://linuxconfig.org/apache-web-server-ssl-authentication)
+
+-----
+
 ## FAQ - Ordering Icons on the Desktop
 
 - Use UMS Files and place this file into `/wfs/sort_icons.sh` and setup a `System > Custom Commands > Desktop > Final desktop command` with `/wfs/sort_icons.sh &`

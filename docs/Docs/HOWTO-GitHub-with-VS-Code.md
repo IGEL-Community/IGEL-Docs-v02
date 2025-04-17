@@ -8,7 +8,7 @@
 
 - GitHub Location for IGEL Community Custom Partitions: [https://github.com/IGEL-Community/IGEL-Custom-Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 
-- GitHub Location for IGEL Community OS 12 Application Recipes (**CURRENTLY RESTRICTED and release set for Q4 2024**): [https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
+- GitHub Location for IGEL Community OS 12 Application Recipes: [https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 
 - GitHub Docs: [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
@@ -18,6 +18,7 @@
 
 ## Install Microsoft Visual Studio Code and Extensions
 
+- Create OS 12 App with IGEL App Creator Portal [Visual Studio Code](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/vscode_git)
 - Install [Microsoft Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=vscom_downloads) on your PC
 - Add extension [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 - Add extension [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)

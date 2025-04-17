@@ -162,7 +162,7 @@ flowchart TD
   A[UMS Console]-- Port 5900 TCP SSL Tunnel Encrypted VNC-data --> B[\Intranet OS 11 Devices/]
   A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
   C{UMS Server}<-- Port 8443 TCP --> B[\Intranet OS 11 Devices/]
-  C{UMS Server}<-- Port 8443 TCP --> Q[\Intranet OS 11 Devices/]
+  C{UMS Server}<-- Port 8443 TCP --> Q[\Intranet OS 12 Devices/]
   C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
   C{UMS Server}-- DB Port--> E[(UMS DB)]
   C{UMS Server}-- Port 30022 TCP --> B[\Intranet OS 11 Devices/]
@@ -202,25 +202,29 @@ flowchart TD
   H((Internet Connection))<-- Port 443 TCP --> K[/OS 12 Devices\]
 ```
 
-- OS 12 (No OS 11; No ICG; OBS; IDP)
+- OS 12 (No OS 11; No ICG; Reverse Proxy; OBS; IDP)
 
 ```mermaid
 flowchart TD
   A[UMS Console]-- Port 8443 TCP --> C{UMS Server}
+  C{UMS Server}<-- Port 8443 TCP --> Q[\Intranet OS 12 Devices/]
   C{UMS Server}-- MS Active Directory Services Port --> D[(MS Active Directory Services)]
   C{UMS Server}-- DB Port--> E[(UMS DB)]
+  C{UMS Server}-- Port 30005 TCP UDP --> Q[\Intranet OS 12 Devices/]
+  C{UMS Server}-- Port 8443 TCP --> F{Reverse Proxy}
+  H((Internet Connection))<-- Port 8443 TCP --> F{Reverse Proxy}
   C{UMS Server}-- Port 443 TCP --> H((Internet Connection))
-  C{UMS Server}-- Port 30005 TCP UDP --> K[/OS 12 Devices\]
   H((Internet Connection))-- Port 443 TCP --> I[[UMS Download Server]]
   H((Internet Connection))-- Port 443 TCP --> J[[UMS Licensing Server]]
-  K[/OS 12 Devices\]<-- Port 8443 TCP --> C{UMS Server}
+  K[/Internet OS 12 Devices\]<-- Port 8443 TCP --> H((Internet Connection))
   L[UMS Web App]-- Port 443 TCP --> C{UMS Server}
-  K[/OS 12 Devices\]<-- Port 443 TCP --> H((Internet Connection))
   H((Internet Connection))<-- Port 443 TCP --> M[[OBS]]
   M[[OBS]]<-- Port 443 TCP -->N[[Service Hub]]
   M[[OBS]]<-- Port 443 TCP -->O[[Customer IDP]]
   H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
-```
+  H((Internet Connection))<-- Port 443 TCP --> Q[\Intranet OS 12 Devices/]
+  H((Internet Connection))<-- Port 443 TCP --> K[/Internet OS 12 Devices\]
+  ```
 
 <!---
 - OS 12 with Azure Application Gateway (No OS 11; No ICG; No OBS, No IDP)

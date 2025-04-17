@@ -85,7 +85,11 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** How is IGEL licensed and what happens when licenses expire?
 
-**A:** [IGEL Software Licenses for IGEL OS and IGEL UMS](https://kb.igel.com/en/igel-subscription-and-more/current/igel-software-licenses-for-igel-os-and-igel-ums)
+**A:** Here are some notes:
+
+- [IGEL KB: IGEL Software Licenses for IGEL OS and IGEL UMS](https://kb.igel.com/en/igel-subscription-and-more/current/igel-software-licenses-for-igel-os-and-igel-ums)
+
+- [IGEL KB: IGEL Subscription - Entitlements and Effects of Expiration](https://kb.igel.com/en/igel-subscription-and-more/current/igel-subscription-entitlements-and-effects-of-expi)
 
 **Q:** What are the IGEL OS editions and feature packs?
 

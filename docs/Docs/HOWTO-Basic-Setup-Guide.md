@@ -224,7 +224,7 @@ flowchart TD
   H((Internet Connection))<-- Port 443 TCP --> P[[App Portal]]
   H((Internet Connection))<-- Port 443 TCP --> Q[\Intranet OS 12 Devices/]
   H((Internet Connection))<-- Port 443 TCP --> K[/Internet OS 12 Devices\]
-  ```
+```
 
 <!---
 - OS 12 with Azure Application Gateway (No OS 11; No ICG; No OBS, No IDP)

@@ -57,7 +57,7 @@ Contact IGEL channel team for options to access [IGEL Academy Premium](https://w
 
 ## IGEL Services Specialization 
 
-For Expert and Elite Channel Partners who desire to deliver their own IGEL Services and Support.
+For Gold and Platinum Channel Partners who desire to deliver their own IGEL Services and Support.
 
 **NOTE:** Duration will depend on the body of work to review and includes POC's (proof of concept) or projects worked on.
 
@@ -108,7 +108,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 ## IGEL NFR Licenses and Trial Licenses
 
-- NFR (Not for resale) licenses for internal use are available for Velocity partner level `Expert` (Qty. 15), `Elite` (Qty. 30), `MSP Partners` (Qty. 15), and `MSP Elite` (Qty. 30)
+- NFR (Not for resale) licenses for internal use are available for Velocity partner level `Gold` (Qty. 15), `Platinum` (Qty. 30), `MSP Partners` (Qty. 15), and `MSP Platinum` (Qty. 30)
 
 - Staring with UMS 12.07.100, [UMS level](https://www.igel.com/licensing/) will default to `Essential`, if a higher level is needed, IGEL Channel Presales Engineer can provide a 90 day UMS Enterprise license
 

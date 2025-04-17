@@ -13,6 +13,27 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-04-17 - [11.10.271](readme11.10.271.txt)
+
+```
+The new PRIVATE BUILD 11.10.271 for IGEL Workspace is ready.
+
+This build is based on 11.10.270.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Citrix App Protected resources can be launched from the browser without the
+  need for a pre-configured store in the setup. A system restart is required
+  after activating/deactivating this feature.
+```
+
+-----
+
 ## 2025-04-03 - [11.10.270](readme11.10.270.txt)
 
 ```

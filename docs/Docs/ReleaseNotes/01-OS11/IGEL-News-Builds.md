@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-04-22 - [11.10.272](readme11.10.272.txt)
+
+```
+The new PRIVATE BUILD 11.10.272 for IGEL Workspace is ready.
+
+This build is based on 11.10.270.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Fixed Firefox not starting when a smartcard is inserted.
+```
+
+-----
+
 ## 2025-04-17 - [11.10.271](readme11.10.271.txt)
 
 ```

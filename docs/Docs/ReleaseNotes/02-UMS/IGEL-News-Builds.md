@@ -4,6 +4,91 @@
 
 ----
 
+## 2025-04-24 - [12.07.110](Readme-12.07.110.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+UMS Server:
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client: 
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit) 			
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+Microsoft SQL Server 2016 (with Cluster Support)
+Microsoft SQL Server 2017 (with Cluster Support)
+Microsoft SQL Server 2019 (with Cluster Support)
+Microsoft SQL Server 2022 (with Cluster Support)
+Oracle 21c (with Cluster Support)
+PostgreSQL 11 - 15
+Apache Derby 10.9 - 10.14
+Amazon Aurora PostgreSQL (Compatible with PostreSQL 11 – 15)
+Azure SQL Managed Instance
+
+
+============================================================================= 
+Resolved issues: 
+============================================================================= 
+
+[UMS common]
+- Fixed: Wake up command was not working properly in some cases.
+- Fixed: Messages between UMS Servers were not processed.
+- Fixed: In some cases, the UMS license was not evaluated correctly, which could result in issues such as being unable to log in to the UMS when using an external database.
+
+[App Proxy]
+- Fixed: SSL configuration for Distributed App Repository was not working out of the box.
+
+[Device Service]
+- Added: Additional debug log output for TC Connection States.
+
+
+=============================================================================
+# UMS WebApp #
+=============================================================================
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Configuration] 
+- Fixed: On the network page sometimes an error, related to duplicate keys, was displayed, rendering the page unusable.
+
+[Devices] 
+- Fixed: A bug was found impacting the Shadow-functionality for servers in certain time zones. 
+         Secure Shadowing tokens — though properly generated and distributed — were consistently rejected during validation, as they appeared to fall outside their valid time window. 
+		 
+[Logging] 
+- Fixed: The internal counter for unified logging misused the global counter. This change is important for large installations.
+```
+
+----
+
 ## 2025-03-06 - [12.07.100](Readme-12.07.100.txt)
 
 ```

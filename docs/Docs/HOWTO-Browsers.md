@@ -56,23 +56,25 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 
 ### PWA URLs
 
-| Name | Progressive Web App Url |
-|------|-------------------------|
-| Google Drive | https://drive.google.com/?lfhs=2 |
-| Google Mail | https://mail.google.com/mail/?usp=installed_webapp |
-| Google Maps | https://www.google.de/maps?force=tt&source=ttpwa |
-| Microsoft 365 Copilot | https://m365.cloud.microsoft |
-| Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 |
-| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ |
-| Microsoft Outlook | https://outlook.office365.com/mail/ |
-| Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ |
-| Microsoft Word | https://word.cloud.microsoft |
-| YouTube | https://www.youtube.com/?feature=ytca |
+| Name | Progressive Web App Url | Icon |
+|------|-------------------------|------|
+| Google Drive | https://drive.google.com/?lfhs=2 | |
+| Google Mail | https://mail.google.com/mail/?usp=installed_webapp | |
+| Google Maps | https://www.google.de/maps?force=tt&source=ttpwa | |
+| Microsoft 365 Copilot | https://m365.cloud.microsoft | |
+| Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 | |
+| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ | |
+| Microsoft Outlook | https://outlook.office365.com/mail/ | |
+| Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
+| Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
+| YouTube | https://www.youtube.com/?feature=ytca | |
 
-**NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated.
+**NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated. If issue with icon, then download icon and add to profile setting `Progressive Web App Icon (optional)`. Use UMS files to download icons and save into `/wfs/pwa_icons`.
 
 <!---
 This is a comment section
+<a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
+<a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 
 https://igeltechnologygmbh-my.sharepoint.com/
 -->

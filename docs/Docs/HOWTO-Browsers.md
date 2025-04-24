@@ -69,7 +69,7 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 | Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 | YouTube | https://www.youtube.com/?feature=ytca | |
 
-**NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated. If issue with icon, then download icon and add to profile setting `Progressive Web App Icon (optional)`. Use UMS files to download icons and save into `/wfs/pwa_icons`.
+**NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated. If issue with icon, then download icon and add to profile setting `Progressive Web App Icon (optional)`. Use UMS files to download icons and save into `/wfs`.
 
 <!---
 This is a comment section

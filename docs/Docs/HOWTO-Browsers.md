@@ -69,6 +69,8 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 | Microsoft Word | https://word.cloud.microsoft |
 | YouTube | https://www.youtube.com/?feature=ytca |
 
+**NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated.
+
 <!---
 This is a comment section
 

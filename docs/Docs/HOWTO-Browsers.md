@@ -58,11 +58,22 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 
 | Name | Progressive Web App Url |
 |------|-------------------------|
+| Google Drive | https://drive.google.com/?lfhs=2 |
+| Google Mail | https://mail.google.com/mail/?usp=installed_webapp |
 | Google Maps | https://www.google.de/maps?force=tt&source=ttpwa |
 | Microsoft 365 Copilot | https://m365.cloud.microsoft |
+| Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 |
+| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ |
 | Microsoft Outlook | https://outlook.office365.com/mail/ |
+| Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ |
+| Microsoft Word | https://word.cloud.microsoft |
+| YouTube | https://www.youtube.com/?feature=ytca |
 
+<!---
+This is a comment section
 
+https://igeltechnologygmbh-my.sharepoint.com/
+-->
 
 -----
 

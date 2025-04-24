@@ -67,6 +67,7 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 | Microsoft Outlook | https://outlook.office365.com/mail/ | |
 | Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
 | Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
+| Omnissa TestDrive | https://testdrive.vidmpreview.com/authcontrol/auth/request | <a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |
 | YouTube | https://www.youtube.com/?feature=ytca | |
 
 **NOTE:** After running a PWA for the first time, reboot device and the icon for the app will be updated. If issue with icon, then download icon and add to profile setting `Progressive Web App Icon (optional)`. Use UMS files to download icons and save into `/wfs`.
@@ -75,6 +76,7 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 This is a comment section
 <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
 <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
+<a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |
 
 https://igeltechnologygmbh-my.sharepoint.com/
 -->

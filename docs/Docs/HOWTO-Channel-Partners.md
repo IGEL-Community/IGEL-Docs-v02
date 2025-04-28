@@ -34,7 +34,7 @@ Contact IGEL channel team for options to access [IGEL Academy Premium](https://w
 - 50 min ICSP course
 - 45 min for exam
 
-**Note:** A new version of ICSP will be released in the fall of 20025. If your current certification has expired, open the ICSP Exam and select the option to `renew certification`. This will allow you to re-take the exam and renew the certification for another year.
+**Note:** A new version of ICSP will be released in the fall of 2025. If your current certification has expired, open the ICSP Exam and select the option to `renew certification`. This will allow you to re-take the exam and renew the certification for another year.
 
 ### IGEL Certified Professional (ICP) (3 hours)
 

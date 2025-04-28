@@ -63,7 +63,7 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 | Google Maps | https://www.google.de/maps?force=tt&source=ttpwa | |
 | Microsoft 365 Copilot | https://m365.cloud.microsoft | |
 | Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 | |
-| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ | |
+| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ | <a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
 | Microsoft Outlook | https://outlook.office365.com/mail/ | |
 | Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
 | Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
@@ -74,6 +74,7 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 
 <!---
 This is a comment section
+<a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
 <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
 <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 <a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |

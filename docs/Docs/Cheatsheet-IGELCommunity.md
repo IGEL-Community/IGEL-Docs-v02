@@ -91,6 +91,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [xev xmodmap](Cheatsheet-Linux-General.md#xev-xmodmap)               | :material-check-bold: | :material-check-bold:| Find and Disable a key |
 | [xinput](Cheatsheet-Linux-General.md#xinput)               | :material-check-bold: | :material-check-bold:| utility to configure and test X input devices |
 | [xset](Cheatsheet-Linux-General.md#xset)               | :material-check-bold: | :material-check-bold:| user preference utility for X |
+| yad-icon-browser                                           | :material-check-bold: | :material-check-bold:| browse icons on system |
 | [zenity](Cheatsheet-Linux-General.md#zenity)               | :material-check-bold: | :material-check-bold:| display dialog window, and return (either in the return code, or on standard output) the users input |
 
 -----

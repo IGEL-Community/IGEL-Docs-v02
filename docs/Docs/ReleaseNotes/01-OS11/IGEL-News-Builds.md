@@ -13,6 +13,40 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-04-29 - [11.10.290](readme11.10.290.txt)
+
+```
+The new PUBLIC BUILD 11.10.290 for IGEL Workspace is ready.
+
+This build is based on 11.10.270.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Updated chromium to version 135.0.7049.95  
+* Fixed chromium security issues CVE-2025-3066, CVE-2025-3067, CVE-2025-3068,
+  CVE-2025-3069, CVE-2025-3070, CVE-2025-3071, CVE-2025-3072, CVE-2025-3073,
+  CVE-2025-3074, CVE-2025-3619 and CVE-2025-3620.
+
+### WiFi
+
+* Fixed a critical issue in the regulatory domain configuration, preventing
+  potential privilege escalation and incorrect log entries.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Fixed Firefox not starting when smartcard is inserted.
+```
+
+-----
+
 ## 2025-04-22 - [11.10.272](readme11.10.272.txt)
 
 ```

@@ -68,6 +68,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [more](Cheatsheet-Linux-General.md#more)                   | :material-check-bold: | :material-check-bold:| display the content of a file page by page |
 | [mount](Cheatsheet-Linux-General.md#mount)                 | :material-check-bold: | :material-check-bold:| mount a partition                          |
 | [openssl](Cheatsheet-Linux-General.md#openssl) | :material-check-bold: | :material-check-bold:| OpenSSL command line tool |
+| [pkexec](Cheatsheet-Linux-General.md#pkexec)               | :material-check-bold: | :material-check-bold:| start a program as root                    |
 | [ps](Cheatsheet-Linux-General.md#ps)                       | :material-check-bold: | :material-check-bold:| show running tasks                         |
 | [pwd](Cheatsheet-Linux-General.md#pwd)                     | :material-check-bold: | :material-check-bold:| print working directory                    |
 | [rm](Cheatsheet-Linux-General.md#rm)                       | :material-check-bold: | :material-check-bold:| delete a file                              |

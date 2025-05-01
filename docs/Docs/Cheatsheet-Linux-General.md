@@ -311,6 +311,14 @@ cd /etc; find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -e
 
 - [How to Check Certificate with OpenSSL](https://linuxhandbook.com/check-certificate-openssl/)
 
+## pkexec
+
+- The following command can be added to a profile to start a program as root:
+
+```bash linenums="1"
+pkexec -u root env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY program_to_run_as_root
+```
+
 ## ps
 
 show running tasks

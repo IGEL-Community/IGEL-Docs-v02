@@ -578,6 +578,14 @@ https://yourICG:8443/usg/server-status
 
 **A:** Make sure that SSH is running on ICG server and that the account used from UMS has `sudo` rights. [IGEL KB: ICG How-Tos - Giving a User sudo Privileges](https://kb.igel.com/en/igel-cloud-gateway/current/giving-a-user-sudo-privileges). Linux setup example can be found in [IGEL Community Docs HOWTO Setup Lab Sandbox Environment - Optional - Install ICG from UMS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#optional-install-icg-from-ums-os-11)
 
+**Q:** The ICG OS12 Management Connection shows as disconnected. What can be checked / validated?
+
+**A:** Review the following items:
+
+- Giving the UMS an Public Address via UMS Network > Server > Servername rightclick on it and setting the Public Address + Default Port for example ums.server.com.
+- Giving the IGEL Cloud Gateway the exact External Host + Port that can be pinged from outside your LAN.
+- Reinstalling ICG with Certificate.
+
 -----
 
 ## FAQ - Onboarding Service (OBS)

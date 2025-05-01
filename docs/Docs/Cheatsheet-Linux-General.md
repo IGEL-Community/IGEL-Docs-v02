@@ -613,7 +613,7 @@ Close VMware window
 wmctrl -c VMware
 ```
 
-Execute the VMware Horizon client as maximized or full screen using wmctrl command
+- OS 11 - Execute the VMware Horizon client as maximized or full screen using wmctrl command
 
 ```bash linenums="1"
 #!/bin/bash
@@ -624,6 +624,27 @@ sleep 2 &&
 wmctrl -r vmware-view -b add,maximized_vert,maximized_horz
 #uncomment for fullscreen
 #wmctrl -r vmware-view -b add,fullscreen
+```
+
+- OS 12 - Change the Omnissa Horizon window size using wmctrl command
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+PATTERN="Omnissa Horizon Client"
+
+# Loop until the application window is open
+while ! wmctrl -l | grep -q "$PATTERN" ; do
+  echo "$PATTERN not running, checking again..."
+  sleep 5
+done
+
+echo "Pattern '$PATTERN' found!"
+#uncomment below item for fullscreen or maximized
+#wmctrl -r "$PATTERN" -b add,fullscreen
+#wmctrl -r "$PATTERN" -b add,maximized_vert,maximized_horz
 ```
 
 Bring IGEL UMS Console to the foreground

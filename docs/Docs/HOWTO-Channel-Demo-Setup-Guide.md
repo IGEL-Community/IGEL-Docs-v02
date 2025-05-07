@@ -1,5 +1,6 @@
 # HOWTO Channel Demo Setup Guide
 
+<!---
 ----------
 
 ----------
@@ -27,19 +28,24 @@
 
 [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
 
+-->
+
 ----------
 
 ----------
 
 ## Steps to Test OS 12
 
+<!---
+
 **NOTE:** Until UMS is setup for OS 12 testing, setup OS 12 device as standalone and install apps from IGEL app portal.
+
+-->
 
 [Want to test out OS 12 with App Portal without UMS12?](HOWTO-Add-Applications.md#want-to-test-out-os-12-with-app-portal-without-ums12)
 
+
 <!---
-This is a comment section
--->
 
 ----------
 
@@ -53,9 +59,6 @@ This is a comment section
 | UMS Structure Tag | OS11-SHI-LG-EvalCenter |
 | Password | `Contact IGEL Channel for password` |
 
-<!---
-| Password | SHI-LG-EvalCenter |
--->
 
 ## SHI Connection Settings (IGEL Base + ControlUp)
 
@@ -65,10 +68,8 @@ This is a comment section
 | UMS Structure Tag | OS11-SHI-LG-CUP |
 | Password | `Contact IGEL Channel for password` |
 
-<!---
-| Password | SHI-LG-EvalCenter |
+----------
+
+----------
+
 -->
-
-----------
-
-----------

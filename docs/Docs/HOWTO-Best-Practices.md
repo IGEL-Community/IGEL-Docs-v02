@@ -41,7 +41,7 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 **NOTE:** For small installations, a single UMS Server instance (standard UMS) with an embedded database is usually sufficient. If required, a single-instance installation can be easily extended anytime to a Distributed UMS installation by installing additional servers (and in the case of an embedded database, by switching preliminarily to an external data source).
 
-- [UMS Sizing Guidelines](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-sizing-guidelines-architecture-diagrams)
+- [UMS Sizing Guidelines](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12)
 
 -----
 

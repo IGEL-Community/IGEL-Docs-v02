@@ -114,7 +114,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 ### Prepare the Server
 
 - UMS can install on several 64-bit Windows and Linux operating systems.
-- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-sizing-guidelines-architecture-diagrams). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
+- Ensure you’ve configured the server to meet the [minimum requirements for UMS](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12). A typical build would include 2 CPU Cores, 12 GB of vRAM, and 80+ GB of disk space.
 - The UMS can be installed on-prem or in the cloud (Azure, AWS, Hosting Providers, etc.) on a physical or virtual machine.
 
 ### Install the UMS Software
@@ -774,4 +774,4 @@ You can now manage devices that are outside the corporate network via UMS and IC
     * ~100kB per device
     * Reserve 500MB up to 1GB space for database transaction logs for excessive DB calls (e.g. ‚ Remove unused Firmware(s)‘); this depends heavily on the used DBMS
  
-[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/installation-and-sizing-guidelines-for-igel-ums)
+[Installation and Sizing Guidelines for IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12)

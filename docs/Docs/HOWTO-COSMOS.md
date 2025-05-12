@@ -285,7 +285,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [IGEL KB: RAM and vCPUs](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-sizing-guidelines-architecture-diagrams), [IGEL KB: performance optimizations](https://kb.igel.com/en/universal-management-suite/12.07.100/performance-optimizations-in-igel-ums) , and [IGEL KB: Java heap size](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-configure-java-heap-size-for-the-ums-server)
+**A:** Make sure you have met requirements for [IGEL KB: RAM and vCPUs](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12), [IGEL KB: performance optimizations](https://kb.igel.com/en/universal-management-suite/12.07.100/performance-optimizations-in-igel-ums) , and [IGEL KB: Java heap size](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-configure-java-heap-size-for-the-ums-server)
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 

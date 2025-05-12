@@ -784,6 +784,20 @@ Have Cisco ISE engineer use (DHCP IGEL tag) + (ITC* hostname) to fingerprint the
 
 - [SCEP Client (NDES)](https://kb.igel.com/en/igel-os-base-system/12.5/scep-client-ndes-in-igel-os-12)
 
+**Q:** Using OS 12.6.1 with SCEP/802.1x certificates for network connections? Newly issued certificates may longer work with 12.6.1
+
+**A:** Try creating symbolic links for the Intermediate and Root certificates from /wfs/ca-certs/tls/ to /wfs/ca-certs/.
+
+```bash linenums="1"
+ln -s /wfs/ca-certs/tls/your_certificate.cer /wfs/ca-certs/
+```
+
+- Also, make sure the original certificate files in /wfs/ca-certs/tls/ have the correct permissions set to 644. Here is script to automate this:
+
+```bash linenums="1"
+bash -c 'for f in Intermediate.cer Root.cer; do target=/wfs/ca-certs/$f; src=/wfs/ca-certs/tls/$f; if [ -e "$target" ] && [ "$(stat -c %a "$target")" = 644 ]; then continue; fi; if [ -L "$target" ] && [ "$(stat -c %a "$target")" = 644 ]; then continue; fi; if [ -e "$src" ]; then [ "$(stat -c %a "$src")" != 644 ] && chmod 644 "$src"; ln -sf "$src" "$target"; fi; done'
+```
+
 -----
 
 ## FAQ - Device Specific Data

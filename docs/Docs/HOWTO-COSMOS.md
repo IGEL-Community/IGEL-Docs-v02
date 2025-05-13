@@ -798,6 +798,15 @@ ln -s /wfs/ca-certs/tls/your_certificate.cer /wfs/ca-certs/
 bash -c 'for f in Intermediate.cer Root.cer; do target=/wfs/ca-certs/$f; src=/wfs/ca-certs/tls/$f; if [ -e "$target" ] && [ "$(stat -c %a "$target")" = 644 ]; then continue; fi; if [ -L "$target" ] && [ "$(stat -c %a "$target")" = 644 ]; then continue; fi; if [ -e "$src" ]; then [ "$(stat -c %a "$src")" != 644 ] && chmod 644 "$src"; ln -sf "$src" "$target"; fi; done'
 ```
 
+- **Note from IGEL support on 13 May 2025:**
+
+There is a new mechanism in 12.6.1 that runs a check on every certificate in /wfs/ca-certs - and if this is not in Base64 x509 format, the certificate is removed.  For now, please continue raising support cases - and for workarounds, please consider:
+
+- Downgrade to 12.6.0 or earlier where you certificates are recognised
+- Wait for the scheduled fix (confirmed from our developers as 12.8)
+- Consider using x509 format certificates instead of your current ones
+- Upload your certificates as 'Undefined' file type in UMS and place somewhere else other than /wfs/ca-certs
+
 -----
 
 ## FAQ - Device Specific Data

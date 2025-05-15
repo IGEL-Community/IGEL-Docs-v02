@@ -447,6 +447,12 @@ touch new.sh
 
 ## tr
 
+convert a file from windows to linux (strip out the \r characters)
+
+```bash linenums="1"
+tr -d '\r' < windowsfile.txt > linuxfile.txt
+```
+
 translates, deletes, and squeezes characters
 
 **Print $PATH directories on a separate line**

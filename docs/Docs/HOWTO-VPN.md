@@ -156,6 +156,12 @@ openvpn --show-ciphers
 
 -----
 
+## Other VPN Clients (IGEL Community App Recipes on GitHub)
+
+- [F5 VPN](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/f5_vpn)
+
+-----
+
 ## Other VPN Clients (IGEL Community Custom Partitions on GitHub)
 
 - [AWS VPN Client](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Network/AWS_VPN)

@@ -4,7 +4,8 @@
 
 **NOTE:** This guide follows KB article -- First Steps with IGEL OS 11 and adds optional IGEL Cloud Gateway (ICG) setup.
 
-[IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
+- [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
+- [IGEL KB - IGEL OS Base System 12](https://kb.igel.com/en/igel-os-base-system/12.6.1/)
 
 -----
 
@@ -13,8 +14,8 @@
 1. Install IGEL OS on an Endpoint
 2. Install the Universal Management Suite (UMS)
 3. Register Your Endpoints with the UMS Server
-4. License Your Endpoints
-5. Optional: Setup IGEL Cloud Gateway for Managing External Endpoints
+4. License Your UMS and Endpoints
+5. Optional: Setup IGEL Cloud Gateway for Managing External Endpoints (OS 11) or Reverse Proxy (OS 12)
 
 -----
 
@@ -395,6 +396,18 @@ Devices that boot up on your LAN should now be automatically discovered and regi
 
 -----
 
+## License your UMS Server
+
+Standard and Enterprise features require a dedicated Standard or Enterprise UMS License, which can be generated in the ILP and must be imported into the IGEL UMS. The license service in the UMS verifies the imported UMS license and applies the corresponding feature activation. In the ILP, you have the UMS License assigned to your account based on the purchased IGEL OS Edition.
+
+- [IGEL KB: How to License the IGEL UMS](https://kb.igel.com/en/igel-subscription-and-more/current/how-to-license-the-igel-ums)
+
+- [IGEL KB: IGEL OS Editions](https://kb.igel.com/en/igel-subscription-and-more/current/igel-os-editions)
+
+- [IGEL KB: IGEL Software Licenses for IGEL OS and IGEL UMS](https://kb.igel.com/en/igel-subscription-and-more/current/igel-software-licenses-for-igel-os-and-igel-ums)
+
+-----
+
 ## License Your Endpoints
 
 We recommend you download a 90-day full-evaluation license to open all features. You can do this in one of two ways:
@@ -451,7 +464,7 @@ From the endpoint running IGEL OS (not from the UMS):
 
 -----
 
-## OPTIONAL: Setup IGEL Cloud Gateway for Managing External Endpoints
+## OPTIONAL: Setup IGEL Cloud Gateway for Managing External Endpoints (OS 11)
 
 With UMS installed and configured, you are prepared to manage devices on the LAN. To manage OS 11 devices which are outside the LAN, you must install and configure the IGEL Cloud Gateway (ICG) to act as a public-facing broker between the external devices and the internal UMS server.
 
@@ -725,7 +738,13 @@ You now have the ICG in place and configured, with end points connecting to it. 
 
 -----
 
-## Configure the External Repository
+## OPTIONAL: Setup Reverse Proxy for Managing External Endpoints (OS 12)
+
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.07.100/configure-the-ums-to-integrate-reverse-proxy-with-)
+
+-----
+
+## Configure the External Repository (OS 11)
 
 Larger payload files (such as firmware updates) cannot be retrieved by the endpoints via port 8443 to the ICG server. You need to configure an external (public-facing) FTP-based server in order to have a place the external endpoints can reach in order to download these larger files.
 

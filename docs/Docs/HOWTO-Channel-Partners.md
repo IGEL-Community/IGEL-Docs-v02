@@ -146,7 +146,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 ### Applications
 
 - Module design, everything including the operating system is an application
-- Distributing signed native applications (Enterprise Browsers, Imprivata, Progressive Web Apps, Linux apps)
+- Distributing signed native applications (Enterprise Browsers, Imprivata, Progressive Web Apps, Linux apps) from vendor's cloud / content delivery network (CDN) or from your data centers / local sites
 - Ability to create your own signed applications (IGEL App Creator Portal)
 
 ### Security and Compliance
@@ -160,13 +160,15 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 - 24/7 support
 - TRM (technical relationship managers)
+- Advanced Services / Consulting
 - Community support
 - Platform as a Service for backend management servers
 
 ### Partnerships
 
 - Defined program for working with partners
-- Strong relationships with partners
+- Strong relationships with partners (Microsoft, Omnissa, Island.io, Zscaler, Palo Alto Networks, Cisco, ControlUp, eGI, Nexthink, Citrix, etc.)
+- Operating system preinstalled by the vendor (HP, Lenovo, LG)
 
 ### Future-proof
 

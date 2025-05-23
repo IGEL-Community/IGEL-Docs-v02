@@ -138,3 +138,45 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 ![image03](Images/HOWTO-Channel-Partners-03.png)
 
 - Perform a refresh in your UMS afterwards. The Product Pack(s) should show up in the UMS
+
+----------
+
+## Evaluating IGEL vs Someone Else
+
+### Applications
+
+- Module design, everything including the operating system is an application
+- Distributing signed native applications (Enterprise Browsers, Imprivata, Progressive Web Apps, Linux apps)
+- Ability to create your own signed applications (IGEL App Creator Portal)
+
+### Security and Compliance
+
+- Chain of trust (secured boot sequence)
+- Secure boot support
+- FIPS 140-.2, German BSI certification, and ISO 20001
+- Secure Digital Signage
+
+### Services
+
+- 24/7 support
+- TRM (technical relationship managers)
+- Community support
+- Platform as a Service for backend management servers
+
+### Partnerships
+
+- Defined program for working with partners
+- Strong relationships with partners
+
+### Future-proof
+
+- Long term vision beyond traditional products (IoT, Hypervisor, analytics, etc.)
+
+### Updates and Architecture
+
+- Simple to setup / maintain environment
+- Module application deployment / updates (mix and match versions of apps)
+
+### TCO
+
+- Provides TCO calculator that can be used with actual client data for C-level discussions

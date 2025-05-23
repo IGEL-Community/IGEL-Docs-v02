@@ -2,7 +2,7 @@
 
 -----
 
-**NOTE:** This guide follows KB article -- First Steps with IGEL OS 11 and adds optional IGEL Cloud Gateway (ICG) setup.
+**NOTE:** This guide follows KB articles -- IGEL OS 11  / 12 and adds optional IGEL Cloud Gateway (ICG) for OS 11 or Reverse Proxy for OS 12.
 
 - [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
 - [IGEL KB - IGEL OS Base System 12](https://kb.igel.com/en/igel-os-base-system/12.6.1/)
@@ -47,7 +47,7 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 
 **NOTE:** Target only the drive where the USB stick is mounted. This will destroy all data on the USB stick!
 
-**ADDITIONAL NOTE:** Some USB sticks may conflict with the preparestick.exe utility. If this happens, we recommend using Balena Etcher to format the USB stick instead of Preparestick. [You can download Etcher here](https://www.balena.io/etcher/). When you run it, choose the .iso file from the unzipped OSC download folder and target your USB stick.
+**ADDITIONAL NOTE:** Some USB sticks may conflict with the preparestick.exe utility. If this happens, we recommend using Balena Etcher to format the USB stick instead of Preparestick. [You can download Etcher here](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/en/). When you run it, choose the .iso file from the unzipped OSC download folder and target your USB stick.
 
 -	Allow the wizard to format the USB stick, following the prompts.
 -	You can also watch this tutorial video on how to create an OSC USB
@@ -57,6 +57,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 ### Convert the target endpoint
 
 #### Common Boot Keys
+
+- [Common book keys](https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/#common-boot-keys)
 
 | Vendor | Boot Key |
 |--------|----------|

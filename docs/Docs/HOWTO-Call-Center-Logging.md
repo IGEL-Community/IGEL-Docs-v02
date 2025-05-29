@@ -100,3 +100,21 @@ rm -rf ${FILE_PATH}
 ## Items left to work on
 
 - Method for moving the zipped sessions to a central server
+
+-----
+
+-----
+
+## Steps to view / play files
+
+- To play the audio file:
+
+```bash linenums="1"
+pw-cat -p *.mp3
+```
+
+- To view all images:
+
+```bash linenums="1"
+gpicview *.png
+```

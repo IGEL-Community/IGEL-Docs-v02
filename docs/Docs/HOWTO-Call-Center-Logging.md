@@ -52,24 +52,21 @@ SCREENSHOT_SLEEP=10
 # Reduce audio file size by changing sample rate from 48000 to 6000
 SAMPLE_RATE=6000
 VOLUME=1.5
+# Name of the process to check
+# Cisco Webex
+PROCESS_NAME="CiscoCollabHost"
 
+# No changes needed below this line
+
+# create folder
 if [ ! -d ${FILE_PATH} ]; then
   mkdir -p ${FILE_PATH}
 fi
 
 cd ${FILE_PATH}
 
+# start audio recording
 pw-cat --record --rate=${SAMPLE_RATE} --volume=${VOLUME} ${AUDIO_FILE}.wav &
-
-#
-# Need some logic to loop on. 
-#
-# While Process Name exists -- loop
-#
-
-# Name of the process to check
-# Cisco Webex
-PROCESS_NAME="CiscoCollabHost"
 
 # take first screen shot and sleep
 # scrot has settings to reduce image size - q num (1-100)

@@ -75,6 +75,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Certificates](Docs/HOWTO-Certificates.md)
 - [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
 - [HOWTO IGEL](Docs/HOWTO-COSMOS.md)
+- [HOWTO Call Center Logging](Docs/HOWTO-Call-Center-Logging.md)
 - [HOWTO Create USB installation medium MacOS](Docs/HOWTO-Create-USB-Installation-medium-MacOS.md)
 - [HOWTO CUPs Printing](Docs/HOWTO-CUPs-Printing.md)
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)

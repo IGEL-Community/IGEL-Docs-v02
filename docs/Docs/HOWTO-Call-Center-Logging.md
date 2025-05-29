@@ -23,7 +23,7 @@ IGEL OS can be configured to capture the audio and screen shots outside of the c
 
 ## Call Center Logging Script
 
-Example script that can be stared as part of the call center application start. For this example, the script is run with native Cisco Webex client. IGEL Community on GitHub App Recipe [Webex](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Unified_Communications/webex)
+Example script that can be started as part of the call center application start-up. For this example, the script is run with native Cisco Webex client. IGEL Community on GitHub App Recipe [Webex](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Unified_Communications/webex)
 
 ```bash linenums="1"
 #!/bin/bash

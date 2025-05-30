@@ -100,6 +100,7 @@ rm -rf ${FILE_PATH}
 ## Items left to work on
 
 - Method for moving the zipped sessions to a central server
+- Setting up central server to convert audio files to text files via [Whisper CLI, an advanced open-source speech recognition tool developed by OpenAI](https://labex.io/tutorials/linux-how-to-install-whisper-cli-on-linux-437909)
 
 -----
 

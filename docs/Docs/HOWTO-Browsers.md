@@ -59,12 +59,12 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 | Name | Progressive Web App Url | Icon |
 |------|-------------------------|------|
 | Google Drive | https://drive.google.com/?lfhs=2 | |
-| Google Mail | https://mail.google.com/mail/?usp=installed_webapp | |
+| Google Mail | https://mail.google.com/mail/?usp=installed_webapp | <a href="../Images/HOWTO-Browsers-gmail.svg" download>LINK to icon</a> |
 | Google Maps | https://www.google.de/maps?force=tt&source=ttpwa | |
 | Microsoft 365 Copilot | https://m365.cloud.microsoft | |
 | Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 | |
 | Microsoft Excel | https://www.microsoft365.com/launch/Excel/ | <a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
-| Microsoft Outlook | https://outlook.office365.com/mail/ | |
+| Microsoft Outlook | https://outlook.office365.com/mail/ | <a href="../Images/HOWTO-Browsers-outlook.svg" download>LINK to icon</a> |
 | Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
 | Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 | Omnissa TestDrive | https://testdrive.vidmpreview.com/authcontrol/auth/request | <a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |

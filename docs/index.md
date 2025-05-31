@@ -9,7 +9,9 @@ This documentation is without any warranty or support by IGEL Technology.
 
 <!---
 Comments
+-->
 
+<!---
 https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
 
 https://analytics.google.com/analytics/web/#/p431187557/reports/intelligenthome
@@ -68,14 +70,15 @@ Measurement Id: G-PTNHLB3WSX
 
 ## HOWTOs
 
+- [HOWTO IGEL (FAQ)](Docs/HOWTO-COSMOS.md)
+
 - [HOWTO Add Applications](Docs/HOWTO-Add-Applications.md)
 - [HOWTO Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
 - [HOWTO Best Practices](Docs/HOWTO-Best-Practices.md)
 - [HOWTO Browsers](Docs/HOWTO-Browsers.md)
 - [HOWTO Certificates](Docs/HOWTO-Certificates.md)
-- [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
-- [HOWTO IGEL](Docs/HOWTO-COSMOS.md)
 - [HOWTO Call Center Logging](Docs/HOWTO-Call-Center-Logging.md)
+- [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
 - [HOWTO Create USB installation medium MacOS](Docs/HOWTO-Create-USB-Installation-medium-MacOS.md)
 - [HOWTO CUPs Printing](Docs/HOWTO-CUPs-Printing.md)
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)
@@ -92,18 +95,15 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Re-enable TLSv1 and TLSv1.1 on UMS](Docs/HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS.md)
 - [HOWTO Remove IGEL Device License](Docs/HOWTO-Remove-IGEL-Device-License.md)
 - [HOWTO Run VMs on MacOS Intel](Docs/HOWTO-Run-VMs-on-MacOS-Intel.md)
-<!---
-- [HOWTO Sample Profiles](Docs/HOWTO-Sample-Profiles.md)
--->
 - [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 - [HOWTO Template Keys](Docs/HOWTO-Template-Keys.md)
 - [HOWTO Testing VDI](Docs/HOWTO-Testing-VDI.md)
-- [HOWTO Addendum to UCC Guide ](Docs/HOWTO-UCC.md)
 - [HOWTO UCC Guide ](Docs/HOWTO-UCC-Guide.md)
+- [HOWTO UCC Guide Addendum](Docs/HOWTO-UCC.md)
 - [HOWTO VirtualBox Virtual Machines on IGEL OS](Docs/HOWTO-VirtualBox-VMs-on-IGELOS.md)
 - [HOWTO VPN](Docs/HOWTO-VPN.md)
-- [HOWTO Work from Home Notes](Docs/HOWTO-Work-from-Home-Notes.md)
 - [HOWTO Write Config Files to OSC ISO image](Docs/HOWTO-Write-Config-Files-OSC-ISO.md)
+- [HOWTO Work from Home Notes](Docs/HOWTO-Work-from-Home-Notes.md)
 - [HOWTO Zero Trust Networking](Docs/HOWTO-Zero-Trust-Networking.md)
 
 ----------
@@ -123,6 +123,8 @@ Measurement Id: G-PTNHLB3WSX
 
 ----------
 
+<!---
+Comments
 ## IGEL KB (PDF files)
 
 A snapshot in time, in PDF format, of the [kb.igel.com](https://kb.igel.com) site.
@@ -196,6 +198,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 ----------
 
 ----------
+-->
 
 ## IGEL Channel Partners
 

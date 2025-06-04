@@ -120,6 +120,7 @@ These are the release notes published with that release:
 	- If the previous "Default" shall be enforced, it must be done in the setup individually for the affected WiFi configurations. This applies not only to newly created configurations but also to those created earlier.
 	- The OS12 setup assistant has always explicitly configured "Automatic".
 ```
+
 |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ |
 |  `Data encryption (broadcast/multicast)`  |  `network.interfaces.wirelesslan.device0.alt_ssid%.wpa.group_cipher`  |  [Default][TKIP][AES (CCMP)][AES (CCMP) + TKIP][Automatic]  |  *Automatic*  |

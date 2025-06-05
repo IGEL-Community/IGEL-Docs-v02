@@ -21,7 +21,7 @@
 ### Steps to be done on PC:
 
 - Download ISO image [GParted Live iso](https://gparted.org/download.php)
-- Image USB device [Windows OS](https://kb.igel.com/en/igel-os/11.10/create-usb-installation-medium-windows) or [MacOS](../HOWTO-Create-USB-Installation-medium-MacOS.md)
+- Image USB device [Windows OS](https://kb.igel.com/en/igel-os/11.10/create-usb-installation-medium-windows) or [MacOS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Create-USB-Installation-medium-MacOS/)
 
 ### Steps to be done on IGEL OS:
 

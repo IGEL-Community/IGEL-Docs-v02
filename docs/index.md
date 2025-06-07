@@ -72,7 +72,7 @@ Measurement Id: G-PTNHLB3WSX
 
 - [HOWTO IGEL (FAQ)](Docs/HOWTO-COSMOS.md)
 
-- [HOWTO Access Remaining Free Disk Space](Docs/HOWTO-Access-Remaining-Free-Disk-Space.md)
+- [HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device](Docs/HOWTO-Access-Remaining-Free-Disk-Space.md)
 - [HOWTO Add Applications](Docs/HOWTO-Add-Applications.md)
 - [HOWTO Basic Setup Guide](Docs/HOWTO-Basic-Setup-Guide.md)
 - [HOWTO Best Practices](Docs/HOWTO-Best-Practices.md)

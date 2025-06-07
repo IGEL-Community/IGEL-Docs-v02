@@ -400,23 +400,71 @@ update
 
 ## Hardware Notes
 
-[Secured-Core PCs: Microsoft 3d-Party UEFI Certificate for Secure Boot](https://kb.igel.com/security-safety/current/secured-core-pcs-microsoft-3rd-party-uefi-certific)
+- HP Laptops - Selected Boot Image Did Not Authenticate Message Appears before Windows Starts
 
-[Dynabook Setup TECRA A40-J (PMM10U) || Version: PMM10U-00101U](https://github.com/IGEL-Community/IGEL-Docs/blob/main/Docs/HOWTO-Dynabook-Setup.md)
+     ![image10](Images/HOWTO-Collect-Hardware-Information-for-Device-10.png)
 
-[Lenovo - PSREF Product Specifications Reference](https://psref.lenovo.com/)
+    After powering on the computer, the following message may appear prior to booting: `Selected boot image did not authenticate`.
 
-[Lenovo - BIOS simulator](https://download.lenovo.com/bsco/) shows how to navigate the BIOS for each hardware type.
+    This occurs when using a 3rd party UEFI software tool (such as a bootloader or endpoint encryption software), or when using hardware with an option ROM that is not appropriately signed per Microsoft’s Secured-core PC requirements.
 
-[Lenovo - ThinkLMI - Lenovo BIOS Setup using Linux WMI - Deployment Guide](https://download.lenovo.com/pccbbs/mobiles_pdf/lenovo_bios_setup_linux_wmi_sysfs_1.2.pdf)
+     This issue occurs because Microsoft’s Secured-core PC requirements no longer allow computers to run UEFI code signed using the Microsoft 3rdParty UEFI CA. As such, HP disables the option to use this Certificate of Authority (CA) by default. Microsoft’s decision to disallow authentication for software signed this way is meant to address potential security risks with 3rd party bootloaders by limiting the code that a given computer is allowed to execute before boot.
+
+    Computers that do not support Modern Standby, or that do not have Intel vPro or AMD Ryzen Pro technology, are not affected. Computers that were ordered as Linux-ready are not affected, since these need to use a 3rdparty bootloader (e.g. Grub).
+
+    **Note:** Customers can order affected computers with the third-party key enabled by contacting their HP representative, who can add the appropriate option to their BOM.
+
+    The "Enable MS UEFI CA key" BIOS setting controls the ability to utilize 3rd-party bootloaders.
+
+    Perform the following steps to enable the Microsoft UEFI CA key. This setting can be changed by performing the following steps:
+
+    - Enter the System BIOS by pressing F10 at power on
+
+    - Navigate to the Security tab
+
+    - Select the BIOS Sure Startoption
+    
+    - Uncheck Sure Start Secure Boot Keys Protection
+    
+    - Press Esc to exit the BIOS, saving changes
+    
+    - When prompted for a 4-digit PIN to confirm the BIOS setting changes, enter the PIN shown onscreen
+
+    - Restart the PC and enter the System BIOS again
+    
+    - Navigate to the Security tab again
+    
+    - Select the Secure Boot Configuration option
+    
+    - Check Enable MS UEFI CA key
+    
+    - Press Esc to return to the previous menu
+    
+    - Select the BIOS Sure Start option again
+    
+    - Check Sure Start Secure Boot Keys Protection
+    
+    - Press Esc to exit the BIOS
+
+    - Save changes
+
+- [Secured-Core PCs: Microsoft 3d-Party UEFI Certificate for Secure Boot](https://kb.igel.com/security-safety/current/secured-core-pcs-microsoft-3rd-party-uefi-certific)
+
+- [Dynabook Setup TECRA A40-J (PMM10U) || Version: PMM10U-00101U](https://github.com/IGEL-Community/IGEL-Docs/blob/main/Docs/HOWTO-Dynabook-Setup.md)
+
+- [Lenovo - PSREF Product Specifications Reference](https://psref.lenovo.com/)
+
+- [Lenovo - BIOS simulator](https://download.lenovo.com/bsco/) shows how to navigate the BIOS for each hardware type.
+
+- [Lenovo - ThinkLMI - Lenovo BIOS Setup using Linux WMI - Deployment Guide](https://download.lenovo.com/pccbbs/mobiles_pdf/lenovo_bios_setup_linux_wmi_sysfs_1.2.pdf)
 
   - <a href="../Scripts/HOWTO-Collect-Hardware-Information-for-Device-set-BOOT-PWD.sh" download>Sample script to set BIOS password</a>
 
-[Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/en/igel-os/11.10/resolved-issues-11-10-100). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
+- [Laptop Docking Station - HP USB-C Dock G5](https://kb.igel.com/en/igel-os/11.10/resolved-issues-11-10-100). Link to HP's web site -- [LINK](https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1). This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.
 
-[Microsoft Surface: If a feature requires linux-surface kernel then that feature will not work with IGEL](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
+- [Microsoft Surface: If a feature requires linux-surface kernel then that feature will not work with IGEL](https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix)
 
-[How to reset USB controllers](https://unix.stackexchange.com/questions/704341/how-to-reset-usb-controllers)
+- [How to reset USB controllers](https://unix.stackexchange.com/questions/704341/how-to-reset-usb-controllers)
 
 ```bash linenums="1"
 #!/bin/bash

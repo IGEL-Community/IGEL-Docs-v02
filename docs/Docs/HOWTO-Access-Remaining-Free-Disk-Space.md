@@ -27,9 +27,10 @@ The following steps can be used to get access to the remaining disk drive.
 cd /media/USB_Device_Name/utils/linux
 bash makeboot.sh /dev/device_mount_point (lsblk can be used to determine device_mount_point)
 ```
+
 - Reboot PC from USB created GParted
 - Select the VGA display option and select the defaults for the remaining items
-- Create a new partition from free space remaining on PC
+- Create and add/save a new partition from free space remaining on PC
 - Format the new partition as btrfs
 - Reboot into IGEL OS and remove USB device
 

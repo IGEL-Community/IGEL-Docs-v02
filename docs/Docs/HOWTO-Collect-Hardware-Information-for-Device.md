@@ -408,7 +408,7 @@ update
 
     This occurs when using a 3rd party UEFI software tool (such as a bootloader or endpoint encryption software), or when using hardware with an option ROM that is not appropriately signed per Microsoft’s Secured-core PC requirements.
 
-     This issue occurs because Microsoft’s Secured-core PC requirements no longer allow computers to run UEFI code signed using the Microsoft 3rdParty UEFI CA. As such, HP disables the option to use this Certificate of Authority (CA) by default. Microsoft’s decision to disallow authentication for software signed this way is meant to address potential security risks with 3rd party bootloaders by limiting the code that a given computer is allowed to execute before boot.
+    Microsoft’s Secured-core PC requirements no longer allow computers to run UEFI code signed using the Microsoft 3rdParty UEFI CA. As such, HP disables the option to use this Certificate of Authority (CA) by default. Microsoft’s decision to disallow authentication for software signed this way is meant to address potential security risks with 3rd party bootloaders by limiting the code that a given computer is allowed to execute before boot.
 
     Computers that do not support Modern Standby, or that do not have Intel vPro or AMD Ryzen Pro technology, are not affected. Computers that were ordered as Linux-ready are not affected, since these need to use a 3rdparty bootloader (e.g. Grub).
 

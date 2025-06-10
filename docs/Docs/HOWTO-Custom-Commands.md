@@ -55,9 +55,9 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 
 | Name | Script |
 |-------------|---------|
-| Wrapper - Final desktop command | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc.sh" download>LINK to Profile</a> |
-| Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to Profile</a> |
-| Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to Profile</a> |
+| Wrapper - Final desktop command | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc.sh" download>LINK to script</a> |
+| Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a> |
+| Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
 
 -----
 
@@ -229,8 +229,8 @@ done
 
 | Name | Script |
 |-------------|---------|
-| Wrapper - Final initialization command | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic.sh" download>LINK to Profile</a> |
-| Link /media/hostname to /media mount point (GParted) | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic-linkmediadisk.sh" download>LINK to Profile</a> |
+| Wrapper - Final initialization command | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic.sh" download>LINK to script</a> |
+| Link /media/hostname to /media mount point (GParted) | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic-linkmediadisk.sh" download>LINK to script</a> |
 
 -----
 

@@ -20,7 +20,13 @@ Custom commands are executed at specific points of the system startup process.
 
     - **Desktop:** Commands are executed at the specific execution times when the X server is launched. [IGEL KB: Desktop](https://kb.igel.com/en/igel-os-base-system/12.4/desktop-1)
 
+    - **Reconfiguration:** Commands defined here is executed after settings relating to the local setup or the UMS have been changed. [IGEL KB: Reconfiguration Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.4/reconfiguration-custom-commands-in-igel-os-12)
+
 Since multiple profiles with custom commands can overwrite each other, a method for combining custom commands is needed.
+
+-----
+
+-----
 
 ## Method for Managing Custom Commands
 
@@ -28,6 +34,12 @@ A profile can be setup with a wrapper script to look for custom command scripts.
 
 - Use UMS Files to deploy the scripts to IGEL OS
 - Create profile for Custom Commands that call the wrapper scripts
+
+Final desktop command:
+
+```bash linenums="1"
+System --> System Customization --> Custom Commands --> Desktop --> Final desktop command --> /wfs/cc-desktop-3fdc.sh &
+```
 
 -----
 
@@ -65,8 +77,6 @@ A profile can be setup with a wrapper script to look for custom command scripts.
 
 ACTION="cc-desktop-3fdc"
 
-COUNT=1
-
 # output to systemlog with ID amd tag
 LOGGER="logger -it ${ACTION}"
 
@@ -101,6 +111,8 @@ exit 0
 #
 
 ACTION="cc-desktop-3fdc-cupsnetworkprinters"
+
+COUNT=1
 
 # output to systemlog with ID amd tag
 LOGGER="logger -it ${ACTION}"

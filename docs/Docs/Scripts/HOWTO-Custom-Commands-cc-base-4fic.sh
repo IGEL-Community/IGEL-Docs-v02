@@ -20,7 +20,7 @@ echo "Starting" | $LOGGER
 ls /wfs/cc-desktop-3fdc-*.sh | while read LINE
   do
   echo "Starting: ${LINE}" | $LOGGER
-  $LINE & | $LOGGER
+  $LINE &
   done
 
 echo "Finished" | $LOGGER

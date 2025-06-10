@@ -82,6 +82,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Collect Hardware Information for Device](Docs/HOWTO-Collect-Hardware-Information-for-Device.md)
 - [HOWTO Create USB installation medium MacOS](Docs/HOWTO-Create-USB-Installation-medium-MacOS.md)
 - [HOWTO CUPs Printing](Docs/HOWTO-CUPs-Printing.md)
+- [HOWTO Custom Commands](Docs/HOWTO-Custom-Commands.md)
 - [HOWTO Dynabook Setup](Docs/HOWTO-Dynabook-Setup.md)
 - [HOWTO Edit Initial Settings Prior to OSC Install](Docs/HOWTO-Edit-Initial-Settings-OSC.md)
 - [HOWTO Frame Setup](Docs/HOWTO-Frame-Setup.md)

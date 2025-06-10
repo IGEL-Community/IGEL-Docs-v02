@@ -2,6 +2,8 @@
 
 -----
 
+-----
+
 <!--
 Comments
 -->
@@ -26,6 +28,10 @@ A profile can be setup with a wrapper script to look for custom command scripts.
 
 - Use UMS Files to deploy the scripts to IGEL OS
 - Create profile for Custom Commands that call the wrapper scripts
+
+-----
+
+-----
 
 ### Desktop
 
@@ -115,6 +121,10 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
+
+-----
+
+-----
 
 ### Base
 

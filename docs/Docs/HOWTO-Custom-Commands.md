@@ -47,6 +47,8 @@ A profile can be setup with a wrapper script to look for custom command scripts.
 | Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to Profile</a> |
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to Profile</a> |
 
+-----
+
 - Wrapper - Final desktop command
 
 ```bash linenums="1"
@@ -81,6 +83,8 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
+
+-----
 
 - Add CUPS Network Printers
 
@@ -122,6 +126,8 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
+
+-----
 
 - Sort Desktop Icons
 
@@ -214,6 +220,8 @@ done
 | Wrapper - Final initialization command | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic.sh" download>LINK to Profile</a> |
 | Link /media/hostname to /media mount point (GParted) | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic-linkmediadisk.sh" download>LINK to Profile</a> |
 
+-----
+
 - Wrapper - Final Base initialization command
 
 ```bash linenums="1"
@@ -246,6 +254,8 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
+
+-----
 
 - Link /media/hostname to /media mount point (GParted)
 

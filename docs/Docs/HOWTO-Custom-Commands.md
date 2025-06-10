@@ -162,7 +162,7 @@ echo "Starting" | $LOGGER
 ls /wfs/cc-base-4fic-*.sh | while read LINE
   do
   echo "Starting: ${LINE}" | $LOGGER
-  $LINE & | $LOGGER
+  $LINE &
   done
 
 echo "Finished" | $LOGGER
@@ -178,6 +178,8 @@ exit 0
 #trap read debug
 
 # 
+# Custom Commands: Base: Final Initialization Command
+#
 # After using GParted to format rest of desk
 #
 # Change /media mount point to be hostname

@@ -4,20 +4,20 @@
 
 #
 # Version: 
-# Run all Final Desktop Commands
+# Run all Final initialization Commands
 #
-# Custom Commands: Desktop: Final Desktop Command
+# Custom Commands: Base: Final initialization Command
 #
 
-ACTION="cc-desktop-3fdc"
+ACTION="cc-base-4fic"
 
 # output to systemlog with ID amd tag
 LOGGER="logger -it ${ACTION}"
 
 echo "Starting" | $LOGGER
 
-# run all final desktop scripts
-ls /wfs/cc-desktop-3fdc-*.sh | while read LINE
+# run all final base scripts
+ls /wfs/cc-base-4fic-*.sh | while read LINE
   do
   echo "Starting: ${LINE}" | $LOGGER
   $LINE &

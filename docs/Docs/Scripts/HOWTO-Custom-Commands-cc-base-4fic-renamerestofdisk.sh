@@ -3,6 +3,8 @@
 #trap read debug
 
 # 
+# Custom Commands: Desktop: Final Desktop Command
+#
 # After using GParted to format rest of desk
 #
 # Change /media mount point to be hostname

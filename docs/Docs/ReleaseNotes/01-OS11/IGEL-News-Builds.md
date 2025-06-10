@@ -13,6 +13,56 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-06-04 - [11.10.310](readme11.10.310.txt)
+
+```
+The new PUBLIC BUILD 11.10.310 for IGEL Workspace is ready.
+
+This build is based on 11.10.290.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Updated Cryptovision SCinterface smartcard middleware to version 8.2.3.775.
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed chromium security issues CVE-2025-4664, CVE-2025-4609, CVE-2025-4372,
+  CVE-2025-4096, CVE-2025-4052, CVE-2025-4051 and CVE-2025-4050.  
+* Updated chromium to version 136.0.7103.113.
+
+### Firefox
+
+* Updated Firefox ESR to version 115.24.0  
+    - Fix for mfsa2025-15, also known as CVE-2024-43097, CVE-2025-1930,
+      CVE-2025-1931, CVE-2025-1933 and CVE-2025-1937.  
+    - Fix for mfsa2025-21, also known as CVE-2025-3028.  
+    - Fix for mfsa2025-30, also known as CVE-2025-2817, CVE-2025-4082,
+      CVE-2025-4083 and CVE-2025-4084.  
+    - Fix for mfsa2025-38, also known as CVE-2025-4918 and CVE-2025-4919.  
+    - Fix for mfsa2025-43, also known as CVE-2025-5263, CVE-2025-5264,
+      CVE-2025-5265 and MFSA-TMP-2025-0001.
+
+
+### Base system
+
+* Fixed libsoup2.4 security issues CVE-2025-46421, CVE-2025-46420,
+  CVE-2025-32914, CVE-2025-32913, CVE-2025-32912, CVE-2025-32911,
+  CVE-2025-32910, CVE-2025-32909, CVE-2025-32906, CVE-2025-32053,
+  CVE-2025-32052, CVE-2025-32050 and CVE-2025-2784.  
+* Fixed libsoup3 security issue CVE-2025-32911.
+* Fixed glibc security issue CVE-2025-4802.
+```
+
+-----
+
 ## 2025-05-22 - [11.10.291.DER](readme11.10.291.DER.txt)
 
 ```

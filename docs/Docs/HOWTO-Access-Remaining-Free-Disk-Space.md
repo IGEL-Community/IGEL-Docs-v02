@@ -29,14 +29,14 @@ bash makeboot.sh /dev/device_mount_point (lsblk can be used to determine device_
 ```
 
 - Reboot PC from USB created GParted
-- Select the VGA display option and select the defaults for the remaining items
+- Select the `VGA display option` and then select the defaults for the remaining items
 - Create and add/save a new partition from free space remaining on PC
 - Format the new partition as btrfs
 - Reboot into IGEL OS and remove USB device
 
 -----
 
-## Script to rename the default /media/long-folder-name to /media/hostname-of-the-device
+## Script to link /media/hostname to /media mount point
 
 ```bash linenums="1"
 #!/bin/bash
@@ -44,19 +44,34 @@ bash makeboot.sh /dev/device_mount_point (lsblk can be used to determine device_
 #trap read debug
 
 # 
+# Custom Commands: Desktop: Final Desktop Command
+#
 # After using GParted to format rest of desk
 #
-# Change /media mount point to be hostname
+# Link /media/hostname to /media mount point
 # 
-MOUNTPOINT=$(ls /media)
-NEWMP="/media/$(hostname)"
 
-if [ "${MOUNTPOINT}" != "$(hostname)" ]; then
- MOUNTDEV=$(df -H | grep media | cut -d " " -f 1)
- umount ${MOUNTDEV}
- if [ ! -e ${NEWMP} ]; then
-   mkdir -p "${NEWMP}"
- fi
- mount ${MOUNTDEV} ${NEWMP}
+ACTION="cc-base-4fic-linkmediadisk"
+
+# output to systemlog with ID amd tag
+LOGGER="logger -it ${ACTION}"
+
+MOUNTPOINT=$(mount | grep "/media" | cut -d " " -f 3)
+NEWLINK="/media/$(hostname)"
+
+# exit if no media mount point
+if [ "${MOUNTPOINT}" == "" ]; then
+  echo "No media mount point to link to." | $LOGGER
+  exit 0
 fi
+
+if [ -L ${NEWLINK} ]; then
+  echo "Unlinking ${NEWLINK}" | $LOGGER
+  unlink ${NEWLINK} | $LOGGER
+elif [  -d ${NEWLINK} ]; then
+  echo "${NEWLINK} is a directory. Not linking ${NEWLINK} to ${MOUNTPOINT}" | $LOGGER
+  exit 1
+fi
+
+ln -svf ${MOUNTPOINT} ${NEWLINK} | $LOGGER
 ```

@@ -92,6 +92,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO IGEL Static Template Keys](Docs/HOWTO-IGEL-Static-Template-Keys.md)
 - [HOWTO Imprivata Notes](Docs/HOWTO-Imprivata-Notes.md)
 - [HOWTO Light and Zero Touch Deployments of OS 12](Docs/HOWTO-Light_Zero_Touch_Deployments.md)
+- [HOWTO Microsoft Intune](Docs/HOWTO-Microsoft-Intune.md)
 - [HOWTO Microsoft Teams](Docs/HOWTO-Microsoft-Teams-Optimization.md)
 - [HOWTO Nuance Dictation](Docs/HOWTO-Nuance-Dictation.md)
 - [HOWTO Re-enable TLSv1 and TLSv1.1 on UMS](Docs/HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS.md)

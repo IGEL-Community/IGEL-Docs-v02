@@ -62,6 +62,8 @@ logger “Ending compliance script”
 
 - Compliance policy setting in Intune admin portal
 
+**NOTE:** Replace `Operand` string for your ums_fingerprint_sha256 value.
+
 ```json linenums="1"
 {
 "Rules":[

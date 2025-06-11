@@ -1,10 +1,12 @@
-# HOWTO Intune
+# HOWTO Microsoft Intune
 
 -----
 
 -----
 
-## Intune App
+## Microsoft Intune App
+
+- [IGEL KB: Microsoft Intune](https://kb.igel.com/en/igel-apps/current/microsoft-intune)
 
 - [IGEL BLOG: Available now! Microsoft Intune Agent for IGEL OS](https://www.igel.com/blog/available-now-microsoft-intune-agent-for-igel-os/)
 

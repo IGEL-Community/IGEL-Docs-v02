@@ -86,7 +86,7 @@ echo "Starting" | $LOGGER
 ls /wfs/cc-desktop-3fdc-*.sh | while read LINE
   do
   echo "Starting: ${LINE}" | $LOGGER
-  $LINE & | $LOGGER
+  $LINE &
   done
 
 echo "Finished" | $LOGGER
@@ -277,7 +277,7 @@ exit 0
 #trap read debug
 
 # 
-# Custom Commands: Desktop: Final Desktop Command
+# Custom Commands: Base: Final Initialization Command
 #
 # After using GParted to format rest of desk
 #

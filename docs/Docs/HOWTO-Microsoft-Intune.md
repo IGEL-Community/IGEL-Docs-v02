@@ -55,7 +55,8 @@ logger “Starting compliance discovery script”
 logger ” – Checking UMS fingerprint”
 estcacertfile="/wfs/igel-rmagent/trust-store/est/est-ca.pem"
 ums_fingerprint_sha256=$(openssl x509 -in ${estcacertfile} -noout -fingerprint -sha256 | cut -d "=" -f2)
-printf ‘{“ums_fingerprint_sha256″:”%s”}\n’ “$ums_fingerprint_sha256”
+#printf ‘{“ums_fingerprint_sha256″:”%s”}\n’ “$ums_fingerprint_sha256”
+echo "{\"ums_fingerprint_sha256\":\"${ums_fingerprint_sha256}\"}"
 logger “Ending compliance script”
 ```
 

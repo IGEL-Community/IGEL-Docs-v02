@@ -24,6 +24,12 @@ Need a more granular approach? No problem, there is an option to create custom s
 
 -----
 
+**NOTE:**
+
+- AVD client can be targeted for conditional access compliance. For this to work, the AVD client must be configured to use the Microsoft Authentication Library (MSAL) setting. This setting is found under Advanced Options for respective session. 
+
+-----
+
 -----
 
 ## IGEL BLOG: Microsoft Intune on IGEL App Portal – Custom Compliance Scripts for Entra Conditional Access with IGEL OS

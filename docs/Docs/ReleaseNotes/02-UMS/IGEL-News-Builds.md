@@ -4,6 +4,148 @@
 
 ----
 
+## 2025-06-17 - [12.08.110](Readme-12.08.110.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+UMS Server:
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client: 
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit) 			
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+Microsoft SQL Server 2016 (with Cluster Support)
+Microsoft SQL Server 2017 (with Cluster Support)
+Microsoft SQL Server 2019 (with Cluster Support)
+Microsoft SQL Server 2022 (with Cluster Support)
+Oracle 21c (with Cluster Support)
+PostgreSQL 11 - 15
+Apache Derby 10.9 - 10.14
+Amazon Aurora PostgreSQL (Compatible with PostreSQL 11 – 15) 
+Azure SQL Managed Instance
+
+Browser:
+Microsoft Edge 137.0.+
+Mozilla Firefox 139.0.+
+Google Chrome 137.0.+
+
+
+=============================================================================
+Important Notice:
+=============================================================================
+
+With UMS 12.08.100, the login process has changed, which entails new requirements for your environment. 
+
+Before upgrading to UMS 12.08.X please read the related Knowledge Base article:
+UMS Login Requirements: https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements
+
+
+=============================================================================
+New features:
+=============================================================================
+
+[Installer (windows)] 
+- Added: Additional information about new SSO functionality to the Windows installer. 
+
+[UMS common] 
+- Updated: Apache Tomcat from version 10.1.39 to 10.1.41 
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[AD / LDAP integration] 
+- Fixed: AD login could fail when an UPN suffix was used for an AD user and with that the logon with user@domain name was not possible. 
+
+[Cloud IdP / SSO] 
+- Fixed: UMS console login with hostname (without domain) no longer worked.  
+- Fixed: Allow FQDN with uppercases. 
+- Changed: Integrate umsstarter into RMClient.exe (updating installer and protocol registration) to eliminate the separate JAR. 
+
+[Console, common] 
+- Fixed: UMS Console only installations could run into a login/connect error if they were never connected to the UMS server. 
+- Fixed: The use of a hostname to connect to the console was not possible.
+
+[Devices] 
+- Fixed: Timeout issues while saving settings of a device. 
+
+[Installer (linux)]
+- Fixed: Installer could not register mimetype for console login when package desktop-file-utils was missing on some Linux Systems.
+- Fixed: Linux installation took a very long time on some systems.
+- Fixed: On Ubuntu 22.04 and 24.04 when UMS was installed as a non-root service, the error "Wrong password" was always shown.
+
+[Server, common] 
+- Fixed: OS 11 devices could not download assigned CICs. (OS 11 devices connected via ICG and OS 12 devices were not affected) 
+
+[UMS common]
+- Fixed: Null pointer exception when reading a configuration file.
+
+[WebDAV] 
+- Fixed: In Distributed UMS or HA environments, the WebDAV file synchronization failed. 
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+New features:
+=============================================================================
+
+[Misc]
+- Added: Ability to add Redirect URIs to the installation, to be able to use these URIs for login.
+
+============================================================================= 
+Resolved issues: 
+============================================================================= 
+
+[Misc]
+- Fixed: Login to the UMS Web App failed if the UMS Server is not listening on the default port (8443)
+- Fixed: Removed unused dependency org.apache.httcomponents.client5:httpclient5:5.4.2
+- Fixed: Igel-rest-libs version 12.8.2 was removed from the build. 
+- Fixed: Several dialogs were wrongfully displayed in full width in Chromium-based browsers. 
+
+[Users]
+- Fixed: When a user is reassigned to a different group while logged in, the UI did not consistently reflect the change.
+
+
+[Configuration]
+- Fixed: Additional timeout issues while saving settings of a device.
+
+
+[Search]
+- Fixed: Permissions for a device-record were not properly calculated if the device was in bin on server-start and restored afterwards. 
+- Fixed: Not all received changes were correctly flushed into the index. 
+```
+
+----
+
 ## 2025-05-27 - [12.08.100](Readme-12.08.100.txt)
 
 ```

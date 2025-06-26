@@ -16,6 +16,7 @@ Lists what changes are in the build.
 
 ## IGEL OS 12
 
+- [12.7.1](readme12.7.1.txt) 25-June-2025
 - [12.7.0](readme12.7.0.txt) 04-June-2025
 - [12.6.1](readme12.6.1.txt) 25-March-2025
 - [12.6.0](readme12.6.0.txt) 11-February-2025

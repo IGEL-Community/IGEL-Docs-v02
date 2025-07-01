@@ -18,6 +18,24 @@ This is a comment section
 
 ----------
 
+## Steps a channel partner must take to work with IGEL support for a customer support case
+
+- Make sure the channel partner is registered on the support portal
+
+- Have the customer open a case and provide a description
+
+- Post a comment to the case requesting that the channel partner be added to the watch list, including the following:
+
+    - Channel Partner Name
+    - Channel Partner Contact Name
+    - Channel Partner Contact Email
+
+- IGEL Support will pick that up, and add the requested person to the watch list, and they will receive updates, and be able to respond to the case via email
+
+----------
+
+----------
+
 ## IGEL Education for Partners
 
 Please enroll in [IGEL Academy Partner Training](https://www.channelnerd.wiki/igel-academy-partner-training) for formal training courses.

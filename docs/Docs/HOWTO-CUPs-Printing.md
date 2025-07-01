@@ -6,6 +6,18 @@
 
 -----
 
+## Horizon clients for Linux use integrated printing (switch on vmware.view.integrated-printing in the IGEL Registry)
+
+**NOTE:** Make sure that `cups_printing` is installed on OS 12
+
+With `vmware.view.integrated-printing` enabled, all locally defined printers on IGEL OS are carried over to the remote session if the Horizon agent there is also installed with integrated printing support.
+
+The specific drivers for the printers must be chosen on IGEL OS side.
+
+On the windows desktop only the generic support for the integrated printing is needed.
+
+-----
+
 ## 18 December 2024 - 11.10.210 and derived builds have CUPS start up issue
 
 - 11.10.210 and derived builds have a starting problem with the CUPS printing service. Only PB 11.10.219 has currently a fix for it.

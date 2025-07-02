@@ -96,7 +96,7 @@ Steps to test out your UDPocket or OS 12 installed device
 - Boot device
 - Skip -- Let's connect to the company network
 - Skip -- Use the one-time password to onboard this device?
-- Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)
+- Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day evaluation license)
 - Reboot
 - Open the App Portal and install applications
 

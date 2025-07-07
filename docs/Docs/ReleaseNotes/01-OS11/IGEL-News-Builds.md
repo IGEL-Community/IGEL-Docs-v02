@@ -13,6 +13,30 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-07-07 - [11.10.312](readme11.10.312.txt)
+
+```
+The new PRIVATE BUILD 11.10.312 for IGEL Workspace is ready.
+
+This build is based on 11.10.310.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Latest RdClientSDK included with option to skip remote app download. To enable
+  the option set the following IGEL registry key: sessions.wvd%.options.cmd_ext
+  = --skip-remote-apps  
+* Reworked the autostart feature in the client to actually start a session as
+  soon as the resource enumeration discovered it and not waiting for all
+  resources being downloaded!
+```
+
+-----
+
 ## 2025-07-02 - [11.10.292](readme11.10.292.txt)
 
 ```

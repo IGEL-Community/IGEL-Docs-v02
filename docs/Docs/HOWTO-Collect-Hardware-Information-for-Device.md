@@ -505,3 +505,12 @@ echo "done."
 
 - [ATEN CS1924m KVM](https://assets.aten.com/product/manual/cs1922m-cs1924m_um_w_2021-10-08.pdf)
 - Script for KVM: `/etc/igel/kms/kvm-workaround.sh`
+
+-----
+
+## USB always on (Printer, Scanner, Audio, etc.)
+
+System > Firmware Customization > Custom Commands > Desktop
+
+```bash linenums="1"
+echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null

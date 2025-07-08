@@ -784,7 +784,7 @@ Have Cisco ISE engineer use (DHCP IGEL tag) + (ITC* hostname) to fingerprint the
 
 - [SCEP Client (NDES)](https://kb.igel.com/en/igel-os-base-system/12.5/scep-client-ndes-in-igel-os-12)
 
-**Q:** Using OS 12.6.1 with SCEP/802.1x certificates for network connections? Newly issued certificates may longer work with 12.6.1
+**Q:** Using OS 12.6.1 with SCEP/802.1x certificates for network connections? Newly issued certificates may no longer work with 12.6.1
 
 **A:** Try creating symbolic links for the Intermediate and Root certificates from /wfs/ca-certs/tls/ to /wfs/ca-certs/.
 

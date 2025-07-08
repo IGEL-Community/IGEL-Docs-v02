@@ -514,3 +514,4 @@ System > Firmware Customization > Custom Commands > Desktop
 
 ```bash linenums="1"
 echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
+```

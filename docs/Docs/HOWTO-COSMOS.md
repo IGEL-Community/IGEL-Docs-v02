@@ -618,7 +618,7 @@ sequenceDiagram
   participant B as UMS 12
   participant C as OBS
   participant D as Service Hub
-  participant E as Customer IDP (AAD, Okta, Ping Identity)
+  participant E as Customer IDP (EntraID, Okta, Ping Identity)
   A->>C: 1 - Request Onboarding Params from email
   C->>D: 2 - Request IDP from email
   D->>C: 3 - Respond with IDP Credentials

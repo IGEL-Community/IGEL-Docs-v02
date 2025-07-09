@@ -13,6 +13,31 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-07-09 - [11.10.313](readme11.10.313.txt)
+
+```
+The new PRIVATE BUILD 11.10.313 for IGEL Workspace is ready.
+
+This build is based on 11.10.312.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Latest RdClientSDK included with option to skip remote app download. To enable
+  the option set the following IGEL registry key: sessions.wvd%.options.cmd_ext
+  = --skip-remote-apps  
+* Reworked the autostart feature in the client to actually start a session as
+  soon as the resource enumeration discovered it and not waiting for all
+  resources being downloaded!  
+* Downgraded Fabulatech to version 3.10.1.5 to avoid crashes
+```
+
+-----
+
 ## 2025-07-07 - [11.10.312](readme11.10.312.txt)
 
 ```

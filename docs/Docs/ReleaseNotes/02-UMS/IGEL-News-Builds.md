@@ -4,6 +4,157 @@
 
 ----
 
+## 2025-07-14 - [12.08.130](Readme-12.08.130.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+UMS Server:
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client: 
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit) 			
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+Microsoft SQL Server 2016 (with Cluster Support)
+Microsoft SQL Server 2017 (with Cluster Support)
+Microsoft SQL Server 2019 (with Cluster Support)
+Microsoft SQL Server 2022 (with Cluster Support)
+Oracle 21c (with Cluster Support)
+PostgreSQL 11 - 15
+Apache Derby 10.9 - 10.14
+Amazon Aurora PostgreSQL (Compatible with PostreSQL 11 – 15) 
+Azure SQL Managed Instance
+
+Browser:
+Microsoft Edge 137.0.+
+Mozilla Firefox 139.0.+
+Google Chrome 137.0.+
+
+=============================================================================
+Important Notice:
+=============================================================================
+
+With UMS 12.08.100, the login process has changed, which entails new requirements for your environment. 
+
+Before upgrading to UMS 12.08.X please read the related Knowledge Base article:
+UMS Login Requirements: https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements
+
+=============================================================================
+New features:
+=============================================================================
+
+[Cloud IdP / SSO]
+- Added: Discovery of Cloud IDPs use the configured default proxy
+
+[Unified Protocol]
+- Added: In some cases, for old devices (base_system ≤ 12.4.0) the Client Certificate renewal could fail. 
+	A configuration to switch off the Client Certificate Expiration check to further manage the devices and start reenrollment was added.
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[WebDAV]
+- Fixed: Findings from penetration test commissioned to a 3rd Party.
+
+[ums]
+- Fixed: Findings from penetration test commissioned to a 3rd Party.
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+New features:
+=============================================================================
+
+[Other]
+- Added: If the Client Certificate Expiration check is switched off a warning dialog is added to highlight the potential security and compliance risk.
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Configuration Dialog]
+- Fixed: Parameters of type parameterGroup could not be activated in Quick Setup mode.
+- Changed: Initial checkbox to prefer Advanced Setup was changed to "Prefer Quick Setup (automatic session creation)" when creating an OS12 profile.
+
+=============================================================================
+=============================================================================
+Including changes from UMS Version 12.08.120
+=============================================================================
+=============================================================================
+IGEL Universal Management Suite
+=============================================================================
+Version 12.08.120
+Release date: 30.06.2025
+
+HTML version of this Readme is available at:  https://kb.igel.com/ums/releasenotes
+
+=============================================================================
+Important Notice:
+=============================================================================
+
+With UMS 12.08.100, the login process has changed, which entails new requirements for your environment. 
+
+Before upgrading to UMS 12.08.X please read the related Knowledge Base article:
+UMS Login Requirements: https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements
+
+=============================================================================
+New features:
+=============================================================================
+ 
+[IMI, server] 
+- Added: Direct authorization for IMI calls. 
+- Added: Possibility to wrap results of IMI thinclients call with a 'results' tag. 
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Admin tasks] 
+- Fixed: Monitor information was not included in view export to CSV by E-Mail. 
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Configuration Dialog]
+- Fixed: Usages of innerhtml assignments that could lead to XSS were removed.
+```
+
+----
+
 ## 2025-06-17 - [12.08.110](Readme-12.08.110.txt)
 
 ```
@@ -65,7 +216,6 @@ With UMS 12.08.100, the login process has changed, which entails new requirement
 
 Before upgrading to UMS 12.08.X please read the related Knowledge Base article:
 UMS Login Requirements: https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements
-
 
 =============================================================================
 New features:
@@ -137,7 +287,6 @@ Resolved issues:
 
 [Configuration]
 - Fixed: Additional timeout issues while saving settings of a device.
-
 
 [Search]
 - Fixed: Permissions for a device-record were not properly calculated if the device was in bin on server-start and restored afterwards. 

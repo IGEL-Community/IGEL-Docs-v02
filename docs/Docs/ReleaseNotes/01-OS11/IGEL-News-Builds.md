@@ -13,6 +13,39 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-07-17 - [11.10.314](readme11.10.314.txt)
+
+```
+The new PRIVATE BUILD 11.10.314 for IGEL Workspace is ready.
+
+This build is based on 11.10.310.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Cisco Webex
+
+* Updated Webex VDI to version 45.2.0.31846
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* An issue has been resolved where Citrix USB redirection would fail if a
+session was launched directly from the browser, and there was no preconfigured
+StoreFront or Self-Service session defined in the setup
+* Citrix App Protected resources can be launched from the browser without the
+need for a pre-configured store in the setup. A system restart is required
+after activating/deactivating this feature.
+* Updated the libsoup library to version libsoup-3.0.so.0.6.0 to resolve
+segmentation faults (crashes) occurring during Microsoft Teams calls.
+```
+
+-----
+
 ## 2025-07-09 - [11.10.313](readme11.10.313.txt)
 
 ```

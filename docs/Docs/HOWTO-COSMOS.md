@@ -955,3 +955,19 @@ while inotifywait -qq -e create -e modify -e delete "$desktop_dir"; do
     sort_icons
 done
 ```
+
+-----
+
+## FAQ - OS 12 SANE debug tools
+
+- IGEL OS 12 does not currently have SANE debug tools
+
+- Steps to get SANE tools onto OS 12:
+    - Use UMS files to transfer tar file to OS 12 (/wfs folder)
+    - Command to extract tar file (mkdir -p /wfs/sane && tar xvf /wfs/os12_sane.tar.bz2 -C /wfs/sane)
+    - To run sane commands (sane-find-scanner)
+    - export LD_LIBRARY_PATH=/wfs/sane/usr/lib && /wfs/sane/usr/bin/sane-find-scanner
+    - export LD_LIBRARY_PATH=/wfs/sane/usr/lib && /wfs/sane/usr/bin/scanimage
+    - Other commands are in /wfs/sane/usr/bin
+
+- <a href="../Scripts/HOWTO-COSMOS-sane.tar.bz2.250721.zip" download>Download SANE Debug Tools</a> |

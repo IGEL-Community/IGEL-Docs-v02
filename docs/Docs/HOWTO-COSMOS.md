@@ -970,4 +970,4 @@ done
     - export LD_LIBRARY_PATH=/wfs/sane/usr/lib && /wfs/sane/usr/bin/scanimage
     - Other commands are in /wfs/sane/usr/bin
 
-- <a href="../Scripts/HOWTO-COSMOS-sane.tar.bz2.250721.zip" download>Download SANE Debug Tools</a> |
+- <a href="../Scripts/HOWTO-COSMOS-sane.tar.bz2.250721.zip" download>Download SANE Debug Tools</a>

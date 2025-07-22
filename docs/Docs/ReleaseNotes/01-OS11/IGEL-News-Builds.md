@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-07-17 - [11.10.315](readme11.10.315.txt)
+
+```
+The new PRIVATE BUILD 11.10.315 for IGEL Workspace is ready.
+
+This build is based on 11.10.310.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Parallels Client
+
+* Resolved an issue with the Post-Session Command that caused it to trigger
+  prematurely, especially when used with the Parallels Client.
+```
+
+-----
+
 ## 2025-07-17 - [11.10.314](readme11.10.314.txt)
 
 ```

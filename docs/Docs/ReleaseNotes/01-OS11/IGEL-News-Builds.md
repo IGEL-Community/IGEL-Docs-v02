@@ -13,6 +13,65 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-07-23 - [11.10.410](readme11.10.410.txt)
+
+```
+The new PUBLIC BUILD 11.10.410 for IGEL Workspace is ready.
+
+This build is based on 11.10.310.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Added downgrade limit - The IGEL OS11 can no longer be downgraded to versions
+  older than 11.10.410. This restriction applies to IGEL UD Pocket devices and
+  endpoints with Secure Boot enabled. In such cases, downgrade attempts to
+  versions prior to 11.10.410 will be refused to maintain system integrity and
+  boot security.
+* Added migration restriction - The OS11 can no longer be migrated to versions
+  older than 12.7.0. This restriction applies to IGEL UD Pocket devices and
+  endpoints with Secure Boot enabled. In such cases, migration attempts to
+  versions prior to 12.7.0 will be refused to maintain system integrity and boot
+  security.
+* Updated boot chain with  
+* New SHIM 15.8, signed by Microsoft  
+* New GRUB 2.12
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed Chromium security issues CVE-2025-6557, CVE-2025-6556, CVE-2025-6555,
+  CVE-2025-6554, CVE-2025-6192, CVE-2025-6191, CVE-2025-5959, CVE-2025-5958,
+  CVE-2025-5419, CVE-2025-5283, CVE-2025-5281, CVE-2025-5280, CVE-2025-5068,
+  CVE-2025-5067, CVE-2025-5066, CVE-2025-5065, CVE-2025-5064 and CVE-2025-5063.  
+* Updated chromium to version 138.0.7204.92.
+
+### Network
+
+* Fixed ppp security issue CVE-2024-58250.
+
+### Base system
+
+* Fixed ISN 2025-24: Command Execution in IGEL OS.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fixed an issue which caused the migration from OS11 to OS12 to fail if the
+  OS12 system partition is larger than 1GB. So far, no OS12 system partition
+  falls into this category but future versions of OS12 may be affected.
+```
+
+-----
+
 ## 2025-07-17 - [11.10.315](readme11.10.315.txt)
 
 ```

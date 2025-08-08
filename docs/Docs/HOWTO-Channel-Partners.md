@@ -161,6 +161,11 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 ## Evaluating IGEL vs Someone Else
 
+### Management of Devices
+
+- Support ratio of one FTE (full time equivalent) for 20,000+ devices (1:20,000+)
+- Dedicated management or management as a service
+
 ### Applications
 
 - Module design, everything including the operating system is an application
@@ -171,7 +176,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 - Chain of trust (secured boot sequence)
 - Secure boot support
-- FIPS 140-.2, German BSI certification, and ISO 20001
+- FIPS 140-.2, German BSI certification, and ISO 270001
 - Secure Digital Signage
 
 ### Services

@@ -214,7 +214,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
   ![image-howto-cosmos-10](Images/HOWTO-COSMOS-10.png)
 
-**Q:** How to see the App Portal from Web App? I upgraded from UMS6 to UMS12 and cannot see the App Portal.
+**Q:** How to see the App Portal from Web App? I upgraded from UMS 6 to UMS 12 and cannot see the App Portal.
 
 **A:** Open `UMS Console` and add `General - WebApp > App Management > Allow`  permission to account(s). Steps:
 
@@ -350,13 +350,13 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 - Apps are imported (metadata only or with binaries) and endpoints internal/external by default pull their apps from our App Portal (no firmware repositories needed)
 - OS 12 uses a unified protocol over 8443
 - OS 12 works with both traditional ICG or via more modern Reverse Proxy for managing external devices
-- UMS12 manages both OS 11 and OS 12 devices
+- UMS 12 manages both OS 11 and OS 12 devices
 - OS 12 has a more modern look and feel overall with a functional system tray for user configs like monitor config, date/time, mouse speed, Bluetooth, WiFi etc.
 - OS 12 Profiles are based on the application associated rather than the profile having 10,000 settings .. It only presents the settings relevant for the associated application (Base system, or App like AVD, Citrix, Omnissa, Parallels RAS, etc).
 - Associating an App to a profile, and associating the profile to the device folder will install the associated application
 - Removing the profile will also remove the application (or hide it) if it is directly assigned at a higher level
 - Licensing is much more streamlined and integrated between the License Portal and UMS for realtime usage/assignment with OS 12
-- We have new features with OS 12 like dual boot for DR and IGEL Managed Hypervisor that give you even more security focused use cases.
+- Features with OS 12 like dual boot for DR and IGEL Managed Hypervisor that provide more security focused use cases.
 - OS 12 offers an Onboarding Feature that works in conjunction with `OpenID Connect` (Entra, PingID, Okta, etc.), to onboard external devices to your UMS with just an email address.
 
 **Q:** What version of Linux is IGEL OS 12?

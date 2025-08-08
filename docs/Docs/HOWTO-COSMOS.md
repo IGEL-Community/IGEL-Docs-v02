@@ -341,6 +341,24 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ## FAQ - OS 12
 
+**Q:** What are the differences between OS 11 and OS 12?
+
+**A:** Here are some items:
+
+- OS 12 is modular vs OS 11 monolithic firmware
+- OS 12 is considered a Base Application and you only deploy the applications you need directly from our App Portal
+- Apps are imported (metadata only or with binaries) and endpoints internal/external by default pull their apps from our App Portal (no firmware repositories needed)
+- OS 12 uses a unified protocol over 8443
+- OS 12 works with both traditional ICG or via more modern Reverse Proxy for managing external devices
+- UMS12 manages both OS 11 and OS 12 devices
+- OS 12 has a more modern look and feel overall with a functional system tray for user configs like monitor config, date/time, mouse speed, Bluetooth, WiFi etc.
+- OS 12 Profiles are based on the application associated rather than the profile having 10,000 settings .. It only presents the settings relevant for the associated application (Base system, or App like AVD, Citrix, Omnissa, Parallels RAS, etc).
+- Associating an App to a profile, and associating the profile to the device folder will install the associated application
+- Removing the profile will also remove the application (or hide it) if it is directly assigned at a higher level
+- Licensing is much more streamlined and integrated between the License Portal and UMS for realtime usage/assignment with OS 12
+- We have new features with OS 12 like dual boot for DR and IGEL Managed Hypervisor that give you even more security focused use cases.
+- OS 12 offers an Onboarding Feature that works in conjunction with `OpenID Connect` (Entra, PingID, Okta, etc.), to onboard external devices to your UMS with just an email address.
+
 **Q:** What version of Linux is IGEL OS 12?
 
 **A:** IGEL OS is IGEL's own version of Linux. IGEL OS uses Debian / Ubuntu libs. Details on what is included in a specific build can be found in file `/etc/os-release`. Details on the kernel and device can be found by running `hostnamectrl`
@@ -521,7 +539,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** To secure reverse proxy, what are the paths that need to be enabled?
 
-**A:** UMS endpoint paths for Reverse Proxy integration. The used/required paths for OS12 and UMS Web App:
+**A:** UMS endpoint paths for Reverse Proxy integration. The used/required paths for OS 12 and UMS Web App:
 
 - The paths required for OS 12 device connections to the UMS (via a Reverse Proxy) are:
 
@@ -578,7 +596,7 @@ https://yourICG:8443/usg/server-status
 
 **A:** Make sure that SSH is running on ICG server and that the account used from UMS has `sudo` rights. [IGEL KB: ICG How-Tos - Giving a User sudo Privileges](https://kb.igel.com/en/igel-cloud-gateway/current/giving-a-user-sudo-privileges). Linux setup example can be found in [IGEL Community Docs HOWTO Setup Lab Sandbox Environment - Optional - Install ICG from UMS](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#optional-install-icg-from-ums-os-11)
 
-**Q:** The ICG OS12 Management Connection shows as disconnected. What can be checked / validated?
+**Q:** The ICG OS 12 Management Connection shows as disconnected. What can be checked / validated?
 
 **A:** Review the following items:
 

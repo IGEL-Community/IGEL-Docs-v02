@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-08-04 - [11.10.413](readme11.10.413.txt)
+
+```
+The new PRIVATE BUILD 11.10.413 for IGEL Workspace is ready.
+
+This build is based on 11.10.412.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Smartcard
+
+* Fixed smartcard redirection in AVD and Remote Desktop (RDP3) sessions.
+```
+
+-----
+
 ## 2025-08-04 - [11.10.317](readme11.10.317.txt)
 
 ```

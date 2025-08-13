@@ -10,9 +10,10 @@ IGEL OS 11 includes Chromium and Firefox browsers.
 IGEL OS 12 has the following browsers. Other browsers are planned.
 
 - [KB: Chromium Browser](https://kb.igel.com/en/igel-apps/current/chromium-browser)
-- [App Portal: Firefox Browser](https://app.igel.com/firefox)
+- [Firefox Browser](https://app.igel.com/firefox)
 - [Island Browser](https://app.igel.com/island)
 - [KB: Microsoft Edge Browser](https://kb.igel.com/en/igel-apps/current/configuration-of-microsoft-edge-on-igel-os)
+- [Palo Alto Networks - Prisma Access Browser](https://app.igel.com/prisma_access_browser)
 - IGEL built in browser:
 
 ```bash linenums="1"

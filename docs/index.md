@@ -31,12 +31,6 @@ Measurement Id: G-PTNHLB3WSX
 
 ----------
 
-## [IGEL KB - Overview: First Steps with IGEL OS 11](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
-
-----------
-
-----------
-
 ## [IGEL KB - IGEL Product Security Information](https://kb.igel.com/security-safety/current/igel-product-security-information)
 
 ----------

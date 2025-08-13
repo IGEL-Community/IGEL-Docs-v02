@@ -27,6 +27,8 @@ Measurement Id: G-PTNHLB3WSX
 
 ## [HOWTO IGEL (FAQ)](Docs/HOWTO-COSMOS.md)
 
+## [IGEL KB - FAQ - IGEL Universal Management Suite as a Service (UMSaaS)](https://kb.igel.com/en/universal-management-suite/current/faq-igel-universal-management-suite-as-a-service-u)
+
 ----------
 
 ----------

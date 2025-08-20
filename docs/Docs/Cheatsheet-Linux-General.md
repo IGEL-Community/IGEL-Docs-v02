@@ -303,6 +303,13 @@ mkfs.vfat -I -F 32 -n IGELF32 /dev/devicename
 mkfs.btrfs -f -L IGELBTRFS /dev/devicename
 ```
 
+- Mount the file system (btrfs)
+
+```bash linenums="1"
+mkdir /tmp/mydisk
+mount -t btrfs /dev/devicename /tmp/mydisk
+```
+
 ## more
 
 display the content of a file page by page

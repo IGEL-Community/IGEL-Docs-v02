@@ -65,6 +65,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [ls](Cheatsheet-Linux-General.md#ls)                       | :material-check-bold: | :material-check-bold: | show directory content                     |
 | [lshw](Cheatsheet-Linux-General.md#lshw)                   | :material-check-bold: | :material-check-bold: | list hardware                              |
 | [mkdir](Cheatsheet-Linux-General.md#mkdir)                 | :material-check-bold: | :material-check-bold: | create a folder                            |
+| [mkfs](Cheatsheet-Linux-General.md#mkfs)                   | :material-check-bold: | :material-check-bold: | make file system on USB device |
 | [more](Cheatsheet-Linux-General.md#more)                   | :material-check-bold: | :material-check-bold:| display the content of a file page by page |
 | [mount](Cheatsheet-Linux-General.md#mount)                 | :material-check-bold: | :material-check-bold:| mount a partition                          |
 | [openssl](Cheatsheet-Linux-General.md#openssl) | :material-check-bold: | :material-check-bold:| OpenSSL command line tool |

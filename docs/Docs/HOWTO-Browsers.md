@@ -24,6 +24,33 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 **A:** [IGEL KB: How to Set the Default Browser in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-set-the-default-browser-in-igel-os-12)
 
+**Q:** What are commands to see browsers on system and set default browser?
+
+**A:** Here are some commands that can be used:
+
+  - List browsers on system:
+
+```bash linenums="1"
+get-browsers --list
+```
+  - Options for `get-browsers`:
+
+```bash linenums="1"
+get-browsers --help
+```
+
+  - Check current default browser:
+
+```bash linenums="1"
+xdg-settings get default-web-browser
+```
+
+  - Set default (example: Firefox):
+
+```bash linenums="1"
+xdg-settings set default-web-browser firefox.desktop
+```
+
 **Q:** How to configure Edge Browser in Kiosk Mode
 
 **A:** Apps -> Edge Browser > Sessions -> Settings -> Startup pages:

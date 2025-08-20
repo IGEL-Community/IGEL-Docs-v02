@@ -12,7 +12,7 @@
 
 -----
 
-# Create USB installation medium (IGEL OS)
+## Create USB installation medium (IGEL OS)
 
 - Enable Storage Hotplug (Devices > Storage Devices > Storage Hotplug)
 - Plug USB thumb drive in IGEL OS device (auto mounted in /media folder)
@@ -29,8 +29,6 @@ dd if=path_to_iso/iso of=/dev/diskname bs=1M oflag=direct
 -----
 
 ## Create USB installation medium (Appe MacOS)
-
-### Steps
 
 1) Install USB drive
 

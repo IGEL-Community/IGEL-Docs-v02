@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-08-19 - [11.10.236](readme11.10.236.txt)
+
+```
+The new PRIVATE BUILD 11.10.236 for IGEL Workspace is ready.
+
+This build is based on 11.10.210.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* More verbose logs on migration check
+```
+
+-----
+
 ## 2025-08-04 - [11.10.413](readme11.10.413.txt)
 
 ```

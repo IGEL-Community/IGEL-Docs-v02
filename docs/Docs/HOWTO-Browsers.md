@@ -33,6 +33,7 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 ```bash linenums="1"
 get-browsers --list
 ```
+
   - Options for `get-browsers`:
 
 ```bash linenums="1"

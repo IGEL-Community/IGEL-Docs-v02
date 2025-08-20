@@ -269,6 +269,40 @@ mkdir newdir
 mkdir -p /tmp/dir1/dir2/dir3
 ```
 
+## mkfs
+
+make file system on USB device
+
+- Enable Storage Hotplug (Devices > Storage Devices > Storage Hotplug)
+- Plug USB thumb drive in IGEL OS device (auto mounted in /media folder)
+- Determine `/dev` mount point (lsblk -p)
+- Unmount disk (umount /dev/diskname)
+
+```bash linenums="1"
+setparam devices.hotplug.usb-storage.numdevices 1
+kill_postsetupd
+sleep 5
+lsblk -p
+```
+
+- Unmount file system
+
+```bash linenums="1"
+umount /dev/devicename
+```
+
+- Make F32 file system
+
+```bash linenums="1"
+mkfs.vfat -I -F 32 -n IGELF32 /dev/devicename
+```
+
+- Make btrfs file system
+
+```bash linenums="1"
+mkfs.btrfs -f -L IGELBTRFS /dev/devicename
+```
+
 ## more
 
 display the content of a file page by page

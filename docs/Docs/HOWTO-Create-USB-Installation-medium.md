@@ -1,4 +1,4 @@
-# HOWTO Create USB installation medium (MacOS)
+# HOWTO Create USB installation medium
 
 ## IGEL OS Creator Manual
 
@@ -7,6 +7,24 @@
 ### [Create USB installation medium (Linux)](https://kb.igel.com/en/igel-os/11.10/create-usb-installation-medium-linux)
 
 **NOTE:** Another tool that can be used to copy ISO image onto USB stick is [Rufus](https://rufus.ie/en/)
+
+-----
+
+-----
+
+# Create USB installation medium (IGEL OS)
+
+- Enable Storage Hotplug (Devices > Storage Devices > Storage Hotplug)
+- Plug USB thumb drive in IGEL OS device (auto mounted in /media folder)
+- Determine `/dev` mount point (lsblk -p)
+- Unmount disk (umount /dev/diskname)
+- Copy ISO image to USB device:
+
+```bash linenums="1"
+dd if=path_to_iso/iso of=/dev/diskname bs=1M oflag=direct
+```
+
+-----
 
 -----
 

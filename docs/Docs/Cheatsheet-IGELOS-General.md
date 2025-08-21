@@ -168,6 +168,16 @@ getmyip && echo
 192.168.1.2
 ```
 
+## getsysvalue
+
+Read variable from registry
+
+**Get NTP server name**
+
+```bash linenums="1"
+getsysvalue system.time.ntp_timeserver
+```
+
 ## icg-config
 
 IGEL Cloud Gateway config; with url and mass deployment key

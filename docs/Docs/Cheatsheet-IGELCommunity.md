@@ -113,6 +113,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [get](Cheatsheet-IGELOS-General.md#get)                 | :material-check-bold: | :material-check-bold:| Get Variable from registry                                  |
 | [get_unit_id](Cheatsheet-IGELOS-General.md#get_unit_id) | :material-check-bold: | :material-check-bold:| Get the Unit ID                                             |
 | [getmyip](Cheatsheet-IGELOS-General.md#getmyip)         | :material-check-bold: | :material-check-bold:| show device IP                                              |
+| [getsysvalue](Cheatsheet-IGELOS-General.md#getsysvalue)       | :material-check-bold: | :material-check-bold:| Read variable from registry |
 | gpicview                                                | :material-check-bold: | :material-check-bold:| Starts an Picture Viewer                                    |
 | icaconncenter                                           | :material-check-bold: | :material-check-bold:| ICA Connection Center                                       |
 | igel_buddy_update_server_scan                           | :material-check-bold: | :material-check-bold:| Search for Buddy Masters in network                         |

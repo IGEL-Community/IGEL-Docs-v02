@@ -151,7 +151,7 @@ iptables -S
 -P OUTPUT ACCEPT
 ```
 
-OS 12.5.0+ script launches on boot, blocks all traffic except what is explicitly allowed
+**OS 12.5.0+ script launches on boot, blocks all traffic except what is explicitly allowed**
 
 ```bash linenums="1"
 #!/bin/sh
@@ -168,6 +168,25 @@ iptables -A INPUT -s $Variable -j ACCEPT
 iptables -A OUTPUT -d $Variable -j ACCEPT
 iptables -A OUTPUT -p tcp --dport (PORTNUM) -j ACCEPT
 iptables -A OUTPUT -p udp --dport (PORTNUM) -j ACCEPT
+```
+
+**Add a lightweight “log when it looks like a scan” rule**
+
+```bash linenums="1"
+#!/bin/bash
+set -x
+trap read debug
+
+#run as root
+# set once; logs when an IP makes ≥10 hits in 30s
+iptables -N SCANLOG 2>/dev/null || true
+iptables -A INPUT -p tcp -m recent --name SCANNER --set
+iptables -A INPUT -p tcp -m recent --name SCANNER \
+  --update --seconds 30 --hitcount 10 \
+  -j LOG --log-prefix "PORTSCAN: " --log-level 4
+
+# View logs
+# journalctl -k | grep PORTSCAN
 ```
 
 ## iwconfig

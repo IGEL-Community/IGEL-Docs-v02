@@ -304,6 +304,12 @@ get wireless statistics from specific nodes
 
 ## nc
 
+Use `nc` to list open ports on a device
+
+```bash linenums="1"
+nc -zvn -w1 server-name 1-65535
+```
+
 Use nc to test IGEL communication (Device, UMS, ICG) -- [LINK](HOWTO-Setup-Lab-Sandbox-Environment.md#ums-tofrom-igel-os-communication-ports-no-icg)
 
 Use nc to test Microsoft Teams communication - Microsoft API URLs and IPs

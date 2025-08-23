@@ -303,7 +303,7 @@ mkfs.vfat -I -F 32 -n IGELF32 /dev/devicename
 mkfs.btrfs -f -L IGELBTRFS /dev/devicename
 ```
 
-- Mount the file system (btrfs)
+- Mount the file system (btrfs) without `devices.hotplug.usb-storage.numdevices` enabled
 
 ```bash linenums="1"
 mkdir /tmp/mydisk

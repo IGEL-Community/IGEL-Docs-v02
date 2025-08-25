@@ -489,9 +489,9 @@ do
     do
         dev="$(basename "$dev_path")"
         echo "  - Resetting device '$dev' ..."
-        printf '%s' "$dev" | sudo tee "$usb_std/unbind" > /dev/null
+        printf '%s' "$dev" | tee "$usb_std/unbind" > /dev/null
         sleep "$sleep_secs"
-        printf '%s' "$dev" | sudo tee "$usb_std/bind" > /dev/null
+        printf '%s' "$dev" | tee "$usb_std/bind" > /dev/null
         echo "    done."
     done
     echo "  done."

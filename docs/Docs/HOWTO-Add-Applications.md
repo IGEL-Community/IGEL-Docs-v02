@@ -62,7 +62,7 @@ Use at your own risk!
 
 ## IGEL App Creator Portal
 
-Build your own IGEL OS App with IGEL OS App SDK.
+Build your own IGEL OS App with IGEL App Creator Portal
 
 - [IGEL App Creator Portal – the straightforward way to secure and deploy your third-party apps to IGEL OS12](https://www.igel.com/blog/igel-app-creator-portal-the-straightforward-way-to-secure-and-deploy-your-third-party-apps-to-igel-os12/)
 - [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal)

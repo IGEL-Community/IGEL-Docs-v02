@@ -17,9 +17,9 @@ To use template keys, follow these steps:
 
 Here are some documentation sources that might provide a broader context:
 
-- [IGEL KB: How to Create Template Keys and Values](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-create-template-keys-and-values?utm_source=ai_search&ai_search=true)
-- [IGEL KB: How to Use Template Keys in Profiles](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-use-template-keys-in-profiles?utm_source=ai_search&ai_search=true)
-- [IGEL KB: Creating Keys and Values in the Profile](https://kb.igel.com/en/universal-management-suite/12.07.100/creating-keys-and-values-in-the-profile?utm_source=ai_search&ai_search=true)
+- [IGEL KB: How to Create Template Keys and Values](https://kb.igel.com/en/universal-management-suite/current/how-to-create-template-keys-and-values)
+- [IGEL KB: How to Use Template Keys in Profiles](https://kb.igel.com/en/universal-management-suite/current/how-to-use-template-keys-in-profiles)
+- [IGEL KB: Creating Keys and Values in the Profile](https://kb.igel.com/en/universal-management-suite/current/creating-keys-and-values-in-the-profile)
 
 -----
 

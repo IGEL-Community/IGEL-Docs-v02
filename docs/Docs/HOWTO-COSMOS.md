@@ -125,11 +125,11 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
-**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [IGEL KB: UMS 12 License Deployment](https://kb.igel.com/en/universal-management-suite/12.07.100/deployment-deploying-licenses-through-the-igel-ums)
+**A:** Yes! As of UMS 12, demo licenses for IGEL OS 12 and IGEL OS 11 devices are supported by Automatic License Deployment. [IGEL KB: UMS 12 License Deployment](https://kb.igel.com/en/universal-management-suite/current/deployment-deploying-licenses-through-the-igel-ums)
 
 **Q:** How to automate license renewal?
 
-**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [IGEL KB - License Deployment](https://kb.igel.com/en/universal-management-suite/12.07.100/deployment-deploying-licenses-through-the-igel-ums)
+**A:** Use UMS UMS Automatic License Deployment. UMS checks registered devices every 24 hours for unlicensed devices and will issue a new license. In UMS `UMS Console > UMS Administration > Global Configuration > Licenses > Deployment` enable automatic license exchange and select `Licenses are exchanged [number] days before expiration`: Defines how many days before the expiration date a new license should be deployed. (Default: 7). [IGEL KB - License Deployment](https://kb.igel.com/en/universal-management-suite/current/deployment-deploying-licenses-through-the-igel-ums)
 
 **Q:** How does hardware-bundled IGEL licenses work?
 
@@ -153,20 +153,19 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What steps to perform post install of UMS?
 
-**A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/12.07.100/post-installation-configuration-of-the-igel-ums-se). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
+**A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/post-installation-configuration-of-the-igel-ums-se). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
 
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
-**A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/en/universal-management-suite/12.07.100/known-issue-ums-cannot-connect-to-the-ms-sql-datab)
+**A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/en/universal-management-suite/current/known-issue-ums-cannot-connect-to-the-ms-sql-datab)
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
-**A:** [IGEL KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/en/universal-management-suite/12.07.100/which-ums-directories-should-be-scanned-for-viruse)
+**A:** [IGEL KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/en/universal-management-suite/current/which-ums-directories-should-be-scanned-for-viruse)
 
 **Q:** What is new in UMS 12?
 
-**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/en/universal-management-suite/12.07.100/what-is-new-knowledge-base-updates-for-igel-ums-12)
-. [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
+**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/en/universal-management-suite/current/what-is-new-knowledge-base-updates-for-igel-ums-12). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** How to check the status of UMS server?
 
@@ -183,8 +182,7 @@ https://UMS_SERVER_URL:443/ums/check-status
 **Q:** Is search Broken in 12.02.100 UMS Web?
 
 **A:** 
-If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [IGEL KB: UMS 12.02.100 Known issues](https://kb.igel.com/en/universal-management-suite/12.07.100/known-issues-igel-ums-12-02-100)
-Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
+If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [IGEL KB: UMS 12.02.100 Known issues](https://kb.igel.com/en/universal-management-suite/current/known-issues-igel-ums-12-02-100)). Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
 
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
 
@@ -200,11 +198,11 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
-**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/en/universal-management-suite/12.07.100/feature-matrix-ums-web-app-vs-ums-console)
+**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/en/universal-management-suite/current/feature-matrix-ums-web-app-vs-ums-console)
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
-**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [IGEL KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-and-devices-secure-shadowing-communicatio)
+**A:** Shadowing from UMS Web App triggers the UMS Server to initiate a VNC session for shadowing. The VNC session is routed through the UMS Server. [IGEL KB - UMS and Devices: Secure Shadowing](https://kb.igel.com/en/universal-management-suite/current/igel-ums-and-devices-secure-shadowing-communicatio)
 
 - **NOTE:** If web app shadow in browser is lost / hung, then try refreshing the web page.
 
@@ -249,7 +247,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
-  - Additional details [IGEL KB: Creating the End Certificates](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-use-your-own-certificates-for-communication)
+  - Additional details [IGEL KB: Creating the End Certificates](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
   - Delete the obsolete (automatically created) UMS web certificates and restart the UMS server.
 
@@ -281,15 +279,15 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** What are the steps to upgrade UMS 6 to 12 on Windows?
 
-**A:** [IGEL KB: UMS Installation and Update](https://kb.igel.com/en/universal-management-suite/12.07.100/ums-installation-and-update)
+**A:** [IGEL KB: UMS Installation and Update](https://kb.igel.com/en/universal-management-suite/current/ums-installation-and-update)
 
 **Q:** What can be done to increase performance for UMS?
 
-**A:** Make sure you have met requirements for [IGEL KB: RAM and vCPUs](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12), [IGEL KB: performance optimizations](https://kb.igel.com/en/universal-management-suite/12.07.100/performance-optimizations-in-igel-ums) , and [IGEL KB: Java heap size](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-configure-java-heap-size-for-the-ums-server)
+**A:** Make sure you have met requirements for [IGEL KB: RAM and vCPUs](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12), [IGEL KB: performance optimizations](https://kb.igel.com/en/universal-management-suite/current/performance-optimizations-in-igel-ums), and [IGEL KB: Java heap size](https://kb.igel.com/en/universal-management-suite/current/how-to-configure-java-heap-size-for-the-ums-server)
 
 **Q:** Having issues joining OS 12 devices to UMS 12 server running on Windows 11. How do I debug?
 
-**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [IGEL KB: Supported Environment UMS 12](https://kb.igel.com/en/universal-management-suite/12.07.100/supported-environment-igel-ums-12-07-100)
+**A:** UMS server is not supported on Windows 11. Please select a supported OS and reinstall UMS. [IGEL KB: Supported Environment UMS 12](https://kb.igel.com/en/universal-management-suite/current/supported-environment-igel-ums-12-09-100)
 
 **Q:** How to limit bulk actions for UMS help desk users?
 
@@ -311,7 +309,7 @@ Simply deleting all your UD Pockets from UMS, and waiting until the next index (
 
 **Q:** How to remove apps from UMS?
 
-**A:** [IGEL KB: How to Delete Apps in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-delete-apps-in-the-igel-ums-web-app). The following SQL query can be used to search for profiles using an app.
+**A:** [IGEL KB: How to Delete Apps in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/how-to-delete-apps-in-the-igel-ums-web-app). The following SQL query can be used to search for profiles using an app.
 
 ```bash linenums="1"
 select PROFILES.NAME as 'Profile-Name',
@@ -329,13 +327,13 @@ For other apps get a list of all "App Names" using this SQL query:
 SELECT DISTINCT APP_NAME FROM APP_VERSION
 ```
 
-- [IGEL KB: General Administrator Rights in IGEL UMS - Misc Menu - SQL Console](https://kb.igel.com/en/universal-management-suite/12.07.100/general-administrator-rights-in-igel-ums)
+- [IGEL KB: General Administrator Rights in IGEL UMS - Misc Menu - SQL Console](https://kb.igel.com/en/universal-management-suite/current/general-administrator-rights-in-igel-ums)
 
-- [IGEL KB: Menu Bar of the IGEL UMS Console - Misc - SQL Console](https://kb.igel.com/en/universal-management-suite/12.07.100/menu-bar-of-the-igel-ums-console)
+- [IGEL KB: Menu Bar of the IGEL UMS Console - Misc - SQL Console](https://kb.igel.com/en/universal-management-suite/current/menu-bar-of-the-igel-ums-console)
 
 **Q:** How to make devices download from App Portal when UMS is configured as the App Proxy as the Global Setting?
 
-**A:** [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-make-devices-download-from-app-portal-when-)
+**A:** [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-)
 
 -----
 
@@ -403,7 +401,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-use-your-own-certificates-for-communication)
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication)
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -525,17 +523,17 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.07.100/configure-the-ums-to-integrate-reverse-proxy-with-)
+**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via reverse proxy
-(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
+(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - Video: Proxy vs. Reverse Proxy
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4NB0NDtOwIQ?si=Mgyqc6OruOseTC1C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.07.100/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 **Q:** To secure reverse proxy, what are the paths that need to be enabled?
 
@@ -570,7 +568,7 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
-**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-universal-management-suite-network-configurat)
+**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat)
 
 **Q:** Does ICG 12 support OS 11 devices?
 
@@ -831,7 +829,7 @@ There is a new mechanism in 12.6.1 that runs a check on every certificate in /wf
 
 **Q:** How to extend UMS for device specific data like location, department, or attached hardware?
 
-**A:** [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-manage-igel-os-devices-by-device-specific-d)
+**A:** [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/current/how-to-manage-igel-os-devices-by-device-specific-d)
 
 - Set UMS Structure Tag with the city the device is currently in
 
@@ -899,7 +897,7 @@ By enabling and configuring this feature, binaries of apps will be stored on a s
 
 **A:** Please review the following links:
 
-- [IGEL KB: How to Use Distributed App Repositories in IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-use-distributed-app-repositories-in-igel-um)
+- [IGEL KB: How to Use Distributed App Repositories in IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/how-to-use-distributed-app-repositories-in-igel-um)
 - [Setting Up a WebDAV Server on Ubuntu and Debian](https://linuxconfig.org/webdav-server-setup-on-ubuntu-linux)
 - [APACHE web server and SSL authentication](https://linuxconfig.org/apache-web-server-ssl-authentication)
 

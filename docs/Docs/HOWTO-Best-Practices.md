@@ -47,7 +47,7 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 ## ICG vs. Reverse Proxy
 
-- [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
+- [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
     With the launch of IGEL Universal Management Suite (UMS) 12, the Unified Protocol used for all communication between the UMS and IGEL OS 12 devices was introduced. The Unified Protocol is a secure protocol that uses TCP 8443. However, depending on the structure of your UMS environment, company's security policies, etc., it may be insufficient, and the use of the IGEL Cloud Gateway (ICG) or reverse proxy may be required.
 
@@ -57,7 +57,7 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 The remote security logging feature for the IGEL Universal Management Suite (UMS), the IGEL Cloud Gateway (ICG) and the IGEL Management Interface (IMI). The remote security logging feature logs security relevant events in a separate log files that can be picked up by a configured log collector/SIEM.
 
-- [IGEL KB: Remote Security Logging in IGEL](https://kb.igel.com/en/universal-management-suite/12.07.100/remote-security-logging-in-igel)
+- [IGEL KB: Remote Security Logging in IGEL](https://kb.igel.com/en/universal-management-suite/current/remote-security-logging-in-igel)
 
 -----
 
@@ -67,12 +67,12 @@ Instead of installing a 3rd party agent onto IGEL OS, use data collected by UMS 
 
 If the data needed is not currently being collected, then use IGEL UMS Device Attributes to collect the information.
 
-- [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/12.07.100/how-to-manage-igel-os-devices-by-device-specific-d)
+- [IGEL KB: How to Manage IGEL OS Devices by Device Specific Data - What Device Attributes Can Do for You](https://kb.igel.com/en/universal-management-suite/current/how-to-manage-igel-os-devices-by-device-specific-d)
 
 Now that you have the information in the IGEL UMS, create view and administrative task that will generate data file used in [ETL Job](https://en.wikipedia.org/wiki/Extract,_transform,_load).
 
-- [IGEL KB: Views - Filtering for Devices in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/views-filtering-for-devices-in-the-igel-ums)
+- [IGEL KB: Views - Filtering for Devices in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/views-filtering-for-devices-in-the-igel-ums)
 
-- [IGEL KB: Export View or Advanced Search Result via Mail as an Administrative Task in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/export-view-or-advanced-search-result-via-mail-as-)
+- [IGEL KB: Export View or Advanced Search Result via Mail as an Administrative Task in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/export-view-or-advanced-search-result-via-mail-as-)
 
 Now use the data file as input for your ETL job into your CMDB. Follow guidance from your CMDB vendor for setting up ETL job.

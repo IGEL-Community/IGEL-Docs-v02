@@ -296,11 +296,9 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 
 ## UMS-Files
 
-- [UMS 6 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/en/universal-management-suite/12.07.100/where-can-i-find-the-igel-ums-log-files)
+- [UMS - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/en/universal-management-suite/current/where-can-i-find-the-igel-ums-log-files)
 
-- [UMS 12 - Where Can I Find the IGEL UMS Log Files?](https://kb.igel.com/en/universal-management-suite/12.07.100/where-can-i-find-the-igel-ums-log-files)
-
-- [UMS 12  Where Can I Find the IGEL UMS UMS Web App Logs?](https://kb.igel.com/en/universal-management-suite/12.07.100/logging-in-the-igel-ums-web-app)
+- [UMS - Where Can I Find the IGEL UMS UMS Web App Logs?](https://kb.igel.com/en/universal-management-suite/current/logging-in-the-igel-ums-web-app)
 
 -----
 

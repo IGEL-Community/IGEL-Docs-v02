@@ -130,7 +130,7 @@ The Installation Wizard will cover the following setup items:
 -	End User License Agreement
 -	Target directory for installation (default recommended)
 -	Select Components (defaults recommended – this will install the UMS software, embedded database, Java console and web console)
--	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/en/universal-management-suite/12.07.100/changing-the-ums-superuser), which is a separate application from the UMS Console.)
+-	Superuser account creation (This is the default administrative account to UMS – please save it somewhere safe! You will be able to add your AD accounts to UMS later. [You can also change the superuser credentials via UMS Administrator](https://kb.igel.com/en/universal-management-suite/current/changing-the-ums-superuser), which is a separate application from the UMS Console.)
 -	UMS data directory (default recommended)
 -	Start menu folder (default recommended)
 -	Network Ports (UMS will do a port check and open required network ports on the local server for you if you allow it)
@@ -141,7 +141,7 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 ### Configure UMS Network Ports
 
-The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/en/universal-management-suite/12.07.100/igel-ums-communication-ports) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
+The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
 - Legend
 
@@ -341,7 +341,7 @@ There are multiple ways to register your IGEL endpoints with UMS:
 1. Manually Scan for your IGEL Endpoints.
 2. Set up a DNS Record or DHCP Tag for automatic registration.
 
-**Note:** [Registration of a Device in the IGEL UMS Fails](https://kb.igel.com/en/universal-management-suite/12.07.100/troubleshooting-registration-of-a-device-via-scann)
+**Note:** [Registration of a Device in the IGEL UMS Fails](https://kb.igel.com/en/universal-management-suite/current/troubleshooting-registration-of-a-device-via-scann)
 
 ### Manually Scan for your IGEL Endpoints
 
@@ -462,7 +462,7 @@ From the endpoint running IGEL OS (not from the UMS):
 
 -	In UMS, go to UMS Administration > UMS Global Configuration > Licenses > Deployment and hit the refresh button in the top right menu and your licenses from the ILP should appear in the window.
 
--	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/en/universal-management-suite/12.07.100/automatic-license-deployment-ald-communication-flo)
+-	In the UMS, you can now right click a device and choose “license manually,” choose the product pack, and send the license to the device centrally. You can also enable [Automatic License Deployment as outlined in this KB article](https://kb.igel.com/en/universal-management-suite/current/automatic-license-deployment-ald-communication-flo)
 
 -----
 
@@ -742,7 +742,7 @@ You now have the ICG in place and configured, with end points connecting to it. 
 
 ## OPTIONAL: Setup Reverse Proxy for Managing External Endpoints (OS 12)
 
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/12.07.100/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
 
 -----
 

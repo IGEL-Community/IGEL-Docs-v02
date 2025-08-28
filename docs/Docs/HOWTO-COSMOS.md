@@ -76,8 +76,8 @@ If the client's clock is off, then it will break either or both of these functio
 
   Additional details on setting up time and date:
 
-  - [IGEL KB: OS 11 Time and Date](https://kb.igel.com/en/igel-os/11.10/time-and-date)
-  - [IGEL KB: OS 12 Time and Date](https://kb.igel.com/en/igel-os-base-system/12.5/time-and-date-in-igel-os-12)
+  - [IGEL KB: OS 11 Time and Date](https://kb.igel.com/en/igel-os/current/time-and-date)
+  - [IGEL KB: OS 12 Time and Date](https://kb.igel.com/en/igel-os-base-system/current/time-and-date-in-igel-os-12)
 
 -----
 
@@ -365,11 +365,11 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** How can a user change settings on IGEL OS?
 
-**A:** [IGEL KB: Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/tray-applications-in-igel-os-12)
+**A:** [IGEL KB: Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/tray-applications-in-igel-os-12)
 
 **Q:** Is OS 12 considered an App?
 
-**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/en/igel-os-base-system/12.5/)
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/en/igel-os-base-system/current/)
 
 **Q:** What are the hardware requirements for OS 12?
 
@@ -389,7 +389,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** Does OS 12 support PXE boot deployments?
 
-**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-deploy-igel-os-12-with-pxe)
+**A:** Yes. See the following note: [IGEL KB: How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/en/igel-os-base-system/current/how-to-deploy-igel-os-12-with-pxe)
 
 **Q:** How to enable Citrix username / password auto login support in cloud environment be supported?
 
@@ -466,7 +466,7 @@ wmctrl -r "IGEL Minibrowser" -b add,fullscreen
 
 **Q:** How to create shortcuts to tray applications?
 
-**A:** [How to Create Shortcuts to Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-create-shortcuts-to-tray-applications-in-ig)
+**A:** [How to Create Shortcuts to Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/how-to-create-shortcuts-to-tray-applications-in-ig)
 
 **Q:** Getting `xdg-open` popup from browser. How to remove `xdg-open` popup?
 
@@ -665,7 +665,7 @@ sequenceDiagram
 
 **Q:** Does IGEL SSO with OS 12 work with OpenID Connect?
 
-**A:** Yes! IGEL SSO with OS 12 will work with identity provider (IdP) that supports [OpenID Connect](https://openid.net/developers/how-connect-works/). [IGEL KB: Apps and Utilities for IGEL OS 12 That Support SSO with OpenID Connect (Generic)](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-configure-single-sign-on-sso-on-igel-os-12)
+**A:** Yes! IGEL SSO with OS 12 will work with identity provider (IdP) that supports [OpenID Connect](https://openid.net/developers/how-connect-works/). [IGEL KB: Apps and Utilities for IGEL OS 12 That Support SSO with OpenID Connect (Generic)](https://kb.igel.com/en/igel-os-base-system/current/how-to-configure-single-sign-on-sso-on-igel-os-12)
 
 **Q:** How IGEL SSO Work?
 
@@ -681,7 +681,7 @@ sequenceDiagram
 
 **Q:** How to enable SSO via a cloud-based identity provider (IdP) to enable access to the local OS 12 device and applications?
 
-**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [IGEL KB: Configuring Single Sign-On (SSO)](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-configure-single-sign-on-sso-on-igel-os-12)
+**A:** With IGEL OS 12, you can use Single Sign-On (SSO) via a cloud-based identity provider (IdP) to access the local device and apps. [IGEL KB: Configuring Single Sign-On (SSO)](https://kb.igel.com/en/igel-os-base-system/current/how-to-configure-single-sign-on-sso-on-igel-os-12)
 
 **Q:** What is the process workflow for how SSO works between web apps, Microsoft Entra ID (aka Azure AD) / Okta and IGEL OS 12?
 
@@ -702,7 +702,7 @@ sequenceDiagram
 
 **Q:** How to configure SSO on IGEL OS?
 
-**A:** [IGEL KB: Single Sign-On in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/single-sign-on-in-igel-os-12)
+**A:** [IGEL KB: Single Sign-On in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/single-sign-on-in-igel-os-12)
 
 -----
 
@@ -798,7 +798,7 @@ app.avd.sessions.avd%.options.compact-login-view
  
 Have Cisco ISE engineer use (DHCP IGEL tag) + (ITC* hostname) to fingerprint the device and apply an "IGEL Device for Imaging" ISE Policy. This allows access to SCEP, UMS, Imprivata, etc until 802.1x kicked in. Use the same certificates that is already setup for Cisco ISE Wireless. If 802.1x Auth fails, then it attempts a normal LAN connection. So it's safe to test.  You'll need a Cisco ISE engineer to see in their logs that it was successful.
 
-- [SCEP Client (NDES)](https://kb.igel.com/en/igel-os-base-system/12.5/scep-client-ndes-in-igel-os-12)
+- [SCEP Client (NDES)](https://kb.igel.com/en/igel-os-base-system/current/scep-client-ndes-in-igel-os-12)
 
 **Q:** Using OS 12.6.1 with SCEP/802.1x certificates for network connections? Newly issued certificates may no longer work with 12.6.1
 

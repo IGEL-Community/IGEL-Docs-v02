@@ -17,15 +17,15 @@ This is a comment section
 ### Security / Password
 
 
-- [Password](https://kb.igel.com/en/igel-os-base-system/12.4/change-password-in-igel-os-12)
+- [Password](https://kb.igel.com/en/igel-os-base-system/current/change-password-in-igel-os-12)
 
     Provides details on the user types and their roles in IGEL OS. You can configure passwords for the user types to protect your endpoint devices against unwanted changes. 
 
-- [Logon Settings](https://kb.igel.com/en/igel-os-base-system/12.4/logon-settings-in-igel-os-12)
+- [Logon Settings](https://kb.igel.com/en/igel-os-base-system/current/logon-settings-in-igel-os-12)
 
     Provides options for logon settings are available in IGEL OS.
 
-- [Active Directory/Kerberos](https://kb.igel.com/en/igel-os-base-system/12.4/active-directory-kerberos)
+- [Active Directory/Kerberos](https://kb.igel.com/en/igel-os-base-system/current/active-directory-kerberos)
 
     Shows how to configure the options for Active Directory with Kerberos in IGEL OS.
 

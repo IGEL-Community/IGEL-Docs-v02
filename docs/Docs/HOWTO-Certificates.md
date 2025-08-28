@@ -50,7 +50,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - How can we trust that the identity information within a certificate is true and accurate?
 - It's impossible to verify each endpoint certificate, so modern operating systems instead rely on a trusted third party to sign these certs – a certificate authority
 - Modern operating systems contain a list trusted Root CAs – from those Root CAs, trust propagates downward
-    - [KB: CA Certificates in IGEL OS](https://kb.igel.com/en/igel-os/11.10/which-ca-certificates-are-contained-in-igel-os)
+    - [KB: CA Certificates in IGEL OS](https://kb.igel.com/en/igel-os/current/which-ca-certificates-are-contained-in-igel-os)
     - [Microsoft Trusted CAs](https://learn.microsoft.com/en-us/security/trusted-root/participants-list)
 
 ![03](Images/HOWTO-Certificates-03.png)

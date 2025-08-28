@@ -61,7 +61,7 @@ Citrix recently shared an Early Access Release of the Citrix Workspace App for L
 
 -----
 
-## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/en/igel-os/11.10/virtual-background-for-unified-communication-apps-)
+## [Virtual Background for Unified Communication Apps in IGEL OS](https://kb.igel.com/en/igel-os/current/virtual-background-for-unified-communication-apps-)
 
 -----
 
@@ -71,7 +71,7 @@ In general, USB redirection is not needed for standard functionality such as aud
 
 **Note from IGEL Support:** Native USB redirection should be a means of last resort - it's pretty much the equivalent of plugging that device directly into the session via a long, virtual USB cable. The virtual session has direct access to the device, which is nice, but you lose compression, flow control, and any other optimizations that may occur via a dedicated virtual channel.
 
-- [When to use USB Redirection](https://kb.igel.com/en/igel-os/11.10/when-to-use-usb-redirection)
+- [When to use USB Redirection](https://kb.igel.com/en/igel-os/current/when-to-use-usb-redirection)
 
 - [Citrix 2405 - Composite USB device redirection using DDC policies](https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/whats-new.html#composite-usb-device-redirection-using-ddc-policies)
 
@@ -136,7 +136,7 @@ Sample profile to use with 11.08.360 and above for HDX webcam redirection. Teste
 
 <a href="../Profiles/HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920.xml" download> HOWTO-UCC-Citrix-Global-64bit-Webcam-Delay-Type-2-Manual-Config-Logitech-HD-Pro-Webcam-C920</a> 
 
-[KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/en/igel-os/11.10/hdx-multimedia-settings-for-an-igel-os-citrix-sess)
+[KB: HDX Multimedia Settings for an IGEL OS Citrix Session](https://kb.igel.com/en/igel-os/current/hdx-multimedia-settings-for-an-igel-os-citrix-sess)
  
 Also, please note that if using Chromium to connect to Citrix to set the following in the registry for the session:
 
@@ -247,7 +247,7 @@ Device Posture service with IGEL OS offers conditional access control to your Ci
 
 -----
 
-## [Unexpected Keyboard Layout in a Citrix Session](https://kb.igel.com/en/igel-os/11.10/troubleshooting-unexpected-keyboard-layout-in-a-ci)
+## [Unexpected Keyboard Layout in a Citrix Session](https://kb.igel.com/en/igel-os/current/troubleshooting-unexpected-keyboard-layout-in-a-ci)
 
 When a Citrix session has started, the keyboard layout changes in an unexpected way. On the local system, the keyboard layout may still be as expected.
 
@@ -313,7 +313,7 @@ starts and then error message: `Citrix Workspace cannot find a valid smart card 
 
  If the smart card is removed and reinserted then Citrix Workspace app recognizes the smart card and login can proceed.
 
-Issue the following command via [IGEL KB: Before Desktop Start](https://kb.igel.com/en/igel-os/11.10/desktop-1)
+Issue the following command via [IGEL KB: Before Desktop Start](https://kb.igel.com/en/igel-os/current/desktop-1)
 
 ```bash linenums="1"
 sed -i "/SinglePin=0/c SinglePin=1" /etc/netid.conf

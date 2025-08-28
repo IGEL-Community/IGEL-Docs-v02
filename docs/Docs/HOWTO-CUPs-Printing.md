@@ -1,6 +1,6 @@
 # HOWTO CUPs Printing
 
-## [IGEL KB - CUPs Printing](https://kb.igel.com/en/igel-os/11.10/cups)
+## [IGEL KB - CUPs Printing](https://kb.igel.com/en/igel-os/current/cups)
 ## [IGEL Community GitHub - Work from home with network printer](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/WFH-Add-Network-Printers)
 ## [IGEL Community GitHub - Work from office with network printer](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Tools_Drivers/WFO-Add-Assigned-Printers)
 
@@ -34,7 +34,7 @@ systemctl restart cups
 
 If printer is not network attached, then follow IGEL note on setting up CUPs printer with USB connection with PPD file.
 
-### [Installing a Custom CUPS Driver](https://kb.igel.com/en/igel-os/11.10/installing-a-custom-cups-driver)
+### [Installing a Custom CUPS Driver](https://kb.igel.com/en/igel-os/current/installing-a-custom-cups-driver)
 
 -----
 

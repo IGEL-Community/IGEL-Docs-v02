@@ -6,7 +6,7 @@
 
 ### [OS 12: NCP Secure Enterprise Client](https://app.igel.com/ncp/5.10.40552+2)
 
-### [OS 11: NCP Secure Enterprise Client](https://kb.igel.com/en/igel-os/11.10/ncp-vpn-client)
+### [OS 11: NCP Secure Enterprise Client](https://kb.igel.com/en/igel-os/current/ncp-vpn-client)
 
 - The [NCP Secure Enterprise Client](https://www.ncp-e.com/en/) is a component of NCP’s Network Access Technology” the holistic NCP Secure Enterprise Solution. Highly secure data connections to VPN gateways from all well-known suppliers can be established using IPsec standards. The teleworker works transparently and securely at any location (mobile or stationary) in the same manner as he works at his office within his corporate environment.
 
@@ -50,7 +50,7 @@ OpenConnect is a cross-platform multi-protocol SSL VPN client which supports a n
 
 ## Steps to enable OpenConnect VPN Client
 
-IGEL Knowledge Base: [OpenConnect VPN](https://kb.igel.com/en/igel-os/11.10/openconnect-vpn)
+IGEL Knowledge Base: [OpenConnect VPN](https://kb.igel.com/en/igel-os/current/openconnect-vpn)
 
 -----
 
@@ -112,7 +112,7 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 
 ## OpenVPN
 
-- IGEL Knowledge Base: [OpenVPN](https://kb.igel.com/en/igel-os/11.10/openvpn)
+- IGEL Knowledge Base: [OpenVPN](https://kb.igel.com/en/igel-os/current/openvpn)
 
 - [Reference manual for OpenVPN](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/)
 

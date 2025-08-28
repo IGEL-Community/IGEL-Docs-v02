@@ -22,7 +22,7 @@ On the IGEL OS:
 
 **NOTE:** Other IP addresses can be **192.168.10.1** or **192.168.1.1**
 
-[IGEL KB - LAN Interfaces](https://kb.igel.com/en/igel-os/11.10/lan-interfaces)
+[IGEL KB - LAN Interfaces](https://kb.igel.com/en/igel-os/current/lan-interfaces)
 
 -----
 

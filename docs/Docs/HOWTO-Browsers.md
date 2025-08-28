@@ -2,10 +2,10 @@
 
 IGEL OS 11 includes Chromium and Firefox browsers.
 
-- [KB: Chromium Browser Global](https://kb.igel.com/en/igel-os/11.10/chromium-browser-global-session-in-igel-os)
-- [KB: Chromium Sessions](https://kb.igel.com/en/igel-os/11.10/chromium-sessions)
-- [KB Firefox Browser Global](https://kb.igel.com/en/igel-os/11.10/firefox-browser-global)
-- [KB: Firefox Browser Session](https://kb.igel.com/en/igel-os/11.10/firefox-browser-session)
+- [KB: Chromium Browser Global](https://kb.igel.com/en/igel-os/current/chromium-browser-global-session-in-igel-os)
+- [KB: Chromium Sessions](https://kb.igel.com/en/igel-os/current/chromium-sessions)
+- [KB Firefox Browser Global](https://kb.igel.com/en/igel-os/current/firefox-browser-global-settings-in-igel-os)
+- [KB: Firefox Browser Session](https://kb.igel.com/en/igel-os/current/firefox-browser-session)
 
 IGEL OS 12 has the following browsers. Other browsers are planned.
 
@@ -22,7 +22,7 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 **Q:** How to set default browser in IGEL OS 12?
 
-**A:** [IGEL KB: How to Set the Default Browser in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.5/how-to-set-the-default-browser-in-igel-os-12)
+**A:** [IGEL KB: How to Set the Default Browser in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/how-to-set-the-default-browser-in-igel-os-12)
 
 **Q:** What are commands to see browsers on system and set default browser?
 

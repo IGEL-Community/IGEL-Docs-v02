@@ -311,7 +311,7 @@ sudo systemctl enable sshd.service
 echo "******* Ending -- apt install openssh-server"
 ```
 
-- Follow IGEL ICG install from UMS - [LINK](https://kb.igel.com/en/igel-cloud-gateway/12.04/installing-the-igel-cloud-gateway)
+- Follow IGEL ICG install from UMS - [LINK](https://kb.igel.com/en/igel-cloud-gateway/current/installing-the-igel-cloud-gateway)
 - IGEL Community GitHub ICG setup script - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/ICG_Ubuntu_Build)
 
 -----

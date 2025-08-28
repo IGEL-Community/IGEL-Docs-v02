@@ -30,4 +30,4 @@ Please note that you will need to enable the "template profiles" in order to see
 
 ![image03](Images/HOWTO-Use-IGEL-Static-Template-Keys-03.jpeg)
 
-[IGEL KB: Template Profiles in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/12.07.100/template-profiles-in-the-igel-ums)
+[IGEL KB: Template Profiles in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/template-profiles-in-the-igel-ums)

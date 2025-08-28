@@ -4,8 +4,8 @@
 
 **NOTE:** This guide follows KB articles -- IGEL OS 11  / 12 and adds optional IGEL Cloud Gateway (ICG) for OS 11 or Reverse Proxy for OS 12.
 
-- [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/11.10/overview-first-steps-with-igel-os-11)
-- [IGEL KB - IGEL OS Base System 12](https://kb.igel.com/en/igel-os-base-system/12.6.1/)
+- [IGEL KB - Overview: First Steps with IGEL OS](https://kb.igel.com/en/igel-os/current/overview-first-steps-with-igel-os-11)
+- [IGEL KB - IGEL OS Base System 12](https://kb.igel.com/en/igel-os-base-system/current/)
 
 -----
 
@@ -68,10 +68,10 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 | IGEL   | ++delete++     |
 | LG     | ++f10++      |
 | Lenovo | ++fn+f12++ |
-| Microsoft | [Steps to setup](https://kb.igel.com/en/igel-os/11.10/ud-pocket-seems-to-break-microsoft-surface) |
+| Microsoft | [Steps to setup](https://kb.igel.com/en/igel-os/current/ud-pocket-seems-to-break-microsoft-surface) |
 
 -	Plug the formatted USB stick into the target endpoint to be converted. Boot from USB and follow the prompts. 
--	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/en/igel-os/11.10/installation-procedure)
+-	[OS 11 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/en/igel-os/current/installation-procedure)
 -	[OS 12 - A full walkthrough of the installation options can be viewed on the IGEL KB here](https://kb.igel.com/en/how-to-start-with-igel/current/installing-the-base-system-via-igel-os-creator-osc). Choose the options best for you.
 -	Once completed, remove the USB stick and reboot. IGEL OS should launch to the Setup Assistant wizard. Tutorial video for installing IGEL OS 11.
 
@@ -86,13 +86,13 @@ If you don’t have existing hardware you want to convert, and you’re looking 
 
 [The IGEL Ready Showcase](https://www.igel.com/ready/showcase-categories/endpoints/) is a listing of 3rd party OEM devices which have been formally tested to run IGEL OS. It provides you with a level of assurance that the device you order is going to work well with IGEL software. Most IGEL Ready hardware can also be ordered from factory with IGEL OS preinstalled.
 
-You can also visit the IGEL website to see [a list of common endpoints](https://kb.igel.com/hardware/en/supported-devices) which have been qualified by IGEL.
+You can also visit the IGEL website to see [a list of common endpoints](https://kb.igel.com/hardware/current/supported-devices) which have been qualified by IGEL.
 
-If a device does not appear on either the IGEL Ready Showcase or the IGEL list of approved devices, that does not mean it won’t work with IGEL - it just means you should test it first. IGEL will run fine on most x86 devices that meet the [minimum requirements](https://kb.igel.com/en/hardware/current/devices-supported-by-igel-os-12)
+If a device does not appear on either the IGEL Ready Showcase or the IGEL list of approved devices, that does not mean it won’t work with IGEL - it just means you should test it first. IGEL will run fine on most x86 devices that meet the [minimum requirements](https://kb.igel.com/hardware/current/igel-os-12-hardware-support)
 
 ### Option 3: Purchase a UD Pocket from IGEL
 
-The [UD Pocket (UDP)](https://kb.igel.com/en/hardware/current/ud-pocket-2-powered-by-igel-ud-pocket-2) is a keychain-sized USB drive that comes preloaded with IGEL OS. You can plug it into an x86 device that meets the minimum requirements and boot from USB to access the same IGEL OS experience you’d get if you converted the device. The difference? The UD Pocket is portable and preserves the underlying OS on the hardware you plug it into, making it the perfect BYOD solution.
+The [UD Pocket (UDP)](https://kb.igel.com/hardware/current/ud-pocket-powered-by-igel-ud-pocket) is a keychain-sized USB drive that comes preloaded with IGEL OS. You can plug it into an x86 device that meets the minimum requirements and boot from USB to access the same IGEL OS experience you’d get if you converted the device. The difference? The UD Pocket is portable and preserves the underlying OS on the hardware you plug it into, making it the perfect BYOD solution.
 
 Once you’ve chosen your hardware and installed or booted IGEL OS on it, you are now ready to install the UMS server and put a Demo License on your IGEL endpoints!
 

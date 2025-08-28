@@ -12,15 +12,15 @@ Comments
 
 Custom commands are executed at specific points of the system startup process.
 
-- [IGEL KB: Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.4/custom-commands-in-igel-os-12)
+- [IGEL KB: Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/custom-commands-in-igel-os-12)
 
-    - **Base:** The commands defined here are executed at the specific execution times during the boot process. [IGEL KB: Base Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.4/base-custom-commands-in-igel-os-12)
+    - **Base:** The commands defined here are executed at the specific execution times during the boot process. [IGEL KB: Base Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/base-custom-commands-in-igel-os-12)
 
-    - **Network:** Commands for network-related execution times. [IGEL KB: Network Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.4/network-custom-commands-in-igel-os-12)
+    - **Network:** Commands for network-related execution times. [IGEL KB: Network Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/network-custom-commands-in-igel-os-12)
 
-    - **Desktop:** Commands are executed at the specific execution times when the X server is launched. [IGEL KB: Desktop](https://kb.igel.com/en/igel-os-base-system/12.4/desktop-1)
+    - **Desktop:** Commands are executed at the specific execution times when the X server is launched. [IGEL KB: Desktop](https://kb.igel.com/en/igel-os-base-system/current/desktop-1)
 
-    - **Reconfiguration:** Commands defined here is executed after settings relating to the local setup or the UMS have been changed. [IGEL KB: Reconfiguration Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/12.4/reconfiguration-custom-commands-in-igel-os-12)
+    - **Reconfiguration:** Commands defined here is executed after settings relating to the local setup or the UMS have been changed. [IGEL KB: Reconfiguration Custom Commands in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/reconfiguration-custom-commands-in-igel-os-12)
 
 Since multiple profiles with custom commands can overwrite each other, a method for combining custom commands is needed.
 

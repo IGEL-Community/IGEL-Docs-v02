@@ -22,4 +22,4 @@
 
 ## Additional details can be found on IGEL KB site
 
-[IGEL OS - IGEL OS Creator - IGEL OS Creator Manual - Installation](https://kb.igel.com/en/igel-os/11.10/installation-procedure)
+[IGEL OS - IGEL OS Creator - IGEL OS Creator Manual - Installation](https://kb.igel.com/en/igel-os/current/installation-procedure)

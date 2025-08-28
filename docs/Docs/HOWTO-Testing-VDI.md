@@ -24,11 +24,11 @@ Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions th
 
 ### [IGEL Ready Partner - Nerdio - Quickly & Easily Deploy, Manage, & Cost Optimize Virtual Desktops in Microsoft Azure](https://getnerdio.com/)
 
-### [IGEL KB: AVD Session](https://kb.igel.com/en/igel-os/11.10/avd-global)
+### [IGEL KB: AVD Session](https://kb.igel.com/en/igel-os/current/avd-global)
 
-### [IGEL KB: AVD Global](https://kb.igel.com/en/igel-os/11.10/avd-global)
+### [IGEL KB: AVD Global](https://kb.igel.com/en/igel-os/current/avd-global)
 
-### [IGEL KB: AVD Articles](https://kb.igel.com/en/igel-os/11.10/microsoft-azure-virtual-desktop-avd)
+### [IGEL KB: AVD Articles](https://kb.igel.com/en/igel-os/current/microsoft-azure-virtual-desktop-avd)
 
 -----
 
@@ -54,9 +54,9 @@ TestDrive is a self-service, cloud-hosted product demonstration platform availab
 
 ### [Getting Started with TestDrive](https://tdhelp.omnissa.com/hc/en-us)
 
-### [IGEL KB: Horizon Session](https://kb.igel.com/en/igel-os/11.10/horizon-client-session)
+### [IGEL KB: Horizon Session](https://kb.igel.com/en/igel-os/current/horizon-client-session)
 
-### [IGEL KB: Horizon Articles](https://kb.igel.com/en/igel-os/11.10/vmware-horizon-1)
+### [IGEL KB: Horizon Articles](https://kb.igel.com/en/igel-os/current/vmware-horizon-1)
 
 <!---
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.discovery.vmware.com`
@@ -74,9 +74,9 @@ Trials for individual Citrix Cloud services are delivered through the Citrix Clo
 
 When you’re ready to buy Citrix Cloud services, your trial is converted to a production service. There’s no need to reconfigure anything or create a separate production account.
 
-### [IGEL KB: Citrix Sessions](https://kb.igel.com/en/igel-os/11.10/citrix-1)
+### [IGEL KB: Citrix Sessions](https://kb.igel.com/en/igel-os/current/citrix-1)
 
-### [IGEL KB: Citrix Articles](https://kb.igel.com/en/igel-os/11.10/citrix-1)
+### [IGEL KB: Citrix Articles](https://kb.igel.com/en/igel-os/current/citrix-1)
 
 ### For Citrix Partners
 

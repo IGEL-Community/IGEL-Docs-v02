@@ -704,7 +704,7 @@ If you need to use Browser Content Redirection with Proxy (on the VDA), you need
 
 Client-side proxy configuration (and BCR is also possible), please follow the document below: 
 
-[IGEL KB: Proxy Configuration](https://kb.igel.com/en/igel-os/11.10/proxy-2)
+[IGEL KB: Proxy Configuration](https://kb.igel.com/en/igel-os/current/proxy-1)
 
 -  Citrix Desktop Configuration (XenApp and XenDesktop)
 

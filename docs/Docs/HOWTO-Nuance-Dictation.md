@@ -1,6 +1,6 @@
 # HOWTO Nuance Dictation
 
-## [Nuance Compatibility with Citrix](https://kb.igel.com/en/igel-os/11.10/nuance-compatibility)
+## [Nuance Compatibility with Citrix](https://kb.igel.com/en/igel-os/current/nuance-compatibility)
 
 ## [Dragon Medical One Desktop Application 2023.4](https://isupportcontent.nuance.com/healthcare/documents/relnotes/direct/SOD_RELEASE_NOTES_2023.4_US.htm)
 
@@ -8,7 +8,7 @@
 
 In general, USB redirection is not needed for standard functionality such as audio, video, HID input, etc. However, in some special circumstances, a device may need to be redirected into a VDI session for full functionality, or if it requires a specific driver to function.
  
-[When to use USB Redirection](https://kb.igel.com/en/igel-os/11.10/when-to-use-usb-redirection)
+[When to use USB Redirection](https://kb.igel.com/en/igel-os/current/when-to-use-usb-redirection)
 
 - Citrix made a change in CWAL 2405 that affects USB redirection. In order to support the new method, Citrix Virtual Apps and Desktops 2206 or later is needed. Then the following Citrix policies must be configured and enabled.
 

@@ -16,7 +16,7 @@
 
 ## UMS PXE
 
-- [How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/en/igel-os-base-system/12.4.2/how-to-deploy-igel-os-12-with-pxe)
+- [How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/en/igel-os-base-system/current/how-to-deploy-igel-os-12-with-pxe)
 - More scalable than USB
 - Zero touch after device is PXE booted
 - Requires internet access

@@ -12,7 +12,7 @@
 | IGEL   | ++delete++     |
 | LG     | ++f10++      |
 | Lenovo | ++fn+f12++ |
-| Microsoft | [Steps to setup](https://kb.igel.com/en/igel-os/11.10/ud-pocket-seems-to-break-microsoft-surface) |
+| Microsoft | [Steps to setup](https://kb.igel.com/en/igel-os/current/ud-pocket-seems-to-break-microsoft-surface) |
 
 -----
 

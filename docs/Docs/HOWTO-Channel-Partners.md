@@ -38,9 +38,11 @@ This is a comment section
 
 ## IGEL Education for Partners
 
-Please enroll in [IGEL Academy Partner Training](https://www.channelnerd.wiki/igel-academy-partner-training) for formal training courses.
+- [IGEL Education](https://www.igel.com/learn-and-connect/igel-education/)
 
-Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
+- [Register Now at IGEL Academy](https://learn.igel.com)
+
+- Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
 
 ----------
 

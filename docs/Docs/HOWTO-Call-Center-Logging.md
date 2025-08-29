@@ -16,6 +16,9 @@ IGEL OS can be configured to capture the audio and screen shots outside of the c
 - Screen Shot Tool: `scrot` via IGEL Community GitHub App Recipe [scrot](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/scrot)
 - Compress Audio WAV file: `ffmpeg` via IGEL Community GitHub App Recipe [ffmpeg](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/ffmpeg)
 
+## Optional Applications not included in script
+
+- [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/): `simplescreenrecoder` via GIEL Commmunity GitHub Recipe [simplescreenrecorder](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/simplescreenrecorder)
 
 -----
 

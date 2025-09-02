@@ -71,6 +71,15 @@ Policy Name: Handlers
 Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 ```
 
+**Q:** How to disable sign-in option in Microsoft Edge?
+
+**A:** Set the following in profile `Edge Browser > Global Settings > Custom Setup > Custom Policies`
+
+```json linenums="1"
+"BrowserSignin": 0,                 // disable browser sign-in
+"NonRemovableProfileEnabled": false // recommended alongside BrowserSignin
+```
+
 -----
 
 ## OS 12: Running Progressive Web Apps (PWA)

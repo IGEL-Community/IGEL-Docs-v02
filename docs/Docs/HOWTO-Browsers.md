@@ -80,6 +80,14 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 "NonRemovableProfileEnabled": false // recommended alongside BrowserSignin
 ```
 
+**Q:** How to open URL in Edge in full screen?
+
+**A:** Here is an example:
+
+```bash linenums="1"
+microsoft-edge-stable --start-maximized "https://www.igel.com"
+```
+
 -----
 
 ## OS 12: Running Progressive Web Apps (PWA)

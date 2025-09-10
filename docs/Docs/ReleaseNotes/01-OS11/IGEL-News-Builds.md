@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-09-10 - [11.10.318](readme11.10.318.txt)
+
+```
+The new PRIVATE BUILD 11.10.318 for IGEL Workspace is ready.
+
+This build is based on 11.10.313.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### AVD
+
+* Fixed MS Teams optimization connection issues  
+* Fixed MS Teams ring tone issue
+```
+
+-----
+
 ## 2025-08-19 - [11.10.236](readme11.10.236.txt)
 
 ```

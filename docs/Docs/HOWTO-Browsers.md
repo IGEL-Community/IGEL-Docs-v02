@@ -109,10 +109,10 @@ microsoft-edge-stable --start-maximized "https://www.igel.com"
 | Google Maps | https://www.google.de/maps?force=tt&source=ttpwa | |
 | Microsoft 365 Copilot | https://m365.cloud.microsoft | <a href="../Images/HOWTO-Browsers-copilot.svg" download>LINK to icon</a> |
 | Microsoft Copilot | https://copilot.cloud.microsoft/?fromcode=cmc&ampredirectid=95DE602277C6464DA06ED6A3396BCAC8&ampauth=2 | <a href="../Images/HOWTO-Browsers-copilot.svg" download>LINK to icon</a> |
-| Microsoft Excel | https://www.microsoft365.com/launch/Excel/ | <a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
-| Microsoft Outlook | https://outlook.office365.com/mail/ | <a href="../Images/HOWTO-Browsers-outlook.svg" download>LINK to icon</a> |
-| Microsoft PowerPoint | https://powerpoint.cloud.microsoft/ | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
-| Microsoft Word | https://word.cloud.microsoft | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
+| Microsoft Excel | https://www.office.com/launch/excel | <a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
+| Microsoft Outlook | https://outlook.office.com | <a href="../Images/HOWTO-Browsers-outlook.svg" download>LINK to icon</a> |
+| Microsoft PowerPoint | https://www.office.com/launch/powerpoint | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
+| Microsoft Word | https://www.office.com/launch/word | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 | Omnissa TestDrive | https://testdrive.vidmpreview.com/authcontrol/auth/request | <a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |
 | YouTube | https://www.youtube.com/?feature=ytca | |
 

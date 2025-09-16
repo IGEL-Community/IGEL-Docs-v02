@@ -20,13 +20,17 @@ This is a comment section
 
 ----------
 
-### Where Are the IGEL Cloud Services Data Stored?
+### IGEL Cloud Services and Support
 
 Currently, the IGEL Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
 
 The Insight Service data are currently also stored in Frankfurt (Germany west central).
 
 All data centers and their operators are fully ISO/IEC 27001 certified.
+
+**Q:** What is the IGEL Cloud Services SLA?
+
+**A:** System Availability SLA for IGEL Cloud Services is 98.50% System Availability during each calendar month, excluding any scheduled maintenance windows and emergency maintenance.
 
 **Q:** How to contact IGEL for support?
 

@@ -183,3 +183,11 @@ Demonstrates using a YubiKey with Fido2 authentication and EntraID as identity p
 This demo shows VueScan connecting to network attached Brother MFC-L2750DW and scanning a post card.
 
  <iframe width="560" height="315" src="https://www.youtube.com/embed/DKAR2hqaltY?si=zmEumFUzfxDAJe_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
+## Stratodesk to IGEL Conversion Summary
+
+This demo shows the steps to use Stratodesk NoTouch Center to deploy IGEL OS via LFI (image update) file of IGEL OS 12.
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/yTwaswmLq28?si=1XVtm8ADmkm-4pkK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -20,7 +20,7 @@ This is a comment section
 
 ----------
 
-### IGEL Cloud Services and Support
+## IGEL Cloud Services and Support
 
 Currently, the IGEL Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).
 

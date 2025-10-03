@@ -13,6 +13,33 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-10-01 - [11.10.430](readme11.10.430.txt)
+
+```
+The new PUBLIC BUILD 11.10.430 for IGEL Workspace is ready.
+
+This build is based on 11.10.420.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed chromium security issues CVE-2025-10585, CVE-2025-10502, CVE-2025-10501,
+  CVE-2025-10500, CVE-2025-9867, CVE-2025-9866, CVE-2025-9865, CVE-2025-9864,
+  CVE-2025-10201 and CVE-2025-10200.  
+* Updated Chromium Browser to version 140.0.7339.185.
+
+### Firefox
+
+* Fixed firefox security issues CVE-2025-9179, CVE-2025-9180 and CVE-2025-9185.  
+* Updated firefox to version 115.27.0esr.
+```
+
+-----
+
 ## 2025-09-10 - [11.10.318](readme11.10.318.txt)
 
 ```

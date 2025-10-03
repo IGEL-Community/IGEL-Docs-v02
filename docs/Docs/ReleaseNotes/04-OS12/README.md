@@ -16,6 +16,8 @@ Lists what changes are in the build.
 
 ## IGEL OS 12
 
+- [12.7.2 PR1 (Patch Releasea)](https://app.igel.com/base_system/12.7.2+1) 02-October-2024
+- [12.7.2](readme12.7.2.txt) 30-September-2025
 - [12.7.1+1](readme12.7.1+1.txt) 29-July-2025
 - [12.7.1](readme12.7.1.txt) 25-June-2025
 - [12.7.0](readme12.7.0.txt) 04-June-2025

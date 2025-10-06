@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-10-06 - [11.10.432](readme11.10.432.txt)
+
+```
+The new PRIVATE BUILD 11.10.432 for IGEL Workspace is ready.
+
+This build is based on 11.10.430.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Base system
+
+* Fixed mounting internal mass storage of Olympus DS-9500
+* Fixed issue with e1000e not working on Dell Optiplex 7000 device.
+```
+
+-----
+
 ## 2025-10-01 - [11.10.430](readme11.10.430.txt)
 
 ```

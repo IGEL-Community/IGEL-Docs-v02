@@ -13,6 +13,103 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-10-08 - [11.10.433](readme11.10.433.txt)
+
+```
+The new PRIVATE BUILD 11.10.433 for IGEL Workspace is ready.
+
+This build is based on 11.10.430.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix Workspace App 25.03.0.66  
+  Available workspace apps in this release: 25.03.0.66 (default), 24.11.0.85,
+  and 20.10.0.6
+* The functionalities of the on-screen keyboard have been enhanced to optimize
+  its performance with the multi-touch feature. This improvement enables users
+  to utilize the digital on-screen keyboard on their devices, eliminating the
+  need for an external physical keyboard.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enhancement for multi-touch on-screen keyboard                  |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.enhanceoskformt                                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+
+* Audio Quality Enhancer (v2) is added for Adaptive Audio. This feature
+  significantly improves audio quality, especially in scenarios with packet loss
+  or network disruptions.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Audio Quality Enhancer to improve audio performance             |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.module.enablenetstat                                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **false** (default)/ true                                       |
++------------+-----------------------------------------------------------------+
+
+* The deviceTRUST virtual channel has been integrated directly into the Citrix
+  Workspace app version 23.05. To activate this feature, enable the registry key
+  "ica.module.virtualchannel.ctxdt.enable." Additionally, an alternative
+  deviceTRUST Client Extension "ica.module.virtualchannel.devicetrust.enable" is
+  already present in the system, providing two options for version 2503. If both
+  options are active, the existing extension will continue to work alongside the
+  new virtual channel. For deviceTRUST in workspace app 2411 or earlier
+  versions, enable the registry value
+  "ica.module.virtualchannel.devicetrust.enable".
+
++------------+-----------------------------------------------------------------+
+| Parameter  | deviceTRUST channel for CWA 2503 and later                      |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.module.virtualchannel.ctxdt.enable                          |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **false** (default)/ true                                       |
++------------+-----------------------------------------------------------------+
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 15.1.0
+
+### Cisco Webex
+
+* Updated Webex VDI to version 45.6.1.32593
+* Updated Webex Meetings VDI to version 45.2.1.2  
+* Available Webex Meetings VDI versions in this release: 45.2.1.2 (default),
+  44.10.1.3, and 44.6.5.1
+
+### zoomvdi
+
+* Updated Zoom VDI to version 6.4.10.26150  
+* Available Zoom VDI versions in this release: 6.4.10.26150 (default),
+  6.2.10.25600, and 6.1.12.25370
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Citrix App Protected resources can be launched from the browser without the
+  need for a pre-configured store in the setup. A system restart is required
+  after activating/deactivating this feature.
+* Updated the libsoup library to version libsoup-3.0.so.0.6.0 to resolve
+  segmentation faults (crashes) occurring during Microsoft Teams calls.
+```
+
+-----
+
 ## 2025-10-06 - [11.10.432](readme11.10.432.txt)
 
 ```

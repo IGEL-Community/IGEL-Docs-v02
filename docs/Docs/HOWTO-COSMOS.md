@@ -151,6 +151,10 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [IGEL KB: How To Remove an IGEL License Completely](https://kb.igel.com/en/igel-subscription-and-more/current/how-to-remove-an-igel-license-completely)
 
+**Q:** Where is the UMS license file stored?
+
+**A:** The UMS license file is located here: `/opt/IGEL/RemoteManager/rmguiserver/ums_license.lic`
+
 -----
 
 ## FAQ - UMS

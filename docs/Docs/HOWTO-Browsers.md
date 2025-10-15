@@ -71,6 +71,19 @@ Policy Name: Handlers
 Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 ```
 
+**Q:** How to configure Firefox to open Horizon
+
+**A** In the Firefox profile / global settings / advanced / custom preferences.
+
+- Mode: pref
+- Custom preference: AutoLaunchProtocolsFromOrigins
+- Type: String
+- Value:
+
+```bash linenums="1"
+[{"allowed_origins":["https://****"],"protocol":"horizon-client"}] 
+```
+
 **Q:** How to disable sign-in option in Microsoft Edge?
 
 **A:** Set the following in profile `Edge Browser > Global Settings > Custom Setup > Custom Policies`

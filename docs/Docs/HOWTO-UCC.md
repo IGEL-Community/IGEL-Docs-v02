@@ -302,7 +302,9 @@ This is a quirk of current Horizon linux clients which show this when there's no
 
 In IGEL OS the compositor is off by default because it may have side effects on older / slower devices.
 
-Here is registry setting: `windowmanager.wm0.variables.usecompositing`
+On OS 11 (pending OS 12.8+), here is registry setting: `windowmanager.wm0.variables.usecompositing`
+
+For OS 12 try `x.drivers.amdgpu.use_tear_free` or `x.drivers.modesetting.use_tear_free`
 
 -----
 

@@ -162,7 +162,21 @@ openvpn --show-ciphers
 
 -----
 
-## Other VPN Clients (IGEL Community Custom Partitions on GitHub)
+## OS 12 - Other VPN Clients (IGEL Community App Recipes on GitHub)
+
+- [Cisco Secure Client - AnyConnect VPN](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/cisco_secure_client)
+
+    - **NOTE:** Edit recipe to update Cisco secure client app version number in file `install.json`
+
+- [F5 VPN](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/f5_vpn)
+
+- [Sonicwall Netextender](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/sonicwall_netextender)
+
+- [Tailscale](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/tailscale)
+
+-----
+
+## OS 11 - Other VPN Clients (IGEL Community Custom Partitions on GitHub)
 
 - [AWS VPN Client](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/CP_Source/Network/AWS_VPN)
 

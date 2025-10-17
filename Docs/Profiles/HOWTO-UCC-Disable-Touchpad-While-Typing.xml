@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles>
+    <profile>
+        <profile_id>806</profile_id>
+        <profilename>Disable Touchpad While Typing</profilename>
+        <firmware>
+            <model>IGEL OS 11</model>
+            <version>11.08.200.01</version>
+        </firmware>
+        <description>Assign to devices and reboot to disable touchpad while typing. Use with Touchpad driver of Libinput.</description>
+        <overwritesessions>false</overwritesessions>
+        <is_master_profile>false</is_master_profile>
+        <is_igel_os>true</is_igel_os>
+        <settings>
+            <pclass name="userinterface.touchpad.driver">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">libinput</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.rccustom.custom_cmd_x11_init">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">sed -i '30 a\        Option "DisableWhileTyping" "True"' /usr/share/X11/xorg.conf.d/40-libinput.conf.disabled
+mv /usr/share/X11/xorg.conf.d/40-libinput.conf.disabled /usr/share/X11/xorg.conf.d/40-libinput.conf
+</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+        </settings>
+        <instancesettings/>
+    </profile>
+</profiles>

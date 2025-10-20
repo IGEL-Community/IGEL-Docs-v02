@@ -1000,3 +1000,15 @@ done
 This is a comment section
 - <a href="../Scripts/HOWTO-COSMOS-sane.tar.bz2.250721-1.zip" download>Download SANE Debug Tools</a>
 -->
+
+-----
+
+## FAQ - Stratodesk
+
+**Q:** What happens when license / subscription expires?
+
+**A:** Assuming all legacy Stratodesk licensing; nearly all are perpetually licensed and will never expire. It is only maintenance and support being renewed annually. For the few legacy subscription Stratodesk customers and all new IGEL Stratodesk additional licenses purchased, subscriptions on Stratodesk act the same. At expiration, you will still have full management of the device. You will not be able to add new devices, which also include the ability to factory reset. Everything will work but you would be limited if you had to bring on a new device or need to factory reset a device..
+
+**Q:** What are the steps to migrate a Stratodesk device to IGEL device?
+
+**A:** Video showing the steps to migrate a Straodesk device to IGEL device: [Stratodesk to IGEL Conversion Summary](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Channel-Demos/#stratodesk-to-igel-conversion-summary)

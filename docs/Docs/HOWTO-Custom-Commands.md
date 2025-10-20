@@ -59,6 +59,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 | Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a> |
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
 | Set Permissions on Apache Webdav Folder | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-apache.sh" download>LINK to script</a> |
+| Set Island.io as default browser | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-island.sh" download>LINK to script</a> |
 
 -----
 
@@ -244,6 +245,40 @@ while inotifywait -qq -e create -e modify -e delete "$desktop_dir"; do
     # execute the sorting function inside the loop
     sort_icons
 done
+```
+
+-----
+
+- Set Island.io as the default browser
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Version: Mon Oct 20 12:23:17 PM MDT 2025
+#
+# Custom Commands: Desktop: Final Desktop Command
+#
+
+ACTION="cc-desktop-3fdc-island"
+
+# output to systemlog with ID amd tag
+LOGGER="logger -it ${ACTION}"
+
+echo "Starting" | $LOGGER
+
+if [ -e /services/island/usr/bin/island-browser-stable ]; then
+  echo "APT FOUND: /services/island/usr/bin/island-browser-stable found" | $LOGGER
+  xdg-settings set default-web-browser island-browser.desktop
+else
+  echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found" | $LOGGER
+fi
+
+echo "Finished" | $LOGGER
+
+exit 0
 ```
 
 -----

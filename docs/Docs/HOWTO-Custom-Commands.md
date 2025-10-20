@@ -214,7 +214,7 @@ function sort_icons {
         fi
         # check if the filename is already in the correct format
         if [[ ! "$file" =~ "${session_name}" ]]; then
-            if [[ "$file" =~ "cwa" ]]; then
+        https://kb.igel.com/en/igel-apps/current/citrix-workspace-app    if [[ "$file" =~ "cwa" ]]; then
                 log "Skipping ${file##*/} as cwa shortcuts should not be renamed"
             else
                 # rename the .desktop file
@@ -257,7 +257,8 @@ done
 #trap read debug
 
 #
-# Version: Mon Oct 20 12:23:17 PM MDT 2025
+# Version:
+# Set Island.io as the default browser
 #
 # Custom Commands: Desktop: Final Desktop Command
 #

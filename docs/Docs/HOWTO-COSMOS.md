@@ -877,6 +877,17 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 
 **A:** The [IGEL App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#igel-app-creator-portal) can be used to create OS 12 applications
 
+**Q:** What UMS Web App Settings are needed to distribute apps UMS?
+
+**A:** The following needs to be set:
+
+- UMS Web App - Apps Settings: `Download from UMS` and do not set `Block devices from downloading apps from the public App Portal as a fallback option` unless there is no internet access from OS 12 devices
+
+**NOTE:**
+
+- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-).
+
+
 -----
 
 ## FAQ - Advanced Device Redirection

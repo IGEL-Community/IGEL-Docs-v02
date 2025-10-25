@@ -190,4 +190,6 @@ This demo shows VueScan connecting to network attached Brother MFC-L2750DW and s
 
 This demo shows the steps to use Stratodesk NoTouch Center to deploy IGEL OS via LFI (image update) file of IGEL OS 12.
 
+- [IGEL KB: How to Migrate from Stratodesk to IGEL](https://kb.igel.com/new-features/current/how-to-migrate-from-stratodesk-to-igel)
+
  <iframe width="560" height="315" src="https://www.youtube.com/embed/yTwaswmLq28?si=1XVtm8ADmkm-4pkK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

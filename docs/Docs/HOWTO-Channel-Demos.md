@@ -86,7 +86,7 @@ delete_igel_licenses ALL && reset_to_defaults && reboot
 
 -----
 
-## IGEL App Creator Portal - Steps to build SpeedCrunch
+## IGEL App Creator Portal - Steps to build Simple-Scan
 
 The App creator portal replaces Custom Partitions by using recipe
 to create OS 12 application that can be deployed from your UMS.
@@ -97,9 +97,9 @@ This video will show the steps to take recipe from GitHub, use IGEL
 App creator portal to create application, and finally to add it to
 UMS and deploy to OS 12 device.
 
-- Show web site to SpeedCrunch
-- Show GitHub recipe for SpeedCruch
-- Take SpeedCrunch.zip and use in IGEL App Creator Portal
+- Demo Simple-Scan (native image / document scanner app)
+- Show GitHub recipe for Simple-Scan
+- Take simple_scan-community.zip and use in IGEL App Creator Portal
 - Download app
 - Download certificate 
 - Setup in UMS
@@ -107,12 +107,11 @@ UMS and deploy to OS 12 device.
 
 Links for additional information:
 
-- [SpeedCrunch Web site](https://heldercorreia.bitbucket.io/speedcrunch/)
 - [IGEL Community App Recipes](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 - [HOWTO: Add Applications - App Creator Portal](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#igel-app-creator-portal)
 - [HOWTO: Add Application - SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hZZLVqsvAjs?si=6zweUwuXxVXmYX5m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0-6_4AV19s0?si=J9vK0Rz9AIXo9Hov" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -----
 

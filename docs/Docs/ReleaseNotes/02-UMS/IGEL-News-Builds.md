@@ -4,6 +4,150 @@
 
 ----
 
+## 2025-09-23 - [12.09.110](Readme-12.09.110.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+UMS Server:
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client: 
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit) 			
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+Microsoft SQL Server 2016 (with Cluster Support)
+Microsoft SQL Server 2017 (with Cluster Support)
+Microsoft SQL Server 2019 (with Cluster Support)
+Microsoft SQL Server 2022 (with Cluster Support)
+Oracle 21c (with Cluster Support)
+PostgreSQL 11 - 15
+Apache Derby 10.9 - 10.14
+Amazon Aurora PostgreSQL (Compatible with PostgreSQL 11 – 15) 
+Azure SQL Managed Instance
+
+Browser:
+Microsoft Edge 137.0.+
+Mozilla Firefox 139.0.+
+Google Chrome 137.0.+
+
+
+=============================================================================
+New features:
+=============================================================================
+
+[Admin tasks] 
+- Added: Admin task to export / delete OS12 logging messages. 
+
+[DB commandline tools] 
+- Added: Export of the UMS ID is now possible with a new command in the IGEL UMS Administrator command-line interface. 
+
+[Devices] 
+- Added: Advanced System Information section now shows the information whether a device is currently routed through a reverse-proxy connector. 
+  
+[IGEL Management Interface (IMI)] 
+- Added: IMI / Device Details: the response now contains a new field connectedViaReverseProxy that indicates whether the device is currently routed through a reverse-proxy connector. 
+
+[Installer (windows)] 
+- Added: Option to manually search for a user during installation to run the services with.
+
+[Unified Protocol] 
+- Added: The CA Proxy Feature now supports a CA Label as defined in RFC 7030. 
+- Tested: Compatibility with AWS ALB. 
+- Added: New configuration option to support the encoding type of client certificates forwarded by AWS ALB. 
+
+[Views]
+- Added: New view criterion 'Connected via Reverse Proxy'.
+
+[ums] 
+- Added: Admin task to export/delete OS12 logging messages. 
+
+=============================================================================
+Resolved issues:
+=============================================================================
+ 
+[AD / LDAP integration] 
+- Fixed: AD group membership stored in database could cause problems if an AD user creates a job. 
+
+[Administrator application] 
+- Changed: Misleading message when an external database is activated and no valid Enterprise license is present. 
+
+[DB commandline tools] 
+- Fixed: The import of Web Certificates via IGEL UMS Administrator command-line interface was no longer possible.  
+
+[Device Service] 
+- Fixed: Custom values for instances defined in profiles not applied to device.
+- Fixed: OS12 configurations with template key HOSTNAME used device name instead of network name as value. Now OS12 uses the network name as OS11 does.      
+
+[Views] 
+- Fixed: Superfluous errors were logged during calculation of view results. 
+
+[UMS common] 
+- Fixed: Issue where ICG installation could fail if the UMS web port was set to something other than the default (8443). 
+
+
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+New features:
+=============================================================================
+
+[Devices]
+- Added: Device connection via reverse proxy is now displayed in the device details.
+- Added: Optional CA Label for CA Configuration
+
+
+[Search]
+- Added: Reverse Proxy Connection is now available for the search in the UMS Web App.
+
+
+[Automation]
+- Added: New Admin task: "Delete logging data (OS 12 and Web App)".
+
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Devices]
+- Fixed: The icon in CA Proxy settings showed an incorrect state for the configuration and the uploaded keystore.
+- Fixed: Devices could not be unassigned from a profile via the profile page.
+
+
+[Search]
+- Fixed: Message was delayed or not shown immediately when clicking the "Reindex all" button.
+```
+
+----
+
 ## 2025-08-26 - [12.09.100](Readme-12.09.100.txt)
 
 ```

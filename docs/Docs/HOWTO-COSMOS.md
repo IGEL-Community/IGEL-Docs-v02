@@ -155,6 +155,22 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** The UMS license file is located here: `/opt/IGEL/RemoteManager/rmguiserver/ums_license.lic`
 
+**Q:** How to update UMS license file from the command line?
+
+**A:** Here are the commands to show license state and to update license for UMS
+
+- Show state of UMS license:
+
+```bash linenums="1"
+/usr/local/bin/umsadmin-cli ums-license state
+```
+
+- Register a new license file:
+
+```bash linenums="1"
+/usr/local/bin/umsadmin-cli ums-license register -f /path-to-license-file/license-file.lic
+```
+
 -----
 
 ## FAQ - UMS

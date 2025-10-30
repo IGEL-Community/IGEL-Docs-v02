@@ -117,7 +117,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What is needed for UMS 12 to support OS 11 licensing?
 
-**A:** EMP will need to be created from WP licensing.  [IGEL KB: Using IGEL OS 11 with IGEL PAS: Creating an EMP Product Pack from a WE Product Pack](https://kb.igel.com/en/igel-subscription-and-more/current/the-igel-os-11-migration-plan)
+**A:** EMP will need to be created from WP licensing. [IGEL KB: How to Use IGEL OS 11 with IGEL Subscription - Create an EMP Product Pack from a WE Product Pack](https://kb.igel.com/en/igel-subscription-and-more/current/how-to-use-igel-os-11-with-igel-subscription-creat)
 
 **Q:** Can UMS 12 remove licenses in the ILP for deleted OS 12 devices?
 
@@ -522,7 +522,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** What is required of OS 11 device to upgrade to OS 12?
 
-**A:** At least `4GB` RAM and `8GB` Disk is needed for OS 12. [IGEL KB: Requirements for IGEL OS 12](https://kb.igel.com/en/hardware/current/devices-supported-by-igel-os-12)
+**A:** At least `4GB` RAM and `8GB` Disk is needed for OS 12. [IGEL KB: Devices Supported by IGEL OS 12](https://kb.igel.com/en/hardware/current/devices-supported-by-igel-os-12-1)
 
 **Q:** How do I upgrade an OS 11 device to OS 12?
 
@@ -658,7 +658,6 @@ https://yourICG:8443/usg/server-status
 
 **A:** This sequence cannot be shared to the public. 
 
-<!---
 This is a comment section
 ```mermaid
 sequenceDiagram
@@ -677,7 +676,6 @@ sequenceDiagram
   C->>A: 8 - Send OBS Params to IGEL OS
   A->>B: 9 - Initiate Onboarding
 ```
--->
 
 **Q:** How to test OBS connection?
 

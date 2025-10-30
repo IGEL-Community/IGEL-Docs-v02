@@ -112,7 +112,7 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - Curl – a powerful command line tool for sending or transferring data to a server. When using curl in combination with HTTPS, you can see the TLS handshake in real time.
     - Useful example: `curl –vvI https://icg.domain.com:8443`
 - Openssl – the Swiss Army Knife of certificate/SSL/TLS troubleshooting.
-    - Check a certificate: `openssl x509 -in certificate.crt -text –noout`
+    - Check a certificate: `openssl x509 -in certificate.crt –noout -text`
     - Check an SSL Connection: `openssl s_client -connect www.paypal.com:443`
     - Extract key/cert from pfx: 
         - `openssl pkcs12 -in [yourfile.pfx] -nocerts -out [privatekey.key]`
@@ -192,3 +192,106 @@ find . -type f \( -name "*.cer" -o -name "*.crt" -o -name "*.pem" \) -exec echo 
  ```bash linenums="1"
  echo "" | openssl s_client -showcerts UMS-SERVER-FQDN:8443 | openssl crl2pkcs7 -nocrl -certfile /dev/stdin | openssl pkcs7 -noout -print_certs -text
  ```
+
+ -----
+
+ -----
+
+## Hybrid SAN (external + internal) Example
+
+How to create a certificate / key pair that ensures the certificate contains a valid subject name matching the server’s IP address, or the server’s hostname, or a Subject Alternative Name (SAN) listing multiple IPs or hostnames?
+
+1) Create server.cnf
+
+```ini
+# server.cnf
+[ req ]
+default_bits       = 2048
+distinguished_name = req_dn
+req_extensions     = v3_req
+prompt             = no
+
+[ req_dn ]
+C  = US
+ST = CA
+L  = San Francisco
+O  = Example Corp
+OU = Production
+CN = prod-web.example.com        # Primary name (CN)
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[ alt_names ]
+# External hostnames
+DNS.1 = prod-web.example.com
+DNS.2 = api.example.com
+
+# Internal hostnames
+DNS.3 = web.internal.lan
+
+# External public IP
+IP.1  = 203.0.113.25
+
+# Internal IPs
+IP.2  = 10.0.0.5
+IP.3  = 192.168.1.10
+```
+
+2) Generate key + CSR
+
+```bash linenums="1"
+# RSA (common)
+openssl genrsa -out server.key 2048
+
+# Create CSR with SANs from server.cnf
+openssl req -new -key server.key -out server.csr -config server.cnf
+```
+
+3) Get a cert
+
+  - A) Self-signed (testing/dev)
+
+```bash linenums="1"
+openssl x509 -req -in server.csr -signkey server.key \
+  -out server.crt -days 365 -extensions v3_req -extfile server.cnf
+```
+
+  - B) Signed by your internal CA
+
+```bash linenums="1"
+# Assuming you have ca.crt / ca.key
+openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
+  -out server.crt -days 398 -extensions v3_req -extfile server.cnf
+```
+
+
+**NOTE:** (For public CAs, submit `server.csr` to the CA. They’ll embed the SANs from the CSR.)
+
+4) Verify SANs & subject
+
+```bash linenums="1"
+openssl x509 -in server.crt -noout -text | grep -A1 "Subject:"
+openssl x509 -in server.crt -noout -text | sed -n '/Subject Alternative Name/,+1p'
+```
+
+**NOTE:** You should see:
+
+  - `Subject: CN=prod-web.example.com`
+
+  - `X509v3 Subject Alternative Name: with DNS:prod-web.example.com, DNS:api.example.com, DNS:web.internal.lan, IP Address:203.0.113.25, IP Address:10.0.0.5, IP Address:192.168.1.10.`
+
+- One-liner (OpenSSL ≥ 1.1.1), no config file
+
+```bash linenums="1"
+openssl req -new -x509 -nodes -days 365 \
+  -out server.crt -keyout server.key \
+  -subj "/C=US/ST=CA/L=San Francisco/O=Example Corp/OU=Production/CN=prod-web.example.com" \
+  -addext "basicConstraints=CA:FALSE" \
+  -addext "keyUsage=digitalSignature,keyEncipherment" \
+  -addext "extendedKeyUsage=serverAuth" \
+  -addext "subjectAltName=DNS:prod-web.example.com,DNS:api.example.com,DNS:web.internal.lan,IP:203.0.113.25,IP:10.0.0.5,IP:192.168.1.10"
+```

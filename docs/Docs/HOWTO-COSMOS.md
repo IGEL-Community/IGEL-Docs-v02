@@ -179,6 +179,14 @@ If the client's clock is off, then it will break either or both of these functio
 
 **A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/post-installation-configuration-of-the-igel-ums-se). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
 
+**Q:** How to validate certificate chains supplied by the UMS Server
+
+**A:** Run the following command (replace `UMS-SERVER-FQDN` with your UMS server FQDN or IP address):
+
+ ```bash linenums="1"
+ echo "" | openssl s_client -showcerts UMS-SERVER-FQDN:8443 | openssl crl2pkcs7 -nocrl -certfile /dev/stdin | openssl pkcs7 -noout -print_certs -text
+ ```
+
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
 **A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/en/universal-management-suite/current/known-issue-ums-cannot-connect-to-the-ms-sql-datab)

@@ -193,7 +193,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
-**A:** [IGEL KB: Which UMS Directories Should Be Scanned for Viruses, Which Can Be Excluded?](https://kb.igel.com/en/universal-management-suite/current/which-ums-directories-should-be-scanned-for-viruse)
+**A:** [IGEL KB: Best Practices: Antivirus Configuration on IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/best-practices-antivirus-configuration-on-igel-ums)
 
 **Q:** What is new in UMS 12?
 

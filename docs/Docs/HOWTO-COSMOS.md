@@ -1019,15 +1019,8 @@ done
 
 - IGEL OS 12 does not currently have SANE debug tools
 
-- Steps to get SANE tools onto OS 12:
-    - Use UMS files to transfer tar file to OS 12 (/wfs folder)
-    - Command to extract tar file (mkdir -p /wfs/sane && tar xvf /wfs/sane.tar.bz2 -C /wfs/sane)
-    - To run sane commands (sane-find-scanner)
-    - export LD_LIBRARY_PATH=/wfs/sane/usr/lib && /wfs/sane/usr/bin/sane-find-scanner
-    - export LD_LIBRARY_PATH=/wfs/sane/usr/lib && /wfs/sane/usr/bin/scanimage
-    - Other commands are in /wfs/sane/usr/bin
+- Recipe to build [SANE debug tools](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/sane_debug_tools) app
 
-- [Download SANE debug tools](../Scripts/HOWTO-COSMOS-sane.tar.bz2.250721-1.zip)
 
 <!---
 This is a comment section

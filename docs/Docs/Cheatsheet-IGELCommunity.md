@@ -136,6 +136,8 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [resetvalue_tree](Cheatsheet-IGELOS-General.md#resetvalue_tree) | :material-check-bold: | :material-check-bold:| Reset all settings under each of the registry classes back to default                   |
 | [setcryptparam](Cheatsheet-IGELOS-General.md#setcryptparam) | :material-check-bold: | :material-check-bold:| Saves encrypted Data like Password to IGEL Registry      |
 | [setparam](Cheatsheet-IGELOS-General.md#setparam)       | :material-check-bold: | :material-check-bold:| Write variable to registry                                  |
+| [soft_reboot](Cheatsheet-IGELOS-General.md#soft_reboot) | :material-close-circle: | :material-check-bold:| Soft reboot |
+| [soft_shutdown](Cheatsheet-IGELOS-General.md#soft_shutdown) | :material-close-circle: | :material-check-bold:| Soft shutdown |
 | setup                                                   | :material-check-bold: | :material-close-circle: | Start IGEL Setup                                         |
 | setup-assistant | :material-close-circle: | :material-check-bold: | Start IGEL Setup (start as user) |
 | show_usbconfig                                          | :material-check-bold: | :material-check-bold:| List configs from USB Storage                               |

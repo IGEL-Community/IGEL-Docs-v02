@@ -291,6 +291,22 @@ write_rmsettings
 get system.remotemanager.ums_structure_tag
 ```
 
+## soft_reboot
+
+Soft reboot
+
+```bash linenums="1"
+soft_reboot
+```
+
+## soft_shutdown
+
+Soft shutdown
+
+```bash linenums="1"
+soft_shutdown
+```
+
 ## vdm_client0
 
 After creating a VMware Horizon session, you can get it to run fully as User from command line with the following command.

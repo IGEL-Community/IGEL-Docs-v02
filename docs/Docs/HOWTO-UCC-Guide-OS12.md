@@ -47,7 +47,7 @@ At the end of some of the sections you will find also results from tests.
 
 The use of the document will be done on your own risks and without support from IGEL Technology. 
 
-The guide will cover the last public IGEL OS build and in addition to appropriate private build that may address key item not available in current public build.
+The guide will cover the latest public build of apps.
 
 If you need additional help, you can contact [IGEL Community](https://www.igelcommunity.com) on slack.
 

@@ -556,24 +556,6 @@ uname
 Linux
 ```
 
-## user_shutdown
-
-shutdown the system
-
-```bash linenums="1"
-user_shutdown
-```
-
-## user_reboot
-
-reboot the system
-
-```bash linenums="1"
-user_reboot
-```
-
-- [How to Perform an Emergency Reboot with IGEL UMS](https://www.igelcommunity.com/post/how-to-perform-an-emergency-reboot-with-igel-ums)
-
 ## vi
 
 texteditor

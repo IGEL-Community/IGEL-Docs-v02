@@ -6,7 +6,7 @@ Comments here
 
 - IGEL UMS Version Base: [UMS Release Notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
-- IGEL OS Firmware Base: [IS 12 Release Notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/04-OS12/)
+- IGEL OS Firmware Base: [OS 12 Release Notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/04-OS12/)
 
 
 - [Cisco JVDI Client](https://app.igel.com/cisco_jvdi/)

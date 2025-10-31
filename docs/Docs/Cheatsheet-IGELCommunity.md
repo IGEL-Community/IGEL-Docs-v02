@@ -82,8 +82,6 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [touch](Cheatsheet-Linux-General.md#touch)                 | :material-check-bold: | :material-check-bold:| create a file                              |
 | [tr](Cheatsheet-Linux-General.md#tr)                       | :material-check-bold: | :material-check-bold:| translates, deletes, and squeezes characters |
 | [uname](Cheatsheet-Linux-General.md#uname)                 | :material-check-bold: | :material-check-bold:| show linux details                         |
-| [user_reboot](Cheatsheet-Linux-General.md#user_reboot)     | :material-check-bold: | :material-check-bold:| reboot the system                          |
-| [user_shutdown](Cheatsheet-Linux-General.md#user_shutdown) | :material-check-bold: | :material-check-bold:| shutdown the system                        |
 | [vi](Cheatsheet-Linux-General.md#vi)                       | :material-check-bold: | :material-check-bold:| texteditor                                 |
 | [watch](Cheatsheet-Linux-General.md#watch)                 | :material-check-bold: | :material-check-bold:| repeat periodic a command                  |
 | [wget](Cheatsheet-Linux-General.md#wget)                   | :material-check-bold: | :material-check-bold:| non-interactive network downloader         |
@@ -146,8 +144,8 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | superclasses                                            | :material-check-bold: | :material-check-bold:| List all available superclasses                             |
 | systemd-resolve --flush-caches                          | :material-check-bold: | :material-check-bold:| Flush DNS cache                                             |
 | update                                       | :material-check-bold: | :material-close-circle:| Start firmware update                                       |
-| user_reboot                                             | :material-check-bold: | :material-check-bold:| Reboot as user                                              |
-| user_shutdown                                           | :material-check-bold: | :material-check-bold:| Shutdown as User                                            |
+| [user_reboot](Cheatsheet-IGELOS-General.md#user_reboot)     | :material-check-bold: | :material-close-circle:| reboot the system                          |
+| [user_shutdown](Cheatsheet-IGELOS-General.md#user_shutdown) | :material-check-bold: | :material-close-circle:| shutdown the system                        |
 | [vdm_client0](Cheatsheet-IGELOS-General.md#vdm_client0) | :material-check-bold: | :material-check-bold:| Start VMware Horizon client |
 | vget                                                    | :material-check-bold: | :material-check-bold:| Get specification for a variable                            |
 | write_rmsettings                                        | :material-check-bold: | :material-check-bold:| Write local setup changes back to UMS.                      |

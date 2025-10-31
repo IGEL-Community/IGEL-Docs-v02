@@ -307,6 +307,24 @@ Soft shutdown
 soft_shutdown
 ```
 
+## user_shutdown
+
+shutdown the system
+
+```bash linenums="1"
+user_shutdown
+```
+
+## user_reboot
+
+reboot the system
+
+```bash linenums="1"
+user_reboot
+```
+
+- [How to Perform an Emergency Reboot with IGEL UMS](https://www.igelcommunity.com/post/how-to-perform-an-emergency-reboot-with-igel-ums)
+
 ## vdm_client0
 
 After creating a VMware Horizon session, you can get it to run fully as User from command line with the following command.

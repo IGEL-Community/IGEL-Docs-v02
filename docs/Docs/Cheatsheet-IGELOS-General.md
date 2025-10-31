@@ -93,6 +93,14 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null
 {"status":"success","country":"United States","countryCode":"US","region":"NM","regionName":"New Mexico","city":"Corrales","zip":"87048","lat":35.2358,"lon":-106.6177,"timezone":"America/Denver","isp":"Comcast Cable Communications, LLC","org":"Comcast Cable Communications, LLC","as":"AS7922 Comcast Cable Communications, LLC","query":"73.242.149.67"}
 ```
 
+## microsoft-edge-stable
+
+Start Edge browser in App Mode for Citrix Storefront and similar pages - to use with Custom App function
+
+```bash linenums="1"
+microsoft-edge-browser --app=https://storefront-url.domain.org --start-maximized
+```
+
 ## florence
 
 Onscreen keyboard

@@ -3,6 +3,10 @@
 
 -----
 
+## IGEL UMS Downloads via [app.igel.com/software](https://app.igel.com/software)
+
+## IGEL UMS Downloads via [direct links](../../HOWTO-Setup-Lab-Sandbox-Environment.md#appendix-current-igel-downloads)
+
 ## [IGEL News: Builds](IGEL-News-Builds.md)
 
 Lists what changes are in the build.

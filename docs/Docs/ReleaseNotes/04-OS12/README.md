@@ -1,6 +1,14 @@
 # IGEL OS 12 Branches
 
-Shows the branches of IGEL OS 12.
+-----
+
+## IGEL OS 12 Downloads via [app.igel.com/software](https://app.igel.com/software)
+
+## IGEL OS 12 Downloads via [direct links](../../HOWTO-Setup-Lab-Sandbox-Environment.md#appendix-current-igel-downloads)
+
+-----
+
+## Shows the branches of IGEL OS 12.
 
 - [Installing the Base System via IGEL OS Creator (OSC)](https://kb.igel.com/howtocosmos/en/installing-the-base-system-via-igel-os-creator-osc-77865870.html)
 

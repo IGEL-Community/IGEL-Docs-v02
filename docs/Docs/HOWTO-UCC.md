@@ -53,6 +53,19 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 -----
 
+# Citrix Scanner Auto Redirect
+
+Citrix USB support enables users to interact with a wide range of USB devices when connected to a virtual desktop. Users can plug USB devices into their computers and the devices are redirected to their virtual desktop after enabling auto-redirection. You can enable auto-redirection manually through configuration file settings. Auto-redirection of USB devices is disabled by default.
+
+- IGEL settings to enable for auto redirection:
+
+  - `app.cwa.wfclient.preferences0.autoredirectwhendevicesconnect`
+  - `app.cwa.wfclient.preferences%.autoredirectwhensessionstarts`
+
+- [Citrix KB: USB Scanner Is Not Being Automatically Redirected Within ICA Sessions](https://support.citrix.com/external/article/CTX330881/usb-scanner-is-not-being-automatically-r.html)
+
+-----
+
 ## IGEL + Citrix = HEVC
 
 Citrix recently shared an Early Access Release of the Citrix Workspace App for Linux 2408 (CWAL2408) with IGEL. One of the biggest features that are added, that I have been waiting for a very long time, is the H.265 enablement for Hardware Acceleration of the session delivery. 

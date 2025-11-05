@@ -57,12 +57,32 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 Citrix USB support enables users to interact with a wide range of USB devices when connected to a virtual desktop. Users can plug USB devices into their computers and the devices are redirected to their virtual desktop after enabling auto-redirection. You can enable auto-redirection manually through configuration file settings. Auto-redirection of USB devices is disabled by default.
 
+- [Citrix KB: USB Scanner Is Not Being Automatically Redirected Within ICA Sessions](https://support.citrix.com/external/article/CTX330881/usb-scanner-is-not-being-automatically-r.html)
+
+### Make sure the Citrix Policy Settings below are enabled and are being applied to the correct Machine Object of your Citrix environment:
+
+- Client TWAIN Device Redirection > Allowed => ok checked
+- Client USB Device Redirection > Allowed => ok checked 
+- Client Plug and Play Device Redirection > ok checked 
+- The Scanner Drivers must be up to date within the Local Endpoint using Workspace App. => NOK : Driver none with IGEL OS
+
+### Make sure the following settings are enabled within “Citrix Workspace Preferences > Connections > Generic USB Devices”:
+
+- When a session starts, connect devices automatically
+- When a new device is connected while a session is running, connect the device automatically
+
 - IGEL settings to enable for auto redirection:
 
     - `app.cwa.wfclient.preferences0.autoredirectwhendevicesconnect`
     - `app.cwa.wfclient.preferences%.autoredirectwhensessionstarts`
 
-- [Citrix KB: USB Scanner Is Not Being Automatically Redirected Within ICA Sessions](https://support.citrix.com/external/article/CTX330881/usb-scanner-is-not-being-automatically-r.html)
+### USB always on (Printer, Scanner, etc.)
+
+- System > Firmware Customization > Custom Commands > Desktop
+
+```bash linenums="1"
+echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
+```
 
 -----
 

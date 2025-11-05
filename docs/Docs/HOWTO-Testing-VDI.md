@@ -6,7 +6,7 @@ VDI vendors provide testing / demo environments. Below are some notes on how to 
 ## [IGEL Community UCC Guide](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-UCC/)
 -->
 
-## [IGEL Community UCC Guide](HOWTO-UCC-Guide.md)
+## [IGEL Community UCC Guide](HOWTO-UCC-Guide-OS12.md)
 
 ----------
 
@@ -32,17 +32,13 @@ Windows 365 Cloud PC and Azure Virtual Desktop are both cloud-based solutions th
 
 -----
 
-## Omnissa (VMware) Horizon (TestDrive)
-
-### 17 December - Omnissa TestDrive has migrated to the new demo domain
-
-Omnissa TestDrive has migrated to the new demo domain, `asismon.com`. `asismon.com`, an anagram of Omnissa, has replaced `vmtestdrive.com`.
-
-The demo domain represents the fake corporate entity that TestDrive RTU environments simulate. Technically, it's the domain for your TestDrive User Principle Name (UPN) and email address. Therefore, `username@vmtestdrive.com` is now `username@asismon.com`.
+## Omnissa Horizon (TestDrive)
 
 ### What is TestDrive?
 
 TestDrive is a self-service, cloud-hosted product demonstration platform available to Omnissa Employees, Partners and their customers which provides instant access to a fully featured, globally available, and integrated suite of Omnissa products.
+
+- [Omnissa Test Drive Web Site](https://testdrive.omnissa.com/)
 
 ### TestDrive Benefits
 
@@ -50,21 +46,18 @@ TestDrive is a self-service, cloud-hosted product demonstration platform availab
 - Fully configured demos where users can gain hands-on experience.
 - Accelerates sales by inviting customers to experience Omnissa solutions in action, on-demand.
 
-### [TestDrive KB](https://tdhelp.omnissa.com/hc/en-us/categories/28107641685523)
+### [TestDrive KB](https://omnissa.atlassian.net/helpcenter/testdrive/)
 
-### [Getting Started with TestDrive](https://tdhelp.omnissa.com/hc/en-us)
-
-### [IGEL KB: Horizon Session](https://kb.igel.com/en/igel-os/current/horizon-client-session)
-
-### [IGEL KB: Horizon Articles](https://kb.igel.com/en/igel-os/current/vmware-horizon-1)
+### [IGEL KB: Horizon Session](https://kb.igel.com/en/igel-apps/current/vmware-horizon-client)
 
 <!---
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.discovery.vmware.com`
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.vmtestdrive.com`
 - OS 11: Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `horizon.td.omnissa.com`
+- Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `cloud.omnissahorizon.com`
 -->
 
-- Sessions > Horizon Client > Horizon Client Sessions > Connection settings > Server URL > `cloud.omnissahorizon.com`
+- Horizon Client > Horizon Client Sessions > Session NAME > Connection Settings > Server URL > `horizon.td.omnissa.com`
 
 -----
 

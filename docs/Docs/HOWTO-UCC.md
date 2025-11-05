@@ -53,7 +53,7 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
 
 -----
 
-# Citrix Scanner Auto Redirect
+## Citrix Scanner Auto Redirect
 
 Citrix USB support enables users to interact with a wide range of USB devices when connected to a virtual desktop. Users can plug USB devices into their computers and the devices are redirected to their virtual desktop after enabling auto-redirection. You can enable auto-redirection manually through configuration file settings. Auto-redirection of USB devices is disabled by default.
 

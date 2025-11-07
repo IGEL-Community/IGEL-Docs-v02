@@ -123,6 +123,50 @@ Measurement Id: G-PTNHLB3WSX
 
 ----------
 
+## IGEL KB (PDF files)
+
+A snapshot in time, in PDF format, of the [kb.igel.com](https://kb.igel.com) site.
+
+These documents can be used if IGEL KB site is offline for maintenance.
+
+### IGEL Breaking News
+
+- [Importanant Information](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/00-Important-Information.pdf)
+
+- [IGEL Stratodesk](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/01-IGEL-Stratodesk.pdf)
+
+- [New Features](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/02-New-Features.pdf)
+
+### IGEL OS Platform
+
+- [How to Start with IGEL](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/10-How-to-Start-with-IGEL.pdf)
+
+- [IGEL Subscription and More](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/11-IGEL-Subscription-and-More.pdf)
+
+- [Universal Management Suite](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/12-Universal-Management-Suite.pdf)
+
+- [IGEL Cloud Gateway](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/14-IGEL-Cloud-Gateway.pdf)
+
+- [Security and Saftey](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/15-Security-and-Safety.pdf)
+
+### IGEL OS 12 Apps
+
+- [IGEL OS Base System](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/20-IGEL-OS-Base-System.pdf)
+
+- [IGEL Apps](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/21-IGEL-Apps.pdf)
+
+- [Third Party Apps](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/22-Third-Party-Apps.pdf)
+
+- [IGEL App Creator](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/23-IGEL-App-Creator.pdf)
+
+### Genernal Product Information
+
+- [Hardware](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/03-General-Product-Information/30-Hardware.pdf)
+
+### IGEL OS 11
+
+- [IGEL OS 11](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/04-IGEL-OS-11/40-IGEL-OS-11.pdf)
+
 <!---
 Comments
 ## IGEL KB (PDF files)
@@ -131,73 +175,6 @@ A snapshot in time, in PDF format, of the [kb.igel.com](https://kb.igel.com) sit
 
 These documents can be used if IGEL KB site is offline for maintenance.
 
-### IGEL Platform
-
-- [How to Start with IGEL](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/01-How_to_Start_with_IGEL_COSMOS.pdf)
-- [IGEL PAS](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/02-IGEL_COSMOS_PAS.pdf)
-- [UMS 12 - Articles](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03a-UMS_Articles.pdf)
-- [UMS 12 - Installation and Sizing Guidelines](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03b-Installation_and_Sizing_Guidelines_for_IGEL_UMS.pdf)
-- [UMS 12 - Reference Manual](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03c-UMS_Reference_Manual.pdf)
-- [UMS 12 - Web App](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03d-IGEL_UMS_Web_App.pdf)
-- [UMS 12 - Extensions](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03e-UMS_Extensions.pdf)
-- [UMS 12 - Release Notes](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/03f-UMS_Release_Notes.pdf)
-- [IGEL Management Interface (IMI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/04-IGEL_Management_Interface_IMI.pdf)
-- [Hardware - Supported Devices](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/05a-Hardware_Supported_Devices.pdf)
-- [Hardware - UD Pocket](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/05b-UD_Pocket.pdf)
-- [UD Pocket Manual](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/05c-UD_Pocket_Manual.pdf)
-- [IGEL Cloud Gateway (ICG)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/01-COSMOS_Platform/06-IGEL_Cloud_Gateway_ICG.pdf)
-
-
-----------
-
-----------
-
-### IGEL OS Apps
-
-- [CUPS Printing](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/15-CUPS_Printing_App.pdf)
-- [Chromium Browser](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/04-Chromium_Browser.pdf)
-- [Cisco Jabber VDI (JVDI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/07-Cisco_Jabber_VDI_JVDI.pdf)
-- [Cisco Webex Meetings VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/06-Cisco_Webex_Meetings_VDI.pdf)
-- [Cisco Webex VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/05-Cisco_Webex_VDI.pdf)
-- [Citrix Workspace App](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/01-Citrix_Workspace_App.pdf)
-- [FabulaTech Plugins](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/11-FabulaTech_Plugins.pdf)
-- [FabulaTech Scanner for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/13-FabulaTech_Scanner_for_Remote_Desktop.pdf)
-- [FabulaTech USB for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/10-FabulaTech_USB_for_Remote_Desktop.pdf)
-- [FabulaTech Webcam for Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/12-FabulaTech_Webcam_for_Remote_Desktop.pdf)
-- [IGEL Agent for Imprivata](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/09-IGEL_Agent_for_Imprivata.pdf)
-- [IGEL Azure Virtual Desktop Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/02-IGEL_Azure_Virtual_Desktop_Client.pdf)
-- [IGEL OS Base System](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/00-IGEL_OS_Base_System.pdf)
-- [IGEL Remote Desktop](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/16-IGEL_Remote_Desktop.pdf)
-- [IGEL Windows 365](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/17-IGEL_Windows_365.pdf)
-- [Media Player Parole](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/14-Media_Player_Parole.pdf)
-- [VMware Horizon Client](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/03-VMware_Horizon_Client.pdf)
-- [Zoom Media Plugins for VDI](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/02-IGEL_OS_Apps/08-Zoom_Media_Plugins_for_VDI.pdf)
-
-----------
-
-----------
-
-### IGEL OS 11
-
-- [Good to Know](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/01-Good_to_Know.pdf)
-- [Licenses and More](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/02-Licenses_and_More.pdf)
-- [IGEL OS - Partner Solutions](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03a-IGEL_OS_Partner_Solutions.pdf)
-- [IGEL OS - Articles](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03b-IGEL_OS_Articles.pdf)
-- [IGEL OS - Reference Manual](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03c-IGEL_OS_Reference_Manual.pdf)
-- [IGEL OS - UD Pocket Manual](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03d-IGEL_OS_UD_Pocket_Manual.pdf)
-- [IGEL OS - OS Creator](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03e-IGEL_OS_Creator.pdf)
-- [IGEL OS - Creator for Windows (OSCW)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03f-IGEL_OS_Creator_for_Windows_OSCW.pdf)
-- [IGEL OS - Release Notes](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/03g-IGEL_OS_Release_Notes.pdf)
-- [IGEL OS - RPI4](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/04-IGEL_OS_RPI4.pdf)
-- [Endpoint Management (UMS)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/05-Endpoint_Management_UMS.pdf)
-- [IGEL Cloud Gateway (ICG)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/07-IGEL_Cloud_Gateway_ICG.pdf)
-- [Security and Safety](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/08-Security_and_Safety.pdf)
-- [IGEL OS Deployment Appliance](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/09-IGEL_OS_Deployment_Appliance.pdf)
-- [IGEL Management Interface (IMI)](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/03-IGEL_OS_11/10-IGEL_Management_Interface_IMI.pdf)
-
-----------
-
-----------
 -->
 
 ## IGEL Channel Partners

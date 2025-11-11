@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-11-11 - [11.10.437](readme11.10.437.txt)
+
+```
+The new PRIVATE BUILD 11.10.437 for IGEL Workspace is ready.
+
+This build is based on 11.10.430.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Remote Management
+
+* Fixed limit of the terminal key used in the upgrade process - now it is
+  possible to use terminal key up to 64 bytes.
+```
+
+-----
+
 ## 2025-10-20 - [11.10.436](readme11.10.436.txt)
 
 ```

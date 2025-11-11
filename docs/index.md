@@ -131,7 +131,7 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ### IGEL Breaking News
 
-- [Importanant Information](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/00-Important-Information.pdf)
+- [Important Information](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/00-Important-Information.pdf)
 
 - [IGEL Stratodesk](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/01-IGEL-Stratodesk.pdf)
 

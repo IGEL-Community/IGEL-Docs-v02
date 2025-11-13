@@ -13,6 +13,26 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-11-13 - [11.10.252](readme11.10.252.txt)
+
+```
+The new PRIVATE BUILD 11.10.252 for IGEL Workspace is ready.
+
+This build is based on 11.10.250.
+
+These are the release notes published with that release:
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Integrated Citrix workspace app 23.07  
+  Available workspace apps in this release 23.07 (default), 24.08, and 24.11
+```
+
+-----
+
 ## 2025-11-11 - [11.10.437](readme11.10.437.txt)
 
 ```

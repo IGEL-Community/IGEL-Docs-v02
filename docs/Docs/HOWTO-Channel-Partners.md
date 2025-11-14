@@ -36,6 +36,28 @@ This is a comment section
 
 ----------
 
+## Channel Partner PoC steps
+
+**NOTE:** Have the client complete the following steps ten (10) business days prior to PoC
+
+- Register with the [IGEL License Portal](https://activation.igel.com/)
+
+- Wait until they get an email from IGEL that says that their account has been registered and approved
+
+- Next register in the [IGEL Customer Portal](https://support.igel.com)
+
+- Wait until they get an email from IGEL stating that their account is ready
+
+- Login to [IGEL Support](https://support.igel.com/)
+
+- IGEL Trial License Activation Process – aka Delivery Tokens. Once they can log in to the ILP they can register and accept the EULA of the Delivery Token that IGEL provided
+
+- Client request partner assistance with installing the UMS, registering it with IGEL, and next steps for the PoC
+
+----------
+
+----------
+
 ## IGEL Education for Partners
 
 - [IGEL Education](https://www.igel.com/learn-and-connect/igel-education/)

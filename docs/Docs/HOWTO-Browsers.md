@@ -173,3 +173,44 @@ Custom Partitions (CP) can be created for the following browsers:
 ## Citrix Enterprise Browser
 
 - [Take a Sneak Peak of Citrix Enterprise Browser and IGEL OS 12](https://www.igel.com/blog/take-a-sneak-peak-of-citrix-enterprise-browser-and-igel-os-12/)
+
+-----
+
+-----
+
+## Create Watcher Script to Automatically Run a Downloaded Program
+
+- Automatically running a downloaded program from browser is blocked
+
+- Create a watcher script to look for the program type to start
+
+- Create a custom application for this script and set it to auto start / run
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Watcher script that can be setup as custom application that is
+# auto started to watch the DOWNLOAD_DIR folder for file to
+# execute
+#
+
+DOWNLOAD_DIR="$HOME/Downloads"
+
+ACTION="watcher-${DOWNLOAD_DIR}"
+LOGGER="logger -it ${ACTION}"
+
+inotifywait -m -e close_write "$DOWNLOAD_DIR" | while read dir action file; do
+    echo "Detected: $file" | $LOGGER
+
+    # Run .bin automatically
+    if [[ "$file" == *.bin ]]; then
+        echo "Running program: $file" | $LOGGER
+        chmod +x "$dir/$file"
+        "$dir/$file" &
+    fi
+
+done
+```

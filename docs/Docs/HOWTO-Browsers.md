@@ -184,7 +184,7 @@ Custom Partitions (CP) can be created for the following browsers:
 
 - Create a watcher script to look for the program type to start
 
-- Create a custom application for this script and set it to auto start / run
+- Create a custom application for this script and set it to auto start / run (System > System Customization > Custom Application)
 
 ```bash linenums="1"
 #!/bin/bash

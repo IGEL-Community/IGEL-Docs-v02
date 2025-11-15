@@ -186,6 +186,8 @@ Custom Partitions (CP) can be created for the following browsers:
 
 - Create a custom application for this script and set it to auto start / run (System > System Customization > Custom Application)
 
+**NOTE:** This method can be used to start Bomgar remote support session from the browser
+
 ```bash linenums="1"
 #!/bin/bash
 #set -x

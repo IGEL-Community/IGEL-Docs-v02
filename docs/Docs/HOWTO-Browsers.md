@@ -93,6 +93,14 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 "NonRemovableProfileEnabled": false // recommended alongside BrowserSignin
 ```
 
+**Q:** How to disable offering to `save password` in Microsoft Edge?
+
+**A:** Set the following in profile `Edge Browser > Global Settings > Custom Setup > Custom Policies`
+
+```json linenums="1"
+"PasswordManagerEnabled": false // disable password manager
+```
+
 **Q:** How to open URL in Edge in full screen?
 
 **A:** Here is an example:

@@ -101,6 +101,14 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 "PasswordManagerEnabled": false // disable password manager
 ```
 
+**Q:** How to disable checking for updates for Microsoft Edge?
+
+**A:** Set the following in profile `Edge Browser > Global Settings > Custom Setup > Custom Policies`
+
+```json linenums="1"
+"UpdateDefault": 0 // disable checking for updates to edge
+```
+
 **Q:** How to open URL in Edge in full screen?
 
 **A:** Here is an example:

@@ -109,6 +109,23 @@ Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
 "UpdateDefault": 0 // disable checking for updates to edge
 ```
 
+**Q:** How to control audio / microphone for Microsoft Edge?
+
+**A:** Set the following in profile `Edge Browser > Global Settings > Custom Setup > Custom Policies`
+
+- For all sites:
+
+```json linenums="1"
+"AudioCaptureAllowed": true // allow all sites
+```
+
+- Only for trusted sites:
+
+```json linenums="1"
+"AudioCaptureAllowed": false, // do not allow
+"AudioCaptureAllowedUrls": ["https://trusted-site.example"] // exceptions
+```
+
 **Q:** How to open URL in Edge in full screen?
 
 **A:** Here is an example:

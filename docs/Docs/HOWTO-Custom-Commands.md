@@ -47,6 +47,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 
 ### Desktop
 
+
 | Desktop Execution Times | Description | Basename of Scripts |
 |-------------------------|-------------|---------------------|
 | Desktop initialization | Executed during the boot process, before the X server is started | cc-desktop-1ini- |

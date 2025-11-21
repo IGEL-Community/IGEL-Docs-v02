@@ -1,8 +1,16 @@
 # HOWTO Imprivata Notes
 
-## [IGEL KB: IGEL has been an Imprivata technology partner since 2011](https://kb.igel.com/en/igel-apps/current/introduction)
+## [IAFI Profile Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates)
+
+- These profiles are available as templates for assisting with configuration of the different supported workflows.
 
 ## [IGEL KB: IGEL Agent for Imprivata (IAFI) - General Feature Overview](https://kb.igel.com/en/igel-apps/current/igel-agent-for-imprivata-iafi-feature-matrix-compa)
+
+-----
+
+-----
+
+## [IGEL KB: IGEL has been an Imprivata technology partner since 2011](https://kb.igel.com/en/igel-apps/current/introduction)
 
 ## [IGEL KB: Configuration of the IGEL Agent for Imprivata on IGEL OS](https://kb.igel.com/en/igel-apps/current/configuration-of-the-igel-agent-for-imprivata-on-i)
 

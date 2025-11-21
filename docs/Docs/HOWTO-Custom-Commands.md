@@ -283,6 +283,7 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
+
 -----
 
 - UMS Shadow to device -- How to remove --> `Currently being shadowed - Disconnect`
@@ -312,7 +313,7 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
-remove being shadowed pop up
+
 -----
 
 -----

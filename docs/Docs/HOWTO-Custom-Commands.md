@@ -48,13 +48,13 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 ### Desktop
 
 | Desktop Execution Times | Description | Basename of Scripts |
-|-------------------------|-------------|----------------------
+|-------------------------|-------------|---------------------|
 | Desktop initialization | Executed during the boot process, before the X server is started | cc-desktop-1ini- |
 | Before desktop start | The command is executed before the windowmanager and the autostart sessions are started. | cc-desktop-2bds- |
 | Final desktop command | The command is executed after each user logon and desktop restart | cc-desktop-3fdc- |
 
 | Name | Script |
-|-------------|---------|
+|------|--------|
 | Wrapper - Final desktop command | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc.sh" download>LINK to script</a> |
 | Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a> |
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
@@ -311,19 +311,20 @@ echo "Finished" | $LOGGER
 
 exit 0
 ```
-
+remove being shadowed pop up
 -----
 
 -----
 
 ### Base
 
+
 | Base Execution Times | Description | Basename of Scripts |
-|-------------------------|-------------|----------------------
+|----------------------|-------------|---------------------|
 | Final initialization command | command is executed during boot, after the initialization | cc-base-4fic- |
 
 | Name | Script |
-|-------------|---------|
+|------|--------|
 | Wrapper - Final initialization command | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic.sh" download>LINK to script</a> |
 | Link /media/hostname to /media mount point (GParted) | <a href="../Scripts/HOWTO-Custom-Commands-cc-base-4fic-linkmediadisk.sh" download>LINK to script</a> |
 

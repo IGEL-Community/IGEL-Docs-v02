@@ -60,6 +60,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
 | Set Permissions on Apache Webdav Folder | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-apache.sh" download>LINK to script</a> |
 | Set Island.io as default browser | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-island.sh" download>LINK to script</a> |
+| How to remove --> `Currently being shadowed - Disconnect` | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-remove-being-shadowed.sh" download>LINK to script</a> |
 
 -----
 
@@ -283,7 +284,7 @@ exit 0
 ```
 -----
 
-- UMS Shadow to device -- How to remove --> "Currently being shadowed - Disconnect"
+- UMS Shadow to device -- How to remove --> `Currently being shadowed - Disconnect`
 
 ```bash linenums="1"
 #!/bin/bash

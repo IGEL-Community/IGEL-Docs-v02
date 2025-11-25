@@ -170,6 +170,8 @@ openvpn --show-ciphers
 
 - [F5 VPN](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/f5_vpn)
 
+- [Ivanti Secure Access Client for Linux VPN (Pulse Secure)](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/pulsesecure)
+
 - [Sonicwall Netextender](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/sonicwall_netextender)
 
 - [Tailscale](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Network/tailscale)

@@ -13,6 +13,901 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2025-11-25 - [11.11.100](readme11.11.100.txt)
+
+```
+The new PUBLIC BUILD 11.11.100 for IGEL Workspace is ready.
+
+This build is based on 11.11.100.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Updated Citrix Workspace App to version 2505.  
+  Available workspace apps in this release: 25.05.0.44 (default), and 20.10.0.6
+* The on-screen keyboard has been enhanced to improve multi-touch performance.
+  Users can now use the digital on-screen keyboard on their devices without
+  needing an external physical keyboard.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Enhancement for multi-touch on-screen keyboard                  |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.wfclient.enhanceoskformt                                    |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **true** (default)/ false                                       |
++------------+-----------------------------------------------------------------+
+
+* Audio Quality Enhancer (v2) has been added for Adaptive Audio. This feature
+  significantly improves audio quality, especially in scenarios with packet loss
+  or network disruptions.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | Audio Quality Enhancer to improve audio performance             |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.module.enablenetstat                                        |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **false** (default)/ true                                       |
++------------+-----------------------------------------------------------------+
+
+* The deviceTRUST virtual channel is now integrated directly into Citrix
+  Workspace app 25.03 and later. To use it, enable the registry key
+  "ica.module.virtualchannel.ctxdt.enable." Additionally, an alternative
+  deviceTRUST Client Extension "ica.module.virtualchannel.devicetrust.enable" is
+  still available, giving two activation options for Workspace app 25.03 and
+  later. If both keys are enabled, the existing extension continues to work
+  alongside the new integrated virtual channel. For deviceTRUST in workspace app
+  2411 or earlier versions, enable
+  "ica.module.virtualchannel.devicetrust.enable".
+
++------------+-----------------------------------------------------------------+
+| Parameter  | deviceTRUST channel for CWA 2503 and later                      |
++------------+-----------------------------------------------------------------+
+| Registry   | ica.module.virtualchannel.ctxdt.enable                          |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | **false** (default)/ true                                       |
++------------+-----------------------------------------------------------------+
+
+### AVD
+
+* Updated AVD to version 1.3.5.  
+* MS-Teams optimization improvements  
+* Stability fixes
+* Added H264 decoding preview for AVD Sessions.
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.enable-h264-hardware-acceleration`       |
++------------+-----------------------------------------------------------------+
+| Value      | **enabled** (default) / disabled                                |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Registry   | `sessions.wvd%.options.h264-hardware-acceleration-level`        |
++------------+-----------------------------------------------------------------+
+| Value      | [AVC420][**AVC444**(default)]                                   |
++------------+-----------------------------------------------------------------+
+
+### Horizon
+
+* Updated Omnissa Horizon client version to 25.06
+
+### Amazon Workspace Client
+
+* Updated Amazon WorkSpaces client to version 2024.7
+
+### HP Anyware
+
+* Updated HP Anyware to version 25.03.2.
+
+### Network
+
+* Added asix_thirdparty driver to enable support for certain USB fiber Ethernet
+  adapters.  
+* Added new registry key:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Use thirdparty asix kernel module.`                            |
++------------+-----------------------------------------------------------------+
+| Registry   | `network.drivers.asix.prefer_thirdparty`                        |
++------------+-----------------------------------------------------------------+
+| Range      | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+| Value      | **Auto**                                                        |
++------------+-----------------------------------------------------------------+
+
+### WiFi
+
+* Added newer Realtek Wi-Fi drivers to the system and made them configurable  
+* Added Realtek WiFi drivers for 8852bu and 8852cu devices.  
+* Added registry keys to select / configure the driver to use::
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8812au driver instead of rtw_8812au for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8812au`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8814au driver instead of rtw_8814au for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8814au`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8821au driver instead of rtw_8821au for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8821au`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8821ce driver instead of rtw_8821ce for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8821ce`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8821cu driver instead of rtw_8821cu for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8821cu`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Use 8852bu driver instead of rtw_8852bu for WLAN.`              |
++------------+-----------------------------------------------------------------+
+|Registry    |`network.drivers.realtek.use_8852bu`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [Auto][Yes][No]                                                 |
++------------+-----------------------------------------------------------------+
+|Value       |**Auto**                                                         |
++------------+-----------------------------------------------------------------+
+
+### Smartcard
+
+* Updated Cryptovision SCinterface smartcard middleware to version 8.2.3.775.
+
+### HID
+
+* Changed the default Xorg mouse driver to libinput, which provides better
+  compatibility with newer Chromium versions.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | {{Xorg driver to use.}}                                         |
++------------+-----------------------------------------------------------------+
+| Registry   | {{userinterface.mouse.driver}}                                  |
++------------+-----------------------------------------------------------------+
+| Range      | [Evdev][Libinput]                                               |
++------------+-----------------------------------------------------------------+
+| Value      | _Libinput_                                                      |
++------------+-----------------------------------------------------------------+
+
+### CUPS Printing
+
+* Updated Vasion Print (former PrinterLogic) Printer Installer Client to version
+  25.2.0.16.
+* IGEL OS updates now reset the writable partition but retain existing printer
+  mappings.
+
+### Cisco JVDI Client
+
+* Updated Cisco JVDI to version 15.1.0
+
+### Cisco Webex
+
+* Updated Cisco Webex VDI version to 45.6.1.32593
+* Updated Webex Meetings VDI to version 45.2.1.2  
+* Available Webex Meetings VDI versions in this release: 45.2.1.2 (default),
+  44.10.1.3, and 44.6.5.1
+
+### Base system
+
+* Updated kernel to version 6.6.108.
+* Added downgrade limit - The IGEL OS11 can no longer be downgraded to versions
+  older than 11.10.410. This restriction applies to IGEL UD Pocket devices and
+  endpoints with Secure Boot enabled. In such cases, downgrade attempts to
+  versions prior to 11.10.410 will be refused to maintain system integrity and
+  boot security.
+* Added migration restriction - The OS11 can no longer be migrated to versions
+  older than 12.7.0. This restriction applies to IGEL UD Pocket devices and
+  endpoints with Secure Boot enabled. In such cases, migration attempts to
+  versions prior to 12.7.0 will be refused to maintain system integrity and boot
+  security.
+* Updated boot chain with  
+* New SHIM 15.8, signed by Microsoft  
+* New GRUB 2.12
+
+### Migration
+
+* Added support for Distributed App Repositories to enable OS 12 migration.
+* Added registry keys for distributed App repositories:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Priority`                                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `update.external_binary_source%.priority`                       |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | 100 _Default_                                                   |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Repository URL`                                                |
++------------+-----------------------------------------------------------------+
+| Registry   | `update.external_binary_source%.url`                            |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Certificate`                                                   |
++------------+-----------------------------------------------------------------+
+| Registry   | `update.external_binary_source%.certificate`                    |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Username`                                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `update.external_binary_source%.username`                       |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Password`                                                      |
++------------+-----------------------------------------------------------------+
+| Registry   | `update.external_binary_source%.crypt_password`                 |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | empty _Default_                                                 |
++------------+-----------------------------------------------------------------+
+
+### Driver
+
+* Updated NVIDIA driver from version 535 to 550.
+
+### zoomvdi
+
+* Updated Zoom VDI to version 6.5.10.26710  
+* Available Zoom VDI versions in this release: 6.5.10.26710 (default),
+  6.4.10.26150, and  6.2.10.25600
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed chromium security issues  CVE-2025-10892, CVE-2025-10891,
+  CVE-2025-10890, CVE-2025-10585, CVE-2025-10502, CVE-2025-10501,
+  CVE-2025-10500, CVE-2025-10201, CVE-2025-10200, CVE-2025-9864, CVE-2025-9865,
+  CVE-2025-9866, CVE-2025-9867, CVE-2025-9478, CVE-2025-9132, CVE-2025-8901,
+  CVE-2025-8882, CVE-2025-8881, CVE-2025-8880, CVE-2025-8879, CVE-2025-8583,
+  CVE-2025-8582, CVE-2025-8581, CVE-2025-8580, CVE-2025-8579, CVE-2025-8578,
+  CVE-2025-8577, CVE-2025-8576, CVE-2025-8292, CVE-2025-8011, CVE-2025-8010,
+  CVE-2025-7657, CVE-2025-7656, CVE-2025-6558, CVE-2025-7657, CVE-2025-7656,
+  CVE-2025-6558, CVE-2025-6554, CVE-2025-6557, CVE-2025-6556, CVE-2025-6555,
+  CVE-2025-6192, CVE-2025-6191, CVE-2025-5959, CVE-2025-5958, CVE-2025-5419,
+  CVE-2025-5283, CVE-2025-5281, CVE-2025-5280, CVE-2025-5068, CVE-2025-5067,
+  CVE-2025-5066, CVE-2025-5065, CVE-2025-5064, CVE-2025-5063, CVE-2025-4664,
+  CVE-2025-4609, CVE-2025-4372, CVE-2025-4096, CVE-2025-4052, CVE-2025-4051,
+  CVE-2025-4050, CVE-2025-3620, CVE-2025-3619, CVE-2025-3074, CVE-2025-3073,
+  CVE-2025-3072, CVE-2025-3071, CVE-2025-3070, CVE-2025-3069, CVE-2025-3068,
+  CVE-2025-3067, CVE-2025-3066, CVE-2025-24201, CVE-2025-2137, CVE-2025-2136,
+  CVE-2025-2135, CVE-2025-1923, CVE-2025-1922, CVE-2025-1921, CVE-2025-1920,
+  CVE-2025-1919, CVE-2025-1918, CVE-2025-1917, CVE-2025-1916, CVE-2025-1915,
+  CVE-2025-1914, CVE-2025-1426, CVE-2025-1006, CVE-2025-0999, CVE-2025-0998,
+  CVE-2025-0997, CVE-2025-0996 and CVE-2025-0995.
+* Fixed chromium security issues CVE-2025-10585, CVE-2025-10502, CVE-2025-10501,
+  CVE-2025-10500, CVE-2025-9867, CVE-2025-9866, CVE-2025-9865, CVE-2025-9864,
+  CVE-2025-10201 and CVE-2025-10200.
+**Fixed chromium security issues CVE-2025-13224, CVE-2025-13223, CVE-2025-13042,
+  CVE-2025-12729, CVE-2025-12728, CVE-2025-12727, CVE-2025-12726,
+  CVE-2025-12725, CVE-2025-12447, CVE-2025-12446, CVE-2025-12445,
+  CVE-2025-12444, CVE-2025-12443, CVE-2025-12441, CVE-2025-12440,
+  CVE-2025-12439, CVE-2025-12438, CVE-2025-12437, CVE-2025-12436,
+  CVE-2025-12435, CVE-2025-12434, CVE-2025-12433, CVE-2025-12432,
+  CVE-2025-12431, CVE-2025-12430, CVE-2025-12429, CVE-2025-12428,
+  CVE-2025-12036, CVE-2025-11756, CVE-2025-11460, CVE-2025-11458,
+  CVE-2025-11219, CVE-2025-11216, CVE-2025-11215, CVE-2025-11213,
+  CVE-2025-11212, CVE-2025-11211, CVE-2025-11210, CVE-2025-11209,
+  CVE-2025-11208, CVE-2025-11207, CVE-2025-11206 and CVE-2025-11205.  
+* Fixed chromium security issues CVE-2025-9867, CVE-2025-9866, CVE-2025-9865,
+  CVE-2025-9864, CVE-2025-10201 and CVE-2025-10200.  
+* Updated Chromium Browser to version 142.0.7444.175.
+
+### Firefox
+
+* Updated Firefox to version 140.3.1.  
+    - Fixes for mfsa2025-75, also known as: CVE-2025-10527, CVE-2025-10528,
+      CVE-2025-10529, CVE-2025-10532, CVE-2025-10533, CVE-2025-10536,
+      CVE-2025-10537.  
+    - Fixes for mfsa2025-15, also known as CVE-2024-43097, CVE-2025-1930,
+      CVE-2025-1931, CVE-2025-1933 and CVE-2025-1937.  
+    - Fixes for mfsa2025-21, also known as CVE-2025-3028.  
+    - Fixes for mfsa2025-30, also known as CVE-2025-2817, CVE-2025-4082,
+      CVE-2025-4083 and CVE-2025-4084.  
+    - Fixes for mfsa2025-38, also known as CVE-2025-4918 and CVE-2025-4919.  
+    - Fixes for mfsa2025-43, also known as CVE-2025-5263, CVE-2025-5264,
+      CVE-2025-5265 and MFSA-TMP-2025-0001.  
+    - Fixes for CVE-2025-9179, CVE-2025-9180 and CVE-2025-9185.
+
+### Network
+
+* Fixed ppp security issue CVE-2024-58250.
+
+### WiFi
+
+* Fixed a critical issue in the regulatory domain configuration, preventing
+  potential privilege escalation and incorrect log entries.
+
+### Base system
+
+* Fixed webkit2gtk security issues CVE-2025-24162, CVE-2025-24158,
+  CVE-2025-24150, CVE-2025-24143, CVE-2024-54658, CVE-2024-54543 and
+  CVE-2024-27856.
+* Fixed openssl security issues CVE-2024-9143 and CVE-2024-13176.  
+* Fixed vim security issue CVE-2025-24014.  
+* Fixed xorg-server security issues CVE-2025-49176, CVE-2025-49180,
+  CVE-2025-49179, CVE-2025-49178, CVE-2025-49177, CVE-2025-49176 and
+  CVE-2025-49175, CVE-2022-49737, CVE-2025-26601, CVE-2025-26600,
+  CVE-2025-26599, CVE-2025-26598, CVE-2025-26597, CVE-2025-26596, CVE-2025-26595
+  and CVE-2025-26594.  
+* Fixed libcap2 security issue CVE-2025-1390.  
+* Fixed gnutls28 security issue CVE-2024-12243.  
+* Fixed postgresql-14 security issues CVE-2025-8715, CVE-2025-8714,
+  CVE-2025-8713, CVE-2017-7484, CVE-2012-0868, CVE-2025-4207 and CVE-2025-1094.  
+* Fixed python3.10 security issues CVE-2025-8194, CVE-2025-6069, CVE-2025-4516,
+  CVE-2025-1795, CVE-2025-0938.  
+* Fixed openssl security issues CVE-2024-9143 and CVE-2024-13176.  
+* Fixed libtasn1-6 security issue CVE-2024-12133.  
+* Fixed pam-pkcs11 security issues CVE-2025-24531 and CVE-2025-24032.  
+* Fixed openssh security issues CVE-2025-26466 and CVE-2025-26465.  
+* Fixed expat security issues CVE-2025-59375, CVE-2024-8176, CVE-2024-50602,
+  CVE-2024-45492, CVE-2024-45491 and CVE-2024-45490.  
+* Fixed krb5 security issue CVE-2025-24528.  
+* Fixed freetype security issue CVE-2025-27363.  
+* Fixed libxslt security issues CVE-2023-40403, CVE-2025-24855 and
+  CVE-2024-55549.  
+* Fixed ghostscript security issues CVE-2025-48708, CVE-2025-27836,
+  CVE-2025-27835, CVE-2025-27834, CVE-2025-27832, CVE-2025-27831 and
+  CVE-2025-27830.  
+* Fixed libxml2 security issues CVE-2025-32415, CVE-2025-32414, CVE-2024-25062,
+  CVE-2023-45322, CVE-2023-39615, CVE-2025-27113, CVE-2025-24928,
+  CVE-2024-56171, CVE-2024-34459 and CVE-2022-49043.  
+* Fixed aom security issue CVE-2024-5171.  
+* Fixed vim security issue CVE-2025-26603.  
+* Fixed xz-utils security issue CVE-2025-31115.  
+* Fixed openvpn security issue CVE-2025-2704.  
+* Fixed poppler security issues CVE-2025-52886, CVE-2025-50420, CVE-2025-43903,
+  CVE-2025-32365 and CVE-2025-32364.  
+* Fixed gnupg2 security issue CVE-2025-30258.  
+* Fixed libsoup2.4 security issues CVE-2025-4969, CVE-2025-4948, CVE-2025-4945,
+  CVE-2025-32907, CVE-2025-4476, CVE-2025-32053, CVE-2025-32052, CVE-2025-32050
+  and CVE-2025-2784.  
+* Fixed webkit2gtk security issues CVE-2025-43368, CVE-2025-43356,
+  CVE-2025-43342, CVE-2025-43272, CVE-2025-6558, CVE-2025-43265, CVE-2025-43240,
+  CVE-2025-43228, CVE-2025-43227, CVE-2025-43216, CVE-2025-43212,
+  CVE-2025-43211, CVE-2025-31278, CVE-2025-31273, CVE-2025-24189,
+  CVE-2025-31257, CVE-2025-31215, CVE-2025-31206, CVE-2025-31205,
+  CVE-2025-31204, CVE-2025-24223, CVE-2023-42970, CVE-2023-42875,
+  CVE-2024-44192, CVE-2024-54467, CVE-2025-24201, CVE-2024-54551,
+  CVE-2025-24208, CVE-2025-24209, CVE-2025-24213, CVE-2025-24216, CVE-2025-24264
+  and CVE-2025-30427.  
+* Fixed openssh security issue CVE-2025-32728.  
+* Fixed qt6-base security issues CVE-2025-5992, CVE-2025-5455 and CVE-2025-3512.  
+* Fixed perl security issues CVE-2024-56406 and CVE-2025-40909.  
+* Fixed protobuf security issues  CVE-2025-4565 andCVE-2024-7254.  
+* Fixed zulu17-ca security issues CVE-2025-50059, CVE-2025-30754,
+  CVE-2025-27113, CVE-2025-24855, CVE-2025-50106, CVE-2025-30749,
+  CVE-2025-21587, CVE-2025-30698, CVE-2025-30691, CVE-2024-47606 and
+  CVE-2024-54534.  
+* Fixed util-linux security issue CVE-2024-28085.  
+* Fixed libarchive security issues CVE-2025-5917, CVE-2025-5916, CVE-2025-5915,
+  CVE-2025-5914 and CVE-2025-1632.  
+* Fixed mysql-8.0 security issues CVE-2025-53023, CVE-2025-50104,
+  CVE-2025-50102, CVE-2025-50101, CVE-2025-50100, CVE-2025-50099,
+  CVE-2025-50098, CVE-2025-50097, CVE-2025-50096, CVE-2025-50094,
+  CVE-2025-50093, CVE-2025-50092, CVE-2025-50091, CVE-2025-50087,
+  CVE-2025-50086, CVE-2025-50085, CVE-2025-50084, CVE-2025-50083,
+  CVE-2025-50082, CVE-2025-50081, CVE-2025-50080, CVE-2025-50079,
+  CVE-2025-50078, CVE-2025-50077, CVE-2025-30722, CVE-2025-30721,
+  CVE-2025-30715, CVE-2025-30705, CVE-2025-30704, CVE-2025-30703,
+  CVE-2025-30699, CVE-2025-30696, CVE-2025-30695, CVE-2025-30693,
+  CVE-2025-30689, CVE-2025-30688, CVE-2025-30687, CVE-2025-30685,
+  CVE-2025-30684, CVE-2025-30683, CVE-2025-30682, CVE-2025-30681,
+  CVE-2025-21585, CVE-2025-21584, CVE-2025-21581, CVE-2025-21580,
+  CVE-2025-21579, CVE-2025-21577, CVE-2025-21575 and CVE-2025-21574.  
+* Fixed libsoup2.4 security issues CVE-2025-46421, CVE-2025-46420,
+  CVE-2025-32914, CVE-2025-32913, CVE-2025-32912, CVE-2025-32911,
+  CVE-2025-32910, CVE-2025-32909 and CVE-2025-32906.  
+* Fixed libraw security issues CVE-2025-43964, CVE-2025-43963, CVE-2025-43962
+  and CVE-2025-43961.  
+* Fixed libbpf security issue CVE-2025-29481.  
+* Fixed libsoup3 security issues CVE-2025-32911, CVE-2025-46421, CVE-2025-46420,
+  CVE-2025-32913, CVE-2025-32912, CVE-2025-32911, CVE-2025-32910,
+  CVE-2025-32909, CVE-2025-32906, CVE-2025-32053, CVE-2025-32052,
+  CVE-2025-32051, CVE-2025-32050, CVE-2025-2784, CVE-2024-52532, CVE-2024-52531
+  and CVE-2024-52530.  
+* Fixed open-vm-tools security issue CVE-2025-22247.  
+* Fixed virtualbox security issues CVE-2025-30725, CVE-2025-30719,
+  CVE-2025-30712, CVE-2025-21571, CVE-2025-21533, CVE-2024-21273,
+  CVE-2024-21263, CVE-2024-21259, CVE-2024-21253 and CVE-2024-21248.  
+* Fixed sqlite3 security issues CVE-2025-6965 and CVE-2025-29088.  
+* Fixed network-manager security issue CVE-2024-6501.  
+* Fixed glib2.0 security issue CVE-2025-4373.  
+* Fixed net-tools security issue CVE-2025-46836.  
+* Fixed setuptools security issue CVE-2025-47273.  
+* Fixed systemd security issue CVE-2025-4598.  
+* Fixed pam security issues CVE-2025-6020 and CVE-2024-22365.  
+* Fixed requests security issue CVE-2024-47081.  
+* Fixed libblockdev security issue CVE-2025-6019.  
+* Fixed libtpms security issue CVE-2025-49133.  
+* Fixed python-urllib3 security issue CVE-2025-50181.  
+* Fixed qtbase-opensource-src security issue CVE-2025-5455.  
+* Fixed libssh security issues CVE-2025-8277, CVE-2025-8114, CVE-2025-5987,
+  CVE-2025-5449, CVE-2025-5372, CVE-2025-5351, CVE-2025-5318, CVE-2025-4878 and
+  CVE-2025-4877.  
+* Fixed sudo security issue CVE-2025-32462.  
+* Fixed djvulibre security issue CVE-2025-53367.  
+* Fixed gnutls28 security issues CVE-2025-6395, CVE-2025-32990, CVE-2025-32989
+  and CVE-2025-32988.  
+* Fixed iperf3 security issues CVE-2025-54350 and CVE-2025-54349.  
+* Fixed qemu security issues CVE-2025-8860, CVE-2025-54567 and CVE-2025-54566.  
+* Fixed gdk-pixbuf security issues CVE-2025-7345 and CVE-2025-6199.  
+* Fixed gcc-12 security issue CVE-2023-4039.  
+* Fixed tiff security issues CVE-2025-8851, CVE-2025-8534 and CVE-2025-8176.  
+* Fixed iputils security issues CVE-2025-48964 and CVE-2025-47268.  
+* Fixed jq security issues CVE-2025-48060 and CVE-2024-23337.  
+* Fixed curl security issue CVE-2025-5399.  
+* Fixed ffmpeg security issues CVE-2025-22919, CVE-2025-0518, CVE-2024-35368,
+  CVE-2024-35367, CVE-2024-31582, CVE-2023-6605, CVE-2023-6604, CVE-2023-6602,
+  CVE-2023-50008, CVE-2023-50007 and CVE-2023-49502.  
+* Fixed libxml2 security issues CVE-2025-49796, CVE-2025-49794, CVE-2025-6170,
+  CVE-2025-6021 and CVE-2025-7425.  
+* Fixed cjson security issues CVE-2024-31755, CVE-2023-50472, CVE-2023-50471 and
+  CVE-2023-26819.  
+* Fixed openjpeg2 security issue CVE-2025-50952.  
+* Fixed wpa security issue CVE-2022-37660.  
+* Fixed cups security issues CVE-2025-58364 and CVE-2025-58060.  
+* Fixed bind9 security issues CVE-2024-12705 and CVE-2024-11187.  
+* Fixed glibc security issue CVE-2025-8058.  
+* Fixed expat security issues CVE-2025-59375 and CVE-2024-8176.
+* Fixed glibc security issue CVE-2025-4802.
+* Fixed ISN 2025-24: Command Execution in IGEL OS.
+* Fixed tiff security issues CVE-2025-9900, CVE-2025-9165 and CVE-2025-8961.
+* Fixed webkit2gtk security issue CVE-2025-43343.
+* Fixed Kernel CVE-2024-5030.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Fixed mapping of  hotkey 'Ctrl + Alt + End' to 'Ctrl + Alt + Del',
+  configurable via IGEL Setup > Sessions > Citrix > Citrix Global > Keyboard >
+  'Mapping Ctrl + Alt + End to Ctrl + Alt + Del for Citrix sessions'.
+* Fixed option to disable Citrix connection dialog:
+  ica.pnlogin.suppressconnectiondialog
+* Removed registry key "ica.teams.remoteaudionotifications.enabled" because of
+  duplicating behavior
+* Enhanced Kerberos/AD and Last User/-Domain/Autologin for Citrix Cloud
+  Services.
+* Fixed a crash in Citrix sessions that could occur when switching from full-
+  screen to windowed mode while hardware-accelerated H.264 decoding is enabled.
+* The issue where it was not possible to connect to Citrix from a closed proxy
+  network has been fixed. The proxy configuration in 'Session > Citrix > Citrix
+  Global > Firewall' no longer works, please adjust the values of the following
+  registry keys instead. These configurations are necessary for Citrix, even if
+  the proxy is configured system-wide.
+* To configure a proxy to launch a desktop via the SOCKS protocol  
+  System > Registry > ica > allregions > proxytype = Socks  
+  System > Registry > ica > allregions > proxyhost = <IP>:<PORT>
+* To configure a proxy to launch a desktop via the secure (Https) protocol,
+  proceed as follows  
+  System > Registry > ica > allregions > proxytype = Secure  
+  System > Registry > ica > allregions > proxyhost = <IP>:<PORT>  
+  System > Registry > ica > allregions > hdxoverudp = Off
+* For the automatic proxy configuration  
+  System > Registry > ica > allregions > proxytype = Script  
+  System > Registry > ica > allregions > proxyautoconfigurl = file://file-path,
+  https://serverfilepath, or http://server/filepath  
+  System > Registry > ica > allregions > hdxoverudp = Off
+* Resolved an issue where Citrix USB redirection could fail when launching a
+  session directly from the browser without a preconfigured StoreFront or Self-
+  Service session.
+* Citrix App Protected resources can be launched from the browser without the
+  need for a pre-configured store in the setup. A system restart is required
+  after activating/deactivating this feature.
+* Updated the libsoup library to version libsoup-3.0.so.0.6.0 to resolve
+  segmentation faults (crashes) occurring during Microsoft Teams calls.
+* The keyboard no longer freezes when using Dell HR024 headsets.
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP session instability when unsing 5 or more monitors.
+
+### Remote Desktop (RDP3)
+
+* Fixed RD Web Access autostart not working when using client version RDP3.
+
+### Horizon
+
+* Fixed Browser content redirection for Omnissa Horizon client versions 24.12
+  and higher
+* Fixed post session command in Omnissa Horizon client 24.12 and higher
+* Fixed Teams optimization in Omnissa Horizon client
+* Changed remaining Horizon virtual channel path names, replacing VMware
+  references with Omnissa.
+
+### Parallels Client
+
+* Resolved an issue where the Post-Session Command could trigger prematurely,
+  particularly when used with the Parallels Client
+
+### HP Anyware
+
+* Removed not supported languages
+
+### Chromium
+
+* Fixed an issue where downloading email attachments (for example, from
+  Outlook/Office) could fail when the download dialog was enabled.
+
+### Network
+
+* Fixed MAC address passthrough parameter
+  network.interfaces.ethernet.device%.mac_source: Before taking the MAC address
+  from another network interface and disabling it, a check is now performed if
+  the interface is enabled in the IGEL Setup which is to receive the MAC
+  address. If the interface is not enabled, the mapping will fail with a syslog
+  entry: "failed: DEV is not enabled".  
+  Additionally, interface table numbering was fixed, making it possible now to
+  take MAC address from interface 1 (previously failing with "ODEV not present"
+  message)
+
+### Smartcard
+
+* Fixed Firefox not starting when smartcard is inserted.
+* Fixed personalization of IGEL Smartcard. For security reasons, the
+  personalization has to be enabled before smartcards can be written. Note that
+  this setting will weaken the protection against users accessing setup
+  parameters. The parameter enabling the personalization is:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable IGEL smartcard personalization (weakens security!)`      |
++------------+-----------------------------------------------------------------+
+|Registry    |`scard.scardd.enable_personalization`                            |
++------------+-----------------------------------------------------------------+
+|Value       |`**false** (default)/true`                                       |
++------------+-----------------------------------------------------------------+
+
+* Fixed smartcard redirection in AVD and Remote Desktop (RDP3) sessions.
+
+### Cisco JVDI Client
+
+* Fixed Cisco JVDI plugin path for Omnissa Horizon client.
+
+### Base system
+
+* Fixed mounting internal mass storage of Olympus DS-9500
+* Fixed issue with e1000e not working on Dell Optiplex 7000 device.
+* Fixed an issue which caused the migration from OS11 to OS12 to fail if the
+  OS12 system partition is larger than 1GB. So far, no OS12 system partition
+  falls into this category but future versions of OS12 may be affected.
+
+### Logging
+
+* Fixed remote logging feature.
+
+### Firmware update
+
+* Fixed an OS 11 to OS 12 migration issue where repartitioning could fail on
+  systems using non-GPT partition tables.
+
+### X11 system
+
+* Changed the default behavior for dual-GPU systems so that the modesetting
+  driver is no longer used by default for AMDGPU devices  
+* Added registry key to switch back to old behaviour if needed.
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Use generic modesetting driver for AMDGPU in Dual GPU cases.`  |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.drivers.amdgpu.use_modesetting_for_dual_gpu`                 |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / _disabled_ (default)                                  |
++------------+-----------------------------------------------------------------+
+
+### Audio
+
+* Fixed audio support for LG CQ600 series.
+* Fixed internal microphone on Lenovo L15 AMD Gen4
+* Fixed audio support for LG 24CQ651N: The internal mic boosting has been
+  disabled in order to fix the over-sensitivity problem. However, in the UI tool
+  it will still show up as ~30% volume.
+* Fixed internal microphone on Fujitsu Lifebook E5412.
+
+### Multimedia
+
+* Force using playbin3 instead of playbin in parole (media player)
+
+### Remote Management
+
+* Fixed limit of the remote management terminal key used in the upgrade process
+  - now it is possible to use terminal key up to 64 bytes.
+```
+
+-----
+
+## 2025-11-25 - [11.10.440](readme11.10.440.txt)
+
+```
+The new PRIVATE BUILD 11.10.440 for IGEL Workspace is ready.
+
+This build is based on 11.10.439.
+
+These are the release notes published with that release:
+
+Known Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Keyboard sync mode selection once/dynamic/off results in unexpected behavior.
+* Citrix Cloud login with Citrix Workspace app 20.10 not possible
+* Citrix StoreFront login to the cloud stores with Password authentication type
+  may not work due to the n-factor authentication enforced by Microsoft. Switch
+  to Citrix login type as a workaround.
+* If the user logs out via the Self-service drop down menu, the user data is not
+  deleted correctly by Citrix. As a result, a re-login can be performed without
+  new authentication. To remove all user credentials the self-service window
+  should always be closed when logging off.
+* Citrix proxy connections can fail if they are set up in an environment that
+  only allows external connections through a proxy and restricts DNS queries.
+* With the new Citrix toolbar, desktops may unexpectedly switch from windowed
+  mode to full-screen mode when a monitor was suspended. As a workaround, you
+  can revert to the previous version of the toolbar by setting the
+  ica.wfclient.toolbarversion parameter to "Old".
+* Currently H.264 for Citrix sessions cannot be used in parallel with video
+  input acceleration.
+* While starting Self-Service, it is possible that process ServiceRecord
+  segfaults -> Self-Service cannot be started afterwards.  
+  A cache cleanup with reboot is needed. In addition, the following parameters
+  should set to true.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up UI cache after Self-Service termination`               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupwebui`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up Store cache after Self-Service termination`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupstore`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+
+* Browser Content Redirection (BCR) may not work with Chrome version 105.0.* or
+  later. See https://support.citrix.com/article/CTX473065/hdx-browser-content-
+  redirection-broken-with-google-chrome-browser-version-105-or-higher
+* White / green fragments may appear during desktop launch if JPEG graphical
+  codec is used.
+* MS Teams calls may stop if blurred background is enabled. This affects Citrix
+  Workspace App 2305 and later.
+* ZoomVDI version 5.16 or newer is no longer supported with Citrix Workspace app
+  20.10
+* Browser Content Redirection (BCR) may not work with Citrix workspace app 23.11
+  and current Chrome versions.
+* If Self-Service is closed when the credential window is active, it may happen
+  that the session cannot be restarted. A reboot is necessary.
+
+### OSC Installer
+
+* OSC not deployable with IGEL Deployment Appliance: Version 11.3 or later is
+  required for deploying IGEL OS 11.06. and following.
+
+### AVD
+
+* When closing the AVD client while audio input (microphone redirection) is in
+  use, the client might crash. This will be fixed in future versions.
+* Webcam redirection support is preliminary / experimental and may not work with
+  all webcams yet.
+* AVD is not running on devices that don't support SSE4.1 at least. Use older
+  IGEL OS firmware versions like 11.09.xxx or older!
+* H.264 hardware decoding for MS-Teams optimization is currently limited to non-
+  AMD devices due to stability issues on AMD devices.
+
+### Remote Desktop (RDP3)
+
+* RDP3 is not running on devices that don't support SSE4.1 at least. Use the
+  legacy RDP client instead.
+
+### RD Web Access
+
+* Client is not running on devices that don't support SSE4.1 at least. Use
+  RdWebAccess with the legacy RDP client instead.
+
+### Horizon
+
+* Horizon session uses the configured system proxy, even if "Direct connection
+  to the Internet" is set for the session
+* With usage of PCoIP protocol, the virtual channel provided by VMware used for
+  serial port and scanner redirection could freeze on logout from remote
+  session.
+* This happens only with enabled scanner or serial port redirection.  
+  The freeze does not occur if both redirection methods are enabled or none of
+  them. The Blast Protocol is not affected by this bug.
+* The respective settings can be found in the IGEL Registry:  
+  vmware.view.enable-serial-port-redir  
+  vmware.view.enable-scanner-redir
+* Keyboard Input Source Language Synchronization works only with usage of local
+  layout and deadkeys enabled.  
+  If a keyboard layout is used which has deadkeys disabled (which is the default
+  on IGEL OS), Horizon client falls back to en-US layout.
+* PCoIP sessions may crash in some cases, switch to Blast Protocol is
+  recommended then. H.264/HEVC encoding can be disabled when overall performance
+  is too low.
+* Client drive mapping and USB redirection for storage devices can be enabled at
+  the same time, but this could lead to sporadic problems.  
+  Horizon Client tracks the drives which are dynamically mounted and adds them
+  to the remote session using client drive mapping, means USB redirection is not
+  used for theses devices then.  
+  However, in case of devices like USB SD card readers, Horizon does not map
+  them as client drives but forcefully uses USB-redirection which results in an
+  unclean unmount.  
+  As a work-around, the IDs of these card readers can be added to IGEL USB
+  access rules and denied.
+
+### Chromium
+
+* Hardware accelerated video decoding is currently not supported.
+
+### Firefox
+
+* With enabled Citrix Browser Content Redirection, Firefox has no H.264 and AAC
+  multimedia codec support. Means, when codec support is needed in Firefox, BCR
+  needs to be disabled. Citrix Browser Content Redirection is disabled by
+  default.
+
+### Network
+
+* Wakeup from system suspend fails on DELL Latitude 5510
+
+### IGEL Agent for Imprivata
+
+* Filter horizon apps on chooser does not work, apps will show in any case. The
+  recommendation is to set "iia.hide_horizon_apps_on_chooser" to "False"
+
+### Cisco JVDI Client
+
+* Citrix Workspace App 2010 may cause problems with Cisco JVDI. Newer ZoomVDI
+  versions and App Protection are no longer supported with CWA 2010.
+
+### Base system
+
+* After updating the BIOS on the HP mt645 G7 or HP mt645 G8, the device shuts
+  down instead of rebooting.
+* It is not possible to perform an unattended OS12 migration to base system
+  12.2.0 as an additional / manual reboot is necessary. The recommended upgrade
+  version for unattended migration is base system 12.2.1.
+* Due to suspend/resume issues of a Innodisk NVME we disabled the suspend
+  support for systems where this NVME is present. The issue otherwise will lead
+  to a complete loose of the storage device as the NVME will not work after
+  resume.
+
+### Conky
+
+* The right screen when using multiscreen environment may not be shown
+  correctly.  
+  Workaround: The horizontal offset should be set to the width of the monitor
+  (e.g. if the monitor has a width of 1920, the offset should be set to 1920)
+
+### Migration
+
+* The migration process may hang around 24% when attempting to upgrade from IGEL
+  OS 11 versions earlier than 11.10.410, if the target IGEL OS 12 image includes
+  partitions larger or equal to 1 GB. Target igelOS12 versions 12.8.x and later
+  will run in to this issue.
+
+### Firmware update
+
+* A firmware update started on 11.10.100 can sporadically block, so that the
+  device must be rebooted manually. The update continues without problem after
+  reboot.
+* On devices with 4 GB flash storage or smaller it could happen that there is
+  not enough space for updating all features. In this case, a corresponding
+  error message occurs. Please visit https://kb.igel.com/igelos-11.09/en/error-
+  not-enough-space-on-local-drive-when-updating-to-igel-os-11-08-or-
+  higher-101059051.html  for a possible solution and additional information.
+
+### Appliance Mode
+
+* Browser Appliance mode can fail when the Web URL contains special control
+  characters like ampersand (& character).  
+  Workaround: Add quotes at the beginning and the end of an affected URL. E.g.:  
+  'https://www.google.com/search?q=aSearchTerm&source=lnms&tbm=isch'
+
+### Audio
+
+* UD3-M340C: Sound preferences are showing Headphone & Microphone, although not
+  connected.
+* Microphone (TRRS headset) is broken on LG 27CN650
+
+### Multimedia
+
+* Multimedia redirection with GStreamer could fail when using Nouveau GPU
+  driver.
+
+### Hardware
+
+* Some HP devices will shut down instead of restarting during the BIOS update
+  procedure. After manual boot of the devices, it may take up to three minutes
+  before anything is displayed on the screen (the only indicator is the power
+  LED). Wake on LAN (e.g. via UMS) does not seem to work in this state, either.  
+  The BIOS is still updated successfully. This is currently known for HP mt645
+  G7 and mt645 G8.
+* After updating the BIOS of the HP Elite mt645 G7 Mobile Thin Client to version
+  1.15 or higher, any attempt to update the BIOS is going to freeze the BIOS
+  update process.  
+  Currently there is no way to change the BIOS version after the system has been
+  updated to BIOS version 1.15 or higher.
+* Wake up from suspend via UMS does not work on HP mt645 devices. Workaround:
+  Disable system suspend and use shutdown instead.
+* Built-in fingerprint sensor is not supported on HP mt440 G3 and mt645 G7/G8.
+* MAC-Address Passthrough not supported on Lenovo USB-C Hybrid Docking Station.
+* Wake-on-Lan via docking stations is not supported.
+* In some rare cases it is possible that connecting or booting Lenovo USB-C
+  Hybrid Docking station over USB-C results in non working / faulty display
+  output.  
+** It may help to (re-)connect via USB-A. If this is the case, USB-C should be
+  also functional then.
+* Display configuration of displays connected to HP G5 Docking Station may fail
+  with HP t655.
+```
+
+-----
+
 ## 2025-11-21 - [11.10.439](readme11.10.439.txt)
 
 ```

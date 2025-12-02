@@ -62,6 +62,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 | Set Permissions on Apache Webdav Folder | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-apache.sh" download>LINK to script</a> |
 | Set Island.io as default browser | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-island.sh" download>LINK to script</a> |
 | How to remove --> `Currently being shadowed - Disconnect` | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-remove-being-shadowed.sh" download>LINK to script</a> |
+| AVD Post Session Logoff | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-avd-post-session-logoff.sh" download>LINK to script</a> |
 
 -----
 
@@ -312,6 +313,46 @@ sed -ie '/vncmessage/d' /config/vncserver/x11vnc0
 echo "Finished" | $LOGGER
 
 exit 0
+```
+
+-----
+
+- AVD Post Session Logoff
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Log off device after AVD ends
+#
+
+PROCESS_NAME="igelrdp3-avd"
+# seconds between checks
+CHECK_INTERVAL=5
+
+ACTION="cc-desktop-3fdc-avd-post-session_logoff"
+
+LOGGER="logger -it ${ACTION}"
+
+echo "Started" | $LOGGER
+
+while true; do
+  # Check if the process is running
+  PID=$(pgrep -x "$PROCESS_NAME")
+  if [ -n "$PID" ]; then
+    echo "Found AVD Session" $PID | $LOGGER
+    while pgrep -x "$PROCESS_NAME" > /dev/null; do
+      echo "$PROCESS_NAME is still running..."
+      sleep $CHECK_INTERVAL
+    done
+    #logoff
+    echo "AVD Session Ended - Now Logoff" $PID | $LOGGER
+    logoff
+  fi
+  sleep $CHECK_INTERVAL
+done
 ```
 
 -----

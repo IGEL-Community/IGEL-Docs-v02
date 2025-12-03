@@ -39,7 +39,15 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 - DER/Binary - Encoding format that does NOT have plaintext/readable headers. Common extensions include .cer and .der
 - PFX/P12/PKCS#12 – Binary format that can contain the certificate chain AND private key in a single .pfx or .p12 file. 
 
-**NOTE:** TL;DR – Use Base64 for everything, don't rely on file extensions, .pfx files may need to be broken open using OpenSSL!
+**NOTES:**
+
+- Use Base64 for everything, don't rely on file extensions, .pfx files may need to be broken open using OpenSSL!
+
+- The certificates must be available in the Base64 file format encoded with the file extension .pem, .crt or .cer.
+
+- [IGEL KB: Upload and Assign Files in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/upload-and-assign-files-in-the-igel-ums-web-app)
+
+    - Classification Type: SSL Certificate
 
 -----
 

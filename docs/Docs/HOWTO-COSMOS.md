@@ -344,11 +344,11 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 **A:** [IGEL KB: How to Delete Apps in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/how-to-delete-apps-in-the-igel-ums-web-app). The following SQL query can be used to search for profiles using an app.
 
 ```bash linenums="1"
-select PROFILES.NAME as 'Profile-Name',
-APP_VERSION.DISPLAY_VERSION as 'APP-Version' from PROFILES
+select PROFILES.NAME as "Profile-Name",
+APP_VERSION.DISPLAY_VERSION as "APP-Version" from PROFILES
 inner join PROFILE_BASED_ON_APP ON PROFILES.PROFILEID = PROFILE_BASED_ON_APP.PROFILEID
 inner join APP_VERSION ON PROFILE_BASED_ON_APP.APP_VERSION_ID = APP_VERSION.APP_VERSION_ID
-where APP_VERSION.APP_NAME like 'base_system' and DISPLAY_VERSION like '12.5%'
+where APP_VERSION.APP_NAME like "base_system" and DISPLAY_VERSION like "12.5%"
 ```
 
 Changing the where clause of the SQL query to the appropriate `APP_NAME` and `APP_VERSION` will help to identify similar cases with other Apps.

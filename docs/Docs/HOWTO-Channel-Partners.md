@@ -66,6 +66,20 @@ This is a comment section
 
 - Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
 
+### Notes: 
+
+- With the new Academy, IGEL switched to using SSO (Single Sign On) and now share the same login as the IGEL Customer Portal. What this means for existing users (this is all explained on https://learn.igel.com):
+ 
+    - If you have an account on the old IGEL Academy, any ACTIVE certifications and courses were migrated if they were completed on the old platform. IGEL did not migrate partially complete courses or exams.
+
+    - Since the entire authentication process is new, you will need to re-register with the new process to regain access to your account (as long as you use the same email address. If not, IGEL need to merge the old account with the new one after you log in).
+
+    - There is one exception to re-registration. If you currently have a Customer Portal account (for example, you open support tickets or have used the cloud services for setting up your UMS, etc), you technically already have an account for IGEL Academy, you can just go to https://learn.igel.com and log in with that same account.
+
+- There is one additional way that users can get IGEL Academy accounts. If you currently have a Custom Portal account and your account is designated as a `SuperAdmin` for your company in the Customer Portal, then you can `invite` other people from your company to have IGEL Academy accounts without them going through the registration process.
+ 
+- You should go to https://learn.igel.com and then click the `Register Here` button and then fill out the requested info. You should get a verification email fairly quickly that you will need to open and click a link. Once that happens, the Customer Care team processes the registration (usually within 1 business day). If you do not get the verification email, you should check spam and if it doesn’t appear there, you can email registration@igel.com for help.
+
 ----------
 
 ## IGEL Academy Course Duration

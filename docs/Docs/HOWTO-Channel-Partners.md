@@ -66,7 +66,7 @@ igel academy account notes
 
 - Contact IGEL channel team for options to access [IGEL Academy Premium](https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf).
 
-### Notes: 
+### Notes for Registering with IGEL Academy
 
 - With the new IGEL Academy, IGEL switched to using SSO (Single Sign On) and now share the same login as the IGEL Customer Portal. What this means for existing users (this is all explained on [IGEL Academy](https://learn.igel.com)):
  

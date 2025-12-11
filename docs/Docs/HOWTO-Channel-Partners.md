@@ -21,7 +21,7 @@ This is a comment section
 ## Steps a channel partner must take to work with IGEL support for a customer support case
 
 - Make sure the channel partner is registered on the support portal
-
+igel academy account notes
 - Have the customer open a case and provide a description
 
 - Post a comment to the case requesting that the channel partner be added to the watch list, including the following:
@@ -68,17 +68,17 @@ This is a comment section
 
 ### Notes: 
 
-- With the new Academy, IGEL switched to using SSO (Single Sign On) and now share the same login as the IGEL Customer Portal. What this means for existing users (this is all explained on https://learn.igel.com):
+- With the new IGEL Academy, IGEL switched to using SSO (Single Sign On) and now share the same login as the IGEL Customer Portal. What this means for existing users (this is all explained on [IGEL Academy](https://learn.igel.com)):
  
     - If you have an account on the old IGEL Academy, any ACTIVE certifications and courses were migrated if they were completed on the old platform. IGEL did not migrate partially complete courses or exams.
 
-    - Since the entire authentication process is new, you will need to re-register with the new process to regain access to your account (as long as you use the same email address. If not, IGEL need to merge the old account with the new one after you log in).
+    - Since the entire authentication process is new, you will need to re-register with the new process to regain access to your account (as long as you use the same email address. If not, IGEL will need to merge the old account with the new one after you log in).
 
-    - There is one exception to re-registration. If you currently have a Customer Portal account (for example, you open support tickets or have used the cloud services for setting up your UMS, etc), you technically already have an account for IGEL Academy, you can just go to https://learn.igel.com and log in with that same account.
+    - There is one exception to re-registration. If you currently have a Customer Portal account (for example, you open support tickets or have used the cloud services for setting up your UMS, etc), you technically already have an account for IGEL Academy, you can just go to [IGEL Academy](https://learn.igel.com) and log in with that same account.
 
 - There is one additional way that users can get IGEL Academy accounts. If you currently have a Custom Portal account and your account is designated as a `SuperAdmin` for your company in the Customer Portal, then you can `invite` other people from your company to have IGEL Academy accounts without them going through the registration process.
  
-- You should go to https://learn.igel.com and then click the `Register Here` button and then fill out the requested info. You should get a verification email fairly quickly that you will need to open and click a link. Once that happens, the Customer Care team processes the registration (usually within 1 business day). If you do not get the verification email, you should check spam and if it doesn’t appear there, you can email registration@igel.com for help.
+- You should go to [IGEL Academy](https://learn.igel.com) and then click the `Register Here` button and then fill out the requested info. You should get a verification email fairly quickly that you will need to open and click a link. Once that happens, the Customer Care team processes the registration (usually within 1 business day). If you do not get the verification email, you should check spam and if it doesn’t appear there, you can email [IGEL Registration - registration@igel.com](mailto:registration@igel.com) for help.
 
 ----------
 

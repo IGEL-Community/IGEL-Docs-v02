@@ -59,6 +59,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 | Wrapper - Final desktop command | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc.sh" download>LINK to script</a> |
 | Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a> |
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
+| USB Always On | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-usb-power.sh" download>LINK to script</a> |
 | Set Permissions on Apache Webdav Folder | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-apache.sh" download>LINK to script</a> |
 | Set Island.io as default browser | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-island.sh" download>LINK to script</a> |
 | How to remove --> `Currently being shadowed - Disconnect` | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-remove-being-shadowed.sh" download>LINK to script</a> |
@@ -139,6 +140,37 @@ fi
     fi
     COUNT=$COUNT+1
   done
+
+echo "Finished" | $LOGGER
+
+exit 0
+```
+
+-----
+
+- USB Always on (Printer, Scanner, etc.)
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Version: 
+# USB always on (Printer, Scanner, etc.)
+# System > Firmware Customization > Custom Commands > Desktop
+#
+# Custom Commands: Desktop: Final Desktop Command
+#
+
+ACTION="cc-desktop-3fdc-usb-power"
+
+# output to systemlog with ID amd tag
+LOGGER="logger -it ${ACTION}"
+
+echo "Starting" | $LOGGER
+
+echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
 
 echo "Finished" | $LOGGER
 

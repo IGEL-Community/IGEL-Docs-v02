@@ -24,7 +24,7 @@ Remove for now
 | Zoom VDI - ANY (Citrix / Horizon / AVD) | Dual Core `<` 2GHz base clock = LIMITED to 9 video streams <br /> Dual Core AMD chips with `2x` in name = LIMITED to 6 video streams <br /> Dual Core `>=` 2GHz clock (or Intel i5/i7 `<` 2GHz) = 25 video streams <br /> Quad Core or higher (any clock speed) = 25 video streams | [Zoom VDI Client Hardware Requirements](https://support.zoom.us/hc/en-us/articles/4404773645069-Calculating-video-streams-for-VDI-clients) <br /><br /> [Zoom VDI client features comparison](https://support.zoom.us/hc/en-us/articles/360031441671-VDI-client-features-comparison) |
 | MS Teams VDI (Citrix) | Dual Core `>=` 1.8GHz base clock speed for 720p 1:1 call <br /> Dual or Quad Core `>=` 1.8GHz with 2.9GHz boost for many:many call | [Teams VDI for Citrix Client Hardware Requirements](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#:~:text=Citrix%20Workspace%20app%20requires%20at,2.) |
 | MS Teams VDI (Horizon) | Dual Core `>=` 2.4GHz base clock speed | [Teams VDI for Horizon Client Hardware Requirements](https://techzone.omnissa.com/resource/microsoft-teams-optimization-horizon#horizon-system-requirements) |
-| MS Teams VDI (AVD) | Dual Core `>=` 1.6GHz base clock speed <br /> 4GB of Available memory | [Teams VDI for AVD Client Hardware Requirements](https://learn.microsoft.com/en-us/microsoftteams/hardware-requirements-for-the-teams-app#hardware-requirements-for-teams-on-linux) |
+| MS Teams VDI (AVD) | Dual Core `>=` 1.6GHz base clock speed <br /> 4GB of Available memory | [Teams VDI for AVD Client Hardware Requirements](https://learn.microsoft.com/en-us/microsNon-workflow Templatesoftteams/hardware-requirements-for-the-teams-app#hardware-requirements-for-teams-on-linux) |
 | Webex VDI - ANY (Citrix / Horizon / AVD not yet available) | Any 64-bit x86 + 2GB RAM | [Webex VDI Client Hardware Requirements](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_01.html#Cisco_Reference.dita_02ec38ca-aa77-4ae5-967f-03af2d3f22ef) |
 
 -----
@@ -41,7 +41,7 @@ Remove for now
 
 **NOTE:** If you are experiencing an issue with Citrix, test with one of these profiles assigned for OS 11 or OS 12. It may not fix the issue, but it is a good place to start.
  
-**Tested with IGEL OS 11.09.160 and IGEL OS 12.3.0.**
+**Tested with IGEL OS 11.11.100 and IGEL OS 12.7.4.**
 
 These are known good settings for Citrix browser content redirection, HDX webcam redirection, and also a setting that if you are in a meeting (Zoom VDI, Teams, Webex Meetings VDI) and are inactive the screensaver will not kick in.
  
@@ -49,7 +49,11 @@ This setting also work for VMware and may also work for AVD: `debug.tools.igel-s
  
 - <a href="../Profiles/HOWTO-UCC-Citrix-Known-Good-Settings.xml" download> Profile OS 11 (.xml) - HOWTO-UCC-Citrix-Known-Good-Settings</a> 
 
+<!---
 - <a href="../Profiles/HOWTO-UCC-Citrix-Known-Good-Settings.ipm" download> Profile OS 12 (.ipm) - HOWTO-UCC-Citrix-Known-Good-Settings</a> 
+-->
+
+- [OS 12 Non-workflow Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates#IAFIProfileTemplates-Non-workflowTemplates:)
 
 -----
 

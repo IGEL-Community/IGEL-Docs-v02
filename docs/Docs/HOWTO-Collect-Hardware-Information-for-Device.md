@@ -211,7 +211,7 @@ The following steps will:
 
 ## Tips for prepping PC for IGEL OS install
 
-- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/en/igel-os/11.10/bios-update-for-devices-supported-by-lvfs)
+- Make sure BIOS is at latest version. Check [Linux Vendor Firmware Service (LVFS)](https://fwupd.org/lvfs/docs/users). IGEL OS 11.08.XXX or newer supports [LVFS for BIOS from UMS](https://kb.igel.com/en/igel-os/current/bios-update-for-devices-supported-by-lvfs)
 - Make sure BIOS is set back to default settings.
 - Check for and apply BIOS settings for Ubuntu 18.04.
 
@@ -235,7 +235,7 @@ Save the change and reboot without the “Force VESA driver” option being set.
 
 [IGEL OS Boot Menu Explained – Video](https://videos.igelcommunity.com/igel-os-boot-menu-explained-video/)
 
-[IGEL KB - Boot Menu](https://kb.igel.com/en/igel-os/11.10/boot-menu)
+[IGEL KB - Boot Menu](https://kb.igel.com/en/igel-os/current/boot-menu)
 
 ### Try VESA only boot
 
@@ -294,7 +294,7 @@ rm -rf $tmp_dir
 
 The IGEL Linux Registry offers a number of extended logging options that can help customers, Support and PreSales debug system and network issues.
 
-[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/en/igel-os/11.10/extended-logging-with-syslog-tcpdump-and-netlog)
+[IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog](https://kb.igel.com/en/igel-os/current/extended-logging-with-syslog-tcpdump-and-netlog)
 
 -----
 

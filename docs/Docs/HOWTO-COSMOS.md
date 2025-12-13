@@ -526,7 +526,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** How do I upgrade an OS 11 device to OS 12?
 
-**A:** OS 11.10.210 and UMS 12.06.110 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/en/igel-os/11.10/upgrading-migration-from-igel-os-11-to-igel-os-12)
+**A:** OS 11.10.210 and UMS 12.06.110 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/en/igel-os/current/upgrading-migration-from-igel-os-11-to-igel-os-12)
 
 **Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
 

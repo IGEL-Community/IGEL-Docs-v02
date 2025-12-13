@@ -611,10 +611,10 @@ non-interactive network downloader
 wget -qO- http://ipv4.icanhazip.com; echo
 ```
 
-- Download IGEL OS 12.3.2 OSC installer
+- Download IGEL OS 12.7.4 OSC installer
 
 ```bash linenums="1"
-wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.3.2.zip
+wget https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.7.4.zip
 ```
 
 - Download a file from UMS

@@ -491,3 +491,20 @@ cat /proc/sys/net/ipv4/ip_local_port_range
 ```bash linenums="1"
 32768    60999
 ```
+
+## ss
+
+ss is used to dump socket statistics. It allows showing information similar to netstat. It can display more TCP and state informations than other tools.
+
+```bash linenums="1"
+ss -tunapr
+```
+
+```bash linenums="1"
+Netid          State               Recv-Q          Send-Q                     Local Address:Port                                                          Peer Address:Port           Process                                                
+tcp            ESTAB               0               0                        ITC10B6762436B2:46680                            ec2-98-87-143-182.compute-1.amazonaws.com:443             users:(("Island",pid=24160,fd=47))                    
+tcp            ESTAB               0               0                        ITC10B6762436B2:47024                    ec2-35-83-239-112.us-west-2.compute.amazonaws.com:443             users:(("Island",pid=24160,fd=164))                   
+tcp            ESTAB               0               0                        ITC10B6762436B2:55708                                      lb-140-82-114-25-iad.github.com:443             users:(("Island",pid=24160,fd=25))                    
+tcp            ESTAB               0               0                        ITC10B6762436B2:56068                          static.90.58.203.116.clients.your-server.de:443             users:(("Island",pid=24160,fd=140))                   
+tcp            ESTAB               0               0                        ITC10B6762436B2:33632               
+```

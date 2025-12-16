@@ -52,6 +52,12 @@ xdg-settings get default-web-browser
 xdg-settings set default-web-browser firefox.desktop
 ```
 
+- Open URL with the default browser
+
+```bash linenums="1"
+xdg-open https://tinyurl.com/igel-docs
+```
+
 **Q:** How to configure Edge Browser in Kiosk Mode
 
 **A:** Apps -> Edge Browser > Sessions -> Settings -> Startup pages:

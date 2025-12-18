@@ -500,6 +500,14 @@ wmctrl -r "IGEL Minibrowser" -b add,fullscreen
 
 **A:** [How to Create Shortcuts to Tray Applications in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/how-to-create-shortcuts-to-tray-applications-in-ig)
 
+**Q:** How to access tray applications and settings from command line / scripts?
+
+**A:** Run the following command to see options for tray applications:
+
+```bash linenums="1"
+igel-system-tray --help
+```
+
 **Q:** Getting `xdg-open` popup from browser. How to remove `xdg-open` popup?
 
 **A:** Set custom policy to remove the popup.

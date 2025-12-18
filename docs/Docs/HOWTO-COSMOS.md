@@ -974,7 +974,11 @@ Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices
 
 - **OS 12 Distributed Peer Server:** `/var/log/igel/igel-buddy-server.log`
 
-- **OS 12 Client:** Run `journalctl -t updated` as root
+- **OS 12 Client:** Run the following command as root:
+
+```bash linenums="1"
+journalctl -t updated
+```
 
 **Q:** Are Distributed Peer Update servers shown by running `igelpkgctl update`?
 

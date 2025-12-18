@@ -952,6 +952,40 @@ By enabling and configuring this feature, binaries of apps will be stored on a s
 
 -----
 
+## FAQ - Distributed Peer Update (Buddy Update)
+
+The Distributed Peer Update feature in IGEL OS 12 (formerly known as Buddy Update in IGEL OS 11) allows IGEL OS 12 devices to act as local update servers. Instead of each device downloading updates from the central update server, peer devices get the updates from each other. This reduces bandwidth usage and speeds up update delivery, especially in geographically distributed networks.
+
+Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices on the same local network to automatically find and obtain updates from one another. IGEL Discovery uses an UDP-based mechanism to detect available update sources on the local network and provides an interface that update components use to determine update availability and select an appropriate update source automatically.
+
+**Q:** How to setup Distributed Peer Update?
+
+**A:** Please review the following links:
+
+- [IGEL KB: How to Configure Distributed Peer Update with IGEL OS 12 Devices](https://kb.igel.com/en/igel-os-base-system/current/how-to-configure-distributed-peer-update-with-igel)
+
+- [IGEL KB: Distributed Peer Update Server Configuration in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/distributed-peer-update-server-configuration-in-ig)
+
+- Assign Apps to the IGEL OS device running Distrbuted Peer Update server as noted in [IGEL KB: Apps - Import and Configure Apps for IGEL OS 12 Devices via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/apps-import-and-configure-apps-for-igel-os-12-devi)
+
+**Q:** What log files to review for Distributed Peer Update?
+
+**A:** Log files for Distributed Peer Update:
+
+- **OS 12 Distributed Peer Server:** `/var/log/igel/igel-buddy-server.log`
+
+- **OS 12 Client:** Run `journalctl -t updated` as root
+
+**Q:** Are Distributed Peer Update servers shown by running `igelpkgctl update`?
+
+**A:** No, `igelpkgctl update` will not show Distributed Peer Update servers
+
+**Q:** Does Distributed Peer Update work with apps create by `IGEL App Creator`?
+
+**A:** As of 18 December, 2025 the Distributed Peer Update does `NOT` support `IGEL App Creator` apps
+
+-----
+
 ## FAQ - Ordering Icons on the Desktop
 
 - Use UMS Files and place this file into `/wfs/sort_icons.sh` and setup a `System > Custom Commands > Desktop > Final desktop command` with `/wfs/sort_icons.sh &`

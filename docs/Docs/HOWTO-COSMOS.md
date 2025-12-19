@@ -988,6 +988,14 @@ journalctl -t updated
 
 **A:** As of 18 December, 2025 the Distributed Peer Update does `NOT` support `IGEL App Creator` apps
 
+**Q:** Having issue with Distributed Peer Update and need to open a support ticket, what is needed to be collected from `OS 12 server` and `OS 12 client`?
+
+**A:** Set the debug parameter `debug.firmware_update` on OS 12 server and client. Then capture the logs from both OS 12 devices.
+
+```bash linenums="1"
+/config/bin/create_support_information # logfiles archive is stored in: /tmp/tclogs.zip
+```
+
 -----
 
 ## FAQ - Ordering Icons on the Desktop

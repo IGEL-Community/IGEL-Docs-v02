@@ -980,13 +980,13 @@ Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices
 journalctl -t updated
 ```
 
-**Q:** Are Distributed Peer Update servers shown by running `igelpkgctl update`?
+**Q:** For OS 12.7.4+ are Distributed Peer Update servers shown by running `igelpkgctl update`?
 
 **A:** No, `igelpkgctl update` will not show Distributed Peer Update servers
 
 **Q:** Does Distributed Peer Update work with apps create by `IGEL App Creator`?
 
-**A:** As of 18 December, 2025 the Distributed Peer Update does `NOT` support `IGEL App Creator` apps
+**A:** As of 18 December, 2025 the Distributed Peer Update does `NOT` support `IGEL App Creator` apps. This will be fixed in a future version
 
 **Q:** Having issue with Distributed Peer Update and need to open a support ticket, what is needed to be collected from `OS 12 server` and `OS 12 client`?
 

@@ -15,7 +15,7 @@ The following steps can be used to get access to the remaining disk drive.
 ### Steps to be done on PC:
 
 - Download ISO image [GParted Live iso](https://gparted.org/download.php)
-- Image USB device [Windows OS](https://kb.igel.com/en/igel-os/current/create-usb-installation-medium-windows) or [IGEL Community HOWTO](HOWTO-Create-USB-Installation-medium)
+- Image USB device [Windows OS](https://kb.igel.com/en/igel-os/current/create-usb-installation-medium-windows) or [IGEL Community: HOWTO Create USB installation medium](HOWTO-Create-USB-Installation-medium.md)
 
 ### Steps to be done on IGEL OS:
 

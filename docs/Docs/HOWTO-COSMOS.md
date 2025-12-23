@@ -524,6 +524,14 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["*"], "protocol": "citrixa
 AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
 ```
 
+**Q:** Having issue with wifi and cannot connect to iPhone Personal Hotspot. How to reset networking?
+
+**A:** Run the following commands as root to reset networking:
+
+```bash linenums="1"
+/bin/resetvalue_tree network && /bin/killwait_postsetupd && /sbin/write_rmsettings 
+```
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

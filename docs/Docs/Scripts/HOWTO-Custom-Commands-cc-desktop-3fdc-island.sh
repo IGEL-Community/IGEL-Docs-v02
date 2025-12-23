@@ -20,7 +20,7 @@ if [ -e /services/island/usr/bin/island-browser-stable ]; then
   echo "Set Default Browser to Island" | $LOGGER
   xdg-settings set default-web-browser island-browser.desktop
   echo "Clear Island Browser CacheStorage" | $LOGGER
-  rm -rf /userhome/.config/island/Default/Service Worker/CacheStorage/*
+  rm -rf /userhome/.config/island/Default/Service\ Worker/CacheStorage/*
 else
   echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found" | $LOGGER
 fi

@@ -82,6 +82,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [touch](Cheatsheet-Linux-General.md#touch)                 | :material-check-bold: | :material-check-bold:| create a file                              |
 | [tr](Cheatsheet-Linux-General.md#tr)                       | :material-check-bold: | :material-check-bold:| translates, deletes, and squeezes characters |
 | [uname](Cheatsheet-Linux-General.md#uname)                 | :material-check-bold: | :material-check-bold:| show linux details                         |
+| [upower](Cheatsheet-Linux-General.md#upower)                 | :material-check-bold: | :material-check-bold:| upower tool |
 | [vi](Cheatsheet-Linux-General.md#vi)                       | :material-check-bold: | :material-check-bold:| texteditor                                 |
 | [watch](Cheatsheet-Linux-General.md#watch)                 | :material-check-bold: | :material-check-bold:| repeat periodic a command                  |
 | [wget](Cheatsheet-Linux-General.md#wget)                   | :material-check-bold: | :material-check-bold:| non-interactive network downloader         |

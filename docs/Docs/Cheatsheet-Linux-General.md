@@ -556,9 +556,48 @@ uname
 Linux
 ```
 
+## upower
+
+UPower Tool
+
+- Enumerate objects paths for devices
+
+```bash linenums="1"
+upower -e
+```
+
+```bash linenums="1"
+/org/freedesktop/UPower/devices/battery_BAT0
+/org/freedesktop/UPower/devices/line_power_AC
+/org/freedesktop/UPower/devices/battery_hid_98o46o0aob0o50o63_battery
+/org/freedesktop/UPower/devices/DisplayDevice
+```
+
+- Show information about object path
+
+```bash linenums="1"
+upower -i /org/freedesktop/UPower/devices/battery_hid_98o46o0aob0o50o63_battery
+```
+
+```bash linenums="1"
+  native-path:          hid-98:46:0a:b0:50:63-battery
+  model:                RON NEHER’s Mouse
+  power supply:         no
+  updated:              Mon 29 Dec 2025 08:31:34 AM MST (19 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  mouse
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    percentage:          89%
+    icon-name:          'battery-full-symbolic'
+```
+
 ## vi
 
-texteditor
+text editor
 
 **open setup.ini in vi:**
 

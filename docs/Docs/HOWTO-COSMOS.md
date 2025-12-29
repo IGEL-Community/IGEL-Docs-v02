@@ -532,6 +532,11 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 /bin/resetvalue_tree network && /bin/killwait_postsetupd && /sbin/write_rmsettings 
 ```
 
+**Q:** How to determine battery level on Apple Magic Mouse?
+
+**A:** Use [upower](Cheatsheet-Linux-General.md#upower) to query the device.
+
+
 -----
 
 ## FAQ - OS 11 to OS 12 Upgrade

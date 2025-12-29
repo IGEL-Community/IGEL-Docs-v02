@@ -635,7 +635,7 @@ watch probeport igelrmserver 8443
 ```
 
 ```bash linenums="1"
-Every 2,0s: probeport igelrmserver 8443                                                                                                                       ITCA44CC8C90000: Wed May 20 14:24:08 2020
+Every 2,0s: probeport igelrmserver 8443      ITCA44CC8C90000: Wed May 20 14:24:08 2020
 
 Connection successful
 ```

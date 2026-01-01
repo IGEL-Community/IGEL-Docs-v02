@@ -94,6 +94,7 @@ RUN bash ./get-debs.sh
 # copy deb files to out folder
 RUN mkdir -p /out
 RUN cp -v *.deb /out/
+RUN cp -v deb-listing.txt /out/
 
 # copy files out of container
 FROM scratch AS export
@@ -126,10 +127,12 @@ cd build_tar
 
 for lib in $MISSING_LIBS; do
   apt-get download $lib
+  ls $lib* >> deb-listing.txt
   mv $lib*.deb $lib.deb
 done
 
 mv *.deb ..
+mv deb-listing.txt ..
 cd ..
 rm -rf build_tar
 ```

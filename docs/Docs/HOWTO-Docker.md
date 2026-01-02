@@ -137,10 +137,11 @@ cd ..
 rm -rf build_tar
 ```
 
-### Run the following command:
+### Run Docker with the following commands:
 
 ```bash linenums="1"
 mkdir -p artifacts
+docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
 ```
 
@@ -210,7 +211,7 @@ FROM scratch AS export
 COPY --from=build /out/ /
 ```
 
-### Run the following command:
+### Run Docker with the following commands:
 
 ```bash linenums="1"
 mkdir -p artifacts

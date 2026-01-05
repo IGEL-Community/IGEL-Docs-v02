@@ -86,15 +86,16 @@ COPY . .
 COPY get-debs.sh .
 
 # Install dependencies
-RUN apt update && apt-get install -y curl gnupg
+RUN apt update && apt-get install -y curl gnupg | tee -a debug.txt
 
 # run get-debs to collect the deb files
-RUN bash ./get-debs.sh
+RUN bash ./get-debs.sh | tee -a debug.txt
 
 # copy deb files to out folder
 RUN mkdir -p /out
 RUN cp -v *.deb /out/
 RUN cp -v deb-listing.txt /out/
+RUN cp -v debug.txt /out/
 
 # copy files out of container
 FROM scratch AS export

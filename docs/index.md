@@ -97,6 +97,7 @@ Measurement Id: G-PTNHLB3WSX
 - [HOWTO Run VMs on MacOS Intel](Docs/HOWTO-Run-VMs-on-MacOS-Intel.md)
 - [HOWTO Setup Lab Sandbox Environment](Docs/HOWTO-Setup-Lab-Sandbox-Environment.md)
 - [HOWTO Template Keys](Docs/HOWTO-Template-Keys.md)
+- [HOWTO Terraform](Docs/HOWTO-Terraform.md)
 - [HOWTO Testing VDI](Docs/HOWTO-Testing-VDI.md)
 - [HOWTO UCC Guide OS11 ](Docs/HOWTO-UCC-Guide.md)
 - [HOWTO UCC Guide OS12 ](Docs/HOWTO-UCC-Guide-OS12.md)

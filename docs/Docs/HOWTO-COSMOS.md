@@ -967,7 +967,7 @@ By enabling and configuring this feature, binaries of apps will be stored on a s
 
 ## FAQ - Distributed Peer Update (Buddy Update)
 
-The Distributed Peer Update feature in IGEL OS 12 (formerly known as Buddy Update in IGEL OS 11) allows IGEL OS 12 devices to act as local update servers. Instead of each device downloading updates from the central update server, peer devices get the updates from each other. This reduces bandwidth usage and speeds up update delivery, especially in geographically distributed networks.
+The Distributed Peer Update (DPU) feature in IGEL OS 12 (formerly known as Buddy Update in IGEL OS 11) allows IGEL OS 12 devices to act as local update servers. Instead of each device downloading updates from the central update server, peer devices get the updates from each other. This reduces bandwidth usage and speeds up update delivery, especially in geographically distributed networks.
 
 Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices on the same local network to automatically find and obtain updates from one another. IGEL Discovery uses an UDP-based mechanism to detect available update sources on the local network and provides an interface that update components use to determine update availability and select an appropriate update source automatically.
 

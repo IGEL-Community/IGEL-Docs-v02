@@ -76,3 +76,12 @@ Now that you have the information in the IGEL UMS, create view and administrativ
 - [IGEL KB: Export View or Advanced Search Result via Mail as an Administrative Task in the IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/export-view-or-advanced-search-result-via-mail-as-)
 
 Now use the data file as input for your ETL job into your CMDB. Follow guidance from your CMDB vendor for setting up ETL job.
+
+-----
+
+## Use IGEL Profile Templates
+
+These profiles are available as templates for assisting with configuration of the different supported workflows.
+
+- [IGELKB: Profile Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates)
+

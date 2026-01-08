@@ -804,13 +804,16 @@ app.avd.sessions.avd%.options.compact-login-view
 
 **Q:** Having performance issues with VMware Horizon and BLAST protocol. What can be done?
 
-**A:** Most performance issues are resolved in Horizon / BLAST with [dri3](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure#DRI3). Enable the following in the registry:
+**A:** Most performance issues are resolved in Horizon / BLAST with [dri3](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure#DRI3). Enable the following in the registry for the respective x driver:
 
-    x.drivers.use_dri3
-    x.drivers.intel.force_dri3
-    x.drivers.ati.force_dri3
-    x.drivers.amdgpu.force_dri3
-    x.drivers.amdgpu.use_tear_free
+```bash linenums="1"
+x.drivers.use_dri3
+x.drivers.intel.force_dri3
+x.drivers.ati.force_dri3
+x.drivers.amdgpu.force_dri3
+x.drivers.amdgpu.use_tear_free
+x.drivers.modesetting.use_tear_free
+```
 
 - [Horizon Blast Protocol : Deprecation of the Switch Encoder Feature from 2312 & onwards. (96214)](https://kb.omnissa.com/s/article/96214)
 

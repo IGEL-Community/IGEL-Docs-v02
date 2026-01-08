@@ -85,3 +85,51 @@ These profiles are available as templates for assisting with configuration of th
 
 - [IGEL KB: Profile Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates)
 
+-----
+
+## Azure Application Gateway for UMS Reverse Proxy
+
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
+
+- [IGEL KB: Azure Application Gateway Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/azure-application-gateway-example-configuration-as)
+
+### Checklist of items to collect
+
+- Public FQDN (fully qualified domain name) and Port of the Reverse Proxy: 
+- FQDN / IP and Port of the configured listener for Device onboarding:
+- Set Public Address and Port of the UMS Process Configuration:
+
+**Note:** In case the public address of the UMS differs from the UMS address, the public address and port must be set. This option can be set under `UMS Administration > UMS Network > Server`. 
+
+- Private FQDN address used by the Azure Application Gateway for UMS connection: 
+- Export UMS Web Certificate Chain as `Export certificate chain to keystore`:
+- Export EST CA Client Certificate Chain from `UMS Administration > Server Network Settings > Export Client Certificate Chain`:
+- Export UMS Web Root Certificate for Azure from `UMS Administration > Global Configuration > Certificate Management > Web . Export Certificate`:
+- Define UMS endpoint paths for Reverse Proxy integration. The used/required paths for OS 12 and UMS Web App:
+
+The paths required for OS 12 device connections to the UMS (via a Reverse Proxy) are:
+
+```bash linenums="1"
+The root path is:
+
+/device-connector/device/*
+
+in more details it would be:
+
+/device-connector/device/ws-connect
+/device-connector/device/portforwarding
+/device-connector/device/.well-known/est/*
+
+and also the appproxy path is required:
+
+/ums-appproxy/*
+
+The device communication is always TLSv1.3.
+
+In case the UMS Web App should be used via a Reverse Proxy the following paths are required:
+
+/wums-app/*
+/webapp/*
+
+Here TLSv1.2 or TLSv1.3 is used.
+```

@@ -83,5 +83,5 @@ Now use the data file as input for your ETL job into your CMDB. Follow guidance 
 
 These profiles are available as templates for assisting with configuration of the different supported workflows.
 
-- [IGELKB: Profile Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates)
+- [IGEL KB: Profile Templates](https://kb.igel.com/en/igel-apps/current/iafi-profile-templates)
 

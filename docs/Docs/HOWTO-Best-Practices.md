@@ -93,6 +93,10 @@ These profiles are available as templates for assisting with configuration of th
 
 - [IGEL KB: Azure Application Gateway Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/azure-application-gateway-example-configuration-as)
 
+- [UMS Command Line Tool to Export UMS Web Certificate](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Certificates/#ums-command-line-tool-to-export-ums-web-certificate)
+
+- [Java keytool](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Certificates/#java-keytool)
+
 ### Checklist of items to collect
 
 - Public FQDN (fully qualified domain name) and Port of the Reverse Proxy: 

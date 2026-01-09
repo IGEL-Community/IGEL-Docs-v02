@@ -111,6 +111,26 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 
 -----
 
+-----
+
+## Java keytool
+
+Java `keytool` command can be used to extract private key and certificate chain from the exported certificate.
+
+Steps to extract private key and certificate chain from exported UMS Web Certificate:
+
+- Export UMS Web Certificate Chain as `Export certificate chain to keystore`
+
+- Run Java `keytool`:
+
+```bash linenums="1"
+keytool -v -importkeystore -srckeystore yourkeystore.keystore -srcalias mykey -destkeystore myp12file.pfx -deststoretype PKCS12
+```
+
+-----
+
+-----
+
 ## Troubleshooting Certificates
 
 **NOTE:** [The Most Common OpenSSL Commands](https://www.sslshopper.com/article-most-common-openssl-commands.html)

@@ -113,7 +113,51 @@ Symmetric and asymmetric encryption are two types of keys that have different fe
 
 -----
 
+## UMS Command Line Tool to Export UMS Web Certificate
+
+### List Web Certs
+
+```bash linenums="1"
+umsadmin-cli web-certs list
+```
+
+```bash linenums="1"
+NAME             FINGERPRINT (SHA1)                       EXPIRATION DATE USED 
+230623-ums12-ron 351B4DA62D5A304C5B86401FB2C49091490EA5AE      2026-04-25 true 
+1264447657       B18CB74C0CA7A54CFCB7AA162E32F2380205D111      2043-03-23 true 
+230623-ums12-ron BB8F25B169B38DEE641FB160C93A303946219F41      2025-05-25 false
+```
+
+### List Assigned Server
+
+```bash linenums="1"
+umsadmin-cli web-certs list-assigned-server -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE
+```
+
+```bash linenums="1"
+HOST      LAST KNOWN IP PROCECSS ID                          VERSION  
+igelums12 10.0.0.35     13078f0d-2161-49da-a09a-2ff074439bfe 12.09.110
+```
+
+### Export Cert Chain
+
+```bash linenums="1"
+mkdir yourkeystore.keystore
+umsadmin-cli web-certs export-cert-chain -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE -k yourkeystore.keystore --password:in
+```
+
+```bash linenums="1"
+Password: 
+Confirm: 
+```
+
+-----
+
+-----
+
 ## Java keytool
+
+**Note:** Install java on your device to have `keytool`. `keytool` is installed on UMS (`/opt/IGEL/RemoteManager/_jvm/bin`)
 
 Java `keytool` command can be used to extract private key and certificate chain from the exported certificate.
 
@@ -124,9 +168,35 @@ Steps to extract private key and certificate chain from exported UMS Web Certifi
 - Run Java `keytool`:
 
 ```bash linenums="1"
-keytool -v -importkeystore -srckeystore yourkeystore.keystore -srcalias mykey -destkeystore myp12file.pfx -deststoretype PKCS12
+keytool -v -importkeystore -srckeystore yourkeystore.keystore -srcalias ALIAS-NAME -destkeystore myp12file.pfx -deststoretype PKCS12
 ```
 
+### Find Alias Name in a Keystore
+
+```bash linenums="1"
+keytool -list -v -keystore yourkeystore.keystore.jks  | grep -i alias
+```
+
+```bash linenums="1"
+Alias name: 1264447657_cert
+Alias name: 1264447657_key
+Alias name: 727194619_cert
+Alias name: 727194619_key
+```
+
+### Extract Private Key and Certificate Chain from a Keystore
+
+```bash linenums="1"
+keytool -v -importkeystore -srckeystore yourkeystore.keystore.jks -srcalias 1264447657_key -destkeystore myp12file.pfx -deststoretype PKCS12
+```
+
+```bash linenums="1"
+Importing keystore yourkeystore.keystore.jks to myp12file.pfx...
+Enter destination keystore password:  
+Re-enter new password: 
+Enter source keystore password:  
+[Storing myp12file.pfx]
+```
 -----
 
 -----

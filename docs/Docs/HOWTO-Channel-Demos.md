@@ -192,3 +192,18 @@ This demo shows the steps to use Stratodesk NoTouch Center to deploy IGEL OS via
 - [IGEL KB: How to Migrate from Stratodesk to IGEL](https://kb.igel.com/new-features/current/how-to-migrate-from-stratodesk-to-igel)
 
  <iframe width="560" height="315" src="https://www.youtube.com/embed/yTwaswmLq28?si=1XVtm8ADmkm-4pkK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
+## How to find and build a screen magnifier (KMag) app
+
+This demo shows the steps to identify a screen magnifier app, how to download the app, how to find missing libraries, and finally creating the recipe that can be used in IGEL App Creator Portal.
+
+Items used:
+
+- [ChatGPT](https://chatgpt.com)
+- [Docker](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/docker)
+- [IGEL-Community / IGEL-OS-APP-RECIPES / Docker Script](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/utils/scripts/docker)
+- [IGEL-Community / IGEL-OS-APP-RECIPES / KMag](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/kmag)
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/EOxcVahGfR4?si=JjcnAh8zVj1Q4CJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

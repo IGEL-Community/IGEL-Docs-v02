@@ -202,7 +202,7 @@ This demo shows the steps to identify a screen magnifier app, how to download th
 Items used:
 
 - [ChatGPT](https://chatgpt.com)
-- [Docker](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/docker)
+- [Docker](HOWTO-Docker.md)
 - [IGEL-Community / IGEL-OS-APP-RECIPES / Docker Script](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/utils/scripts/docker)
 - [IGEL-Community / IGEL-OS-APP-RECIPES / KMag](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/kmag)
 

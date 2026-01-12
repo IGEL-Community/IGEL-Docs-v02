@@ -218,7 +218,7 @@ Ron discussed installing KMag, a screen magnification application, on Debian Boo
 
 ### Docker on IGEL Devices Demo
 
-Ron demonstrated how to run Docker containers on IGEL devices using a created recipe, which involves spinning up a Debian Bookworm instance, downloading and extracting dev files, and copying the results back to the IGEL device. He showed how to identify missing shared libraries in the extracted KMag files using tools like ldd and graph for found, and explained his plan to use ChatGPT to find the necessary packages in Debian Bookworm to resolve these dependencies.
+Ron demonstrated how to run Docker containers on IGEL devices using a created recipe, which involves spinning up a Debian Bookworm instance, downloading and extracting deb files, and copying the results back to the IGEL device. He showed how to identify missing shared libraries in the extracted KMag files using tools like ldd and graph for found, and explained his plan to use ChatGPT to find the necessary packages in Debian Bookworm to resolve these dependencies.
 
 ### Debian KMag Setup Demonstration
 

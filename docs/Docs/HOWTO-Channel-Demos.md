@@ -207,3 +207,27 @@ Items used:
 - [IGEL-Community / IGEL-OS-APP-RECIPES / KMag](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/kmag)
 
  <iframe width="560" height="315" src="https://www.youtube.com/embed/EOxcVahGfR4?si=JjcnAh8zVj1Q4CJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Quick recap
+
+Ron discussed the installation process of KMag, a screen magnification application, on Debian Bookworm using ChatGPT for guidance and demonstrating how to run Docker containers on IGEL devices. He explained the steps involved in setting up a Debian bookworm environment, identifying and resolving missing shared libraries, and successfully running KMag with the necessary dependencies. Ron also demonstrated how to build a recipe for KMag, including capturing configuration settings and handling individual files, and discussed creating a custom installation for the KMag application.
+
+### Summary - KMag Installation on Debian Bookworm
+
+Ron discussed installing KMag, a screen magnification application, on Debian Bookworm. He used ChatGPT to find installation instructions, which revealed that KMag is available in the official repositories. Ron planned to download KMag and examine its dependencies to determine if any additional libraries were needed for installation on IGEL.
+
+### Docker on IGEL Devices Demo
+
+Ron demonstrated how to run Docker containers on IGEL devices using a created recipe, which involves spinning up a Debian Bookworm instance, downloading and extracting dev files, and copying the results back to the IGEL device. He showed how to identify missing shared libraries in the extracted KMag files using tools like ldd and graph for found, and explained his plan to use ChatGPT to find the necessary packages in Debian Bookworm to resolve these dependencies.
+
+### Debian KMag Setup Demonstration
+
+Ron demonstrated setting up a Debian bookworm environment and successfully running KMag with the necessary libraries. He explained the process of collecting and configuring the required packages, setting the library path, and verifying that all dependencies were correctly installed. Ron concluded by preparing to document the setup process in a recipe directory for future reference.
+
+### KMag Recipe Configuration Demonstration
+
+Ron demonstrated how to build a recipe for KMag, explaining the structure of the recipe files and the process of capturing configuration settings. He showed how to copy the settings from the user's home directory to a read-write area to prevent loss of configuration data when the system reboots. Ron also discussed the need to handle individual files within the recipe, requiring additional work compared to handling them as a directory.
+
+### KMEG Custom Installation Process
+
+Ron explained the process of creating a custom installation for the KMEG application, which involves specifying the source files and excluding unnecessary programs. He described setting up a service to manage the kmagrc file and creating a symbolic link to it. Ron also mentioned using ChatGPT to find and install apps on Debian Bookworm.

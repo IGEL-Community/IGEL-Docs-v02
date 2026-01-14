@@ -54,6 +54,14 @@ driverless ipp://IP-address-of-printer/ipp/print | sed -e '/IP-address-of-printe
 
 -----
 
+- Zebra PPD that supports ZPL-based Zebra label printers like the GX430t / GX430ts
+
+```bash linenums="1"
+wget https://raw.githubusercontent.com/mvnural/zebra-cups-driver/master/zebra_zpl_II.ppd
+```
+
+-----
+
 ### FInd the name of the driver for your printer model that has 1536 in name
 
 ```bash linenums="1"

@@ -8,6 +8,8 @@ Comments here
 
 - IGEL OS Firmware Base: [OS 12 Release Notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/04-OS12/)
 
+- [Profile Templates](HOWTO-Profile-Templates.md)
+
 
 - [Cisco JVDI Client](https://app.igel.com/cisco_jvdi/)
 - [Cisco Webex Meetings VDI plugin](https://app.igel.com/cisco_meetings/)

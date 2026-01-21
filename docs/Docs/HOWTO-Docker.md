@@ -213,3 +213,77 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   chrome:bookworm
 ```
+
+-----
+
+-----
+
+## Using IGEL OS App SDK Docker image
+
+Summary of steps:
+
+- Download IGEL OS App SDK Docker image from [IGEL App Creator Portal](https://appcreator.igel.com/)
+- Load the docker image
+- Create `dockerfile`
+- Zip up the recipe and any needed files into `recipe.zip`
+- Run `docker` to build the image, collect the certificates, create zip file of results, and save into `artifacts` folder
+
+### Load the docker image
+
+**Note:** Docker must be run as root
+
+```bash
+docker load < igelpkg.tar
+```
+
+### Create recipe.zip
+
+- To test out the workflow, download the [speedcrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip) calculator recipe zip from [IGEL-Community / IGEL-OS-APP-RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES) and rename as `recipe.zip`
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+# Choose a base image
+FROM igelpkg:latest AS build
+
+# Set a working directory inside the image
+WORKDIR /tmp
+COPY . .
+
+# Copy zip of recipe and any needed files
+RUN rm -rf /tmp/*
+COPY recipe.zip .
+
+# Install dependencies
+RUN apt update && apt-get install -y zip
+
+# unzip recipe
+RUN unzip recipe.zip
+RUN rm recipe.zip
+
+# run igel packager
+RUN igelpkg build -r bookworm -a x64 -sp -sa -l -sr
+
+# copy certs
+RUN cp /usr/share/igelpkg/certs/IGEL_OS_12_SDK-intermediate.crt .
+RUN cp /usr/share/igelpkg/certs/IGEL_OS_12_SDK-leaf.crt .
+
+# create zip file and copy to out folder
+RUN mkdir -p /out
+RUN zip -r build_results.zip *
+RUN cp -v build_results.zip /out/
+
+# copy files out of container
+FROM scratch AS export
+COPY --from=build /out/ /
+```
+
+### Run Docker with the following commands:
+
+```bash linenums="1"
+mkdir -p artifacts
+docker system prune -f
+docker buildx build --network host --target export --output type=local,dest=./artifacts .
+```
+
+- The zip, `build_results.zip`, file will be in the `artifacts` folder

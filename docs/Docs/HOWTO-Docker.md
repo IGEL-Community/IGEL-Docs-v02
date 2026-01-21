@@ -70,7 +70,7 @@ Summary of steps:
 
 - Create `dockerfile`
 - Create `get-debs.sh` to collect deb files
-- Run `docker` to collect the files and save into `artifacts` folder
+- Create `run-docker.sh` to run `docker` to collect the files and save into `artifacts` folder
 
 ### Save the following as `dockerfile`:
 
@@ -138,9 +138,11 @@ cd ..
 rm -rf build_tar
 ```
 
-### Run Docker with the following commands:
+### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+#!/bin/bash
+
 mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
@@ -192,7 +194,7 @@ USER appuser
 ENTRYPOINT ["google-chrome-stable"]
 ```
 
-### Save the following as `run-docker.sh`
+### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
 #!/bin/bash
@@ -226,11 +228,9 @@ Summary of steps:
 - Load the docker image
 - Create `dockerfile`
 - Zip up the recipe and any needed files into `recipe.zip`
-- Run `docker` to build the image, collect the certificates, create zip file of results, and save into `artifacts` folder
+- Create `run-docker.sh` to run `docker` to build the image, collect the certificates, create zip file of results, and save into `artifacts` folder
 
 ### Load the docker image
-
-**Note:** Docker must be run as root
 
 ```bash
 docker load < igelpkg.tar
@@ -278,9 +278,11 @@ FROM scratch AS export
 COPY --from=build /out/ /
 ```
 
-### Run Docker with the following commands:
+### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+#!/bin/bash
+
 mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
@@ -337,7 +339,7 @@ COPY ./publish/ ./
 ENTRYPOINT ["mono", "MyApp.exe"]
 ```
 
-### Save the following as `run-docker.sh`
+### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
 #!/bin/bash

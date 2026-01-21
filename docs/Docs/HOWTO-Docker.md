@@ -74,7 +74,7 @@ Summary of steps:
 
 ### Save the following as `dockerfile`:
 
-```dockerfile
+```dockerfile linenums="1"
 # Choose a base image
 FROM debian:bookworm AS build
 
@@ -152,72 +152,64 @@ docker buildx build --network host --target export --output type=local,dest=./ar
 
 -----
 
-## Using IGEL OS App SDK Docker image
+## Run Chrome in Docker
 
 Summary of steps:
 
-- Download IGEL OS App SDK Docker image from [IGEL App Creator Portal](https://appcreator.igel.com/)
-- Load the docker image
 - Create `dockerfile`
-- Zip up the recipe and any needed files into `recipe.zip`
-- Run `docker` to build the image, collect the certificates, create zip file of results, and save into `artifacts` folder
-
-### Load the docker image
-
-**Note:** Docker must be run as root
-
-```bash
-docker load < igelpkg.tar
-```
-
-### Create recipe.zip
-
-- To test out the workflow, download the [speedcrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip) calculator recipe zip from [IGEL-Community / IGEL-OS-APP-RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES) and rename as `recipe.zip`
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to build the image, install latest Chrome, and run Chrome
 
 ### Save the following as `dockerfile`:
 
-```dockerfile
-# Choose a base image
-FROM igelpkg:latest AS build
+```dockerfile linenums="1"
+# Debian 12 (bookworm)
+FROM debian:bookworm-slim
 
-# Set a working directory inside the image
-WORKDIR /tmp
-COPY . .
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Copy zip of recipe and any needed files
-RUN rm -rf /tmp/*
-COPY recipe.zip .
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+ && mkdir -p /etc/apt/keyrings \
+ && curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub \
+    | gpg --dearmor -o /etc/apt/keyrings/google-linux.gpg
 
-# Install dependencies
-RUN apt update && apt-get install -y zip
+RUN echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-linux.gpg] \
+    http://dl.google.com/linux/chrome/deb/ stable main" \
+    > /etc/apt/sources.list.d/google-chrome.list
 
-# unzip recipe
-RUN unzip recipe.zip
-RUN rm recipe.zip
+RUN apt-get update && apt-get install -y google-chrome-stable
 
-# run igel packager
-RUN igelpkg build -r bookworm -a x64 -sp -sa -l -sr
+# Create group and user
+RUN groupadd -r appuser && useradd -r -g appuser -m appuser
 
-# copy certs
-RUN cp /usr/share/igelpkg/certs/IGEL_OS_12_SDK-intermediate.crt .
-RUN cp /usr/share/igelpkg/certs/IGEL_OS_12_SDK-leaf.crt .
+# Switch to the new user
+USER appuser
 
-# create zip file and copy to out folder
-RUN mkdir -p /out
-RUN zip -r build_results.zip *
-RUN cp -v build_results.zip /out/
-
-# copy files out of container
-FROM scratch AS export
-COPY --from=build /out/ /
+# Run Chrome
+ENTRYPOINT ["google-chrome-stable"]
 ```
 
-### Run Docker with the following commands:
+### Save the following as `run-docker.sh`
 
 ```bash linenums="1"
-mkdir -p artifacts
-docker system prune -f
-docker buildx build --network host --target export --output type=local,dest=./artifacts .
-```
+#!/bin/bash
 
-- The zip, `build_results.zip`, file will be in the `artifacts` folder
+#
+# For X11
+# As user obtain xauth -f ~/.Xauthority list|tail -1
+# As root xauth add string-from-above-command
+# As root xhost +local:docker
+#
+
+docker system prune -f
+docker build --network host -t chrome:bookworm .
+
+docker run --network host --rm -it \
+  --security-opt seccomp=unconfined \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  chrome:bookworm
+```

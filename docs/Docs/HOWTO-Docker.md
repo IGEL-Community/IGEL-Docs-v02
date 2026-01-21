@@ -287,3 +287,74 @@ docker buildx build --network host --target export --output type=local,dest=./ar
 ```
 
 - The zip, `build_results.zip`, file will be in the `artifacts` folder
+
+-----
+
+-----
+
+## Run Mono based app in Docker
+
+Summary of steps:
+
+- Create `dockerfile`
+- Create `publish` folder and copy the mono application and its files into `publish`
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to build the image, install mono, and run mono application
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+# Debian 12 (bookworm)
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install prerequisites + Mono repo + mono runtime
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      ca-certificates gnupg dirmngr wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add Mono Project repository key + repo (signed-by style)
+#RUN mkdir -p /etc/apt/keyrings \
+#    && wget -qO /etc/apt/keyrings/mono-official-archive-keyring.gpg \
+#         https://download.mono-project.com/repo/xamarin.gpg \
+#    && echo "deb [signed-by=/etc/apt/keyrings/mono-official-archive-keyring.gpg] \
+#         https://download.mono-project.com/repo/debian stable-bookworm main" \
+#         > /etc/apt/sources.list.d/mono-official-stable.list
+
+# Install Mono runtime (or replace with mono-complete if you need everything)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      mono-complete libgdiplus \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy a prebuilt app (e.g., MyApp.exe) into the image
+COPY ./publish/ ./
+
+# Run your app
+# If your entrypoint is a single exe, this works well:
+ENTRYPOINT ["mono", "MyApp.exe"]
+```
+
+### Save the following as `run-docker.sh`
+
+```bash linenums="1"
+#!/bin/bash
+
+#
+# For X11
+# As user obtain xauth -f ~/.Xauthority list|tail -1
+# As root xauth add string-from-above-command
+# As root xhost +local:docker
+#
+
+docker system prune -f
+docker build --network host -t my-mono-app:bookworm .
+
+docker run --network host --rm -it \
+  --security-opt seccomp=unconfined \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  my-mono-app:bookworm
+```

@@ -360,3 +360,84 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   my-mono-app:bookworm
 ```
+
+-----
+
+-----
+
+## Run WINE in Docker
+
+[Wine](https://www.winehq.org/) (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
+
+Summary of steps:
+
+- Create `dockerfile`
+- Create `work` folder and copy the Windows application into `work`
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to build the image, install WINE, and run Windows application (notepad)
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+FROM debian:bookworm
+
+#
+# https://www.winehq.org/`
+#
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN dpkg --add-architecture i386
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl wget \
+    gnupg \
+ && mkdir -p /etc/app/sources.list.d \
+ && mkdir -pm755 /etc/apt/keyrings \
+ && wget -O - https://dl.winehq.org/wine-builds/winehq.key \
+    | gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key - \
+ && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
+
+# Install Wine (wine64 + wine32), plus a few useful helpers
+RUN apt-get update && apt-get install --install-recommends -y winehq-stable libvulkan1 \
+    winbind \
+    xvfb \
+    cabextract \
+    fonts-wine
+
+# Create a non-root user (recommended; Wine + root is often messy)
+RUN useradd -u 777 -m -s /bin/bash wineuser
+USER wineuser
+WORKDIR /home/wineuser
+
+CMD ["bash"]
+```
+
+### Save the following as `run-docker.sh`:
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# For X11
+# As user obtain xauth -f ~/.Xauthority list|tail -1
+# As root xauth add string-from-above-command
+# As root xhost +local:docker
+#
+
+mkdir -p work
+
+docker system prune -f
+docker build --network host -t wine:debian .
+
+docker run --network host --rm -it \
+  --security-opt seccomp=unconfined \
+  --device=/dev/dri \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+  -v $PWD:/work -w /work \
+  wine:debian bash
+```

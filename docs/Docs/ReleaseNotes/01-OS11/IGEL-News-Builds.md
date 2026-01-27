@@ -13,6 +13,80 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2026-01-27 - [11.11.120](readme11.11.120.txt)
+
+```
+The new PUBLIC BUILD 11.11.120 for IGEL Workspace is ready.
+
+This build is based on 11.11.100.
+
+These are the release notes published with that release:
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+### Chromium
+
+* Fixed Chromium security issues CVE-2026-0628, CVE-2025-14766, CVE-2025-14765,
+  CVE-2025-14373, CVE-2025-14372, CVE-2025-13721, CVE-2025-13720,
+  CVE-2025-13640, CVE-2025-13639, CVE-2025-13638, CVE-2025-13637,
+  CVE-2025-13636, CVE-2025-13635, CVE-2025-13634, CVE-2025-13633,
+  CVE-2025-13632, CVE-2025-13631 and CVE-2025-13630.  
+* Updated Chromium browser to version 143.0.7499.192.
+
+### Firefox
+
+* Updated Firefox to version 140.7.0 esr.  
+* Fixes for mfsa2026-03, also known as:  
+  CVE-2026-0877, CVE-2026-0878, CVE-2026-0879, CVE-2026-0880,  
+  CVE-2026-0882, CVE-2025-14327, CVE-2026-0883, CVE-2026-0884,  
+  CVE-2026-0885, CVE-2026-0886, CVE-2026-0887, CVE-2026-0890,  
+  CVE-2026-0891.  
+* Fixes for mfsa2025-94, also known as:  
+  CVE-2025-14321, CVE-2025-14322, CVE-2025-14323, CVE-2025-14324,  
+  CVE-2025-14325, CVE-2025-14328, CVE-2025-14329, CVE-2025-14330,  
+  CVE-2025-14331, CVE-2025-14333.  
+* Fixes for mfsa2025-88, also known as:  
+  CVE-2025-13012, CVE-2025-13016, CVE-2025-13017, CVE-2025-13018,  
+  CVE-2025-13019, CVE-2025-13013, CVE-2025-13020, CVE-2025-13014,  
+  CVE-2025-13015.  
+* Fixes for mfsa2025-83, also known as:  
+  CVE-2025-11708, CVE-2025-11709, CVE-2025-11710, CVE-2025-11711,  
+  CVE-2025-11712, CVE-2025-11714, CVE-2025-11715.
+
+### Base system
+
+* Fixed open-vm-tools security issue CVE-2025-41244.  
+* Fixed qtdeclarative-opensource-src security issue CVE-2025-12385.  
+* Fixed qt6-svg security issues CVE-2025-10729 and CVE-2025-10728.  
+* Fixed openvpn security issues CVE-2025-13086 and CVE-2025-12106.  
+* Fixed bind9 security issues CVE-2025-8677, CVE-2025-40780 and CVE-2025-40778.  
+* Fixed glib2.0 security issues CVE-2025-7039, CVE-2025-6052, CVE-2025-3360,
+  CVE-2025-14087 and CVE-2025-13601.  
+* Fixed libpng1.6 security issues CVE-2025-65018, CVE-2025-64720, CVE-2025-64506
+  and CVE-2025-64505.  
+* Fixed samba security issues CVE-2025-9640 and CVE-2025-10230.  
+* Fixed net-snmp security issue CVE-2025-68615.  
+* Fixed openssl security issue CVE-2025-9230.  
+* Fixed libxslt security issue CVE-2025-7424.  
+* Fixed python-urllib3 security issue CVE-2025-66418.  
+* Fixed gnupg2 security issue CVE-2025-68973.
+* Fixed webkit2gtk security issues CVE-2025-66287, CVE-2025-43541,
+  CVE-2025-43536, CVE-2025-43535, CVE-2025-43531, CVE-2025-43529,
+  CVE-2025-43501, CVE-2025-43480, CVE-2025-43458, CVE-2025-43443,
+  CVE-2025-43440, CVE-2025-43434, CVE-2025-43432, CVE-2025-43431,
+  CVE-2025-43430, CVE-2025-43429, CVE-2025-43427, CVE-2025-43425,
+  CVE-2025-43421, CVE-2025-43419, CVE-2025-43392, CVE-2025-43343,
+  CVE-2025-14174, CVE-2025-13947, CVE-2025-13502 and CVE-2023-43000.
+
+### X server
+
+* Fixed X.Org-server security issues CVE-2025-62229, CVE-2025-62230 and
+  CVE-62231.
+```
+
+-----
+
 ## 2025-11-25 - [11.11.100](readme11.11.100.txt)
 
 ```

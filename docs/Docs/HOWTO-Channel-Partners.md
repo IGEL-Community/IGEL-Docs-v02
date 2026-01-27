@@ -279,7 +279,7 @@ rmagent-register -s 73.242.149.67 -p 8443 -a TRY-IGEL -u TRY-SMALL
 
 The structure tag: `system.remotemanager.ums_structure_tag`
 
-- Change `TRY-IGEL` to `TRY-SMALL`
-- Change `TRY-SMALL` to `TRY-IGEL`
+- Change `TRY-IGEL` to `TRY-SMALL` and reboot
+- Change `TRY-SMALL` to `TRY-IGEL` and reboot
 
 ![image001](Images/HOWTO-Channel-Partners-001.png)

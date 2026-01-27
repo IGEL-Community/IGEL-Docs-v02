@@ -243,3 +243,41 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 ### TCO
 
 - Provides TCO calculator that can be used with actual client data for C-level discussions
+
+----------
+
+----------
+
+## Test out IGEL OS
+
+### Steps to test out your UDPocket 2 (32GB) or OS 12 installed device:
+
+- Follow steps to install IGEL OS
+- Boot device
+- Skip -- Let's connect to the company network
+- Skip -- Use the one-time password to onboard this device?
+- Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day evaluation license)
+- Reboot
+- Open the App Portal and install applications
+
+### Steps to connect an OS 12 device to Channel sandbox UMS
+
+- Open a terminal window as root
+- Full Demo (32GB+ disk) enter:
+
+```bash linenums="1"
+rmagent-register -s 73.242.149.67 -p 8443 -a TRY-IGEL -u TRY-IGEL
+```
+
+- Small Demo (less than 32GB disk) enter:
+
+```bash linenums="1"
+rmagent-register -s 73.242.149.67 -p 8443 -a TRY-IGEL -u TRY-SMALL
+```
+
+### Move device to / from TRY-IGEL / TRY-SMALL
+
+The structure tag: `system.remotemanager.ums_structure_tag`
+
+- Change `TRY-IGEL` to `TRY-SMALL`
+- Change `TRY-SMALL` to `TRY-IGEL`

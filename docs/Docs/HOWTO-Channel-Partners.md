@@ -281,3 +281,5 @@ The structure tag: `system.remotemanager.ums_structure_tag`
 
 - Change `TRY-IGEL` to `TRY-SMALL`
 - Change `TRY-SMALL` to `TRY-IGEL`
+
+![image001](Images/HOWTO-Channel-Partners-001.png)

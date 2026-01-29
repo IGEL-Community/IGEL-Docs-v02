@@ -823,6 +823,7 @@ x.drivers.modesetting.use_tear_free
 
 ```bash linenums="1"
 [{"allowed_origins": ["yourdomain.com"], "protocol": "vmware-view"}]
+[{"allowed_origins": ["yourdomain.com"], "protocol": "omnissa-horizon"}]
 ```
 
 -----

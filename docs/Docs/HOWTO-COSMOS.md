@@ -401,7 +401,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** Is OS 12 considered an App?
 
-**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `VMware Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/en/igel-os-base-system/current/)
+**A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `Omnissa Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/en/igel-os-base-system/current/)
 
 **Q:** What are the hardware requirements for OS 12?
 
@@ -800,9 +800,9 @@ app.avd.sessions.avd%.options.compact-login-view
 
 -----
 
-## FAQ - VMware Horizon
+## FAQ - Omnissa Horizon
 
-**Q:** Having performance issues with VMware Horizon and BLAST protocol. What can be done?
+**Q:** Having performance issues with Omnissa Horizon and BLAST protocol. What can be done?
 
 **A:** Most performance issues are resolved in Horizon / BLAST with [dri3](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure#DRI3). Enable the following in the registry for the respective x driver:
 
@@ -817,7 +817,7 @@ x.drivers.modesetting.use_tear_free
 
 - [Horizon Blast Protocol : Deprecation of the Switch Encoder Feature from 2312 & onwards. (96214)](https://kb.omnissa.com/s/article/96214)
 
-**Q:** How to configure Chromium to sign in and switch over to VMware without the `xdg-open` prompt?
+**Q:** How to configure Chromium to sign in and switch over to Omnissa without the `xdg-open` prompt?
 
 **A:** Set the following Chromium custom policy:
 

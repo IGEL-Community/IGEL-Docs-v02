@@ -87,7 +87,7 @@ echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
 
 USBDEVICE=$(/usr/lib/cups/backend/usb 2>/dev/null | cut -d " " -f 2)
 
-lpadmin -p USBPRINTER -E -v "${USBDEVICE}" -m /wfs/USBPRINTER.ppd
+lpadmin -p USBPRINTER -E -v "${USBDEVICE}" -m /wfs/ppd/USBPRINTER.ppd
 ```
 
 -----

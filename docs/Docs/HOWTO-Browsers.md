@@ -164,6 +164,7 @@ microsoft-edge-stable --start-maximized "https://www.igel.com"
 | Microsoft Excel | https://www.office.com/launch/excel | <a href="../Images/HOWTO-Browsers-excel.svg" download>LINK to icon</a> |
 | Microsoft Outlook | https://outlook.office.com | <a href="../Images/HOWTO-Browsers-outlook.svg" download>LINK to icon</a> |
 | Microsoft PowerPoint | https://www.office.com/launch/powerpoint | <a href="../Images/HOWTO-Browsers-powerpoint.svg" download>LINK to icon</a> |
+| Microsoft Teams | https://teams.cloud.microsoft | <a href="../Images/HOWTO-Browsers-teams.svg" download>LINK to icon</a> |
 | Microsoft Word | https://www.office.com/launch/word | <a href="../Images/HOWTO-Browsers-word.svg" download>LINK to icon</a> |
 | Omnissa TestDrive | https://testdrive.vidmpreview.com/authcontrol/auth/request | <a href="../Images/HOWTO-Browsers-testdrive.svg" download>LINK to icon</a> |
 | YouTube | https://www.youtube.com/?feature=ytca | |

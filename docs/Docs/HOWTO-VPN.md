@@ -104,6 +104,43 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 
 -----
 
+## Smart Card / PKCS#11 support
+
+- OpenConnect supports the use of X.509 certificates and keys from smart cards. See the following document: [OpenConnect: Smart Card / PKCS#11 support](https://www.infradead.org/openconnect/pkcs11.html).
+
+- IGEL App Portal: [SafeNet Authentication Client](https://app.igel.com/safenet)
+- IGEL App Portal: [SafeSign Identity Client](https://app.igel.com/safesign)
+- IGEL App Portal: [Cryptovision - SCinterface](https://app.igel.com/cryptovision)
+- IGEL App Portal: [Pointsharp Net iD Enterprise](https://app.igel.com/netid_enterprise)
+
+**NOTE:** Your version of IGEL OS 12 may not have `p11tool`.  <a href="../Scripts/p11tool.zip" download>p11tool.zip Download</a> |
+
+- Identifying the token
+
+```bash linenums="1"
+p11tool --list-tokens
+```
+
+- Locating the certificate
+
+```bash linenums="1"
+p11tool --list-all-certs 'URL-FROM p11tool --list-tokens'
+```
+
+- Searching for the key manually
+
+```bash linenums="1"
+p11tool --list-privkeys --login pkcs11:manufacturer=piv_II
+```
+
+- Run OpenConnect with the full longhand specification of both certificate and key
+
+```bash linenums="1"
+openconnect -c 'URL-CERT` -k 'URL-KEY' vpn.example.com
+```
+
+-----
+
 ## OpenConnect VPN Client Documentation
 
 - [OpenConnect VPN Client](https://www.infradead.org/openconnect/index.html)

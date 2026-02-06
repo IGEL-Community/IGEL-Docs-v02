@@ -121,10 +121,32 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 p11tool --list-tokens
 ```
 
+```bash linenums="1"
+Token 0:
+	URL: pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit;serial=1;token=System%20Trust
+	Label: System Trust
+	Type: Trust module
+	Flags: uPIN uninitialized
+	Manufacturer: PKCS#11 Kit
+	Model: p11-kit-trust
+	Serial: 1
+	Module: p11-kit-trust.so
+```
+
 - Locating the certificate
 
 ```bash linenums="1"
 p11tool --list-all-certs 'URL-FROM p11tool --list-tokens'
+```
+
+```bash linenums="1"
+Object 107:
+	URL: pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit;serial=1;token=System%20Trust;id=%09%CB%59%7F%86%B2%70%8F%1A%C3%39%E3%C0%D9%E9%BF%BB%4D%B2%23;object=Microsoft%20RSA%20Root%20Certificate%20Authority%202017;type=cert
+	Type: X.509 Certificate (RSA-4096)
+	Expires: Fri Jul 18 17:00:23 2042
+	Label: Microsoft RSA Root Certificate Authority 2017
+	Flags: CKA_CERTIFICATE_CATEGORY=CA; CKA_TRUSTED; 
+	ID: 09:cb:59:7f:86:b2:70:8f:1a:c3:39:e3:c0:d9:e9:bf:bb:4d:b2:23
 ```
 
 - Searching for the key manually

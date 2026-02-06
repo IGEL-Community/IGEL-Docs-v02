@@ -155,10 +155,11 @@ Object 107:
 p11tool --list-privkeys --login pkcs11:manufacturer=piv_II
 ```
 
-- Run OpenConnect with the full longhand specification of both certificate and key
+- Run OpenConnect with the full longhand specification of both certificate and key with Palo Alto Networks GlobalProtect SSL VPN (--protocol=gp)
+
 
 ```bash linenums="1"
-openconnect -c 'URL-CERT` -k 'URL-KEY' vpn.example.com
+openconnect --protocol=gp -c 'URL-CERT` -k 'URL-KEY' vpn.example.com
 ```
 
 -----

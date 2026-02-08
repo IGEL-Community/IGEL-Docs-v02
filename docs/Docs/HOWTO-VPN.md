@@ -162,6 +162,8 @@ p11tool --list-privkeys --login pkcs11:manufacturer=piv_II
 openconnect --protocol=gp -c 'URL-CERT` -k 'URL-KEY' vpn.example.com
 ```
 
+**Note:** If your GlobalProtect configuration supports pure certificate authentication, you can explicitly tell OpenConnect not to ask for a password by adding `--no-passwd` 
+
 -----
 
 ## OpenConnect VPN Client Documentation

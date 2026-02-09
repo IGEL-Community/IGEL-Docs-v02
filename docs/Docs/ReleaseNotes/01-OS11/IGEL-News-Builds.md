@@ -13,6 +13,38 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2026-02-06 - [11.11.121](readme11.11.121.txt)
+
+```
+The new PRIVATE BUILD 11.11.121 for IGEL Workspace is ready.
+
+This build is based on 11.11.120.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Available Citrix Workspace Apps in this release: 25.05 (Default), and 25.03  
+* Available Zoom Media Plugins in this release: 6.5.10.26710 (Default),
+  6.4.10.26150, and 5.17.13.25060
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Keyboard shortcuts/ hotkeys now work correctly in Citrix sessions.
+
+### Base system
+
+* Fixed: rsyslog exited on network loss and was never restarted
+```
+
+-----
+
 ## 2026-01-27 - [11.11.120](readme11.11.120.txt)
 
 ```

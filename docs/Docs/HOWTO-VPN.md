@@ -113,7 +113,7 @@ Install the gp-saml-gui as a file via UMS. Edit profile to set variable for for 
 - IGEL App Portal: [Cryptovision - SCinterface](https://app.igel.com/cryptovision)
 - IGEL App Portal: [Pointsharp Net iD Enterprise](https://app.igel.com/netid_enterprise)
 
-**NOTE:** Your version of IGEL OS 12 may not have `p11tool`.  <a href="../Scripts/p11tool.zip" download>p11tool.zip Download</a> |
+**NOTE:** Your version of IGEL OS 12 may not have `p11tool`.  <a href="../Scripts/p11tool.zip" download>p11tool.zip Download</a>
 
 - Identifying the token
 
@@ -133,7 +133,7 @@ Token 0:
 	Module: p11-kit-trust.so
 ```
 
-- Locating the certificate
+- Locating the certificate (`URL-CERT`)
 
 ```bash linenums="1"
 p11tool --list-all-certs 'URL-FROM p11tool --list-tokens'
@@ -149,17 +149,17 @@ Object 107:
 	ID: 09:cb:59:7f:86:b2:70:8f:1a:c3:39:e3:c0:d9:e9:bf:bb:4d:b2:23
 ```
 
-- Searching for the key manually
+- Searching for the key manually (`URL-KEY`)
 
 ```bash linenums="1"
-p11tool --list-privkeys --login pkcs11:manufacturer=piv_II
+p11tool --list-privkeys --login 'URL-CERT'
 ```
 
 - Run OpenConnect with the full longhand specification of both certificate and key with Palo Alto Networks GlobalProtect SSL VPN (--protocol=gp)
 
 
 ```bash linenums="1"
-openconnect --protocol=gp -c 'URL-CERT` -k 'URL-KEY' vpn.example.com
+openconnect --protocol=gp -c 'URL-CERT' -k 'URL-KEY' -u 'placeholder' vpn.example.com
 ```
 
 **Note:** If your GlobalProtect configuration supports pure certificate authentication, you can explicitly tell OpenConnect not to ask for a password by adding `--no-passwd` 

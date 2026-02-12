@@ -677,9 +677,8 @@ https://yourICG:8443/usg/server-status
 
 **Q:** What is the OBS sequence for registering an OS 12 device?
 
-**A:** This sequence cannot be shared to the public. 
+**A:** The sequence
 
-This is a comment section
 ```mermaid
 sequenceDiagram
   participant A as IGEL OS 12

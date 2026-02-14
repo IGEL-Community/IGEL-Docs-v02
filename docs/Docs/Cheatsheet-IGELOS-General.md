@@ -53,17 +53,23 @@ curl -O https://raw.githubusercontent.com/IGEL-Community/IGEL-Custom-Partitions/
 Find location of device
 
 ```bash linenums="1"
-curl -s "http://worldtimeapi.org/api/ip/"
+curl -sS "https://timeapi.io/api/v1/time/current/ip?ipAddress=$(curl -s https://api.ipify.org)" \
+  -H 'accept: text/plain'
 ```
 
 ```bash linenums="1"
-{"utc_offset":"-06:00","timezone":"America/Denver","day_of_week":2,"day_of_year":303,"datetime":"2024-10-29T14:20:43.282300-06:00","utc_datetime":"2024-10-29T20:20:43.282300+00:00","unixtime":1730233243,"raw_offset":-25200,"week_number":44,"dst":true,"abbreviation":"MDT","dst_offset":3600,"dst_from":"2024-03-10T09:00:00+00:00","dst_until":"2024-11-03T08:00:00+00:00","client_ip":"162.142.58.63"}
+{"date_time":"2026-02-14T12:57:45.858738-06:00","date":"2026-02-14","time":"12:57:45.858738","day_of_week":"Saturday","dst_active":false,"timezone":"America/Chicago","utc_offset_seconds":-21600}
 ```
 
 Find timezone for current location
 
 ```bash linenums="1"
-curl -s "http://worldtimeapi.org/api/ip/" | jq --raw-output '(.timezone)'
+curl -sS "https://timeapi.io/api/v1/time/current/ip?ipAddress=$(curl -s https://api.ipify.org)" \
+  -H 'accept: text/plain' | jq -r '.timezone'
+```
+
+```bash linenums="1"
+curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null) 2>/dev/null | jq -r '.timezone'
 ```
 
 Script to update timezone
@@ -77,7 +83,7 @@ TZ=
 while [ -z "$TZ" ]
 do
 	sleep 5s;
-	TZ=$(curl -s "http://worldtimeapi.org/api/ip/" | jq --raw-output '(.timezone)');
+	TZ=$(curl -sS "https://timeapi.io/api/v1/time/current/ip?ipAddress=$(curl -s https://api.ipify.org)" -H 'accept: text/plain' | jq -r '.timezone')
 done
 timedatectl set-timezone $TZ
 ntpdate pool.ntp.org

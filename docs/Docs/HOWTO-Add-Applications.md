@@ -6,52 +6,6 @@
 Comments
 -->
 
-## OS 11 and  OS 12 Via Custom Partitions
-
-[IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
-
-### Sample OS 11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
-
-| Application | Profile |
-|-------------|---------|
-| Chrome | <a href="../Profiles/HOWTO-Add-Application-Chrome-CP-profile.xml" download>LINK to Profile</a> |
-| Frame | <a href="../Profiles/HOWTO-Add-Application-Frame-CP-profile.xml" download>LINK to Profile</a> |
-| LibreOffice | <a href="../Profiles/HOWTO-Add-Application-LibreOffice-CP-profile.xml" download>LINK to Profile</a> |
-| Microsoft Edge | <a href="../Profiles/HOWTO-Add-Application-Microsoft-Edge-CP-profile.xml" download>LINK to Profile</a> |
-| VLC | <a href="../Profiles/HOWTO-Add-Application-VLC-CP-profile.xml" download>LINK to Profile</a> |
-| Webex | <a href="../Profiles/HOWTO-Add-Application-Webex-CP-profile.xml" download>LINK to Profile</a> |
-| Zoom | <a href="../Profiles/HOWTO-Add-Application-Zoom-CP-profile.xml" download>LINK to Profile</a> |
-
-### OS 12 Profile Settings
-
-| Application | Size | URL | Initial action | Final Action | Icon | Command |
-|-------------|------|-----|----------------|--------------|------|---------|
-| Chrome | 600M | https://[UMS_Server]:8443/ums_filetransfer/chrome.inf | /custom/chrome-cp-init-script.sh init | /custom/chrome-cp-init-script.sh stop | /custom/chrome/opt/google/chrome/product_logo_256.png | /custom/chrome/usr/bin/google-chrome-stable |
-| Frame | 500M | https://[UMS_Server]:8443/ums_filetransfer/frame.inf | /custom/frame-cp-init-script.sh init | /custom/frame-cp-init-script.sh stop | /custom/frame/usr/share/pixmaps/Frame.png | /custom/frame/usr/bin/nutanix-frame/Frame –url=console.nutanix.com |
-| LibreOffice | 1500M | https://[UMS_Server]:8443/ums_filetransfer/libreoffice.inf | /custom/libreoffice-cp-init-script.sh init | /custom/libreoffice-cp-init-script.sh stop | /custom/libreoffice/usr/share/icons/hicolor/256x256/apps/libreoffice7.5-main.png | /custom/libreoffice/opt/libreoffice7.5/program/soffice |
-| Microsoft Edge | 800M | https://[UMS_Server]:8443/ums_filetransfer/edge.inf | /custom/edge-cp-init-script.sh init | /custom/edge-cp-init-script.sh stop | /custom/edge/opt/microsoft/msedge-beta/product_logo_256_beta.png | /custom/edge/usr/bin/microsoft-edge-beta |
-| VLC | 300M | https://[UMS_Server]:8443/ums_filetransfer/vlc.inf | /custom/vlc-cp-init-script.sh init | /custom/vlc-cp-init-script.sh stop | /custom/vlc/usr/share/icons/hicolor/256x256/apps/vlc.png | /custom/vlc/usr/bin/vlc |
-| Webex | 1100M | https://[UMS_Server]:8443/ums_filetransfer/webex.inf | /custom/webex-cp-init-script.sh init | /custom/webex-cp-init-script.sh stop | /custom/webex/opt/Webex/bin/sparklogosmall.png | /custom/webex/opt/Webex/bin/CiscoCollabHost |
-| Zoom | 800M | https://[UMS_Server]:8443/ums_filetransfer/zoom.inf | /custom/zoom-cp-init-script.sh init | /custom/zoom-cp-init-script.sh stop | /custom/zoom/usr/share/pixmaps/Zoom.png | xdg-mime default Zoom.desktop x-scheme-handler/zoommtg && /custom/zoom/usr/bin/zoom |
-
-### IGEL Disclaimer
-
-The provided packages for use with the IGEL OS Custom Partition feature are without any warranty or support by IGEL Technology.
-
-The files are not designed for production usage, use at your own risk. IGEL Technology will not provide any packages for production use and will not create or support any other packages or the implementation for other 3rd party software.
-
-IGEL Technology is not responsible for any license violation created with the custom partition technology or the provided technical demonstation packages.
-
-The custom partition technology can create a permanent damage in the IGEL OS host system, services related to the wrong usage/misinstallation of a custom partition and/or the deployed packages are not covered by the warranty in any kind.
-
-You will not get support as long the custom partition is used on a system, to avoid conflicts you've to reset the device back to factory defaults before opening a support call.
-
-All packages are designed as technical demonstration samples!
-
-Use at your own risk! 
-
------
-
 ## [OS 12 App Portal](https://kb.igel.com/en/how-to-start-with-igel/current/igel-app-portal)
 
 - With IGEL OS 12, the modular principle is introduced – you can install and update single applications like Citrix or AVD client, Chromium browser, etc. individually. All applications currently available for IGEL OS 12 can be found in the IGEL App Portal. 
@@ -199,6 +153,50 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
     - Communication token: `94ad777f5b5894a7`
 
 [IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/en/how-to-start-with-igel/current/onboarding-igel-os-12-devices#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)
+
+## OS 11 and  OS 12 Via Custom Partitions
+
+[IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
+
+### Sample OS 11 Profiles to test some of the most common Custom Partitions created by the automated builder scripts on GitHub link above.
+
+| Application | Profile |
+|-------------|---------|
+| Chrome | <a href="../Profiles/HOWTO-Add-Application-Chrome-CP-profile.xml" download>LINK to Profile</a> |
+| Frame | <a href="../Profiles/HOWTO-Add-Application-Frame-CP-profile.xml" download>LINK to Profile</a> |
+| LibreOffice | <a href="../Profiles/HOWTO-Add-Application-LibreOffice-CP-profile.xml" download>LINK to Profile</a> |
+| Microsoft Edge | <a href="../Profiles/HOWTO-Add-Application-Microsoft-Edge-CP-profile.xml" download>LINK to Profile</a> |
+| VLC | <a href="../Profiles/HOWTO-Add-Application-VLC-CP-profile.xml" download>LINK to Profile</a> |
+| Webex | <a href="../Profiles/HOWTO-Add-Application-Webex-CP-profile.xml" download>LINK to Profile</a> |
+| Zoom | <a href="../Profiles/HOWTO-Add-Application-Zoom-CP-profile.xml" download>LINK to Profile</a> |
+
+### OS 12 Profile Settings
+
+| Application | Size | URL | Initial action | Final Action | Icon | Command |
+|-------------|------|-----|----------------|--------------|------|---------|
+| Chrome | 600M | https://[UMS_Server]:8443/ums_filetransfer/chrome.inf | /custom/chrome-cp-init-script.sh init | /custom/chrome-cp-init-script.sh stop | /custom/chrome/opt/google/chrome/product_logo_256.png | /custom/chrome/usr/bin/google-chrome-stable |
+| Frame | 500M | https://[UMS_Server]:8443/ums_filetransfer/frame.inf | /custom/frame-cp-init-script.sh init | /custom/frame-cp-init-script.sh stop | /custom/frame/usr/share/pixmaps/Frame.png | /custom/frame/usr/bin/nutanix-frame/Frame –url=console.nutanix.com |
+| LibreOffice | 1500M | https://[UMS_Server]:8443/ums_filetransfer/libreoffice.inf | /custom/libreoffice-cp-init-script.sh init | /custom/libreoffice-cp-init-script.sh stop | /custom/libreoffice/usr/share/icons/hicolor/256x256/apps/libreoffice7.5-main.png | /custom/libreoffice/opt/libreoffice7.5/program/soffice |
+| Microsoft Edge | 800M | https://[UMS_Server]:8443/ums_filetransfer/edge.inf | /custom/edge-cp-init-script.sh init | /custom/edge-cp-init-script.sh stop | /custom/edge/opt/microsoft/msedge-beta/product_logo_256_beta.png | /custom/edge/usr/bin/microsoft-edge-beta |
+| VLC | 300M | https://[UMS_Server]:8443/ums_filetransfer/vlc.inf | /custom/vlc-cp-init-script.sh init | /custom/vlc-cp-init-script.sh stop | /custom/vlc/usr/share/icons/hicolor/256x256/apps/vlc.png | /custom/vlc/usr/bin/vlc |
+| Webex | 1100M | https://[UMS_Server]:8443/ums_filetransfer/webex.inf | /custom/webex-cp-init-script.sh init | /custom/webex-cp-init-script.sh stop | /custom/webex/opt/Webex/bin/sparklogosmall.png | /custom/webex/opt/Webex/bin/CiscoCollabHost |
+| Zoom | 800M | https://[UMS_Server]:8443/ums_filetransfer/zoom.inf | /custom/zoom-cp-init-script.sh init | /custom/zoom-cp-init-script.sh stop | /custom/zoom/usr/share/pixmaps/Zoom.png | xdg-mime default Zoom.desktop x-scheme-handler/zoommtg && /custom/zoom/usr/bin/zoom |
+
+### IGEL Disclaimer
+
+The provided packages for use with the IGEL OS Custom Partition feature are without any warranty or support by IGEL Technology.
+
+The files are not designed for production usage, use at your own risk. IGEL Technology will not provide any packages for production use and will not create or support any other packages or the implementation for other 3rd party software.
+
+IGEL Technology is not responsible for any license violation created with the custom partition technology or the provided technical demonstation packages.
+
+The custom partition technology can create a permanent damage in the IGEL OS host system, services related to the wrong usage/misinstallation of a custom partition and/or the deployed packages are not covered by the warranty in any kind.
+
+You will not get support as long the custom partition is used on a system, to avoid conflicts you've to reset the device back to factory defaults before opening a support call.
+
+All packages are designed as technical demonstration samples!
+
+Use at your own risk! 
 
 -----
 

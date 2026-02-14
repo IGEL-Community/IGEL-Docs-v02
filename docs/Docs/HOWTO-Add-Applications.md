@@ -27,7 +27,7 @@ Comments
 - SDK command to build and sign app:
 
 ```bash linenums="1"
-igelpkg build -r bookworm -a x64 -sp -sa
+igelpkg build -r bookworm -a x64 -sp -sa -kl
 ```
 
 ## IGEL App Creator Portal
@@ -37,6 +37,7 @@ Build your own IGEL OS App with IGEL App Creator Portal
 - [IGEL App Creator Portal – the straightforward way to secure and deploy your third-party apps to IGEL OS12](https://www.igel.com/blog/igel-app-creator-portal-the-straightforward-way-to-secure-and-deploy-your-third-party-apps-to-igel-os12/)
 - [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal)
 - [IGEL KB: Upload and Assign Files in the IGEL UMS Web App - Classification - App signing certificate](https://kb.igel.com/en/universal-management-suite/current/upload-and-assign-files-in-the-igel-ums-web-app)
+- [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-)
 - [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 - [IGEL Community GitHub: SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
 
@@ -130,12 +131,16 @@ echo "Y" | igelpkgctl uninstall avd
 
 Run the following command as root in terminal window:
 
-```bash linenums="1"
-mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
-```
-Or (new command with OS 12 - `delete_igel_licenses ALL`)
+- OS 12:
+
 ```bash linenums="1"
 delete_igel_licenses ALL && reset_to_defaults && reboot
+```
+
+- OS 11:
+
+```bash linenums="1"
+mount -o remount,rw /license && rm -rf /license/dsa/licenses/*.lic && reset_to_defaults && reboot
 ```
 
 -----

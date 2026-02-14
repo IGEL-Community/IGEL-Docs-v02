@@ -160,6 +160,163 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
 
 [IGEL KB: Alternative Onboarding Method: Registering Devices with the UMS Using the One-Time Password](https://kb.igel.com/en/how-to-start-with-igel/current/onboarding-igel-os-12-devices#OnboardingIGELOS12Devices-RegisterOS12devices_OTPAlternativeOnboardingMethod:RegisteringDeviceswiththeUMSUsingtheOne-TimePassword)
 
+-----
+
+## Building an OS 12 App Recipe for IGEL App Creator Portal -- SpeedCrunch
+
+- [GitHub App Recipes - SpeedCrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/speedcrunch)
+- [GitHub App Recipes - SpeedCruch Zip File](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip)
+
+![image-howto-add-applications-01](Images/HOWTO-Add-Applications-01.png)
+
+### app.json
+
+```bash linenums="1"
+{
+  "categories": [
+    "Miscellaneous"
+  ],
+  "icons": {
+    "app": "app.png",
+    "monochrome": "monochrome.png"
+  },
+  "name": "speedcrunch",
+  "author": "The IGEL community",
+  "vendor": "SpeedCrunch Team",
+  "public_version": "0.12.0-6",
+  "release": "",
+  "summary": {
+    "en": "SpeedCrunch (Community)"
+  },
+  "version": "0.12.0"
+}
+```
+
+### data/app.png
+
+Application icon color
+
+### data/changelogs/en
+
+```bash linenums="1"
+speedcrunch (0.12.0-6) unstable; urgency=medium
+
+  * d/patches: use Sphinx built-in i18n support for extensions
+    - Closes: #1026816
+
+ -- Felix Krull <f_krull@gmx.de>  Fri, 23 Dec 2022 19:24:30 +0100
+
+speedcrunch (0.12.0-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix docs build with Sphinx >= 4. (Closes: #997366)
+    - Add 0007-fix-docs-build-with-Sphinx-4.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Sat, 29 Oct 2022 09:59:26 +0200
+
+speedcrunch (0.12.0-5) unstable; urgency=medium
+
+  * d/patches, d/control: fix docs build with Sphinx >= 2.0
+    - Closes: #955058
+  * d/patches: use CMake's CXX_STANDARD property
+  * d/copyright: add separate notice for appdata files
+  * d/control:
+    - bump Standards-Version
+    - bump debhelper compat version
+
+ -- Felix Krull <f_krull@gmx.de>  Sun, 19 Apr 2020 14:13:08 +0200
+
+speedcrunch (0.12.0-4) unstable; urgency=medium
+
+  * d/control:
+    - update VCS-* urls
+    - bump Standards-Version
+    - use python3-sphinx instead of python-sphinx
+  * d/compat: bump debhelper compat version to 10
+  * d/patches, d/rules: build the HTML manual in a separate step
+    - Rebuilding the HTML manual during the build has proven fragile. Instead,
+      the manual is now built in a separate step and the application build is
+      pointed at the result of that build.
+    - Closes: #897531
+
+ -- Felix Krull <f_krull@gmx.de>  Mon, 14 May 2018 16:52:42 +0000
+```
+
+### data/config/config.param
+
+```bash linenums="1"
+<sessions>
+	<speedcrunch%>
+        <name>
+            value=<SpeedCrunch>
+        </name>
+        <icon>
+            value=<speedcrunch>
+        </icon>
+        extends_base=<sessions.base%>
+	</speedcrunch%>
+	<speedcrunch0>
+	</speedcrunch0>
+    node_action=<wm_postsetup>
+</sessions>
+```
+
+### data/descriptions/en
+
+```bash linenums="1"
+A high-precision scientific calculator
+
+SpeedCrunch is a fast, high-precision scientific calculator. It features a syntax-highlighted scrollable display and is designed to be fully used via keyboard.
+```
+
+### data/monochrome.png
+
+Application icon monochrome
+
+### igel/debian.json
+
+```bash linenums="1"
+[
+  {
+    "package": "speedcrunch"
+  }
+]
+```
+
+### igel/install.json
+
+```bash linenums="1"
+[
+  {
+    "source": ".*",
+    "excludes": [
+      "usr/share/applications.*",
+      "usr/share/doc.*",
+      "usr/share/man.*",
+      "usr/share/metainfo.*"
+    ]
+  }
+]
+```
+
+### input/all/config/sessions/speedcrunch0
+
+```bash linenums="1"
+#!/bin/bash
+
+speedcrunch
+```
+
+### README.md
+
+```bash linenums="1"
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+-----
+
+-----
+
 ## OS 11 and  OS 12 Via Custom Partitions
 
 [IGEL Community on GitHub - Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
@@ -455,154 +612,3 @@ exit 0
 **A:** [CP build automation](https://github.com/IGEL-Community/IGEL-Custom-Partitions/tree/master/utils/cp_build_automation)
 
 -----
-
-## Building an OS 12 App Recipe for IGEL App Creator Portal -- SpeedCrunch
-
-- [GitHub App Recipes - SpeedCrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/speedcrunch)
-- [GitHub App Recipes - SpeedCruch Zip File](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip)
-
-![image-howto-add-applications-01](Images/HOWTO-Add-Applications-01.png)
-
-### app.json
-
-```bash linenums="1"
-{
-  "categories": [
-    "Miscellaneous"
-  ],
-  "icons": {
-    "app": "app.png",
-    "monochrome": "monochrome.png"
-  },
-  "name": "speedcrunch",
-  "author": "The IGEL community",
-  "vendor": "SpeedCrunch Team",
-  "public_version": "0.12.0-6",
-  "release": "",
-  "summary": {
-    "en": "SpeedCrunch (Community)"
-  },
-  "version": "0.12.0"
-}
-```
-
-### data/app.png
-
-Application icon color
-
-### data/changelogs/en
-
-```bash linenums="1"
-speedcrunch (0.12.0-6) unstable; urgency=medium
-
-  * d/patches: use Sphinx built-in i18n support for extensions
-    - Closes: #1026816
-
- -- Felix Krull <f_krull@gmx.de>  Fri, 23 Dec 2022 19:24:30 +0100
-
-speedcrunch (0.12.0-5.1) unstable; urgency=medium
-
-  * Non-maintainer upload.
-  * Fix docs build with Sphinx >= 4. (Closes: #997366)
-    - Add 0007-fix-docs-build-with-Sphinx-4.patch
-
- -- Felix Geyer <fgeyer@debian.org>  Sat, 29 Oct 2022 09:59:26 +0200
-
-speedcrunch (0.12.0-5) unstable; urgency=medium
-
-  * d/patches, d/control: fix docs build with Sphinx >= 2.0
-    - Closes: #955058
-  * d/patches: use CMake's CXX_STANDARD property
-  * d/copyright: add separate notice for appdata files
-  * d/control:
-    - bump Standards-Version
-    - bump debhelper compat version
-
- -- Felix Krull <f_krull@gmx.de>  Sun, 19 Apr 2020 14:13:08 +0200
-
-speedcrunch (0.12.0-4) unstable; urgency=medium
-
-  * d/control:
-    - update VCS-* urls
-    - bump Standards-Version
-    - use python3-sphinx instead of python-sphinx
-  * d/compat: bump debhelper compat version to 10
-  * d/patches, d/rules: build the HTML manual in a separate step
-    - Rebuilding the HTML manual during the build has proven fragile. Instead,
-      the manual is now built in a separate step and the application build is
-      pointed at the result of that build.
-    - Closes: #897531
-
- -- Felix Krull <f_krull@gmx.de>  Mon, 14 May 2018 16:52:42 +0000
-```
-
-### data/config/config.param
-
-```bash linenums="1"
-<sessions>
-	<speedcrunch%>
-        <name>
-            value=<SpeedCrunch>
-        </name>
-        <icon>
-            value=<speedcrunch>
-        </icon>
-        extends_base=<sessions.base%>
-	</speedcrunch%>
-	<speedcrunch0>
-	</speedcrunch0>
-    node_action=<wm_postsetup>
-</sessions>
-```
-
-### data/descriptions/en
-
-```bash linenums="1"
-A high-precision scientific calculator
-
-SpeedCrunch is a fast, high-precision scientific calculator. It features a syntax-highlighted scrollable display and is designed to be fully used via keyboard.
-```
-
-### data/monochrome.png
-
-Application icon monochrome
-
-### igel/debian.json
-
-```bash linenums="1"
-[
-  {
-    "package": "speedcrunch"
-  }
-]
-```
-
-### igel/install.json
-
-```bash linenums="1"
-[
-  {
-    "source": ".*",
-    "excludes": [
-      "usr/share/applications.*",
-      "usr/share/doc.*",
-      "usr/share/man.*",
-      "usr/share/metainfo.*"
-    ]
-  }
-]
-```
-
-### input/all/config/sessions/speedcrunch0
-
-```bash linenums="1"
-#!/bin/bash
-
-speedcrunch
-```
-
-### README.md
-
-```bash linenums="1"
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```

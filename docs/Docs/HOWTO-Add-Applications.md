@@ -40,6 +40,7 @@ Build your own IGEL OS App with IGEL App Creator Portal
 - [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-)
 - [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 - [IGEL Community GitHub: SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
+- [IGEL Community GitHub: How to find and build a screen magnifier (KMag) app](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Channel-Demos/#how-to-find-and-build-a-screen-magnifier-kmag-app)
 
 **Please Note:** 
 

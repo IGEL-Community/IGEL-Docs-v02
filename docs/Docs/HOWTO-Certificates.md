@@ -2,6 +2,16 @@
 
 -----
 
+-----
+
+## [SSL: Who Do You Trust?](https://datacenteroverlords.com/2011/09/25/ssl-who-do-you-trust/?utm_source=chatgpt.com)
+
+- Let’s say you’re in the market for a starship.  You’re looking for a sporty model with warp drive, heated seats, and most importantly, a holodeck. You go to your local Starfleet dealer, and you find this guy....  Ensign Tony.
+
+-----
+
+-----
+
 ## Certificates/PKI Basics
 
 ### SSL/TLS Encryption

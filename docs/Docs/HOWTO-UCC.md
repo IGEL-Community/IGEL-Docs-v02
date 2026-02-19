@@ -29,6 +29,12 @@ Remove for now
 
 -----
 
+## Test Your Microphone Online
+
+- [MicTest](https://mic-tests.github.io/) is a comprehensive online microphone testing platform that enables users to verify microphone functionality, measure audio quality parameters, and troubleshoot common microphone issues across all device types.
+
+-----
+
 ## Setting DPI Display Scaling in Windows
 
 - [How to Change DPI Display Scaling in Windows 11](https://winaero.com/how-to-change-dpi-display-scaling-in-windows-11/)

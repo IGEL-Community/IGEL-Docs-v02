@@ -301,7 +301,7 @@ The objective of this Proof of Concept (POC) is to validate the deployment, conf
 Approach:
 
 - Provision one IGEL UMS server virtual machine (Windows or Linux) with internal database
-- Deploy 2–3 IGEL OS endpoints (virtual machines preferred) and register to UMS
+- Deploy 2–3 IGEL OS endpoints (IGEL UD Pocket or virtual machines preferred) and register to UMS
 - Create and configure 2–3 IGEL profiles and assign to endpoints
 - Configure connectivity to one internal third-party application or virtual environment
 - Perform validation testing and document findings

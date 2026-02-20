@@ -33,6 +33,14 @@ Remove for now
 
 - [MicTest](https://mic-tests.github.io/) is a comprehensive online microphone testing platform that enables users to verify microphone functionality, measure audio quality parameters, and troubleshoot common microphone issues across all device types.
 
+### IGEL OS 12 provides two Audio systems (backends) (pipewire and pulseaudio)
+
+- Test microphone with both audio systems (backends) to find best quality - `Devices -> Audio`
+
+| Parameter | Registry | Range | Value |
+| --------- | -------- | ----- | ----- |
+| `Audiobackend` | `multimedia.audiobackend` | [pipewire][pulseaudio] | *pipewire* |
+
 -----
 
 ## Setting DPI Display Scaling in Windows

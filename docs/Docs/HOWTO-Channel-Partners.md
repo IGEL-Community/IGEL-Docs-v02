@@ -40,6 +40,8 @@ igel academy account notes
 
 **NOTE:** Have the client complete the following steps ten (10) business days prior to POC
 
+- Confirm that the client SME (lead) has completed IGEL Certified Professional class (free)
+
 - Register with the [IGEL License Portal](https://activation.igel.com/)
 
 - Wait until they get an email from IGEL that says that their account has been registered and approved

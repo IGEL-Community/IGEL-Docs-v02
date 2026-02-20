@@ -36,9 +36,9 @@ igel academy account notes
 
 ----------
 
-## Channel Partner PoC steps
+## Channel Partner POC steps
 
-**NOTE:** Have the client complete the following steps ten (10) business days prior to PoC
+**NOTE:** Have the client complete the following steps ten (10) business days prior to POC
 
 - Register with the [IGEL License Portal](https://activation.igel.com/)
 
@@ -52,7 +52,7 @@ igel academy account notes
 
 - IGEL Trial License Activation Process – aka Delivery Tokens. Once they can log in to the ILP they can register and accept the EULA of the Delivery Token that IGEL provided
 
-- Client request partner assistance with installing the UMS, registering it with IGEL, and next steps for the PoC
+- Client request partner assistance with installing the UMS, registering it with IGEL, and next steps for the POC
 
 ----------
 
@@ -283,3 +283,86 @@ The structure tag: `system.remotemanager.ums_structure_tag`
 - Change `TRY-SMALL` to `TRY-IGEL` and reboot
 
 ![image001](Images/HOWTO-Channel-Partners-001.png)
+
+-----
+
+-----
+
+## Statement of Work (SOW) - Sample Template
+
+### Proof of Concept (POC)
+
+#### Section 1: Solution Overview
+
+Objective:
+
+The objective of this Proof of Concept (POC) is to validate the deployment, configuration, and functionality of an IGEL environment within an internal test setting. The POC will demonstrate centralized endpoint management using IGEL Universal Management Suite (UMS), configuration of IGEL OS endpoints, profile assignment, and connectivity to a single third-party application or virtual environment. This POC is strictly for internal testing purposes and will not include any external network connectivity.
+
+Approach:
+
+- Provision one IGEL UMS server virtual machine (Windows or Linux) with internal database
+- Deploy 2–3 IGEL OS endpoints (virtual machines preferred) and register to UMS
+- Create and configure 2–3 IGEL profiles and assign to endpoints
+- Configure connectivity to one internal third-party application or virtual environment
+- Perform validation testing and document findings
+
+Expected Outcome:
+
+- Operational IGEL UMS with internal database
+- 2–3 centrally managed IGEL OS endpoints
+- Validated profile configuration and enforcement
+- Verified connectivity to one internal application or virtual environment
+- Documented validation results for internal review
+
+#### Section 2: Scope Overview
+
+| Workstream | Object / Scope | Benefit |
+| ---------- | -------------- | ------- |
+| UMS Deployment | Install and configure one IGEL UMS VM (Windows or Linux) with internal database | Establish centralized endpoint management |
+| Endpoint Provisioning | Deploy and register 2-3 IGEL OS endpoints (VMs preferred) | Validate endpoint lifecycle management |
+| Profile Configuration | Create and assign 2-3 IGEL profiles aligned with internal testing use cases | Demonstrate policy control and configuration management |
+| Application Integration | Configure connectivity to one internal third-part application or virtual environment | Validate real-world use case functionality |
+| Validation & Testing | Perform functional testing and configuration validation | Confirm POC success criterial and readiness for next steps |
+
+#### Section 3: Client Responsibilities
+
+- Provide virtualization infrastructure (compute, storage, networking)
+- Provide non IGEL OS licensing if applicable
+- Ensure internal network connectivity between UMS and endpoints
+- Provide administrative access and credentials as needed
+- Provide access requirements for the third-party application
+- Participate in validation and testing sessions
+- Designate a primary technical contact
+
+#### Section 4: Assumptions and Exclusions
+
+Assumptions
+
+- POC conducted in a controlled internal test environment
+- Infrastructure resources available prior to start
+- No external connectivity required
+- Internal UMS database sufficient for POC scale
+- Third-party application operational internally
+- No production SLAs apply
+- At least one technical resource must have successfully completed the IGEL Certified Professional (ICP) course through IGEL Academy prior to the start of the POC
+
+Exclusions
+
+- Production deployment
+- High availability configuration
+- Enterprise database integration
+- Security compliance validation
+- Advanced identity provider integrations
+- Long-term operational support beyond POC
+
+#### Section 5: Estimated Effort & Timeline
+
+| Activity | Estimated Effort |
+| -------- | ---------------- |
+| Planning & Design | 4-6 hours |
+| UMS Deployment & Configuration | 4-6 hours |
+| Endpoint Deployment & Registration | 3-5 hours |
+| Profile Creation & Assignment | 3-4 hours |
+| Application Integration | 4-6 hours |
+| Validation & Documentation | 3-5 hours |
+| **Total Estimated Effort** | **21-32 hours (3-5 business days)** |

@@ -300,6 +300,8 @@ Objective:
 
 The objective of this Proof of Concept (POC) is to validate the deployment, configuration, and functionality of an IGEL environment within an internal test setting. The POC will demonstrate centralized endpoint management using IGEL Universal Management Suite (UMS), configuration of IGEL OS endpoints, profile assignment, and connectivity to a single third-party application or virtual environment. This POC is strictly for internal testing purposes and will not include any external network connectivity.
 
+**NOTE:** At least one technical resource from the company **must** have successfully completed the IGEL Certified Professional (ICP) course through IGEL Academy prior to the start of the POC.
+
 Approach:
 
 - Provision one IGEL UMS server virtual machine (Windows or Linux) with internal database

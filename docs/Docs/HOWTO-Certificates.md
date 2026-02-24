@@ -208,6 +208,17 @@ Enter source keystore password:
 [Storing myp12file.pfx]
 ```
 
+### Extract Root Certificate from a Keystore
+
+```bash linenums="1"
+keytool -exportcert -alias 1264447657_key -keystore yourkeystore.keystore.jks -file ums_cert.crt -rfc
+```
+
+```bash linenums="1"
+Enter keystore password:  
+Certificate stored in file <ums_cert_new.crt>
+```
+
 -----
 
 -----

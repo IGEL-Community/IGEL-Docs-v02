@@ -216,7 +216,7 @@ keytool -exportcert -alias 1264447657_key -keystore yourkeystore.keystore.jks -f
 
 ```bash linenums="1"
 Enter keystore password:  
-Certificate stored in file <ums_cert_new.crt>
+Certificate stored in file <ums_cert.crt>
 ```
 
 -----

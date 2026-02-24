@@ -219,6 +219,99 @@ Enter keystore password:
 Certificate stored in file <ums_cert.crt>
 ```
 
+- View Root Certificate
+
+```bash linenums="1"
+openssl x509 -in ums_cert.crt -text -noout
+```
+
+```bash linenums="1"
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1264447657 (0x4b5df0a9)
+        Signature Algorithm: sha512WithRSAEncryption
+        Issuer: CN = ID--43377-1679588474778-0-0, O = IGEL Technology GmbH, L = Bremen, C = DE
+        Validity
+            Not Before: Mar 23 16:21:18 2023 GMT
+            Not After : Mar 23 16:21:18 2043 GMT
+        Subject: CN = ID--43377-1679588474778-0-0, O = IGEL Technology GmbH, L = Bremen, C = DE
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (4096 bit)
+                Modulus:
+                    00:b7:46:c0:4e:54:bd:9f:3e:b0:4c:e2:62:c1:00:
+                    2e:a7:95:54:38:06:0e:be:e0:bc:46:40:c1:f2:23:
+                    23:a3:02:5a:7a:0b:6d:48:15:16:32:af:1e:ad:c8:
+                    98:4f:34:26:68:8d:da:4b:76:97:d4:bc:78:70:cd:
+                    34:b2:f4:b0:39:58:68:09:14:68:80:a6:e6:ef:12:
+                    da:61:6e:62:87:67:f4:52:e8:92:5b:19:2f:0a:a1:
+                    b7:83:a4:e1:05:5c:3a:6d:da:ca:09:e4:e5:7f:80:
+                    a8:a6:3a:f0:06:65:01:a5:38:22:6d:b5:6a:6d:b2:
+                    26:d5:f5:42:7d:51:31:79:9e:4c:2d:56:4f:94:e1:
+                    9e:0a:52:f0:72:b7:44:bf:6a:4c:9c:0b:b2:86:64:
+                    14:60:04:37:7b:c4:54:4b:61:b9:b3:e1:f4:23:d7:
+                    77:e9:02:56:bd:3e:b1:0c:30:fc:2b:03:28:31:bd:
+                    7e:e8:81:1b:a2:ff:96:69:66:e6:8a:92:31:b1:1e:
+                    db:3c:8f:84:50:dc:79:3b:53:33:c9:43:52:e0:c5:
+                    ce:48:b0:12:09:5b:73:db:ef:65:47:3f:ed:73:96:
+                    70:f6:60:68:1c:91:2a:6f:59:ee:d3:c2:15:d8:d0:
+                    ba:b3:86:f5:9e:f5:e2:2b:ad:c9:f1:49:ba:42:62:
+                    60:17:16:81:b8:30:60:a4:33:2d:0c:d6:aa:8f:c6:
+                    60:3a:53:70:b6:cf:cb:b1:25:14:21:bf:6a:db:ef:
+                    e8:4a:da:5e:52:90:bc:7e:bb:69:24:e9:f6:8a:fa:
+                    a6:69:7a:10:c9:0f:68:2a:ed:44:32:4a:07:8e:12:
+                    4e:cd:a1:b6:34:7e:e5:ab:d1:43:49:9d:05:d6:cd:
+                    fd:c1:31:58:c6:3a:a0:20:23:fa:fd:b9:c1:2e:45:
+                    e2:07:70:10:e6:09:25:76:92:33:ef:82:13:3c:01:
+                    e2:8e:09:62:13:4d:fd:8b:ea:ed:01:1b:88:a7:a8:
+                    5a:77:83:1e:8f:fb:0f:af:3a:32:c4:8e:95:af:2f:
+                    79:30:1c:46:e3:ae:3e:35:1f:e8:28:da:e5:81:7f:
+                    0e:b7:47:ea:c8:05:5d:ab:19:dc:ae:2f:6c:fb:e9:
+                    68:9f:9c:97:b9:7d:5b:06:bf:32:5c:0d:d7:c5:7f:
+                    35:29:9e:c7:c6:3a:86:5c:50:7d:bf:6f:85:eb:f7:
+                    76:c9:a1:a1:e8:f1:32:84:a8:31:c7:b6:eb:82:5d:
+                    97:c7:d5:88:a0:35:ab:ff:5a:66:32:e4:5a:65:ed:
+                    65:c6:d6:1a:89:06:02:04:9f:60:91:2c:34:59:75:
+                    fd:22:36:04:7f:78:6b:02:55:a3:85:46:41:04:b1:
+                    95:ce:93
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha512WithRSAEncryption
+    Signature Value:
+        6b:3f:bb:bc:a8:23:84:74:7c:f9:0d:b7:e4:48:bd:61:fa:30:
+        ff:3f:2e:28:0d:e4:e1:ac:14:c9:e4:ba:2d:58:32:b2:b1:a0:
+        6a:99:a0:1f:f9:57:57:29:fa:b5:23:8c:fb:b0:cc:fc:94:e1:
+        b7:07:a6:b7:44:dc:54:ba:4f:15:72:c5:2f:65:1e:cf:14:82:
+        78:50:88:a7:9a:5a:c5:48:cc:c1:bc:60:28:42:f0:0c:4f:30:
+        32:75:08:a9:d1:18:57:65:79:3a:ce:fa:f2:f6:4b:1f:15:95:
+        19:59:d3:bc:50:48:0c:65:ab:11:c3:37:6c:9a:f8:57:9c:82:
+        85:d9:6a:36:d1:03:fa:7d:19:03:db:1a:82:b5:3b:87:fc:97:
+        c7:78:ec:31:03:3d:fe:49:bd:17:0c:14:35:4e:61:d1:64:ce:
+        66:1a:e0:58:37:ad:b5:aa:c7:ac:fa:93:23:9c:1f:d4:d5:5b:
+        63:64:06:08:c7:d4:54:5a:f3:5e:12:56:ce:cf:31:59:93:6d:
+        71:4a:0e:c6:f8:9d:18:0d:5f:91:0d:62:e3:41:21:11:7b:5c:
+        16:f8:6d:8b:48:9c:e9:f1:9e:9b:dc:33:31:b4:61:77:2c:05:
+        ca:9f:d6:36:f2:dd:39:2e:86:86:12:0c:37:67:92:e3:18:6e:
+        60:6d:ae:9c:4a:9c:91:93:40:df:81:5b:f6:33:34:31:1c:85:
+        54:79:d0:9d:f2:2d:d8:7e:cd:ad:f7:2d:6a:a1:7b:56:6b:09:
+        aa:47:c0:21:71:f6:8d:5f:a1:ce:06:42:7b:b3:56:c8:8c:ce:
+        ec:a3:99:78:0a:88:e3:87:e9:7a:3d:9b:0c:3b:6d:ec:c1:f7:
+        59:d2:c0:71:5a:4a:e8:cc:7d:ab:00:66:40:d7:93:cf:f1:7b:
+        e3:23:37:6a:78:74:1a:a1:37:33:96:6d:bd:94:64:31:22:17:
+        d0:e3:8f:fe:45:74:83:ac:f4:4b:d9:ee:97:3b:fe:1d:96:cf:
+        98:91:25:53:d0:c6:b8:e3:ac:f8:70:ba:c9:fe:aa:37:5b:41:
+        39:d5:82:82:8c:21:f6:d7:26:42:9b:f6:ca:76:69:2b:2c:38:
+        6f:e5:bb:9d:1d:d8:47:bb:9e:31:99:bd:aa:7e:6a:82:3d:82:
+        f4:f2:97:c2:56:e1:7d:09:e0:d0:e9:eb:ca:e7:06:8b:f8:67:
+        68:4f:b8:df:5b:06:4f:98:15:21:06:b5:66:d3:8f:3c:ef:8b:
+        2d:98:16:59:7e:bf:56:db:6e:70:e3:5e:84:9d:dd:13:92:cd:
+        73:b2:7a:00:37:06:e4:51:73:d8:9e:e0:b7:b7:d5:ed:5d:c5:
+        ef:73:f2:eb:bb:00:b2:cb
+```
+
 -----
 
 -----

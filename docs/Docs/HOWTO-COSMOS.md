@@ -977,8 +977,8 @@ Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices
 ```mermaid
 flowchart TB
 
-    %% Distributed Peer Update Server
-    US[Distributed Peer Update Server]
+    %% Update Server
+    US[Update Server]
 
     %% Internal Network Boundary
     subgraph IN["Internal Network"]
@@ -996,6 +996,44 @@ flowchart TB
     US --> C3
     US --> C4
     US --> C5
+
+    %% Styling (optional)
+    style US fill:#66bb33,color:#ffffff,stroke:#3d7f1f
+```
+
+```mermaid
+flowchart TD
+    %% Update Server (External)
+    US[Update Server]
+
+    %% Internal Network Boundary
+    subgraph IN["Internal Network"]
+        direction TB
+
+        BUS[Distributed Peer Update Server]
+
+        C1[Client]
+        C2[Client]
+        C3[Client]
+        C4[Client]
+        C5[Client]
+        C6[Client]
+    end
+
+    %% External to Internal Communication
+    US <--> BUS
+
+    %% Peer Server to Clients
+    BUS --> C1
+    BUS --> C2
+    BUS --> C3
+    BUS --> C4
+    BUS --> C5
+    BUS --> C6
+
+    %% Styling (optional)
+    style US fill:#66bb33,color:#ffffff,stroke:#3d7f1f
+    style BUS fill:#1f78d1,color:#ffffff,stroke:#0b3d73
 ```
 
 **Q:** How to setup Distributed Peer Update?

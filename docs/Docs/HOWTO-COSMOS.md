@@ -974,6 +974,30 @@ The Distributed Peer Update (DPU) feature in IGEL OS 12 (formerly known as Buddy
 
 Starting from IGEL OS 12.7.4, the IGEL Discovery service allows endpoint devices on the same local network to automatically find and obtain updates from one another. IGEL Discovery uses an UDP-based mechanism to detect available update sources on the local network and provides an interface that update components use to determine update availability and select an appropriate update source automatically.
 
+```mermaid
+flowchart TB
+
+    %% Distributed Peer Update Server
+    US[Distributed Peer Update Server]
+
+    %% Internal Network Boundary
+    subgraph IN["Internal Network"]
+        direction TB
+        C1[Client 1]
+        C2[Client 2]
+        C3[Client 3]
+        C4[Client 4]
+        C5[Client 5]
+    end
+
+    %% Connections
+    US --> C1
+    US --> C2
+    US --> C3
+    US --> C4
+    US --> C5
+```
+
 **Q:** How to setup Distributed Peer Update?
 
 **A:** Please review the following links:

@@ -70,17 +70,8 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - In-memory cache tuned (heavy usage)
 - Java Heap tuned (heavy usage)
 - Performance Tuning (Heavy Usage Environments):
-    - In-Memory Cache: Update the size of the cache in MB, under /opt/IGEL/icg/usg/conf/application.properties
-
-```bash linenums="1"
-cache.heap.size=2048
-```
-    - Java Heap: Update the Java Heap size under /opt/IGEL/icg/usg/webapps/usg.conf
-
-```bash linenums="1"
-JAVA_OPTS="-Xms512M -Xmx3584M"
-```
-
+    - In-Memory Cache: Update the size of the cache in MB, under /opt/IGEL/icg/usg/conf/application.properties: `cache.heap.size=2048`
+    - Java Heap: Update the Java Heap size under /opt/IGEL/icg/usg/webapps/usg.conf: `JAVA_OPTS="-Xms512M -Xmx3584M"`
     - ULimit Size: Review /etc/systemd/system/icg-server.service
 
 -----

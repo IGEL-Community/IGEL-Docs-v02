@@ -43,6 +43,14 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 - [UMS Sizing Guidelines](https://kb.igel.com/en/universal-management-suite/current/sizing-guidelines-for-igel-ums-12-and-igel-os-12)
 
+### Summary of Health Check for Universal Management Suite (UMS):
+
+- UMS server CPU, RAM, and disk resources validated – 4CPUs, 16GB RAM, 100GB Space
+- Java Heap sized to ~50% of installed RAM
+- UMS upgrade method documented (App Store vs UMS-managed)
+- Global update configuration reviewed
+- UMS ID imported into Customer / Support Portal
+
 -----
 
 ## ICG vs. Reverse Proxy
@@ -50,6 +58,30 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - [IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
 
     With the launch of IGEL Universal Management Suite (UMS) 12, the Unified Protocol used for all communication between the UMS and IGEL OS 12 devices was introduced. The Unified Protocol is a secure protocol that uses TCP 8443. However, depending on the structure of your UMS environment, company's security policies, etc., it may be insufficient, and the use of the IGEL Cloud Gateway (ICG) or reverse proxy may be required.
+
+### Summary of Health Check for IGEL Cloud Gateway (ICG)
+
+- Number of ICG servers documented
+- ICG CPU and memory validated
+- ICG OS version documented
+- External access validated via server-status page
+- ICG certificates reviewed and valid
+- CN / SAN values verified
+- In-memory cache tuned (heavy usage)
+- Java Heap tuned (heavy usage)
+- Performance Tuning (Heavy Usage Environments):
+    - In-Memory Cache: Update the size of the cache in MB, under /opt/IGEL/icg/usg/conf/application.properties
+
+```bash linenums="1"
+cache.heap.size=2048
+```
+    - Java Heap: Update the Java Heap size under /opt/IGEL/icg/usg/webapps/usg.conf
+
+```bash linenums="1"
+JAVA_OPTS="-Xms512M -Xmx3584M"
+```
+
+    - ULimit Size: Review /etc/systemd/system/icg-server.service
 
 -----
 

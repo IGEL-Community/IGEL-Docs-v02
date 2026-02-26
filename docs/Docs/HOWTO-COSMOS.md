@@ -657,7 +657,7 @@ https://yourICG:8443/usg/server-status
 
 **Q:** Using NGINX as reverse proxy and getting the following error in NGINX `ssl-error.log` file when uploading large files (such as applications created with IGEL App Creator): `"Client intended to send too large body"`
  
-**A:** Change the `client_max_body_size` to a  `400m` or as needed for largest file upload.
+**A:** Change the `client_max_body_size` to `400m` or as needed for largest file upload.
 
 -----
 

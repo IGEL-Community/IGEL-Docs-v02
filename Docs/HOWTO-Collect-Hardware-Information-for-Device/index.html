@@ -1,0 +1,3397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Channel-Partners/">
+      
+      
+        <link rel="next" href="../HOWTO-Create-USB-Installation-medium/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>HOWTO Collect Hardware Information for a Device - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-collect-hardware-information-for-a-device" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO Collect Hardware Information for a Device
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collect-logs-for-igel-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect Logs for IGEL Support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect Logs for IGEL Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation-do-not-enable-overwrite-session-on-any-profiles-without-explicit-request-from-igel-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation: Do not enable "Overwrite Session" on any profiles without explicit request from IGEL support
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-collect-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to collect the data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collection Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-for-string-audio-in-data_dump-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search for string (audio) in data_dump files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-microsoft-visual-studio-code-to-view-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Microsoft Visual Studio Code to View Log Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-storage-hotplug-devices-storage-devices-storage-hotplug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Storage Hotplug (Devices &gt; Storage Devices &gt; Storage Hotplug)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-collection-script-open-terminal-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run Collection Script (Open Terminal Window)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safely-remove-usb-thumb-drive-start-system-safely-remove-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safely remove USB thumb drive (Start &gt; System &gt; Safely Remove Hardware)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-profile-with-all-settings-for-a-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Profile with all settings for a Device
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-prepping-pc-for-igel-os-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for prepping PC for IGEL OS install
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-driver-and-booting-blacklist-framebuffer-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video driver and booting (blacklist framebuffer driver)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Video driver and booting (blacklist framebuffer driver)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-vesa-only-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try VESA only boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improve-sound-quality-for-internal-speakers-or-hdmi-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improve sound quality for internal speakers or HDMI / DP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touchscreen-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Touchscreen debugging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-terminal-console-terminal-log-screen-or-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access terminal console, terminal log screen, or setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extended-logging-with-syslog-tcpdump-and-netlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extended Logging With Syslog, Tcpdump and Netlog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-update-firmware-from-usb-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to update firmware from USB drive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kvm-keybaord-video-monitor-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KVM (Keybaord Video Monitor) Switch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-always-on-printer-scanner-audio-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USB always on (Printer, Scanner, Audio, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53" id="__nav_2_53_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_53_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_2" id="__nav_2_53_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_3" id="__nav_2_53_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_4" id="__nav_2_53_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_5" id="__nav_2_53_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="howto-collect-hardware-information-for-a-device">HOWTO Collect Hardware Information for a Device</h1>
+<hr />
+<h2 id="collect-logs-for-igel-support">Collect Logs for IGEL Support</h2>
+<ul>
+<li>
+<p><a href="https://kb.igel.com/en/universal-management-suite/current/save-support-information-send-log-files-to-support">KB: UMS - Save Support Information / Send Log Files to Support</a></p>
+</li>
+<li>
+<p><a href="https://kb.igel.com/en/how-to-start-with-igel/current/debugging-how-to-collect-and-send-device-log-files">KB: Debugging / How to Collect and Send Device Log Files to IGEL Support</a></p>
+</li>
+</ul>
+<p>Command to run to collect logs, <code>/tmp/tclogs.zip</code>, for IGEL support.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/config/bin/create_support_information
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> Details on <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/Cheatsheet-IGELCommunity/#ums-files">UMS Logs</a></p>
+<h3 id="troubleshooting-links">Troubleshooting Links</h3>
+<ul>
+<li><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-COSMOS/">IGEL FAQ</a></li>
+<li><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/?h=nc#ums-tofrom-igel-os-11-communication-ports-no-icg">IGEL Communication Ports</a></li>
+<li><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/#how-to-check-communication-to-the-microsoft-api-urls-and-ips">Microsoft Teams</a></li>
+</ul>
+<hr />
+<h2 id="recommendation-do-not-enable-overwrite-session-on-any-profiles-without-explicit-request-from-igel-support">Recommendation: Do not enable "Overwrite Session" on any profiles without explicit request from IGEL support</h2>
+<ul>
+<li>Profile(s) should <code>NEVER</code> have <code>Overwrite Sessions</code> set on it!</li>
+<li>For example, enabling <code>Overwrite Sessions</code> in a profile means that <code>only</code> those settings will apply for all registry keys that have multiple session (end in a % in the registry).</li>
+</ul>
+<p><img alt="image08" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-08.png" /></p>
+<hr />
+<h2 id="steps-to-collect-the-data">Steps to collect the data</h2>
+<ul>
+<li>Format a USB thumb drive on your PC (FAT or NTFS)</li>
+<li>Copy the collection script (see below) to USB thumb drive</li>
+<li>Enable Storage Hotplug (Devices &gt; Storage Devices &gt; Storage Hotplug)</li>
+<li>Plug USB thumb drive in IGEL OS device (auto mounted in /media folder)</li>
+<li>Open terminal window (as Root)</li>
+<li>Run collection script</li>
+<li>Safely remove USB thumb drive (Start &gt; System &gt; Safely Remove Hardware)</li>
+<li>Send zip file to your contact</li>
+</ul>
+<hr />
+<h2 id="collection-script">Collection Script</h2>
+<p>Collection script (collect_data.sh) to copy onto thumb drive</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#set -x</span>
+<span class="c1">#trap read debug</span>
+
+mkdir<span class="w"> </span>data_dump
+<span class="nb">cd</span><span class="w"> </span>data_dump
+
+<span class="c1"># For OS 12 list installed applications</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span>/usr/bin/igelpkgctl<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>igelpkgctl<span class="w"> </span>list<span class="w"> </span>installed<span class="w"> </span>&gt;<span class="w"> </span>igelpkgctl_list_installed.txt
+<span class="k">fi</span>
+
+lshw<span class="w"> </span>&gt;<span class="w"> </span>lshw_ouptut.txt
+lsusb<span class="w"> </span>&gt;<span class="w"> </span>lsusb_output.txt
+lspci<span class="w"> </span>&gt;<span class="w"> </span>lspci_output.txt
+dmesg<span class="w"> </span>&gt;<span class="w"> </span>dmesg_output.txt
+alsa-info<span class="w"> </span>--no-upload<span class="w"> </span>--output<span class="w"> </span>alsa-infor_output.txt
+rfkill<span class="w"> </span>list<span class="w"> </span>all<span class="w"> </span>&gt;<span class="w"> </span>rfkill_list_all.txt
+journalctl<span class="w"> </span>&gt;<span class="w"> </span>journalctl_output.txt
+cp<span class="w"> </span>/var/log/Xorg.0.log<span class="w"> </span>Xorg.0.log
+cp<span class="w"> </span>/etc/os-release<span class="w"> </span>etc-os-release.txt
+cp<span class="w"> </span>/wfs/group.ini<span class="w"> </span>wfs-group.ini
+cp<span class="w"> </span>/wfs/setup.ini<span class="w"> </span>wfs-setup.ini
+cat<span class="w"> </span>/proc/bus/input/devices<span class="w"> </span>&gt;<span class="w"> </span>proc_bus_input_devices.txt
+xrandr<span class="w"> </span>&gt;<span class="w"> </span>xrandr.txt
+ip<span class="w"> </span>address<span class="w"> </span>&gt;<span class="w"> </span>ip_address.txt
+tar<span class="w"> </span>cvjf<span class="w"> </span>var-log.tar.bz2<span class="w"> </span>/var/log
+
+<span class="c1"># uncomment following lines for Citrix</span>
+<span class="c1">#mkdir citrix-logs</span>
+<span class="c1">#cp -R /userhome/.ICAClient/logs citrix-logs</span>
+
+<span class="c1"># uncomment following lines for VMware Horizon</span>
+<span class="c1"># When you gather horizon logs manually from /tmp/vmware-user/</span>
+<span class="c1"># then the Horizon client needs to be running: The remote session</span>
+<span class="c1"># can be over or have failed, but the client window must still be there.</span>
+<span class="c1"># After the client ends the logs will be gathered and the last 3 runs can</span>
+<span class="c1"># be found in /var/log/vmware-view/ as tar archives.</span>
+<span class="c1">#mkdir vmware-logs</span>
+<span class="c1">#cp -R /tmp/vmware-user vmware-logs</span>
+
+<span class="c1"># uncomment following lines for OpenSC Smart Card (scard.pkcs11.opensc.default.debug = 9 ; scard.pkcs11.opensc.default.debug_file = /tmp/opensc.log)</span>
+<span class="c1">#mkdir opensc-logs</span>
+<span class="c1">#cp -R /tmp/opensc.log opensc-logs</span>
+
+<span class="c1"># uncomment following line if using Imprivata</span>
+<span class="c1">#/services/imprivata/bin/fetch_support_info imprivata_logs_$(date +%y%m%d%H%M).zip</span>
+
+<span class="c1">#The log files for IGEL Agent for Imprivata on IGEL OS</span>
+<span class="c1">#/var/log/user/IGELImprivataAgent.log</span>
+
+<span class="c1"># uncomment following lines for Cisco JDVI</span>
+<span class="c1">#/usr/bin/collect-files</span>
+<span class="c1">#cp /tmp/VXC-* .</span>
+
+<span class="c1"># run IGEL log collection</span>
+/config/bin/create_support_information
+mkdir<span class="w"> </span>tclogs
+unzip<span class="w"> </span>/tmp/tclogs.zip<span class="w"> </span>-d<span class="w"> </span>tclogs
+
+<span class="nb">cd</span><span class="w"> </span>..
+
+zip<span class="w"> </span>-r<span class="w"> </span>data_dump.zip<span class="w"> </span>data_dump
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> Additional logging notes:</p>
+<ul>
+<li>
+<p>AVD log collection OS 11: <code>sessions.wvd%.options.client-log-level</code> set to <code>Debug</code></p>
+</li>
+<li>
+<p>AVD log collection OS 12: <code>System &gt; Registry &gt; app &gt; avd &gt; sessions &gt; avd0 &gt; options &gt; client-log-level</code> set to <code>Debug</code></p>
+</li>
+<li>
+<p>Citrix log collection: <code>ica.logging.debug</code> set to <code>Enabled</code></p>
+</li>
+<li>
+<p>Zoom VDI log collection: <a href="https://support.zoom.us/hc/en-us/articles/360057873792-Using-the-VDI-log-tool">Using the VDI log tool</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="search-for-string-audio-in-data_dump-files">Search for string (audio) in data_dump files</h2>
+<ul>
+<li>Create a listing of files that has string</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-irl<span class="w"> </span>audio
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Create a file with content of search results by file name</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;File NAME:  ===&gt;&gt; &quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>audio<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/find_string_in_data_dump.txt
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="use-microsoft-visual-studio-code-to-view-log-files">Use Microsoft Visual Studio Code to View Log Files</h2>
+<ul>
+<li>Install <a href="https://code.visualstudio.com/?wt.mc_id=vscom_downloads">Microsoft Visual Studio Code</a> on your PC</li>
+<li>Add Extension to Microsoft Visual Studio Code <a href="https://github.com/emilast/vscode-logfile-highlighter">Log File Highlighter</a></li>
+<li>Un-Zip log files</li>
+<li>Open the folder in Microsoft Visual Studio Code</li>
+<li>Search for string in Microsoft Visual Studio Code, such as <code>audio</code></li>
+</ul>
+<p><img alt="image09" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-09.png" /></p>
+<hr />
+<h2 id="enable-storage-hotplug-devices-storage-devices-storage-hotplug">Enable Storage Hotplug (Devices &gt; Storage Devices &gt; Storage Hotplug)</h2>
+<p><img alt="image01" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-01.png" /></p>
+<hr />
+<h2 id="run-collection-script-open-terminal-window">Run Collection Script (Open Terminal Window)</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>login<span class="w"> </span>as<span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;root&quot;</span>:<span class="w"> </span>root
+<span class="w"> </span><span class="c1"># df -H | grep media</span>
+<span class="w"> </span>/dev/sda1<span class="w">    </span>17G<span class="w">   </span>44M<span class="w">     </span>17G<span class="w">   </span><span class="m">1</span>%<span class="w">  </span>/media/B2B0AB93
+<span class="w"> </span><span class="c1"># cd /media/B2B0AB93</span>
+<span class="w"> </span><span class="c1"># ls</span>
+<span class="w"> </span>collect_data.sh
+<span class="w"> </span><span class="c1"># /bin/bash collect_data.sh</span>
+<span class="w"> </span><span class="c1"># ls</span>
+<span class="w"> </span>collect_data.sh
+<span class="w"> </span>data_dump
+<span class="w"> </span>data_dump.zip
+<span class="w"> </span><span class="c1"># exit</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="safely-remove-usb-thumb-drive-start-system-safely-remove-hardware">Safely remove USB thumb drive (Start &gt; System &gt; Safely Remove Hardware)</h2>
+<p><img alt="image02" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-02.png" /></p>
+<hr />
+<h2 id="create-profile-with-all-settings-for-a-device">Create Profile with all settings for a Device</h2>
+<p>These device profiles can be used to see all settings for a device and can also be used to compare two devices.</p>
+<ul>
+<li>
+<p><a href="https://kb.igel.com/en/universal-management-suite/current/how-to-export-device-settings-as-a-profile-in-the-">IGEL KB: How to Export Device Settings as a Profile in the IGEL UMS Web App</a></p>
+</li>
+<li>
+<p><a href="https://kb.igel.com/en/universal-management-suite/current/how-to-import-devices-as-profiles-in-the-igel-ums">IGEL KB - Import Devices as Profiles</a></p>
+</li>
+<li>
+<p><a href="https://kb.igel.com/en/universal-management-suite/current/comparing-profiles-in-the-igel-ums">IGEL KB - Comparing Profiles in the IGEL UMS</a></p>
+</li>
+</ul>
+<p>The following steps will:</p>
+<ul>
+<li>Export device settings as a profile</li>
+<li>Import device settings as a profile</li>
+</ul>
+<p><img alt="image01" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-05.png" />
+<img alt="image01" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-06.png" />
+<img alt="image01" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-07.png" /></p>
+<hr />
+<h2 id="tips-for-prepping-pc-for-igel-os-install">Tips for prepping PC for IGEL OS install</h2>
+<ul>
+<li>Make sure BIOS is at latest version. Check <a href="https://fwupd.org/lvfs/docs/users">Linux Vendor Firmware Service (LVFS)</a>. IGEL OS 11.08.XXX or newer supports <a href="https://kb.igel.com/en/igel-os/current/bios-update-for-devices-supported-by-lvfs">LVFS for BIOS from UMS</a></li>
+<li>Make sure BIOS is set back to default settings.</li>
+<li>Check for and apply BIOS settings for Ubuntu 18.04.</li>
+</ul>
+<hr />
+<h2 id="video-driver-and-booting-blacklist-framebuffer-driver">Video driver and booting (blacklist framebuffer driver)</h2>
+<p>Framebuffer drivers are generally buggy and poorly-supported, and cause suspend failures, kernel panics and general mayhem.  For this reason we never load them automatically.</p>
+<p>If PC firmware has a Legacy Boot option, it might interfere with the kernel’s ability to use the framebuffer during boot.</p>
+<p>The kernel may hang on framebuffer driver. As first step in debugging, blacklist the framebuffer driver in file /etc/modprobe.d/blacklist-framebuffer.conf</p>
+<p>For example, add the following entry to the System/Firmware Customization/Custom Commands/Base Initialization section of IGEL Setup:</p>
+<p>echo “blacklist efifb” &gt;&gt; /etc/modprobe.d/blacklist-framebuffer.conf</p>
+<p>Save the change and reboot without the “Force VESA driver” option being set.</p>
+<p><img alt="image03" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-03.jpg" /></p>
+<p><a href="https://videos.igelcommunity.com/igel-os-boot-menu-explained-video/">IGEL OS Boot Menu Explained – Video</a></p>
+<p><a href="https://kb.igel.com/en/igel-os/current/boot-menu">IGEL KB - Boot Menu</a></p>
+<h3 id="try-vesa-only-boot">Try VESA only boot</h3>
+<p>Steps:</p>
+<ul>
+<li>Reboot device</li>
+<li>Keep hitting <span class="keys"><kbd class="key-escape">Esc</kbd></span></li>
+<li>Select &gt; <code>VESA only boot</code></li>
+</ul>
+<hr />
+<h2 id="improve-sound-quality-for-internal-speakers-or-hdmi-dp">Improve sound quality for internal speakers or HDMI / DP</h2>
+<p>Setting to improve sound quality:</p>
+<p>System &gt; Registry &gt; multimedia.pulseaudio.daemon.resample-method &gt; speex-float-3</p>
+<hr />
+<h2 id="touchscreen-debugging">Touchscreen debugging</h2>
+<p>Obtain the touchscreen vendor information from the following script:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">tmp_dir</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-d<span class="k">)</span>
+<span class="nb">pushd</span><span class="w"> </span><span class="nv">$tmp_dir</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="c1"># Export whole database</span>
+udevadm<span class="w"> </span>info<span class="w"> </span>--export-db<span class="w"> </span>&gt;<span class="w"> </span>udevdb.txt
+csplit<span class="w"> </span>-s<span class="w"> </span>udevdb.txt<span class="w"> </span>/^$/<span class="w"> </span><span class="o">{</span>*<span class="o">}</span>
+<span class="nv">FILES</span><span class="o">=</span>./xx*
+<span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span>
+<span class="k">do</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="k">$(</span>grep<span class="w"> </span><span class="nv">ID_INPUT_TOUCHSCREEN</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">$f</span><span class="k">)</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="k">$(</span>grep<span class="w"> </span><span class="s2">&quot; NAME=*&quot;</span><span class="w"> </span><span class="nv">$f</span><span class="k">)</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span>
+<span class="w">  </span><span class="k">then</span>
+<span class="w">        </span><span class="c1"># Extract touchscreen name</span>
+<span class="w">        </span>grep<span class="w"> </span><span class="s2">&quot; NAME=*&quot;</span><span class="w"> </span><span class="nv">$f</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;=&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+<span class="nb">popd</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$tmp_dir</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="access-terminal-console-terminal-log-screen-or-setup">Access terminal console, terminal log screen, or setup</h2>
+<ul>
+<li>Access to terminal console: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f12">F12</kbd></span></li>
+<li>Switch back to GUI: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f1">F1</kbd></span></li>
+<li>Access terminal log screen: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f10">F10</kbd></span></li>
+<li>Access IGEL setup: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span></li>
+</ul>
+<hr />
+<h2 id="extended-logging-with-syslog-tcpdump-and-netlog">Extended Logging With Syslog, Tcpdump and Netlog</h2>
+<p>The IGEL Linux Registry offers a number of extended logging options that can help customers, Support and PreSales debug system and network issues.</p>
+<p><a href="https://kb.igel.com/en/igel-os/current/extended-logging-with-syslog-tcpdump-and-netlog">IGEL - KB - Extended Logging With Syslog, Tcpdump and Netlog</a></p>
+<hr />
+<h2 id="steps-to-update-firmware-from-usb-drive">Steps to update firmware from USB drive</h2>
+<ul>
+<li><a href="https://www.igel.com/software-downloads/workspace-edition/">Download OS 11 -&gt; Firmware Updates -&gt; lxos_[VERSION]_public.zip</a></li>
+<li>Format USB Drive on PC (FAT)</li>
+<li>Unzip lxos_[VERSION]_public.zip to USB drive</li>
+<li>Configure IGEL OS to take new firmware from USB drive</li>
+<li>Run update</li>
+</ul>
+<div class="highlight"><pre><span></span><code>1. Configure at least one hotplug USB device:
+   setparam devices.hotplug.usb-storage.numdevices 1
+2. Apply your changes:
+   kill_postsetupd
+3. Connect the USB storage device to the device.
+4. Wait for the USB storage device to be mounted automatically.
+5. Determine the mount point:
+   ls /media/
+6. Configure the update parameters:
+   setparam update.protocol file
+   setparam update.file.path /media/&lt;name of USB storage device&gt;
+7. Start the update process in the / directory using the command update
+   update
+</code></pre></div>
+<p>Sample script:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+setparam<span class="w"> </span>devices.hotplug.usb-storage.numdevices<span class="w"> </span><span class="m">1</span>
+kill_postsetupd
+sleep<span class="w"> </span><span class="m">5</span>
+setparam<span class="w"> </span>update.protocol<span class="w"> </span>file
+<span class="c1"># next command only works if one device is mounted into /media</span>
+setparam<span class="w"> </span>update.file.path<span class="w"> </span>/media/<span class="k">$(</span>ls<span class="w"> </span>/media<span class="k">)</span>
+update
+</code></pre></div></td></tr></table></div>
+<hr />
+<!---
+This is a comment section
+
+## Updating to IGEL OS - Current Version
+
+Configure Firmware Update settings with the following parameters and then select "Update firmware":
+
+| Parameter | Setting | Comment |
+|-----------|---------|---------|
+| Protocol | https | |
+| Server name | fw.igelize.me | North America |
+| Server name | fwemea.igelize.me | Western Europe |
+| Port | 443 | |
+| Server path | igelos/current | |
+
+![image04](Images/HOWTO-Collect-Hardware-Information-for-Device-04.png)
+
+Sample script:
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Updating to IGEL OS - Current Version</span>
+
+<span class="c1"># Configure the update server</span>
+setparam<span class="w"> </span>update.protocol<span class="w"> </span>https
+
+<span class="c1"># North America</span>
+setparam<span class="w"> </span>update.https.server<span class="w"> </span>fw.igelize.me
+
+<span class="c1"># Western Europe</span>
+<span class="c1">#setparam update.https.server fwemea.igelize.me</span>
+
+setparam<span class="w"> </span>update.https.port<span class="w"> </span><span class="m">443</span>
+setparam<span class="w"> </span>update.https.path<span class="w"> </span>igelos/current
+
+<span class="c1">#Start the update process</span>
+update
+</code></pre></div></td></tr></table></div>
+
+### North America fw.igelize.me server layout
+
+| The layout path structure: |
+|----------------------------|
+| igelos/amd64 |
+| igelos/arm64 |
+| igelos/current |
+
+| Under the igelos/amd64 and igelos/arm64 paths, the subpaths for the various versions of IGEL OS public and private. |
+|-----------------------|
+| igelos/amd64/11.09.310 |
+| igelos/amd64/11.08.440 |
+| igelos/amd64/11.07.920 |
+| igelos/amd64/11.07.170 |
+| igelos/arm64/11.02.120 |
+
+-->
+
+<hr />
+<h2 id="hardware-notes">Hardware Notes</h2>
+<ul>
+<li>
+<p>HP Laptops - Selected Boot Image Did Not Authenticate Message Appears before Windows Starts</p>
+<p><img alt="image10" src="../Images/HOWTO-Collect-Hardware-Information-for-Device-10.png" /></p>
+<p>After powering on the computer, the following message may appear prior to booting: <code>Selected boot image did not authenticate</code>.</p>
+<p>This occurs when using a 3rd party UEFI software tool (such as a bootloader or endpoint encryption software), or when using hardware with an option ROM that is not appropriately signed per Microsoft’s Secured-core PC requirements.</p>
+<p>Microsoft’s Secured-core PC requirements no longer allow computers to run UEFI code signed using the Microsoft 3rdParty UEFI CA. As such, HP disables the option to use this Certificate of Authority (CA) by default. Microsoft’s decision to disallow authentication for software signed this way is meant to address potential security risks with 3rd party bootloaders by limiting the code that a given computer is allowed to execute before boot.</p>
+<p>Computers that do not support Modern Standby, or that do not have Intel vPro or AMD Ryzen Pro technology, are not affected. Computers that were ordered as Linux-ready are not affected, since these need to use a 3rdparty bootloader (e.g. Grub).</p>
+<p><strong>Note:</strong> Customers can order affected computers with the third-party key enabled by contacting their HP representative, who can add the appropriate option to their BOM.</p>
+<p>The "Enable MS UEFI CA key" BIOS setting controls the ability to utilize 3rd-party bootloaders.</p>
+<p>Perform the following steps to enable the Microsoft UEFI CA key. This setting can be changed by performing the following steps:</p>
+<ul>
+<li>
+<p>Enter the System BIOS by pressing F10 at power on</p>
+</li>
+<li>
+<p>Navigate to the Security tab</p>
+</li>
+<li>
+<p>Select the BIOS Sure Startoption</p>
+</li>
+<li>
+<p>Uncheck Sure Start Secure Boot Keys Protection</p>
+</li>
+<li>
+<p>Press Esc to exit the BIOS, saving changes</p>
+</li>
+<li>
+<p>When prompted for a 4-digit PIN to confirm the BIOS setting changes, enter the PIN shown onscreen</p>
+</li>
+<li>
+<p>Restart the PC and enter the System BIOS again</p>
+</li>
+<li>
+<p>Navigate to the Security tab again</p>
+</li>
+<li>
+<p>Select the Secure Boot Configuration option</p>
+</li>
+<li>
+<p>Check Enable MS UEFI CA key</p>
+</li>
+<li>
+<p>Press Esc to return to the previous menu</p>
+</li>
+<li>
+<p>Select the BIOS Sure Start option again</p>
+</li>
+<li>
+<p>Check Sure Start Secure Boot Keys Protection</p>
+</li>
+<li>
+<p>Press Esc to exit the BIOS</p>
+</li>
+<li>
+<p>Save changes</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://kb.igel.com/security-safety/current/secured-core-pcs-microsoft-3rd-party-uefi-certific">Secured-Core PCs: Microsoft 3d-Party UEFI Certificate for Secure Boot</a></p>
+</li>
+<li>
+<p><a href="https://github.com/IGEL-Community/IGEL-Docs/blob/main/Docs/HOWTO-Dynabook-Setup.md">Dynabook Setup TECRA A40-J (PMM10U) || Version: PMM10U-00101U</a></p>
+</li>
+<li>
+<p><a href="https://psref.lenovo.com/">Lenovo - PSREF Product Specifications Reference</a></p>
+</li>
+<li>
+<p><a href="https://download.lenovo.com/bsco/">Lenovo - BIOS simulator</a> shows how to navigate the BIOS for each hardware type.</p>
+</li>
+<li>
+<p><a href="https://download.lenovo.com/pccbbs/mobiles_pdf/lenovo_bios_setup_linux_wmi_sysfs_1.2.pdf">Lenovo - ThinkLMI - Lenovo BIOS Setup using Linux WMI - Deployment Guide</a></p>
+</li>
+<li>
+<p><a href="../Scripts/HOWTO-Collect-Hardware-Information-for-Device-set-BOOT-PWD.sh" download>Sample script to set BIOS password</a></p>
+</li>
+<li>
+<p><a href="https://kb.igel.com/en/igel-os/11.10/resolved-issues-11-10-100">Laptop Docking Station - HP USB-C Dock G5</a>. Link to HP's web site -- <a href="https://www.hp.com/us-en/shop/pdp/hp-usb-c-dock-g5-p-5tw10aa-aba-1">LINK</a>. This device will work for other laptops that support USB-C docks. IGEL UMS supports firmware updates to this dock.</p>
+</li>
+<li>
+<p><a href="https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix">Microsoft Surface: If a feature requires linux-surface kernel then that feature will not work with IGEL</a></p>
+</li>
+<li>
+<p><a href="https://unix.stackexchange.com/questions/704341/how-to-reset-usb-controllers">How to reset USB controllers</a></p>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#set -x</span>
+<span class="c1">#trap read debug</span>
+<span class="c1"># Resets all USB host controllers of the system.</span>
+<span class="c1"># This is useful in case one stopped working</span>
+<span class="c1"># due to a faulty device having been connected to it.</span>
+
+<span class="nv">base</span><span class="o">=</span><span class="s2">&quot;/sys/bus/pci/drivers&quot;</span>
+<span class="nv">sleep_secs</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+
+<span class="c1"># This might find a sub-set of these:</span>
+<span class="c1"># * &#39;ohci_hcd&#39; - USB 3.0</span>
+<span class="c1"># * &#39;ehci-pci&#39; - USB 2.0</span>
+<span class="c1"># * &#39;xhci_hcd&#39; - USB 3.0</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Looking for USB standards ...&quot;</span>
+<span class="k">for</span><span class="w"> </span>usb_std<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$base</span><span class="s2">/&quot;</span>?hci*
+<span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;* USB standard &#39;</span><span class="nv">$usb_std</span><span class="s2">&#39; ...&quot;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>dev_path<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usb_std</span><span class="s2">/&quot;</span>*:*
+<span class="w">    </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">dev</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dev_path</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - Resetting device &#39;</span><span class="nv">$dev</span><span class="s2">&#39; ...&quot;</span>
+<span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;%s&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dev</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usb_std</span><span class="s2">/unbind&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="w">        </span>sleep<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sleep_secs</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;%s&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dev</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$usb_std</span><span class="s2">/bind&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    done.&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  done.&quot;</span>
+<span class="k">done</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;done.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="kvm-keybaord-video-monitor-switch">KVM (Keybaord Video Monitor) Switch</h2>
+<ul>
+<li><a href="https://assets.aten.com/product/manual/cs1922m-cs1924m_um_w_2021-10-08.pdf">ATEN CS1924m KVM</a></li>
+<li>Script for KVM: <code>/etc/igel/kms/kvm-workaround.sh</code></li>
+</ul>
+<hr />
+<h2 id="usb-always-on-printer-scanner-audio-etc">USB always on (Printer, Scanner, Audio, etc.)</h2>
+<p>System &gt; Firmware Customization &gt; Custom Commands &gt; Desktop</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>on<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>/sys/bus/usb/devices/*/power/level<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4179 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Tools-Used-for-this-Site/">
+      
+      
+        <link rel="next" href="../HOWTO-UCC-Guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>HOWTO UCC Guide OS12 - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-ucc-guide-os12" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO UCC Guide OS12
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose of this Document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-base-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Base of this Document
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-configuration-for-unified-communications-igel-os-12x-and-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Configuration for Unified Communications IGEL OS 12.x and later
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Configuration for Unified Communications IGEL OS 12.x and later">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webcam-audio-and-pci-audio-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webcam Audio and PCI Audio features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoom-virtual-background-for-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom Virtual Background for IGEL OS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citrix-on-igel-os-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix on IGEL OS 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Citrix on IGEL OS 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citrix-base-configuration-hdx-optimized-for-cwa-2505" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Base configuration (HDX optimized) for CWA 2505
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-citrix-configuration-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Citrix Configuration Topics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-configuration-for-hdx-webcam-redirection-without-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Configuration for HDX Webcam redirection without plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-configuration-for-hdx-windows-gpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Configuration for HDX -&gt; Windows GPOs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx Meetings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-teams-and-skype-for-business" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Teams (and Skype for Business)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citrix-browser-content-redirection-for-ms-teams-gotomeeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citrix Browser Content Redirection for MS Teams, GoToMeeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-jvdi-on-citrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco JVDI on Citrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omnissa-horizon-on-igel-os-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Omnissa Horizon on IGEL OS 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Omnissa Horizon on IGEL OS 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex-meetings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx Meetings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoom_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware-horizon-browser-content-redirection-with-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VMware Horizon Browser Content Redirection with HTML5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-jvdi-on-vmware-horizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco JVDI on VMware Horizon
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-virtual-desktop-avd-on-igel-os-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Virtual Desktop (AVD) on IGEL OS 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Virtual Desktop (AVD) on IGEL OS 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex-meetings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx Meetings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco WebEx Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-teams_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoom_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-windows-365-on-igel-os-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Windows 365 on IGEL OS 12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft Windows 365 on IGEL OS 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisco-webex_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cisco Webex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoom_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-remote-desktop-rdsh-rdp-on-igel-os-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Remote Desktop (RDSH, RDP) on IGEL OS 12
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53" id="__nav_2_53_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_53_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_2" id="__nav_2_53_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_3" id="__nav_2_53_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_4" id="__nav_2_53_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_5" id="__nav_2_53_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="howto-ucc-guide-os12">HOWTO UCC Guide OS12</h1>
+<!--
+Comments here
+-->
+
+<ul>
+<li>
+<p>IGEL UMS Version Base: <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/">UMS Release Notes</a></p>
+</li>
+<li>
+<p>IGEL OS Firmware Base: <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/04-OS12/">OS 12 Release Notes</a></p>
+</li>
+<li>
+<p><a href="../HOWTO-Profile-Templates/">Profile Templates</a></p>
+</li>
+<li>
+<p><a href="https://app.igel.com/cisco_jvdi/">Cisco JVDI Client</a></p>
+</li>
+<li><a href="https://app.igel.com/cisco_meetings/">Cisco Webex Meetings VDI plugin</a></li>
+<li><a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI plugin</a></li>
+<li><a href="https://app.igel.com/hdx_rtme/">Citrix HDX Realtime Media Engine</a></li>
+<li><a href="https://app.igel.com/cwa/">Citrix Workspace App</a> </li>
+<li><a href="https://app.igel.com/avd/">IGEL AVD Client</a></li>
+<li><a href="https://app.igel.com/rdp//">IGEL RDP Client</a></li>
+<li><a href="https://app.igel.com/cpc/">IGEL Windows 365 Client</a></li>
+<li><a href="https://app.igel.com/horizon/">Omnissa Horizon Client</a></li>
+<li>
+<p><a href="https://app.igel.com/zoomvdi/">Zoom Media Plugin</a>            </p>
+</li>
+<li>
+<p><a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063810">Zoom VDI 64bit releases and downloads</a></p>
+</li>
+<li>
+<p><a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes#_ff8dd002-55da-4c64-a481-32a465c09fc1">Cisco Webex download</a></p>
+</li>
+<li>
+<p><a href="../HOWTO-UCC/">IGEL Addendum to UCC Guide</a></p>
+</li>
+</ul>
+<p><strong>NOTES:</strong></p>
+<ul>
+<li>For Cisco Webex testing, you need an Webex account. Testing Webex in guest mode may cause issues with validating optimization.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="introduction">Introduction</h2>
+<h3 id="purpose-of-this-document">Purpose of this Document</h3>
+<p>The purpose of this document is to explain the configuration of Unified Communication (UC) solutions which are included in IGEL OS – in short term: UCC Guide. </p>
+<p>Every section of the document contains the configuration for the endpoint with IGEL OS (Configuration with use of the IGEL Universal Management Suite - UMS) and the configuration for the VDI infrastructure. </p>
+<p>At the end of some of the sections you will find also results from tests.</p>
+<p>The use of the document will be done on your own risks and without support from IGEL Technology. </p>
+<p>The guide will cover the latest public build of apps.</p>
+<p>If you need additional help, you can contact <a href="https://www.igelcommunity.com">IGEL Community</a> on slack.</p>
+<h3 id="software-base-of-this-document">Software Base of this Document</h3>
+<p><strong>Note:</strong> Download latest version of IGEL OS and UMS from <a href="https://app.igel.com/software">app.igel.com</a> or <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#appendix-current-igel-downloads">IGEL Community Docs - Appendix - Current IGEL Downloads</a></p>
+<hr />
+<hr />
+<h2 id="general-configuration-for-unified-communications-igel-os-12x-and-later">General Configuration for Unified Communications IGEL OS 12.x and later</h2>
+<h3 id="webcam-audio-and-pci-audio-features">Webcam Audio and PCI Audio features</h3>
+<p>Create a Profile based on the <a href="https://app.igel.com/base_system/">IGEL OS Base System</a>.</p>
+<p>If you need to use your webcam in different applications, there is a special registry key available which disables the audio stream from the webcam:</p>
+<p><img alt="image001" src="../Images/HOWTO-UCC-Guide12-001.png" /></p>
+<p>The new function to disable pci audio is also available:</p>
+<p><img alt="image002" src="../Images/HOWTO-UCC-Guide12-002.png" /></p>
+<h3 id="zoom-virtual-background-for-igel-os">Zoom Virtual Background for IGEL OS</h3>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Media Plugins for VDI</a> app.</p>
+<p><img alt="image003" src="../Images/HOWTO-UCC-Guide12-003.png" /></p>
+<ul>
+<li><strong>NOTE:</strong> If the Printing (Internet printing protocol CUPS) feature is disabled, then a dependent GTK Webkit will not work, and the Virtual Webcam feature will not work. </li>
+</ul>
+<hr />
+<hr />
+<h2 id="citrix-on-igel-os-12">Citrix on IGEL OS 12</h2>
+<h3 id="citrix-base-configuration-hdx-optimized-for-cwa-2505">Citrix Base configuration (HDX optimized) for CWA 2505</h3>
+<ul>
+<li><a href="https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html">Citrix Workspace App for Linux 2505</a></li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cwa/">Citrix Workspace App</a>.</p>
+<p><img alt="image017" src="../Images/HOWTO-UCC-Guide12-017.png" /></p>
+<ul>
+<li>Make sure to configure the right version <code>Based on Firmware</code>:</li>
+</ul>
+<p><img alt="image018" src="../Images/HOWTO-UCC-Guide12-018.png" /></p>
+<ul>
+<li>If you choose UDP on Citrix, you need to enable UDP Audio on IGEL OS too:</li>
+</ul>
+<p><img alt="image019" src="../Images/HOWTO-UCC-Guide12-019.png" /></p>
+<ul>
+<li>and you can use UDP audio through Citrix Gateway:</li>
+</ul>
+<p><img alt="image020" src="../Images/HOWTO-UCC-Guide12-020.png" /></p>
+<ul>
+<li>Here is current recommend configuration for graphics:</li>
+</ul>
+<p><img alt="image021" src="../Images/HOWTO-UCC-Guide12-021.png" /></p>
+<ul>
+<li>Now you can use the new Multi Monitor Feature which is great for docking devices for example</li>
+</ul>
+<p><img alt="image022" src="../Images/HOWTO-UCC-Guide12-022.png" /></p>
+<ul>
+<li>You should enable the Multiple Audio Device support: </li>
+</ul>
+<p><img alt="image023" src="../Images/HOWTO-UCC-Guide12-023.png" /></p>
+<ul>
+<li>If you want to use the HDX webcam feature, there is an automatic configuration available: </li>
+</ul>
+<p><img alt="image024" src="../Images/HOWTO-UCC-Guide12-024.png" /></p>
+<ul>
+<li>There is also a new feature for H264 codec support for webcam redirection:</li>
+</ul>
+<p><img alt="image025" src="../Images/HOWTO-UCC-Guide12-025.png" />
+<img alt="image026" src="../Images/HOWTO-UCC-Guide12-026.png" />
+<img alt="image027" src="../Images/HOWTO-UCC-Guide12-027.png" /></p>
+<ul>
+<li>Starting CWA 22.07 there are some new audio enhancements:</li>
+</ul>
+<p><strong>NOTE:</strong> [1] When the audio throughput undergoes a sudden spike or is not enough for an unstable network, this value increases the output buffering value. This increase in the output buffering value provides smooth audio. However, the audio might be slightly delayed. This parameter is only valid when <code>AudioRedirectionV4</code>, and <code>AudioLatencyControlEnabled</code> is set to True.</p>
+<p><img alt="image028" src="../Images/HOWTO-UCC-Guide12-028.png" /></p>
+<p><strong>NOTE:</strong> [2] Improved audio echo cancellation support</p>
+<p><img alt="image029" src="../Images/HOWTO-UCC-Guide12-029.png" /></p>
+<p><strong>NOTE:</strong> [3] With this enhancement, the maximum output buffering value is decreased from 200 ms to 50 ms in Citrix Workspace app. As a result, the user experience of the interactive audio application is improved. Also, the round-trip time (RTT) is decreased by 150 ms. This parameter is valid only when <code>AudioRedirectionV4</code> is set to <code>True</code></p>
+<p><img alt="image030" src="../Images/HOWTO-UCC-Guide12-030.png" /></p>
+<h3 id="important-citrix-configuration-topics">Important Citrix Configuration Topics</h3>
+<p>Starting with Citrix VDA 2109, the default <code>virtual channel allow list</code> policy changed from <code>disabled</code> to <code>enabled</code>. This occurs even if you are upgrading an existing installation where you did not change the policy. Additional steps are required to allow Zoom, WebEx, and other tools to open a virtual channel.</p>
+<p>Required steps:</p>
+<p>Changing the virtual channel allow list policy to <code>disabled</code>:</p>
+<p>The easiest way to ensure that Zoom, WebEx, and other tools can create and open a virtual channel to connect to the VDI plugin, is to set the policy for the virtual channel allow list to <code>disabled</code>. </p>
+<p>If the policy state was changed to <code>enabled</code> after updating to VDA release 2109, you can edit the policy to return the status to <code>disabled</code>.</p>
+<p>You will need to open Citrix Studio and navigate to the ICA policies section. The following dialog shows the virtual channel allow list policy configured for <code>disabled</code>.</p>
+<p><img alt="image031" src="../Images/HOWTO-UCC-Guide12-031.png" /></p>
+<p>Change it to disabled:</p>
+<p><img alt="image032" src="../Images/HOWTO-UCC-Guide12-032.png" /></p>
+<ul>
+<li>Enable the Citrix connection bar for Citrix sessions and you can save the monitor layout within the session (it will be stored into User profile):</li>
+</ul>
+<p><img alt="image033" src="../Images/HOWTO-UCC-Guide12-033.png" />
+<img alt="image034" src="../Images/HOWTO-UCC-Guide12-034.png" /></p>
+<ul>
+<li>There was a long running Citrix ERROR - it ends mostly with the message: Cannot add store (cannot validate certificate) <code>ERROR adding store 65147</code>.</li>
+</ul>
+<p>The root cause is, that Microsoft changed in 2021 the PKI provider to SHA2 - if you use Windows Server 2019 or Windows Server 2022 you need to migrate your Root CA from SHA to SHA2: </p>
+<p><a href="https://www.petenetlive.com/KB/Article/0001243">Certificate Services - Migrate form SHA1 to SHA2 (SHA256) | PeteNetLive</a></p>
+<p>On Citrix you need to configure these 5 policies like this:</p>
+<p><img alt="image035" src="../Images/HOWTO-UCC-Guide12-035.png" /></p>
+<h3 id="citrix-configuration-for-hdx-webcam-redirection-without-plugins">Citrix Configuration for HDX Webcam redirection without plugins</h3>
+<ul>
+<li>If you want to use applications on Citrix which do not have any plugins inside IGEL OS, it is also possible to use Citrix Webcam Redirection. You need to follow this section to proceed an optimal configuration.</li>
+</ul>
+<p>Use this configuration on IGEL OS:</p>
+<p><img alt="image036" src="../Images/HOWTO-UCC-Guide12-036.png" /></p>
+<p><img alt="image037" src="../Images/HOWTO-UCC-Guide12-037.png" /></p>
+<p><strong>Dependencies</strong></p>
+<ul>
+<li>
+<p>Webcam redirection works with and without RTME.</p>
+</li>
+<li>
+<p>Webcam redirection works for 32-bit applications. For example, Skype, GoToMeeting. Use a 32-bit browser to verify webcam redirection online. For example, www.webcamtests.com </p>
+</li>
+<li>
+<p>Webcam usage is exclusive to applications. For example, when Skype is running with a webcam and you launch GoToMeeting, exit Skype to use the webcam with GoToMeeting.</p>
+</li>
+<li>
+<p>with CWA 21.12 Webcam redirection also works for 64-bit applications! <em>experimental</em></p>
+</li>
+</ul>
+<p><strong>Dependencies for 64-bit Webcam redirection support</strong></p>
+<p>Here are some additional topics which needs to be considered that the 64-bit redirection is working:</p>
+<ul>
+<li>Check if you have the right CVAD version in place: If CWA 21.12 or greater is used, you need to use at least Windows Client oder Server VDA 21.09 or 1912 LTSR CU4 or 2203 LTSR, unfortunately, 7.15 LTSR will not work at all.</li>
+</ul>
+<p><strong>Supported and working video conferencing applications</strong></p>
+<ul>
+<li>Adobe Connect</li>
+<li>GoToMeeting</li>
+<li>Google Hangouts and Hangouts Meet</li>
+<li>IBM Sametime</li>
+<li>BlueJeans*</li>
+<li>BigBlueButton*</li>
+<li>Jitsi*</li>
+<li>Microsoft Skype for Business 2015</li>
+<li>Microsoft Lync 2010 and 2013</li>
+<li>Microsoft Skype 7 or higher</li>
+<li>Media Foundation-based video applications on Windows 8.x or higher / Windows Server 2012 R2 or higher</li>
+</ul>
+<p><strong>NOTE:</strong> * Not officially supported by Citrix</p>
+<h3 id="citrix-configuration-for-hdx-windows-gpos">Citrix Configuration for HDX -&gt; Windows GPOs</h3>
+<ul>
+<li>Applied Audio settings via GPO:</li>
+</ul>
+<p>Computer Config &gt; Admin Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host&gt; Device and Resource Redirection</p>
+<p>Changed <code>Allow audio and video playback redirection</code> from <code>Not Configured</code> to <code>Enabled</code></p>
+<p>Changed <code>Allow audio recording redirection</code> from <code>Not Configured</code> to <code>Enabled</code></p>
+<p>Computer Config &gt; Admin Templates &gt; Windows Components &gt; App Privacy</p>
+<ul>
+<li>Changed <code>Let Windows apps access the microphone</code> from <code>Not Configured</code> to <code>Enabled</code>.  Options &gt; Default for all apps changed from <code>User is in control</code> to <code>Force Allow</code>.</li>
+</ul>
+<p>Changed <code>Let Windows apps access the camera</code> from <code>Not Configured</code> to <code>Enabled</code>.  Options &gt; Default for all apps changed from <code>User is in control</code> to <code>Force Allow</code>.</p>
+<p>Computer Config &gt; Admin Templates &gt; Windows Components &gt; Camera changed <code>Let Allow use of Camera</code> from <code>Not Configured</code> to <code>Enabled</code>.</p>
+<p><img alt="image038" src="../Images/HOWTO-UCC-Guide12-038.png" />
+<img alt="image039" src="../Images/HOWTO-UCC-Guide12-039.png" /></p>
+<h3 id="cisco-webex-meetings">Cisco WebEx Meetings</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_meetings/">Cisco Webex Meetings VDI</a> app.</p>
+<p><img alt="image040" src="../Images/HOWTO-UCC-Guide12-040.png" /></p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p>Install the right software at the backend infrastructure:</p>
+<p><strong>NOTE:</strong> All VDI downloads are at the top of this guide</p>
+<p><a href="https://help.webex.com/en-us/article/xcwws1/Release-notes-for-Webex-Meetings">Cisco Webex Meetings Virtual Desktop Software</a> to check all what is needed for the installation.</p>
+<ul>
+<li>Citrix XenDesktop and Citrix XenApp are supported (no published app support) </li>
+</ul>
+<p>add the following values under HKEY_USERS.DEFAULT:</p>
+<p><img alt="image041" src="../Images/HOWTO-UCC-Guide12-041.png" /></p>
+<p>When you start Webex, it is only working with the redirection, if you can see the “VDI” sign here:</p>
+<p><img alt="image042" src="../Images/HOWTO-UCC-Guide12-042.png" /></p>
+<p>Check if you have the right Connection configuration:</p>
+<p><a href="https://mediatest.webex.com/">Test your WebEx Connection Configuration</a></p>
+<p><a href="https://help.webex.com/en-us/c3r7uf/Open-and-Resolved-Bugs-for-the-Latest-Webex-Meetings-Updates">Further known issues and solved bugs</a></p>
+<p><a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes">Check the release notes for further information</a></p>
+<h3 id="cisco-webex">Cisco WebEx</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI</a> app.</p>
+<p><img alt="image043" src="../Images/HOWTO-UCC-Guide12-043.png" />
+<img alt="image044" src="../Images/HOWTO-UCC-Guide12-044.png" /></p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p>Install the right software at the backend infrastructure: </p>
+<p>Cisco WebEx</p>
+<p><a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes#_ff8dd002-55da-4c64-a481-32a465c09fc1">Only 64-bit installer</a></p>
+<p>Next, install the Host Installer package, Webex.msi, in the VDI image. 
+You can use the following commands to do this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Persistent<span class="w"> </span>VDI:<span class="w"> </span>msiexec<span class="w"> </span>/i<span class="w"> </span>Webex.msi<span class="w"> </span><span class="nv">ALLUSERS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ENABLEVDI</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">AUTOUPGRADEENABLED</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>/quiet<span class="w"> </span>/norestart
+Non-persistent<span class="w"> </span>VDI:<span class="w"> </span>msiexec<span class="w"> </span>/i<span class="w"> </span>Webex.msi<span class="w"> </span><span class="nv">ALLUSERS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ENABLEVDI</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">AUTOUPGRADEENABLED</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">ROAMINGENABLED</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>/quiet<span class="w"> </span>/norestart
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> The most important setting is <code>ENABLEVDI=1</code>. If you just simply double-click the MSI this option is not used, and redirection will not work.</p>
+<p><strong>NOTE:</strong> To control the optimized VDI solution</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=1</td>
+<td>1 enforces optimized VDI mode</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2</td>
+<td>2 enables optimized VDI mode automatically with environment detection</td>
+</tr>
+</tbody>
+</table>
+<p>The other important setting is <code>ROAMINGENABLED=1</code> for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by <code>ALLUSERS=1</code>, otherwise the <code>ROAMINGENABLED</code> argument is ignored.</p>
+<p>Users may be in a Citrix environment and not have the thin client installed or the virtual channel is disconnected. We support this scenario with fallback to a non-virtual Webex App installation. In this mode, the app shows a warning that the quality of video may be affected. Once the virtual channel is connected, the app can change to VDI mode. </p>
+<p>Use this table to understand the different installation combinations and how they affect media optimization for 
+Unified CM, Webex Calling, and calls on Webex App.</p>
+<table>
+<thead>
+<tr>
+<th>HVD VDI argument</th>
+<th>Thin client plugin</th>
+<th>Call service-enabled User</th>
+<th>Calls on Webex App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Not installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2 **</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Not installed</td>
+<td>Fallback to non-optimized media</td>
+<td>Fallback to non-optimized media</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This argument does not detect the VDI environment automatically.</li>
+</ul>
+<p>** This argument detects the VDI environment automatically.</p>
+<ul>
+<li>Testing the solution</li>
+</ul>
+<p>You can verify if the redirection is working by checking the Health Checker option in the Help menu. This option must show a connected status for the Virtual Channel. If you are missing a requirement, the Virtual Channel does not have connected status, or is not there at all.</p>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-teams-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_010.html">Deployment Guide for Cisco Webex for Virtual Desktop Infrastructure (VDI) - Deploy Webex for VDI [Support] - Cisco</a></p>
+<ul>
+<li>Management and troubleshooting around Cisco WebEx: </li>
+</ul>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-teams-vdi-deployment-guide/manage-teams-vdi.html">Deployment Guide for Cisco Webex for Virtual Desktop Infrastructure (VDI) - Manage and Troubleshoot Webex for VDI [Support] - Cisco</a></p>
+<ul>
+<li>Attention:</li>
+</ul>
+<p>In Citrix and Windows Virtual Desktop vGPU environments, Webex is not detected as working in a VDI environment.</p>
+<p>These Windows registry entries on the HVDs are used to detect Webex in a VDI environment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>HKEY_CURRENT_USER<span class="se">\S</span>oftware<span class="se">\C</span>isco<span class="w"> </span>Systems,<span class="w"> </span>Inc.<span class="se">\C</span>iscoVDI<span class="o">]</span><span class="w"> </span><span class="s2">&quot;isVDIEnv&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>,<span class="w"> </span>datatype:REG_EXPAND_SZ
+
+<span class="o">[</span>HKEY_LOCAL_MACHINE<span class="se">\S</span>OFTWARE<span class="se">\C</span>isco<span class="w"> </span>Spark<span class="w"> </span>Native<span class="o">]</span><span class="w"> </span><span class="s2">&quot;isVDIEnv&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>,<span class="w"> </span>datatype:REG_EXPAND_SZ
+</code></pre></div></td></tr></table></div>
+<p>WebEx only support one Webex VDI client working together with one instance of Webex. Users can start multiple Citrix or VMWare sessions, but only one connection instance works, and the other instances fall back to non-VDI mode.</p>
+<ul>
+<li>Important hint:</li>
+</ul>
+<p>You want to use Cisco WebEx and Cisco Jabber in parallel? </p>
+<p>Unfortunately, it is not possible to use Cisco Jabber and Cisco WebEx in parallel with the same headset and / or webcam. But this does not mean, that you cannot use both apps for meetings. There is an easy to fulfill possibility directly mentioned by Cisco how your users can use Cisco Jabber at all (for Cisco WebEx conferences and for direct calls).</p>
+<p>On this page you will find how you need to configure that: </p>
+<p><a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/PA/mcp/APPLICATION_CALLING-Webex_with_Jabber_Cross_Launch.pdf">CALLING - Webex with Jabber Cross Launch - Application Note</a></p>
+<h3 id="microsoft-teams-and-skype-for-business">Microsoft Teams (and Skype for Business)</h3>
+<ul>
+<li>IGEL Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cwa/">Citrix Workspace App</a>.</p>
+<p><img alt="image044" src="../Images/HOWTO-UCC-Guide12-044.png" /></p>
+<p>Microsoft Teams and Skype for Business optimization are enabled by default. HDX webcam parameters are listed in the Citrix general section. No further configuration is needed.</p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p>The Citrix Workspace App (formerly Receiver) has an optimization that does not even exist in Windows 10 below Build 1909 and then falls back on the standard transmission, which has high performance impacts.</p>
+<p><a href="https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1909">What's new in Windows 10, version 1909 for IT Pros</a></p>
+<p>Please install at least Version 20H2, you can get it here: <a href="https://docs.microsoft.com/en-us/windows/release-health/status-windows-10-20h2">Windows 10, version 20H2</a></p>
+<p>HDX Realtime Optimization Pack: <a href="https://docs.citrix.com/en-us/hdx-optimization/current-release.html">HDX RealTime Optimization Pack 2.9 LTSR </a> that is only needed, if you want to use Skype for business </p>
+<p>Now you must start with installation of the right components:</p>
+<p>Optimization for Microsoft Teams requires a minimum of Microsoft Teams version 1.3.00.28778. <a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html">Optimization for Microsoft Teams</a></p>
+<p>You need to open a lot of firewall ports to allow MS Teams to communicate with its cloud service: <a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#skype-for-business-online-and-microsoft-teams">Office 365 URLs and IP address ranges</a></p>
+<p>Use the Office 365 online test to check if your network fulfills all the requirements to support Skype and/or Teams: <a href="https://connectivity.office.com/">Microsoft 365 network connectivity test</a></p>
+<p>If you need help, here are the best list on open or known problems:</p>
+<p><a href="https://support.citrix.com/article/CTX253754">Troubleshooting HDX Optimization for Microsoft Teams</a></p>
+<p>Check the Citrix Channel Allow List (with VDA 21.09 and higher) and activate this:</p>
+<p><img alt="image045" src="../Images/HOWTO-UCC-Guide12-045.png" /></p>
+<p>How you can check if the Teams Optimization is working?</p>
+<ol>
+<li>Select your user profile image, then select About.</li>
+<li>Select Version.</li>
+</ol>
+<p>If the media optimization is loaded correctly, you will see this banner: </p>
+<p><img alt="image046" src="../Images/HOWTO-UCC-Guide12-046.png" /></p>
+<p>Sometimes it is also helpful to do a connection check on the endpoint. Execute these lines inside a local terminal and you can check if the needed addresses and ports can be reached:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">13</span>.107.64.21<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">52</span>.112.0.31<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">52</span>.120.0.41<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>teams.microsoft.com<span class="w"> </span><span class="m">80</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>teams.microsoft.com<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>compass-ssl.microsoft.com<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>mlccdnprod.azureedge.net<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>aka.ms<span class="w"> </span><span class="m">443</span>
+</code></pre></div></td></tr></table></div>
+<p>EPOS headset configuration for Skype for Business</p>
+<p>Configuration needed for the standard function (= pick up softphone = connect):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>DW<span class="w"> </span>Pro<span class="w"> </span><span class="m">1</span><span class="w"> </span>/<span class="w"> </span>DW<span class="w"> </span>Pro<span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="m">4</span><span class="w"> </span>Autolink<span class="w"> </span>ON<span class="w"> </span>
+SDW<span class="w"> </span><span class="m">5035</span><span class="w"> </span>/<span class="w"> </span><span class="nv">5065</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Audio<span class="w"> </span>Quality<span class="w"> </span>Best
+SDW<span class="w"> </span><span class="m">5035</span><span class="w"> </span>/<span class="w"> </span><span class="nv">5065</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">down</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Autolink<span class="w"> </span>ON
+</code></pre></div></td></tr></table></div>
+<p>Teams Call seems to crash after 20 seconds without connection</p>
+<p>It may appear that calls are crashing after 20 seconds. But this is not the case.
+In the general Teams configuration after 20 seconds a call will be forwarded to voicemail. So, it seems that the call was crashed before the connection was established. Sometimes if you use firewall and/or proxy configuration it is possible that the connection need more than 20 seconds. You can check this with a configuration change on the Teams App configuration:</p>
+<p><img alt="image047" src="../Images/HOWTO-UCC-Guide12-047.png" /></p>
+<p>Change <code>Calls ring me</code> --&gt; if unanswered --&gt; Voicemail --&gt; after 20 Seconds to <code>Do nothing</code></p>
+<p><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/">Also see HOWTO Microsoft Teams</a></p>
+<h3 id="zoom">Zoom</h3>
+<ul>
+<li>IGEL Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Media Plugins for VDI</a> app.</p>
+<p><img alt="image048" src="../Images/HOWTO-UCC-Guide12-048.png" /></p>
+<p>You can select the use of Smart Virtual Background Supporthttps://app.igel.com/zoomvdi/</p>
+<p><img alt="image049" src="../Images/HOWTO-UCC-Guide12-049.png" /></p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p>You need at least Citrix Desktops and App 7.15 CU4 or 1912 LTSR CU2 (CU4 for virtual backgrounds).</p>
+<p>If you want to use a perfect Zoom experience on Citrix Desktop, you need the corresponding Zoom VDI build which fits to the plugin you have chosen in the UMS:</p>
+<p>To be compatible, the plugin version must be equal to or less than the Zoom VDI application version. Installing a plugin with a version greater than the Zoom VDI application is not supported. Zoom always recommends updating the Zoom Plugin after updating the Zoom VDI application as many new features require an updated plugin.
+ <a href="https://support.zoom.us/hc/en-us/articles/360041602711-VDI-backwards-compatibility">VDI backwards compatibility</a></p>
+<p><strong>NOTE:</strong> All VDI downloads are at the top of this guide</p>
+<p>For Citrix XenDesktop or Citrix XenApp installation you should use at least these parameters:</p>
+<p>msiexec /i ZoomInstallerVDI.msi ZNoDesktopShortCut="true" ZConfig="nogoogle=1" ZRecommend="AudioAutoAdjust=1" /norestart ALLUsers=1</p>
+<p>[Mass-deploying with preconfigured settings for Windows] (https://support.zoom.us/hc/en-us/articles/201362163-Mass-Installation-and-Configuration-for-Windows)</p>
+<p><strong>Note:</strong> Zoom VDI is supported on Citrix XenDesktop and Citrix XenApp published desktop (not with published apps)</p>
+<p>Troubleshooting:</p>
+<p><a href="https://support.citrix.com/article/CTX275259">Microphone and video not working for Zoom meetings inside HDX session</a></p>
+<p>Zoom has a list of Registry Settings that can help you troubleshoot or control the client. Here is a list of all available registry keys: <a href="https://support.zoom.us/hc/en-us/articles/360032343371">VDI client registry settings</a></p>
+<p><img alt="image050" src="../Images/HOWTO-UCC-Guide12-050.png" /></p>
+<h3 id="citrix-browser-content-redirection-for-ms-teams-gotomeeting">Citrix Browser Content Redirection for MS Teams, GoToMeeting</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p><img alt="image051" src="../Images/HOWTO-UCC-Guide12-051.png" /></p>
+<p>If you need to use Browser Content Redirection with Proxy (on the VDA), you need to activate this option too:</p>
+<p><img alt="image052" src="../Images/HOWTO-UCC-Guide12-052.png" /></p>
+<p>Client-side proxy configuration (and BCR is also possible), please follow the document below: </p>
+<p><a href="https://kb.igel.com/en/igel-os/current/proxy-1">IGEL KB: Proxy Configuration</a></p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p><a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/multimedia/browser-content-redirection.html">Learn all what is needed on Citrix for BCR</a></p>
+<p><a href="https://support.citrix.com/article/CTX238236">Browser Content Redirection: whitelisting websites</a></p>
+<p><a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/browser-content-redirection-policy-settings.html">Browser content redirection policy settings</a></p>
+<p><a href="https://support.citrix.com/article/CTX230052">How to Troubleshoot Browser Content Redirection</a></p>
+<p><a href="https://chrome.google.com/webstore/detail/browser-redirection-exten/hdppkjifljbdpckfajcmlblbchhledln?hl=en">Please install Browser Redirection Extension v6.1</a></p>
+<p>Product Documentation: </p>
+<p><a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/browser-content-redirection-policy-settings.html">Browser content redirection policy settings</a></p>
+<p><a href="https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/browser-content-redirection.html">Browser content redirection</a></p>
+<p>What’s new in version 6.1</p>
+<p>1) Revert to Chrome Extensions manifest v2 to circumvent a Chromium bug with manifest v3 extensions that causes high CPU utilization.</p>
+<p>2) Supports redirection in inactive Chrome tabs (Requires CVAD 2112 or higher)</p>
+<p>3) Supports migrating redirected tabs from one Chrome window to another (Requires CVAD 2112 or higher)</p>
+<p>What’s new in version 5.1 (The following features require CVAD 2109 or higher)</p>
+<p>1) Introduces an improved redirection mechanism that uses a page in the chrome extension to begin the redirection process and solves script injection timing issues </p>
+<p>2) Solves issues with redirection of websites enforcing a Content Security Policy (CSP) policy </p>
+<p>3) Solves issues with redirection of websites that perform JavaScript redirects to authentication page in their Single Sign On (SSO) mechanisms</p>
+<p>4) Solves issues with redirection of websites that perform 302 redirects</p>
+<p>5) Solves issues with acquisition of multimedia devices on the BCR overlay after webpage is redirected</p>
+<p>What’s new in version 5.0 </p>
+<p>1) Fixes high DPI and scaling issues on overlay and VDA</p>
+<p>2) Fixes some issues with redirected Angular websites</p>
+<p>Important information for Audio inside the Browser:</p>
+<p>Here is a quick tip on how to correct sound issues occurring in a Citrix session running Google Chrome / Chromium or Microsoft Edge. Often when the user went to a website that had media (i.e., YouTube), the sound would be broken. No audio sound would play on the endpoint via ICA.</p>
+<p>It seems that this is an issue with Google Chrome version 79 or later. The newest versions of Chrome have an Audio Sandbox feature enabled by default which breaks sound on Citrix Apps and Desktops. </p>
+<p>To resolve this issue, you can do one of three workarounds:</p>
+<p>Edit the registry on the XenApp server (or XenDesktop Desktop):</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>HKEY_LOCAL_MACHINE<span class="se">\S</span>OFTWARE<span class="se">\P</span>olicies<span class="se">\G</span>oogle<span class="se">\C</span>hrome
+reg:dword<span class="w"> </span><span class="nv">AudioSandboxEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+For Chromium based Microsoft Edge users:</p>
+<p>The same DWORD can be added to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Edge
+or editing the shortcut that launches Google Chrome to add the following arguments: <code>–disable-features=AudioServiceSandbox</code> or disable the feature using Group Policy. You can <a href="https://chromeenterprise.google/browser/download/#windows-tab">download the Google Chrome ADMX templates</a>. </p>
+<p>Then navigate to Google -&gt; Google Chrome -&gt; Allow the audio sandbox to run setting. <code>Set the option to Disabled</code>.</p>
+<p>These workarounds will effectively disable the Audio Sandbox for Google Chrome on the Citrix VDI or Desktops Server.</p>
+<p><a href="https://www.jgspiers.com/citrix-browser-content-redirection/">Citrix Browser Content Redirection</a></p>
+<ul>
+<li>Configuration: YouTube with Citrix BCR</li>
+</ul>
+<p><img alt="image053" src="../Images/HOWTO-UCC-Guide12-053.png" />
+<img alt="image054" src="../Images/HOWTO-UCC-Guide12-054.png" /></p>
+<h3 id="cisco-jvdi-on-citrix">Cisco JVDI on Citrix</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_jvdi/">Cisco Jabber VDI</a> app.</p>
+<p><img alt="image055" src="../Images/HOWTO-UCC-Guide12-055.png" /></p>
+<ul>
+<li>Citrix Desktop Configuration (XenApp and XenDesktop)</li>
+</ul>
+<p>Install the right software at the backend infrastructure: <a href="https://software.cisco.com/download/home/286304684/type/283802941/release/15.0(0)">Jabber Softphone for VDI - Windows</a></p>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.html">Deployment and Installation Guide for Cisco Jabber Softphone for VDI</a></p>
+<p>Clients are available on this page: <a href="https://www.webex.com/downloads/jabber/jabber-vdi.html">Cisco Jabber VDI</a></p>
+<p><strong>Note:</strong> Only published desktops are supported (no published app support) </p>
+<p>Find out which Collaboration Accessories are recommended: <a href="https://www.cisco.com/c/en/us/products/unified-communications/uc_endpoints_accessories.html">Unified Communications Endpoint and Client Accessories - Cisco</a></p>
+<p><strong>Important hint:</strong> You want to use Cisco WebEx and Cisco Jabber in parallel? </p>
+<p>Unfortunately, it is not possible to use Cisco Jabber and Cisco WebEx in parallel with the same headset and / or webcam. But this does not mean, that you cannot use both apps for meetings. There is an easy to fulfill possibility directly mentioned by Cisco how your users can use Cisco Jabber at all (for Cisco WebEx conferences and for direct calls).</p>
+<p>On this page you will find how you need to configure that: 
+<a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/PA/mcp/APPLICATION_CALLING-Webex_with_Jabber_Cross_Launch.pdf">Webex with Jabber Cross Launch Application Note</a></p>
+<p><strong>Important note</strong></p>
+<p>Cisco is merging Jabber into WebEx </p>
+<p><a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/PA/mcp/DEPLOYMENT_CLIENTS_Jabber_to_Webex.pdf">Transitioning from Jabber to Webex Deployment Guide</a></p>
+<p><a href="https://help.webex.com/en-us/article/nyxlcde/Configure-Users-to-Move-Jabber-Contacts-and-Common-Settings-to-Webex-App">Configure Users to Move Jabber Contacts and Common Settings to Webex App</a></p>
+<ul>
+<li>Additional information and Links for Troubleshooting on Citrix</li>
+</ul>
+<p><a href="https://support.citrix.com/article/CTX272452">Microphone not working in session on Server 2019 VDA</a></p>
+<p><a href="https://support.citrix.com/article/CTX133024">Delivering Softphones with Virtual Apps and Desktops</a></p>
+<p><a href="https://support.citrix.com/article/CTX226385">Troubleshooting DTLS and EDT on Citrix Gateway</a></p>
+<p><a href="https://docs.citrix.com/en-us/tech-zone/learn/poc-guides/microsoft-teams-optimizations.html">PoC Guide: Microsoft Teams optimization in Citrix Virtual Apps and Desktops environments</a></p>
+<p><a href="https://support.citrix.com/article/CTX220731/how-to-enable-h264-hardware-encoding-with-intel-iris-pro-gpu-on-715-ltsr">How to Enable H.264 Hardware Encoding on 7.15 LTSR</a></p>
+<p><a href="https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/troubleshooting.html">Troubleshooting Citrix Workspace App for Linux</a></p>
+<p><a href="https://docs.citrix.com/en-us/tech-zone/build/tech-papers/citrix-communication-ports.html">Tech Paper: Communications Ports Used by Citrix Technologies</a></p>
+<p><a href="https://docs.citrix.com/en-us/tech-zone/design/reference-architectures/optimizing-unified-communications-solutions.html">Reference Architecture: Optimizing Unified Communications Solutions</a></p>
+<hr />
+<hr />
+<h2 id="omnissa-horizon-on-igel-os-12">Omnissa Horizon on IGEL OS 12</h2>
+<p>Create a Profile based on the <a href="https://app.igel.com/horizon/">Omnissa Horizon Client</a> app.</p>
+<ul>
+<li>Horizon Base configuration (RTAV optimized)</li>
+</ul>
+<p><img alt="image056" src="../Images/HOWTO-UCC-Guide12-056.png" /></p>
+<p>if you need USB Redirection, please make sure, it is right configured:</p>
+<p><img alt="image057" src="../Images/HOWTO-UCC-Guide12-057.png" />
+<img alt="image058" src="../Images/HOWTO-UCC-Guide12-058.png" /></p>
+<h3 id="cisco-webex-meetings_1">Cisco WebEx Meetings</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_meetings/">Cisco Webex Meetings VDI</a> app.</p>
+<p><img alt="image059" src="../Images/HOWTO-UCC-Guide12-059.png" /></p>
+<ul>
+<li>Horizon VDI Configuration (Horizon 8.x)</li>
+</ul>
+<p>Install the right software at the backend infrastructure:</p>
+<p><strong>NOTE:</strong> All VDI downloads are at the top of this guide</p>
+<p>Installation notes for <a href="https://help.webex.com/en-us/article/xcwws1/Release-notes-for-Webex-Meetings">Cisco Webex Meetings Virtual Desktop Software</a></p>
+<p><strong>Note:</strong> Citrix XenDesktop and Citrix XenApp are supported (no published app support) </p>
+<p>Add the following values under HKEY_USERS.DEFAULT:</p>
+<p><img alt="image060" src="../Images/HOWTO-UCC-Guide12-060.png" /></p>
+<p>When you start Webex, it is only working with the redirection, if you can see the “VDI” sign here:</p>
+<p><img alt="image061" src="../Images/HOWTO-UCC-Guide12-061.png" /></p>
+<p>Check if your site administrator allows to use <a href="https://help.webex.com/en-us/pyham7/Enable-Webex-Meetings-Virtual-Desktop-Software">Cisco WebEx for VDI</a></p>
+<p>Check if you have the right Connection configuration:</p>
+<p><a href="https://mediatest.webex.com/">Test your WebEx Connection Configuration</a></p>
+<p><a href="https://help.webex.com/en-us/c3r7uf/Open-and-Resolved-Bugs-for-the-Latest-Webex-Meetings-Updates">Open and Resolved Bugs for the Latest Webex Meetings Updates</a></p>
+<h3 id="cisco-webex_1">Cisco WebEx</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI</a> app.</p>
+<p><img alt="image062" src="../Images/HOWTO-UCC-Guide12-062.png" /></p>
+<ul>
+<li>Horizon VDI Configuration (Horizon 8.x)</li>
+</ul>
+<p>Install the right software at the backend infrastructure: </p>
+<p><a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes">Only 64-bit installer</a></p>
+<p>Next, install the Host Installer package, Webex.msi, in the VDI image. 
+You can use the following commands to do this:</p>
+<p>Persistent VDI: <code>msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 /quiet /norestart</code></p>
+<p>Non-persistent VDI: <code>msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 ROAMINGENABLED=1 /quiet /norestart</code></p>
+<p><strong>Note:</strong> The most important setting is ENABLEVDI=2. If you just simply double-click the MSI this option is not used, and redirection will not work.</p>
+<p><strong>NOTE:</strong> To control the optimized VDI solution</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=1</td>
+<td>1 enforces optimized VDI mode</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2</td>
+<td>2 enables optimized VDI mode automatically with environment detection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Use this table to understand the different installation combinations and how they affect media optimization for Unified CM, Webex Calling, and calls on Webex App. </p>
+<table>
+<thead>
+<tr>
+<th>HVD VDI argument</th>
+<th>Thin client plugin</th>
+<th>Call service-enabled User</th>
+<th>Calls on Webex App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Not installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2 **</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Not installed</td>
+<td>Fallback to non-optimized media</td>
+<td>Fallback to non-optimized media</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This argument does not detect the VDI environment automatically.</li>
+</ul>
+<p>** This argument detects the VDI environment automatically.</p>
+<p>The other important setting is <code>ROAMINGENABLED=1</code> for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by <code>ALLUSERS=1i</code>, otherwise the <code>ROAMINGENABLED</code> argument is ignored.</p>
+<p>Testing the solution</p>
+<p>You can verify if the redirection is working by checking the Health Checker option in the Help menu. This option must show a connected status for the Virtual Channel. If you are missing a requirement, the Virtual Channel does not have connected status, or is not there at all.</p>
+<p><strong>Note:</strong> Tests were done using a 2vCPU, 4GB memory Windows 10 virtual desktop with one other colleague in the WebEx Teams session. </p>
+<p>With VDI redirection enabled, we noticed the video was presented in a higher resolution and the sound was much clearer as opposed to not using redirection. </p>
+<p>Also noticed the CPU and memory usage dropped by 10% and 200MB when using redirection, this was of course because the video content was offloaded/redirected to the endpoint device.</p>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-teams-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_010.html">Deployment Guide for Cisco Webex for Virtual Desktop Infrastructure (VDI) - Deploy Webex for VDI</a></p>
+<p><strong>Attention:</strong></p>
+<p>In Horizon and Windows Virtual Desktop vGPU environments, Webex is not detected as working in a VDI environment.</p>
+<p>These Windows registry entries on the HVDs are used to detect Webex in a VDI environment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>HKEY_CURRENT_USER<span class="se">\S</span>oftware<span class="se">\C</span>isco<span class="w"> </span>Systems,<span class="w"> </span>Inc.<span class="se">\C</span>iscoVDI<span class="o">]</span><span class="w"> </span>“isVDIEnv”<span class="w"> </span><span class="o">=</span><span class="w"> </span>“true”,<span class="w"> </span>datatype:REG_EXPAND_SZ
+
+<span class="o">[</span>HKEY_LOCAL_MACHINE<span class="se">\S</span>OFTWARE<span class="se">\C</span>isco<span class="w"> </span>Spark<span class="w"> </span>Native<span class="o">]</span><span class="w"> </span>“isVDIEnv”<span class="w"> </span><span class="o">=</span><span class="w"> </span>“true”,<span class="w"> </span>datatype:REG_EXPAND_SZ
+</code></pre></div></td></tr></table></div>
+<p>WebEx only support one Webex VDI client working together with one instance of Webex. Users can start multiple Citrix or Horizon sessions, but only one connection instance works, and the other instances fall back to non-VDI mode.</p>
+<p>Webex VDI detects Citrix at first and then Horizon in the HVD environment. If you want to use Horizon, make sure no Citrix Agent is installed. </p>
+<p>You can check if the connection is configured right:</p>
+<p><img alt="image063" src="../Images/HOWTO-UCC-Guide12-063.png" />
+<img alt="image064" src="../Images/HOWTO-UCC-Guide12-064.png" /></p>
+<h3 id="microsoft-teams">Microsoft Teams</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/horizon/">Omnissa Horizon Client</a> app.</p>
+<p><img alt="image065" src="../Images/HOWTO-UCC-Guide12-065.png" /></p>
+<p>IGEL OS 12 includes the right client software.</p>
+<p><a href="https://techzone.omnissa.com/resource/microsoft-teams-optimization-horizon#overview">TechZone Media Optimization for Microsoft Teams</a></p>
+<p><a href="https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesV2309/page/MediaOptimizationforMicrosoftTeams.html">Media Optimization for Microsoft Teams</a></p>
+<ul>
+<li>VMware VDI Configuration (Horizon 8.x)</li>
+</ul>
+<p>Media Optimization for the new Microsoft Teams client is supported as part of Omnissa Horizon 8.4 (2111 and later). Horizon versions earlier than 8.4 have not been tested.</p>
+<p>The Media Optimization for Microsoft Teams feature is also available with Horizon Cloud on Microsoft Azure, Pod Manifest version 2298.X and later.</p>
+<p>The Media Optimization for Microsoft Teams group policy setting must be turned on in the virtual desktop for Horizon Agent 8.7 (2209) and earlier.</p>
+<p>For Horizon Agent 8.8 (2212) and later, Media Optimization for Microsoft Teams is turned on by default when Horizon Agent is installed. </p>
+<p><img alt="image066" src="../Images/HOWTO-UCC-Guide12-066.png" /></p>
+<p>Please follow these steps to install Microsoft Teams for Omnissa Horizon:</p>
+<p>The Optimization for Microsoft Teams configuration requires:</p>
+<p>Microsoft Azure / 365 in backend: where the client would connect to establish the connection</p>
+<p>Microsoft Teams Client (Optimized) </p>
+<p>Enough resource in virtual desktop: Minimum requirement is 2 vCPU</p>
+<p>Network with IPv4, reachability of vDesktops and Horizon client to Microsoft 365</p>
+<p><strong>The installation</strong></p>
+<p>To make it work it require to do configuration in 2 locations:</p>
+<p>In vDesktops Master Image</p>
+<p>In AD Group Policy</p>
+<p><strong>In vDesktops Master Image:</strong></p>
+<p>Horizon Agent Installation and Configuration</p>
+<p>During installation of Horizon Agent, the registry key shown below is automatically created and set to 1. This turns on Media Optimization by default.</p>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Omnissa\Horizon\WebRTCRedir” teamsEnabled (REG_DWORD)</p>
+<p>Force Client Side WebRTC Optimization</p>
+<p>On the Client, there is a setting Media Optimization for WebRTC based applications that controls if the client enables WebRTC optimization. By default, this setting is enabled.</p>
+<p>Additionally, there is a group policy setting, Force client side WebRTC optimization, that can override this. By default, this group policy is not enabled. </p>
+<p>If the Force client side WebRTC optimization group policy setting is enabled, Microsoft Teams Media Optimization is forced on the endpoint, and any client setting or any other admin policy (for example, the Chrome-level user policy for the Chrome client) is ignored.</p>
+<p>If the Force client side WebRTC optimization is unchecked, Windows endpoint users have the option to use or not use Microsoft Teams Optimization by configuring the Horizon Client setting called Media Optimization for WebRTC based applications. Also, any Chrome-level user policy would take effect.</p>
+<p><img alt="image067" src="../Images/HOWTO-UCC-Guide12-067.png" /></p>
+<p>-Windows Desktop Installation</p>
+<p>To install the new Teams app into a Horizon 8 Windows desktop golden image, use the teamsbootstrapper.exe utility provided by Microsoft for VDI environments.</p>
+<p>At a high level, use the following steps:</p>
+<p>Install the Teams Client</p>
+<p>Disable Autoupdate</p>
+<p>Install Teams Client</p>
+<p>Download the bootstrapper.exe utility.</p>
+<p>Download the Teams MSIX installation file.</p>
+<p>Open a Command Prompt as an Administrator</p>
+<p>Run the following command, modifying the path to match the location of where you downloaded the files to .\teamsbootstrapper.exe -p -o "c:\path\to MSTeams-x64.msix"</p>
+<p>Replace C:\path\to\MSTeams-x64.msix with the actual path to the downloaded MSIX file.</p>
+<p>Disable Autoupdate</p>
+<p>To prevent new Teams client from auto updating, use the following registry key on the virtual machine.</p>
+<p>Only new Team client builds higher than 23306.3314.2555.9628 in VDI can process this registry key.</p>
+<p>Open regedit, and navigate to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft. </p>
+<p>Right-click and create a New Key called Teams</p>
+<p>Select the Teams key, right-click and add a new DWORD (32-bit) Value</p>
+<p>Edit the new Value and change:</p>
+<p>Value name = disableAutoUpdate</p>
+<p>Value data = 1</p>
+<p>-Windows Server Installation</p>
+<p>As the Microsoft Store is not available on Server OS, the process to install the new Teams client is slightly different.</p>
+<p>This uses DISM to install the client, which requires Microsoft Edge WebView2 to be installed and sideloading to non-store apps to be enabled.</p>
+<p>At a high level, use the following steps:</p>
+<p>Install Microsoft Edge WebView2</p>
+<p>Enable Side-loading of Microsoft Store Apps</p>
+<p>Install the Teams Client</p>
+<p>Disable Autoupdate</p>
+<p>Add Microsoft New Teams as a Hosted Application</p>
+<p>Optional: Outlook Presence Integration with New Teams in Windows Server</p>
+<p>Note: Horizon Agent version 2312.1 or later is required to support the publishing of a store app in Horizon.</p>
+<p>Install Microsoft Edge WebView2</p>
+<p>The Microsoft Edge WebView2 framework is required in Windows Server and Windows 10/11 Multi-User environments. The minimum version required is: 90.0.818.66.</p>
+<p>Learn more: <a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/enterprise">Enterprise management of WebView2 Runtimes.</a></p>
+<p>Download and install <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH">Microsoft Edge WebView2</a> as an Administrator.</p>
+<p>Enable Side-loading of Microsoft Store Apps</p>
+<p>As the Teams client is not being downloaded from the Microsoft store, we need to enable side-loading of store apps to be able to install it. If desired, this can be turned off again after installation is completed.</p>
+<p>Open the Local Group Policy Editor (gpedit.msc) and navigate to:</p>
+<p>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; App Package Deployment &gt; Allow all trusted apps to install</p>
+<p>Double-click to open the policy, select Enabled, and click OK.</p>
+<p><img alt="image068" src="../Images/HOWTO-UCC-Guide12-068.png" /></p>
+<p>Install the Teams Client</p>
+<p>Download the <a href="https://go.microsoft.com/fwlink/?linkid=2196106">Teams MSIX Installation file</a></p>
+<p>Open a Command Prompt as an Administrator and run:</p>
+<p>Dism /Online /Add-ProvisionedAppxPackage /PackagePath:"c:\path\to MSTeams-x64.msix" /SkipLicense</p>
+<p>Replace C:\path\to\MSTeams-x64.msix with the actual path to the downloaded MSIX file.</p>
+<p>After installing, you can verify the Teams client installation using the following command:</p>
+<p>DISM /Online /Get-ProvisionedAppxPackages</p>
+<p>Look through the output for an MSTeams entry to confirm it's correctly installed. Record the PackageName for reference.</p>
+<p>Disable Autoupdate</p>
+<p>To prevent new Teams client from auto updating, use the following registry key on the virtual machine. Only new Team client builds higher than 23306.3314.2555.9628 can process this registry key.</p>
+<p>Open regedit, and navigate to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\</p>
+<p>Right-click and create a New Key called Teams</p>
+<p>Select the Teams key, right-click and add a new DWORD (32-bit) Value</p>
+<p>Edit the new Value and change:</p>
+<p>Value name = disableAutoUpdate</p>
+<p>Value data = 1</p>
+<p>Add Microsoft New Teams as a Hosted Application</p>
+<p>To configure Microsoft New Teams as a hosted (published) applications, a policy needs to be enabled that allows Microsoft Store Apps (also known as UWP) to be scanned and launched on RDSH farms (for operating system versions that supports Microsoft Store Applications).</p>
+<p>When enabled, store apps can be used as Hosted Apps from RDSH farms.</p>
+<p>Apply the following setting to the RDS host(s) with either a local group policy, or a domain group policy.</p>
+<p>Be conscious that if your golden image is not domain joined, that a domain group policy will not be applied. In that case, apply this setting using the Local Group Policy Editor.</p>
+<p>Extract the Group Policy template files available in the Horizon-Extras bundle and copy to the C:\Windows\PolicyDefinitions folder on either the golden image, or on a domain controller depending on what policy type you are using.</p>
+<p>Depending on how you are applying the policy, open either the Local Group Policy Editor (gpedit.msc) or the domain Group Policy Management console, and navigate to:</p>
+<p>Computer Configuration &gt; Administrative Templates &gt; View Agent Configuration &gt; Unity Touch and Hosted Apps &gt; Enable UWP support on RDSH platforms</p>
+<p>Double-click to open the policy, select Enabled, and click OK.</p>
+<p><img alt="image069" src="../Images/HOWTO-UCC-Guide12-069.png" /></p>
+<p>Restart the Horizon Agent service (wsnm) or restart RDSH server to have the GPO take effect.</p>
+<p>The New Teams UWP app should now be available when publishing a new Application Pool in the Horizon Administrator Console, using the Add from Installed Applications selection.</p>
+<p>Outlook Presence Integration with New Teams in Windows Server (Optional)</p>
+<p>For Outlook to properly display presence status, the steps outlined in the <a href="https://learn.microsoft.com/en-us/microsoftteams/new-teams-vdi-requirements-deploy#outlook-presence-integration-with-new-teams-in-windows-server-2019">Microsoft documentation</a>are required on the golden image.</p>
+<p><strong>Troubleshooting</strong></p>
+<p><a href="https://techzone.omnissa.com/resource/microsoft-teams-optimization-horizon#troubleshooting">Omnissa article for Troubleshooting MS Teams Optimization</a></p>
+<p>Sometimes it is also helpful to do a connection check on the endpoint. Execute these lines inside a local terminal and you can check if the needed addresses and ports can be reached:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">13</span>.107.64.21<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">52</span>.112.0.31<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-u<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span><span class="m">52</span>.120.0.41<span class="w"> </span><span class="m">3478</span>-3481
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>teams.microsoft.com<span class="w"> </span><span class="m">80</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>teams.microsoft.com<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>compass-ssl.microsoft.com<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>mlccdnprod.azureedge.net<span class="w"> </span><span class="m">443</span>
+nc<span class="w"> </span>-v<span class="w"> </span>-z<span class="w"> </span>aka.ms<span class="w"> </span><span class="m">443</span>
+</code></pre></div></td></tr></table></div>
+<p>How you can check if the Teams Optimization is working?</p>
+<ol>
+<li>Select your user profile image, then select About.</li>
+<li>Select Version.</li>
+</ol>
+<p>If the media optimization is loaded correctly, you will see this banner: </p>
+<p><img alt="image070" src="../Images/HOWTO-UCC-Guide12-070.png" /></p>
+<p><strong>EPOS headset configuration for Teams and Skype for Business:</strong></p>
+<p>Configuration needed for the standard function (= pick up softphone = connect):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>DW<span class="w"> </span>Pro<span class="w"> </span><span class="m">1</span><span class="w"> </span>/<span class="w"> </span>DW<span class="w"> </span>Pro<span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="m">4</span><span class="w"> </span>Autolink<span class="w"> </span>ON<span class="w"> </span>
+SDW<span class="w"> </span><span class="m">5035</span><span class="w"> </span>/<span class="w"> </span><span class="nv">5065</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Audio<span class="w"> </span>Quality<span class="w"> </span>Best
+SDW<span class="w"> </span><span class="m">5035</span><span class="w"> </span>/<span class="w"> </span><span class="nv">5065</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>DIP<span class="w"> </span><span class="nv">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">down</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Autolink<span class="w"> </span>ON
+</code></pre></div></td></tr></table></div>
+<p><strong>Teams Call seems to crash after 20 seconds without connection</strong></p>
+<p>It may appear that calls are crashing after 20 seconds. But this is not the case.
+In the general Teams configuration after 20 seconds a call will be forwarded to voicemail. So, it seems that the call was crashed before the connection was established. Sometimes if you use firewall and/or proxy configuration it is possible that the connection need more than 20 seconds. You can check this with a configuration change on the Teams App configuration:</p>
+<p><img alt="image071" src="../Images/HOWTO-UCC-Guide12-071.png" /></p>
+<p>Change <code>Calls ring me</code> --&gt; if unanswered --&gt; Voicemail --&gt; after 20 Seconds to <code>Do nothing</code></p>
+<p><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/">Also see HOWTO Microsoft Teams</a></p>
+<h3 id="zoom_1">Zoom</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Media Plugins for VDI</a> app.</p>
+<p><img alt="image072" src="../Images/HOWTO-UCC-Guide12-072.png" /></p>
+<p>You can select the use of Smart Virtual Background Support:</p>
+<p><img alt="image073" src="../Images/HOWTO-UCC-Guide12-073.png" /></p>
+<ul>
+<li>VMware VDI Configuration (Horizon 8.x)</li>
+</ul>
+<p>If you want to use a perfect Zoom experience on VMware Horizon, you need the corresponding Zoom VDI build which fits to the plugin you have chosen in the UMS:</p>
+<p><strong>Note:</strong> To be compatible, the plugin version must be equal to or less than the Zoom VDI application version. Installing a plugin with a version greater than the Zoom VDI application is not supported. Zoom always recommends updating the Zoom Plugin after updating the Zoom VDI application as many new features require an updated plugin. <a href="https://support.zoom.us/hc/en-us/articles/360041602711-VDI-backwards-compatibility">VDI backwards compatibility</a></p>
+<p>All VDI Downloads are located here: <a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063810">VDI releases and downloads – Zoom Support</a></p>
+<p><strong>NOTE:</strong> All VDI downloads are at the top of this guide</p>
+<p>For VMware Horizon 7.x and 8.x installation you should use these parameters:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>msiexec<span class="w"> </span>/i<span class="w"> </span>C:<span class="se">\y</span>ourfolder<span class="se">\Z</span>oomInstallerVDI.msi<span class="w"> </span><span class="nv">ZNoDesktopShortCut</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="nv">ZConfig</span><span class="o">=</span><span class="s2">&quot;nogoogle=1&quot;</span><span class="w"> </span><span class="nv">ZRecommend</span><span class="o">=</span><span class="s2">&quot;AudioAutoAdjust=1&quot;</span><span class="w"> </span>/quiet<span class="w"> </span>/qn<span class="w"> </span>/norestart<span class="w"> </span><span class="nv">ALLUsers</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+<p><a href="https://support.zoom.us/hc/en-us/articles/201362163-Mass-Installation-and-Configuration-for-Windows">Mass-deploying with preconfigured settings for Windows</a></p>
+<p>If you have an audio problem with Zoom on VMware Horizon, <a href="https://kb.omnissa.com/s/article/78481?lang=en_US">Audio distortion when using Zoom meeting in Horizon remote desktop session (78481)</a></p>
+<h3 id="vmware-horizon-browser-content-redirection-with-html5">VMware Horizon Browser Content Redirection with HTML5</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/horizon/">Omnissa Horizon Client</a> app.</p>
+<p><img alt="image074" src="../Images/HOWTO-UCC-Guide12-074.png" /></p>
+<ul>
+<li>VMware VDI Configuration (Horizon 7.x and 8.x)</li>
+</ul>
+<p>VDI or RDSH images must have at least the Horizon Agent 7.10 with HTML5 option. This option is included by default.</p>
+<p>The HTML5 Multimedia Redirection GPO settings must be configured on the Active Directory server.</p>
+<p>The Chrome or Edge browser must be installed in the VDI or RDSH image.</p>
+<p>The VMware Horizon HTML5 Multimedia Redirection extension must be installed in the Chrome or Edge browser.</p>
+<p>The BLAST (Extreme) or PCoIP protocols must be used.</p>
+<p>Redirecting HTML5 multimedia content from a VDI or RDSH session to the local client system requires installing the HTML5 Multimedia Redirection feature and the Chrome or Edge browser within the VDI or RDSH image, enabling the HTML5 Multimedia Redirection plug-in, and specifying which websites will use this feature.</p>
+<p>Assuming you already copied the <code>vdm_agent.admx</code> file (which is part of the <a href="https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesV2309/page/ADMXTemplateFiles.html">VMware Horizon GPO bundle</a> in the SYSVOL folder of your Active Directory server, you can go ahead and configure the required VMware Horizon settings.</p>
+<p>When creating the GPO, navigate to <code>Computer Configuration &gt; Policies &gt; Administrative Templates &gt; VMware View Agent Configuration &gt; VMware HTML5 Features</code></p>
+<p>Enable the following settings:</p>
+<p>1) Enable VMware HTML5 Multimedia Redirection</p>
+<p>2) Enable Chrome and/or Edge Browser HTML5 Multimedia Redirection</p>
+<p>3) Enable the URL list and fill in the value name, for example: <code>https://www.youtube.com/*</code> and do not fill in any value (leave this empty). It is important to include the http:// or https:// prefix in the URLs. You can use wildcards.</p>
+<p><img alt="image075" src="../Images/HOWTO-UCC-Guide12-075.png" />
+<img alt="image076" src="../Images/HOWTO-UCC-Guide12-076.png" /></p>
+<p>For the Chrome and Edge browsers, you can opt to automatically manage and activate the HTML5 Multimedia Redirection plug-in for the end-users by configuring the following GPO settings. For Chrome, download the Chrome .admx file and copy this to the SYSVOL folder of the Active Directory server.</p>
+<p>When creating the GPO, go to <code>User or Computer Configuration &gt; Policies &gt; Administrative Templates &gt; Google &gt; Google Chrome &gt; Extensions</code></p>
+<p>Enable the setting “Configure the list of force-installed apps and extensions” and fill in the following line:</p>
+<p><code>ljmaegmnepbgjekghdfkgegbckolmcok;https://clients2.google.com/service/update2/crx</code></p>
+<p><img alt="image077" src="../Images/HOWTO-UCC-Guide12-077.png" />
+<img alt="image078" src="../Images/HOWTO-UCC-Guide12-078.png" /></p>
+<p><strong>Note:</strong> Since this can also be set on the user level, this setting can of course also be done with a User Environment Manager tool, such as Omnissa Dynamic Environment Manager.</p>
+<p><img alt="image079" src="../Images/HOWTO-UCC-Guide12-079.png" /></p>
+<p>To automatically enable the Edge browser plugin, please follow <a href="https://docs.omnissa.com/bundle/horizon8-rnV2412/page/Horizon8-ReleaseNotes.html">Horizon Release Notes</a></p>
+<p>If you have met all the requirements, it is time to test if the configuration is working! Within the VDI or RDSH session, launch the Chrome or Edge browser, and look for the VMware Horizon HTML5 Redirection Extension icon in the right-upper corner.</p>
+<p><img alt="image080" src="../Images/HOWTO-UCC-Guide12-080.png" />
+<img alt="image081" src="../Images/HOWTO-UCC-Guide12-081.png" /></p>
+<p>Note to the following:</p>
+<p>1) The icon must be green. Only then the plug-in is active and ready for use.</p>
+<p>2) If the icon is grey, then you have not met one of the requirements. For example, the Horizon Agent install parameter or Horizon Client version.</p>
+<p>Here is a quick tip on how to correct sound issues occurring in a VMware Horizon session running Google Chrome / Chromium or Microsoft Edge. It is possible, that inside a virtual desktop that had Google Chrome in it, when a user went to a website that had media (i.e., YouTube), the sound would be broken. No audio sound would play on the endpoint.</p>
+<p>It seems that this is an issue with Google Chrome version 79 or later. The newest versions of Chrome have an Audio Sandbox feature enabled by default which breaks sound on VMware Horizon. To resolve this issue, you can do one of three workarounds:</p>
+<p>Edit the registry on Horizon Desktop:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>HKEY_LOCAL_MACHINE<span class="se">\S</span>OFTWARE<span class="se">\P</span>olicies<span class="se">\G</span>oogle<span class="se">\C</span>hrome
+reg:dword<span class="w"> </span><span class="nv">AudioSandboxEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>For Chromium based Microsoft Edge users</strong></p>
+<p>The same DWORD can be added to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Edge or editing the shortcut that launches Google Chrome to add the following arguments:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="s2">&quot;–disable-features=AudioServiceSandbox&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>or disable the feature using Group Policy. You can <a href="https://cloud.google.com/chrome-enterprise/browser/download/">download the Google Chrome ADMX templates</a>. </p>
+<p>Then navigate to Google -&gt; Google Chrome -&gt; Allow the audio sandbox to run setting. <code>Set the option to Disabled</code>.</p>
+<p>These workarounds will effectively disable the Audio Sandbox for Google Chrome in the VDI.</p>
+<p><a href="https://docs.omnissa.com/bundle/Horizon-Remote-Desktop-FeaturesV2312/page/HTML5FeaturePolicySettings.html">Additional policy settings</a></p>
+<p><strong>Note:</strong> If CPU usage is above the default threshold of 85, the sent video resolution is reduced, which will lower client CPU usage. Activates the "Configure CPU overuse threshold" policy with a value less than 85 to reduce client CPU during video calls.</p>
+<p>To use the default threshold of 85, deactivate or do not configure this policy. If you do not want to detect CPU overuse, activate this policy with a value of 0. This setting takes effect at the next logon.</p>
+<p><strong>VIDEO TEST</strong></p>
+<p>For this test following VM was used:</p>
+<p>1) Windows 10, build 1803 VDI</p>
+<p>2) Horizon Agent 7.10</p>
+<p>3) Specs: 2vCPU, 4GB Memory</p>
+<p>Let us first play a FULL HD (1080p) video without HTLM5 Redirection. We immediately see the CPU spiking to 100%. Furthermore, the image and audio quality are quite poor. Bandwidth consumption is around 200Kbps and 8Mbps, using BLAST Extreme.</p>
+<p><img alt="image082" src="../Images/HOWTO-UCC-Guide12-082.png" /></p>
+<p>Let us launch the same demo video (also in 1080p) with HTLM5 Redirection. We immediately notice the plugin icon changing with the addition of the blue “REDR” letters. This means redirection is fully operational. We notice the image and quality levels are excellent!</p>
+<p><img alt="image083" src="../Images/HOWTO-UCC-Guide12-083.png" /></p>
+<p>When you look at the CPU resources, the CPU will stay around 20-40%.</p>
+<p><img alt="image084" src="../Images/HOWTO-UCC-Guide12-084.png" /></p>
+<p>The bandwidth consumption is the same as playing the video without HTML5 Redirection, around 200Kbps and 8Mbps using Blast Extreme.</p>
+<p><img alt="image085" src="../Images/HOWTO-UCC-Guide12-085.png" /></p>
+<p>Even when using a 1vCPU, 2GB Memory Windows 7 VDI, we notice a great multimedia experience!! With only about 40-60% CPU consumption.</p>
+<p><img alt="image086" src="../Images/HOWTO-UCC-Guide12-086.png" /></p>
+<h3 id="cisco-jvdi-on-vmware-horizon">Cisco JVDI on VMware Horizon</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_jvdi/">Cisco Jabber VDI</a> app.</p>
+<p><img alt="image087" src="../Images/HOWTO-UCC-Guide12-087.png" /></p>
+<ul>
+<li>VMware Horizon 8.x</li>
+</ul>
+<p>Install the right software at the backend infrastructure <a href="https://software.cisco.com/download/home/286304684/type/283802941/release/15.0(0)">Jabber Softphone for VDI - Windows</a></p>
+<p>How to install: <a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jvdi/14_1/jvdi_b_deploy-install-jvdi-141.pdf">Deployment and Installation Guide for Cisco Jabber Softphone for VDI Release</a></p>
+<p>all clients are available on this page <a href="https://www.webex.com/downloads/jabber/jabber-vdi.html">Cisco Jabber VDI</a></p>
+<p><strong>Important hint:</strong></p>
+<p>You want to use Cisco WebEx and Cisco Jabber in parallel? </p>
+<p>Unfortunately, it is not possible to use Cisco Jabber and Cisco WebEx in parallel with the same headset and / or webcam. But this does not mean, that you cannot use both apps for meetings. There is an easy to fulfill possibility directly mentioned by Cisco how your users can use Cisco Jabber at all (for Cisco WebEx conferences and for direct calls).</p>
+<p>On this page you will find how you need to configure that: <a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/PA/mcp/APPLICATION_CALLING-Webex_with_Jabber_Cross_Launch.pdf">Webex with Jabber Cross Launch Application Note</a></p>
+<p><strong>Important note</strong> Cisco is merging Jabber into WebEx </p>
+<p>Deployment Guide for this merge: <a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/PA/mcp/DEPLOYMENT_CLIENTS_Jabber_to_Webex.pdf">Transitioning from Jabber to Webex Deployment Guide</a></p>
+<p>There is also another document which describes how you merge all your contacts and configurations from Jabber to WebEx: <a href="https://help.webex.com/en-us/article/nyxlcde/Configure-Users-to-Move-Jabber-Contacts-and-Common-Settings-to-Webex-App">Configure Users to Move Jabber Contacts and Common Settings to Webex App</a></p>
+<hr />
+<hr />
+<h2 id="azure-virtual-desktop-avd-on-igel-os-12">Azure Virtual Desktop (AVD) on IGEL OS 12</h2>
+<p>There is a good feature included in the AVD registry: Create a Profile based on the <a href="https://app.igel.com/avd/">IGEL Azure Virtual Desktop</a> app.</p>
+<p><img alt="image088" src="../Images/HOWTO-UCC-Guide12-088.png" /></p>
+<p>Learn more about that on Microsoft Learn: <a href="https://learn.microsoft.com/en-us/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks">RDP Shortpath for Azure Virtual Desktop</a></p>
+<h3 id="cisco-webex-meetings_2">Cisco WebEx Meetings</h3>
+<p>Unfortunately, currently no Client Plugin for IGEL OS is available</p>
+<h3 id="cisco-webex-teams">Cisco WebEx Teams</h3>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI</a> app.</p>
+<p><img alt="image089" src="../Images/HOWTO-UCC-Guide12-089.png" /></p>
+<p>Install the right software at the backend infrastructure: </p>
+<p><a href="https://help.webex.com/en-us/article/ntp1us7/Webex-App-%7C-VDI-release-notes">Only 64-bit installer</a></p>
+<p>Next, install the Host Installer package, Webex.msi, in the VDI image. 
+You can use the following commands to do this:</p>
+<p>Persistent VDI: <code>msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 /quiet /norestart</code></p>
+<p>Non-persistent VDI: <code>msiexec /i Webex.msi ALLUSERS=1 ENABLEVDI=2 AUTOUPGRADEENABLED=0 ROAMINGENABLED=1 /quiet /norestart</code></p>
+<p><strong>Note:</strong> The most important setting is ENABLEVDI=2. If you just simply double-click the MSI this option is not used, and redirection will not work.</p>
+<p><strong>NOTE:</strong> To control the optimized VDI solution</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=1</td>
+<td>1 enforces optimized VDI mode</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2</td>
+<td>2 enables optimized VDI mode automatically with environment detection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Use this table to understand the different installation combinations and how they affect media optimization for Unified CM, Webex Calling, and calls on Webex App. </p>
+<table>
+<thead>
+<tr>
+<th>HVD VDI argument</th>
+<th>Thin client plugin</th>
+<th>Call service-enabled User</th>
+<th>Calls on Webex App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Not installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=0</td>
+<td>Installed</td>
+<td>Media is not optimized</td>
+<td>Media is not optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=2 **</td>
+<td>Installed</td>
+<td>Supported deployment; Media is optimized</td>
+<td>Supported deployment; Media is optimized</td>
+</tr>
+<tr>
+<td>ENABLEVDI=1 *</td>
+<td>Not installed</td>
+<td>Fallback to non-optimized media</td>
+<td>Fallback to non-optimized media</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This argument does not detect the VDI environment automatically.</li>
+</ul>
+<p>** This argument detects the VDI environment automatically.</p>
+<p>The other important setting is <code>ROAMINGENABLED=1</code> for non-persistent VDI. If this argument is specified, then the roaming database (the “spark_roaming_store.db” file) is stored in the end-user’s roaming directory (AppData\Roaming). Otherwise, the roaming database is stored in AppData\Local. This argument must be accompanied by <code>ALLUSERS=1i</code>, otherwise the <code>ROAMINGENABLED</code> argument is ignored.</p>
+<p>Testing the solution</p>
+<p>You can verify if the redirection is working by checking the Health Checker option in the Help menu. This option must show a connected status for the Virtual Channel. If you are missing a requirement, the Virtual Channel does not have connected status, or is not there at all.</p>
+<p><strong>Note:</strong> Tests were done using a 2vCPU, 4GB memory Windows 10 virtual desktop with one other colleague in the WebEx Teams session. </p>
+<p>With VDI redirection enabled, we noticed the video was presented in a higher resolution and the sound was much clearer as opposed to not using redirection. </p>
+<p>Also noticed the CPU and memory usage dropped by 10% and 200MB when using redirection, this was of course because the video content was offloaded/redirected to the endpoint device.</p>
+<p><a href="https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/vdi/wbx-teams-vdi-deployment-guide/wbx-teams-vdi-deployment_chapter_010.html">Deployment Guide for Cisco Webex for Virtual Desktop Infrastructure (VDI) - Deploy Webex for VDI</a></p>
+<h3 id="microsoft-teams_1">Microsoft Teams</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Both classic and New Teams Optimization is included. Just use a profile with AVD activated – there is no need to activate Teams optimization, it is still activated at all.</p>
+<p>NOTE:: Until Microsoft releases SlimCore for Linux, WebRTC optimization must not be disabled using the VDI Partner's policy engine</p>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>AVD Configuration</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Before you can use Microsoft Teams on Azure Virtual Desktop, you'll need to do these things:</p>
+<p>1) Prepare your network for Microsoft Teams.</p>
+<p>2) Connect to a Windows 10 or 11 Multi-session or Windows 10 or 11 Enterprise virtual machine (VM).</p>
+<p><strong>Install the Teams desktop app</strong></p>
+<p>This section will show you how to install the Teams desktop app on your Windows 10 or 11 Multi-session or Windows 10 or 11 Enterprise VM image. To learn more, check out Install or update the Teams desktop app on VDI.</p>
+<p><strong>Prepare your image for Teams</strong></p>
+<p>To enable media optimization for Teams, set the following registry key on the host VM:</p>
+<p>1) From the start menu, run RegEdit as an administrator. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams. Create the Teams key if it doesn't already exist.</p>
+<p>2) Create the following value for the Teams key:</p>
+<p><img alt="image090" src="../Images/HOWTO-UCC-Guide12-090.png" /></p>
+<p><strong>Install the Teams WebSocket Service</strong></p>
+<p>Install the latest version of the <a href="https://aka.ms/msrdcwebrtcsvc/msi">Remote Desktop WebRTC Redirector Service</a> on your VM image. If you encounter an installation error, install the latest <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ Redistributable</a> and try again.</p>
+<p><strong>Latest WebSocket Service versions</strong></p>
+<p>The following table lists the latest versions of the WebSocket Service:</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.54.2408.19001</td>
+<td>08/21/2024</td>
+</tr>
+<tr>
+<td>1.54.2407.26001</td>
+<td>07/29/2024</td>
+</tr>
+<tr>
+<td>1.50.2402.29001</td>
+<td>03/25/2024</td>
+</tr>
+<tr>
+<td>1.45.2310.13001</td>
+<td>11/15/2023</td>
+</tr>
+<tr>
+<td>1.43.2306.30001</td>
+<td>09/07/2023</td>
+</tr>
+<tr>
+<td>1.33.2302.07001</td>
+<td>03/01/2023</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Install Microsoft Teams</strong></p>
+<p><img alt="image091" src="../Images/HOWTO-UCC-Guide12-091.png" /></p>
+<p>Recommended way to deploy Teams in VDI. The direct or 'bulk deployment' method is used for this option. Learn more at <a href="https://learn.microsoft.com/en-us/microsoftteams/teams-client-bulk-install">Bulk Deployment of the Teams desktop client</a>.</p>
+<p>Using the teamsbootstrapper.exe -p command always guarantees the latest Teams client is installed.</p>
+<p>A phased and controlled rollout can then be achieved by selectively expanding the new computer catalogue/delivery group assignments to more users.</p>
+<p>Admins can also use a local teams MSIX to provision Teams. This option minimizes the amount of bandwidth used for the initial installation. The MSIX can exist in a local path or UNC.</p>
+<p><a href="https://go.microsoft.com/fwlink/?linkid=2243204&amp;clcid=0x409">Download the .exe installer</a></p>
+<p>Download the MSIX:
+- <a href="https://go.microsoft.com/fwlink/?linkid=2196060&amp;clcid=0x409">MSIX x86</a>
+- <a href="https://go.microsoft.com/fwlink/?linkid=2196106">MSIX x64</a></p>
+<p>Open the Command Prompt as an Admin.</p>
+<p>Depending on where your MSIX is located, do the following steps:</p>
+<p>For local path, enter: .\teamsbootstrapper.exe -p -o "c:\path\to\teams.msix"</p>
+<p>Example:</p>
+<p><img alt="image092" src="../Images/HOWTO-UCC-Guide12-092.png" /></p>
+<p>For UNC, enter: .\teamsbootstrapper.exe -p -o "\unc\path\to\teams.msix"</p>
+<p>Example:</p>
+<p><img alt="image093" src="../Images/HOWTO-UCC-Guide12-093.png" /></p>
+<p>Teamsbootstrapper.exe logs are located in C:\WINDOWS\Temp\teamsprovision.log.xxxxxxxx.</p>
+<p>For Windows Server 2019, the only supported installation method is:</p>
+<p>Dism /Online /Add-ProvisionedAppxPackage /PackagePath:<MSIX package path> /SkipLicense</p>
+<p>Make sure sideloading is enabled, and that WebView2 is installed. </p>
+<p>The /SkipLicense command is needed because the MSIX package isn't considered a "Store Package" (since it wasn't downloaded from the store). Therefore, for the Dism installation command to succeed, you need to enable this policy as well during installation time: Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; App Package Deployment &gt; Allow all trusted apps to install.</p>
+<p>Important</p>
+<p>AllowAllTrustedApps must be enabled after the Teams package is successfully staged in the golden image. Otherwise, the registration of the package to each user (which happens only on login) fails and users aren't able to launch the app.</p>
+<p>Known limitations:</p>
+<p>If you're using FSLogix as the Profile Manager solution, Teams on Windows Server 2019 needs FSLogix 2210 HotFix 4 or higher (Microsoft recommends the latest available version).</p>
+<p><strong>Verify media optimizations loaded</strong></p>
+<p>After installing the WebSocket Service and the Teams desktop app, follow these steps to verify that Teams media optimizations loaded:</p>
+<ol>
+<li>Quit and restart the Teams application.</li>
+<li>Select your user profile image, then select About.</li>
+<li>Select Version.</li>
+</ol>
+<p>If the media optimization is loaded correctly, you will see this banner:</p>
+<p><img alt="image094" src="../Images/HOWTO-UCC-Guide12-094.png" /></p>
+<p><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/">Also see HOWTO Microsoft Teams</a></p>
+<h3 id="zoom_2">Zoom</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Media Plugins for VDI</a> app.</p>
+<p><img alt="image095" src="../Images/HOWTO-UCC-Guide12-095.png" /></p>
+<p>You can enable Smart Virtual Backgrounds</p>
+<p><img alt="image096" src="../Images/HOWTO-UCC-Guide12-096.png" /></p>
+<ul>
+<li>AVD Configuration</li>
+</ul>
+<p><img alt="image097" src="../Images/HOWTO-UCC-Guide-097.png" /></p>
+<p>If you want to use a perfect Zoom experience on Azure Virtual Desktop, you need the corresponding Zoom VDI build which fits to the plugin you have chosen in the UMS:</p>
+<p>To be compatible, the plugin version must be equal to or less than the Zoom VDI application version. Installing a plugin with a version greater than the Zoom VDI application is not supported. Zoom always recommends updating the Zoom Plugin after updating the Zoom VDI application as many new features require an updated plugin. <a href="https://support.zoom.us/hc/en-us/articles/360041602711-VDI-backwards-compatibility">VDI backwards compatibility</a></p>
+<p>All VDI Downloads are located here: <a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0063810">VDI Releases and downloads</a></p>
+<p><strong>NOTE:</strong> All VDI downloads are at the top of this guide</p>
+<p>For AVD installation you should use these parameters:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>msiexec<span class="w"> </span>/i<span class="w"> </span>C:<span class="se">\y</span>ourfolder<span class="se">\Z</span>oomInstallerVDI.msi<span class="w"> </span><span class="nv">ZNoDesktopShortCut</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="nv">ZConfig</span><span class="o">=</span><span class="s2">&quot;nogoogle=1&quot;</span><span class="w"> </span><span class="nv">ZRecommend</span><span class="o">=</span><span class="s2">&quot;AudioAutoAdjust=1&quot;</span><span class="w"> </span>/quiet<span class="w"> </span>/qn<span class="w"> </span>/norestart<span class="w"> </span><span class="nv">ALLUsers</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+<p><a href="https://support.zoom.us/hc/en-us/articles/201362163-Mass-Installation-and-Configuration-for-Windows">Mass-deploying with preconfigured settings for Windows</a></p>
+<p>After installation you should be able to start the Zoom VDI app:</p>
+<p><img alt="image098" src="../Images/HOWTO-UCC-Guide-098.png" /></p>
+<p><strong>Results</strong></p>
+<p>Looking at the processes running on the AVD Desktop, we can see that Zoom is using pretty much zero resources:</p>
+<p><img alt="image099" src="../Images/HOWTO-UCC-Guide-099.png" /></p>
+<hr />
+<hr />
+<h2 id="microsoft-windows-365-on-igel-os-12">Microsoft Windows 365 on IGEL OS 12</h2>
+<h3 id="cisco-webex_2">Cisco Webex</h3>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Install the Cisco Webex HVD client on the Cloud PC</p>
+<p>Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the <a href="https://www.webex.com/downloads/teams-vdi.html">Webex VDI Download page</a></p>
+<p>In Release date column of the table, find the most recent date (for example, 12/14/2021).</p>
+<p>Select the appropriate link for your Windows system (32-bit or 64-bit) to download the MSI.</p>
+<p>You must set some required switches to install the VDI components. So, to run the MSI, open an elevated command prompt and run the following install command. Replace the path and MSI filename with the correct path and filename that you downloaded. msiexec /i %path%\Webex.msi ALLUSERS=1 ENABLEVDI=1 AUTOUPGRADEENABLED=0</p>
+<p>To complete the MSI installer, follow the installation instructions.</p>
+<p>Alternatively, the admin can deploy the Cisco Webex VDI client. For more information about deploying apps, see the <a href="https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-app-management">Win32 App Management guide</a></p>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI</a> app.</p>
+<p><img alt="image0100" src="../Images/HOWTO-UCC-Guide12-100.png" /></p>
+<p>To confirm that the Cisco Webex client is using the optimizations</p>
+<p>Sign in to the Cloud PC from the Windows client.</p>
+<p>Open the Cisco Webex client and sign in using your Cisco Webex credentials.</p>
+<p>Select your user profile icon &gt; Help &gt; Health Checker.</p>
+<p>The VDI section of the Health Checker shows the status of the optimizations.</p>
+<p>For more information see <a href="https://learn.microsoft.com/en-us/windows-365/enterprise/cisco-webex-support">Optimize Cisco Webex on a Windows 365 Cloud PC</a></p>
+<h3 id="zoom_3">Zoom</h3>
+<p>Install the Zoom VDI client on the Cloud PC</p>
+<p>Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the <a href="https://support.zoom.us/hc/en-us/articles/360041602711">Zoom VDI Downloads and Backward Compatibility</a> app.</p>
+<p>Locate and download the most recent VDI client version.</p>
+<p>Run the MSI and follow the installation instructions.</p>
+<p>Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the <a href="https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-app-management">Win32 App Management guide</a></p>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Plugins for VDI</a> app.</p>
+<p><img alt="image0101" src="../Images/HOWTO-UCC-Guide12-101.png" /></p>
+<p>For more information see <a href="https://learn.microsoft.com/en-us/windows-365/enterprise/zoom-support">Optimize Zoom on a Windows 365 Cloud PC</a></p>
+<h3 id="teams">Teams</h3>
+<p>NOTE:: Until Microsoft releases SlimCore for Linux, WebRTC optimization must not be disabled using the VDI Partner's policy engine</p>
+<p>Before you can use Microsoft Teams on Windows 365, you'll need to do these things:</p>
+<p>1) Prepare your network for Microsoft Teams.</p>
+<p>2) Connect to a Windows 10 or 11 image in the gallery. They are preconfigured with the Teams optimization components.</p>
+<p><strong>Prepare your image for Teams</strong></p>
+<p>To enable media optimization for Teams, verify the following registry key on the Cloud PC:</p>
+<p>1) From the start menu, run RegEdit as an administrator. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams. Create the Teams key if it doesn't already exist.</p>
+<p>2) Create the following value for the Teams key:</p>
+<p><img alt="image0102" src="../Images/HOWTO-UCC-Guide12-102.png" /></p>
+<p><strong>Install the Teams WebSocket Service</strong></p>
+<p>Install the latest version of the <a href="https://aka.ms/msrdcwebrtcsvc/msi">Remote Desktop WebRTC Redirector Service</a> on your gallery image (if needed). If you encounter an installation error, install the latest <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ Redistributable</a> and try again.</p>
+<p><strong>Latest WebSocket Service versions</strong></p>
+<p>The following table lists the latest versions of the WebSocket Service:</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.54.2408.19001</td>
+<td>08/21/2024</td>
+</tr>
+<tr>
+<td>1.54.2407.26001</td>
+<td>07/29/2024</td>
+</tr>
+<tr>
+<td>1.50.2402.29001</td>
+<td>03/25/2024</td>
+</tr>
+<tr>
+<td>1.45.2310.13001</td>
+<td>11/15/2023</td>
+</tr>
+<tr>
+<td>1.43.2306.30001</td>
+<td>09/07/2023</td>
+</tr>
+<tr>
+<td>1.33.2302.07001</td>
+<td>03/01/2023</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Microsoft-Teams-Optimization/">Also see HOWTO Microsoft Teams</a></p>
+<h2 id="microsoft-remote-desktop-rdsh-rdp-on-igel-os-12">Microsoft Remote Desktop (RDSH, RDP) on IGEL OS 12</h2>
+<ul>
+<li>IGEL OS Configuration (UMS based)</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/rdp/">IGEL Remote Desktop</a> app.</p>
+<p><img alt="image103" src="../Images/HOWTO-UCC-Guide12-103.png" /></p>
+<ul>
+<li>6.1.2.    Windows 10, Windows Server 2016, 2019 and 2022 Base Configuration</li>
+</ul>
+<p><strong>Applied Audio settings via GPO:</strong></p>
+<p><code>Computer Config &gt; Admin Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host&gt; Device and Resource Redirection</code></p>
+<p>Changed <code>Allow audio and video playback redirectioni</code> from <code>Not Configured`` to</code>Enabled`</p>
+<p>Changed <code>Allow audio recording redirection</code> from <code>Not Configured</code> to <code>Enabled</code></p>
+<p><strong>Computer Config &gt; Admin Templates &gt; Windows Components &gt; App Privacy</strong></p>
+<p>Changed <code>Let Windows apps access the microphone</code> from <code>Not Configured</code> to `Enabled``</p>
+<p><code>Options &gt; Default for all apps</code> changed from <code>User is in control1cl</code> to <code>Force Allow</code></p>
+<p>Changed <code>Let Windows apps access the camera</code> from <code>Not Configured</code> to <code>Enabled</code></p>
+<p><code>Options &gt; Default for all apps</code> changed from <code>User is in control</code> to <code>Force Allow</code></p>
+<p><strong>Computer Config &gt; Admin Templates &gt; Windows Components &gt; Camera</strong></p>
+<p>Changed <code>Let Allow use of Camera</code> from <code>Not Configured</code> to <code>Enabled</code></p>
+<p><img alt="image106" src="../Images/HOWTO-UCC-Guide12-106.png" />
+<img alt="image107" src="../Images/HOWTO-UCC-Guide12-107.png" /></p>
+<ul>
+<li>Cisco WebEx Meetings</li>
+</ul>
+<p>Unfortunately, currently no Client Plugin for IGEL OS is available</p>
+<ul>
+<li>Cisco WebEx Teams</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/cisco_webex/">Cisco Webex VDI</a> app.</p>
+<p><img alt="image108" src="../Images/HOWTO-UCC-Guide12-108.png" /></p>
+<ul>
+<li>Microsoft Teams</li>
+</ul>
+<p>Unfortunately, currently no Client Plugin for IGEL OS is available</p>
+<ul>
+<li>Zoom</li>
+</ul>
+<p>Create a Profile based on the <a href="https://app.igel.com/zoomvdi/">Zoom Plugins for VDI</a> app.</p>
+<p><img alt="image109" src="../Images/HOWTO-UCC-Guide12-109.png" /></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

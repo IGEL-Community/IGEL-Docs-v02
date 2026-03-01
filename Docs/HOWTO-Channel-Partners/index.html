@@ -1,0 +1,3431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Channel-Demos/">
+      
+      
+        <link rel="next" href="../HOWTO-Collect-Hardware-Information-for-Device/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>HOWTO Channel and MSP Partners - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-channel-and-msp-partners" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO Channel and MSP Partners
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#igel-velocity-partner-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Velocity Partner Program
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-velocity-partner-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Velocity Partner Level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-a-channel-partner-must-take-to-work-with-igel-support-for-a-customer-support-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps a channel partner must take to work with IGEL support for a customer support case
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-partner-poc-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel Partner POC steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-education-for-partners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Education for Partners
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IGEL Education for Partners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-for-registering-with-igel-academy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes for Registering with IGEL Academy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-academy-course-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Academy Course Duration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IGEL Academy Course Duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#igel-certified-sales-professional-icsp-25-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Certified Sales Professional (ICSP) (2.5 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igel-certified-professional-icp-3-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Certified Professional (ICP) (3 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igel-certified-engineer-ice-3-4-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Certified Engineer (ICE) (3-4 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igel-certified-architect-ica-2-3-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Certified Architect (ICA) (2-3 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-services-specialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Services Specialization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IGEL Services Specialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-presales-required-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Presales Required Demo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-presales-custom-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Presales Custom Demo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-managed-service-provider-msp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL Managed Service Provider (MSP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-nfr-licenses-and-trial-licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL NFR Licenses and Trial Licenses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IGEL NFR Licenses and Trial Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assigning-product-packs-to-ums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigning Product Packs to UMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating-igel-vs-someone-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluating IGEL vs Someone Else
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluating IGEL vs Someone Else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#management-of-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Management of Devices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partnerships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partnerships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future-proof
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates-and-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updates and Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-out-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test out IGEL OS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test out IGEL OS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-test-out-your-udpocket-2-32gb-or-os-12-installed-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to test out your UDPocket 2 (32GB) or OS 12 installed device:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-connect-an-os-12-device-to-channel-sandbox-ums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to connect an OS 12 device to Channel sandbox UMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-device-to-from-try-igel-try-small" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move device to / from TRY-IGEL / TRY-SMALL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statement-of-work-sow-sample-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statement of Work (SOW) - Sample Template
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Statement of Work (SOW) - Sample Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-concept-poc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof of Concept (POC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proof of Concept (POC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-solution-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Solution Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-scope-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Scope Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-client-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Client Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-assumptions-and-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: Assumptions and Exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-estimated-effort-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Estimated Effort &amp; Timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53" id="__nav_2_53_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_53_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_2" id="__nav_2_53_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_3" id="__nav_2_53_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_4" id="__nav_2_53_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_5" id="__nav_2_53_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="howto-channel-and-msp-partners">HOWTO Channel and MSP Partners</h1>
+<!---
+This is a comment section
+-->
+<h2 id="igel-velocity-partner-program"><a href="https://www.igel.com/velocity-partner-program/">IGEL Velocity Partner Program</a></h2>
+<h2 id="igel-velocity-partner-level">IGEL Velocity Partner Level</h2>
+<table>
+<thead>
+<tr>
+<th>Silver</th>
+<th>Gold</th>
+<th>Platinum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter the program to be a registered IGEL partner. Obtain fundamental sales and technical proficiencies in IGEL products and solutions to develop pipeline and first sale.</td>
+<td>Develop a dedicated IGEL practice with designated sales and technical staff, leading to new customer acquisitions, co-sell opportunities with IGEL and growing competency in providing services.</td>
+<td>Sell the IGEL portfolio consistently, nationwide or globally, with a fully dedicated IGEL practice, driving sales, acquiring new logos, increasing wallet share, and delivering services and support.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image01" src="../Images/HOWTO-Channel-Partners-01a.png" />
+<img alt="image01" src="../Images/HOWTO-Channel-Partners-01b.png" /></p>
+<hr />
+<hr />
+<h2 id="steps-a-channel-partner-must-take-to-work-with-igel-support-for-a-customer-support-case">Steps a channel partner must take to work with IGEL support for a customer support case</h2>
+<ul>
+<li>Make sure the channel partner is registered on the support portal
+igel academy account notes</li>
+<li>
+<p>Have the customer open a case and provide a description</p>
+</li>
+<li>
+<p>Post a comment to the case requesting that the channel partner be added to the watch list, including the following:</p>
+<ul>
+<li>Channel Partner Name</li>
+<li>Channel Partner Contact Name</li>
+<li>Channel Partner Contact Email</li>
+</ul>
+</li>
+<li>
+<p>IGEL Support will pick that up, and add the requested person to the watch list, and they will receive updates, and be able to respond to the case via email</p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="channel-partner-poc-steps">Channel Partner POC steps</h2>
+<p><strong>NOTE:</strong> Have the client complete the following steps ten (10) business days prior to POC</p>
+<ul>
+<li>
+<p>Confirm that the client SME (lead) has completed IGEL Certified Professional class (free)</p>
+</li>
+<li>
+<p>Register with the <a href="https://activation.igel.com/">IGEL License Portal</a></p>
+</li>
+<li>
+<p>Wait until they get an email from IGEL that says that their account has been registered and approved</p>
+</li>
+<li>
+<p>Next register in the <a href="https://support.igel.com">IGEL Customer Portal</a></p>
+</li>
+<li>
+<p>Wait until they get an email from IGEL stating that their account is ready</p>
+</li>
+<li>
+<p>Login to <a href="https://support.igel.com/">IGEL Support</a></p>
+</li>
+<li>
+<p>IGEL Trial License Activation Process – aka Delivery Tokens. Once they can log in to the ILP they can register and accept the EULA of the Delivery Token that IGEL provided</p>
+</li>
+<li>
+<p>Client request partner assistance with installing the UMS, registering it with IGEL, and next steps for the POC</p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="igel-education-for-partners">IGEL Education for Partners</h2>
+<ul>
+<li>
+<p><a href="https://www.igel.com/learn-and-connect/igel-education/">IGEL Education</a></p>
+</li>
+<li>
+<p><a href="https://learn.igel.com">Register Now at IGEL Academy</a></p>
+</li>
+<li>
+<p>Contact IGEL channel team for options to access <a href="https://www.igel.com/wp-content/uploads/2023/11/IGEL_AS_IA_Premium.pdf">IGEL Academy Premium</a>.</p>
+</li>
+</ul>
+<h3 id="notes-for-registering-with-igel-academy">Notes for Registering with IGEL Academy</h3>
+<ul>
+<li>
+<p>With the new IGEL Academy, IGEL switched to using SSO (Single Sign On) and now share the same login as the IGEL Customer Portal. What this means for existing users (this is all explained on <a href="https://learn.igel.com">IGEL Academy</a>):</p>
+<ul>
+<li>
+<p>If you have an account on the old IGEL Academy, any ACTIVE certifications and courses were migrated if they were completed on the old platform. IGEL did not migrate partially complete courses or exams.</p>
+</li>
+<li>
+<p>Since the entire authentication process is new, you will need to re-register with the new process to regain access to your account (as long as you use the same email address. If not, IGEL will need to merge the old account with the new one after you log in).</p>
+</li>
+<li>
+<p>There is one exception to re-registration. If you currently have a Customer Portal account (for example, you open support tickets or have used the cloud services for setting up your UMS, etc), you technically already have an account for IGEL Academy, you can just go to <a href="https://learn.igel.com">IGEL Academy</a> and log in with that same account.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>There is one additional way that users can get IGEL Academy accounts. If you currently have a Custom Portal account and your account is designated as a <code>SuperAdmin</code> for your company in the Customer Portal, then you can <code>invite</code> other people from your company to have IGEL Academy accounts without them going through the registration process.</p>
+</li>
+<li>
+<p>You should go to <a href="https://learn.igel.com">IGEL Academy</a> and then click the <code>Register Here</code> button and then fill out the requested info. You should get a verification email fairly quickly that you will need to open and click a link. Once that happens, the Customer Care team processes the registration (usually within 1 business day). If you do not get the verification email, you should check spam and if it doesn’t appear there, you can email <a href="mailto:registration@igel.com">IGEL Registration - registration@igel.com</a> for help.</p>
+</li>
+</ul>
+<hr />
+<h2 id="igel-academy-course-duration">IGEL Academy Course Duration</h2>
+<h3 id="igel-certified-sales-professional-icsp-25-hours">IGEL Certified Sales Professional (ICSP) (2.5 hours)</h3>
+<ul>
+<li>50 min Foundations course</li>
+<li>50 min ICSP course</li>
+<li>45 min for exam</li>
+</ul>
+<p><strong>Note:</strong> A new version of ICSP will be released in the fall of 2025. If your current certification has expired, open the ICSP Exam and select the option to <code>renew certification</code>. This will allow you to re-take the exam and renew the certification for another year.</p>
+<h3 id="igel-certified-professional-icp-3-hours">IGEL Certified Professional (ICP) (3 hours)</h3>
+<ul>
+<li>2 hours for course</li>
+<li>60 min for the exam</li>
+</ul>
+<h3 id="igel-certified-engineer-ice-3-4-hours">IGEL Certified Engineer (ICE) (3-4 hours)</h3>
+<p><strong>NOTE:</strong> Requires IGEL Academy Premium.</p>
+<ul>
+<li>2+ hours for course and labs</li>
+<li>90 min for the exam</li>
+</ul>
+<h3 id="igel-certified-architect-ica-2-3-hours">IGEL Certified Architect (ICA) (2-3 hours)</h3>
+<p><strong>NOTE:</strong> Requires IGEL Academy Premium.</p>
+<ul>
+<li>2+ hours for course and labs</li>
+<li>40 min for the exam</li>
+</ul>
+<hr />
+<h2 id="igel-services-specialization">IGEL Services Specialization</h2>
+<p>For Gold and Platinum Channel Partners who desire to deliver their own IGEL Services and Support.</p>
+<p><strong>NOTE:</strong> Duration will depend on the body of work to review and includes POC's (proof of concept) or projects worked on.</p>
+<ul>
+<li>3-5 hours for demo session prep</li>
+<li>1.5 hours for demo to IGEL channel team</li>
+</ul>
+<h3 id="step-1-presales-required-demo">Step 1:  Presales Required Demo</h3>
+<ul>
+<li>
+<p>LIVE Demo – delivered by Partner ICP/ICE certified individual(s) </p>
+</li>
+<li>
+<p>Audience from IGEL:  </p>
+<ul>
+<li>Channel Sales Manager / Director / VP </li>
+<li>Channel SE </li>
+<li>SE Team-Lead / VP / Field SE </li>
+</ul>
+</li>
+<li>
+<p>Duration: 1 hour to 90 minutes </p>
+<ul>
+<li>Session will be recorded </li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-presales-custom-demo">Step 2: Presales Custom Demo</h3>
+<ul>
+<li>
+<p>LIVE or Recorded Demo – delivered by Partner ICP/ICE certified individual(s) </p>
+</li>
+<li>
+<p>Customer:  IGEL </p>
+</li>
+<li>
+<p>Audience from IGEL:  </p>
+<ul>
+<li>Channel Sales Manager / Director / VP </li>
+<li>Channel SE </li>
+<li>SE Team-Lead / VP / Field SE </li>
+</ul>
+</li>
+<li>
+<p>Suggested Duration:  10-15 min </p>
+<ul>
+<li>Session will be recorded</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="igel-managed-service-provider-msp">IGEL Managed Service Provider (MSP)</h2>
+<p>Build and deliver valuable and secure managed endpoint services to your Customers.</p>
+<ul>
+<li><a href="https://www.igel.com/learn-and-connect/webinars/igel-msp-technical-enablement-path/">Register for the MSP Enablement path training sessions</a></li>
+</ul>
+<p><strong>NOTE:</strong> MSP should already support endpoint services.</p>
+<hr />
+<h2 id="igel-nfr-licenses-and-trial-licenses">IGEL NFR Licenses and Trial Licenses</h2>
+<ul>
+<li>
+<p>NFR (Not for resale) licenses for internal use are available for Velocity partner level <code>Gold</code> (Qty. 15), <code>Platinum</code> (Qty. 30), <code>MSP Partners</code> (Qty. 15), and <code>MSP Platinum</code> (Qty. 30)</p>
+</li>
+<li>
+<p>Staring with UMS 12.07.100, <a href="https://www.igel.com/licensing/">UMS level</a> will default to <code>Essential</code>, if a higher level is needed, IGEL Channel Presales Engineer can provide a 90 day UMS Enterprise license</p>
+<ul>
+<li>
+<p>If the UMS is registered with IGEL, then provide the IGEL Channel Presales Engineer with company name that registered the UMS and the license will be added within the IGEL License Portal (ILP)</p>
+</li>
+<li>
+<p>If the UMS is not registered with IGEL, then provide the IGEL Channel Presales Engineer with exported UMS ID.  <a href="https://kb.igel.com/en/universal-management-suite/current/how-to-export-the-ums-id">IGEL KB: How to Export the UMS ID</a>. The presales engineer will create and provide a 90 day license</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>IGEL Agent for Imprivata</code>: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL Channel Presales Engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)</p>
+</li>
+<li>
+<p><code>IGEL Advanced Device Redirection (ADR)</code>: 10 licenses for (30/60/90 days) can be added to IGEL registered UMS. Provide IGEL Channel Presales Engineer with company name that registered the UMS and duration of license. These will be assigned to the UMS and available for Automatic License Deployment (ALD)</p>
+</li>
+<li>
+<p>For testing of IGEL OS without UMS, a 90-day license can be obtained during the setup of IGEL OS. Steps to test out your UDPocket or OS 12 installed device:</p>
+<ul>
+<li>Boot device</li>
+<li>Skip -- Let's connect to the company network</li>
+<li>Skip -- Use the one-time password to onboard this device?</li>
+<li>Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day day evaluation license)</li>
+<li>Reboot</li>
+<li>Open the App Portal and install applications</li>
+</ul>
+</li>
+</ul>
+<h3 id="assigning-product-packs-to-ums">Assigning Product Packs to UMS</h3>
+<ul>
+<li>Please go to your UMS ID in your ILP account and assign the Product Pack(s) to it via the + symbol:</li>
+</ul>
+<p><img alt="image03" src="../Images/HOWTO-Channel-Partners-03.png" /></p>
+<ul>
+<li>Perform a refresh in your UMS afterwards. The Product Pack(s) should show up in the UMS</li>
+</ul>
+<hr />
+<h2 id="evaluating-igel-vs-someone-else">Evaluating IGEL vs Someone Else</h2>
+<h3 id="management-of-devices">Management of Devices</h3>
+<ul>
+<li>Support ratio of one FTE (full time equivalent) for 20,000+ devices (1:20,000+)</li>
+<li>Dedicated management or management as a service</li>
+</ul>
+<h3 id="applications">Applications</h3>
+<ul>
+<li>Module design, everything including the operating system is an application</li>
+<li>Distributing signed native applications (Enterprise Browsers, Imprivata, Progressive Web Apps, Linux apps) from vendor's cloud / content delivery network (CDN) or from your data centers / local sites</li>
+<li>Ability to create your own signed applications (IGEL App Creator Portal)</li>
+</ul>
+<h3 id="security-and-compliance">Security and Compliance</h3>
+<ul>
+<li>Chain of trust (secured boot sequence)</li>
+<li>Secure boot support</li>
+<li>FIPS 140-.2, German BSI certification, and ISO 270001</li>
+<li>Secure Digital Signage</li>
+</ul>
+<h3 id="services">Services</h3>
+<ul>
+<li>24/7 support</li>
+<li>TRM (technical relationship managers)</li>
+<li>Advanced Services / Consulting</li>
+<li>Community support</li>
+<li>Platform as a Service for backend management servers</li>
+</ul>
+<h3 id="partnerships">Partnerships</h3>
+<ul>
+<li>Defined program for working with partners</li>
+<li>Strong relationships with partners (Microsoft, Omnissa, Island.io, Zscaler, Palo Alto Networks, Cisco, ControlUp, eGI, Nexthink, Citrix, etc.)</li>
+<li>Operating system preinstalled by the vendor (HP, Lenovo, LG)</li>
+</ul>
+<h3 id="future-proof">Future-proof</h3>
+<ul>
+<li>Long term vision beyond traditional products (IoT, Hypervisor, analytics, etc.)</li>
+</ul>
+<h3 id="updates-and-architecture">Updates and Architecture</h3>
+<ul>
+<li>Simple to setup / maintain environment</li>
+<li>Module application deployment / updates (mix and match versions of apps)</li>
+</ul>
+<h3 id="tco">TCO</h3>
+<ul>
+<li>Provides TCO calculator that can be used with actual client data for C-level discussions</li>
+</ul>
+<hr />
+<hr />
+<h2 id="test-out-igel-os">Test out IGEL OS</h2>
+<h3 id="steps-to-test-out-your-udpocket-2-32gb-or-os-12-installed-device">Steps to test out your UDPocket 2 (32GB) or OS 12 installed device:</h3>
+<ul>
+<li>Follow steps to install IGEL OS</li>
+<li>Boot device</li>
+<li>Skip -- Let's connect to the company network</li>
+<li>Skip -- Use the one-time password to onboard this device?</li>
+<li>Obtain IGEL OS 12 Evaluation License -- Are you implementing as IGEL solution for your company? (This is 90 a day evaluation license)</li>
+<li>Reboot</li>
+<li>Open the App Portal and install applications</li>
+</ul>
+<h3 id="steps-to-connect-an-os-12-device-to-channel-sandbox-ums">Steps to connect an OS 12 device to Channel sandbox UMS</h3>
+<ul>
+<li>Open a terminal window as root</li>
+<li>Full Demo (32GB+ disk) enter:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rmagent-register<span class="w"> </span>-s<span class="w"> </span><span class="m">73</span>.242.149.67<span class="w"> </span>-p<span class="w"> </span><span class="m">8443</span><span class="w"> </span>-a<span class="w"> </span>TRY-IGEL<span class="w"> </span>-u<span class="w"> </span>TRY-IGEL
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Small Demo (less than 32GB disk) enter:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rmagent-register<span class="w"> </span>-s<span class="w"> </span><span class="m">73</span>.242.149.67<span class="w"> </span>-p<span class="w"> </span><span class="m">8443</span><span class="w"> </span>-a<span class="w"> </span>TRY-IGEL<span class="w"> </span>-u<span class="w"> </span>TRY-SMALL
+</code></pre></div></td></tr></table></div>
+<h3 id="move-device-to-from-try-igel-try-small">Move device to / from TRY-IGEL / TRY-SMALL</h3>
+<p>The structure tag: <code>system.remotemanager.ums_structure_tag</code></p>
+<ul>
+<li>Change <code>TRY-IGEL</code> to <code>TRY-SMALL</code> and reboot</li>
+<li>Change <code>TRY-SMALL</code> to <code>TRY-IGEL</code> and reboot</li>
+</ul>
+<p><img alt="image001" src="../Images/HOWTO-Channel-Partners-001.png" /></p>
+<hr />
+<hr />
+<h2 id="statement-of-work-sow-sample-template">Statement of Work (SOW) - Sample Template</h2>
+<h3 id="proof-of-concept-poc">Proof of Concept (POC)</h3>
+<h4 id="section-1-solution-overview">Section 1: Solution Overview</h4>
+<p>Objective:</p>
+<p>The objective of this Proof of Concept (POC) is to validate the deployment, configuration, and functionality of an IGEL environment within an internal test setting. The POC will demonstrate centralized endpoint management using IGEL Universal Management Suite (UMS), configuration of IGEL OS endpoints, profile assignment, and connectivity to a single third-party application or virtual environment. This POC is strictly for internal testing purposes and will not include any external network connectivity.</p>
+<p><strong>NOTE:</strong> At least one technical resource from the company <strong>must</strong> have successfully completed the IGEL Certified Professional (ICP) course through IGEL Academy prior to the start of the POC.</p>
+<p>Approach:</p>
+<ul>
+<li>Provision one IGEL UMS server virtual machine (Windows or Linux) with internal database</li>
+<li>Deploy 2–3 IGEL OS endpoints (IGEL UD Pocket or virtual machines preferred) and register to UMS</li>
+<li>Create and configure 2–3 IGEL profiles and assign to endpoints</li>
+<li>Configure connectivity to one internal third-party application or virtual environment</li>
+<li>Perform validation testing and document findings</li>
+</ul>
+<p>Expected Outcome:</p>
+<ul>
+<li>Operational IGEL UMS with internal database</li>
+<li>2–3 centrally managed IGEL OS endpoints</li>
+<li>Validated profile configuration and enforcement</li>
+<li>Verified connectivity to one internal application or virtual environment</li>
+<li>Documented validation results for internal review</li>
+</ul>
+<h4 id="section-2-scope-overview">Section 2: Scope Overview</h4>
+<table>
+<thead>
+<tr>
+<th>Workstream</th>
+<th>Object / Scope</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UMS Deployment</td>
+<td>Install and configure one IGEL UMS VM (Windows or Linux) with internal database</td>
+<td>Establish centralized endpoint management</td>
+</tr>
+<tr>
+<td>Endpoint Provisioning</td>
+<td>Deploy and register 2-3 IGEL OS endpoints (VMs preferred)</td>
+<td>Validate endpoint lifecycle management</td>
+</tr>
+<tr>
+<td>Profile Configuration</td>
+<td>Create and assign 2-3 IGEL profiles aligned with internal testing use cases</td>
+<td>Demonstrate policy control and configuration management</td>
+</tr>
+<tr>
+<td>Application Integration</td>
+<td>Configure connectivity to one internal third-part application or virtual environment</td>
+<td>Validate real-world use case functionality</td>
+</tr>
+<tr>
+<td>Validation &amp; Testing</td>
+<td>Perform functional testing and configuration validation</td>
+<td>Confirm POC success criterial and readiness for next steps</td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-3-client-responsibilities">Section 3: Client Responsibilities</h4>
+<ul>
+<li>Provide virtualization infrastructure (compute, storage, networking)</li>
+<li>Provide non IGEL OS licensing if applicable</li>
+<li>Ensure internal network connectivity between UMS and endpoints</li>
+<li>Provide administrative access and credentials as needed</li>
+<li>Provide access requirements for the third-party application</li>
+<li>Participate in validation and testing sessions</li>
+<li>Designate a primary technical contact</li>
+</ul>
+<h4 id="section-4-assumptions-and-exclusions">Section 4: Assumptions and Exclusions</h4>
+<p>Assumptions</p>
+<ul>
+<li>POC conducted in a controlled internal test environment</li>
+<li>Infrastructure resources available prior to start</li>
+<li>No external connectivity required</li>
+<li>Internal UMS database sufficient for POC scale</li>
+<li>Third-party application operational internally</li>
+<li>No production SLAs apply</li>
+<li>At least one technical resource must have successfully completed the IGEL Certified Professional (ICP) course through IGEL Academy prior to the start of the POC</li>
+</ul>
+<p>Exclusions</p>
+<ul>
+<li>Production deployment</li>
+<li>High availability configuration</li>
+<li>Enterprise database integration</li>
+<li>Security compliance validation</li>
+<li>Advanced identity provider integrations</li>
+<li>Long-term operational support beyond POC</li>
+</ul>
+<h4 id="section-5-estimated-effort-timeline">Section 5: Estimated Effort &amp; Timeline</h4>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Estimated Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning &amp; Design</td>
+<td>4-6 hours</td>
+</tr>
+<tr>
+<td>UMS Deployment &amp; Configuration</td>
+<td>4-6 hours</td>
+</tr>
+<tr>
+<td>Endpoint Deployment &amp; Registration</td>
+<td>3-5 hours</td>
+</tr>
+<tr>
+<td>Profile Creation &amp; Assignment</td>
+<td>3-4 hours</td>
+</tr>
+<tr>
+<td>Application Integration</td>
+<td>4-6 hours</td>
+</tr>
+<tr>
+<td>Validation &amp; Documentation</td>
+<td>3-5 hours</td>
+</tr>
+<tr>
+<td><strong>Total Estimated Effort</strong></td>
+<td><strong>21-32 hours (3-5 business days)</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

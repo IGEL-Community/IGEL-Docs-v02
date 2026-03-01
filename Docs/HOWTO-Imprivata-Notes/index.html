@@ -1,0 +1,3601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-IGEL-Static-Template-Keys/">
+      
+      
+        <link rel="next" href="../HOWTO-Light_Zero_Touch_Deployments/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>HOWTO Imprivata Notes - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-imprivata-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO Imprivata Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iafi-profile-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IAFI Profile Templates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-igel-agent-for-imprivata-iafi-general-feature-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: IGEL Agent for Imprivata (IAFI) - General Feature Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-igel-has-been-an-imprivata-technology-partner-since-2011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: IGEL has been an Imprivata technology partner since 2011
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-configuration-of-the-igel-agent-for-imprivata-on-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: Configuration of the IGEL Agent for Imprivata on IGEL OS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-imprivata-on-os-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: Imprivata on OS 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-imprivata-articles-on-os-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: Imprivata Articles on OS 11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-igel-agent-for-imprivata-iafi-configuration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: IGEL Agent for Imprivata (IAFI) Configuration Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel-kb-igel-agent-for-imprivata-iafi-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGEL KB: IGEL Agent for Imprivata (IAFI) Articles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imprivata-versions-for-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imprivata Versions for IGEL OS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect-imprivata-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collect Imprivata Log Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collect Imprivata Log Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-are-the-log-files-for-imprivata-pireid-embedded-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where are the log files for Imprivata PireID Embedded agent?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-are-the-log-files-for-igel-agent-for-imprivata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where are the log files for IGEL Agent for Imprivata?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-collect-the-log-files-as-root-for-imprivata-proveid-embedded-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to collect the log files (as root) for Imprivata ProveID Embedded agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-december-2024-igel-agent-for-imprivata-iafi-on-os-12-no-vdi-available-for-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13 December 2024 - IGEL Agent for Imprivata (IAFI) on OS 12 - No VDI available for user
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-december-2024-registry-settings-for-windows-virtual-machine-for-imprivata-on-igel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 December 2024 - Registry settings for Windows virtual machine for Imprivata on IGEL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-march-2024-self-healing-for-igel-1109-imprivata-pie-712" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11 March 2024 - Self healing for IGEL 11.09 &amp; Imprivata PIE 7.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-july-2024-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 July 2024 - Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-march-2024-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 March 2024 - Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-february-2024-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 February 2024 - Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-december-2023-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20 December 2023 - Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20 December 2023 - Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tls-13-with-igel-os-1109xxx-and-pie-712" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-november-2023-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17 November 2023 - Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17 November 2023 - Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-with-tls-v13-windows-server-2019-and-windows-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue with TLS v1.3 (Windows Server 2019 and Windows 10)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-november-2023-bad-magic-number-in-mainloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14 November 2023 - Bad Magic number in MainLoader
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14 November 2023 - Bad Magic number in MainLoader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-pie-712-on-igel-os-with-firmware-version-1109100-getting-error-bad-magic-number-in-mainloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing PIE 7.12 on IGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiles-to-automate-igel-upgrade-from-1108xxx-or-lower-to-1109xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-august-2023-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28 August 2023 - Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="28 August 2023 - Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prove-id-embedded-setup-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prove ID Embedded Setup notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-december-2022-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28 December 2022 - Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-september-2022-using-default-directory-rules-with-appliance-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 September 2022 - Using default directory rules with appliance mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-august-2022-unable-to-access-os-feature-menus-after-upgrading-the-linux-thin-clients-to-pie-77-and-above" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22 August 2022 - Unable to access OS feature menus after upgrading the Linux thin clients to PIE 7.7 and above
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-imprivata-readtimeout-and-writetimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Imprivata ReadTimeout and WriteTimeout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Imprivata ReadTimeout and WriteTimeout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-change-readtimeout-and-writetimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to change ReadTimeout and WriteTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowing-an-application-window-atop-the-proveid-embedded-lock-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Allowing an Application Window Atop the ProveID Embedded Lock Screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Allowing an Application Window Atop the ProveID Embedded Lock Screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-metadata-field-values-for-an-application-window-from-a-log-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Metadata Field Values for an Application Window from a Log File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-metadata-field-values-for-an-application-window-using-the-xprop-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Metadata Field Values for an Application Window using the xprop Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-metadata-field-values-to-the-admin-console-and-rebooting-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Metadata Field Values to the Admin Console and Rebooting Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-setup-of-imprivata-with-a-screensaver-that-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample setup of Imprivata with a screensaver that locks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-metadata-field-values-for-conky-window-using-the-xprop-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Metadata Field Values for Conky Window using the xprop Utility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips / Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample Scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset-imprivata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset Imprivata
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53" id="__nav_2_53_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_53_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_2" id="__nav_2_53_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_3" id="__nav_2_53_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_4" id="__nav_2_53_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_5" id="__nav_2_53_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="howto-imprivata-notes">HOWTO Imprivata Notes</h1>
+<h2 id="iafi-profile-templates"><a href="https://kb.igel.com/en/igel-apps/current/iafi-profile-templates">IAFI Profile Templates</a></h2>
+<ul>
+<li>These profiles are available as templates for assisting with configuration of the different supported workflows.</li>
+</ul>
+<h2 id="igel-kb-igel-agent-for-imprivata-iafi-general-feature-overview"><a href="https://kb.igel.com/en/igel-apps/current/igel-agent-for-imprivata-iafi-feature-matrix-compa">IGEL KB: IGEL Agent for Imprivata (IAFI) - General Feature Overview</a></h2>
+<hr />
+<hr />
+<h2 id="igel-kb-igel-has-been-an-imprivata-technology-partner-since-2011"><a href="https://kb.igel.com/en/igel-apps/current/introduction">IGEL KB: IGEL has been an Imprivata technology partner since 2011</a></h2>
+<h2 id="igel-kb-configuration-of-the-igel-agent-for-imprivata-on-igel-os"><a href="https://kb.igel.com/en/igel-apps/current/configuration-of-the-igel-agent-for-imprivata-on-i">IGEL KB: Configuration of the IGEL Agent for Imprivata on IGEL OS</a></h2>
+<h2 id="igel-kb-imprivata-on-os-11"><a href="https://kb.igel.com/en/igel-os/11.10/imprivata-1">IGEL KB: Imprivata on OS 11</a></h2>
+<h2 id="igel-kb-imprivata-articles-on-os-11"><a href="https://kb.igel.com/en/igel-os/11.10/imprivata-1">IGEL KB: Imprivata Articles on OS 11</a></h2>
+<h2 id="igel-kb-igel-agent-for-imprivata-iafi-configuration-guide"><a href="https://kb.igel.com/en/igel-apps/current/igel-agent-for-imprivata-iafi-configuration-guide">IGEL KB: IGEL Agent for Imprivata (IAFI) Configuration Guide</a></h2>
+<h2 id="igel-kb-igel-agent-for-imprivata-iafi-articles"><a href="https://kb.igel.com/en/igel-apps/current/igel-agent-for-imprivata-iafi-articles">IGEL KB: IGEL Agent for Imprivata (IAFI) Articles</a></h2>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Certificate path for IGEL Agent for Imprivata: <code>/wfs/ca-certs/</code></li>
+<li>Certificate path for PIE Imprivata: <code>/wfs/ca-certs/&lt;cert&gt;</code></li>
+<li>Imprivata appliance needs to have constant contact with devices. Please check with your Imprivata support team for supported options for off network devices.  Off network devices may either need <a href="../HOWTO-VPN/">VPN</a> or internet facing Imprivata appliance.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="imprivata-versions-for-igel-os">Imprivata Versions for IGEL OS</h2>
+<p><img alt="image04" src="../Images/HOWTO-Imprivata-Notes-04.png" /></p>
+<p><strong>NOTE:</strong> See the following Imprivata document for details: </p>
+<p><code>Product Documentation: Supported Components - Imprivata OneSign Last Updated: December 04, 2023</code></p>
+<hr />
+<h2 id="collect-imprivata-log-files">Collect Imprivata Log Files</h2>
+<hr />
+<h3 id="where-are-the-log-files-for-imprivata-pireid-embedded-agent">Where are the log files for Imprivata PireID Embedded agent?</h3>
+<ul>
+<li>The the log files for Imprivata ProveID Embedded agent are located in:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/.imprivata_data_runtime/log
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE: Need to be root to access</strong>  </p>
+<h3 id="where-are-the-log-files-for-igel-agent-for-imprivata">Where are the log files for IGEL Agent for Imprivata?</h3>
+<p>The log files for IGEL Agent for Imprivata on IGEL OS</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/var/log/user/IGELImprivataAgent.log
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><a href="https://kb.igel.com/en/igel-apps/current/how-to-enable-and-export-iafi-debug-logging-for-tr">IGEL KB: How to Enable and Export IAFI Debug Logging for Troubleshooting</a></li>
+</ul>
+<hr />
+<h3 id="steps-to-collect-the-log-files-as-root-for-imprivata-proveid-embedded-agent">Steps to collect the log files (as root) for Imprivata ProveID Embedded agent</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Need to be run as root</span>
+
+/services/imprivata/bin/fetch_support_info<span class="w"> </span>/tmp/imprivata_logs_<span class="k">$(</span>date<span class="w"> </span>+%y%m%d%H%M<span class="k">)</span>.zip
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="13-december-2024-igel-agent-for-imprivata-iafi-on-os-12-no-vdi-available-for-user">13 December 2024 - IGEL Agent for Imprivata (IAFI) on OS 12 - No VDI available for user</h2>
+<p>There is a setting in the user policy that needs to be enabled under "Virtual Desktops".</p>
+<ul>
+<li><code>Automate access to full VDI desktops</code></li>
+</ul>
+<p><img alt="image05" src="../Images/HOWTO-Imprivata-Notes-05.png" /></p>
+<hr />
+<h2 id="5-december-2024-registry-settings-for-windows-virtual-machine-for-imprivata-on-igel">5 December 2024 - Registry settings for Windows virtual machine for Imprivata on IGEL</h2>
+<p>These can be set / unset via group policy.</p>
+<p>In HKLM\Software\SSOProvider\General the keys to be added (if needed):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_TraceMessages<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"> </span>-<span class="w"> </span>specify<span class="w"> </span><span class="k">if</span><span class="w"> </span>we<span class="w"> </span>should<span class="w"> </span>log<span class="w"> </span>VC<span class="w"> </span>related<span class="w"> </span>messages<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trace
+HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_OpenTimeoutSeconds<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">15</span>,<span class="w"> </span>range:<span class="w"> </span><span class="m">1</span>-60<span class="w"> </span>seconds<span class="o">)</span><span class="w"> </span>-<span class="w"> </span>VC<span class="w"> </span>Open<span class="w"> </span>Timeout:<span class="w"> </span>total<span class="w"> </span><span class="nb">time</span><span class="w"> </span>to<span class="w"> </span>open<span class="w"> </span>VC<span class="w"> </span>and<span class="w"> </span>send<span class="w"> </span>a<span class="w"> </span>connect<span class="w"> </span>request
+HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_ConnectTimeoutSeconds<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">12</span>,<span class="w"> </span>range:<span class="w"> </span><span class="m">1</span>-58<span class="w"> </span>seconds<span class="o">)</span><span class="w"> </span>-<span class="w"> </span>VC<span class="w"> </span>Connect<span class="w"> </span>Request<span class="w"> </span>Timeout
+HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_ConnectRetriesQty<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"> </span>-<span class="w"> </span>VC<span class="w"> </span>Connect<span class="w"> </span>Request<span class="w"> </span>Retries
+HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_SendTimeoutSeconds<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">10</span>,<span class="w"> </span>range:<span class="w"> </span><span class="m">1</span>-58<span class="w"> </span>seconds<span class="o">)</span><span class="w"> </span>-<span class="w"> </span>VC<span class="w"> </span>Data<span class="w"> </span>Send<span class="w"> </span>Timeout
+HKLM<span class="se">\S</span>oftware<span class="se">\S</span>SOProvider<span class="se">\G</span>eneral<span class="w"> </span>VCC_SendRetriesQty<span class="w"> </span><span class="o">(</span>DWORD,<span class="w"> </span>default:<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"> </span>-<span class="w"> </span>VC<span class="w"> </span>Data<span class="w"> </span>Send<span class="w"> </span>Retries
+</code></pre></div></td></tr></table></div>
+<p>These keys were noted by Imprivata support to correct errors around 10 second delay in the IGEL logs and communicating back to the card reader.</p>
+<hr />
+<h2 id="11-march-2024-self-healing-for-igel-1109-imprivata-pie-712">11 March 2024 - Self healing for IGEL 11.09 &amp; Imprivata PIE 7.12</h2>
+<p><a href="https://mwood.substack.com/p/self-healing-for-igel-1109-and-imprivata">When upgrading to IGEL 11.09 you may find Imprivata PIE 7.11 will not upgrade to 7.12</a></p>
+<hr />
+<h2 id="8-july-2024-update">8 July 2024 - Update</h2>
+<p><strong>Proximity Readers Become Unavailable</strong></p>
+<p>Imprivata PIE 7.12 HF5 resolves issue with PIE 7.11 HF3 and above.</p>
+<hr />
+<h2 id="7-march-2024-update">7 March 2024 - Update</h2>
+<p><strong>IMPORTANT INFO:  IGEL Agent for Imprivata and VMWare Auth Only workflows</strong></p>
+<ul>
+<li>
+<p><strong>Do Not Upgrade to 11.09.260</strong></p>
+</li>
+<li>
+<p><strong>How this works:</strong>  In the Auth Only mode, IGEL OS receive encrypted credentials back from the Imprivata appliance (username, password, domain) and then “stuff” them into the right parameter fields for the different applications IGEL support for the Auth Only workflow (AVD, Citrix WSA, Horizon, MS RDP). </p>
+</li>
+<li>
+<p><strong>CAUSE:</strong>  In 11.09.260, there’s a parameter change with the Horizon Client that will likely break the “stuffing of credentials” mechanism IGEL use for Auth Only.  IGEL is looking into this and they will have additional guidance later.</p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> AVD, Citrix WSA and MS RDP clients are not impacted for the Auth Only workflow.</p>
+<p><strong>GUIDANCE:</strong> IAFI customers testing / using VMWare Auth Only should remain on 11.09.150 (or any branch based on that release).</p>
+<p><strong>For example:</strong></p>
+<ul>
+<li>11.09.210 is OK to use as it’s based off 11.09.150. </li>
+<li>Any <a href="https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/">branch</a> based off 11.09.210 (with the exception of 11.09.260) is ok to use.</li>
+</ul>
+<hr />
+<h2 id="3-february-2024-update">3 February 2024 - Update</h2>
+<p>Imprivata made a change in the PIE 7.12 agent by updating their Python version which in turn required IGEL to update the PIE bootstrap loader starting in 11.09.100.</p>
+<p>This bootstrap loader is not backwards compatible with 11.08.xx or lower and also requires the 7.12 PIE agent or higher.</p>
+<p>IGEL recommends to disable appliance mode <code>BEFORE</code> upgrading to 11.09.100.</p>
+<p><strong>NOTES:</strong> </p>
+<ul>
+<li>
+<p>Imprivata’s KB article may state to disable applicance mode <code>AFTER</code> the IGEL OS upgrade.</p>
+</li>
+<li>
+<p>This issue does not impact the IGEL Agent.  For IGEL agent, the current IGEL OS versions to use are:</p>
+<ul>
+<li>11.09.150 (or any higher version based on this version)</li>
+<li>OS 12 app 0.3.8 or higher</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="20-december-2023-update">20 December 2023 - Update</h2>
+<h3 id="tls-13-with-igel-os-1109xxx-and-pie-712">TLS 1.3 with IGEL OS 11.09.xxx and PIE 7.12</h3>
+<p>When updating to IGEL OS 11.09.xxx and Prove ID Embedded 7.12 or later, ensure that TLS 1.3 is enabled on F5 or ADC/NetScaler. If it is not, then may no longer be able to connect to Citrix Virtual Apps and Desktops.</p>
+<hr />
+<h2 id="17-november-2023-update">17 November 2023 - Update</h2>
+<h3 id="issue-with-tls-v13-windows-server-2019-and-windows-10">Issue with TLS v1.3 (Windows Server 2019 and Windows 10)</h3>
+<p><strong>NOTE: From Imprivata Support:</strong> For an environment Windows Server 2019 and Windows 10. The 7.12 PiE agent on 11.09.X is failing to connect to Citrix farms due to authentication failures with TLS v1.3. There seems to be some kind of PiE agent 'fallback' feature to TLS v1.2 but at least in some cases that 'fallback to TLS 1.2' doesn't work as expected. Imprivata Support linked to this article: <a href="https://learn.microsoft.com/en-us/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-#tls-protocol-version-support">TLS protocol version support</a></p>
+<hr />
+<h2 id="14-november-2023-bad-magic-number-in-mainloader">14 November 2023 - Bad Magic number in MainLoader</h2>
+<h3 id="installing-pie-712-on-igel-os-with-firmware-version-1109100-getting-error-bad-magic-number-in-mainloader">Installing PIE 7.12 on IGEL OS with firmware version 11.09.100 getting error - bad magic number in 'MainLoader'</h3>
+<ul>
+<li>
+<p>New G4 appliance and installed 23.2 HF2.</p>
+</li>
+<li>
+<p>PIE Version: 7.12</p>
+</li>
+<li>
+<p>IGEL environment: Current Firmware: 11.09.100 and 11.09.110</p>
+</li>
+<li>
+<p>Steps to Reproduce</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>After upgrading to OneSign G4 appliance running 23.2 HF2. PIE Agent 7.12.
+
+IGEL OS is running 11.09.110.
+
+We are receiving the following error message.
+
+2023-11-08 01:06:20,255 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in &#39;MainLoader&#39;: b&#39;\x03\xf3\r\n&#39;
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Check &#39;use python3 only&#39; flag
+2023-11-08 01:06:26,824 - PythonVersionCheck(_log,1613) - DEBUG: Use python3 only flag exists
+2023-11-08 01:06:27,062 - bootstrap - Level 1000: Imprivata Bootstrap version: 7.12.0.688624 built: Thu Aug 24 01:31:37 EEST 2023
+2023-11-08 01:06:27,126 - bootstrap - INFO: Trying to import main loader...
+2023-11-08 01:06:27,127 - bootstrap - ERROR: Failed to import main loader. Reason: bad magic number in &#39;MainLoader&#39;: b&#39;\x03\xf3\r\n&#39;
+</code></pre></div>
+<p>Resolution</p>
+<p>Please perform the following steps in order:</p>
+<div class="highlight"><pre><span></span><code>1. Run command to clear PIE data: ImprivataBootstrap -w
+
+2. Delete folders if they still exist:
+
+/.imprivata_data/runtime/lib/MainLoader
+/.imprivata_data/runtime/lib/proveid-embedded
+
+3. Go to IGEL Setup -&gt; Sessions -&gt; Appliance Mode -&gt; Set Disabled for appliance mode
+
+4. Reboot device
+
+5. Enable Appliance Mode
+
+6. Make sure that appliance in step 5 has PIE 7.12 version. It should not contain PIE 7.11 or older.
+
+7. Test and see if this resolves the issue.
+
+If this doesn&#39;t help, you can also try to remove all PIE IPMs from appliance and then upload PIE 7.12 IPM to be sure that it is uploaded without issues into appliance.
+</code></pre></div>
+<h3 id="profiles-to-automate-igel-upgrade-from-1108xxx-or-lower-to-1109xxx">Profiles to automate IGEL upgrade from 11.08.xxx or lower to 11.09.XXX</h3>
+<ul>
+<li>
+<p><a href="../Profiles/HOWTO-Imprivata-Notes-Disable-Appliance-Mode-profile.xml" download>LINK to Imprivata Disable Appliance Mode Profile</a></p>
+</li>
+<li>
+<p><a href="../Profiles/HOWTO-Imprivata-Notes-Update-Wait-for-Network-profile.xml" download>LINK to Imprivata Update Wait for Network Profile</a></p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> From the Imprivata Appliance side, the customer can already have 7.12 or older PIE agents installed and the Computer Policy on the 11.08.xx or 11.09.xx devices can be set to install the latest PIE version. Customers should not have to modify their computer policy settings. Disabling appliance mode needs to occur either before or after the upgrade and then reenable it on 11.09.100 or higher to install the 7.12 agent.</p>
+<hr />
+<h2 id="28-august-2023-update">28 August 2023 - Update</h2>
+<h3 id="prove-id-embedded-setup-notes">Prove ID Embedded Setup notes</h3>
+<p>Prove ID Embedded needs the local windows that popup as you manage the device to show through the PIE lock screen.</p>
+<p>Add the below  WM_Class strings in the Imprivata Admin console at "gear icon" -&gt; ProveID Embeded -&gt; "Add Application" (also enable allow access to all variants checkbox on each one)</p>
+<ul>
+<li>For the UMS Send message: <code>qt_message</code></li>
+<li>For reboot and UMS sent new configuration dialog boxes: <code>Gtkmessage</code></li>
+<li>For desktop notification in lower right (network starting): <code>Xfce4-notifyd</code></li>
+<li>For the Display switcher and the confirm dialog: <code>igel_display_switcher</code></li>
+</ul>
+<hr />
+<h2 id="28-december-2022-update">28 December 2022 - Update</h2>
+<p>Imprivata has finished the qualification of OS 11.08.200 and backed it up to OneSign 7.8 or higher. Any IGEL / Imprivata customer/prospect should skip over 11.07.xx versions and use 11.08.200 or later. 11.08.200 contains fixes for the Persistent App workflow. There are other fixes for the PIE vendor helper script that have had positive results in VMWare environments on older / lower performing hardware.</p>
+<p>Combination to test with:</p>
+<ul>
+<li>IGEL OS 11.08.200 +</li>
+<li>Imprivata Appliance version 7.9 HF3</li>
+<li>Imprivata PIE Agent 7.9.003.0039</li>
+</ul>
+<hr />
+<h2 id="8-september-2022-using-default-directory-rules-with-appliance-mode">8 September 2022 - Using default directory rules with appliance mode</h2>
+<p>An issue may occur when using default directory rules with appliance mode, where appliance mode starts, but Imprivata does not start. This also occurs with all the other appliance modes, but most frequently comes up with Imprivata. The following profile can be assigned to the default directory, and then Imprivata (or other session) will start normally. This makes the device reboot one extra time, but the reboot happens automatically. This may be resolved by IGEL in a future release of IGEL OS, but the root cause has not yet been identified.</p>
+<p><a href="../Profiles/HOWTO-Imprivata-Notes-Appliance-Mode-DDR-Workaround-profile.xml" download>LINK to Imprivata Appliance Mode DDR Workaround Profile</a></p>
+<hr />
+<h2 id="22-august-2022-unable-to-access-os-feature-menus-after-upgrading-the-linux-thin-clients-to-pie-77-and-above">22 August 2022 - Unable to access OS feature menus after upgrading the Linux thin clients to PIE 7.7 and above</h2>
+<ul>
+<li>
+<p>Issue: After upgrading the IGEL clients with ProveID Embedded 7.7 we are unable to access the menus from the IGEL OS, preventing our users to accessing the Display Switch and Sound Settings functionality.</p>
+</li>
+<li>
+<p>Cause: This is caused by a security feature that has been implemented in Imprivata 7.7 that hides any application that tries to be displayed on top of the PIE lock screen if it hasn't been previously allowed.</p>
+</li>
+<li>
+<p>Resolution: In order to allow an application to be displayed on top of the PIE lock screen, some information will need to be collected previously for the PIE agent to detect this screen correctly.</p>
+<ul>
+<li>The fastest way to collect this information is to exit the PIE agent by pressing Ctrl + Power Menu Arrow Up, this should display the option to Exit the PIE agent. Please note that the Computer Policy applied to this Linux Thin Client will need to allow the users to exit the OneSign agent.</li>
+<li>Once the PIE agent has been exited, the Linux Thin Client lock screen will be shown, we should now be able to invoke the desired OS feature (Display Switch, Sound Settings), launch the desired menu that needs to be allowed and then SSH with root access to the Linux device.</li>
+<li>In the SSH session, execute the following two commands to start gathering the information about the window menu that needs to be allowed, when this is executed the cursor will change to a cross symbol.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span>:0
+xprop
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Click on the desired window, and then collect the following information from the SSH session, note that many more lines will be shown.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>WM_CLASS<span class="o">(</span>STRING<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sun-awt-X11-XFramePeer&quot;</span>,<span class="w"> </span><span class="s2">&quot;IGEL Setup&quot;</span>
+WM_NAME<span class="o">(</span>STRING<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;IGEL Setup 11.05.133.01 (Build 6.7.5)&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Please note that the above information is only an example.</li>
+<li>With the information gathered, navigate to the Imprivata Admin Console, and then on the Gear icon, select the ProveID Embedded option. In this menu you will have the option to create an allowed application with the information gathered.</li>
+<li>For more detailed information on the above steps or different methods to gather this information, please visit the Imprivata Documentation regarding this functionality on the page below: <a href="https://support.imprivata.com/CommunitySecureHelpRedirect?helpLink=Topics/ImprivataPlatform/VDA/ProveIDEmbedded/App_Atop_PIE_Lock_Screen.htm">Allowing an Application Window Atop the ProveID Embedded Lock Screen</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="change-imprivata-readtimeout-and-writetimeout">Change Imprivata ReadTimeout and WriteTimeout</h2>
+<hr />
+<h3 id="steps-to-change-readtimeout-and-writetimeout">Steps to change ReadTimeout and WriteTimeout</h3>
+<p>Edit Imprivata.conf file to reduce the Failovertime from 8 minutes to one minute.</p>
+<p>Create a profile and add the following command to custom commands - Desktop - Before desktop starts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sed<span class="w"> </span><span class="s1">&#39;/\[agent\]/i [mainloader.SSL]\nReadTimeout=15\nWriteTimeout=15\n &#39;</span><span class="w"> </span>/usr/lib/imprivata/runtime/etc/Imprivata.conf
+</code></pre></div></td></tr></table></div>
+<p><strong>Note:</strong> A reboot is required after applying profile</p>
+<hr />
+<h2 id="allowing-an-application-window-atop-the-proveid-embedded-lock-screen">Allowing an Application Window Atop the ProveID Embedded Lock Screen</h2>
+<p>You may want to allow an application window to appear on top of the Imprivata ProveID Embedded lock screen on some endpoints.</p>
+<p>For example, you may want a VNC (Virtual Network Computing) prompt used for remote control of an endpoint, or an IGEL setup menu, to be available while an endpoint is locked. To allow this, you must specify in a lock screen access list any application windows that you want to appear atop the lock screen. This requirement ensures that undesired application windows stay off the lock screen and avoid exposing Protected Health Information (PHI) or Personally Identifiable Information (PII).</p>
+<p><strong>NOTE:</strong> If you used ProveID Embedded configuration options focus-on-overlap and unmap-popup-windows to allow or to prevent application windows or pop-ups atop the lock screen in OneSignConfirm ID 7.3 through 7.6, then starting with OneSignConfirm ID 7.7, you must instead use the procedure described below. Configuration options focus-on-overlap and unmap-popup-windows are no longer supported. If they remain in the imprivata.conf configuration file on an Imprivata ProveID Embedded endpoint, they are ignored.</p>
+<h3 id="procedure-overview">Procedure Overview</h3>
+<p>To enable an application window to appear atop the Imprivata ProveID Embedded lock screen, you first get one, two, or three Windows metadata field values for that application's display window to uniquely identify that window. You then enter one or more of those values in a page of the Imprivata Admin Console and then reboot your ProveID Embedded endpoints.</p>
+<p>There are two ways to get the metadata field values for an application window from an Imprivata ProveID Embedded endpoint: from a log file or by using the xprop utility. Read both methods described below and choose one to do.</p>
+<h4 id="getting-metadata-field-values-for-an-application-window-from-a-log-file">Getting Metadata Field Values for an Application Window from a Log File</h4>
+<p>To get the metadata field values from a log file, follow this procedure on one Imprivata ProveID Embedded endpoint:</p>
+<ol>
+<li>Enable logging of application window activity. Set ProveID Embedded configuration option <code>log-activity = True</code> in the [windows.monitor] section of the Imprivata.conf configuration file. Edit the Imprivata.conf file located in /imprivata folder:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="o">[</span>windows.monitor<span class="o">]</span>
+<span class="w">    </span>log-activity<span class="w"> </span><span class="o">=</span><span class="w"> </span>True
+</code></pre></div></td></tr></table></div></li>
+<li>Launch the application that you want to appear above the Imprivata ProveID Embedded lock screen. This launch should add entries to the Imprivata ProveID Embedded agent log for that application.</li>
+<li>Get or copy the Imprivata ProveID Embedded agent log file at location <code>/.imprivata_data_runtime/log</code></li>
+<li>Idenity the metadata field values for the target application's window in the log file.
+Window activity log items contain the string Agent.WindowsActivity. Look for string: Agent.WindowsActivity(_log,1277) - DEBUG: Create window call end.
+A complete line will look similar to this:
+2021-09-03 10:31:53,723 - Agent.WindowsActivity(_log,1277) - DEBUG: Create window call end. ID:"58720259"<strong>;WMClass:"Vncgui";WMName:"Shadowing on";WMAppInterface:"vncgui";</strong>
+The application window's WMClass, WMName, and WMAppInterface Windows metadata attributes and values are shown here in <strong>boldface</strong>. Note that an app window may not have all three attributes.</li>
+<li>Make note of the metadata field values and go to <strong>Adding Metadata Field Values to the Admin Console and Rebooting Endpoints</strong>.</li>
+</ol>
+<h3 id="getting-metadata-field-values-for-an-application-window-using-the-xprop-utility">Getting Metadata Field Values for an Application Window using the xprop Utility</h3>
+<p>To get the metadata field values for an application window by using the xprop utility, follow this procedure on one Imprivata ProveID Embedded endpoint:
+1. Run export DISPLAY=:0;
+2. Run xprop;
+A special crossed cursor will appear on the screen.
+3. Select the window of the application you want to appear above the lock screen.
+A full list of the window's attributes should be displayed, as shown in this example for an IGEL setup window:
+<div class="highlight"><pre><span></span><code>root@ITC00E0C5217062:~# export DISPLAY=:0
+root@ITC00E0C5217062:~# xprop
+
+_NET_WM_ALLOWED_ACTIONS(ATOM) = _NET_WM_ACTION_CLOSE, _NET_WM_ACTION_ABOVE, _NET_WM_ACTION_BELOW, _NET_WM_ACTION_FULLSCREEN, _NET_WM_ACTION_MOVE, _NET_WM_ACTION_RESIZE, _NET_WM_ACTION_MAXIMIZE_HORZ, _NET_WM_ACTION_MAXIMIZE_VERT, _NET_WM_ACTION_SHADE, _NET_WM_ACTION_MINIMIZE, _NET_WM_ACTION_CHANGE_DESKTOP, _NET_WM_ACTION_STICK
+WM_STATE(WM_STATE): window state: Normal
+
+icon window: 0xcce8f200
+_NET_WM_DESKTOP(CARDINAL) = 0
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x1, 0x1, 0x0, 0x0
+_MOTIF_DRAG_RECEIVER_INFO(_MOTIF_DRAG_RECEIVER_INFO) = 0x6c, 0x0, 0x5, 0x0, 0x7, 0x0, 0x20, 0x4, 0x0, 0x0, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0
+XdndAware(ATOM) = BITMAP
+_NET_WM_STATE(ATOM) = _NET_WM_STATE_FOCUSED
+WM_HINTS(WM_HINTS):
+Client accepts input or input focus: False
+Initial state is Normal State.
+_NET_FRAME_EXTENTS(CARDINAL) = 4, 4, 25, 4
+_NET_WM_ICON(CARDINAL) = Icon (32 x 32):_NET_WM_PID(CARDINAL) = 918159
+WM_CLIENT_MACHINE(STRING) = &quot;ITC00E0C5217062&quot;
+WM_PROTOCOLS(ATOM): protocols WM_DELETE_WINDOW, WM_TAKE_FOCUS
+</code></pre></div>
+<strong>WM_CLASS(STRING) = "sun-awt-X11-XFramePeer", "IGEL Setup"</strong>
+<div class="highlight"><pre><span></span><code>WM_CLIENT_LEADER(WINDOW): window id # 0x4200008
+_NET_WM_ICON_NAME(UTF8_STRING) = &quot;IGEL Setup 11.05.133.01 (Build 6.7.5)&quot;
+WM_ICON_NAME(STRING) = &quot;IGEL Setup 11.05.133.01 (Build 6.7.5)&quot;
+_NET_WM_NAME(UTF8_STRING) = &quot;IGEL Setup 11.05.133.01 (Build 6.7.5)&quot;
+</code></pre></div>
+<strong>WM_NAME(STRING) = "IGEL Setup 11.05.133.01 (Build 6.7.5)"</strong>
+<div class="highlight"><pre><span></span><code>WM_NORMAL_HINTS(WM_SIZE_HINTS):
+user specified location: 107, 141
+program specified location: 107, 141
+program specified size: 1398 by 757
+window gravity: NorthWest
+</code></pre></div>
+If, however, you get xprop error xprop: error: Can't grab the mouse, then the cursor is occupied by another window such as a popup menu. Free the cursor from that window and try again.
+4. Identify the metadata field values for the target application’s window in the displayed list. In the example above they are shown in <strong>boldface</strong>.
+The syntax of the boldfaced WM_Class line is: <code>WM_CLASS(string) = "WMAppInstance", "WMClass"</code>
+So in the example line from above, <code>WM_CLASS(STRING) = "sun-awt-X11-XFramePeer", "IGEL Setup"</code>
+the value <code>sun-awt-X11-XFramePeer</code> is a <code>WMAppInstance</code> window attribute and <code>IGEL Setup</code> is a <code>WMClass</code> window attribute. Similarly, <code>WM_NAME</code> string value <code>IGEL Setup 11.05.133.01 (Build 6.7.5)</code> is a <code>WMName</code> window attribute. Note that an app window may not have all three attributes.
+5. Make note of the metadata field values and go to the next section, <strong>Adding Metadata Field Values to the Admin Console and Rebooting Endpoints</strong>.</p>
+<h3 id="adding-metadata-field-values-to-the-admin-console-and-rebooting-endpoints">Adding Metadata Field Values to the Admin Console and Rebooting Endpoints</h3>
+<p>To add the metadata field values for the application window to the Admin Console:
+1. In the Admin Console, select the gear icon and then in the drop-down menu, select <strong>ProveID Embedded</strong>. A <strong>ProveID Embedded</strong> page opens, showing <strong>Lock screen access</strong>.
+2. Select <strong>Add application</strong>. A <strong>Lock screen access: add application</strong> page opens.
+3. Enter an application name in the <strong>Application nickname</strong> field. This field simply identifies the entry in the lock screen access list.
+4. Enter in one or more of the <strong>Name</strong>, <strong>Class</strong>, and <strong>App instance</strong> fields the metadata values you found using either Getting Metadata Field Values for an Application Window from a Log File or Getting Metadata Field Values for an Application Window using the xprop Utility.</p>
+<ul>
+<li>
+<p><strong>4a.</strong> For the <strong>App instance</strong> field, enter the <code>WMAppInterface</code> or the <code>WMAppInstance</code> attribute you found, depending on which discovery method you used. Those two slightly different log entry names identify the same attribute.</p>
+</li>
+<li>
+<p><strong>4b.</strong> Entering metadata values in two or three fields, rather than in only one field, can help ensure that only the desired application window is allowed atop the lock screen.</p>
+</li>
+<li>
+<p><strong>4c.</strong> No error checking occurs for the field values. If you enter an incorrect value, the Admin Console accepts it, but the system does not allow the desired window above the lock screen.</p>
+</li>
+<li><strong>4d.</strong> If you enable <strong>Allow access to all variants of this application</strong>, this implements a match to any application window on the endpoint whose Windows metadata fields contain the field values you specify. If you enable this option, be careful to ensure that you do not get undesired windows appearing atop the lock screen. If you don't enable this option, exact matches are required for the field values you specify.</li>
+</ul>
+<p><code>Click Save</code>.</p>
+<ol>
+<li>Reboot your ProveID Embedded endpoint to cause the new configuration value to take effect for that endpoint.</li>
+<li>
+<p>Test viewing the application window atop the Imprivata ProveID Embedded lock screen on that endpoint:</p>
+</li>
+<li>
+<p><strong>6a.</strong> If the application is a native application, trigger the Imprivata ProveID Embedded lock screen and then launch the application using a hotkey or some other method. You cannot launch native apps from the ProveID Embedded agent interface.</p>
+</li>
+<li>
+<p><strong>6b.</strong> If your application is virtual, launch the application and then trigger the Imprivata ProveID Embedded lock screen.
+The application should stay atop the lock screen.</p>
+</li>
+<li>
+<p><strong>6c.</strong> If it does not, review the metadata field values where you obtained them and in the Lock screen access list in the Admin Console. If needed, obtain fresh metadata field values. Correct any errors in the metadata values in the Admin Console. Then return to step 5. If one or more undesired application windows appear atop the lock screen, deselect checkbox <strong>Allow access to all variants of this application</strong> if it is checked. Then return to step 5.</p>
+</li>
+<li>
+<p>Reboot all other Imprivata ProveID Embedded clients for which you want the new configuration value to take effect, for example, all Imprivata ProveID Embedded clients at a site or in the enterprise.</p>
+</li>
+<li>
+<p>If you enabled logging of application window activity on one Imprivata ProveID Embedded endpoint in Getting Metadata Field Values for an Application Window from a Log File, disable that logging. Reset configuration option log-activity to false in the [windows.monitor] section of the imprivata.conf configuration file on that endpoint.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>How to get misc apps accessible in Imprivata appliance mode (appliance mode checkbox doesn’t work anymore).
+
+Look for the WMClass etc..
+
+Values to add in exceptions list on the Imprivata aplliance.
+
+Edit the Imprivata.conf file located in /imprivata folder.
+
+[windows.monitor]
+log-activity = True
+
+Tip: use tail to look for WMCLass in the log file:
+
+tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log | grep WMClass
+
+The xprop method requires the following two exceptions:
+
+Application Nickname:  IGEL Screensaver 1
+Name (WMName):  screensaver
+Class (WMClass):  ScreenSaverD
+App instance (WMAppinstance):  screensaverd
+
+Application Nickname:  IGEL Screensaver 2
+Name (WMName):  igel_screensaver
+Class (WMClass):  Igel_screensaver
+App instance (WMAppinstance):  igel_screensaver
+</code></pre></div>
+<hr />
+<h2 id="sample-setup-of-imprivata-with-a-screensaver-that-locks">Sample setup of Imprivata with a screensaver that locks</h2>
+<p>The screensaver settings are in the Imprivata Appliance Computer Policy set for IGEL ProveID devices.</p>
+<p>Steps:</p>
+<ul>
+<li>First make sure the IGEL devices have NO screensaver set (either via a Screen Saver Policy or Firmware Customization)</li>
+<li>Enable Imprivata Appliance Mode via a Policy</li>
+<li>Have Imprivata administrator edit the IGEL Computer policy to set the following in the Walk-Away Security section (see screenshots below)</li>
+</ul>
+<p><strong>Note:</strong> This example is a screensaver that hides the screen at 2 minutes, and locks at 15 minutes.</p>
+<p><img alt="image01" src="../Images/HOWTO-Imprivata-Notes-01.png" />
+<img alt="image02" src="../Images/HOWTO-Imprivata-Notes-02.png" /></p>
+<hr />
+<h2 id="getting-metadata-field-values-for-conky-window-using-the-xprop-utility">Getting Metadata Field Values for Conky Window using the xprop Utility</h2>
+<p><img alt="image03" src="../Images/HOWTO-Imprivata-Notes-03.png" /></p>
+<p>Steps:</p>
+<ul>
+<li>Open a terminal window as user and run <code>xprop</code></li>
+<li>Move the mouse cursor over the <code>Conky</code> window and <code>click mouse button</code></li>
+</ul>
+<p>Output from <code>xprop</code> on <code>Conky</code> window:</p>
+<p><div class="highlight"><pre><span></span><code>_NET_FRAME_EXTENTS(CARDINAL) = 0, 0, 0, 0
+_NET_WM_ALLOWED_ACTIONS(ATOM) = _NET_WM_ACTION_CLOSE, _NET_WM_ACTION_ABOVE, _NET_WM_ACTION_BELOW, _NET_WM_ACTION_FULLSCREEN, _NET_WM_ACTION_MOVE, _NET_WM_ACTION_RESIZE, _NET_WM_ACTION_MAXIMIZE_HORZ, _NET_WM_ACTION_MAXIMIZE_VERT, _NET_WM_ACTION_CHANGE_DESKTOP, _NET_WM_ACTION_STICK
+WM_STATE(WM_STATE):
+window state: Normal
+icon window: 0xe1b01100
+_NET_WM_DESKTOP(CARDINAL) = 0
+_NET_WM_STATE(ATOM) = _NET_WM_STATE_SKIP_TASKBAR, _NET_WM_STATE_BELOW
+_WIN_LAYER(CARDINAL) = 0
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x2, 0x0, 0x0, 0x0, 0x0
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+WM_PROTOCOLS(ATOM): protocols  
+WM_NAME(STRING) = &quot;conky (ITC6845F1391E31)&quot;
+WM_LOCALE_NAME(STRING) = &quot;en_US.UTF-8&quot;
+</code></pre></div>
+<strong>WM_CLASS(STRING) = "Conky", "Conky"</strong></p>
+<div class="highlight"><pre><span></span><code>WM_HINTS(WM_HINTS):
+Client accepts input or input focus: False
+Initial state is Normal State.
+WM_CLIENT_MACHINE(STRING) = &quot;ITC6845F1391E31&quot;
+WM_COMMAND(STRING) = { &quot;/usr/bin/conky&quot; }
+</code></pre></div>
+<hr />
+<h2 id="tips-notes">Tips / Notes</h2>
+<p>Location of the configuration file: <code>/usr/lib/imprivata/runtime/etc/Imprivata.conf</code></p>
+<p>Edit the file with nano editor: <code>nano /usr/lib/imprivata/runtime/etc/Imprivata.conf</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>windows.monitor<span class="o">]</span>
+log-activity<span class="w"> </span><span class="o">=</span><span class="w"> </span>True
+</code></pre></div></td></tr></table></div>
+<p>Monitor the log file: <code>tail -f /usr/lib/imprivata/runtime/log/OneSignAgent.log</code></p>
+<hr />
+<h2 id="faq">FAQ</h2>
+<p><strong>Q:</strong> What is the best method to lock display?</p>
+<p><strong>A:</strong> Use Imprivata’s fade to lock functionality rather than configuring the screensaver on the local IGEL OS - you can configure this from the IGEL computer policy OR VM computer policy</p>
+<p><strong>Q:</strong> How to verify the Imprivata Appliance Certificate</p>
+<p><strong>A:</strong> IGEL supports the Imprivata appliance cert(s) in either the .crt or .cer format.  Newer appliances often download as a .crt. When uploading the certificate to UMS, make sure to select the file as "SSL Certificate".  Once the certificate is deployed to the device, it will install in the /wfs/ca-certs directory. On the device the certificate can be verified by opening a terminal window and running the following command <code>cd /wfs/ca-certs; openssl verify ssoCA.crt</code>  or <code>cd /wfs/ca-certs; openssl verify ssoCA.cer</code></p>
+<p><strong>Q:</strong> How to reset device in appliance mode if the agent installation is no longer working?</p>
+<p><strong>A:</strong> Steps: <code>(1)</code> In UMS, move the device to a directory where the Imprivata appliance mode is disabled; <code>(2)</code> Then reboot - The reboot makes sure the old Imprivata data partition is gone; <code>(3)</code> Move the device back into the directory to re-enable the Imprivata Appliance mode.</p>
+<p><strong>Q:</strong> When using multiple monitors with Imprivata PIE agent (appliance mode), how to keep login screen on specific monitor?</p>
+<p><strong>A:</strong> By default the login screen will show on the default display (1 if you are using a profile). You can set the default display in DisplaySwitch or by forcing 1 to be output via a specific video card / port (Card 1, HDMI 1).</p>
+<p><strong>Q:</strong> How to exit Imprivata agent to go to IGEL configuration screen?</p>
+<p><strong>A:</strong> Steps to setup</p>
+<ul>
+<li>Login to OneSign Admin UI</li>
+<li>Go to Computer Policies tab and select computer policy assigned to IGEL (ProveID Embedded) client</li>
+<li>In the General section, scroll down to <code>Authentication</code></li>
+<li>Select <code>Yes</code> to <code>Allow Users to Exit and Disable Agent</code></li>
+</ul>
+<p>Once the above option is enabled in computer policy (sync and reboot IGEL device(s)) you can right click on turn off button right hand side of the screen:</p>
+<ul>
+<li>Hold down <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and right click on the power button</li>
+</ul>
+<hr />
+<h2 id="sample-scripts">Sample Scripts</h2>
+<h3 id="reset-imprivata">Reset Imprivata</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#view logged messages</span>
+<span class="c1">#journalctl | reset_imprivata</span>
+<span class="c1">#Eike Schwoeppe</span>
+<span class="c1">#braincon GmbH</span>
+<span class="c1">#05.09.2024</span>
+<span class="c1">#IGEL Community rocks#</span>
+
+<span class="c1">#Logging action</span>
+<span class="nv">ACTION</span><span class="o">=</span><span class="s2">&quot;reset_imprivata_</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="c1">#output to systemlog with ID and tag</span>
+<span class="nv">LOGGER</span><span class="o">=</span><span class="s2">&quot;logger -it </span><span class="si">${</span><span class="nv">ACTION</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="c1">#Starting script</span>
+<span class="nv">$LOGGER</span><span class="w"> </span><span class="s2">&quot;Starting reset imprivata Script in 5 min&quot;</span>
+sleep<span class="w"> </span><span class="m">300</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-a<span class="w"> </span>/.imprivata_data/runtime/offline/Agent/FirstDomain.txt<span class="w"> </span><span class="o">]</span>
+<span class="k">then</span>
+<span class="w">    </span><span class="nv">$LOGGER</span><span class="w"> </span><span class="s2">&quot;Imprivata successfully deployed&quot;</span>
+
+<span class="k">else</span>
+<span class="w">    </span><span class="nv">$LOGGER</span><span class="w"> </span><span class="s2">&quot;Imprivata not successfully deployed. Reset  / Update and Reboot&quot;</span>
+<span class="w">    </span>ImprivataBootstrap<span class="w"> </span>-w
+<span class="w">    </span>rm<span class="w"> </span>-r<span class="w"> </span>/.imprivata_data/runtime/lib
+<span class="w">    </span>update
+<span class="w">    </span>reboot
+<span class="k">fi</span>
+<span class="nv">$LOGGER</span><span class="w"> </span><span class="s2">&quot;End&quot;</span>
+<span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

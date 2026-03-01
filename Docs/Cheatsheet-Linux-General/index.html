@@ -1,0 +1,3807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Cheatsheet-IGELOS-Networking/">
+      
+      
+        <link rel="next" href="../HOWTO-Access-Remaining-Free-Disk-Space/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Cheatsheet Linux General - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cheatsheet-linux-general" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cheatsheet Linux General
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cd
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chmod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        comm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compgen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        compgen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        conky
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        date
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dig
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        echo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        find
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        grep
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        killall
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#less" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        less
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lshw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lshw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mkdir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mkfs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        more
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mount
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openssl
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkexec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pkexec
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pwd
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rmdir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sleep
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        su
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemctl
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tee
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        top
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        touch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tr
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        uname
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        upower
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        watch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wget
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        which
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmctrl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wmctrl
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xev-xmodmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xev xmodmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xdotool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xdotool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xinput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xinput
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        xset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zenity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zenity
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53" id="__nav_2_53_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_53_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_2" id="__nav_2_53_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_3" id="__nav_2_53_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_4" id="__nav_2_53_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_53_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_53_5" id="__nav_2_53_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_53_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_53_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cheatsheet-linux-general">Cheatsheet Linux General</h1>
+<h2 id="cat">cat</h2>
+<p>display the content of a file</p>
+<p><strong>show contents of group.ini:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>group.ini
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;services&gt;
+<span class="w">        </span>&lt;cisco_vxme_client&gt;
+<span class="w">                </span><span class="nv">enabled</span><span class="o">=</span>&lt;true&gt;
+<span class="w">        </span>&lt;/cisco_vxme_client&gt;
+<span class="w">        </span>&lt;ica_client&gt;
+<span class="w">                </span><span class="nv">enabled</span><span class="o">=</span>&lt;true&gt;
+...
+</code></pre></div></td></tr></table></div>
+<h2 id="cd">cd</h2>
+<p>change folder</p>
+<p><strong>change folder to /wfs/:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/wfs/
+</code></pre></div></td></tr></table></div>
+<h2 id="chmod">chmod</h2>
+<p>change file attributes</p>
+<p><strong>make new.sh executable:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>new.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="comm">comm</h2>
+<p>compare two sorted files line by line</p>
+<p><strong>Simple method to determine command line to run (such as IGEL setup or IGEL About):</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># what processes are running BEFORE item is run?</span>
+ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>&gt;<span class="w"> </span>/tmp/ps1.txt
+
+<span class="c1"># what processes are running AFTER item is run?</span>
+ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>&gt;<span class="w"> </span>/tmp/ps2.txt
+
+<span class="c1"># what are the new processes?</span>
+<span class="c1"># comm only showing processes in /tmp/ps2.txt</span>
+comm<span class="w"> </span>-1<span class="w"> </span>-3<span class="w"> </span>/tmp/ps1.txt<span class="w"> </span>/tmp/ps2.txt
+</code></pre></div></td></tr></table></div>
+<p><strong>Start IGEL setup:</strong> <code>/bin/bash /config/bin/start_setup</code></p>
+<p><strong>Start IGEL About:</strong> <code>applauncher -style gtk2 --aboutOnly</code></p>
+<h2 id="compgen">compgen</h2>
+<p>list all the linux commands (including bash shell aliases and functions)</p>
+<p><strong>list all igel and remotemanager related commands</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">compgen</span><span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s2">&quot;igel|_rm&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>more
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>get_rmdirlist
+get_rmsettings
+get_rmsettings_boot
+...
+igel_showsplash
+igel-shutdown-debug
+igel-shutdown-inhibitor
+--More--
+</code></pre></div></td></tr></table></div>
+<h2 id="conky">conky</h2>
+<p>system monitor</p>
+<p><a href="https://kb.igel.com/en/igel-os/current/conky-system-monitor">KB: Conky</a></p>
+<p><a href="http://www.ifxgroup.net/conky.htm#about">Conky Reference with Examples</a></p>
+<p><strong>NOTE:</strong> To remove black rectangle on OS 12, enable the registry key <code>windowmanager.wm0.variables.usecompositing</code> in the registry part of your profile, and add a custom setting <code>config name = own_window_argb_value</code> and <code>config value = 0</code> to Conky profile.</p>
+<h2 id="cp">cp</h2>
+<p>copy files and folders</p>
+<p><strong>create backup of setup.ini:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>setup.ini<span class="w"> </span>setup.ini.bck
+</code></pre></div></td></tr></table></div>
+<h2 id="date">date</h2>
+<p>date tool</p>
+<p><strong>show date:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>date
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Mi<span class="w"> </span><span class="m">19</span>.<span class="w"> </span>Mai<span class="w"> </span><span class="m">19</span>:26:59<span class="w"> </span>CEST<span class="w"> </span><span class="m">2020</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="dig">dig</h2>
+<p>DNS lookup utility</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">MACHINE</span><span class="o">=</span><span class="s2">&quot;goober.mydomainname.com&quot;</span>
+
+<span class="c1"># use the dig command to resolve an IP only on client network</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>dig<span class="w"> </span><span class="nv">$MACHINE</span><span class="w"> </span>+short<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;On the client network&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;do some on network work now&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Not on client network&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;do some off network work now&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="echo">echo</h2>
+<p>output strings</p>
+<p><strong>outputs "hello world" to console:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hello<span class="w"> </span>world
+</code></pre></div></td></tr></table></div>
+<h2 id="find">find</h2>
+<p>search for all files in the <code>/services</code> folder that have <code>snmp</code> in the name</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>/services<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*snmp*&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>/services/cups/lib/cups/backend/snmp
+/services/cups/share/cups/doc-root/help/man-cups-snmp.html
+/services/cups/share/cups/snmp.conf.default
+</code></pre></div></td></tr></table></div>
+<p>copy all files in <code>/userhome</code> that end in .log to /tmp/foo folder</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>/tmp/foo<span class="p">;</span><span class="w"> </span>find<span class="w"> </span>/userhome<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>cp<span class="w"> </span>-t<span class="w"> </span>/tmp/foo
+</code></pre></div></td></tr></table></div>
+<p>find all files with <code>vnc</code> in the name and exclude searching the <code>/media</code> folder</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s2">&quot;./media&quot;</span><span class="w"> </span>-prune<span class="w"> </span>-o<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*vnc*&quot;</span><span class="w"> </span>-print<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+</code></pre></div></td></tr></table></div>
+<h2 id="grep">grep</h2>
+<p>search for regular expression</p>
+<p><strong>search for configured UMS server name:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>more<span class="w"> </span>/wfs/setup.ini<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ip=&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">ip</span><span class="o">=</span>&lt;igelrmserver.int.acme.org&gt;
+</code></pre></div></td></tr></table></div>
+<h2 id="kill">kill</h2>
+<p>kill a running task by process id</p>
+<p><strong>kill process with PID 48:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="m">48</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="killall">killall</h2>
+<p>kill a running task by name</p>
+<p><strong>kill process with name pnlogin:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>killall<span class="w"> </span>pnlogin<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div></td></tr></table></div>
+<h2 id="less">less</h2>
+<p>less is more and allows backward movement (hit "b" key) in the file, as well as forward movement (hit "f" key), search for string (hit "/" key and enter string to search for), or to quit (hit "q" key)</p>
+<p><strong>show contents of group.ini, hit key "f" to go forward, hit key "b" to go backward, hit key "/"  and the text to search for:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>less<span class="w"> </span>/wfs/group.ini
+</code></pre></div></td></tr></table></div>
+<h2 id="ls">ls</h2>
+<p>show directory content</p>
+<p><strong>long list current directory:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>total<span class="w"> </span><span class="m">96</span>
+drwxr-xr-x<span class="w">  </span><span class="m">3</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">60</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>apparmor
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">40</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>asset.events
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">   </span><span class="m">2765</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:50<span class="w"> </span>asset.ini
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">    </span><span class="m">100</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:50<span class="w"> </span>ca-certs
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">60</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>chrony
+...
+-rw-------<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">    </span><span class="m">106</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:50<span class="w"> </span>systemkey
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">49</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:50<span class="w"> </span>systemmd5
+-rw-------<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">32</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>tckey
+-rw-------<span class="w">  </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">    </span><span class="m">214</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>updateconf.ini
+drwxr-xr-x<span class="w"> </span><span class="m">14</span><span class="w"> </span>user<span class="w"> </span>users<span class="w">   </span><span class="m">440</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:50<span class="w"> </span>user
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">40</span><span class="w"> </span>Mai<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>zoneinfo
+</code></pre></div></td></tr></table></div>
+<h2 id="lshw">lshw</h2>
+<p>list hardware</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>lshw<span class="w"> </span>-short
+</code></pre></div></td></tr></table></div>
+<h2 id="mkdir">mkdir</h2>
+<p>create a folder</p>
+<p><strong>create folder with name newdir:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>newdir
+</code></pre></div></td></tr></table></div>
+<p><strong>create folder dir3 and make parent directories dir2 and dir1 if they do not exist</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/dir1/dir2/dir3
+</code></pre></div></td></tr></table></div>
+<h2 id="mkfs">mkfs</h2>
+<p>make file system on USB device</p>
+<ul>
+<li>Enable Storage Hotplug (Devices &gt; Storage Devices &gt; Storage Hotplug)</li>
+<li>Plug USB thumb drive in IGEL OS device (auto mounted in /media folder)</li>
+<li>Determine <code>/dev</code> mount point (lsblk -p)</li>
+<li>Unmount disk (umount /dev/diskname)</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>setparam<span class="w"> </span>devices.hotplug.usb-storage.numdevices<span class="w"> </span><span class="m">1</span>
+kill_postsetupd
+sleep<span class="w"> </span><span class="m">5</span>
+lsblk<span class="w"> </span>-p
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Unmount file system</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>umount<span class="w"> </span>/dev/devicename
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Make F32 file system</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkfs.vfat<span class="w"> </span>-I<span class="w"> </span>-F<span class="w"> </span><span class="m">32</span><span class="w"> </span>-n<span class="w"> </span>IGELF32<span class="w"> </span>/dev/devicename
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Make btrfs file system</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkfs.btrfs<span class="w"> </span>-f<span class="w"> </span>-L<span class="w"> </span>IGELBTRFS<span class="w"> </span>/dev/devicename
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Mount the file system (btrfs) without <code>devices.hotplug.usb-storage.numdevices</code> enabled</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>/tmp/mydisk
+mount<span class="w"> </span>-t<span class="w"> </span>btrfs<span class="w"> </span>/dev/devicename<span class="w"> </span>/tmp/mydisk
+</code></pre></div></td></tr></table></div>
+<h2 id="more">more</h2>
+<p>display the content of a file page by page</p>
+<p><strong>show contents of group.ini, hit space to continue to next page:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>more<span class="w"> </span>group.ini
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;services&gt;
+<span class="w">        </span>&lt;cisco_vxme_client&gt;
+<span class="w">                </span><span class="nv">enabled</span><span class="o">=</span>&lt;true&gt;
+<span class="w">        </span>&lt;/cisco_vxme_client&gt;
+<span class="w">        </span>&lt;ica_client&gt;
+<span class="w">                </span><span class="nv">enabled</span><span class="o">=</span>&lt;true&gt;
+...
+</code></pre></div></td></tr></table></div>
+<h2 id="mount">mount</h2>
+<p>mount a partition</p>
+<p><strong>mount license folder writeable:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mount<span class="w"> </span>-o<span class="w"> </span>remount,rw<span class="w"> </span>/license
+</code></pre></div></td></tr></table></div>
+<h2 id="openssl">openssl</h2>
+<p>OpenSSL command line tool</p>
+<p><strong>Find end date on certificates</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/etc<span class="p">;</span><span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="se">\(</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cer&quot;</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.crt&quot;</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.pem&quot;</span><span class="w"> </span><span class="se">\)</span><span class="w"> </span>-exec<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;FILE NAME: ==&gt; &quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-exec<span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-enddate<span class="w"> </span>-noout<span class="w"> </span>-in<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><a href="https://linuxhandbook.com/check-certificate-openssl/">How to Check Certificate with OpenSSL</a></li>
+</ul>
+<h2 id="pkexec">pkexec</h2>
+<ul>
+<li>The following command can be added to a profile to start a program as root:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pkexec<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>env<span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span><span class="nv">$DISPLAY</span><span class="w"> </span><span class="nv">XAUTHORITY</span><span class="o">=</span><span class="nv">$XAUTHORITY</span><span class="w"> </span>program_to_run_as_root
+</code></pre></div></td></tr></table></div>
+<h2 id="ps">ps</h2>
+<p>show running tasks</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>-aef
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>UID<span class="w">        </span>PID<span class="w">  </span>PPID<span class="w">  </span>C<span class="w"> </span>STIME<span class="w"> </span>TTY<span class="w">          </span>TIME<span class="w"> </span>CMD
+root<span class="w">         </span><span class="m">1</span><span class="w">     </span><span class="m">0</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:03<span class="w"> </span>/sbin/init<span class="w"> </span><span class="m">3</span>
+root<span class="w">         </span><span class="m">2</span><span class="w">     </span><span class="m">0</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>kthreadd<span class="o">]</span>
+root<span class="w">         </span><span class="m">3</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>rcu_gp<span class="o">]</span>
+root<span class="w">         </span><span class="m">4</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>rcu_par_gp<span class="o">]</span>
+root<span class="w">         </span><span class="m">6</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>kworker/0:0H-kb<span class="o">]</span>
+root<span class="w">         </span><span class="m">8</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>mm_percpu_wq<span class="o">]</span>
+root<span class="w">         </span><span class="m">9</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>ksoftirqd/0<span class="o">]</span>
+root<span class="w">        </span><span class="m">10</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>rcu_sched<span class="o">]</span>
+root<span class="w">        </span><span class="m">11</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">13</span>:49<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span><span class="o">[</span>rcu_bh<span class="o">]</span>
+...
+</code></pre></div></td></tr></table></div>
+<h2 id="pwd">pwd</h2>
+<p>print working directory</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">pwd</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/root
+</code></pre></div></td></tr></table></div>
+<h2 id="rm">rm</h2>
+<p>delete a file</p>
+<p><strong>delete file with name new.sh:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>new.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="rmdir">rmdir</h2>
+<p>delete a folder</p>
+<p><strong>delete folder with name newdir:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rmdir<span class="w"> </span>newdir
+</code></pre></div></td></tr></table></div>
+<h2 id="sleep">sleep</h2>
+<p>wait</p>
+<p><strong>wait for 5 seconds:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sleep<span class="w"> </span><span class="m">5</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="su">su</h2>
+<p>change to root</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>su
+</code></pre></div></td></tr></table></div>
+<h2 id="systemctl">systemctl</h2>
+<p>service handler</p>
+<p><strong>restart network:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>systemctl<span class="w"> </span>restart<span class="w"> </span>network-manager
+</code></pre></div></td></tr></table></div>
+<h2 id="tee">tee</h2>
+<p>read from standard input and write to standard output and files</p>
+<p><strong>Run a program to redirect standard error to standard output and standard output to /tmp/debug.txt and print it to standard output.</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>program_to_run<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/tmp/debug.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="top">top</h2>
+<p>task monitor</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>top
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>top<span class="w"> </span>-<span class="w"> </span><span class="m">14</span>:15:59<span class="w"> </span>up<span class="w"> </span><span class="m">26</span><span class="w"> </span>min,<span class="w">  </span><span class="m">2</span><span class="w"> </span>users,<span class="w">  </span>load<span class="w"> </span>average:<span class="w"> </span><span class="m">0</span>,05,<span class="w"> </span><span class="m">0</span>,01,<span class="w"> </span><span class="m">0</span>,01
+Tasks:<span class="w"> </span><span class="m">236</span><span class="w"> </span>total,<span class="w">   </span><span class="m">1</span><span class="w"> </span>running,<span class="w"> </span><span class="m">168</span><span class="w"> </span>sleeping,<span class="w">   </span><span class="m">0</span><span class="w"> </span>stopped,<span class="w">   </span><span class="m">0</span><span class="w"> </span>zombie
+%Cpu<span class="o">(</span>s<span class="o">)</span>:<span class="w">  </span><span class="m">0</span>,1<span class="w"> </span>us,<span class="w">  </span><span class="m">0</span>,1<span class="w"> </span>sy,<span class="w">  </span><span class="m">0</span>,0<span class="w"> </span>ni,<span class="w"> </span><span class="m">99</span>,8<span class="w"> </span>id,<span class="w">  </span><span class="m">0</span>,0<span class="w"> </span>wa,<span class="w">  </span><span class="m">0</span>,0<span class="w"> </span>hi,<span class="w">  </span><span class="m">0</span>,0<span class="w"> </span>si,<span class="w">  </span><span class="m">0</span>,0<span class="w"> </span>st
+KiB<span class="w"> </span>Mem<span class="w"> </span>:<span class="w">  </span><span class="m">1891000</span><span class="w"> </span>total,<span class="w">   </span><span class="m">351040</span><span class="w"> </span>free,<span class="w">   </span><span class="m">481452</span><span class="w"> </span>used,<span class="w">  </span><span class="m">1058508</span><span class="w"> </span>buff/cache
+KiB<span class="w"> </span>Swap:<span class="w">  </span><span class="m">1134592</span><span class="w"> </span>total,<span class="w">  </span><span class="m">1134592</span><span class="w"> </span>free,<span class="w">        </span><span class="m">0</span><span class="w"> </span>used.<span class="w">  </span><span class="m">1183616</span><span class="w"> </span>avail<span class="w"> </span>Mem
+
+<span class="w">  </span>PID<span class="w"> </span>USER<span class="w">      </span>PR<span class="w">  </span>NI<span class="w">    </span>VIRT<span class="w">    </span>RES<span class="w">    </span>SHR<span class="w"> </span>S<span class="w">  </span>%CPU<span class="w"> </span>%MEM<span class="w">     </span>TIME+<span class="w"> </span>COMMAND
+<span class="m">18620</span><span class="w"> </span>root<span class="w">      </span><span class="m">20</span><span class="w">   </span><span class="m">0</span><span class="w">   </span><span class="m">79776</span><span class="w">   </span><span class="m">4276</span><span class="w">   </span><span class="m">3520</span><span class="w"> </span>R<span class="w">   </span><span class="m">0</span>,3<span class="w">  </span><span class="m">0</span>,2<span class="w">   </span><span class="m">0</span>:00.02<span class="w"> </span>top
+<span class="w">    </span><span class="m">1</span><span class="w"> </span>root<span class="w">      </span><span class="m">20</span><span class="w">   </span><span class="m">0</span><span class="w">  </span><span class="m">205624</span><span class="w">   </span><span class="m">9980</span><span class="w">   </span><span class="m">5812</span><span class="w"> </span>S<span class="w">   </span><span class="m">0</span>,0<span class="w">  </span><span class="m">0</span>,5<span class="w">   </span><span class="m">0</span>:03.88<span class="w"> </span>systemd
+<span class="w">    </span><span class="m">2</span><span class="w"> </span>root<span class="w">      </span><span class="m">20</span><span class="w">   </span><span class="m">0</span><span class="w">       </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span>S<span class="w">   </span><span class="m">0</span>,0<span class="w">  </span><span class="m">0</span>,0<span class="w">   </span><span class="m">0</span>:00.00<span class="w"> </span>kthreadd
+<span class="w">    </span><span class="m">3</span><span class="w"> </span>root<span class="w">       </span><span class="m">0</span><span class="w"> </span>-20<span class="w">       </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span>I<span class="w">   </span><span class="m">0</span>,0<span class="w">  </span><span class="m">0</span>,0<span class="w">   </span><span class="m">0</span>:00.00<span class="w"> </span>rcu_gp
+<span class="w">    </span><span class="m">4</span><span class="w"> </span>root<span class="w">       </span><span class="m">0</span><span class="w"> </span>-20<span class="w">       </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span>I<span class="w">   </span><span class="m">0</span>,0<span class="w">  </span><span class="m">0</span>,0<span class="w">   </span><span class="m">0</span>:00.00<span class="w"> </span>rcu_par
+...
+</code></pre></div></td></tr></table></div>
+<h2 id="touch">touch</h2>
+<p>create a file</p>
+<p><strong>create file with name new.sh:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>touch<span class="w"> </span>new.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="tr">tr</h2>
+<p>translates, deletes, and squeezes characters</p>
+<p><strong>convert a file from windows to linux (strip out the \r characters)</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;\r&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>windowsfile.txt<span class="w"> </span>&gt;<span class="w"> </span>linuxfile.txt
+</code></pre></div></td></tr></table></div>
+<p><strong>Note:</strong> This can be done with the command <code>dos2unix</code></p>
+<p><strong>Print $PATH directories on a separate line</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w">  </span><span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>/bin
+/sbin
+/usr/bin
+/usr/sbin
+</code></pre></div></td></tr></table></div>
+<p><strong>Remove the repeated space characters</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>terminal
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>user<span class="w"> </span><span class="m">23850</span><span class="w"> </span><span class="m">23849</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">10</span>:30<span class="w"> </span>?<span class="w"> </span><span class="m">00</span>:00:00<span class="w"> </span>/usr/bin/xfce4-terminal<span class="w"> </span>-T<span class="w"> </span>Local<span class="w"> </span>Terminal<span class="w"> </span>-e<span class="w"> </span>check_passwd<span class="w"> </span>--disable-server<span class="w"> </span>--geometry<span class="w"> </span>90x38
+user<span class="w"> </span><span class="m">23915</span><span class="w"> </span><span class="m">23860</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">10</span>:44<span class="w"> </span>pts/0<span class="w"> </span><span class="m">00</span>:00:00<span class="w"> </span>grep<span class="w"> </span>--color<span class="o">=</span>auto<span class="w"> </span>terminal
+</code></pre></div></td></tr></table></div>
+<p><strong>Remove all non-numeric characters</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;IGEL support for Priority or Plus support phone number for US and Canada is 415-813-3933&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-cd<span class="w"> </span><span class="o">[</span>:digit:<span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="m">4158133933</span>
+</code></pre></div></td></tr></table></div>
+<strong>Print strings with <code>;</code> separator on separate lines</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;this; is; a; test&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;;&#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>this
+is
+a
+<span class="nb">test</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="uname">uname</h2>
+<p>show linux details</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>uname
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Linux
+</code></pre></div></td></tr></table></div>
+<h2 id="upower">upower</h2>
+<p>UPower Tool</p>
+<ul>
+<li>Enumerate objects paths for devices</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>upower<span class="w"> </span>-e
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>/org/freedesktop/UPower/devices/battery_BAT0
+/org/freedesktop/UPower/devices/line_power_AC
+/org/freedesktop/UPower/devices/battery_hid_98o46o0aob0o50o63_battery
+/org/freedesktop/UPower/devices/DisplayDevice
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Show information about object path</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>upower<span class="w"> </span>-i<span class="w"> </span>/org/freedesktop/UPower/devices/battery_hid_98o46o0aob0o50o63_battery
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span>native-path:<span class="w">          </span>hid-98:46:0a:b0:50:63-battery
+<span class="w">  </span>model:<span class="w">                </span>RON<span class="w"> </span>NEHER’s<span class="w"> </span>Mouse
+<span class="w">  </span>power<span class="w"> </span>supply:<span class="w">         </span>no
+<span class="w">  </span>updated:<span class="w">              </span>Mon<span class="w"> </span><span class="m">29</span><span class="w"> </span>Dec<span class="w"> </span><span class="m">2025</span><span class="w"> </span><span class="m">08</span>:31:34<span class="w"> </span>AM<span class="w"> </span>MST<span class="w"> </span><span class="o">(</span><span class="m">19</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="o">)</span>
+<span class="w">  </span>has<span class="w"> </span>history:<span class="w">          </span>yes
+<span class="w">  </span>has<span class="w"> </span>statistics:<span class="w">       </span>yes
+<span class="w">  </span>mouse
+<span class="w">    </span>present:<span class="w">             </span>yes
+<span class="w">    </span>rechargeable:<span class="w">        </span>yes
+<span class="w">    </span>state:<span class="w">               </span>discharging
+<span class="w">    </span>warning-level:<span class="w">       </span>none
+<span class="w">    </span>percentage:<span class="w">          </span><span class="m">89</span>%
+<span class="w">    </span>icon-name:<span class="w">          </span><span class="s1">&#39;battery-full-symbolic&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="vi">vi</h2>
+<p>text editor</p>
+<p><strong>open setup.ini in vi:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vi<span class="w"> </span>setup.ini
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;system&gt;
+<span class="w">        </span>&lt;remotemanager&gt;
+<span class="w">                </span>&lt;server0&gt;
+<span class="w">                        </span><span class="nv">ip</span><span class="o">=</span>&lt;igelrmserver.int.acme.org&gt;
+<span class="w">                </span>&lt;/server0&gt;
+<span class="w">        </span>&lt;/remotemanager&gt;
+<span class="w">        </span>&lt;icg&gt;
+<span class="w">                </span>&lt;server0&gt;
+<span class="w">                        </span><span class="nv">host</span><span class="o">=</span>&lt;icg.acme.org&gt;
+<span class="w">                        </span><span class="nv">uuid</span><span class="o">=</span>&lt;d8d43ff7a4274b8f96fb6ec96c4948&gt;
+....
+<span class="w">        </span>&lt;drivers&gt;
+<span class="w">                </span><span class="nv">currentdriver</span><span class="o">=</span>&lt;intel&gt;
+<span class="w">                </span><span class="nv">currentconnectors</span><span class="o">=</span>&lt;lvds1,Seiko<span class="w"> </span>Epson<span class="w"> </span>Corporation,,1366,768,1366,768,0,0,,<span class="p">;</span>&gt;
+<span class="w">        </span>&lt;/drivers&gt;
+&lt;/x&gt;
+</code></pre></div></td></tr></table></div>
+<h2 id="watch">watch</h2>
+<p>repeat periodic a command</p>
+<p><strong>probe tcp port 8443 on igelrmserver every 2 seconds:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>watch<span class="w"> </span>probeport<span class="w"> </span>igelrmserver<span class="w"> </span><span class="m">8443</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Every<span class="w"> </span><span class="m">2</span>,0s:<span class="w"> </span>probeport<span class="w"> </span>igelrmserver<span class="w"> </span><span class="m">8443</span><span class="w">      </span>ITCA44CC8C90000:<span class="w"> </span>Wed<span class="w"> </span>May<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">14</span>:24:08<span class="w"> </span><span class="m">2020</span>
+
+Connection<span class="w"> </span>successful
+</code></pre></div></td></tr></table></div>
+<h2 id="wget">wget</h2>
+<p>non-interactive network downloader</p>
+<ul>
+<li>Obtain internet IP address for device</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wget<span class="w"> </span>-qO-<span class="w"> </span>http://ipv4.icanhazip.com<span class="p">;</span><span class="w"> </span><span class="nb">echo</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Download IGEL OS 12.7.5 OSC installer</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wget<span class="w"> </span>https://az743625.vo.msecnd.net/files/IGEL_OS_12/OSC/osc-12.7.5.zip
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Download a file from UMS</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wget<span class="w"> </span>https://&lt;server:port&gt;/ums_filetransfer/file_name<span class="w"> </span>--no-check-certificate<span class="w"> </span>--user<span class="o">=</span>username<span class="w"> </span>--password<span class="o">=</span>password
+</code></pre></div></td></tr></table></div>
+<h2 id="which">which</h2>
+<p>locate command</p>
+<p><strong>locate command nmcli:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>which<span class="w"> </span>nmcli
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>/usr/bin/nmcli
+sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>on<span class="p">;</span><span class="w">  </span><span class="c1"># dpms screen ON after a delay of one second.</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="wmctrl">wmctrl</h2>
+<p>List windows managed by the window manager</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wmctrl<span class="w"> </span>-l<span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+<p>Close VMware window</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wmctrl<span class="w"> </span>-c<span class="w"> </span>VMware
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>OS 11 - Execute the VMware Horizon client as maximized or full screen using wmctrl command</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+/config/sessions/vdm_client0<span class="w"> </span><span class="p">&amp;</span>
+sleep<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+
+<span class="c1">#uncomment for maximized</span>
+wmctrl<span class="w"> </span>-r<span class="w"> </span>vmware-view<span class="w"> </span>-b<span class="w"> </span>add,maximized_vert,maximized_horz
+<span class="c1">#uncomment for fullscreen</span>
+<span class="c1">#wmctrl -r vmware-view -b add,fullscreen</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>OS 12 - Change the Omnissa Horizon window size using wmctrl command</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#set -x</span>
+<span class="c1">#trap read debug</span>
+
+<span class="nv">PATTERN</span><span class="o">=</span><span class="s2">&quot;Omnissa Horizon Client&quot;</span>
+
+<span class="c1"># Loop until the application window is open</span>
+<span class="k">while</span><span class="w"> </span>!<span class="w"> </span>wmctrl<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PATTERN</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PATTERN</span><span class="s2"> not running, checking again...&quot;</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">5</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pattern &#39;</span><span class="nv">$PATTERN</span><span class="s2">&#39; found!&quot;</span>
+<span class="c1">#uncomment below item for fullscreen or maximized</span>
+<span class="c1">#wmctrl -r &quot;$PATTERN&quot; -b add,fullscreen</span>
+<span class="c1">#wmctrl -r &quot;$PATTERN&quot; -b add,maximized_vert,maximized_horz</span>
+</code></pre></div></td></tr></table></div>
+<p>Bring IGEL UMS Console to the foreground</p>
+<ul>
+<li>List the windows</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wmctrl<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>0x02000003<span class="w"> </span>-1<span class="w"> </span>ITC08002792DECB<span class="w"> </span>xfce4-panel
+0x02200069<span class="w"> </span>-1<span class="w"> </span>ITC08002792DECB<span class="w"> </span>Desktop
+0x03200003<span class="w">  </span><span class="m">0</span><span class="w"> </span>ITC08002792DECB<span class="w"> </span>X11
+0x03400401<span class="w">  </span><span class="m">0</span><span class="w">       </span>igelums12<span class="w"> </span>IGEL<span class="w"> </span>Universal<span class="w"> </span>Management<span class="w"> </span>Suite<span class="w"> </span><span class="m">12</span>
+0x03800003<span class="w">  </span><span class="m">0</span><span class="w"> </span>ITC08002792DECB<span class="w"> </span>Local<span class="w"> </span>Terminal
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Raise UMS Console to the foreground</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wmctrl<span class="w"> </span>-i<span class="w"> </span>-a<span class="w"> </span><span class="k">$(</span>wmctrl<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>igelums<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="k">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="xev-xmodmap">xev xmodmap</h2>
+<ul>
+<li>Find and disable a key. Run <code>xev</code> to find keycode for key (such as Control(CTRL)) and <code>xmodmap</code> to disable it</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xev<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>--line-buffered<span class="w"> </span>keycode
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>state<span class="w"> </span>0x10,<span class="w"> </span>keycode<span class="w"> </span><span class="m">37</span><span class="w"> </span><span class="o">(</span>keysym<span class="w"> </span>0xffe3,<span class="w"> </span>Control_L<span class="o">)</span>,<span class="w"> </span>same_screen<span class="w"> </span>YES,
+state<span class="w"> </span>0x14,<span class="w"> </span>keycode<span class="w"> </span><span class="m">37</span><span class="w"> </span><span class="o">(</span>keysym<span class="w"> </span>0xffe3,<span class="w"> </span>Control_L<span class="o">)</span>,<span class="w"> </span>same_screen<span class="w"> </span>YES,
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmodmap<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;keycode 37 = NoSymbol&#39;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Return use of Control</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmodmap<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;keycode 37 = Control_L&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="xdotool">xdotool</h2>
+<p>command-line X11 automation tool</p>
+<ul>
+<li><a href="https://commandmasters.com/commands/xdotool-linux/">Automating X11 with xdotool (with examples)</a></li>
+</ul>
+<h2 id="xinput">xinput</h2>
+<p>utility to configure and test X input devices</p>
+<p><strong>list all input devices:</strong></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xinput<span class="w"> </span>--list
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>⎡<span class="w"> </span>Virtual<span class="w"> </span>core<span class="w"> </span>pointer<span class="w">                      </span><span class="nv">id</span><span class="o">=</span><span class="m">2</span><span class="w">    </span><span class="o">[</span>master<span class="w"> </span>pointer<span class="w">  </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+⎜<span class="w">   </span>↳<span class="w"> </span>Virtual<span class="w"> </span>core<span class="w"> </span>XTEST<span class="w"> </span>pointer<span class="w">                </span><span class="nv">id</span><span class="o">=</span><span class="m">4</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>pointer<span class="w">  </span><span class="o">(</span><span class="m">2</span><span class="o">)]</span>
+⎜<span class="w">   </span>↳<span class="w"> </span>3830303142534F54:00<span class="w"> </span>06CB:CE46<span class="w"> </span>Mouse<span class="w">       </span><span class="nv">id</span><span class="o">=</span><span class="m">11</span><span class="w">   </span><span class="o">[</span>slave<span class="w">  </span>pointer<span class="w">  </span><span class="o">(</span><span class="m">2</span><span class="o">)]</span>
+⎜<span class="w">   </span>↳<span class="w"> </span>Logitech<span class="w"> </span>USB-PS/2<span class="w"> </span>Optical<span class="w"> </span>Mouse<span class="w">           </span><span class="nv">id</span><span class="o">=</span><span class="m">9</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>pointer<span class="w">  </span><span class="o">(</span><span class="m">2</span><span class="o">)]</span>
+⎜<span class="w">   </span>↳<span class="w"> </span>3830303142534F54:00<span class="w"> </span>06CB:CE46<span class="w"> </span>Touchpad<span class="w">    </span><span class="nv">id</span><span class="o">=</span><span class="m">12</span><span class="w">   </span><span class="o">[</span>slave<span class="w">  </span>pointer<span class="w">  </span><span class="o">(</span><span class="m">2</span><span class="o">)]</span>
+⎣<span class="w"> </span>Virtual<span class="w"> </span>core<span class="w"> </span>keyboard<span class="w">                     </span><span class="nv">id</span><span class="o">=</span><span class="m">3</span><span class="w">    </span><span class="o">[</span>master<span class="w"> </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">2</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Virtual<span class="w"> </span>core<span class="w"> </span>XTEST<span class="w"> </span>keyboard<span class="w">               </span><span class="nv">id</span><span class="o">=</span><span class="m">5</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Toshiba<span class="w"> </span>input<span class="w"> </span>device<span class="w">                      </span><span class="nv">id</span><span class="o">=</span><span class="m">14</span><span class="w">   </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Video<span class="w"> </span>Bus<span class="w">                                 </span><span class="nv">id</span><span class="o">=</span><span class="m">6</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Power<span class="w"> </span>Button<span class="w">                              </span><span class="nv">id</span><span class="o">=</span><span class="m">7</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Sleep<span class="w"> </span>Button<span class="w">                              </span><span class="nv">id</span><span class="o">=</span><span class="m">8</span><span class="w">    </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>AT<span class="w"> </span>Translated<span class="w"> </span>Set<span class="w"> </span><span class="m">2</span><span class="w"> </span>keyboard<span class="w">              </span><span class="nv">id</span><span class="o">=</span><span class="m">13</span><span class="w">   </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+<span class="w">    </span>↳<span class="w"> </span>Web<span class="w"> </span>Camera<span class="w"> </span>-<span class="w"> </span>HD:<span class="w"> </span>Web<span class="w"> </span>Camera<span class="w"> </span>-<span class="w"> </span>H<span class="w">           </span><span class="nv">id</span><span class="o">=</span><span class="m">10</span><span class="w">   </span><span class="o">[</span>slave<span class="w">  </span>keyboard<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)]</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>disable touchpad:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xinput<span class="w"> </span>set-prop<span class="w"> </span><span class="s2">&quot;3830303142534F54:00 06CB:CE46 Touchpad&quot;</span><span class="w"> </span><span class="s2">&quot;Device Enabled&quot;</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="xset">xset</h2>
+<p>user preference utility for X</p>
+<p><a href="https://shallowsky.com/linux/x-screen-blanking.html">Screen Blanking</a></p>
+<p><strong>testing dpms signal for monitor to turn off, waiting 15 seconds, then signal monitor to turn on</strong></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>off<span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">15</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>on<span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<strong>commands to trigger the various states</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>s<span class="w"> </span>activate<span class="p">;</span><span class="w">  </span><span class="c1"># will blank the screen (or activate the screensaver program, if you&#39;re using one) after a delay of one second</span>
+sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>off<span class="p">;</span><span class="w">  </span><span class="c1"># dpms turn the screen OFF after a delay of one second.</span>
+sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>standby<span class="p">;</span><span class="w">  </span><span class="c1"># dpms screen standby after a delay of one second.</span>
+sleep<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>xset<span class="w"> </span>dpms<span class="w"> </span>force<span class="w"> </span>suspend<span class="p">;</span><span class="w">  </span><span class="c1"># dpms screen suspend after a delay of one second.</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="zenity">zenity</h2>
+<p>Display dialog window, and return (either in the return code, or on standard output) the users input</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nv">Zenity_String</span><span class="o">=</span><span class="k">$(</span>zenity<span class="w"> </span>--forms<span class="w"> </span>--title<span class="o">=</span><span class="s2">&quot;Create user&quot;</span><span class="w"> </span>--text<span class="o">=</span><span class="s2">&quot;Add new user&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-entry<span class="o">=</span><span class="s2">&quot;First Name&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-entry<span class="o">=</span><span class="s2">&quot;Last Name&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-entry<span class="o">=</span><span class="s2">&quot;Username&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-password<span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-password<span class="o">=</span><span class="s2">&quot;Confirm Password&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--add-calendar<span class="o">=</span><span class="s2">&quot;Expires&quot;</span><span class="k">)</span>
+
+<span class="nv">First_Name</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$Zenity_String</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;|&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="k">)</span>
+<span class="nv">Last_Name</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$Zenity_String</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;|&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="k">)</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Zenity String: &quot;</span><span class="w"> </span><span class="nv">$Zenity_String</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;First Name: &quot;</span><span class="w"> </span><span class="nv">$First_Name</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last Name: &quot;</span><span class="w"> </span><span class="nv">$Last_Name</span>
+</code></pre></div></td></tr></table></div>
+<p>Suspend system dialog window</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="o">(</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;10&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Suspending countdown&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;20&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Suspending countdown&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Suspending countdown&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;75&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Suspending countdown&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span><span class="m">1</span>
+auto_suspend
+<span class="o">)</span><span class="w"> </span><span class="p">|</span>
+zenity<span class="w"> </span>--progress<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--title<span class="o">=</span><span class="s2">&quot;Suspending system&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="o">=</span><span class="s2">&quot;Suspending system...&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--percentage<span class="o">=</span><span class="m">0</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>zenity<span class="w"> </span>--error<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="o">=</span><span class="s2">&quot;Suspending canceled.&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -347,6 +347,23 @@ After creating a VMware Horizon session, you can get it to run fully as User fro
 su -c "XDG_RUNTIME_DIR=/run/user/777 /config/sessions/vdm_client0" user &
 ```
 
+## xfconf-query
+
+Xfconf commandline utility
+
+Assign `F3` key to open a terminal window
+
+```bash linenums="1"
+xfconf-query -c xfce4-keyboard-shortcuts   -p "/commands/custom/F3"   -n -t string -s "xfce4-terminal"
+```
+
+Show / Assign Hot Keys
+
+```bash linenums="1"
+xfce4-keyboard-settings
+```
+Settings are saved in file: `/userhome/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml`
+
 ## xrandr
 
 Controls the Screens from command line

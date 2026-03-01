@@ -151,6 +151,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [vdm_client0](Cheatsheet-IGELOS-General.md#vdm_client0) | :material-check-bold: | :material-check-bold:| Start VMware Horizon client |
 | vget                                                    | :material-check-bold: | :material-check-bold:| Get specification for a variable                            |
 | write_rmsettings                                        | :material-check-bold: | :material-check-bold:| Write local setup changes back to UMS.                      |
+| [xfconf-query](Cheatsheet-IGELOS-General.md#xfconf-query)  | :material-check-bold: | :material-check-bold:| Xfconf commandline utility |
 | [xrandr](Cheatsheet-IGELOS-General.md#xrandr)  | :material-check-bold: | :material-check-bold:| Controls the Screens from command line  |
 
 -----

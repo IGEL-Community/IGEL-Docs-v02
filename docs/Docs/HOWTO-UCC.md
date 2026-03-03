@@ -4,7 +4,7 @@
 ## [IGEL OS UCC Configuration Guide](https://perusat.net/icbackup/igelos_ucc_guide.pdf)
 -->
 
-## [IGEL OS UCC Configuration Guide](HOWTO-UCC-Guide.md)
+## [IGEL OS UCC Configuration Guide](HOWTO-UCC-Guide-OS12.md)
 
 <!---
 Remove for now

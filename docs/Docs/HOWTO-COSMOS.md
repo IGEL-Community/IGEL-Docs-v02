@@ -177,7 +177,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What steps to perform post install / upgrade of UMS?
 
-**A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/post-installation-configuration-of-the-igel-ums-se). [UMS Login Requirements](https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
+**A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/post-installation-configuration-of-the-igel-ums-se). Note the new redirect URIs for UMS Web App Login [UMS Login Requirements](https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
 
 **Q:** How to validate certificate chains supplied by the UMS Server
 

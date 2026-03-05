@@ -68,7 +68,7 @@ list all the linux commands (including bash shell aliases and functions)
 **list all rmagent and island related commands**:
 
 ```bash linenums="1"
-compgen -c | egrep "^rmagent|island" | sort
+compgen -c | grep -E "^rmagent|island" | sort
 ```
 
 ```bash linenums="1"

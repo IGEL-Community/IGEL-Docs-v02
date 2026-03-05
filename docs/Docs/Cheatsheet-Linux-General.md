@@ -65,21 +65,65 @@ comm -1 -3 /tmp/ps1.txt /tmp/ps2.txt
 
 list all the linux commands (including bash shell aliases and functions)
 
-**list all igel and remotemanager related commands**:
+**list all rmagent and island related commands**:
 
 ```bash linenums="1"
-compgen -c | egrep "igel|_rm" | sort | more
+compgen -c | egrep "^rmagent|island" | sort
 ```
 
 ```bash linenums="1"
-get_rmdirlist
-get_rmsettings
-get_rmsettings_boot
-...
-igel_showsplash
-igel-shutdown-debug
-igel-shutdown-inhibitor
---More--
+island-browser-stable
+rmagent-check-reenroll
+rmagent-connect
+rmagent-devattrs
+rmagent-devattrs-dump
+rmagent-devattrs-enum
+rmagent-devattrs-enum-range
+rmagent-devattrs-get
+rmagent-devattrs-get-type
+rmagent-devattrs-reset
+rmagent-devattrs-set
+rmagent-devattrs-sync
+rmagent-disconnect
+rmagent-enroll
+rmagent-enroll-vargs
+rmagent-get-structure-tag
+rmagent-ibauthenticate-user
+rmagent-ibchange-user-password
+rmagent-issue-client-cert
+rmagent-jobs
+rmagent-log-message
+rmagent-manage-apps
+rmagent-merge-settings
+rmagent-obs-enroll
+rmagent-post-merge
+rmagent-pull-appauthtoken
+rmagent-pull-file
+rmagent-pull-settings
+rmagent-push-appstatus
+rmagent-push-device-attributes
+rmagent-push-libvirt-data
+rmagent-push-licenseinfo
+rmagent-push-runtime
+rmagent-push-settings
+rmagent-push-sysinfo
+rmagent-reconnect-sync
+rmagent-reestablish-trust
+rmagent-register
+rmagent-register-app
+rmagent-set-job-state
+rmagent-set-structure-tag
+rmagent-setupd-event
+rmagent-setupd-event-reset
+rmagent-setupd-event-wait
+rmagent-state
+rmagent-tcuser-login
+rmagent-tcuser-logout
+rmagent-trust-get-zero
+rmagent-trust-put
+rmagent-trust-reset
+rmagent-update-device-info
+rmagent-ws-tunnel
 ```
 
 ## conky

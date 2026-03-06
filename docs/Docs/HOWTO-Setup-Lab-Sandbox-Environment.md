@@ -10,6 +10,8 @@ My 4+ year old home lab server:
 
 ## IGEL Security Ports One Pager
 
+- [ChatGPT - IGEL Architecture Diagrams](https://chatgpt.com/c/69ab3eb0-26e0-8326-86fb-6fa620f45ccb)
+
 ```mermaid
 flowchart TD
   A[UMS Console]-- Port 5900 TCP SSL Tunnel Encrypted VNC-data --> B[\Intranet OS 11 Devices/]

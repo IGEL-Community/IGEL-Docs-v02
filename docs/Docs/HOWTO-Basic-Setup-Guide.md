@@ -143,6 +143,8 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
+- [ChatGPT - IGEL Architecture Diagrams](https://chatgpt.com/c/69ab3eb0-26e0-8326-86fb-6fa620f45ccb)
+
 - Legend
 
 ```mermaid

@@ -180,7 +180,7 @@ flowchart LR
     CONSOLE -->|HTTPS 8443| UMSSERVER
     WEBAPP -->|HTTPS 8443| UMSSERVER
 
-    IGEL12 -->|HTTPS / WebSocket 8443\nUnified Protocol| UMSSERVER
+    IGEL12 -->|HTTPS / WebSocket 8443 / Unified Protocol| UMSSERVER
     IGEL12 -->|Registration Token 30001| UMSSERVER
 
     IGEL11 -->|Device Communication 30001| UMSSERVER
@@ -320,7 +320,7 @@ subgraph Internet["Internet / External Zone"]
 end
 
 subgraph DMZ["DMZ / Edge Zone"]
-    RP["Reverse Proxy / WAF<br/>Nginx / HAProxy / F5 / Apache<br/>Listener: TCP 443 or 8443"]
+    RP["Reverse Proxy / WAF<br/>Nginx / HAProxy / F5 / Azure Application Gateway<br/>Listener: TCP 443 or 8443"]
 end
 
 subgraph LAN["Internal LAN / Data Center"]

@@ -143,7 +143,337 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
-- [ChatGPT - IGEL Architecture Diagrams](https://chatgpt.com/c/69ab3eb0-26e0-8326-86fb-6fa620f45ccb)
+#### ChatGTP Prompt for IGEL Architecture Diagrams
+
+```prompt linenums="1"
+create a markdown mermaid diagram for the following IGEL communication ports from IGEL KB  https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports
+```
+```mermaid
+flowchart LR
+
+    subgraph Cloud_Services["IGEL Cloud Services"]
+        APP["IGEL App Portal"]
+        OBS["IGEL Onboarding Service"]
+        LIC["IGEL Licensing (susi/fwus)"]
+        INSIGHT["IGEL Insight"]
+    end
+
+    subgraph UMS["IGEL UMS Server"]
+        UMSSERVER["UMS Server"]
+    end
+
+    subgraph Clients["Management Clients"]
+        CONSOLE["UMS Console"]
+        WEBAPP["UMS Web App"]
+    end
+
+    subgraph Devices["IGEL OS Devices"]
+        IGEL12["IGEL OS 12 Devices"]
+        IGEL11["IGEL OS 11 Devices"]
+    end
+
+    subgraph Infra["Infrastructure"]
+        AD["Active Directory"]
+    end
+
+
+    CONSOLE -->|HTTPS 8443| UMSSERVER
+    WEBAPP -->|HTTPS 8443| UMSSERVER
+
+    IGEL12 -->|HTTPS / WebSocket 8443\nUnified Protocol| UMSSERVER
+    IGEL12 -->|Registration Token 30001| UMSSERVER
+
+    IGEL11 -->|Device Communication 30001| UMSSERVER
+    IGEL11 -->|File Transfer / Firmware 8443| UMSSERVER
+    IGEL11 -->|Legacy HTTP File Transfer 9080| UMSSERVER
+
+    UMSSERVER -->|Kerberos 88 TCP/UDP| AD
+
+    UMSSERVER -->|HTTPS 443| APP
+    UMSSERVER -->|HTTPS 443| OBS
+    UMSSERVER -->|HTTPS 443| LIC
+    UMSSERVER -->|HTTPS 443| INSIGHT
+
+    CONSOLE -->|VNC Shadowing 5900| IGEL11
+    UMSSERVER -->|Secure Terminal 30022| IGEL11
+
+    UMSSERVER -->|Scan Devices 30005 TCP/UDP| IGEL11
+    UMSSERVER -->|Scan Devices 30005 TCP/UDP| IGEL12
+```
+- Key Ports Represented
+
+| Port              | Purpose                                                  |
+| ----------------- | -------------------------------------------------------- |
+| **8443/TCP**      | Main UMS HTTPS communication (console, web app, devices) |
+| **30001/TCP**     | Device communication / registration                      |
+| **30002/TCP**     | Alternate device communication (HA scenario)             |
+| **30005/TCP/UDP** | Device discovery scanning                                |
+| **5900/TCP**      | VNC shadowing                                            |
+| **30022/TCP**     | Secure terminal                                          |
+| **9080/TCP**      | Non-SSL file transfer (legacy)                           |
+| **88/TCP/UDP**    | Kerberos to Active Directory                             |
+| **443/TCP**       | UMS to IGEL cloud services                               |
+
+- A more advanced diagram that includes:
+    - Internal devices (no ICG)
+    - External devices via ICG
+    - Distributed UMS
+    - Database
+    - App Portal / Licensing / Insight cloud connections
+
+```mermaid
+flowchart LR
+
+%% =========================
+%% ZONES
+%% =========================
+subgraph Internet["Internet / External Zone"]
+    EXT["External IGEL Devices"]
+    CLOUD["IGEL Cloud Services<br/>App Portal / Licensing / Insight / OBS"]
+end
+
+subgraph DMZ["DMZ / Edge Zone"]
+    ICG["IGEL Cloud Gateway (ICG)<br/>Listener: TCP 8443"]
+end
+
+subgraph LAN["Internal LAN / Data Center"]
+    INT["Internal IGEL Devices"]
+
+    subgraph UMSCLUSTER["Distributed UMS"]
+        LB["DNS Round Robin / Reverse Proxy / Cluster Address"]
+        UMS1["UMS Server 1<br/>Web/App"]
+        UMS2["UMS Server 2<br/>Web/App"]
+    end
+
+    DB["Shared External Database<br/>PostgreSQL 5432 / MS SQL 1433 / Oracle 1521 / Derby 1527"]
+
+    ADM["UMS Console / Web App Admin"]
+end
+
+%% =========================
+%% INTERNAL DEVICES
+%% =========================
+INT -->|"Direct device mgmt<br/>HTTPS / WSS TCP 8443<br/>via Cluster Address"| LB
+LB --> UMS1
+LB --> UMS2
+
+%% =========================
+%% EXTERNAL DEVICES VIA ICG
+%% =========================
+EXT -->|"Outbound device connection<br/>HTTPS / WSS TCP 8443"| ICG
+ICG -->|"Inbound from Internet<br/>allow TCP 8443"| EXT
+
+UMS1 -->|"Outbound to ICG<br/>HTTPS / WSS TCP 8443"| ICG
+UMS2 -->|"Outbound to ICG<br/>HTTPS / WSS TCP 8443"| ICG
+ICG -->|"Return / established traffic"| UMS1
+ICG -->|"Return / established traffic"| UMS2
+
+%% =========================
+%% ADMIN ACCESS
+%% =========================
+ADM -->|"Admin access<br/>HTTPS TCP 8443"| LB
+
+%% =========================
+%% UMS TO DATABASE
+%% =========================
+UMS1 -->|"DB connection"| DB
+UMS2 -->|"DB connection"| DB
+
+%% =========================
+%% CLOUD CONNECTIONS
+%% =========================
+UMS1 -->|"HTTPS TCP 443<br/>App import / licensing / insight / token validation"| CLOUD
+UMS2 -->|"HTTPS TCP 443<br/>App import / licensing / insight / token validation"| CLOUD
+
+%% =========================
+%% OPTIONAL OS11 NOTE
+%% =========================
+INT -.->|"Optional legacy direct IGEL OS 11 flows:<br/>TCP 30001 device comms<br/>TCP 8443 file transfer"| UMS1
+INT -.->|"Optional legacy direct IGEL OS 11 flows:<br/>TCP 30001 device comms<br/>TCP 8443 file transfer"| UMS2
+
+%% =========================
+%% STYLES
+%% =========================
+classDef zone fill:#f7f7f7,stroke:#888,stroke-width:1px;
+classDef core fill:#eef6ff,stroke:#4a78c2,stroke-width:1px;
+classDef db fill:#f4f0ff,stroke:#7a5cc2,stroke-width:1px;
+classDef cloud fill:#eefaf0,stroke:#4b9b63,stroke-width:1px;
+
+class Internet,DMZ,LAN,UMSCLUSTER zone;
+class EXT,INT,ICG,LB,UMS1,UMS2,ADM core;
+class DB db;
+class CLOUD cloud;
+```
+
+- A more advanced diagram that includes:
+    - Internal devices (no ICG)
+    - External devices via ICG
+    - Distributed UMS
+    - Database
+    - App Portal / Licensing / Insight cloud connections
+
+```mermaid
+flowchart LR
+
+%% =========================
+%% ZONES
+%% =========================
+subgraph Internet["Internet / External Zone"]
+    EXT["External IGEL Devices"]
+    CLOUD["IGEL Cloud Services<br/>App Portal / Licensing / Insight / OBS"]
+end
+
+subgraph DMZ["DMZ / Edge Zone"]
+    RP["Reverse Proxy / WAF<br/>Nginx / HAProxy / F5 / Apache<br/>Listener: TCP 443 or 8443"]
+end
+
+subgraph LAN["Internal LAN / Data Center"]
+
+    INT["Internal IGEL Devices"]
+
+    subgraph UMSCLUSTER["Distributed UMS Cluster"]
+        LB["Cluster Address<br/>DNS RR / Internal Load Balancer"]
+        UMS1["UMS Server 1"]
+        UMS2["UMS Server 2"]
+    end
+
+    DB["Shared External Database<br/>PostgreSQL 5432 / MSSQL 1433 / Oracle 1521 / Derby 1527"]
+
+    ADM["UMS Admin Console / Web App"]
+
+end
+
+%% =========================
+%% INTERNAL DEVICES
+%% =========================
+INT -->|"Device mgmt<br/>HTTPS / WSS TCP 8443"| LB
+LB --> UMS1
+LB --> UMS2
+
+%% =========================
+%% EXTERNAL DEVICES
+%% =========================
+EXT -->|"Outbound device connection<br/>HTTPS / WSS TCP 443 or 8443"| RP
+
+RP -->|"Reverse proxy<br/>HTTPS / WSS TCP 8443"| LB
+
+%% =========================
+%% ADMIN ACCESS
+%% =========================
+ADM -->|"Admin access<br/>HTTPS TCP 8443"| LB
+
+%% =========================
+%% UMS DATABASE
+%% =========================
+UMS1 -->|"DB connection"| DB
+UMS2 -->|"DB connection"| DB
+
+%% =========================
+%% CLOUD SERVICES
+%% =========================
+UMS1 -->|"HTTPS TCP 443"| CLOUD
+UMS2 -->|"HTTPS TCP 443"| CLOUD
+
+%% =========================
+%% STYLING
+%% =========================
+classDef zone fill:#f7f7f7,stroke:#888,stroke-width:1px;
+classDef core fill:#eef6ff,stroke:#4a78c2,stroke-width:1px;
+classDef db fill:#f4f0ff,stroke:#7a5cc2,stroke-width:1px;
+classDef cloud fill:#eefaf0,stroke:#4b9b63,stroke-width:1px;
+
+class Internet,DMZ,LAN,UMSCLUSTER zone;
+class EXT,INT,RP,LB,UMS1,UMS2,ADM core;
+class DB db;
+class CLOUD cloud;
+```
+
+- Whiteboard diagram
+
+```mermaid
+flowchart LR
+
+    %% ZONES
+    subgraph REMOTE["Remote Devices"]
+        RD["External IGEL Devices"]
+    end
+
+    subgraph DMZ["DMZ Access Layer"]
+        RP["Reverse Proxy / WAF"]
+    end
+
+    subgraph CORE["UMS Management Plane"]
+        ID["Internal IGEL Devices"]
+
+        subgraph UMS["Distributed UMS"]
+            VIP["Cluster Address / VIP"]
+            U1["UMS Node 1"]
+            U2["UMS Node 2"]
+        end
+    end
+
+    subgraph DATA["Database Layer"]
+        DB["Shared External Database"]
+    end
+
+    subgraph CLOUD["IGEL Cloud Services"]
+        AP["App Portal"]
+        LIC["Licensing"]
+        INS["Insight"]
+        OBS["OBS"]
+    end
+
+    %% FLOWS
+    ID -->|"HTTPS / WSS 8443"| VIP
+    RD -->|"HTTPS / WSS 443 or 8443"| RP
+    RP -->|"Proxy to UMS"| VIP
+
+    VIP --> U1
+    VIP --> U2
+
+    U1 --> DB
+    U2 --> DB
+
+    U1 -->|"HTTPS 443"| AP
+    U1 -->|"HTTPS 443"| LIC
+    U1 -->|"HTTPS 443"| INS
+    U1 -->|"HTTPS 443"| OBS
+
+    U2 -->|"HTTPS 443"| AP
+    U2 -->|"HTTPS 443"| LIC
+    U2 -->|"HTTPS 443"| INS
+    U2 -->|"HTTPS 443"| OBS
+
+    %% STYLING
+    classDef zone fill:#ffffff,stroke:#666,stroke-width:1px;
+    classDef plane fill:#f8fbff,stroke:#4a78c2,stroke-width:1px;
+    classDef data fill:#faf5ff,stroke:#7a5cc2,stroke-width:1px;
+    classDef cloud fill:#f4fbf4,stroke:#4b9b63,stroke-width:1px;
+
+    class REMOTE,DMZ,CORE,DATA,CLOUD zone;
+    class RD,RP,ID,VIP,U1,U2 plane;
+    class DB data;
+    class AP,LIC,INS,OBS cloud;
+```
+
+- Simple label set for slide decks:
+
+```mermaid
+flowchart LR
+    R["Remote IGEL Devices"] -->|"443 / 8443"| P["Reverse Proxy"]
+    P -->|"8443"| V["UMS Cluster Address"]
+
+    I["Internal IGEL Devices"] -->|"8443"| V
+
+    V --> U1["UMS 1"]
+    V --> U2["UMS 2"]
+
+    U1 --> DB["Shared DB"]
+    U2 --> DB
+
+    U1 --> C["IGEL Cloud Services"]
+    U2 --> C
+```
 
 - Legend
 

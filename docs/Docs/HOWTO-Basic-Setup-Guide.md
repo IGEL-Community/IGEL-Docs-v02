@@ -143,7 +143,7 @@ Because the web console is still an early feature set, we recommend you uncheck 
 
 The UMS Installation Wizard will give you the option to open required [network ports](https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports) on the virtual machine where the UMS is installed. You may also need to allow exceptions if you are running any network security software. Below is a diagram and explanation of the basic ports you need to open to ensure all UMS components can communicate properly:
 
-#### ChatGTP Prompt for IGEL Architecture Diagrams
+#### ChatGPT Prompt for IGEL Architecture Diagrams
 
 ```prompt linenums="1"
 create a markdown mermaid diagram for the following IGEL communication ports from IGEL KB  https://kb.igel.com/en/universal-management-suite/current/igel-ums-communication-ports
@@ -294,10 +294,6 @@ INT -.->|"Optional legacy direct IGEL OS 11 flows:<br/>TCP 30001 device comms<br
 %% =========================
 %% STYLES
 %% =========================
-classDef zone fill:#f7f7f7,stroke:#888,stroke-width:1px;
-classDef core fill:#eef6ff,stroke:#4a78c2,stroke-width:1px;
-classDef db fill:#f4f0ff,stroke:#7a5cc2,stroke-width:1px;
-classDef cloud fill:#eefaf0,stroke:#4b9b63,stroke-width:1px;
 
 class Internet,DMZ,LAN,UMSCLUSTER zone;
 class EXT,INT,ICG,LB,UMS1,UMS2,ADM core;
@@ -377,10 +373,6 @@ UMS2 -->|"HTTPS TCP 443"| CLOUD
 %% =========================
 %% STYLING
 %% =========================
-classDef zone fill:#f7f7f7,stroke:#888,stroke-width:1px;
-classDef core fill:#eef6ff,stroke:#4a78c2,stroke-width:1px;
-classDef db fill:#f4f0ff,stroke:#7a5cc2,stroke-width:1px;
-classDef cloud fill:#eefaf0,stroke:#4b9b63,stroke-width:1px;
 
 class Internet,DMZ,LAN,UMSCLUSTER zone;
 class EXT,INT,RP,LB,UMS1,UMS2,ADM core;
@@ -445,10 +437,6 @@ flowchart LR
     U2 -->|"HTTPS 443"| OBS
 
     %% STYLING
-    classDef zone fill:#ffffff,stroke:#666,stroke-width:1px;
-    classDef plane fill:#f8fbff,stroke:#4a78c2,stroke-width:1px;
-    classDef data fill:#faf5ff,stroke:#7a5cc2,stroke-width:1px;
-    classDef cloud fill:#f4fbf4,stroke:#4b9b63,stroke-width:1px;
 
     class REMOTE,DMZ,CORE,DATA,CLOUD zone;
     class RD,RP,ID,VIP,U1,U2 plane;

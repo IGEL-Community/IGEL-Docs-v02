@@ -74,7 +74,7 @@ xdg-open https://tinyurl.com/igel-docs
 
 ```bash linenums="1"
 Policy Name: Handlers
-Policy value: {"extensions":{"ica":{"action:"useSystemDefault","ask": false}}}
+Policy value: {"extensions":{"ica":{"action":"useSystemDefault","ask": false}}}
 ```
 
 **Q:** How to configure Firefox to open Horizon

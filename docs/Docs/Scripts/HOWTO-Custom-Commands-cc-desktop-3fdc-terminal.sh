@@ -28,6 +28,8 @@ ColorPalette=#000000;#AA0000;#00AA00;#AA5500;#0000AA;#AA00AA;#00AAAA;#AAAAAA;#55
 EOF
 
 chmod a+r /wfs/terminalrc
+mkdir -p /userhome/.config/xfce4/terminal
+chown -R user:users /userhome/.config/xfce4
 ln -svf /wfs/terminalrc /userhome/.config/xfce4/terminal/terminalrc | $LOGGER
 
 echo "Finished" | $LOGGER

@@ -303,7 +303,7 @@ class CLOUD cloud;
 
 - A more advanced diagram that includes:
     - Internal devices (no ICG)
-    - External devices via ICG
+    - External devices via Reverse Proxy
     - Distributed UMS
     - Database
     - App Portal / Licensing / Insight cloud connections

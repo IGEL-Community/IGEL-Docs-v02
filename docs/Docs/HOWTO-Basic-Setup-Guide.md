@@ -245,7 +245,7 @@ subgraph LAN["Internal LAN / Data Center"]
         UMS2["UMS Server 2<br/>Web/App"]
     end
 
-    DB["Shared External Database<br/>PostgreSQL 5432 / MS SQL 1433 / Oracle 1521 / Derby 1527"]
+    DB["Shared External Database<br/>PostgreSQL (5432) / MS SQL (1433) / Oracle (1521)"]
 
     ADM["UMS Console / Web App Admin"]
 end
@@ -333,7 +333,7 @@ subgraph LAN["Internal LAN / Data Center"]
         UMS2["UMS Server 2"]
     end
 
-    DB["Shared External Database<br/>PostgreSQL 5432 / MSSQL 1433 / Oracle 1521 / Derby 1527"]
+    DB["Shared External Database<br/>PostgreSQL (5432) / MSSQL (1433) / Oracle (1521) "]
 
     ADM["UMS Admin Console / Web App"]
 

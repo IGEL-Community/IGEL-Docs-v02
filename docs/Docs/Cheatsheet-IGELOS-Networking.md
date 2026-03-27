@@ -518,3 +518,17 @@ Show in / out traffic
 ```bash linenums="1"
 tcpdump -n -i any icmp
 ```
+
+Debug Citrix Workspace
+
+```bash linenums="1"
+tcpdump -i any > /tmp/debug-citrix.log
+```
+
+Launch Citrix Workspace to capture log data. Enter `ctrl+c` to stop tcpdump.
+
+Command to create summary log
+
+```bash linenums="1"
+awk '{print $2, $3, $4, $5, $6, $7}' /tmp/debug-citrix.log | sort | uniq > /tmp/debug-citrix-summary.log
+```

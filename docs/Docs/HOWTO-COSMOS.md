@@ -1078,6 +1078,10 @@ journalctl -t updated
 /config/bin/create_support_information # logfiles archive is stored in: /tmp/tclogs.zip
 ```
 
+**Q:** Discovery is not working for some remote sites, what settings are needed on remote network to allow discovery?
+
+**A:** Enable `igmp snooping querier` on my switches allow discovery to work.
+
 -----
 
 ## FAQ - Ordering Icons on the Desktop

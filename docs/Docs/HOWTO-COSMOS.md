@@ -1080,7 +1080,7 @@ journalctl -t updated
 
 **Q:** Discovery is not working for some remote sites, what settings are needed on remote network to allow discovery?
 
-**A:** Enable `igmp snooping querier` on remote switches allow discovery to work.
+**A:** Enable `igmp snooping querier` on remote switches to allow discovery to work.
 
 -----
 

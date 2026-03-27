@@ -234,6 +234,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [/proc/sys/net/ipv4/ip_local_port_range](Cheatsheet-IGELOS-Networking.md#udpportrange) | :material-check-bold: | :material-check-bold:| UDP high port range |
 | [route](Cheatsheet-IGELOS-Networking.md#route)                                         | :material-check-bold: | :material-check-bold:| display/config network routes                                                                           |
 | [ss](Cheatsheet-IGELOS-Networking.md#ss)                                         | :material-check-bold: | :material-check-bold:| ss is used to dump socket statistics. It allows showing information similar to netstat. It can display more TCP and state informations than other tools. |
+| [tcpdump](Cheatsheet-IGELOS-Networking.md#tcpdump) | :material-check-bold: | :material-check-bold:| tcpdump is a packet sniffer that shows you what traffic is happening |
 
 -----
 

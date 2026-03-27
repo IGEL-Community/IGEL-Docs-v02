@@ -508,3 +508,13 @@ tcp            ESTAB               0               0                        ITC1
 tcp            ESTAB               0               0                        ITC10B6762436B2:56068                          static.90.58.203.116.clients.your-server.de:443             users:(("Island",pid=24160,fd=140))                   
 tcp            ESTAB               0               0                        ITC10B6762436B2:33632               
 ```
+
+## tcpdump
+
+tcpdump is a packet sniffer that shows you what traffic is happening 
+
+Show in / out traffic
+
+```bash linenums="1"
+tcpdump -n -i any icmp
+```

@@ -13,6 +13,25 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2026-03-27 - [11.11.123](readme11.11.123.txt)
+
+```
+The new PRIVATE BUILD 11.11.123 for IGEL Workspace is ready.
+
+This build is based on 11.11.120.
+
+These are the release notes published with that release:
+
+New Features
+--------------------------------------------------------------------------------
+
+### Citrix
+
+* Contains webex-teams-vdi_46.2.1.34187 and webex-meetings-vdi_45.6.2.7
+```
+
+-----
+
 ## 2026-02-06 - [11.11.121](readme11.11.121.txt)
 
 ```

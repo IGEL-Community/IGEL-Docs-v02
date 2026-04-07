@@ -134,41 +134,41 @@ These documents can be used if IGEL KB site is offline for maintenance.
 
 ### IGEL Breaking News
 
-- [Important Information](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/00-Important-Information.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/00-Important-Information.pdf" download>Important Information</a>
 
-- [IGEL Stratodesk](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/01-IGEL-Stratodesk.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/01-IGEL-Stratodesk.pdf" download>IGEL Stratodesk</a>
 
-- [New Features](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/02-New-Features.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/00-IGEL-Breaking-News/02-New-Features.pdf" download>New Features</a>
 
 ### IGEL OS Platform
 
-- [How to Start with IGEL](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/10-How-to-Start-with-IGEL.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/10-How-to-Start-with-IGEL.pdf" download>How to Start with IGEL</a>
 
-- [IGEL Subscription and More](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/11-IGEL-Subscription-and-More.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/11-IGEL-Subscription-and-More.pdf" download>IGEL Subscription and More</a>
 
-- [Universal Management Suite](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/12-Universal-Management-Suite.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/12-Universal-Management-Suite.pdf" download>Universal Management Suite</a>
 
-- [IGEL Cloud Gateway](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/14-IGEL-Cloud-Gateway.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/14-IGEL-Cloud-Gateway.pdf" download>IGEL Cloud Gateway</a>
 
-- [Security and Saftey](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/15-Security-and-Safety.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/01-IGEL-OS-Platform/15-Security-and-Safety.pdf" download>Security and Safety</a>
 
 ### IGEL OS 12 Apps
 
-- [IGEL OS Base System](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/20-IGEL-OS-Base-System.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/20-IGEL-OS-Base-System.pdf" download>IGEL OS Base System</a>
 
-- [IGEL Apps](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/21-IGEL-Apps.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/21-IGEL-Apps.pdf" download>IGEL Apps</a>
 
-- [Third Party Apps](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/22-Third-Party-Apps.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/22-Third-Party-Apps.pdf" download>Third Party Apps</a>
 
-- [IGEL App Creator](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/23-IGEL-App-Creator.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/02-IGEL-OS-12-Apps/23-IGEL-App-Creator.pdf" download>IGEL App Creator</a>
 
-### Genernal Product Information
+### General Product Information
 
-- [Hardware](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/03-General-Product-Information/30-Hardware.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/03-General-Product-Information/30-Hardware.pdf" download>Hardware</a>
 
 ### IGEL OS 11
 
-- [IGEL OS 11](https://github.com/IGEL-Community/IGEL-Docs-KB/blob/main/IGEL-KB/IGEL-KB-V02/04-IGEL-OS-11/40-IGEL-OS-11.pdf)
+- <a href="https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-KB/main/IGEL-KB/IGEL-KB-V02/04-IGEL-OS-11/40-IGEL-OS-11.pdf" download>IGEL OS 11</a>
 
 <!---
 Comments

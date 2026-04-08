@@ -881,6 +881,16 @@ There is a new mechanism in 12.6.1 that runs a check on every certificate in /wf
 - Consider using x509 format certificates instead of your current ones
 - Upload your certificates as 'Undefined' file type in UMS and place somewhere else other than /wfs/ca-certs
 
+**Q:** How to select a USB WiFi adapter for IGEL OS?
+
+**A:** Select a USB WiFI dapter that is supported by Linux kernel. IGEL OS 12.7.5 has Linux kernel (6.12.20) and IGEL OS 12.8.X has Linux kernel (6.18). Command to how the Linux kernel version: 
+
+```bash linenums="1"
+uname -r
+```
+[BrosTrend - Linux Support](https://linux.brostrend.com/supported-distributions/) states that Linux kernels include their own drivers (modules) for most of their adapters, so they work out of the box in the distributions that have them.  Link to
+[BrosTrend USB WiFi Adapters](https://www.brostrend.com)
+
 -----
 
 ## FAQ - Device Specific Data

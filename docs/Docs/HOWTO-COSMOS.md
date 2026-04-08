@@ -883,7 +883,7 @@ There is a new mechanism in 12.6.1 that runs a check on every certificate in /wf
 
 **Q:** How to select a USB WiFi adapter for IGEL OS?
 
-**A:** Select a USB WiFI adapter that is supported by Linux kernel. IGEL OS 12.7.5 has Linux kernel (6.12.20) and IGEL OS 12.8.X has Linux kernel (6.18). Command to how the Linux kernel version: 
+**A:** Select a USB WiFI adapter that is supported by Linux kernel. IGEL OS 12.7.5 has Linux kernel (6.12.20) and IGEL OS 12.8.X has Linux kernel (6.18.6). Command to how the Linux kernel version: 
 
 ```bash linenums="1"
 uname -r

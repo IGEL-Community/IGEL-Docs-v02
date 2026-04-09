@@ -1078,7 +1078,7 @@ journalctl -t updated
 
 **Q:** Does Distributed Peer Update work with apps create by `IGEL App Creator`?
 
-**A:** As of 18 December, 2025 the Distributed Peer Update does `NOT` support `IGEL App Creator` apps. This will be fixed in a future version
+**A:** As of 9 April, 2026 the Distributed Peer Update does support `IGEL App Creator` apps with IGEL OS 12.8.0
 
 **Q:** Having issue with Distributed Peer Update and need to open a support ticket, what is needed to be collected from `OS 12 server` and `OS 12 client`?
 

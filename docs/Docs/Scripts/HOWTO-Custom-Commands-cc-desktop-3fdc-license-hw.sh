@@ -20,7 +20,7 @@ UNIT_ID=$(get_unit_id)
 
 echo "Starting" | $LOGGER
 
-if [[ -f ${LICENSE_FILE} && $(grep -q ${UNIT_ID} ${LICENSE_FILE}; echo $?) -eq 0 ]]; then
+if [[ -f ${LICENSE_FILE} && $(sed '/macaddress/s/://g' ${LICENSE_FILE} | grep -q ${UNIT_ID}; echo $?) -eq 0 ]]; then
 echo "File ${LICENSE_FILE} exists and contains ${UNIT_ID}: Licensing device"
 install_igel_license ${LICENSE_FILE}
 else

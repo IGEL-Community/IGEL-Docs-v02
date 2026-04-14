@@ -1,0 +1,26 @@
+# Choose a base image
+FROM debian:bookworm AS build
+
+# Set a working directory inside the image
+WORKDIR /tmp
+COPY . .
+
+# Copy deb collection script
+COPY docker-igel-iso-os12.sh .
+COPY newiso/ /newiso/
+
+# Install dependencies
+RUN apt update && apt-get install -y curl mount gnupg binutils xz-utils unzip syslinux-utils genisoimage -y | tee -a debug.txt
+
+# run get-debs to collect the deb files
+RUN bash ./docker-igel-iso-os12.sh | tee -a debug.txt
+
+# copy deb files to out folder
+RUN mkdir -p /out
+#RUN cp -vR * /out/
+RUN cp *.iso /out/
+RUN cp debug.txt /out/
+
+# copy files out of container
+FROM scratch AS export
+COPY --from=build /out/ /

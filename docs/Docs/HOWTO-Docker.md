@@ -512,6 +512,7 @@ comm -1 -3 /tmp/find_root_listing1.txt /tmp/find_root_listing2.txt \
 popd
 
 cp /tmp/sapgui.tar.bz2 /output/sapgui.tar.bz2
+cp /root/sapgui.log /output/sapgui.log
 ```
 
 ### Save the following as `run-docker.sh`:

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profile>
+    <profile_id>121</profile_id>
+    <profilename>Enable_Terminal_Generic</profilename>
+    <firmware>
+        <model>IGEL OS 11</model>
+        <version>11.03.103.01</version>
+    </firmware>
+    <description>Enables a terminal session icon</description>
+    <overwritesessions>false</overwritesessions>
+    <is_master_profile>false</is_master_profile>
+    <is_igel_os>true</is_igel_os>
+    <settings/>
+    <instancesettings>
+        <instance classprefix="sessions.xterm%" serialnumber="1478ddbb:16fa18a7001:-8000172.0.4.237">
+            <ivalue classname="sessions.xterm%.applaunch" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+            <ivalue classname="sessions.xterm%.applaunch_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+            <ivalue classname="sessions.xterm%.applaunch_system" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.appliance_mode_access" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.autostart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.cmdline" variableExpression="" variableSubstitutionActive="false"></ivalue>
+            <ivalue classname="sessions.xterm%.desktop" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+            <ivalue classname="sessions.xterm%.desktop_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+            <ivalue classname="sessions.xterm%.hotkey" variableExpression="" variableSubstitutionActive="false"></ivalue>
+            <ivalue classname="sessions.xterm%.hotkeymodifier" variableExpression="" variableSubstitutionActive="false">None</ivalue>
+            <ivalue classname="sessions.xterm%.icon" variableExpression="" variableSubstitutionActive="false">xterm</ivalue>
+            <ivalue classname="sessions.xterm%.menu_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+            <ivalue classname="sessions.xterm%.name" variableExpression="" variableSubstitutionActive="false">Terminal</ivalue>
+            <ivalue classname="sessions.xterm%.position" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+            <ivalue classname="sessions.xterm%.pulldown" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.quick_start" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.restart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.scardautostart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.snotify" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+            <ivalue classname="sessions.xterm%.startmenu" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+            <ivalue classname="sessions.xterm%.startmenu_system" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.usehotkey" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+            <ivalue classname="sessions.xterm%.waittime2autostart" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+            <ivalue classname="sessions.xterm%.waittime2restart" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+        </instance>
+    </instancesettings>
+</profile>

@@ -120,7 +120,7 @@ Measurement Id: G-PTNHLB3WSX
 - [03-ICG](Docs/ReleaseNotes/03-ICG)
 - [04-OS 12](Docs/ReleaseNotes/04-OS12)
 
-### [IGEL Software Downloads](https://www.igel.com/software-downloads/)
+### [IGEL Software Downloads](https://app.igel.com/software)
 
 ----------
 

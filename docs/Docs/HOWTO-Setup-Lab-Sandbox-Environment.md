@@ -150,7 +150,7 @@ Download software:
 -	Linux ISO [Ubuntu Desktop 22.04]( https://releases.ubuntu.com/22.04/)
 -	Optional – [Windows Server 2019 ISO - 180 day trial](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019?filetype=ISO)
 -	Optional – [Windows Server 2022 ISO - 180 day trial](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022?filetype=ISO)
--	[IGEL Software](https://www.igel.com/software-downloads) - OS 11 / 12, UMS - Workspace Edition, ICG - Enterprise Management Pack
+-	[IGEL Software](https://app.igel.com/software) - OS 11 / 12, UMS - Workspace Edition, ICG - Enterprise Management Pack
 -	[IGEL Community GitHub: Custom Partitions](https://github.com/IGEL-Community/IGEL-Custom-Partitions)
 -	[IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
 

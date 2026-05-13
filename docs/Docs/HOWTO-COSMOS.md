@@ -237,7 +237,7 @@ https://UMS_SERVER_URL:443/ums/check-status
 **A:** 
 If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it's because you have 'UD Pockets' in your environment. (See the [IGEL KB: UMS 12.02.100 Known issues](https://kb.igel.com/en/universal-management-suite/current/known-issues-igel-ums-12-02-100)). Simply deleting all your UD Pockets from UMS, and waiting until the next index (hourly) will fix your Search. A new UMS 12.02.x version in the works to correct this issue.
 
-**Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://www.igel.com/software-downloads/workspace-edition/). We are not ready to move to UMS 12.
+**Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://app.igel.com/software). We are not ready to move to UMS 12.
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
 
@@ -438,7 +438,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** Does OS 12 support SCCM deployments?
 
-**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://www.igel.com/software-downloads/igel-os-12-secure-endpoint/). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os/11.10/igel-os-sccm-add-on). [HOWTO Light and Zero Touch Deployments of OS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Light_Zero_Touch_Deployments/)
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://app.igel.com/software). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os/11.10/igel-os-sccm-add-on). [HOWTO Light and Zero Touch Deployments of OS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Light_Zero_Touch_Deployments/)
 
 **Q:** Does OS 12 support PXE boot deployments?
 

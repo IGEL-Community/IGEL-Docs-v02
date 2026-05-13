@@ -4,7 +4,7 @@
 
 ## Product: TECRA A40-J (PMM10U) || Version: PMM10U-00101U
 
-### Tested with [IGEL OS 11.07.170+](https://www.igel.com/software-downloads/workspace-edition/)
+### Tested with [IGEL OS 11.07.170+](https://app.igel.com/software)
 
 ### Dynabook: [Demo Video](https://www.linkedin.com/posts/dynabookeurope_igel-igelos-vdisec-activity-6879395877476147200-XU6L)
 

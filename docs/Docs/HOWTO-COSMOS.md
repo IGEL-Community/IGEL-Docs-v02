@@ -579,10 +579,13 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **A:** OS 11.10.210 and UMS 12.06.110 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/en/igel-os/current/upgrading-migration-from-igel-os-11-to-igel-os-12)
 
+**Q:** How to upgrade devices from IGEL OS 11 to OS 12 for multiple / low bandwidth sites?
+
+**A:** With IGEL OS 11.11.150 IGEL OS 12 base System App will be pulled from peer devices instead of retrieving it from the IGEL Universal Management Suite (UMS) or the IGEL App Portal. [IGEL KB: How to Upgrade Devices from IGEL OS 11 to OS 12 Using Distributed Peer Update](https://kb.igel.com/migration-to-igel-os-12/current/how-to-upgrade-devices-from-igel-os-11-to-os-12-using-distributed-peer-update). This migration approach is recommended for environments with multiple sites or limited WAN bandwidth, as it reduces external network utilization.
+
 **Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
 
 **A:** [IGEL KB: Steps to install new OS on UD Pocket](https://kb.igel.com/en/igel-os/11.10/how-to-reflash-your-igel-ud-pocket)
-
 
 **Q:** How to debug OS 11 to OS 12 upgrade?
 

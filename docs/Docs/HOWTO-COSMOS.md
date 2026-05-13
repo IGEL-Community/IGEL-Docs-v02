@@ -37,6 +37,15 @@ The first registered user of a customer company account becomes a designated “
 
 Details regarding Customer registration, Super Admin, Role assignments and permissions can be found in the following Knowledge Base article: [IGEL KB: Managing-Users-And-Roles-In-The-Igel-Customer-Portal](https://kb.igel.com/en/how-to-start-with-igel/current/managing-users-and-roles-in-the-igel-customer-port)
 
+Quick access links:
+
+- [IGEL App Portal](https://app.igel.com)
+- [IGEL Cloud Services Portal (Customer Portal)](https://support.igel.com/csm)
+
+<!---
+- [Employee Service Center for internal Cloud Services access requests](https://serviceportal.igel.com/esc) (go to: IGEL Services / Cloud Services Access / Request access)
+-->
+
 ----------
 
 ----------

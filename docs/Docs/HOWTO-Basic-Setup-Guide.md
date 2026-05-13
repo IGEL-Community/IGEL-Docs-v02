@@ -38,8 +38,8 @@ If you have old hardware that still has life in it, and it has an x86 architectu
 
 ### Create an IGEL OS formatted USB stick to convert your endpoint
 
-- [OS 11 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/workspace-edition/)
-- [OS 12 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://www.igel.com/software-downloads/cosmos/)
+- [OS 11 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://app.igel.com/software)
+- [OS 12 - Download the OSC (OS Converter) software here. (Choose the latest version)](https://app.igel.com/software)
 - Insert a spare USB stick. We recommend 4GB or larger.
 - Unzip the OSC file you downloaded and run Preparestick.exe.
 
@@ -122,7 +122,7 @@ To get the UMS up and running, you can divide the work into these main sections:
 
 ### Install the UMS Software
 
-[Download the latest UMS software here](https://www.igel.com/software-downloads/workspace-edition/). Go to Universal Management Suite > Windows or Linux and download the latest release. Copy the setup file to your prepared UMS server. 
+[Download the latest UMS software here](https://app.igel.com/software). Go to Universal Management Suite > Windows or Linux and download the latest release. Copy the setup file to your prepared UMS server. 
 Execute the setup file and follow the installation wizard. The default settings should be fine.
 
 The Installation Wizard will cover the following setup items:
@@ -958,7 +958,7 @@ For Self-Signed Certificates:
 
 -	Your end certificate now shows up under the root certificate chain AND under the “Select Certificate” section. With the new certificate selected, click “Next.”  Accept the EULA and click “Next” again.
 
--	[Click here and download the latest ICG installation package (BIN file)](https://www.igel.com/software-downloads/cosmos/).  Save it where the UMS can see it.
+-	[Click here and download the latest ICG installation package (BIN file)](https://app.igel.com/software). Save it where the UMS can see it.
 
 -	On the “Enter Install Parameters” window, type in the internal address of your ICG server (reachable from the UMS) and the username and password of the account with root privilege on your ICG server. On the Path to Installer field, browse to the location of your ICG installer BIN file which you previously downloaded.
 

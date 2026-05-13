@@ -151,27 +151,27 @@ IGEL OS:
 <!--
 UPDATE
 -->
-- IGEL OS 11.10.290 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.10.270 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.10.290 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
+- IGEL OS 11.10.270 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
 - IGEL OS 11.10.225 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.10.222 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.10.218 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
-- IGEL OS 11.10.210 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.10.190 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.10.150 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.10.100 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.10.210 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
+- IGEL OS 11.10.190 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
+- IGEL OS 11.10.150 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
+- IGEL OS 11.10.100 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
 - IGEL OS 11.09.313 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
-- IGEL OS 11.09.310 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
-- IGEL OS 11.09.260 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.09.310 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
+- IGEL OS 11.09.260 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
 - IGEL OS 11.09.261 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.269 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
-- IGEL OS 11.09.160 - publicly available (download directly inside UMS or [IGEL Download site](https://www.igel.com/software-downloads/workspace-edition/))
+- IGEL OS 11.09.160 - publicly available (download directly inside UMS or [IGEL Download site](https://app.igel.com/software)
 - IGEL OS 11.09.163 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 - IGEL OS 11.09.164 - [steps to request private build](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/01-OS11/#steps-to-request-a-private-build)
 
 IGEL UMS:
 
-- IGEL UMS 12.09.100 - [IGEL download site](https://www.igel.com/software-downloads/)
+- IGEL UMS 12.09.100 - [IGEL download site](https://app.igel.com/software)
 
 -----
 

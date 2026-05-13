@@ -20,6 +20,27 @@ This is a comment section
 
 ----------
 
+## IGEL Software Downloads
+
+For compliance reasons, downloads are now available only through the IGEL App Portal.  The previous IGEL software download website has been removed.
+
+Same as with OS 12 apps already in the App Portal, the above software components remain visible to users. However, downloading software from the App Portal requires users to be registered with IGEL and logged into the App Portal.
+
+User registration is handled through the IGEL Cloud Services Portal (Customer Portal). During registration, customers receive their initial credentials, which can then also be used to log into the App Portal.
+
+The first registered user of a customer company account becomes a designated “Super Admin” and can invite additional users and assign to them permissions, including:
+
+- App Portal access
+- UMS management
+- Support case management
+- and other additional role-based permissions
+
+Details regarding Customer registration, Super Admin, Role assignments and permissions can be found in the following Knowledge Base article: [IGEL KB: Managing-Users-And-Roles-In-The-Igel-Customer-Portal](https://kb.igel.com/en/how-to-start-with-igel/current/managing-users-and-roles-in-the-igel-customer-port)
+
+----------
+
+----------
+
 ## IGEL Cloud Services and Support
 
 Currently, the IGEL Cloud Services and apps available in the IGEL App Portal are stored in Azure Region West-Europe, location Amsterdam. The associated app metadata are stored in Frankfurt (Germany west central).

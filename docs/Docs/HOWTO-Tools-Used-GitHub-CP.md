@@ -56,7 +56,9 @@
 ## Create GitHub Action to Create Custom Partition Zip Package
 
 - Use GitHub Actions to start a virtual machine (VM), use git to pull the repository files into the VM, run script to create Custom Partition (CP) zip files and then update the repository with the zip files.
+
 - The script will create CP zip files if they do not exist or if the files used in the zip file have changed.
+
 - Copy and edit the following code and place into file:  `<Repository-home>/.github/workflows/main.yml`
 
 ```bash linenums="1"

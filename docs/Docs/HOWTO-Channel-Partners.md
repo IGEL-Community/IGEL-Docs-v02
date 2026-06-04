@@ -205,6 +205,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 - Support ratio of one FTE (full time equivalent) for 20,000+ devices (1:20,000+)
 - Dedicated management or management as a service
+- Automated real-time, policy-based orchestration that determines which applications are available, which OS features are enabled, and how the desktop behaves as the environment changes
 
 ### Applications
 

@@ -217,6 +217,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 - Chain of trust (secured boot sequence)
 - Secure boot support
 - FIPS 140-.2, German BSI certification, and ISO 270001
+- Certificate Authority (CA) Proxy
 - Secure Digital Signage
 
 ### Services
@@ -235,7 +236,7 @@ Build and deliver valuable and secure managed endpoint services to your Customer
 
 ### Future-proof
 
-- Long term vision beyond traditional products (IoT, Hypervisor, analytics, etc.)
+- Long term vision beyond traditional products (IoT, Hypervisor, Containers, analytics, etc.)
 
 ### Updates and Architecture
 

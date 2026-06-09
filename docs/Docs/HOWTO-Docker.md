@@ -590,7 +590,7 @@ FROM debian:bookworm AS build
 WORKDIR /tmp
 COPY . .
 
-# Copy deb collection script
+# Copy in the files
 COPY docker-igel-iso-os12.sh .
 COPY osc*.iso .
 COPY packages .
@@ -599,10 +599,10 @@ COPY modify_osc_image* .
 # Install dependencies
 RUN apt update && apt-get install jq xorriso unzip patch -y | tee -a debug.txt
 
-# run get-debs to collect the deb files
+# run iso builder
 RUN bash ./docker-igel-iso-os12.sh | tee -a debug.txt
 
-# copy deb files to out folder
+# copy files to out folder
 RUN mkdir -p /out
 #RUN cp -vR * /out/
 RUN cp *.iso /out/

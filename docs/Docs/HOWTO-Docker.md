@@ -534,7 +534,7 @@ docker run --network host --rm \
 
 -----
 
-## Use Docker to modify an OSC ISO image (12.9.0+) with igel-apps and optional additional content
+## Use Docker to modify an OSC ISO image (12.9.0+) with IGEL Apps and optional additional content
 
 With IGEL OS 12.9.0+ the OCS ISO package has `modify_osc_image` script that can be run on Ubuntu / Debian system to create an ISO installer image that can include applications and other settings.
 
@@ -578,7 +578,6 @@ Summary of steps:
 - Create `modify_osc_image.patch`
 - Create `packages` folder and copy the application packages downloaded from `app.igel.com` into `packages` folder
 - Copy the `osc iso image` and `modify_ocs_image` from osc preparestick folder
-- Follow notes in `run-docker.sh` to setup X11 items
 - Run `run-docker.sh` to create `artifacts` folder with the new iso image
 
 ### Save the following as `dockerfile`:

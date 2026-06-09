@@ -529,3 +529,149 @@ docker run --network host --rm \
   -v "$PWD/output:/output" \
   sapgui-builder
 ```
+
+-----
+
+-----
+
+## Use Docker to modify an OSC ISO image (12.9.0+) with igel-apps and optional additional content
+
+With IGEL OS 12.9.0+ the OCS ISO package has `modify_osc_image` script that can be run on Ubuntu / Debian system to create an ISO installer image that can include applications and other settings.
+
+Docker can be used on IGEL OS to run the `modify_ocs_image`.
+
+```bash linenums="1"
+Script to modify an OSC ISO image with igel-apps and optional additional content (version 0.9igel1778165738)
+
+Usage: ./modify_osc_image --iso <iso_file> --apps-path <apps_directory> [OPTIONS]
+
+Mandatory parameters:
+  --iso <file>                      Path to the input ISO file
+  --apps-path <directory>           Path containing the .ipkg apps to add to the ISO
+
+Optional parameters:
+  --cert-path <directory>           Path containing certificates
+  --lic-path <directory>            Path containing licenses
+  --settings <file>                 Path to the pre-configured settings file setup.ini
+  --ci-path <directory>             Path containing corporate identity files like wallpapers
+  --cmty-certs-path <directory>     Path containing community apps certificates
+  --cmty-im-certs-path <directory>  Path containing community apps intermediate certificates
+  --after-install <action>          Action after installation: 'reboot' or 'shutdown'
+  --unattended-mode                 Enable unattended mode (flag, no value needed)
+  -v, --version                     Display the version of this script
+  -h, --help                        Display this help message
+
+Examples:
+  ./modify_osc_image --iso /path/to/igelos.iso --apps-path /path/to/apps
+  ./modify_osc_image --iso /path/to/igelos.iso --apps-path /path/to/apps --cert-path /path/to/certs --settings /path/to/setup.ini
+  ./modify_osc_image --iso /path/to/igelos.iso --apps-path /path/to/apps --after-install reboot
+
+Output:
+  Creates a new ISO file with timestamp: <original_name>_<timestamp>.iso
+```
+
+Summary of steps:
+
+- Create `dockerfile`
+- Create `docker-igel-iso-os12.sh`
+- Create `run-docker.sh`
+- Create `modify_osc_image.patch`
+- Create `packages` folder and copy the application packages downloaded from `app.igel.com` into `packages` folder
+- Copy the `osc iso image` and `modify_ocs_image` from osc preparestick folder
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to create `artifacts` folder with the new iso image
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+# Choose a base image
+FROM debian:bookworm AS build
+
+# Set a working directory inside the image
+WORKDIR /tmp
+COPY . .
+
+# Copy deb collection script
+COPY docker-igel-iso-os12.sh .
+COPY osc*.iso .
+COPY packages .
+COPY modify_osc_image* .
+
+# Install dependencies
+RUN apt update && apt-get install jq xorriso unzip patch -y | tee -a debug.txt
+
+# run get-debs to collect the deb files
+RUN bash ./docker-igel-iso-os12.sh | tee -a debug.txt
+
+# copy deb files to out folder
+RUN mkdir -p /out
+#RUN cp -vR * /out/
+RUN cp *.iso /out/
+RUN cp debug.txt /out/
+
+# copy files out of container
+FROM scratch AS export
+COPY --from=build /out/ /
+```
+
+### Save the following as `docker-igel-iso-os12.sh`
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+# Called by run-docker.sh
+
+patch modify_osc_image < modify_osc_image.patch
+./modify_osc_image --iso osc-*.iso --unattended-mode --after-install reboot --apps-path packages
+```
+
+### Save the following as `run-docker.sh`
+
+```bash linenums="1"
+#!/bin/bash
+
+rm -rf artifacts
+mkdir -p artifacts
+docker system prune -f
+#docker buildx build --progress=plain --network host --target export --output type=local,dest=./artifacts .
+docker buildx build --network host --target export --output type=local,dest=./artifacts .
+docker system prune -f
+```
+
+### Save the following as `modify_osc_image.patch`
+
+```patch linenums="1"
+--- orig_modify_osc_image	2026-06-09 12:37:01.060864258 -0600
++++ modify_osc_image	2026-06-09 14:49:52.536870823 -0600
+@@ -714,7 +714,7 @@
+         echo "Please review all End User License Agreements."
+         echo ""
+         echo -n "Press any key to open in your default text viewer..."
+-        read -n 1 -s -r
++        #read -n 1 -s -r
+         echo ""
+         echo ""
+ 
+@@ -732,7 +732,8 @@
+         # No GUI available - offer to view with less
+         echo "Would you like to read the EULAs now using 'less'? (y/n)"
+         echo -n "Answer: "
+-        read -r view_answer
++        #read -r view_answer
++        view_answer="n"
+ 
+         if [[ "${view_answer,,}" =~ ^y ]]; then
+             echo ""
+@@ -747,7 +748,8 @@
+     # Simple acceptance prompt
+     echo ""
+     echo -n "Do you accept all End User License Agreements? (yes/no): "
+-    read -r answer
++    #read -r answer
++    answer="y"
+ 
+     case "${answer,,}" in
+         yes|y)
+```

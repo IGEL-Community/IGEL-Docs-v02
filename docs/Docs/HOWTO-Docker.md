@@ -605,7 +605,8 @@ RUN bash ./docker-igel-iso-os12.sh | tee -a debug.txt
 # copy files to out folder
 RUN mkdir -p /out
 #RUN cp -vR * /out/
-RUN cp *.iso /out/
+#RUN cp *.iso /out/
+RUN cp osc-*_*_*.iso /out/
 RUN cp debug.txt /out/
 
 # copy files out of container

@@ -13,6 +13,39 @@ Please keep in mind a Private Build is a fully supported firmware!
 
 -----
 
+## 2026-06-08 - [11.11.131](readme11.11.131.txt)
+
+```
+The new PRIVATE BUILD 11.11.131 for IGEL Workspace is ready.
+
+This build is based on 11.11.100.
+
+These are the release notes published with that release:
+
+Release Notes 11.11.131 (Based On 11.11.100)
+--------------------------------------------------------------------------------
+
+New Features
+--------------------------------------------------------------------------------
+
+### Migration
+
+* The feature adds the possibility to iterate through a list of repositories and
+  retry connecting if it fails. All repositories are contacted three times
+  before the migration stops with error.
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+### Migration
+
+* On systems where an MBR and GPT partition table are present the GPT table will
+  be removed to fix broken migration to OS12.
+* Fixes broken URL for buddy base system downloads.
+```
+
+-----
+
 ## 2026-05-13 - [11.11.150](readme11.11.150.txt)
 
 ```

@@ -675,3 +675,65 @@ docker system prune -f
      case "${answer,,}" in
          yes|y)
 ```
+
+-----
+
+-----
+
+## Use Docker to run Remmina
+
+Remmina is remote access screen and file sharing app (RDP, SSH, VNC)
+
+Summary of steps:
+
+- Create `dockerfile`
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to build the image, install latest Remmina, and run Remmina
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+# Debian 12 (bookworm)
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+ && mkdir -p /etc/apt/keyrings 
+
+RUN apt-get update && apt-get install -y remmina remmina-common remmina-plugin-rdp remmina-plugin-secret remmina-plugin-vnc
+
+# Create group and user
+RUN groupadd -r appuser && useradd -r -g appuser -m appuser
+
+# Switch to the new user
+USER appuser
+
+# Run Remmina
+ENTRYPOINT ["remmina"]
+```
+
+### Save the following as `run-docker.sh`:
+
+```bash linenums="1"
+#!/bin/bash
+
+#
+# For X11
+# As user obtain xauth -f ~/.Xauthority list|tail -1
+# As root xauth add string-from-above-command
+# As root xhost +local:docker
+#
+
+docker system prune -f
+docker build --network host -t remmina:bookworm .
+
+docker run --network host --rm -it \
+  --security-opt seccomp=unconfined \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  remmina:bookworm
+```

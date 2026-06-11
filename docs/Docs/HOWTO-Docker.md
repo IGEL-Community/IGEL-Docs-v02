@@ -728,12 +728,20 @@ ENTRYPOINT ["remmina"]
 # As root xhost +local:docker
 #
 
+IMAGE="remmina:bookworm"
+
 docker system prune -f
-docker build --network host -t remmina:bookworm .
+
+if docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    echo "Image $IMAGE does not exist."
+    docker build --network host -t $IMAGE .
+fi
 
 docker run --network host --rm -it \
   --security-opt seccomp=unconfined \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
-  remmina:bookworm
+  $IMAGE
 ```

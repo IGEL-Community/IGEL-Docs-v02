@@ -91,7 +91,7 @@ Release Notes of installable IGEL OS 12 base system
   - Added a potential workaround for the freezes by disabling CWSR (see below) on affected AMD Krackan Point devices using the amdgpu driver (including Lenovo T14 Gen 6 AMD).
   - Added new setup parameter `x.drivers.amdgpu.cwsr_enable` to allow forcing the Compute Wave Store and Resume (CWSR) feature/optimization on or off. By default, the kernel setting is used (enabled if supported).
   - Added new setup parameter `x.drivers.amdgpu.gpu_recovery` to allow toggling a `amdgpu_gpu_recover` file in debugfs - which can be **read** to force a GPU reset - on or off. By default, the kernel setting is used (disabled).
-  ```
+```
 
 |  IGEL Setup  |  Parameter  |  Registry   |  Range      |  Value      |
 | ------ | ------ | ------ | ------ | ------ |

@@ -233,6 +233,13 @@ more /wfs/setup.ini | grep "ip="
 ip=<igelrmserver.int.acme.org>
 ```
 
+**search file files in /etc that contain `userinterface`, `windowmanager`, and `network`**
+
+```bash linenums="1"
+cd /etc
+grep -irl userinterface | xargs grep -il windowmanager | xargs grep -il network
+```
+
 ## kill
 
 kill a running task by process id

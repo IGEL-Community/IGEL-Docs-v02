@@ -72,11 +72,11 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - Create user accounts for each environment and assign to the permission groups
 
     - prod-adm-userid (assigned to prod-admin)
-    - prod-hd-userid (assigned to prod-helpdesk)
+    - prod-hd-userid (assigned to prod-hd)
     - qa-adm-userid (assigned to qa-admin)
-    - qa-hd-userid (assigned to qa-helpdesk)
+    - qa-hd-userid (assigned to qa-hd)
     - test-adm-userid (assigned to test-admin)
-    - test-hd-userid (assigned to test-helpdesk)
+    - test-hd-userid (assigned to test-hd)
     - Etc.
 
 - Set permissions in Devices and Configuration such that users can only see items for the environment that they are logged into

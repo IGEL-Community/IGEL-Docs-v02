@@ -83,7 +83,7 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 - Once a profile passes the QA, then move into the Production environment.
 
-- Use a revision control system, such as GitHub, hold the unzipped exported profiles for versioning.
+- Use a revision control system, such as GitHub, to hold the unzipped exported profiles for versioning.
 
 -----
 

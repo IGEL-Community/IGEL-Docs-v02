@@ -51,6 +51,40 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - Global update configuration reviewed
 - UMS ID imported into Customer / Support Portal
 
+### Use Single UMS for Production, QA / Pre-Production, Test, and Sandbox
+
+#### [Permission Management in the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/permission-management-in-the-igel-ums-web-app)
+
+- Create Folder Trees in Devices and Configuration for each environment
+
+    - Production
+    - QA
+    - Test
+    - Sandbox
+    - Etc.
+
+- Create permission groups for each environment:
+
+    - Administrators (prod-admin, qa-admin, etc.)
+    - Help Desk (prod-hd, qa-hd, etc.)
+    - Etc.
+
+- Create user accounts for each environment and assign to the permission groups
+
+    - prod-adm-userid (assigned to prod-admin)
+    - prod-hd-userid (assigned to prod-helpdesk)
+    - qa-adm-userid (assigned to qa-admin)
+    - qa-hd-userid (assigned to qa-helpdesk)
+    - test-adm-userid (assigned to test-admin)
+    - test-hd-userid (assigned to test-helpdesk)
+    - Etc.
+
+- Set permissions in Devices and Configuration such that users can only see items for the environment that they are logged into
+
+- Once a profile passes the QA, then move into the Production environment.
+
+- Use a revision control system, such as GitHub, hold the unzipped exported profiles for versioning.
+
 -----
 
 ## ICG vs. Reverse Proxy

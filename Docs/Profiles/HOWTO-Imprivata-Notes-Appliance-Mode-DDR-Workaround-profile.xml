@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles>
+    <profile>
+        <profile_id>109689</profile_id>
+        <profilename>Appliance Mode DDR Workaround</profilename>
+        <firmware>
+            <model>IGEL OS 11</model>
+            <version>11.07.170.01</version>
+        </firmware>
+        <description>Workaround for Default Directory Rules Appliance Mode. Automatically reboots device, once configuration is complete.</description>
+        <overwritesessions>false</overwritesessions>
+        <is_master_profile>false</is_master_profile>
+        <is_igel_os>true</is_igel_os>
+        <settings>
+            <pclass name="userinterface.rccustom.custom_cmd_x11_final">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">if &amp;lb ! -f /wfs/.applmode_final_reboot_done &amp;rb ; then touch /wfs/.applmode_final_reboot_done ; systemctl reboot ; fi</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+        </settings>
+        <instancesettings/>
+    </profile>
+</profiles>

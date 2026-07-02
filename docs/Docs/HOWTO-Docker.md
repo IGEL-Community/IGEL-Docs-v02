@@ -222,6 +222,14 @@ docker run --network host --rm -it \
   --security-opt seccomp=unconfined \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e PULSE_SERVER=unix:/run/user/777/pulse/native \
+  -e PULSE_COOKIE=/root/.config/pulse/cookie \
+  -v /run/user/777/pulse:/run/user/777/pulse \
+  -v /userhome/config/pulse/cookie:/root/.config/pulse/cookie:ro \
+  --device=/dev/dri \
+  --group-add video \
+  --group-add audio \
+  --shm-size=2g \
   chrome:bookworm
 ```
 

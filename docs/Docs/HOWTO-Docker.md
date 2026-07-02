@@ -206,8 +206,16 @@ ENTRYPOINT ["google-chrome-stable"]
 # As root xhost +local:docker
 #
 
+IMAGE="chrome:bookworm"
+
 docker system prune -f
-docker build --network host -t chrome:bookworm .
+
+if docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    echo "Image $IMAGE does not exist."
+    docker build --network host -t $IMAGE .
+fi
 
 docker run --network host --rm -it \
   --security-opt seccomp=unconfined \
@@ -351,8 +359,16 @@ ENTRYPOINT ["mono", "MyApp.exe"]
 # As root xhost +local:docker
 #
 
+IMAGE="my-mono-app:bookworm"
+
 docker system prune -f
-docker build --network host -t my-mono-app:bookworm .
+
+if docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    echo "Image $IMAGE does not exist."
+    docker build --network host -t $IMAGE .
+fi
 
 docker run --network host --rm -it \
   --security-opt seccomp=unconfined \
@@ -428,10 +444,18 @@ CMD ["bash"]
 # As root xhost +local:docker
 #
 
+IMAGE="wine:debian"
+
 mkdir -p work
 
 docker system prune -f
-docker build --network host -t wine:debian .
+
+if docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    echo "Image $IMAGE does not exist."
+    docker build --network host -t $IMAGE .
+fi
 
 docker run --network host --rm -it \
   --security-opt seccomp=unconfined \

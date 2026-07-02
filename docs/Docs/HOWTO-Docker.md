@@ -205,6 +205,7 @@ ENTRYPOINT ["google-chrome-stable"]
 # As root xauth add string-from-above-command
 # As root xhost +local:docker
 #
+#
 
 IMAGE="chrome:bookworm"
 

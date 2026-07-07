@@ -609,7 +609,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** Is ICG 12 needed with UMS 12 for OS 12 devices not on the same network as the UMS 12?
 
-**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
+**NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading)
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via reverse proxy
 (such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
@@ -619,7 +619,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4NB0NDtOwIQ?si=Mgyqc6OruOseTC1C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading)
 
 **Q:** To secure reverse proxy, what are the paths that need to be enabled?
 
@@ -978,7 +978,7 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 
 **NOTE:**
 
-- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-).
+- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading).
 
 
 -----

@@ -1062,7 +1062,7 @@ You now have the ICG in place and configured, with end points connecting to it. 
 
 ## OPTIONAL: Setup Reverse Proxy for Managing External Endpoints (OS 12)
 
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading)
 
 -----
 

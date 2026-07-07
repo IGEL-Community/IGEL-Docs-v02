@@ -48,7 +48,7 @@ Build your own IGEL OS App with IGEL App Creator Portal
 - For security requirements, the IGEL App Creator Portal only allows for debian and ubuntu official repository URLs. Use the file upload feature to add file.
 - For OS 12.5.0+, may need to have the app `Compatibility layer for 12.0.x apps` installed
 - UMS Web App - Apps Settings: `Download from UMS` and do not set `Block devices from downloading apps from the public App Portal as a fallback option` unless there is no internet access from OS 12 devices
-- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-).
+- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading).
 
 -----
 

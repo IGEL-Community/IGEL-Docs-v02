@@ -146,7 +146,7 @@ These profiles are available as templates for assisting with configuration of th
 
 ## Azure Application Gateway for UMS Reverse Proxy
 
-- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-)
+- [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading)
 
 - [IGEL KB: Azure Application Gateway Example Configuration as Reverse Proxy in IGEL UMS with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/azure-application-gateway-example-configuration-as)
 

@@ -4,6 +4,106 @@
 
 ----
 
+## 2026-07-02 - [12.12.110](Readme-12.12.110.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+UMS Server:
+Microsoft Windows Server 2016 (64 bit) 
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client: 
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit) 
+Microsoft Windows Server 2016 (64 bit)			
+Microsoft Windows Server 2019 (64 bit) 
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 20.04 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Regular support for Windows Server 2016 and Ubuntu 20.04 has expired. Starting with UMS 12.13.100 in Q3 2026, IGEL will no longer support these operating systems.
+ 	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
+
+
+Backend database (DBMS):
+Microsoft SQL Server 2016 (with Cluster Support)
+Microsoft SQL Server 2017 (with Cluster Support)
+Microsoft SQL Server 2019 (with Cluster Support)
+Microsoft SQL Server 2022 (with Cluster Support)
+Oracle 19c (with Cluster Support)
+Oracle 21c (with Cluster Support)
+PostgreSQL 11 - 15
+Apache Derby 10.9 - 10.14
+Amazon Aurora PostgreSQL (Compatible with PostgreSQL 11 – 15) 
+Azure SQL Managed Instance
+
+Regular support for Microsoft SQL Server 2016 and Apache Derby has expired. Starting with UMS 12.13.100 in Q3 2026, IGEL will no longer support Microsoft SQL Server 2016. The support for Apache Derby will end in a later UMS version.
+	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
+
+Browser:
+Microsoft Edge 137.0.+
+Mozilla Firefox 139.0.+
+Google Chrome 137.0.+
+
+=============================================================================
+New features:
+=============================================================================
+
+[Device Service] 
+- Added: New static template key ${DEVICENAME} for OS12 profiles referencing the UMS name of the device.
+         Note: for OS11 profiles you can select the new template key in the UMS Web App, but since this is an OS12 only feature, it will not work for OS11 devices.
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Cloud IdP / SSO] 
+- Fixed: Token refresh performance was improved. User authentication validation is now optimized to run once per refresh, eliminating duplicate AD/LDAP lookups and IDP provider calls.
+
+[UMS common] 
+- Fixed: Shadowing failed when the user did not have read permission for the configured ICG server, even though this permission is not required for shadowing.  
+- Fixed: Endpoint for checking the current UMS Server state was no longer working. 
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[Devices] 
+- Fixed: The Shadow Device button was incorrectly enabled for devices that do not support shadow mode. 
+- Fixed: The wrong device name was displayed in the shadow confirmation dialog.  
+- Fixed: Exporting profile or device settings was not possible via the context menu. 
+- Fixed: The "Save Support Information" dialog did not progress correctly for devices and device folders, preventing support information from being saved. 
+- Fixed: UMS Web App Support Bundle Export did not collect some TC logs. 
+
+```
+
+----
+
 ## 2026-06-10 - [12.12.100](Readme-12.12.100.txt)
 
 ```
@@ -189,7 +289,6 @@ Resolved issues:
 [Search]
 - Fixed: The UI did not display newly added filters correctly.
 
-
 [System] 
 - Changed: The permission check to configure the Automatic License Deployment and test the connection to the License Portal is now on the nodes directly instead of the parent node.
 - Fixed: Folder entries in Automated Targets are anonymized for users without read permission. 
@@ -204,103 +303,6 @@ Resolved issues:
 - Added: Configuration option to define the duration of the "Stay logged in" session (1–90 days) in User Management Settings.
 - Updated: Angular was updated to v21. 
 
- 
-=============================================================================
-=============================================================================
-Including changes from UMS Version 12.11.110
-=============================================================================
-=============================================================================
-IGEL Universal Management Suite
-=============================================================================
-Version 12.11.110
-Release date: 15.04.2026
-
-HTML version of this Readme is available at:  https://kb.igel.com/ums/releasenotes
-
-
-=============================================================================
-Supported environment:
-=============================================================================
-UMS Server:
-Microsoft Windows Server 2016 (64 bit) 
-Microsoft Windows Server 2019 (64 bit) 
-Microsoft Windows Server 2022 (64 bit)
-Microsoft Windows Server 2025 (64 bit)
-Ubuntu 20.04 (64 bit)
-Ubuntu 22.04 (64 bit)
-Ubuntu 24.04 (64 bit)
-Oracle Linux 7 (64 bit)
-Red Hat Enterprise Linux (RHEL) 7 (64 bit)
-Red Hat Enterprise Linux (RHEL) 8 (64 bit)
-Red Hat Enterprise Linux (RHEL) 9 (64 bit)
-Amazon Linux 2
-
-UMS Client: 
-Microsoft Windows 10 (64 bit) 	
-Microsoft Windows 11 (64 bit) 
-Microsoft Windows Server 2016 (64 bit)			
-Microsoft Windows Server 2019 (64 bit) 
-Microsoft Windows Server 2022 (64 bit)
-Microsoft Windows Server 2025 (64 bit)
-Ubuntu 20.04 (64 bit)
-Ubuntu 22.04 (64 bit)
-Ubuntu 24.04 (64 bit)
-Oracle Linux 7 (64 bit)
-Red Hat Enterprise Linux (RHEL) 7 (64 bit)
-Red Hat Enterprise Linux (RHEL) 8 (64 bit)
-Red Hat Enterprise Linux (RHEL) 9 (64 bit)
-Amazon Linux 2
-
-Regular support for Windows Server 2016 and Ubuntu 20.04 has expired. Starting with UMS 12.13.100 in Q3 2026, IGEL will no longer supports these operating systems.
- 	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
-
-
-Backend database (DBMS):
-Microsoft SQL Server 2016 (with Cluster Support)
-Microsoft SQL Server 2017 (with Cluster Support)
-Microsoft SQL Server 2019 (with Cluster Support)
-Microsoft SQL Server 2022 (with Cluster Support)
-Oracle 21c (with Cluster Support)
-PostgreSQL 11 - 18
-Apache Derby 10.9 - 10.14
-Amazon Aurora PostgreSQL (Compatible with PostgreSQL 11 – 15) 
-Azure SQL Managed Instance
-
-Regular support for Microsoft SQL Server 2016 has expired. Starting with UMS 12.13.100 in Q3 2026, IGEL will no longer supports these operating systems.
-	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
-
-
-Browser:
-Microsoft Edge 137.0.+
-Mozilla Firefox 139.0.+
-Google Chrome 137.0.+
-
-
-
-=============================================================================
-Important:
-=============================================================================
-
-Please make sure to perform the following steps before updating to the new version:
-HTTP redirect URIs are no longer added automatically to the database.  
-If your application requires HTTP redirect URIs, please add them using the following path in the Webapp: System → Settings → Network -> Allowed Redirect URIs → Manage → “+”  
-Enter the required HTTP redirect URIs and save your changes. 
-
-=============================================================================
-New features:
-=============================================================================
-
-[Cloud IdP / SSO] 
-- Added: Validation of OAuth redirect URIs to the login and logout flows to prevent unauthorized redirects. 
-
-=============================================================================
-Resolved issues:
-=============================================================================
-
-[Auth Service]
-- Fixed: HTTP redirect URIs are no longer added automatically to the database.
-
-=============================================================================
 ```
 
 ----

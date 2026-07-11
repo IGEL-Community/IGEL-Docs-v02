@@ -85,6 +85,117 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 
 - Use a revision control system, such as GitHub, to hold the unzipped exported profiles for versioning.
 
+### Sample UMS Backup Scripts (Linux)
+
+#### Backup UMS Embedded Database
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+SSH_TO_SERVER="igel-ums-server"
+
+# Add umsadmin-cli and chown to sudo list so that password is not needed
+# /etc/sudoers.d/igelums-umsadmin-cli 
+# igelums ALL=(root) NOPASSWD: /usr/local/bin/umsadmin-cli
+# /etc/sudoers.d/chown
+# igelums ALL=(root) NOPASSWD: /usr/bin/chown
+
+echo "======== Creating UMS backup ========"
+ssh -t ${SSH_TO_SERVER} 'sudo umsadmin-cli --quiet db backup -o /tmp/ums-backup-$(date +%y%m%d%H%M).pbak --full; \
+  sudo chown igelums:igelums /tmp/ums-backup-*.pbak'
+echo "======== Finished UMS backup ========"
+
+echo "======== Starting - Copying UMS backup ========"
+scp ${SSH_TO_SERVER}:/tmp/ums-backup-*.pbak .
+echo "======== Finished - Copying UMS backup ========"
+
+echo "======== Starting - Removing UMS backup ========"
+ssh -t ${SSH_TO_SERVER} 'rm -f /tmp/ums-backup-*.pbak'
+echo "======== Finished - Removing UMS backup ========"
+```
+
+#### Backup UMS Files
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+#
+# Pull IGEL UMS App Proxy and File Transfer data from a remote UMS server
+#
+# Add rsync to sudo list so that password is not needed
+# /etc/sudoers.d/rsync
+# igelums ALL=(root) NOPASSWD: /usr/bin/rsync
+#
+
+set -euo pipefail
+
+###########################################################################
+# Configuration
+###########################################################################
+
+REMOTE_USER="igel-user-admin"
+REMOTE_HOST="igel-server-name"
+REMOTE_PORT="22"
+
+SSH_KEY="${HOME}/.ssh/id_ed25519"
+
+LOCAL_BACKUP_ROOT="/media/37221ab3-cd80-4536-9157-23d8dd1c9b73/Code/UMS-Backups"
+
+LOGFILE="${REMOTE_HOST}-backup.log"
+
+# Remote directories to back up
+REMOTE_PATHS=(
+    "/opt/IGEL/RemoteManager/rmguiserver/persistent/ums-appproxy/files/"
+    "/opt/IGEL/RemoteManager/rmguiserver/webapps/ums_filetransfer/"
+)
+
+###########################################################################
+
+DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+DESTINATION="${LOCAL_BACKUP_ROOT}/${REMOTE_HOST}"
+
+mkdir -p "${DESTINATION}"
+
+echo "==================================================" | tee -a "$LOGFILE"
+echo "Backup started: $(date)" | tee -a "$LOGFILE"
+
+for REMOTE_PATH in "${REMOTE_PATHS[@]}"; do
+
+    # Remove leading slash so the directory structure is recreated locally
+    RELATIVE_PATH="${REMOTE_PATH#/}"
+
+    LOCAL_PATH="${DESTINATION}/${RELATIVE_PATH}"
+
+    mkdir -p "$LOCAL_PATH"
+
+    echo
+    echo "Backing up:"
+    echo "  $REMOTE_PATH"
+    echo "  -> $LOCAL_PATH"
+    echo
+
+    rsync \
+        -aHAX \
+        --numeric-ids \
+        --delete \
+        --partial \
+        --append-verify \
+        --info=progress2 \
+        --human-readable \
+        --rsync-path="sudo rsync" \
+        -e "ssh -i ${SSH_KEY} -p ${REMOTE_PORT} -o Compression=no" \
+        "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}" \
+        "$LOCAL_PATH" \
+        | tee -a "$LOGFILE"
+done
+
+echo
+echo "Backup completed: $(date)" | tee -a "$LOGFILE"
+```
+
 -----
 
 ## ICG vs. Reverse Proxy

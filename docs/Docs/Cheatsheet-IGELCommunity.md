@@ -724,7 +724,7 @@ sudo umsadmin-cli ums-license state
 - List Web Certs
 
 ```bash linenums="1"
-umsadmin-cli web-certs list
+sudo umsadmin-cli web-certs list
 ```
 
 ```bash linenums="1"
@@ -737,7 +737,7 @@ NAME             FINGERPRINT (SHA1)                       EXPIRATION DATE USED
 - List Assigned Server
 
 ```bash linenums="1"
-umsadmin-cli web-certs list-assigned-server -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE
+sudo umsadmin-cli web-certs list-assigned-server -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE
 ```
 
 ```bash linenums="1"
@@ -749,7 +749,7 @@ igelums12 10.0.0.35     13078f0d-2161-49da-a09a-2ff074439bfe 12.09.110
 
 ```bash linenums="1"
 mkdir yourkeystore.keystore
-umsadmin-cli web-certs export-cert-chain -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE -k yourkeystore.keystore --password:in
+sudo umsadmin-cli web-certs export-cert-chain -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE -k yourkeystore.keystore --password:in
 ```
 
 ```bash linenums="1"

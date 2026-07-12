@@ -340,3 +340,420 @@ The available APPs are fetched from the configured remote repositories.
 | delete_igel_licenses `service id` | Manually remove a license of a type. For example, `SUB_SERVICE_SET_WORKSPACE_EDITION` |
 | delete_igel_licenses `ALL` | Delete all licenses |
 
+-----
+
+## UMS Command Line
+
+- [IGEL KB: IGEL UMS Administrator Command-Line Interface](https://kb.igel.com/en/universal-management-suite/current/igel-ums-administrator-command-line-interface)
+
+| command | description       |
+|---------|-------------------|
+| umsadmin-cli | List global options and the primary subcommands |
+| umsadmin-cli fullhelp | List complete online help with all commands |
+| umsadmin-cli server restart | Restart UMS |
+
+- Fullhelp listing
+
+```bash linenums="1"
+sudo umsadmin-cli fullhelp
+```
+
+```bash linenums="1"
+Usage: umsadmin-cli [-hV] [--machine-readable] [--no-header] [--quiet]
+                    [--separator=<cliSeparator>] [COMMAND]
+
+UMS Administrator CLI to configure UMS installation
+  -h, --help               Show this help message and exit.
+      --machine-readable   Prints output machine-readable with ';' as default
+                             separator.
+      --no-header          Do not print a header line.
+      --quiet              Suppress all output to stdout/stderr.
+      --separator=<cliSeparator>
+                           Define custom column separator for CLI output.
+  -V, --version            Print version information and exit.
+
+Commands:
+db                         Provides commands for database operations
+
+  help                     Display help information about the specified command.
+
+  activate                 Activate a database connection
+      -i  --id             The database identifier
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+      -P  --patch          Install lateste database patch
+
+  backup                   Create a backup of the current embedded database
+      -f  --full           Creates a full backup incl. transfer files and configuration.
+      -o  --outfile        The target file for the backup.
+      -p  --parent         Creates all directories for the specified path
+
+  copy                     Create a copy of the current database
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+      -t  --target         The target database ID
+
+  create                   Create a new database connection
+      -d  --domain         The database domain
+      -H  --host           The database host
+      -I  --instance       The database instance
+          --jdbc-params    Additional JDBC parameter
+      -n  --name           The database name
+      -A  --no-activate    Skip activation of database (no password required)
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+      -p  --port           The database port
+      -S  --schema         The database schema
+      -t  --type           The database type. Valid values:
+                           null
+      -u  --user           The database user name
+
+  deactivate
+                           Deactivate active database connection
+
+  delete                   Delete a data source
+      -i  --id             The database identifier
+
+  edit                     Edit a data source
+      -d  --domain         The database domain
+      -H  --host           The database host
+      -i  --id             The database id
+      -I  --instance       The database instance
+          --jdbc-params    Additional JDBC parameter
+      -n  --name           The database name
+      -p  --port           The database port
+      -S  --schema         The database schema
+      -t  --type           The database type. Valid values:
+                           null
+      -u  --user           The database user name
+
+  list                     List all data sources
+
+  optimize                 Optimize the active data source
+
+  restore                  Restore a backup into the embedded database
+      -f  --file           The path to the backup file.
+
+  show                     Show details of a data source
+      -i  --id             The database id
+
+  test                     Test active database connection
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+ports                      Configuration of ports
+
+  help                     Display help information about the specified command.
+
+  list                     List all ports and SSL flag
+
+  set                      Set new port numbers or SSL-only flag
+      -d  --dev-comm       Device communication port
+      -e  --embedded       Database port (embedded)
+      -j  --java-webstart  Java Webstart port
+          --ssl-only       Allow only SSL connections
+      -w  --web-server     Server port
+
+cipher                     Manage cipher configuration.
+
+  help                     Display help information about the specified command.
+
+  disable                  Disable ciphers
+          --all            Apply for all (ignores individual cipher names).
+
+  enable                   Enable ciphers
+          --all            Apply for all (ignores individual cipher names).
+
+  list                     Print all ciphers, optionally filtered
+      -d  --disabled       Filter disabled ciphers (works with --enabled)
+      -e  --enabled        Filter enabled ciphers (works with --disabled)
+
+licensing                  View and change UMS ID data
+
+  help                     Display help information about the specified command.
+
+  backup                   Backup the UMS ID
+      -o  --outfile        Backup file path
+      -p  --parent         Creates all directories for the specified path
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+  create                   Create a new UMS ID
+
+  export                   Export the UMS ID
+      -f  --force          Overwrite existing File (true -> overwrite, false -> abort command) (default: false)
+      -o  --outfile        Backup file path
+
+  list                     Show the current UMS IDs
+
+  restore                  Restore UMS ID from backup
+      -f  --file           Backup file source
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+token                      Install network token for UMS server or broker.
+          --broker         Install token for UMS Broker
+          --server         Install token for UMS Server
+    -f    --token-file     The path to the token file
+
+su                         Configuration of superuser
+
+  help                     Display help information about the specified command.
+
+  list                     Display superuser
+
+  change                   Change superuser credentials
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+      -u  --user           The name of the superuser
+
+restart-server
+                           Restart the UMS server (deprecated, use 'server restart')
+
+  help                     Display help information about the specified command.
+
+server                     Change the server run state
+
+  help                     Display help information about the specified command.
+
+  end-update-mode
+                           End the update mode of the local UMS Server
+
+  restart                  Restart the local UMS Server
+
+  distributed
+                           Set the distributed mode of the UMS installation
+      -d  --disable        Disables Distributed UMS.
+      -e  --enable         Enables Distributed UMS.
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+  start                    Start the local UMS Server
+
+  stop                     Stop the local UMS Server
+
+reset-certs
+                           Reset the web certificates
+    -y    --yes            Only if provided as confirmation, reset will run.
+
+  help                     Display help information about the specified command.
+
+ums-cluster
+                           Set UMS cluster FQDN
+
+  help                     Display help information about the specified command.
+
+  create                   Set UMS cluster FQDN
+      -n  --name           The Fully Qualified Domain Name (FQDN)
+
+  list                     Show the UMS cluster FQDN
+
+  remove                   Delete the UMS cluster FQDN
+
+web-certs                  Provides commands for web certificates configuration
+
+  help                     Display help information about the specified command.
+
+  assign-cert
+                           Assign certificate to current or all server
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+      -s  --server         Server to which certificate is assigned, possible values: ALL_SERVER, CURRENT_SERVER (default: CURRENT_SERVER))
+
+  create-root-cert
+                           Create a root certificate
+      -a  --algorithm      Key pair algorithm (rsa or ec (default: rsa)))
+      -c  --country        Country code (two letters)
+      -d  --expiration-date
+                           Expiration date (YYYY-MM-DD) (current date plus 20 years if not specified)
+          --key-size       Key size, valid values: 4k, 8k, 12k, 16k (default: 4k)(4096, 8192,... bits)
+      -l  --locality       Locality (if not specified, the hash code of a random uuid is used)
+      -n  --name           Certificate name (default: Root certificate)
+          --named-curve    Named curve, valid values: nist-p-384, nist-p-256, nist-p-521 (default: nist-p-384)
+      -o  --organization   Organization
+
+  create-signed-cert
+                           Create signed certificate
+          --ca             Certificate type (true -> CA certificate, false -> End entity) (default: false)
+          --cn             Common name
+      -c  --country        Country code (two letters)
+      -d  --expiration-date
+                           Expiration date (YYYY-MM-DD) (current date plus 1 year if not specified)
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of parent CA certificate
+      -h  --hostname       Hostname (hostname or one of these values: ALL_SERVER, CURRENT_SERVER (default: CURRENT_SERVER))
+      -l  --locality       Locality (if not specified, the hash code of a random uuid is used)
+      -n  --name           Certificate name (default: Certificate)
+      -o  --organization   Organization
+
+  delete                   Delete a certificate
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+
+  export-cert
+                           Export certificate
+      -c  --cert-file      Path to which the certificate should be exported (Name 'cert.cert' is used when only a directory is specified)
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+
+  export-cert-chain
+                           Export certificate chain to keystore (JKS)
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+      -k  --keystore-file  Path to keystore to which certificate chain should be exported
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+  import-cert-chain
+                           Import certificate chain from keystore
+      -k  --keystore-file  The keystore file
+          --password:file  Path to a file containing the password.
+          --password:in    Shows an interactive prompt to enter the password.
+
+  import-private-key
+                           Import decrypted private key
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+      -p  --private-key-file
+                           The file containing the private key
+
+  import-root-cert
+                           Import root certificate
+      -c  --cert-file      The root certificate (CERT, CER, CRT, PEM)
+
+  import-signed-cert
+                           Import signed certificate
+      -c  --cert-file      The signed certificate (CERT, CER, CRT, PEM)
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of parent CA
+
+  list-assigned-server
+                           List assigned server of a certificate
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+
+  list                     List all web certificates or details of a certificate
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+
+  renew-cert
+                           Renew certificate
+          --cn             Common name
+      -c  --country        Country code (two letters)
+      -d  --expiration-date
+                           Expiration date (YYYY-MM-DD) (current date plus 1 year if not specified)
+      -f  --fingerprint-sha1
+                           SHA1 fingerprint of certificate
+      -h  --hostname       Hostname (hostname or one of these values: ALL_SERVER, CURRENT_SERVER)
+      -l  --locality       Locality
+      -n  --name           Certificate name
+      -o  --organization   Organization
+
+help                       Display help information about the specified command.
+
+fullhelp                   Show full help with all commands
+
+accept-expired-client-certs
+                           Configuration to accept expired client certificates
+
+  help                     Display help information about the specified command.
+
+  disable                  Disable accept expired Client Certificate (UMS Server will be restarted!)
+
+  enable                   Enable accept expired Client Certificate (UMS Server will be restarted!)
+
+  state                    Show the state of accept expired Client Certificates
+
+web-cert                   Provides commands for UMS ID operations
+
+  help                     Display help information about the specified command.
+
+  export-cert
+                           export UMS ID
+      -c  --cert-file      Path to which the certificate should be exported
+
+ums-license
+                           provides commands for handling UMS licenses
+
+  help                     Display help information about the specified command.
+
+  deleteall
+                           delete all registered UMS licenses
+
+  register                 register UMS license
+      -f  --filename       Path of the license which should be registered
+
+  state                    State of the UMS License
+
+enc                        Provides commands for security encryptions
+
+  help                     Display help information about the specified command.
+
+  encode                   encode file
+      -f  --plain-file     Plain file to be encoded
+
+  encrypt                  encrypt text
+      -p  --plain-text     Plain text to be encrypted
+
+igelums@igelums12:~$ 
+```
+
+- List all databases
+
+```bash linenums="1"
+sudo umsadmin-cli db list
+```
+
+```bash linenums="1"
+ACTIVE DATABASE HOST      USER    DB-TYPE     ID
+true   rmdb     localhost igelums Embedded DB  1
+```
+
+- UMS License State
+
+```bash linenums="1"
+sudo umsadmin-cli ums-license state
+```
+
+```bash linenums="1"
+"umsLicenseLevel": "SUB_SERVICE_SET_UMS_ENTERPRISE"
+"expirationDateUTC": "2026-09-07T00:00:00"         
+"unlimited": "false"
+```
+
+- List Web Certs
+
+```bash linenums="1"
+umsadmin-cli web-certs list
+```
+
+```bash linenums="1"
+NAME             FINGERPRINT (SHA1)                       EXPIRATION DATE USED 
+230623-ums12-ron 351B4DA62D5A304C5B86401FB2C49091490EA5AE      2026-04-25 true 
+1264447657       B18CB74C0CA7A54CFCB7AA162E32F2380205D111      2043-03-23 true 
+230623-ums12-ron BB8F25B169B38DEE641FB160C93A303946219F41      2025-05-25 false
+```
+
+- List Assigned Server
+
+```bash linenums="1"
+umsadmin-cli web-certs list-assigned-server -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE
+```
+
+```bash linenums="1"
+HOST      LAST KNOWN IP PROCECSS ID                          VERSION  
+igelums12 10.0.0.35     13078f0d-2161-49da-a09a-2ff074439bfe 12.09.110
+```
+
+- Export Cert Chain
+
+```bash linenums="1"
+mkdir yourkeystore.keystore
+umsadmin-cli web-certs export-cert-chain -f 351B4DA62D5A304C5B86401FB2C49091490EA5AE -k yourkeystore.keystore --password:in
+```
+
+```bash linenums="1"
+Password: 
+Confirm: 
+```
+

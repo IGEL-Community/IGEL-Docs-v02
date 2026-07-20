@@ -62,7 +62,7 @@ wget https://raw.githubusercontent.com/mvnural/zebra-cups-driver/master/zebra_zp
 
 -----
 
-### FInd the name of the driver for your printer model that has 1536 in name
+### Find the name of the driver for your printer model that has 1536 in name
 
 ```bash linenums="1"
 lpinfo --make-and-model '1536' -m
@@ -387,4 +387,70 @@ driverless ipp://BRWB068E696FC10/ipp/print
 *print-scaling fit/Fit: ""
 *print-scaling none/None: ""
 *CloseUI: *print-scaling
+```
+
+-----
+
+## Adding Network Printers from CSV File
+
+Steps:
+
+- Create CSV file, `igel_assigned_printers.csv`, and place into `/wfs` folder with mapping of printers to IGEL OS devices
+- Add `default` to the line for the default printer for the device
+- Create `cc-desktop-3fdc-cupsofficenetworkprinters` file and follow steps as defined in [HOWTO-Custom-Commands](./HOWTO-Custom-Commands.md)
+
+```bash linenums="1"
+#!/bin/bash
+set -x
+trap read debug
+
+#
+# Version: Mon Jul 20 08:42:27 AM MDT 2026
+# Add CUPS office network printers
+#
+# Create /wfs/igel_assigned_printers.csv file with format:
+#
+# IGEL-Device-Name,Printer Queue,IPP Printer
+#
+# Add default to make printer the default printer
+#
+# ITC0800270F8F74,lab1427_3d_printer,BRWB068E696FC10/ipp/print,default
+# ITC0800270F8F75,lab1428_3d_printer,BRWB068E696FC10/ipp/print,default
+#
+# Custom Commands: Desktop: Final Desktop Command
+#
+
+ACTION="cc-desktop-3fdc-cupsofficenetworkprinters"
+HOSTNAME="$(hostname)"
+
+COUNT=1
+
+# output to systemlog with ID amd tag
+LOGGER="logger -it ${ACTION}"
+
+echo "Starting" | $LOGGER
+
+CSV_FILE="/wfs/igel_assigned_printers.csv"
+
+if [ -s "$CSV_FILE" ]; then
+  echo "${CSV_FILE} exists and contains data." | $LOGGER
+  cat ${CSV_FILE} | while read LINE
+    do
+      LINE_HOSTNAME="$(echo ${LINE} | awk --field-separator "," '{print $1}')"
+      if [ "${HOSTNAME}" = "${LINE_HOSTNAME}" ]; then
+        PNAME=$(echo $LINE} | awk --field-separator "," '{print $2}')
+        PIPP=$(echo ${LINE} | awk --field-separator "," '{print $3}')
+        lpadmin -p ${PNAME} -E -v ipp://${PIPP} -m everywhere
+        if [ $(echo ${LINE} | awk --field-separator "," '{print $4}') = default ]; then
+          lpoptions -d ${PNAME}
+        fi
+      fi
+    done
+else
+    echo "ERROR: ${CSV_FILE} is missing or empty" | $LOGGER
+    exit 1
+fi
+
+echo "Finished" | $LOGGER
+exit 0
 ```

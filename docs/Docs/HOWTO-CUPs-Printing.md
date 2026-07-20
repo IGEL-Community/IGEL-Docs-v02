@@ -396,8 +396,13 @@ driverless ipp://BRWB068E696FC10/ipp/print
 Steps:
 
 - Create CSV file, `igel_assigned_printers.csv`, and place into `/wfs` folder with mapping of printers to IGEL OS devices
+
+```csv linenums="1"
+IGEL-host-name,printer-queue,IPP-printer,default
+```
+
 - Add `default` to the line for the default printer for the device
-- Create `cc-desktop-3fdc-cupsofficenetworkprinters` file and follow steps as defined in [HOWTO-Custom-Commands](./HOWTO-Custom-Commands.md)
+- Create `cc-desktop-3fdc-cupsofficenetworkprinters.sh` file and follow steps as defined in [HOWTO-Custom-Commands](./HOWTO-Custom-Commands.md)
 
 ```bash linenums="1"
 #!/bin/bash

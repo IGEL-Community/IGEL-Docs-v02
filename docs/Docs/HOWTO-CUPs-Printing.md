@@ -401,8 +401,8 @@ Steps:
 
 ```bash linenums="1"
 #!/bin/bash
-set -x
-trap read debug
+#set -x
+#trap read debug
 
 #
 # Version: Mon Jul 20 08:42:27 AM MDT 2026

@@ -824,8 +824,14 @@ RUN chmod +x /tmp/setup-igel-ums-linux_*.bin && \
   --installation-type client --install-dependencies yes --upload-license-file no \
   --create-shortcut no
 
+# Remove ums installer
+RUN rm -f /tmp/setup-igel-ums-linux_*.bin 
+
 # Create group and user
 RUN groupadd -r appuser && useradd -r -g appuser -m appuser
+
+# Setup for coping settings out of container
+RUN mkdir /export && chown appuser:appuser /export
 
 # Switch to the new user
 USER appuser
@@ -839,36 +845,86 @@ ENTRYPOINT ["/opt/IGEL/RemoteManager/RemoteManager.sh"]
 ```bash linenums="1"
 #!/bin/bash
 
+set -euo pipefail
+
 #
-# For X11
-# As user obtain xauth -f ~/.Xauthority list|tail -1
-# As root xauth add string-from-above-command
-# As root xhost +local:docker
-#
+# For X11:
+#   xhost +local:docker
 #
 
 IMAGE="igel-ums:bookworm"
+EXPORT_DIR="$(pwd)/container-export"
 
-docker system prune -f
+mkdir -p "$EXPORT_DIR"
 
 if docker image inspect "$IMAGE" >/dev/null 2>&1; then
     echo "Image $IMAGE exists."
 else
-    echo "Image $IMAGE does not exist."
-    docker build --network host -t $IMAGE .
+    echo "Image $IMAGE does not exist. Building it now."
+    docker build --network host -t "$IMAGE" .
 fi
 
 docker run --network host --rm -it \
+  --user root \
   --security-opt seccomp=unconfined \
-  -e DISPLAY=$DISPLAY \
+  -e DISPLAY="$DISPLAY" \
+  -e HOST_UID="$(id -u)" \
+  -e HOST_GID="$(id -g)" \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e PULSE_SERVER=unix:/run/user/777/pulse/native \
   -e PULSE_COOKIE=/root/.config/pulse/cookie \
   -v /run/user/777/pulse:/run/user/777/pulse \
   -v /userhome/config/pulse/cookie:/root/.config/pulse/cookie:ro \
+  -v "$EXPORT_DIR:/export" \
   --device=/dev/dri \
   --group-add video \
   --group-add audio \
   --shm-size=2g \
-  $IMAGE
+  --entrypoint /bin/bash \
+  "$IMAGE" \
+  -c '
+    set +e
+
+    echo "Restoring exported files..."
+
+    if [ "$(find /export -mindepth 1 -print -quit 2>/dev/null)" ]; then
+        cp -a /export/. /home/appuser/
+        chown -R appuser:appuser /home/appuser
+        echo "Restore complete."
+    else
+        echo "No exported files found."
+    fi
+
+    # Run the UMS Remote Manager as the non-root application user.
+    runuser -u appuser -- env \
+      HOME=/home/appuser \
+      DISPLAY="$DISPLAY" \
+      PULSE_SERVER="$PULSE_SERVER" \
+      /opt/IGEL/RemoteManager/RemoteManager.sh
+    RC=$?
+
+    echo "Copying generated files to /export..."
+
+    if [ -f /home/appuser/rmconsole.truststore ]; then
+        cp -a /home/appuser/rmconsole.truststore /export/
+    else
+        echo "Warning: /home/appuser/rmconsole.truststore was not found."
+    fi
+
+    #if [ -d /home/appuser/.java ]; then
+        #rm -rf /export/.java
+        #cp -a /home/appuser/.java /export/
+    #else
+        #echo "Warning: /home/appuser/.java was not found."
+    #fi
+    cp -a /home/appuser/.* /export/
+
+    # Make the copied files belong to the user who started the container.
+    chown -R "$HOST_UID:$HOST_GID" /export
+
+    echo "Export complete: /export"
+    exit "$RC"
+  '
+
+echo "Files exported to: $EXPORT_DIR"
 ```

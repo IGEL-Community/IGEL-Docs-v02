@@ -778,3 +778,97 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   $IMAGE
 ```
+
+-----
+
+-----
+
+## Use Docker to run IGEL UMS Java Console
+
+Summary of steps:
+
+- Download latest Universal Management Suite 12 - Linux Installer [IGEL App Portal](https://app.igel.com/software)
+- Create `dockerfile`
+- Follow notes in `run-docker.sh` to setup X11 items
+- Run `run-docker.sh` to build the image, install latest Remmina, and run Remmina
+
+### Save the following as `dockerfile`:
+
+```dockerfile linenums="1"
+# Debian 12 (bookworm)
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# copy ums installer
+COPY setup-igel-ums-linux_*.bin  /tmp
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    bc \
+    ca-certificates \
+    curl \
+    gnupg \
+ && mkdir -p /etc/apt/keyrings \
+ && curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub \
+    | gpg --dearmor -o /etc/apt/keyrings/google-linux.gpg
+
+RUN echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-linux.gpg] \
+    http://dl.google.com/linux/chrome/deb/ stable main" \
+    > /etc/apt/sources.list.d/google-chrome.list
+
+RUN apt-get update && apt-get install -y google-chrome-stable
+
+RUN chmod +x /tmp/setup-igel-ums-linux_*.bin && \
+/tmp/setup-igel-ums-linux_*.bin --nox11 -- --accept-eula yes \
+  --accept-license-info yes --accept-sso-info yes --silent yes \
+  --installation-type client --install-dependencies yes --upload-license-file no \
+  --create-shortcut no
+
+# Create group and user
+RUN groupadd -r appuser && useradd -r -g appuser -m appuser
+
+# Switch to the new user
+USER appuser
+
+# Run UMS Java Console
+ENTRYPOINT ["/opt/IGEL/RemoteManager/RemoteManager.sh"]
+```
+
+### Save the following as `run-docker.sh`:
+
+```bash linenums="1"
+#!/bin/bash
+
+#
+# For X11
+# As user obtain xauth -f ~/.Xauthority list|tail -1
+# As root xauth add string-from-above-command
+# As root xhost +local:docker
+#
+#
+
+IMAGE="igel-ums:bookworm"
+
+docker system prune -f
+
+if docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    echo "Image $IMAGE does not exist."
+    docker build --network host -t $IMAGE .
+fi
+
+docker run --network host --rm -it \
+  --security-opt seccomp=unconfined \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e PULSE_SERVER=unix:/run/user/777/pulse/native \
+  -e PULSE_COOKIE=/root/.config/pulse/cookie \
+  -v /run/user/777/pulse:/run/user/777/pulse \
+  -v /userhome/config/pulse/cookie:/root/.config/pulse/cookie:ro \
+  --device=/dev/dri \
+  --group-add video \
+  --group-add audio \
+  --shm-size=2g \
+  $IMAGE
+```

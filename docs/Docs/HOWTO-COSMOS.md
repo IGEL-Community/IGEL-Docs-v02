@@ -395,7 +395,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** How to make devices download from App Portal when UMS is configured as the App Proxy as the Global Setting?
 
-**A:** [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-)
+**A:** [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-ums-is-configured-as-the-app-proxy-as-the-global-setting)
 
 -----
 

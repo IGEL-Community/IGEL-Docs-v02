@@ -790,7 +790,7 @@ Summary of steps:
 - Download latest Universal Management Suite 12 - Linux Installer [IGEL App Portal](https://app.igel.com/software)
 - Create `dockerfile`
 - Follow notes in `run-docker.sh` to setup X11 items
-- Run `run-docker.sh` to build the image, install latest Remmina, and run Remmina
+- Run `run-docker.sh` to build the image, install latest IGEL UMS Java Console, and run IGEL UMS Java Console
 
 ### Save the following as `dockerfile`:
 

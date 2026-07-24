@@ -852,6 +852,8 @@ set -euo pipefail
 #   xhost +local:docker
 #
 
+xhost +local:docker
+
 IMAGE="igel-ums:bookworm"
 EXPORT_DIR="$(pwd)/container-export"
 
@@ -911,12 +913,6 @@ docker run --network host --rm -it \
         echo "Warning: /home/appuser/rmconsole.truststore was not found."
     fi
 
-    #if [ -d /home/appuser/.java ]; then
-        #rm -rf /export/.java
-        #cp -a /home/appuser/.java /export/
-    #else
-        #echo "Warning: /home/appuser/.java was not found."
-    #fi
     cp -a /home/appuser/.* /export/
 
     # Make the copied files belong to the user who started the container.

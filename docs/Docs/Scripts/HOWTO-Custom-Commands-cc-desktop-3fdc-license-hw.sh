@@ -15,16 +15,34 @@ ACTION="cc-desktop-3fdc-license-hw"
 # output to systemlog with ID amd tag
 LOGGER="logger -it ${ACTION}"
 
-LICENSE_FILE="/wfs/license-hw.lic"
+shopt -s nullglob
+
+LICENSE_FILES=(/wfs/license-hw-*.lic)
 UNIT_ID=$(get_unit_id)
 
 echo "Starting" | $LOGGER
 
-if [[ -f ${LICENSE_FILE} && $(sed '/macaddress/s/://g' ${LICENSE_FILE} | grep -q ${UNIT_ID}; echo $?) -eq 0 ]]; then
-echo "File ${LICENSE_FILE} exists and contains ${UNIT_ID}: Licensing device"
-install_igel_license ${LICENSE_FILE}
-else
-echo "File ${LICENSE_FILE} does not exist or does not contain ${UNIT_ID}: Not Licensing device"
+if (( ${#LICENSE_FILES[@]} == 0 )); then
+    echo "No license files found matching /wfs/license-hw-*.lic" | $LOGGER
+    echo "Finished" | $LOGGER
+    exit 0
+fi
+
+FOUND=0
+
+for LICENSE_FILE in "${LICENSE_FILES[@]}"; do
+    echo "Checking ${LICENSE_FILE}" | $LOGGER
+
+    if sed '/macaddress/s/://g' "${LICENSE_FILE}" | grep -q "${UNIT_ID}"; then
+        echo "File ${LICENSE_FILE} contains ${UNIT_ID}: Licensing device" | $LOGGER
+        install_igel_license "${LICENSE_FILE}"
+        FOUND=1
+        break        # Remove this if you want to install every matching license
+    fi
+done
+
+if (( ! FOUND )); then
+    echo "No matching license file contains ${UNIT_ID}: Not Licensing device" | $LOGGER
 fi
 
 echo "Finished" | $LOGGER

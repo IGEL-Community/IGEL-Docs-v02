@@ -15,6 +15,17 @@ What is shown in this demo:
 
 -----
 
+## Demo: UMS Java Console running on IGEL OS in a container
+
+What is shown in this demo:
+
+- Creating the `dockerfile` and `run-docker.sh` files
+- Running `run-docker.sh`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQL7JyGoLaY?si=RHu2Jtazu5P2WyeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Demo: UMS
 
 What is shown in this demo:

@@ -179,3 +179,137 @@ jobs:
 - Site Location: [https://igel-community.github.io/IGEL-Docs-v02/](https://igel-community.github.io/IGEL-Docs-v02/)
 
 **NOTE:** Created a tinyurl short cut of [https://tinyurl.com/igel-docs](https://tinyurl.com/igel-docs)
+
+-----
+
+## Video Editing - Trim and Merge
+
+### Trim Video (start:stop time)
+
+```bash linenums="1"
+ffmpeg -ss 00:03:35 -to 00:06:29 -i input.mp4 -c copy output.mp4
+```
+
+### Merge video files
+
+- Create a text file named files.txt:
+
+```bash linenums="1"
+file 'part1.mp4'
+file 'part2.mp4'
+file 'part3.mp4'
+```
+
+- Merge the files
+
+```bash linenums="1"
+ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
+```
+
+### Script to Trim Video File
+
+- Save file as `trim-video.sh`
+
+```bash linenums="1"
+#!/bin/bash
+
+# MP4 Clip Extractor
+# Requires: zenity, ffmpeg
+
+set -e
+
+########################################
+# Select input MP4
+########################################
+
+INPUT=$(zenity --file-selection \
+    --title="Select Video" \
+    --file-filter="Video files | *.mp4 *.MP4 *.mov *.MOV")
+
+[ -z "$INPUT" ] && exit 0
+
+########################################
+# Get HH:MM:SS from Video
+########################################
+
+SECONDS=$(printf "%.0f\n" "$(ffprobe -v error \
+    -show_entries format=duration \
+    -of default=noprint_wrappers=1:nokey=1 \
+    ${INPUT})")
+
+VIDEO_LENGTH=$(printf "%02d:%02d:%02d\n" \
+    $((SECONDS/3600)) \
+    $(((SECONDS%3600)/60)) \
+    $((SECONDS%60)))
+
+########################################
+# Single dialog for clip settings
+########################################
+
+RESULT=$(zenity --forms \
+    --title="Create MP4 Clip" \
+    --text="Enter the clip settings" \
+    --separator="|" \
+    --width=500 \
+    --add-entry="Start Time (HH:MM:SS)" \
+    --add-entry="End Time (${VIDEO_LENGTH})" \
+    --add-entry="Output Filename" )
+
+[ $? -ne 0 ] && exit 0
+
+IFS="|" read -r START END OUTFILE <<< "$RESULT"
+
+########################################
+# Validate input
+########################################
+
+if [[ -z "$START" || -z "$END" || -z "$OUTFILE" ]]; then
+    zenity --error \
+        --text="All fields are required."
+    exit 1
+fi
+
+# Add .mp4 if needed
+[[ "$OUTFILE" != *.mp4 ]] && OUTFILE="${OUTFILE}.mp4"
+
+OUTPUT="$(dirname "$INPUT")/$OUTFILE"
+
+########################################
+# Run ffmpeg
+########################################
+
+(
+    echo "10"
+    echo "# Extracting video..."
+
+    ffmpeg -y \
+        -ss "$START" \
+        -to "$END" \
+        -i "$INPUT" \
+        -c copy \
+        "$OUTPUT" >/tmp/ffmpeg.log 2>&1
+
+    echo "100"
+
+) | zenity \
+    --progress \
+    --title="Creating Clip" \
+    --text="Processing..." \
+    --percentage=0 \
+    --auto-close \
+    --no-cancel
+
+########################################
+# Show result
+########################################
+
+if [[ -f "$OUTPUT" ]]; then
+    zenity --info \
+        --title="Complete" \
+        --text="Clip successfully created:\n\n$OUTPUT"
+else
+    zenity --error \
+        --title="Error" \
+        --text="ffmpeg failed.\n\nSee /tmp/ffmpeg.log"
+fi
+```

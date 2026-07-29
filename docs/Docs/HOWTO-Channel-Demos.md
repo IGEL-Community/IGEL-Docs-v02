@@ -2,6 +2,19 @@
 
 -----
 
+## Demo: Weekly Live Demo Session Led by an IGEL Expert
+
+What is shown in this demo:
+
+- IGEL Desktop
+- IGEL UMS (Devices, Profiles, Shadow, etc.)
+- IGEL App Creator Portal
+- IGEL Slides (IGEL and BC/DR)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ucQ48sllQOI?si=uJaBgcwJb2MugJ9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Demo: UMS
 
 What is shown in this demo:

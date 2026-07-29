@@ -2,7 +2,7 @@
 
 -----
 
-## Demo: Weekly Live Demo Session Led by an IGEL Expert
+## Demo: Live Demo Session Led by an IGEL Expert
 
 What is shown in this demo:
 
@@ -11,7 +11,7 @@ What is shown in this demo:
 - IGEL App Creator Portal
 - IGEL Slides (IGEL and BC/DR)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ucQ48sllQOI?si=uJaBgcwJb2MugJ9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fbv0r4kR-7c?si=47jbT3e89zA9xDli" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -----
 

@@ -401,9 +401,6 @@ for command in \
 do
     if ! command -v "$command" >/dev/null 2>&1; then
         echo "Error: Required command not found: $command"
-        echo
-        echo "On Debian/Ubuntu, install the required tools with:"
-        echo "  sudo apt-get install procps sysstat iproute2 coreutils util-linux tar"
         exit 1
     fi
 done
@@ -434,6 +431,10 @@ echo
     echo "Process snapshot interval: $PS_INTERVAL seconds"
     echo "Process snapshot maximum entries: $PS_MAX_ENTRIES"
     echo "TCP socket snapshot interval: $SS_INTERVAL seconds"
+
+    echo
+    echo "===== /etc/os-release ====="
+    cat /etc/os-release
 
     echo
     echo "===== lsblk ====="

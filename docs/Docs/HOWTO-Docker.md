@@ -787,6 +787,8 @@ docker run --network host --rm -it \
 
 ## Use Docker to run IGEL UMS Java Console
 
+- [Demo: UMS Java Console running on IGEL OS in a container](./HOWTO-Channel-Demos.md/#demo-ums-java-console-running-on-igel-os-in-a-container)
+
 Summary of steps:
 
 - Download latest Universal Management Suite 12 - Linux Installer [IGEL App Portal](https://app.igel.com/software)

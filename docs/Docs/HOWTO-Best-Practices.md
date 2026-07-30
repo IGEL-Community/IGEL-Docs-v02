@@ -333,6 +333,7 @@ set -uo pipefail
 
 RUNTIME="${1:-60}"       # Runtime in seconds
 DISK="${2:-nvme0n1}"     # Disk device without /dev/
+                         #(lsblk to find disk at bottom of list)
 
 PS_INTERVAL=10           # Seconds between process snapshots
 PS_MAX_ENTRIES=200       # Maximum process/thread entries per snapshot
@@ -374,6 +375,7 @@ for command in \
     ps \
     ss \
     ip \
+    free \
     head \
     timeout \
     lsblk \
@@ -423,6 +425,10 @@ echo
     echo
     echo "===== lsblk ====="
     lsblk -o NAME,PATH,TYPE,SIZE,FSTYPE,MOUNTPOINTS,MODEL
+
+    echo
+    echo "===== free -h ====="
+    free -h
 
     echo
     echo "===== ip -s link ====="
@@ -595,6 +601,10 @@ fi
 ###############################################################################
 
 {
+    echo
+    echo "===== Final free -h ====="
+    free -h
+
     echo
     echo "===== Final ip -s link ====="
     ip -s link

@@ -305,3 +305,360 @@ In case the UMS Web App should be used via a Reverse Proxy the following paths a
 
 Here TLSv1.2 or TLSv1.3 is used.
 ```
+
+-----
+
+## IGEL OS - Hardware Performance review with AI Tool
+
+### Script to collect data
+
+- Accepts a configurable RUNTIME (seconds) and DISK (drive to watch)
+- Runs various commands simultaneously
+- Saves each command's output into separate timestamped files
+- Stops commands automatically after the specified runtime
+- Creates a tar file containing all collected data for easy upload to AI tool
+- Copy the script and paste into terminal window to create `collect-perf-data.sh`
+
+```bash linenums="1"
+cat << "EOF" > collect-perf-data.sh
+#!/bin/bash
+#set -x
+#trap read debug
+
+set -uo pipefail
+
+###############################################################################
+# Configuration
+###############################################################################
+
+RUNTIME="${1:-60}"       # Runtime in seconds
+DISK="${2:-nvme0n1}"     # Disk device without /dev/
+
+PS_INTERVAL=10           # Seconds between process snapshots
+PS_MAX_ENTRIES=200       # Maximum process/thread entries per snapshot
+SS_INTERVAL=10           # Seconds between TCP socket snapshots
+
+OUTDIR="performance-$(hostname)-$(date +%Y%m%d-%H%M%S)"
+
+###############################################################################
+# Validate arguments
+###############################################################################
+
+if ! [[ "$RUNTIME" =~ ^[1-9][0-9]*$ ]]; then
+    echo "Error: RUNTIME must be a positive integer."
+    echo "Usage: $0 [runtime-seconds] [disk-device]"
+    exit 1
+fi
+
+if [[ "$DISK" == /dev/* ]]; then
+    DISK_PATH="$DISK"
+else
+    DISK_PATH="/dev/$DISK"
+fi
+
+if [[ ! -b "$DISK_PATH" ]]; then
+    echo "Error: Disk device does not exist: $DISK_PATH"
+    exit 1
+fi
+
+###############################################################################
+# Verify required commands
+###############################################################################
+
+for command in \
+    vmstat \
+    iostat \
+    pidstat \
+    mpstat \
+    sar.sysstat \
+    ps \
+    ss \
+    ip \
+    head \
+    timeout \
+    lsblk \
+    tar \
+    date \
+    sleep \
+    hostname \
+    uname \
+    bash
+do
+    if ! command -v "$command" >/dev/null 2>&1; then
+        echo "Error: Required command not found: $command"
+        echo
+        echo "On Debian/Ubuntu, install the required tools with:"
+        echo "  sudo apt-get install procps sysstat iproute2 coreutils util-linux tar"
+        exit 1
+    fi
+done
+
+###############################################################################
+# Create output directory
+###############################################################################
+
+mkdir -p "$OUTDIR"
+
+echo "Collecting performance data for ${RUNTIME} seconds..."
+echo "Disk: $DISK_PATH"
+echo "Output directory: $OUTDIR"
+echo "Process snapshot interval: ${PS_INTERVAL} seconds"
+echo "TCP socket snapshot interval: ${SS_INTERVAL} seconds"
+echo
+
+###############################################################################
+# Collect initial system and network information
+###############################################################################
+
+{
+    echo "Collection start: $(date --iso-8601=seconds)"
+    echo "Hostname: $(hostname)"
+    echo "Kernel: $(uname -r)"
+    echo "Runtime: $RUNTIME seconds"
+    echo "Disk: $DISK_PATH"
+    echo "Process snapshot interval: $PS_INTERVAL seconds"
+    echo "Process snapshot maximum entries: $PS_MAX_ENTRIES"
+    echo "TCP socket snapshot interval: $SS_INTERVAL seconds"
+
+    echo
+    echo "===== lsblk ====="
+    lsblk -o NAME,PATH,TYPE,SIZE,FSTYPE,MOUNTPOINTS,MODEL
+
+    echo
+    echo "===== ip -s link ====="
+    ip -s link
+
+    echo
+    echo "===== ip route ====="
+    ip route
+} >"$OUTDIR/system-info.txt" 2>"$OUTDIR/system-info-errors.txt"
+
+###############################################################################
+# Start collectors
+###############################################################################
+
+echo "Starting vmstat..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    vmstat 1 \
+    >"$OUTDIR/vmstat.txt" \
+    2>"$OUTDIR/vmstat-errors.txt" &
+VMSTAT_PID=$!
+
+echo "Starting iostat..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    iostat -xz 1 "$DISK_PATH" \
+    >"$OUTDIR/iostat.txt" \
+    2>"$OUTDIR/iostat-errors.txt" &
+IOSTAT_PID=$!
+
+echo "Starting pidstat..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    pidstat -rudh -t 1 \
+    >"$OUTDIR/pidstat.txt" \
+    2>"$OUTDIR/pidstat-errors.txt" &
+PIDSTAT_PID=$!
+
+echo "Starting mpstat..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    mpstat -P ALL 1 \
+    >"$OUTDIR/mpstat.txt" \
+    2>"$OUTDIR/mpstat-errors.txt" &
+MPSTAT_PID=$!
+
+echo "Starting sar network collection..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    sar.sysstat -n DEV 1 \
+    >"$OUTDIR/sar-network.txt" \
+    2>"$OUTDIR/sar-network-errors.txt" &
+SAR_PID=$!
+
+echo "Starting process snapshot collection..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    bash -c '
+        interval="$1"
+        max_entries="$2"
+
+        while true; do
+            echo "======================================================================"
+            echo "Snapshot time: $(date --iso-8601=seconds)"
+            echo "======================================================================"
+
+            ps -eLo pid,tid,psr,pcpu,pmem,comm,args --sort=-pcpu |
+                head -n "$((max_entries + 1))"
+
+            echo
+            sleep "$interval"
+        done
+    ' bash "$PS_INTERVAL" "$PS_MAX_ENTRIES" \
+    >"$OUTDIR/processes.txt" \
+    2>"$OUTDIR/processes-errors.txt" &
+PS_PID=$!
+
+echo "Starting TCP socket collection..."
+timeout --signal=INT --kill-after=5s "$RUNTIME" \
+    bash -c '
+        interval="$1"
+
+        while true; do
+            echo "======================================================================"
+            echo "Snapshot time: $(date --iso-8601=seconds)"
+            echo "======================================================================"
+
+            echo
+            echo "===== ss -ti ====="
+            ss -ti
+
+            echo
+            echo "===== ss -tpn ====="
+            ss -tpn
+
+            echo
+            sleep "$interval"
+        done
+    ' bash "$SS_INTERVAL" \
+    >"$OUTDIR/tcp-sockets.txt" \
+    2>"$OUTDIR/tcp-sockets-errors.txt" &
+SS_PID=$!
+
+echo
+echo "Collector PIDs:"
+echo "  vmstat:  $VMSTAT_PID"
+echo "  iostat:  $IOSTAT_PID"
+echo "  pidstat: $PIDSTAT_PID"
+echo "  mpstat:  $MPSTAT_PID"
+echo "  sar:     $SAR_PID"
+echo "  ps:      $PS_PID"
+echo "  ss:      $SS_PID"
+echo
+
+###############################################################################
+# Wait for collectors
+###############################################################################
+
+wait "$VMSTAT_PID"
+VMSTAT_STATUS=$?
+
+wait "$IOSTAT_PID"
+IOSTAT_STATUS=$?
+
+wait "$PIDSTAT_PID"
+PIDSTAT_STATUS=$?
+
+wait "$MPSTAT_PID"
+MPSTAT_STATUS=$?
+
+wait "$SAR_PID"
+SAR_STATUS=$?
+
+wait "$PS_PID"
+PS_STATUS=$?
+
+wait "$SS_PID"
+SS_STATUS=$?
+
+###############################################################################
+# Check collector exit statuses
+###############################################################################
+
+# GNU timeout normally returns status 124 when the requested runtime expires.
+
+if [[ "$VMSTAT_STATUS" -ne 0 && "$VMSTAT_STATUS" -ne 124 ]]; then
+    echo "Warning: vmstat exited with status $VMSTAT_STATUS"
+fi
+
+if [[ "$IOSTAT_STATUS" -ne 0 && "$IOSTAT_STATUS" -ne 124 ]]; then
+    echo "Warning: iostat exited with status $IOSTAT_STATUS"
+fi
+
+if [[ "$PIDSTAT_STATUS" -ne 0 && "$PIDSTAT_STATUS" -ne 124 ]]; then
+    echo "Warning: pidstat exited with status $PIDSTAT_STATUS"
+fi
+
+if [[ "$MPSTAT_STATUS" -ne 0 && "$MPSTAT_STATUS" -ne 124 ]]; then
+    echo "Warning: mpstat exited with status $MPSTAT_STATUS"
+fi
+
+if [[ "$SAR_STATUS" -ne 0 && "$SAR_STATUS" -ne 124 ]]; then
+    echo "Warning: sar.sysstat exited with status $SAR_STATUS"
+fi
+
+if [[ "$PS_STATUS" -ne 0 && "$PS_STATUS" -ne 124 ]]; then
+    echo "Warning: process snapshot collection exited with status $PS_STATUS"
+fi
+
+if [[ "$SS_STATUS" -ne 0 && "$SS_STATUS" -ne 124 ]]; then
+    echo "Warning: TCP socket collection exited with status $SS_STATUS"
+fi
+
+###############################################################################
+# Collect final network interface and route information
+###############################################################################
+
+{
+    echo
+    echo "===== Final ip -s link ====="
+    ip -s link
+
+    echo
+    echo "===== Final ip route ====="
+    ip route
+} >>"$OUTDIR/system-info.txt" 2>>"$OUTDIR/system-info-errors.txt"
+
+###############################################################################
+# Record collection completion
+###############################################################################
+
+{
+    echo
+    echo "Collection end: $(date --iso-8601=seconds)"
+    echo "vmstat exit status: $VMSTAT_STATUS"
+    echo "iostat exit status: $IOSTAT_STATUS"
+    echo "pidstat exit status: $PIDSTAT_STATUS"
+    echo "mpstat exit status: $MPSTAT_STATUS"
+    echo "sar.sysstat exit status: $SAR_STATUS"
+    echo "process snapshot exit status: $PS_STATUS"
+    echo "TCP socket collection exit status: $SS_STATUS"
+} >>"$OUTDIR/system-info.txt"
+
+###############################################################################
+# Remove empty error files
+###############################################################################
+
+for error_file in \
+    system-info-errors.txt \
+    vmstat-errors.txt \
+    iostat-errors.txt \
+    pidstat-errors.txt \
+    mpstat-errors.txt \
+    sar-network-errors.txt \
+    processes-errors.txt \
+    tcp-sockets-errors.txt
+do
+    if [[ ! -s "$OUTDIR/$error_file" ]]; then
+        rm -f "$OUTDIR/$error_file"
+    fi
+done
+
+###############################################################################
+# Create archive
+###############################################################################
+
+ARCHIVE="${OUTDIR}.tar.gz"
+
+tar -czf "$ARCHIVE" "$OUTDIR"
+TAR_STATUS=$?
+
+if [[ "$TAR_STATUS" -ne 0 ]]; then
+    echo "Error: Failed to create archive: $ARCHIVE"
+    exit "$TAR_STATUS"
+fi
+
+echo
+echo "Collection complete."
+echo "Archive created: $ARCHIVE"
+echo
+echo "Upload this archive for analysis:"
+echo "  $ARCHIVE"
+EOF
+chmod a+x collect-perf-data.sh
+```

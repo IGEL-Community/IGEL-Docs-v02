@@ -154,6 +154,7 @@ mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -245,6 +246,7 @@ docker run --network host --rm -it \
   --shm-size=2g \
   chrome:bookworm
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -323,6 +325,7 @@ mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -410,6 +413,7 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   my-mono-app:bookworm
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -505,6 +509,7 @@ docker run --network host --rm -it \
   -v $PWD:/work -w /work \
   wine:debian bash
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -602,6 +607,7 @@ docker run --network host --rm \
   -v "$PWD/output:/output" \
   sapgui-builder
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -723,6 +729,7 @@ docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
 docker system prune -f
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -838,6 +845,7 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   $IMAGE
 EOF
+chmod a+x run-docker.sh
 
 ```
 
@@ -992,5 +1000,6 @@ docker run --network host --rm -it \
 
 echo "Files exported to: $EXPORT_DIR"
 EOF
+chmod a+x run-docker.sh
 
 ```

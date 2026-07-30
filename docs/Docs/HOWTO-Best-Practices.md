@@ -310,6 +310,19 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 ## IGEL OS - Hardware Performance review with AI Tool
 
+### IGEL UD3 M350C
+
+- IGEL OS 12.9.0+3
+- Start collection script
+- Start Microsoft Edge and open tabs to multiple sites
+- Input tar file into ChatGPT with prompt:
+
+```bash linenums="1"
+Provide a detailed review and summary table for this linux system and create a pdf file.
+```
+
+- [PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-linux-system-performance-review-ITC00E0C52A6A64.pdf)
+
 ### Script to collect data
 
 - Accepts a configurable RUNTIME (seconds) and DISK (drive to watch)

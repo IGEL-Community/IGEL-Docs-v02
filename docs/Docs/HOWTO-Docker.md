@@ -75,6 +75,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Choose a base image
 FROM debian:bookworm AS build
 
@@ -100,11 +101,14 @@ RUN cp -v debug.txt /out/
 # copy files out of container
 FROM scratch AS export
 COPY --from=build /out/ /
+EOF
+
 ```
 
 ### Save the following as `get-debs.sh`:
 
 ```bash linenums="1"
+echo << "EOF" > get-debs.sh
 #!/bin/bash
 #set -x
 #trap read debug
@@ -136,16 +140,21 @@ mv *.deb ..
 mv deb-listing.txt ..
 cd ..
 rm -rf build_tar
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
+EOF
+
 ```
 
 - The deb files will be in the `artifacts` folder
@@ -165,6 +174,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Debian 12 (bookworm)
 FROM debian:bookworm-slim
 
@@ -192,11 +202,14 @@ USER appuser
 
 # Run Chrome
 ENTRYPOINT ["google-chrome-stable"]
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 #
@@ -231,6 +244,8 @@ docker run --network host --rm -it \
   --group-add audio \
   --shm-size=2g \
   chrome:bookworm
+EOF
+
 ```
 
 -----
@@ -260,6 +275,7 @@ docker load < igelpkg.tar
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Choose a base image
 FROM igelpkg:latest AS build
 
@@ -293,16 +309,21 @@ RUN cp -v build_results.zip /out/
 # copy files out of container
 FROM scratch AS export
 COPY --from=build /out/ /
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 mkdir -p artifacts
 docker system prune -f
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
+EOF
+
 ```
 
 - The zip, `build_results.zip`, file will be in the `artifacts` folder
@@ -323,6 +344,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Debian 12 (bookworm)
 FROM debian:bookworm-slim
 
@@ -354,11 +376,14 @@ COPY ./publish/ ./
 # Run your app
 # If your entrypoint is a single exe, this works well:
 ENTRYPOINT ["mono", "MyApp.exe"]
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 #
@@ -384,6 +409,8 @@ docker run --network host --rm -it \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   my-mono-app:bookworm
+EOF
+
 ```
 
 -----
@@ -404,6 +431,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 FROM debian:bookworm
 
 #
@@ -437,11 +465,14 @@ USER wineuser
 WORKDIR /home/wineuser
 
 CMD ["bash"]
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 #set -x
 #trap read debug
@@ -473,6 +504,8 @@ docker run --network host --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   -v $PWD:/work -w /work \
   wine:debian bash
+EOF
+
 ```
 
 -----
@@ -495,6 +528,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 FROM debian:12-slim
 
 RUN apt-get update && apt-get install -y \
@@ -519,11 +553,14 @@ COPY build-sapgui-tar.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/build-sapgui-tar.sh
 
 CMD ["/usr/local/bin/build-sapgui-tar.sh"]
+EOF
+
 ```
 
 ### Save the following as `build-sapgui-tar.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > build-sapgui-tar.sh
 #!/bin/bash
 set -euxo pipefail
 
@@ -546,11 +583,14 @@ popd
 
 cp /tmp/sapgui.tar.bz2 /output/sapgui.tar.bz2
 cp /root/sapgui.log /output/sapgui.log
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 mkdir -p output
@@ -561,6 +601,8 @@ docker build --network host -t sapgui-builder .
 docker run --network host --rm \
   -v "$PWD/output:/output" \
   sapgui-builder
+EOF
+
 ```
 
 -----
@@ -618,6 +660,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Choose a base image
 FROM debian:bookworm AS build
 
@@ -647,11 +690,14 @@ RUN cp debug.txt /out/
 # copy files out of container
 FROM scratch AS export
 COPY --from=build /out/ /
+EOF
+
 ```
 
 ### Save the following as `docker-igel-iso-os12.sh`
 
 ```bash linenums="1"
+cat << "EOF" > docker-igel-iso-os12.sh
 #!/bin/bash
 #set -x
 #trap read debug
@@ -660,11 +706,14 @@ COPY --from=build /out/ /
 
 patch modify_osc_image < modify_osc_image.patch
 ./modify_osc_image --iso osc-*.iso --unattended-mode --after-install reboot --apps-path packages
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 rm -rf artifacts
@@ -673,11 +722,14 @@ docker system prune -f
 #docker buildx build --progress=plain --network host --target export --output type=local,dest=./artifacts .
 docker buildx build --network host --target export --output type=local,dest=./artifacts .
 docker system prune -f
+EOF
+
 ```
 
 ### Save the following as `modify_osc_image.patch`
 
 ```patch linenums="1"
+cat << "EOF" > modify_osc_image.patch
 --- orig_modify_osc_image	2026-06-09 12:37:01.060864258 -0600
 +++ modify_osc_image	2026-06-09 14:49:52.536870823 -0600
 @@ -714,7 +714,7 @@
@@ -709,6 +761,8 @@ docker system prune -f
  
      case "${answer,,}" in
          yes|y)
+EOF
+
 ```
 
 -----
@@ -728,6 +782,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Debian 12 (bookworm)
 FROM debian:bookworm-slim
 
@@ -749,11 +804,14 @@ USER appuser
 
 # Run Remmina
 ENTRYPOINT ["remmina"]
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 #
@@ -779,6 +837,8 @@ docker run --network host --rm -it \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   $IMAGE
+EOF
+
 ```
 
 -----
@@ -799,6 +859,7 @@ Summary of steps:
 ### Save the following as `dockerfile`:
 
 ```dockerfile linenums="1"
+cat << "EOF" > dockerfile
 # Debian 12 (bookworm)
 FROM debian:bookworm-slim
 
@@ -842,11 +903,14 @@ USER appuser
 
 # Run UMS Java Console
 ENTRYPOINT ["/opt/IGEL/RemoteManager/RemoteManager.sh"]
+EOF
+
 ```
 
 ### Save the following as `run-docker.sh`:
 
 ```bash linenums="1"
+cat << "EOF" > run-docker.sh
 #!/bin/bash
 
 set -euo pipefail
@@ -927,4 +991,6 @@ docker run --network host --rm -it \
   '
 
 echo "Files exported to: $EXPORT_DIR"
+EOF
+
 ```

@@ -321,6 +321,10 @@ Here TLSv1.2 or TLSv1.3 is used.
 Provide a detailed review and summary table for this linux system and create a pdf file.
 ```
 
+```bash linenums="1"
+Provide a detailed review and summary table for this linux system and create a pdf file. Include details on the NAME and VERSION from /etc/os-release in the summary table. Include details from the dmidecode in the summary table.
+```
+
 - [PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-linux-system-performance-review-ITC00E0C52A6A64.pdf)
 
 ### Script to collect data
@@ -331,6 +335,13 @@ Provide a detailed review and summary table for this linux system and create a p
 - Stops commands automatically after the specified runtime
 - Creates a tar file containing all collected data for easy upload to AI tool
 - Copy the script and paste into terminal window to create `collect-perf-data.sh`
+- Run as `root` or comment out the `dmidecode` section
+- Need to know and set disk drive (lsblk to find disk at bottom of listing)
+- Run for 200 seconds with disk drive nvme01n1
+
+```bash linenums="1"
+collect-perf-data.sh 200 nvme01n1
+```
 
 ```bash linenums="1"
 cat << "EOF" > collect-perf-data.sh
@@ -342,11 +353,16 @@ set -uo pipefail
 
 ###############################################################################
 # Configuration
+#
+# NOTES:
+#
+# Run as root or comment out the dmidecode section
+# Need to know and set disk drive (lsblk to find disk at bottom of listing)
 ###############################################################################
 
 RUNTIME="${1:-60}"       # Runtime in seconds
 DISK="${2:-nvme0n1}"     # Disk device without /dev/
-                         #(lsblk to find disk at bottom of list)
+                         #(lsblk to find disk at bottom of listing)
 
 PS_INTERVAL=10           # Seconds between process snapshots
 PS_MAX_ENTRIES=200       # Maximum process/thread entries per snapshot
@@ -380,6 +396,7 @@ fi
 ###############################################################################
 
 for command in \
+    dmidecode \
     vmstat \
     iostat \
     pidstat \
@@ -451,6 +468,10 @@ echo
     echo
     echo "===== ip route ====="
     ip route
+
+    echo
+    echo "===== dmidecode ====="
+    dmidecode
 } >"$OUTDIR/system-info.txt" 2>"$OUTDIR/system-info-errors.txt"
 
 ###############################################################################

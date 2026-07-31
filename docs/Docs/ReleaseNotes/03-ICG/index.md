@@ -11,6 +11,7 @@ Lists what changes are in the build.
 
 ## IGEL ICG
 
+- [12.13.100](Readme-12.13.100.txt) 31-July-2026
 - [12.12.100](Readme-12.12.100.txt) 10-June-2026
 - [12.11.100](Readme-12.11.100.txt) 31-March-2026
 - [12.10.100](Readme-12.10.100.txt) 15-January-2026

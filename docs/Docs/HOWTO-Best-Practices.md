@@ -325,7 +325,26 @@ Provide a detailed review and summary table for this linux system and create a p
 Provide a detailed review and summary table for this linux system and create a pdf file. Include details on the NAME and VERSION from /etc/os-release in the summary table. Include details from the dmidecode in the summary table.
 ```
 
-- [PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-linux-system-performance-review-ITC00E0C52A6A64.pdf)
+### IGEL UD3 M350C (IGEL OS 12.9.0 PR3) Running Microsoft Edge
+
+[PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-linux-system-performance-review-ITC00E0C52A6A64.pdf)
+
+### IGEL UD3 M350C (IGEL OS 12.9.0 PR3 vs. 12.10.0) Running Microsoft Edge
+
+IGEL OS 12.10.0 appears better suited for browser workloads on this IGEL M350C system.
+
+The most meaningful improvements were:
+
+- I/O wait decreased from 6.28% to 1.57%
+- Average eMMC utilization decreased from 22.1% to 11.5%
+- Read latency decreased from 3.54 ms to 1.41 ms
+- Write latency decreased from 10.13 ms to 4.08 ms
+- Initial swap usage decreased from 993 MiB to 48 MiB
+- Aggregate browser CPU usage decreased by approximately 35%
+
+CPU idle capacity remained almost unchanged, at approximately 15%, so the primary benefit is reduced storage, swap, and system overhead rather than additional CPU headroom.
+
+[PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-IGEL_OS_12_9_vs_12_10_Browser_Workload_Review.pdf)
 
 ### Script to collect data
 

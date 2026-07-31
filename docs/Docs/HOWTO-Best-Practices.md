@@ -310,7 +310,7 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 ## IGEL OS - Hardware Performance review with AI Tool
 
-### IGEL UD3 M350C
+### IGEL UD3 M350C (IGEL OS 12.9.0 PR3) Running Microsoft Edge
 
 - IGEL OS 12.9.0+3
 - Start collection script
@@ -325,11 +325,18 @@ Provide a detailed review and summary table for this linux system and create a p
 Provide a detailed review and summary table for this linux system and create a pdf file. Include details on the NAME and VERSION from /etc/os-release in the summary table. Include details from the dmidecode in the summary table.
 ```
 
-### IGEL UD3 M350C (IGEL OS 12.9.0 PR3) Running Microsoft Edge
-
 [PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-linux-system-performance-review-ITC00E0C52A6A64.pdf)
 
 ### IGEL UD3 M350C (IGEL OS 12.9.0 PR3 vs. 12.10.0) Running Microsoft Edge
+
+- IGEL OS 12.10.0
+- Start collection script
+- Start Microsoft Edge and open tabs to multiple sites
+- Input tar file into ChatGPT with prompt:
+
+```bash linenums="1"
+Provide a detailed review and summary table for this linux system and create a pdf file. Include details on the NAME and VERSION from /etc/os-release in the summary table. Include details from the dmidecode in the summary table. Compare the two data sets and show if IGEL OS 12.10.0 is better for browser workloads.
+```
 
 IGEL OS 12.10.0 appears better suited for browser workloads on this IGEL M350C system.
 

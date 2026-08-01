@@ -579,38 +579,87 @@ chmod a+x edge-kiosk.sh
 - Create `EdgeKiosk.java`
 
 ```bash linenums="1"
-cat << "EOF" > EdgeKiosk.java
+cat <<'EOF' > EdgeKiosk.java
 import java.awt.Dimension;
-import java.awt.GraphicsEnvironment;
-import java.awt.Rectangle;
 import java.awt.Toolkit;
+import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.WebSocket;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletionStage;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EdgeKiosk {
 
-    // Total runtime
+    /*
+     * REFRESH:
+     *   Refresh the existing Edge window through DevTools.
+     *
+     * RESTART:
+     *   Kill all Edge processes using the window's profile and relaunch Edge.
+     */
+    private enum RefreshMode {
+        REFRESH,
+        RESTART
+    }
+
+    private static final RefreshMode REFRESH_MODE = RefreshMode.REFRESH;
+
+    // Total runtime.
     private static final int LOOP_SECONDS = 300;
 
-    // Refresh interval
+    // Refresh or restart interval.
     private static final int REFRESH_INTERVAL_SECONDS = 10;
+
+    // Time allowed for Edge DevTools to become available.
+    private static final int DEVTOOLS_START_TIMEOUT_SECONDS = 15;
+
+    // Starting TCP port for Edge DevTools.
+    private static final int DEVTOOLS_BASE_PORT = 9222;
 
     private static final String[] URLS = {
             "https://www.igel.com",
             "https://www.island.io"
     };
 
+    private static final HttpClient HTTP_CLIENT = HttpClient.newBuilder()
+            .connectTimeout(Duration.ofSeconds(5))
+            .build();
+
+    private static final Pattern WEBSOCKET_URL_PATTERN = Pattern.compile(
+            "\"webSocketDebuggerUrl\"\\s*:\\s*\"([^\"]+)\""
+    );
+
     private static class Browser {
         Process process;
-        String url;
-        int x;
-        int y;
-        int width;
-        int height;
+        final String url;
+        final String profileDirectory;
+        final int devToolsPort;
+        final int x;
+        final int y;
+        final int width;
+        final int height;
 
-        Browser(String url, int x, int y, int width, int height) {
+        Browser(
+                String url,
+                String profileDirectory,
+                int devToolsPort,
+                int x,
+                int y,
+                int width,
+                int height) {
+
             this.url = url;
+            this.profileDirectory = profileDirectory;
+            this.devToolsPort = devToolsPort;
             this.x = x;
             this.y = y;
             this.width = width;
@@ -628,94 +677,505 @@ public class EdgeKiosk {
             System.exit(1);
         }
 
+        System.out.println("Edge binary: " + edge);
+        System.out.println("Refresh mode: " + REFRESH_MODE);
+        System.out.println("Runtime: " + LOOP_SECONDS + " seconds");
+        System.out.println(
+                "Refresh interval: " +
+                REFRESH_INTERVAL_SECONDS +
+                " seconds"
+        );
+
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 
         int count = URLS.length;
-        int cols = (int)Math.ceil(Math.sqrt(count));
-        int rows = (int)Math.ceil((double)count / cols);
+        int cols = (int) Math.ceil(Math.sqrt(count));
+        int rows = (int) Math.ceil((double) count / cols);
 
         int tileWidth = screen.width / cols;
         int tileHeight = screen.height / rows;
 
         List<Browser> browsers = new ArrayList<>();
 
-        for (int i = 0; i < count; i++) {
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.out.println();
+            System.out.println("Stopping Edge kiosk windows...");
 
-            int row = i / cols;
-            int col = i % cols;
+            for (Browser browser : browsers) {
+                stopBrowser(browser);
+            }
+        }));
 
-            Browser b = new Browser(
-                    URLS[i],
-                    col * tileWidth,
-                    row * tileHeight,
-                    tileWidth,
-                    tileHeight);
+        try {
+            /*
+             * Remove Edge instances left behind by an earlier run of this
+             * program before launching new windows.
+             */
+            for (int i = 0; i < count; i++) {
+                String profileDirectory = getProfileDirectory(i);
+                killProcessesForProfile(profileDirectory);
+            }
 
-            launch(edge, b);
+            for (int i = 0; i < count; i++) {
 
-            browsers.add(b);
+                int row = i / cols;
+                int col = i % cols;
 
-            Thread.sleep(1000);
-        }
+                Browser browser = new Browser(
+                        URLS[i],
+                        getProfileDirectory(i),
+                        DEVTOOLS_BASE_PORT + i,
+                        col * tileWidth,
+                        row * tileHeight,
+                        tileWidth,
+                        tileHeight
+                );
 
-        long end = System.currentTimeMillis() + LOOP_SECONDS * 1000L;
+                browsers.add(browser);
 
-        while (System.currentTimeMillis() < end) {
+                launch(edge, browser);
 
-            Thread.sleep(REFRESH_INTERVAL_SECONDS * 1000L);
-
-            for (Browser b : browsers) {
-
-                if (b.process != null && b.process.isAlive()) {
-                    b.process.destroy();
-                    b.process.waitFor();
+                if (REFRESH_MODE == RefreshMode.REFRESH) {
+                    if (!waitForDevTools(browser)) {
+                        System.err.println(
+                                "Warning: DevTools did not start for " +
+                                browser.url
+                        );
+                    }
                 }
 
-                launch(edge, b);
+                Thread.sleep(1000);
             }
-        }
 
-        for (Browser b : browsers) {
-            if (b.process != null && b.process.isAlive()) {
-                b.process.destroyForcibly();
+            long endTime =
+                    System.currentTimeMillis() + LOOP_SECONDS * 1000L;
+
+            while (System.currentTimeMillis() < endTime) {
+
+                long remainingMilliseconds =
+                        endTime - System.currentTimeMillis();
+
+                long sleepMilliseconds = Math.min(
+                        REFRESH_INTERVAL_SECONDS * 1000L,
+                        remainingMilliseconds
+                );
+
+                if (sleepMilliseconds <= 0) {
+                    break;
+                }
+
+                Thread.sleep(sleepMilliseconds);
+
+                if (System.currentTimeMillis() >= endTime) {
+                    break;
+                }
+
+                for (Browser browser : browsers) {
+                    maintainBrowser(edge, browser);
+                }
+            }
+
+        } finally {
+            for (Browser browser : browsers) {
+                stopBrowser(browser);
             }
         }
     }
 
-    private static void launch(String edge, Browser b) throws IOException {
+    private static String getProfileDirectory(int index) {
+        return "/tmp/edge-kiosk-profile-" + index;
+    }
 
-        List<String> cmd = new ArrayList<>();
+    private static void maintainBrowser(
+            String edge,
+            Browser browser) throws Exception {
 
-        cmd.add(edge);
+        if (REFRESH_MODE == RefreshMode.RESTART) {
+            restartBrowser(edge, browser);
+            return;
+        }
 
-        // App mode (no address bar)
-        cmd.add("--app=" + b.url);
+        /*
+         * In REFRESH mode, first check whether the Edge DevTools endpoint is
+         * still responding. If it is not responding, Edge probably crashed.
+         */
+        if (!isDevToolsAvailable(browser)) {
+            System.err.println(
+                    "Edge is not responding for " +
+                    browser.url +
+                    ". Relaunching it."
+            );
 
-        // Separate profile
-        cmd.add("--user-data-dir=/tmp/edge-kiosk-" + Math.abs(b.url.hashCode()));
+            restartBrowser(edge, browser);
+            return;
+        }
 
-        cmd.add("--no-first-run");
-        cmd.add("--no-default-browser-check");
-        cmd.add("--disable-session-crashed-bubble");
-        cmd.add("--disable-features=Translate");
-        cmd.add("--disable-sync");
-        cmd.add("--overscroll-history-navigation=0");
+        try {
+            refreshBrowser(browser);
 
-        cmd.add("--window-position=" + b.x + "," + b.y);
-        cmd.add("--window-size=" + b.width + "," + b.height);
+            System.out.println(
+                    "Refreshed: " + browser.url
+            );
 
-        ProcessBuilder pb = new ProcessBuilder(cmd);
-        pb.inheritIO();
+        } catch (Exception exception) {
+            System.err.println(
+                    "Refresh failed for " +
+                    browser.url +
+                    ": " +
+                    exception.getMessage()
+            );
 
-        b.process = pb.start();
+            System.err.println("Relaunching failed Edge window.");
+
+            restartBrowser(edge, browser);
+        }
+    }
+
+    private static void restartBrowser(
+            String edge,
+            Browser browser) throws Exception {
+
+        System.out.println("Restarting: " + browser.url);
+
+        stopBrowser(browser);
+
+        /*
+         * Give Edge time to release the user profile lock and DevTools port.
+         */
+        Thread.sleep(1000);
+
+        launch(edge, browser);
+
+        if (REFRESH_MODE == RefreshMode.REFRESH) {
+            if (!waitForDevTools(browser)) {
+                System.err.println(
+                        "DevTools did not become available after restarting " +
+                        browser.url
+                );
+            }
+        }
+    }
+
+    private static void launch(
+            String edge,
+            Browser browser) throws IOException {
+
+        List<String> command = new ArrayList<>();
+
+        command.add(edge);
+
+        // App mode removes the normal address bar and browser controls.
+        command.add("--app=" + browser.url);
+
+        // Each window gets a dedicated Edge profile.
+        command.add("--user-data-dir=" + browser.profileDirectory);
+
+        /*
+         * DevTools is used to refresh the existing page without restarting
+         * Edge. Each Edge instance needs its own TCP port.
+         */
+        command.add(
+                "--remote-debugging-port=" + browser.devToolsPort
+        );
+        command.add("--remote-debugging-address=127.0.0.1");
+        command.add("--remote-allow-origins=*");
+
+        command.add("--no-first-run");
+        command.add("--no-default-browser-check");
+        command.add("--disable-session-crashed-bubble");
+        command.add("--disable-features=Translate");
+        command.add("--disable-sync");
+        command.add("--overscroll-history-navigation=0");
+
+        command.add(
+                "--window-position=" +
+                browser.x +
+                "," +
+                browser.y
+        );
+
+        command.add(
+                "--window-size=" +
+                browser.width +
+                "," +
+                browser.height
+        );
+
+        ProcessBuilder processBuilder = new ProcessBuilder(command);
+        processBuilder.inheritIO();
+
+        browser.process = processBuilder.start();
+
+        System.out.println(
+                "Launched: " +
+                browser.url +
+                " at " +
+                browser.x +
+                "," +
+                browser.y +
+                " size " +
+                browser.width +
+                "x" +
+                browser.height
+        );
+    }
+
+    private static boolean waitForDevTools(Browser browser) {
+
+        long deadline = System.currentTimeMillis()
+                + DEVTOOLS_START_TIMEOUT_SECONDS * 1000L;
+
+        while (System.currentTimeMillis() < deadline) {
+
+            if (isDevToolsAvailable(browser)) {
+                return true;
+            }
+
+            try {
+                Thread.sleep(250);
+            } catch (InterruptedException exception) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+
+        return false;
+    }
+
+    private static boolean isDevToolsAvailable(Browser browser) {
+
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(
+                            "http://127.0.0.1:" +
+                            browser.devToolsPort +
+                            "/json/list"
+                    ))
+                    .timeout(Duration.ofSeconds(2))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = HTTP_CLIENT.send(
+                    request,
+                    HttpResponse.BodyHandlers.ofString()
+            );
+
+            return response.statusCode() == 200
+                    && response.body().contains(
+                            "webSocketDebuggerUrl"
+                    );
+
+        } catch (Exception exception) {
+            return false;
+        }
+    }
+
+    private static void refreshBrowser(Browser browser)
+            throws Exception {
+
+        String webSocketUrl = getPageWebSocketUrl(browser);
+
+        if (webSocketUrl == null) {
+            throw new IOException(
+                    "No page WebSocket endpoint was returned by Edge"
+            );
+        }
+
+        WebSocket.Listener listener = new WebSocket.Listener() {
+            @Override
+            public void onOpen(WebSocket webSocket) {
+                webSocket.request(1);
+            }
+
+            @Override
+            public CompletionStage<?> onText(
+                    WebSocket webSocket,
+                    CharSequence data,
+                    boolean last) {
+
+                webSocket.request(1);
+                return null;
+            }
+
+            @Override
+            public void onError(
+                    WebSocket webSocket,
+                    Throwable error) {
+
+                System.err.println(
+                        "DevTools WebSocket error: " +
+                        error.getMessage()
+                );
+            }
+        };
+
+        WebSocket webSocket = HTTP_CLIENT.newWebSocketBuilder()
+                .connectTimeout(Duration.ofSeconds(5))
+                .buildAsync(
+                        URI.create(webSocketUrl),
+                        listener
+                )
+                .get(5, TimeUnit.SECONDS);
+
+        /*
+         * Page.reload refreshes the current app-mode page.
+         * ignoreCache=true forces the page to retrieve current content.
+         */
+        String command =
+                "{\"id\":1,\"method\":\"Page.reload\"," +
+                "\"params\":{\"ignoreCache\":true}}";
+
+        webSocket.sendText(command, true)
+                .get(5, TimeUnit.SECONDS);
+
+        webSocket.sendClose(
+                WebSocket.NORMAL_CLOSURE,
+                "Refresh complete"
+        ).get(5, TimeUnit.SECONDS);
+    }
+
+    private static String getPageWebSocketUrl(Browser browser)
+            throws Exception {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(
+                        "http://127.0.0.1:" +
+                        browser.devToolsPort +
+                        "/json/list"
+                ))
+                .timeout(Duration.ofSeconds(5))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = HTTP_CLIENT.send(
+                request,
+                HttpResponse.BodyHandlers.ofString()
+        );
+
+        if (response.statusCode() != 200) {
+            throw new IOException(
+                    "DevTools returned HTTP " +
+                    response.statusCode()
+            );
+        }
+
+        Matcher matcher =
+                WEBSOCKET_URL_PATTERN.matcher(response.body());
+
+        if (matcher.find()) {
+            return matcher.group(1);
+        }
+
+        return null;
+    }
+
+    private static void stopBrowser(Browser browser) {
+
+        /*
+         * First terminate the Process object and any children Java can still
+         * see. Edge sometimes moves renderer processes outside the original
+         * process tree, so the profile-based pkill below is also required.
+         */
+        if (browser.process != null) {
+
+            try {
+                browser.process.descendants().forEach(process -> {
+                    try {
+                        process.destroy();
+                    } catch (Exception ignored) {
+                    }
+                });
+
+                browser.process.destroy();
+
+                if (!browser.process.waitFor(
+                        3,
+                        TimeUnit.SECONDS)) {
+
+                    browser.process.descendants().forEach(process -> {
+                        try {
+                            process.destroyForcibly();
+                        } catch (Exception ignored) {
+                        }
+                    });
+
+                    browser.process.destroyForcibly();
+                }
+
+            } catch (Exception exception) {
+                System.err.println(
+                        "Unable to stop Java Edge process: " +
+                        exception.getMessage()
+                );
+            }
+        }
+
+        /*
+         * Kill any remaining Edge processes associated with this particular
+         * profile. This prevents old app windows from accumulating.
+         */
+        killProcessesForProfile(browser.profileDirectory);
+
+        browser.process = null;
+    }
+
+    private static void killProcessesForProfile(
+            String profileDirectory) {
+
+        String processPattern =
+                "--user-data-dir=" + profileDirectory;
+
+        try {
+            Process terminate = new ProcessBuilder(
+                    "pkill",
+                    "-TERM",
+                    "-f",
+                    processPattern
+            ).start();
+
+            terminate.waitFor(2, TimeUnit.SECONDS);
+
+            Thread.sleep(500);
+
+            Process forceKill = new ProcessBuilder(
+                    "pkill",
+                    "-KILL",
+                    "-f",
+                    processPattern
+            ).start();
+
+            forceKill.waitFor(2, TimeUnit.SECONDS);
+
+        } catch (IOException exception) {
+            System.err.println(
+                    "Warning: pkill is unavailable. " +
+                    "Some detached Edge processes may remain."
+            );
+
+        } catch (InterruptedException exception) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     private static String findEdge() {
 
-        String env = System.getenv("EDGE_BINARY");
+        String environmentBinary =
+                System.getenv("EDGE_BINARY");
 
-        if (env != null && !env.isBlank())
-            return env;
+        if (environmentBinary != null
+                && !environmentBinary.isBlank()) {
+
+            File file = new File(environmentBinary);
+
+            if (file.exists() && file.canExecute()) {
+                return environmentBinary;
+            }
+
+            System.err.println(
+                    "EDGE_BINARY does not exist or is not executable: " +
+                    environmentBinary
+            );
+        }
 
         String[] candidates = {
                 "/usr/bin/microsoft-edge-stable",
@@ -724,9 +1184,12 @@ public class EdgeKiosk {
                 "/snap/bin/microsoft-edge"
         };
 
-        for (String c : candidates) {
-            if (new java.io.File(c).exists())
-                return c;
+        for (String candidate : candidates) {
+            File file = new File(candidate);
+
+            if (file.exists() && file.canExecute()) {
+                return candidate;
+            }
         }
 
         return null;
@@ -756,7 +1219,6 @@ popd
 # compile EdgeKiosk.java
 #
 
-#javac -cp ".:/services/selenium/*" EdgeKiosk.java
 javac EdgeKiosk.java
 
 #
@@ -765,7 +1227,6 @@ javac EdgeKiosk.java
 
 export EDGE_BINARY=/services/edge/usr/bin/microsoft-edge-stable
 
-#java -cp ".:/services/selenium/*" EdgeKiosk
 java EdgeKiosk
 EOF
 chmod a+x edge-kiosk.sh

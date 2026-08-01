@@ -571,3 +571,202 @@ java -cp ".:/services/selenium/*" EdgeKiosk
 EOF
 chmod a+x edge-kiosk.sh
 ```
+
+-----
+
+## Tiled Locked Down Browser Windows
+
+- Create `EdgeKiosk.java`
+
+```bash linenums="1"
+cat << "EOF" > EdgeKiosk.java
+import java.awt.Dimension;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EdgeKiosk {
+
+    // Total runtime
+    private static final int LOOP_SECONDS = 300;
+
+    // Refresh interval
+    private static final int REFRESH_INTERVAL_SECONDS = 10;
+
+    private static final String[] URLS = {
+            "https://www.igel.com",
+            "https://www.island.io"
+    };
+
+    private static class Browser {
+        Process process;
+        String url;
+        int x;
+        int y;
+        int width;
+        int height;
+
+        Browser(String url, int x, int y, int width, int height) {
+            this.url = url;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        String edge = findEdge();
+
+        if (edge == null) {
+            System.err.println("Unable to locate Microsoft Edge.");
+            System.err.println("Set EDGE_BINARY=/path/to/microsoft-edge");
+            System.exit(1);
+        }
+
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+
+        int count = URLS.length;
+        int cols = (int)Math.ceil(Math.sqrt(count));
+        int rows = (int)Math.ceil((double)count / cols);
+
+        int tileWidth = screen.width / cols;
+        int tileHeight = screen.height / rows;
+
+        List<Browser> browsers = new ArrayList<>();
+
+        for (int i = 0; i < count; i++) {
+
+            int row = i / cols;
+            int col = i % cols;
+
+            Browser b = new Browser(
+                    URLS[i],
+                    col * tileWidth,
+                    row * tileHeight,
+                    tileWidth,
+                    tileHeight);
+
+            launch(edge, b);
+
+            browsers.add(b);
+
+            Thread.sleep(1000);
+        }
+
+        long end = System.currentTimeMillis() + LOOP_SECONDS * 1000L;
+
+        while (System.currentTimeMillis() < end) {
+
+            Thread.sleep(REFRESH_INTERVAL_SECONDS * 1000L);
+
+            for (Browser b : browsers) {
+
+                if (b.process != null && b.process.isAlive()) {
+                    b.process.destroy();
+                    b.process.waitFor();
+                }
+
+                launch(edge, b);
+            }
+        }
+
+        for (Browser b : browsers) {
+            if (b.process != null && b.process.isAlive()) {
+                b.process.destroyForcibly();
+            }
+        }
+    }
+
+    private static void launch(String edge, Browser b) throws IOException {
+
+        List<String> cmd = new ArrayList<>();
+
+        cmd.add(edge);
+
+        // App mode (no address bar)
+        cmd.add("--app=" + b.url);
+
+        // Separate profile
+        cmd.add("--user-data-dir=/tmp/edge-kiosk-" + Math.abs(b.url.hashCode()));
+
+        cmd.add("--no-first-run");
+        cmd.add("--no-default-browser-check");
+        cmd.add("--disable-session-crashed-bubble");
+        cmd.add("--disable-features=Translate");
+        cmd.add("--disable-sync");
+        cmd.add("--overscroll-history-navigation=0");
+
+        cmd.add("--window-position=" + b.x + "," + b.y);
+        cmd.add("--window-size=" + b.width + "," + b.height);
+
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        pb.inheritIO();
+
+        b.process = pb.start();
+    }
+
+    private static String findEdge() {
+
+        String env = System.getenv("EDGE_BINARY");
+
+        if (env != null && !env.isBlank())
+            return env;
+
+        String[] candidates = {
+                "/usr/bin/microsoft-edge-stable",
+                "/usr/bin/microsoft-edge",
+                "/usr/bin/msedge",
+                "/snap/bin/microsoft-edge"
+        };
+
+        for (String c : candidates) {
+            if (new java.io.File(c).exists())
+                return c;
+        }
+
+        return null;
+    }
+}
+EOF
+```
+
+- Create `edge-kiosk.sh`
+
+```bash linenums="1"
+cat << "EOF" > edge-kiosk.sh
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# set JAVA_HOME
+#
+pushd .
+cd /services/azul_openjdk/zulu*
+eval JAVA_HOME=$(pwd)
+PATH=$JAVA_HOME/bin:$PATH
+popd
+
+#
+# compile EdgeKiosk.java
+#
+
+#javac -cp ".:/services/selenium/*" EdgeKiosk.java
+javac EdgeKiosk.java
+
+#
+# run EdgeKiosk
+#
+
+export EDGE_BINARY=/services/edge/usr/bin/microsoft-edge-stable
+
+#java -cp ".:/services/selenium/*" EdgeKiosk
+java EdgeKiosk
+EOF
+chmod a+x edge-kiosk.sh
+```

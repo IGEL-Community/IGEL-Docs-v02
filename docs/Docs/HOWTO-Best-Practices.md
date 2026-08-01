@@ -384,6 +384,136 @@ CPU idle capacity remained almost unchanged, at approximately 15%, so the primar
 Write a Selenium Test (EdgeTest.java) script to open Edge browser and then open tabs to www.igel.com, www.hp.com, www.lg.com, www.lenovo.com, getnerdio.com and www.island.io. Loop for defined number of seconds, LOOP_SECONDS, and in the loop refresh the above web sites.
 ```
 
+- Create EdgeTest.java
+
+```bash linenums="1"
+cat << "EOF" > EdgeTest.java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EdgeTest {
+
+    // Total runtime
+    private static final int LOOP_SECONDS = 300;
+
+    // Seconds between refreshes
+    private static final int REFRESH_INTERVAL_SECONDS = 10;
+
+    private static final String[] URLS = {
+            "https://www.igel.com",
+            "https://www.hp.com",
+            "https://www.lg.com",
+            "https://www.lenovo.com",
+            "https://getnerdio.com",
+            "https://www.island.io"
+    };
+
+    public static void main(String[] args) {
+
+        EdgeOptions options = new EdgeOptions();
+
+        // Uncomment if desired
+        // options.addArguments("--start-maximized");
+        // options.addArguments("--disable-notifications");
+        // options.addArguments("--inprivate");
+
+        WebDriver driver = new EdgeDriver(options);
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().window().maximize();
+
+        List<String> tabs = new ArrayList<>();
+
+        try {
+
+            // First tab
+            driver.get(URLS[0]);
+            tabs.add(driver.getWindowHandle());
+
+            // Remaining tabs
+            for (int i = 1; i < URLS.length; i++) {
+                driver.switchTo().newWindow(WindowType.TAB);
+                driver.get(URLS[i]);
+                tabs.add(driver.getWindowHandle());
+            }
+
+            long endTime = System.currentTimeMillis() + (LOOP_SECONDS * 1000L);
+            int cycle = 1;
+
+            while (System.currentTimeMillis() < endTime) {
+
+                System.out.println("Refresh cycle " + cycle);
+
+                for (String tab : tabs) {
+                    driver.switchTo().window(tab);
+
+                    System.out.println("Refreshing: " + driver.getCurrentUrl());
+
+                    try {
+                        driver.navigate().refresh();
+                    } catch (Exception ex) {
+                        System.out.println("Refresh failed: " + ex.getMessage());
+                    }
+                }
+
+                cycle++;
+
+                Thread.sleep(REFRESH_INTERVAL_SECONDS * 1000L);
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+
+            driver.quit();
+
+            System.out.println("Finished.");
+        }
+    }
+}
+EOF
+```
+
+- Compile and run automated test software
+
+```bash linenums="1"
+cat << "EOF" > automated-test-software.sh
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# set JAVA_HOME
+#
+pushd .
+cd /services/azul_openjdk/zulu*
+eval JAVA_HOME=$(pwd)
+PATH=$JAVA_HOME/bin:$PATH
+popd
+
+#
+# compile EdgeTest.java
+#
+
+javac -cp ".:/services/selenium/*" EdgeTest.java
+
+#
+# run EdgeTest
+#
+
+java -cp ".:/services/selenium/*" EdgeTest
+EOF
+chmod a+x automated-test-software.sh
+```
+
 ### Script to collect data
 
 - Accepts a configurable RUNTIME (seconds) and DISK (drive to watch)

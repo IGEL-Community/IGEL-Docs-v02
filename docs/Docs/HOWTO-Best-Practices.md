@@ -374,6 +374,16 @@ CPU idle capacity remained almost unchanged, at approximately 15%, so the primar
 
 [PDF Summary Report from ChatGPT](./Images/HOWTO-Best-Practices-IGEL_OS_12_9_vs_12_10_Browser_Workload_Review.pdf)
 
+### Browser Testing Automation with Selenium
+
+- [IGEL Community App Recipe for Selenium](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/selenium)
+
+- AI prompt to create Selenium java script
+
+```bash linenums="1"
+Write a Selenium Test (EdgeTest.java) script to open Edge browser and then open tabs to www.igel.com, www.hp.com, www.lg.com, www.lenovo.com, getnerdio.com and www.island.io. Loop for defined number of seconds, LOOP_SECONDS, and in the loop refresh the above web sites.
+```
+
 ### Script to collect data
 
 - Accepts a configurable RUNTIME (seconds) and DISK (drive to watch)

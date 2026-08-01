@@ -90,6 +90,7 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 #### Backup UMS Embedded Database
 
 ```bash linenums="1"
+cat << "EOF" > get-backups-from-ums.sh
 #!/bin/bash
 #set -x
 #trap read debug
@@ -97,28 +98,46 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 SSH_TO_SERVER="igel-ums-server"
 
 # Add umsadmin-cli and chown to sudo list so that password is not needed
-# /etc/sudoers.d/igelums-umsadmin-cli 
+# /etc/sudoers.d/igelums-umsadmin-cli
 # igelums ALL=(root) NOPASSWD: /usr/local/bin/umsadmin-cli
 # /etc/sudoers.d/chown
 # igelums ALL=(root) NOPASSWD: /usr/bin/chown
 
+confirm() {
+    local action="$1"
+
+    echo
+    read -rp "Press <Enter> to ${action} or type 'q' to quit: " ans
+    [[ "$ans" =~ ^[Qq]$ ]] && {
+        echo "Aborted."
+        exit 1
+    }
+}
+
 echo "======== Creating UMS backup ========"
-ssh -t ${SSH_TO_SERVER} 'sudo umsadmin-cli --quiet db backup -o /tmp/ums-backup-$(date +%y%m%d%H%M).pbak --full; \
-  sudo chown igelums:igelums /tmp/ums-backup-*.pbak'
+confirm "create the UMS backup on ${SSH_TO_SERVER}"
+ssh -t "${SSH_TO_SERVER}" \
+    'sudo umsadmin-cli --quiet db backup -o /tmp/ums-backup-$(date +%y%m%d%H%M).pbak --full; \
+     sudo chown igelums:igelums /tmp/ums-backup-*.pbak'
 echo "======== Finished UMS backup ========"
 
 echo "======== Starting - Copying UMS backup ========"
-scp ${SSH_TO_SERVER}:/tmp/ums-backup-*.pbak .
+confirm "copy the backup from ${SSH_TO_SERVER}"
+scp "${SSH_TO_SERVER}:/tmp/ums-backup-*.pbak" .
 echo "======== Finished - Copying UMS backup ========"
 
 echo "======== Starting - Removing UMS backup ========"
-ssh -t ${SSH_TO_SERVER} 'rm -f /tmp/ums-backup-*.pbak'
+confirm "remove the backup from ${SSH_TO_SERVER}"
+ssh -t "${SSH_TO_SERVER}" 'rm -f /tmp/ums-backup-*.pbak'
 echo "======== Finished - Removing UMS backup ========"
+EOF
+chmod a+x get-backups-from-ums.sh
 ```
 
 #### Backup UMS Files
 
 ```bash linenums="1"
+cat << "EOF" > get-rsync-from-ums.sh
 #!/bin/bash
 #set -x
 #trap read debug
@@ -194,6 +213,8 @@ done
 
 echo
 echo "Backup completed: $(date)" | tee -a "$LOGFILE"
+EOF
+chmod a+x get-rsync-from-ums.sh
 ```
 
 -----

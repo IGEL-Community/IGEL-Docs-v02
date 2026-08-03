@@ -1,12 +1,5 @@
 # HOWTO Browsers
 
-IGEL OS 11 includes Chromium and Firefox browsers.
-
-- [KB: Chromium Browser Global](https://kb.igel.com/en/igel-os/current/chromium-browser-global-session-in-igel-os)
-- [KB: Chromium Sessions](https://kb.igel.com/en/igel-os/current/chromium-sessions)
-- [KB Firefox Browser Global](https://kb.igel.com/en/igel-os/current/firefox-browser-global-settings-in-igel-os)
-- [KB: Firefox Browser Session](https://kb.igel.com/en/igel-os/current/firefox-browser-session)
-
 IGEL OS 12 has the following browsers. Other browsers are planned.
 
 - [KB: Chromium Browser](https://kb.igel.com/en/igel-apps/current/chromium-browser)
@@ -19,6 +12,10 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 ```bash linenums="1"
 /usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
 ```
+
+**Q:** How to reload the page while bypassing the browser cache?
+
+**A:** Run the following command in the browser tab: `Ctrl` + `Shift` + `R`. This keeps cookies, keeps login session, and reloads all page resources from the server
 
 **Q:** How to set default browser in IGEL OS 12?
 

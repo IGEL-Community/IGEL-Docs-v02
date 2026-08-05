@@ -37,7 +37,6 @@ for LICENSE_FILE in "${LICENSE_FILES[@]}"; do
         echo "File ${LICENSE_FILE} contains ${UNIT_ID}: Licensing device" | $LOGGER
         install_igel_license "${LICENSE_FILE}"
         FOUND=1
-        break        # Remove this if you want to install every matching license
     fi
 done
 

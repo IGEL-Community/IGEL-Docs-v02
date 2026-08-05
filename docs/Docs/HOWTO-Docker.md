@@ -8,6 +8,22 @@ Docker makes it easy to run an application the same way everywhere—on your lap
 
 -----
 
+## IGEL Managed Containers™
+
+- Secure, governed containerized workloads for the distributed edge.
+
+- IGEL Managed Containers™ extends the IGEL Adaptive Secure Endpoint Platform™ with a managed container workload model for delivering controlled, policy-aligned applications and services.
+
+- Run containerized workloads on the immutable IGEL OS™ foundation, connect to existing OCI-compliant registries, and centrally govern deployment and lifecycle operations through the IGEL Universal Management Suite. IGEL Managed Containers helps organizations bring modern application flexibility to IT and OT environments while preserving endpoint trust, operational control, and enterprise policy alignment.
+
+[IGEL Web Site: IGEL Managed Containers™](https://www.igel.com/secure-managed-containers/)
+
+[IGEL KB: IGEL Managed Containers™](https://kb.igel.com/igel-managed-containers/current)
+
+-----
+
+-----
+
 ## Install Docker on IGEL OS
 
 - Use [IGEL KB: IGEL App Creator Portal](https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal) with the [Docker Recipe](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/docker)

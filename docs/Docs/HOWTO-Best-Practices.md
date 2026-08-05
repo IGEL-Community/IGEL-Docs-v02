@@ -50,6 +50,9 @@ Initial setup for UMS can be done with embedded database with plans to migrate t
 - UMS upgrade method documented (App Store vs UMS-managed)
 - Global update configuration reviewed
 - UMS ID imported into Customer / Support Portal
+- Embedded DB, optimize DB with command: `sudo umsadmin-cli db optimize`
+- SQL DB, have SQL administrator performance-optimize the SQL database
+- Validate [IGEL KB: Antivirus Configuration on IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/best-practices-antivirus-configuration-on-igel-ums-server)
 
 ### Use Single UMS for Production, QA / Pre-Production, Test, and Sandbox
 

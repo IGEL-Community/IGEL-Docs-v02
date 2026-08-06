@@ -16,9 +16,9 @@ Docker makes it easy to run an application the same way everywhere—on your lap
 
 - Run containerized workloads on the immutable IGEL OS™ foundation, connect to existing OCI-compliant registries, and centrally govern deployment and lifecycle operations through the IGEL Universal Management Suite. IGEL Managed Containers helps organizations bring modern application flexibility to IT and OT environments while preserving endpoint trust, operational control, and enterprise policy alignment.
 
-[IGEL Web Site: IGEL Managed Containers™](https://www.igel.com/secure-managed-containers/)
+- [IGEL Web Site: IGEL Managed Containers™](https://www.igel.com/secure-managed-containers/)
 
-[IGEL KB: IGEL Managed Containers™](https://kb.igel.com/igel-managed-containers/current)
+- [IGEL KB: IGEL Managed Containers™](https://kb.igel.com/igel-managed-containers/current)
 
 -----
 

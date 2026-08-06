@@ -36,6 +36,16 @@ chromium-browser --app=https://storefront-url.domain.org --start-maximized
 
 ## curl
 
+List all files on UMS WebDAV
+
+```bash linenums="1"
+curl -u user-name:user-password \
+  -X PROPFIND \
+  -H "Content-Type: application/xml" \
+  --data '<?xml version="1.0"?><propfind xmlns="DAV:"><allprop/></propfind>' \
+  https://UMS-Server:8443/ums_filetransfer/
+```
+
 Check for trusted certificate or download files
 
 **Download script from Github and save it:**

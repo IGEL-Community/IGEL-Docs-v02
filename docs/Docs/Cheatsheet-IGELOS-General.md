@@ -46,6 +46,39 @@ curl -u user-name:user-password \
   https://UMS-Server:8443/ums_filetransfer/
 ```
 
+```bash linenums="1"
+cat << "EOF" > webdav-list.sh
+#!/bin/bash
+
+#
+# List the contents of a WebDAV server
+#
+
+curl -u user-name:user-password \
+  -X PROPFIND \
+  -H "Content-Type: application/xml" \
+  --data '<?xml version="1.0"?><propfind xmlns="DAV:"><allprop/></propfind>' \
+  https://73.242.149.67:8443/ums_filetransfer/ |
+grep -iE 'getlastmodified|ums_filetransfer' |
+awk '
+/<D:getlastmodified>/ {
+    gsub(/.*<D:getlastmodified>|<\/D:getlastmodified>.*/, "")
+    date=$0
+}
+/<D:href>/ {
+    gsub(/.*<D:href>|<\/D:href>.*/, "")
+    print date "\t" $0
+}
+' |
+while IFS=$'\t' read -r date file; do
+    epoch=$(date -d "$date" +%s)
+    printf "%s\t%s\t%s\n" "$epoch" "$date" "$file"
+done |
+sort -rn | cut -f2- | cut -f 2 | sort
+EOF
+chmod a+x webdav-list.sh
+```
+
 Check for trusted certificate or download files
 
 **Download script from Github and save it:**

@@ -57,7 +57,6 @@ cat << "EOF" > webdav-list.sh
 USER="user-name:user-password"
 UMS_SERVER="UMS-SERVER"
 
-#curl -u user-name:user-password \
 curl -u ${USER} \
   -X PROPFIND \
   -H "Content-Type: application/xml" \

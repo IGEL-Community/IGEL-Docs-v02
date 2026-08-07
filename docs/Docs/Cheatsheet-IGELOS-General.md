@@ -54,11 +54,15 @@ cat << "EOF" > webdav-list.sh
 # List the contents of a WebDAV server
 #
 
-curl -u user-name:user-password \
+USER="user-name:user-password"
+UMS_SERVER="UMS-SERVER"
+
+#curl -u user-name:user-password \
+curl -u ${USER} \
   -X PROPFIND \
   -H "Content-Type: application/xml" \
   --data '<?xml version="1.0"?><propfind xmlns="DAV:"><allprop/></propfind>' \
-  https://UMS-Server:8443/ums_filetransfer/ |
+  https://${UMS_SERVER}:8443/ums_filetransfer/ |
 grep -iE 'getlastmodified|ums_filetransfer' |
 awk '
 /<D:getlastmodified>/ {

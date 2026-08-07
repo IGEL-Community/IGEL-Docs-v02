@@ -58,7 +58,7 @@ curl -u user-name:user-password \
   -X PROPFIND \
   -H "Content-Type: application/xml" \
   --data '<?xml version="1.0"?><propfind xmlns="DAV:"><allprop/></propfind>' \
-  https://73.242.149.67:8443/ums_filetransfer/ |
+  https://UMS-Server:8443/ums_filetransfer/ |
 grep -iE 'getlastmodified|ums_filetransfer' |
 awk '
 /<D:getlastmodified>/ {

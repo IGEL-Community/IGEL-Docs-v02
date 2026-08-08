@@ -127,3 +127,108 @@ docker push ${SERVER}:5000/igel-ums:bookworm
 "insecure-registries": ["10.0.0.0/24"]
 ```
 
+- Updated `run-pull-docker-ums.sh`
+
+```bash linenums="1"
+cat << "EOF" > run-pull-docker-ums.sh
+#!/bin/bash
+
+set -euo pipefail
+
+#
+# For X11:
+#   xhost +local:docker
+#
+
+xhost +local:docker
+
+IMAGE="igel-ums:bookworm"
+EXPORT_DIR="$(pwd)/container-export"
+
+# OCI Registry container IP
+OCI_REG_SRV="10.0.0.12"
+
+mkdir -p "$EXPORT_DIR"
+
+/services/docker/usr/bin/docker system prune -f
+
+if /services/docker/usr/bin/docker image inspect "$IMAGE" >/dev/null 2>&1; then
+    echo "Image $IMAGE exists."
+else
+    # echo "Image $IMAGE does not exist. Building it now."
+    # /services/docker/usr/bin/docker build --network host -t "$IMAGE" .
+    echo "Image $IMAGE does not exist. Pulling it now."
+    IMAGE="${OIC_REG_SRV}:5000/igel-ums:bookworm"
+    EXPORT_DIR="$(pwd)/container-export"
+    mkdir -p "$EXPORT_DIR"
+    /services/docker/usr/bin/docker system prune -f
+    echo "Pulling latest image from private registry..."
+    /services/docker/usr/bin/docker pull "$IMAGE"
+fi
+
+/services/docker/usr/bin/docker run --network host --rm -it \
+  --user root \
+  --security-opt seccomp=unconfined \
+  -e DISPLAY="$DISPLAY" \
+  -e HOST_UID="$(id -u)" \
+  -e HOST_GID="$(id -g)" \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e PULSE_SERVER=unix:/run/user/777/pulse/native \
+  -e PULSE_COOKIE=/root/.config/pulse/cookie \
+  -v /run/user/777/pulse:/run/user/777/pulse \
+  -v /userhome/config/pulse/cookie:/root/.config/pulse/cookie:ro \
+  -v "$EXPORT_DIR:/export" \
+  --device=/dev/dri \
+  --group-add video \
+  --group-add audio \
+  --shm-size=2g \
+  --entrypoint /bin/bash \
+  "$IMAGE" \
+  -c '
+    set +e
+
+    echo "Restoring exported files..."
+
+    if [ "$(find /export -mindepth 1 -print -quit 2>/dev/null)" ]; then
+        cp -a /export/. /home/appuser/
+        chown -R appuser:appuser /home/appuser
+        echo "Restore complete."
+    else
+        echo "No exported files found."
+    fi
+
+    # Run the UMS Remote Manager as the non-root application user.
+    runuser -u appuser -- env \
+      HOME=/home/appuser \
+      DISPLAY="$DISPLAY" \
+      PULSE_SERVER="$PULSE_SERVER" \
+      /opt/IGEL/RemoteManager/RemoteManager.sh
+    RC=$?
+
+    echo "Copying generated files to /export..."
+
+    if [ -f /home/appuser/rmconsole.truststore ]; then
+        cp -a /home/appuser/rmconsole.truststore /export/
+    else
+        echo "Warning: /home/appuser/rmconsole.truststore was not found."
+    fi
+
+    #if [ -d /home/appuser/.java ]; then
+        #rm -rf /export/.java
+        #cp -a /home/appuser/.java /export/
+    #else
+        #echo "Warning: /home/appuser/.java was not found."
+    #fi
+    cp -a /home/appuser/.* /export/
+
+    # Make the copied files belong to the user who started the container.
+    chown -R "$HOST_UID:$HOST_GID" /export
+
+    echo "Export complete: /export"
+    exit "$RC"
+  '
+
+echo "Files exported to: $EXPORT_DIR"
+EOF
+chmod a+x run-pull-docker-ums.sh
+```

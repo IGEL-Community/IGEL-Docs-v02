@@ -54,7 +54,9 @@ Create two profiles and a container compose file (`my-container-compose.yaml`).
 
 Summary of steps:
 
-- Use UMS Web App Files (Configuration -> Files) to upload your `my-container-compose.yaml` file with these settings:
+- Create `IMC` folder in `Configuration -> Files`
+
+- Use UMS Web App Files (`Configuration -> Files`) to upload your `my-container-compose.yaml` file into folder `IMC` with these settings:
 
 ```
     Classification: Undefined
@@ -67,7 +69,7 @@ Summary of steps:
             Read
 ```
 
-- **Profile for the Container Configuration File:** Create a profile, with IGEL BASE OS 12.10.0+, that will use the above `yaml` file. Save the profile. Then open this profile. go to `Contained Files` and, in the `Assign file` search bar, enter the file name of the container configuration file (`my-container-compose.yaml`). Once the entry with the same file name appears, select it, save profile, assign to IGEL OS device,  and select `Save and apply now`
+- **Profile for the Container Configuration File:** Create a profile, with IGEL BASE OS 12.10.0+, that will use the above `yaml` file. Save the profile. Then open this profile. Go to `Contained Files` and, in the `Assign file` search bar, enter the file name of the container configuration file (`my-container-compose.yaml`). Once the entry with the same file name appears, select it, save profile, assign to IGEL OS device,  and select `Save and apply now`
 
 - **Container Profile:** Create a profile, with IGEL IGEL IMC app, add the container name (`my-container`) via `Apps > IGEL Managed Containers > Containers and click Add item`, in settings for the newly added container, add the container yaml file from above (`my-container-compose.yaml`), save profile, assign to IGEL OS device,  and select `Save and apply now`
 

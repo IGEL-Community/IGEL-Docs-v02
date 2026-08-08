@@ -40,7 +40,7 @@ Summary of steps:
 
 - Assign the profile to IGEL OS device and select `Save and apply now`. This will apply the profile, install the IMC app, reboot device and allocate the storage for containers
 
-- If you are connecting to `container registries` (a service that stores and distributes container images) that require authentication, then create a profile to [configure container registry credentials](https://kb.igel.com/igel-managed-containers/current/prerequisites-for-running-the-igel-managed-containers-app#Configuring-Container-Registry-Credential), assign the profile to IGEL OS device and select `Save and apply now`
+- If you are connecting to `container registries` (a service that stores and distributes container images) that require authentication, then create a profile to [configure container registry credentials](https://kb.igel.com/igel-managed-containers/current/prerequisites-for-running-the-igel-managed-containers-app#Configuring-Container-Registry-Credentials), assign the profile to IGEL OS device and select `Save and apply now`
 
 -----
 

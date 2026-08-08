@@ -1,4 +1,4 @@
-# IGEL Managed Containers™ (IMC)
+# HOWTO IGEL Managed Containers™ (IMC)
 
 - Secure, governed containerized workloads for the distributed edge.
 

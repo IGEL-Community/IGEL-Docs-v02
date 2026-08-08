@@ -106,7 +106,7 @@ yaml: oci-registry-compose.yaml
 container: oci-registry
 ```
 
-- Start container
+- Start container: [IGEL KB: How to Run a Container in the IGEL Managed Containers app](https://kb.igel.com/igel-managed-containers/current/how-to-run-a-container-in-the-igel-managed-containers-app)
 
 - Test connection:
 

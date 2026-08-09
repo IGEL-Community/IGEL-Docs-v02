@@ -79,7 +79,7 @@ Summary of steps:
 
 ## Create a Container Registry to Store and Distribute Container Images
 
-- Create container for OCI Registry - `oci-registry-compose.yaml`
+- Create container for OCI Registry: `oci-registry-compose.yaml`
 
 ```bash linenums="1"
 cat << "EOF" > oci-registry-compose.yaml

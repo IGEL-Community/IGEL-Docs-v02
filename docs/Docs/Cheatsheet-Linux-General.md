@@ -160,6 +160,36 @@ date
 Mi 19. Mai 19:26:59 CEST 2020
 ```
 
+## diff
+
+Compare line by line
+
+Use diff to create a patch listing
+
+```bash linenums="1"
+diff -u daemon.json daemon.json.new > daemon.json.patch
+cat daemon.json.patch
+```
+
+```bash linenums="1"
+--- daemon.json	2026-08-13 09:01:08.974760788 -0600
++++ daemon.json.new	2026-08-13 09:00:14.863243756 -0600
+@@ -2,5 +2,6 @@
+     "userland-proxy": false,
+     "bridge": "none",
+     "storage-driver": "vfs",
+-    "iptables": false
++    "iptables": false,
++    "insecure-registries": ["10.0.0.0/24"]
+ }
+```
+
+patch the original `daemon.json` file (note: `patch` is not in IGEL OS base image)
+
+```bash linenums="1"
+patch daemon.json < daemon.json.patch
+```
+
 ## dig
 
 DNS lookup utility

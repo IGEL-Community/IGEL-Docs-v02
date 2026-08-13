@@ -172,16 +172,18 @@ cat daemon.json.patch
 ```
 
 ```bash linenums="1"
---- daemon.json	2026-08-13 09:01:08.974760788 -0600
-+++ daemon.json.new	2026-08-13 09:00:14.863243756 -0600
+--- /etc/docker/daemon.json	2026-08-13 10:43:52.881332661 -0600
++++ daemon.json.new	2026-08-13 10:49:04.194496265 -0600
 @@ -2,5 +2,6 @@
      "userland-proxy": false,
      "bridge": "none",
      "storage-driver": "vfs",
 -    "iptables": false
+-}
+\ No newline at end of file
 +    "iptables": false,
 +    "insecure-registries": ["10.0.0.0/24"]
- }
++}
 ```
 
 patch the original `daemon.json` file (note: `patch` is not in IGEL OS base image)

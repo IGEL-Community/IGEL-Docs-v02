@@ -1017,5 +1017,69 @@ docker run --network host --rm -it \
 echo "Files exported to: $EXPORT_DIR"
 EOF
 chmod a+x run-docker.sh
+```
 
+-----
+
+-----
+
+## Use Docker to create Karaoke songs
+
+Convert music files (mp3, flac, etc.) into karaoke format with lrc file.
+
+- [DOWNLOAD: karaoke-docker-embedded-lrc.zip](./Containers/HOWTO-Docker-karaoke-docker-embedded-lrc.zip)
+
+For lyrics, an attempt is made to find them on [Lyrics Web Site](https://lrclib.net/) and, if not found, will use [whisper.cpp](https://github.com/ggml-org/whisper.cpp) to create the lrc file. If `whisper.cpp` is used, then review / edit `.lrc` text file.
+
+Take the `.mp3` and `.lrc` files and use with your `karaoke` system.
+
+For IGEL OS, [Spivak Karaoke AppImage](https://appimage.github.io/Spivak/) can be used.
+
+**NOTE:** If you don't have an NVIDIA GPU, then the conversion can take some time. On my IGEL OS (no NVIDIA GPU) device it took 7m:35s to create karaoke sample song: `ron-neher-sample.mp3`.
+
+```
+CPU: Intel Core Ultra 7 165U
+Cores: 12
+Threads: 14
+Maximum speed: 4.9 GHz
+Reported current speed: 4.851 GHz
+RAM: 64 GB
+```
+
+Outputs:
+
+```text
+output/
+├── song-karaoke.html
+├── song-karaoke.lrc
+└── song-karaoke.mp3
+```
+
+Place the songs to be converted into the `input/` folder.
+
+The generated HTML embeds the LRC text directly. The MP3 stays external, so keep
+`song.html` and `song-karaoke.mp3` in the same directory.
+
+Build:
+
+```bash
+docker compose build --no-cache
+```
+
+Process All Songs:
+
+```bash
+docker compose run --rm karaoke
+```
+
+Process Single Song:
+
+```bash
+docker compose run --rm karaoke "song.mp3"
+```
+
+Open directly in default Browser:
+
+```bash
+xdg-open "$(realpath output/song.html)"
 ```

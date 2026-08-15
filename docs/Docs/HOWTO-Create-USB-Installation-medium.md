@@ -100,3 +100,5 @@ dd if=path_to_iso/iso of=/dev/diskname bs=1M oflag=direct
 ## Use Popsicle on IGEL OS to flash multiple USB devices in parallel
 
 [Popsicle](https://github.com/pop-os/popsicle), a Linux utility for flashing multiple USB devices in parallel.
+
+- [IGEL Community GitHub App Recipe: Popsicle](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/popsicle)

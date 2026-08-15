@@ -635,6 +635,8 @@ chmod a+x run-docker.sh
 
 With IGEL OS 12.9.0+ the OSC ISO package has `modify_osc_image` script that can be run on Ubuntu / Debian system to create an ISO installer image that can include applications and other settings.
 
+**NOTE:** [Popsicle](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/popsicle) can be used to flash multiple USB devices in parallel.
+
 - [IGEL KB: How to add Apps and other Modifcations to Your IGEL OS Installation Image](https://kb.igel.com/en/igel-os-base-system/current/how-to-add-apps-and-other-modifcations-to-your-igel-os-installation-image)
 
 Docker can be used on IGEL OS to run the `modify_osc_image`.

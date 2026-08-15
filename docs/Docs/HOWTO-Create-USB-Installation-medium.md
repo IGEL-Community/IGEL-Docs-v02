@@ -92,3 +92,11 @@ dd if=path_to_iso/iso of=/dev/diskname bs=1M oflag=direct
    2502+1 records out
    2623733760 bytes transferred in 94.942156 secs (27635077 bytes/sec)
 ```
+
+-----
+
+-----
+
+## Use Popsicle on IGEL OS to flash multiple USB devices in parallel
+
+[Popsicle](https://github.com/pop-os/popsicle), a Linux utility for flashing multiple USB devices in parallel.

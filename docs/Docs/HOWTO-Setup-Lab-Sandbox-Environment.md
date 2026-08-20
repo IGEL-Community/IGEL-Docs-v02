@@ -413,7 +413,9 @@ SELECT THINCLIENT.TCNAME, HW.BIOS_VENDOR, HW.BIOS_VERSION, HW.BIOS_DATE, FW.VERS
 
 -----
 
-## Appendix - Current IGEL Downloads
+## Appendix - Past IGEL Downloads
+
+**NOTE:** Later versions of IGEL Downloads must be obtained from [IGEL App Portal - Software](https://app.igel.com)
 
 | Name | Description - Link |
 |------|--------------------|

@@ -260,11 +260,16 @@ cat << "EOF" > oci-registry-delete-images.sh
 #set -x
 #trap read debug
 
+set -x
 set -u
 
 REGISTRY="${REGISTRY:-http://10.0.0.12:5000}"
 
 ACCEPT_HEADER='application/vnd.oci.image.index.v1+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.docker.distribution.manifest.v2+json'
+
+###############################################################################
+# Dialog helpers
+###############################################################################
 
 error()
 {
@@ -279,6 +284,10 @@ info()
         --title="OCI Registry" \
         --text="$1"
 }
+
+###############################################################################
+# Dependency checks
+###############################################################################
 
 check_dependencies()
 {
@@ -296,6 +305,10 @@ check_dependencies()
     fi
 }
 
+###############################################################################
+# Registry connectivity
+###############################################################################
+
 registry_check()
 {
     if ! curl -fsS "${REGISTRY}/v2/" >/dev/null; then
@@ -303,6 +316,10 @@ registry_check()
         exit 1
     fi
 }
+
+###############################################################################
+# Registry query functions
+###############################################################################
 
 get_repositories()
 {
@@ -334,6 +351,10 @@ get_digest()
             }
         '
 }
+
+###############################################################################
+# Delete manifest
+###############################################################################
 
 delete_manifest()
 {
@@ -367,10 +388,18 @@ delete_manifest()
     return 1
 }
 
+###############################################################################
+# Main
+###############################################################################
+
 check_dependencies
 registry_check
 
 rows=()
+
+###############################################################################
+# Discover repositories
+###############################################################################
 
 mapfile -t repositories < <(get_repositories)
 
@@ -378,6 +407,10 @@ if (( ${#repositories[@]} == 0 )); then
     info "No repositories were found in:\n\n${REGISTRY}"
     exit 0
 fi
+
+###############################################################################
+# Discover repository tags
+###############################################################################
 
 for repo in "${repositories[@]}"; do
 
@@ -407,6 +440,10 @@ if (( ${#rows[@]} == 0 )); then
     exit 0
 fi
 
+###############################################################################
+# Zenity image selection
+###############################################################################
+
 selection=$(
     zenity --list \
         --title="OCI Registry Cleanup" \
@@ -414,7 +451,7 @@ selection=$(
         --width=1100 \
         --height=600 \
         --checklist \
-        --separator=$'\n' \
+        --separator="|" \
         --print-column=2,3 \
         --column="Delete" \
         --column="Repository" \
@@ -429,19 +466,42 @@ if [[ $rc -ne 0 || -z "$selection" ]]; then
     exit 0
 fi
 
+###############################################################################
+# Parse Zenity selection
+#
+# Example:
+#
+#   igel-ums|bookworm
+#
+# Multiple selections:
+#
+#   igel-ums|bookworm|other-repo|latest
+###############################################################################
+
 declare -a delete_repos=()
 declare -a delete_tags=()
 
-while IFS='|' read -r repo tag; do
+IFS='|' read -r -a selected_fields <<< "$selection"
+
+for ((i=0; i<${#selected_fields[@]}; i+=2)); do
+
+    repo="${selected_fields[$i]}"
+    tag="${selected_fields[$((i + 1))]:-}"
+
     [[ -z "$repo" || -z "$tag" ]] && continue
 
     delete_repos+=("$repo")
     delete_tags+=("$tag")
-done <<< "$selection"
+done
 
 if (( ${#delete_repos[@]} == 0 )); then
-    exit 0
+    error "No valid repository/tag selections were returned."
+    exit 1
 fi
+
+###############################################################################
+# Build confirmation message
+###############################################################################
 
 confirm_text="The following registry items will be deleted:\n\n"
 
@@ -459,6 +519,10 @@ zenity --question \
 if [[ $? -ne 0 ]]; then
     exit 0
 fi
+
+###############################################################################
+# Delete selected manifests
+###############################################################################
 
 declare -a success=()
 declare -a failed=()
@@ -478,22 +542,66 @@ for i in "${!delete_repos[@]}"; do
 
     key="${repo}@${digest}"
 
+    # Avoid deleting the same digest twice if multiple tags reference it.
     if [[ -n "${deleted_digests[$key]:-}" ]]; then
         success+=("${repo}:${tag} - shared digest already deleted")
         continue
     fi
 
     if delete_manifest "$repo" "$digest"; then
+
         deleted_digests["$key"]=1
-        success+=("${repo}:${tag}")
+
+        # Verify that the tag no longer resolves.
+        verify_status=$(
+            curl -sS \
+                -o /dev/null \
+                -w '%{http_code}' \
+                -H "Accept: ${ACCEPT_HEADER}" \
+                "${REGISTRY}/v2/${repo}/manifests/${tag}"
+        )
+
+        if [[ "$verify_status" == "404" ]]; then
+            success+=("${repo}:${tag}")
+        else
+            failed+=(
+                "${repo}:${tag} - DELETE returned 202 but tag still returns HTTP ${verify_status}"
+            )
+        fi
+
     else
         failed+=("${repo}:${tag}")
     fi
 done
 
+###############################################################################
+# Refresh registry state
+###############################################################################
+
+remaining_text=""
+
+for repo in "${repositories[@]}"; do
+
+    mapfile -t remaining_tags < <(get_tags "$repo")
+
+    if (( ${#remaining_tags[@]} > 0 )); then
+
+        remaining_text+="${repo}:\n"
+
+        for tag in "${remaining_tags[@]}"; do
+            remaining_text+="  ${tag}\n"
+        done
+    fi
+done
+
+###############################################################################
+# Build results
+###############################################################################
+
 result=""
 
 if (( ${#success[@]} > 0 )); then
+
     result+="Deleted:\n"
 
     for item in "${success[@]}"; do
@@ -502,6 +610,7 @@ if (( ${#success[@]} > 0 )); then
 fi
 
 if (( ${#failed[@]} > 0 )); then
+
     result+="\nFailed:\n"
 
     for item in "${failed[@]}"; do
@@ -509,15 +618,29 @@ if (( ${#failed[@]} > 0 )); then
     done
 fi
 
+if [[ -n "$remaining_text" ]]; then
+    result+="\nRemaining tagged images:\n"
+    result+="$remaining_text"
+else
+    result+="\nNo tagged images remain in the registry."
+fi
+
+###############################################################################
+# Display result
+###############################################################################
+
 if (( ${#failed[@]} == 0 )); then
+
     zenity --info \
         --title="OCI Registry Cleanup" \
-        --width=550 \
+        --width=600 \
         --text="$result"
+
 else
+
     zenity --warning \
         --title="OCI Registry Cleanup" \
-        --width=550 \
+        --width=600 \
         --text="$result"
 fi
 EOF

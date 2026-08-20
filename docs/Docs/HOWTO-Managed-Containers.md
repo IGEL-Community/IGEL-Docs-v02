@@ -93,9 +93,20 @@ services:
 
     environment:
       REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+      REGISTRY_STORAGE_DELETE_ENABLED: "true"
 
     volumes:
       - "/services_rw/imc/container_data/volumes/registry:/var/lib/registry:rw"
+
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        echo "Running registry garbage collection..."
+        /bin/registry garbage-collect --delete-untagged /etc/docker/registry/config.yml
+
+        echo "Starting OCI registry..."
+        exec /bin/registry serve /etc/docker/registry/config.yml
 EOF
 ```
 
@@ -233,4 +244,282 @@ fi
 echo "Files exported to: $EXPORT_DIR"
 EOF
 chmod a+x run-pull-docker-ums.sh
+```
+
+-----
+
+-----
+
+## Remove Images from Container Registry
+
+- Create remove images from container registry script: `oci-registry-delete-images.sh`
+
+```bash linenums="1"
+cat << "EOF" > oci-registry-delete-images.sh
+#!/usr/bin/env bash
+#set -x
+#trap read debug
+
+set -u
+
+REGISTRY="${REGISTRY:-http://10.0.0.12:5000}"
+
+ACCEPT_HEADER='application/vnd.oci.image.index.v1+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.docker.distribution.manifest.v2+json'
+
+error()
+{
+    zenity --error \
+        --title="OCI Registry" \
+        --text="$1"
+}
+
+info()
+{
+    zenity --info \
+        --title="OCI Registry" \
+        --text="$1"
+}
+
+check_dependencies()
+{
+    local missing=()
+
+    for cmd in curl jq zenity; do
+        if ! command -v "$cmd" >/dev/null 2>&1; then
+            missing+=("$cmd")
+        fi
+    done
+
+    if (( ${#missing[@]} > 0 )); then
+        printf 'Missing required commands: %s\n' "${missing[*]}" >&2
+        exit 1
+    fi
+}
+
+registry_check()
+{
+    if ! curl -fsS "${REGISTRY}/v2/" >/dev/null; then
+        error "Cannot connect to registry:\n\n${REGISTRY}"
+        exit 1
+    fi
+}
+
+get_repositories()
+{
+    curl -fsS "${REGISTRY}/v2/_catalog" |
+        jq -r '.repositories[]?'
+}
+
+get_tags()
+{
+    local repo="$1"
+
+    curl -fsS "${REGISTRY}/v2/${repo}/tags/list" |
+        jq -r '.tags[]?'
+}
+
+get_digest()
+{
+    local repo="$1"
+    local tag="$2"
+
+    curl -fsSI \
+        -H "Accept: ${ACCEPT_HEADER}" \
+        "${REGISTRY}/v2/${repo}/manifests/${tag}" |
+        awk -F': ' '
+            tolower($1) == "docker-content-digest" {
+                gsub("\r", "", $2)
+                print $2
+                exit
+            }
+        '
+}
+
+delete_manifest()
+{
+    local repo="$1"
+    local digest="$2"
+    local response_file
+    local status
+
+    response_file=$(mktemp)
+
+    status=$(
+        curl -sS \
+            -o "$response_file" \
+            -w '%{http_code}' \
+            -X DELETE \
+            "${REGISTRY}/v2/${repo}/manifests/${digest}"
+    )
+
+    if [[ "$status" == "202" ]]; then
+        rm -f "$response_file"
+        return 0
+    fi
+
+    {
+        echo "DELETE failed for ${repo}@${digest}"
+        echo "HTTP status: ${status}"
+        cat "$response_file"
+    } >&2
+
+    rm -f "$response_file"
+    return 1
+}
+
+check_dependencies
+registry_check
+
+rows=()
+
+mapfile -t repositories < <(get_repositories)
+
+if (( ${#repositories[@]} == 0 )); then
+    info "No repositories were found in:\n\n${REGISTRY}"
+    exit 0
+fi
+
+for repo in "${repositories[@]}"; do
+
+    mapfile -t tags < <(get_tags "$repo")
+
+    for tag in "${tags[@]}"; do
+
+        [[ -z "$tag" ]] && continue
+
+        digest=$(get_digest "$repo" "$tag")
+
+        if [[ -z "$digest" ]]; then
+            digest="UNKNOWN"
+        fi
+
+        rows+=(
+            FALSE
+            "$repo"
+            "$tag"
+            "$digest"
+        )
+    done
+done
+
+if (( ${#rows[@]} == 0 )); then
+    info "No tagged images were found in:\n\n${REGISTRY}"
+    exit 0
+fi
+
+selection=$(
+    zenity --list \
+        --title="OCI Registry Cleanup" \
+        --text="Select images/tags to delete from:\n${REGISTRY}" \
+        --width=1100 \
+        --height=600 \
+        --checklist \
+        --separator=$'\n' \
+        --print-column=2,3 \
+        --column="Delete" \
+        --column="Repository" \
+        --column="Tag" \
+        --column="Digest" \
+        "${rows[@]}"
+)
+
+rc=$?
+
+if [[ $rc -ne 0 || -z "$selection" ]]; then
+    exit 0
+fi
+
+declare -a delete_repos=()
+declare -a delete_tags=()
+
+while IFS='|' read -r repo tag; do
+    [[ -z "$repo" || -z "$tag" ]] && continue
+
+    delete_repos+=("$repo")
+    delete_tags+=("$tag")
+done <<< "$selection"
+
+if (( ${#delete_repos[@]} == 0 )); then
+    exit 0
+fi
+
+confirm_text="The following registry items will be deleted:\n\n"
+
+for i in "${!delete_repos[@]}"; do
+    confirm_text+="${delete_repos[$i]}:${delete_tags[$i]}\n"
+done
+
+confirm_text+="\nRegistry:\n${REGISTRY}\n\nContinue?"
+
+zenity --question \
+    --title="Confirm OCI Registry Deletion" \
+    --width=550 \
+    --text="$confirm_text"
+
+if [[ $? -ne 0 ]]; then
+    exit 0
+fi
+
+declare -a success=()
+declare -a failed=()
+declare -A deleted_digests=()
+
+for i in "${!delete_repos[@]}"; do
+
+    repo="${delete_repos[$i]}"
+    tag="${delete_tags[$i]}"
+
+    digest=$(get_digest "$repo" "$tag")
+
+    if [[ -z "$digest" ]]; then
+        failed+=("${repo}:${tag} - could not determine digest")
+        continue
+    fi
+
+    key="${repo}@${digest}"
+
+    if [[ -n "${deleted_digests[$key]:-}" ]]; then
+        success+=("${repo}:${tag} - shared digest already deleted")
+        continue
+    fi
+
+    if delete_manifest "$repo" "$digest"; then
+        deleted_digests["$key"]=1
+        success+=("${repo}:${tag}")
+    else
+        failed+=("${repo}:${tag}")
+    fi
+done
+
+result=""
+
+if (( ${#success[@]} > 0 )); then
+    result+="Deleted:\n"
+
+    for item in "${success[@]}"; do
+        result+="  ${item}\n"
+    done
+fi
+
+if (( ${#failed[@]} > 0 )); then
+    result+="\nFailed:\n"
+
+    for item in "${failed[@]}"; do
+        result+="  ${item}\n"
+    done
+fi
+
+if (( ${#failed[@]} == 0 )); then
+    zenity --info \
+        --title="OCI Registry Cleanup" \
+        --width=550 \
+        --text="$result"
+else
+    zenity --warning \
+        --title="OCI Registry Cleanup" \
+        --width=550 \
+        --text="$result"
+fi
+EOF
+chmod a+x oci-registry-delete-images.sh
 ```

@@ -2,9 +2,109 @@
 
 **NOTE:**
 
+
 ----
 
-## 2026-07-31 - [12.12.110](Readme-12.12.110.txt)
+## 2026-08-20 - [12.13.110](Readme-12.13.110.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+
+UMS Server:
+
+Microsoft Windows Server 2019 (64 bit)
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client:
+
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit)
+Microsoft Windows Server 2019 (64 bit)
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+
+Microsoft SQL Server 2017 (with cluster support)
+Microsoft SQL Server 2019 (with cluster support)
+Microsoft SQL Server 2022 (with cluster support)
+Oracle 19c (with cluster support)
+Oracle 21c (with cluster support)
+PostgreSQL 11–18
+Apache Derby 10.9–10.14
+Amazon Aurora PostgreSQL (compatible with PostgreSQL 11–18)
+Azure SQL Managed Instance
+
+Regular support for Apache Derby has expired. Support for Apache Derby will end in a later UMS version.
+
+	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
+
+Browser:
+
+Microsoft Edge 149.0+
+Mozilla Firefox 152.0+
+Google Chrome 149.0+
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[App Proxy]
+
+- Fixed: Out-of-memory crashes on the applications endpoint under high load by optimizing JSON processing to reduce memory usage.
+
+[Automatic License Deployment (ALD)]
+
+- Fixed: Improved performance of automatic license deployment.
+
+[Server, common]
+
+- Fixed: Resolved an issue that prevented JavaMelody from generating and collecting performance metrics in some backend services.
+
+[Unified Protocol]
+
+- Fixed: An update of system information is only written to the DB if the checksum is different from the stored one for the pushsysinfo command.
+
+=============================================================================
+# UMS Web App #
+=============================================================================
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+Configuration:
+
+- Fixed: An issue where CUPS printer manufacturer and model lists were displayed with a delay in TC Setup.
+
+[Misc]
+
+- Changed: The "Open Knowledge Base" link now opens in English regardless of the application language.
+- Fixed: A misconfigured class was preventing the successful use of JavaMelody (debugging/monitoring tool).
+```
+
+----
+
+## 2026-07-31 - [12.13.100](Readme-12.13.100.txt)
 
 ```
 =============================================================================

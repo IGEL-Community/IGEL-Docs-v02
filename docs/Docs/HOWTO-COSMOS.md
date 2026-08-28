@@ -123,7 +123,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 - [IGEL KB: IGEL Software Licenses for IGEL OS and IGEL UMS](https://kb.igel.com/en/igel-subscription-and-more/current/igel-software-licenses-for-igel-os-and-igel-ums)
 
-- [IGEL KB: IGEL Subscription - Entitlements and Effects of Expiration](https://kb.igel.com/en/igel-subscription-and-more/current/igel-subscription-entitlements-and-effects-of-expi)
+- [IGEL KB: IGEL Subscription - Entitlements and Effects of Expiration](https://kb.igel.com/en/igel-subscription-and-more/current/igel-subscription-entitlements-and-effects-of-expiration)
 
 **Q:** What are the IGEL OS editions and feature packs?
 
@@ -155,7 +155,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What happens when a license expires?
 
-**A:** Details can be found here - [IGEL KB: Entitlements that Come with an IGEL Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/en/igel-subscription-and-more/current/igel-subscription-entitlements-and-effects-of-expi)
+**A:** Details can be found here - [IGEL KB: Entitlements that Come with an IGEL Platform Access Subscription (PAS) and Effects of Expiry](https://kb.igel.com/en/igel-subscription-and-more/current/igel-subscription-entitlements-and-effects-of-expiration)
 
 **Q:** Does UMS 12 support demo license automatic deployment?
 
@@ -207,7 +207,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What is new in UMS 12?
 
-**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/en/universal-management-suite/current/what-is-new-knowledge-base-updates-for-igel-ums-12). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
+**A:** [IGEL KB: UMS Release Notes](https://kb.igel.com/en/universal-management-suite/current/ums-release-notes). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** What is feature matrix between UMS Web App and UMS Console?
 
@@ -247,7 +247,7 @@ If the client's clock is off, then it will break either or both of these functio
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
-**A:** [IGEL KB: Best Practices: Antivirus Configuration on IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/best-practices-antivirus-configuration-on-igel-ums)
+**A:** [IGEL KB: Best Practices: Antivirus Configuration on IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/best-practices-antivirus-configuration-on-igel-ums-server)
 
 **Q:** How to check the status of UMS server?
 
@@ -323,7 +323,7 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 
   - The web certificate is used for the web server port (Default port: 8443)
   - This port is used for transferring files to the device, all WebDav actions, interserver communication, the IMI, and the `UMS Web App`.
-  - Additional details [IGEL KB: Creating the End Certificates](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication)
+  - Additional details [IGEL KB: Creating the End Certificates](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication-over-the-web-port-default-8443-in-igel-ums)
   - [Video showing steps to create and enable a new web cert](https://raw.githubusercontent.com/IGEL-Community/IGEL-Docs-v02/main/docs/Docs/videos/HOWTO-COSMOS-New_Web_Cert.mp4)
   - Delete the obsolete (automatically created) UMS web certificates and restart the UMS server.
 
@@ -461,7 +461,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 **Q:** Does OS 12 support SCCM deployments?
 
-**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://app.igel.com/software). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os/11.10/igel-os-sccm-add-on). [HOWTO Light and Zero Touch Deployments of OS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Light_Zero_Touch_Deployments/)
+**A:** Yes. Mass deployment of IGEL OS 12 Base System via SCCM is possible – offered via tool and corresponding image of OS 12. [Link to Download](https://app.igel.com/software). [IGEL KB: IGEL OS SCCM Add-On](https://kb.igel.com/en/igel-os-base-system/current/how-to-deploy-igel-os-12-with-igel-os-12-sccm-add-). [HOWTO Light and Zero Touch Deployments of OS 12](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Light_Zero_Touch_Deployments/)
 
 **Q:** Does OS 12 support PXE boot deployments?
 
@@ -477,7 +477,7 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ![image-howto-cosmos-04](Images/HOWTO-COSMOS-04.png)
 
-**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication)
+**A:** This is only shown if a public certificate is not used. It is the third fingerprint of the root web certificate for your UMS 12. Details can be found in [IGEL KB: Deploying a Certificate Chain with a Public Root CA](https://kb.igel.com/en/universal-management-suite/current/how-to-use-your-own-certificates-for-communication-over-the-web-port-default-8443-in-igel-ums)
 
 ![image-howto-cosmos-05](Images/HOWTO-COSMOS-05.png)
 
@@ -591,7 +591,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** How do I upgrade an OS 11 device to OS 12?
 
-**A:** OS 11.10.210 and UMS 12.06.110 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/en/igel-os/current/upgrading-migration-from-igel-os-11-to-igel-os-12)
+**A:** OS 11.10.410 and UMS 12.13.100 or higher is required to upgrade to OS 12. Additional details can be found here: [IGEL KB: Upgrading from IGEL OS 11 to IGEL OS 12](https://kb.igel.com/migration-to-igel-os-12/current/upgrading-migration-from-igel-os-11-to-igel-os-12)
 
 **Q:** How to upgrade devices from IGEL OS 11 to OS 12 for multiple / low bandwidth sites?
 
@@ -599,7 +599,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 
 **Q:** What is required to update UD Pocket with OS 11 to OS 12 without UMS?
 
-**A:** [IGEL KB: Steps to install new OS on UD Pocket](https://kb.igel.com/en/igel-os/11.10/how-to-reflash-your-igel-ud-pocket)
+**A:** [IGEL KB: Steps to install new OS on UD Pocket](https://kb.igel.com/en/igel-os/current/how-to-reflash-your-igel-ud-pocket)
 
 **Q:** How to debug OS 11 to OS 12 upgrade?
 
@@ -626,7 +626,7 @@ AutoLaunchProtocolsFromOrigins: [{"allowed_origins": ["yourdomain.com"], "protoc
 **NOTE:** Reverse proxy with SSL offloading is possible as of UMS 12.02. See [Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading)
 
 **A:** That depends on if your security team will allow UMS 12 on port 8443 to be opened to the Internet or connected to internet via reverse proxy
-(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-commun)
+(such as F5 / NetScaler / Azure Application Gateway). If the above options cannot be met, an ICG 12 will be needed to support OS 12 devices. Similar sizing guidelines for ICG 12 (setting connection limit to 2K / 2.5K devices). See [IGEL KB: ICG 12](https://kb.igel.com/en/igel-cloud-gateway/current/) and [IGEL KB - IGEL Cloud Gateway vs. Reverse Proxy for the Communication between UMS 12 and IGEL OS Devices](https://kb.igel.com/en/universal-management-suite/current/igel-cloud-gateway-vs-reverse-proxy-for-the-communication-between-ums-12-and-igel-os-devices)
 
 - Starting with UMS 12.04, IGEL is now compatible with all industry standard reverse proxies.
 - Video: Proxy vs. Reverse Proxy
@@ -668,7 +668,7 @@ Here TLSv1.2 or TLSv1.3 is used.
 
 **Q:** How is the Universal Management Suite (UMS) and IGEL Cloud Gateway (ICG) integrated with Network components like Firewalls and Reverse Proxies?
 
-**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat)
+**A:** [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configuration)
 
 **Q:** Does ICG 12 support OS 11 devices?
 
@@ -992,7 +992,7 @@ curl http://ip-api.com/json/$(curl https://ipinfo.io/ip 2>/dev/null)
 
 **NOTE:**
 
-- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configurat) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading).
+- Using the UMS update proxy and distributing OS 12 apps through ICG is not supported. As an alternative, you can use a reverse proxy between IGEL OS devices and UMS. For more information, see [IGEL KB: IGEL Universal Management Suite Network Configuration](https://kb.igel.com/en/universal-management-suite/current/igel-universal-management-suite-network-configuration) and [IGEL KB: Configure the UMS to Integrate Reverse Proxy with SSL Offloading](https://kb.igel.com/en/universal-management-suite/current/configure-the-ums-to-integrate-reverse-proxy-with-ssl-offloading).
 
 
 -----
@@ -1023,7 +1023,7 @@ By enabling and configuring this feature, binaries of apps will be stored on a s
 
 **A:** Please review the following links:
 
-- [IGEL KB: How to Use Distributed App Repositories in IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/how-to-use-distributed-app-repositories-in-igel-um)
+- [IGEL KB: How to Use Distributed App Repositories in IGEL UMS](https://kb.igel.com/en/universal-management-suite/current/how-to-use-distributed-app-repositories-in-igel-ums)
 - [Setting Up a WebDAV Server on Ubuntu and Debian](https://linuxconfig.org/webdav-server-setup-on-ubuntu-linux)
 - [APACHE web server and SSL authentication](https://linuxconfig.org/apache-web-server-ssl-authentication)
 
@@ -1105,7 +1105,7 @@ flowchart TD
 
 - [IGEL KB: Distributed Peer Update Server Configuration in IGEL OS 12](https://kb.igel.com/en/igel-os-base-system/current/distributed-peer-update-server-configuration-in-ig)
 
-- Assign Apps to the IGEL OS device running Distrbuted Peer Update server as noted in [IGEL KB: Apps - Import and Configure Apps for IGEL OS 12 Devices via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/apps-import-and-configure-apps-for-igel-os-12-devi)
+- Assign Apps to the IGEL OS device running Distrbuted Peer Update server as noted in [IGEL KB: Apps - Import and Configure Apps for IGEL OS 12 Devices via the IGEL UMS Web App](https://kb.igel.com/en/universal-management-suite/current/apps-import-and-configure-apps-for-igel-os-12-devices-via-the-igel-ums-web-app)
 
 **Q:** What log files to review for Distributed Peer Update?
 

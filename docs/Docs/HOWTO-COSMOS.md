@@ -205,9 +205,31 @@ If the client's clock is off, then it will break either or both of these functio
 
 ## FAQ - UMS
 
+**Q:** What is new in UMS 12?
+
+**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/en/universal-management-suite/current/what-is-new-knowledge-base-updates-for-igel-ums-12). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
+
+**Q:** What is feature matrix between UMS Web App and UMS Console?
+
+**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/en/universal-management-suite/current/feature-matrix-ums-web-app-vs-ums-console)
+
 **Q:** What steps to perform post install / upgrade of UMS?
 
 **A:** [IGEL KB: Post-Installation Configuration of the IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/post-installation-configuration-of-the-igel-ums-server). Note the new redirect URIs for UMS Web App Login [UMS Login Requirements](https://kb.igel.com/en/universal-management-suite/current/ums-login-requirements). Also make sure to create a new endpoint web certificate that has all the IP addresses, Fully Qualified Domain Names, short names, and localhost that the device can connect to. See below for steps
+
+**Q:** Having issue onboarding device to UMS
+
+**A:** Check the following items:
+
+  - Make sure that the time is correct on both UMS and the endpoint you are attempting to enroll
+
+  - Confirm a device with the same Device Unit ID is not already registered in UMS
+
+  - Make sure the UMS Recycle Bin is empty
+
+  - Reset the device to factory defaults
+
+  - Confirm that your UMS Public Addresses and UMS Web Certificates are correct
 
 **Q:** How to validate certificate chains supplied by the UMS Server
 
@@ -217,17 +239,15 @@ If the client's clock is off, then it will break either or both of these functio
  echo "" | openssl s_client -showcerts UMS-SERVER-FQDN:8443 | openssl crl2pkcs7 -nocrl -certfile /dev/stdin | openssl pkcs7 -noout -print_certs -text
  ```
 
+<!---
 **Q:** UMS cannot connect to the database after the update to UMS 12.04.100
 
 **A:** This is fixed in UMS 12.04.110. [IGEL KB: Known Issue: UMS Cannot Connect to the MS SQL Database](https://kb.igel.com/en/universal-management-suite/current/known-issue-ums-cannot-connect-to-the-ms-sql-datab)
+-->
 
 **Q:** What Antivirus settings should be set on my Windows server prior to UMS installation?
 
 **A:** [IGEL KB: Best Practices: Antivirus Configuration on IGEL UMS Server](https://kb.igel.com/en/universal-management-suite/current/best-practices-antivirus-configuration-on-igel-ums)
-
-**Q:** What is new in UMS 12?
-
-**A:** [IGEL KB: What Is New in IGEL UMS 12?](https://kb.igel.com/en/universal-management-suite/current/what-is-new-knowledge-base-updates-for-igel-ums-12). [UMS release notes](https://igel-community.github.io/IGEL-Docs-v02/Docs/ReleaseNotes/02-UMS/)
 
 **Q:** How to check the status of UMS server?
 
@@ -241,6 +261,7 @@ https://UMS_SERVER_URL:8443/ums/check-status
 https://UMS_SERVER_URL:443/ums/check-status
 ```
 
+<!---
 **Q:** Is search Broken in 12.02.100 UMS Web?
 
 **A:** 
@@ -249,18 +270,11 @@ If you upgraded to 12.02.100 and your UMS Web search results return NOTHING, it'
 **Q:** We noticed that UMS 6 is no longer listed on [IGEL download site](https://app.igel.com/software). We are not ready to move to UMS 12.
 
 **A:** UMS 12 is the next version of UMS 6.x.x and supports OS 11 only environments as well as mixed OS 11 / OS 12 environments.
+-->
 
 **Q:** How are OS 12 profiles created or modified?
 
 **A:** UMS Web App `MUST` be used to create / modify OS 12 profiles.
-
-**Q:** When will proxy mode support for UMS 12 be released?
-
-**A:** As of 31 July 2023, UMS 12.02.100 has proxy mode support.
-
-**Q:** What is feature matrix between UMS Web App and UMS Console?
-
-**A:** Here is link to [IGEL KB: Feature Matrix: UMS Web App vs. UMS Console](https://kb.igel.com/en/universal-management-suite/current/feature-matrix-ums-web-app-vs-ums-console)
 
 **Q:** I'm able to shadow from UMS Web App but cannot shadow from UMS console running on my PC. Why?
 
@@ -401,6 +415,10 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 
 ## FAQ - OS 12
 
+**Q:** What are the hardware requirements for OS 12?
+
+**A:** [IGEL KB: Devices Supported by IGEL OS 12](https://kb.igel.com/hardware/current/devices-supported-by-igel-os-12-1)
+
 **Q:** What are the differences between OS 11 and OS 12?
 
 **A:** Here are some items:
@@ -432,10 +450,6 @@ SELECT DISTINCT APP_NAME FROM APP_VERSION
 **Q:** Is OS 12 considered an App?
 
 **A:** Yes, OS 12 is an app like `Microsoft AVD`, `Citrix`, `Omnissa Horizon`, etc. [IGEL KB: IGEL OS 12 Apps: IGEL OS Base System](https://kb.igel.com/en/igel-os-base-system/current/)
-
-**Q:** What are the hardware requirements for OS 12?
-
-**A:** [IGEL KB: Devices Supported by IGEL OS 12](https://kb.igel.com/hardware/current/devices-supported-by-igel-os-12-1)
 
 **Q:** I want to quickly test out OS 12. What are the steps to test?
 

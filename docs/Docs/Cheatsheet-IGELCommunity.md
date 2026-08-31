@@ -76,6 +76,8 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | [rm](Cheatsheet-Linux-General.md#rm)                       | :material-check-bold: | :material-check-bold:| delete a file                              |
 | [rmdir](Cheatsheet-Linux-General.md#rmdir)                 | :material-check-bold: | :material-check-bold:| delete a folder                            |
 | [sleep](Cheatsheet-Linux-General.md#sleep)                 | :material-check-bold: | :material-check-bold:| wait                                       |
+| [sort](Cheatsheet-Linux-General.md#sort)                 | :material-check-bold: | :material-check-bold:|        sort lines of text files
+                                       |
 | [su](Cheatsheet-Linux-General.md#su)                       | :material-check-bold: | :material-check-bold:| change to root                             |
 | [systemctl](Cheatsheet-Linux-General.md#systemctl)         | :material-check-bold: | :material-check-bold:| service handler                            |
 | [tee](Cheatsheet-Linux-General.md#tee)                     | :material-check-bold: | :material-check-bold:|  read from standard input and write to standard output and files |

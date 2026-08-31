@@ -507,6 +507,44 @@ wait
 sleep 5
 ```
 
+## sort
+
+sort the output by 6th column with asending values
+
+```bash linenums="1"
+df -Th | grep services_rw | sort -k6,6n
+```
+
+```bash linenums="1"
+/dev/dm-10         btrfs                    1.0G  5.8M  905M   1% /services_rw/terraform
+/dev/mapper/209    ntfs3                    1.0G  6.7M 1018M   1% /services_rw/igelpkg
+/dev/mapper/210    ext4                     238M   15K  222M   1% /services_rw/rdp_web_access
+/dev/mapper/211    ntfs3                    512M  4.2M  508M   1% /services_rw/pcmanfm
+/dev/mapper/216    ext4                     238M   16K  222M   1% /services_rw/avd
+/dev/mapper/227    ext4                     2.8G  2.9M  2.6G   1% /services_rw/onedrive
+/dev/mapper/203    ntfs3                    256M  2.9M  254M   2% /services_rw/simplescreenrecorder
+/dev/mapper/214    ntfs3                    256M  2.9M  254M   2% /services_rw/flameshot
+/dev/mapper/218    ntfs3                    256M  2.9M  254M   2% /services_rw/clipman
+/dev/mapper/223    ntfs3                    256M  2.9M  254M   2% /services_rw/inkscape
+/dev/mapper/224    ntfs3                    256M  3.8M  253M   2% /services_rw/gimp
+/dev/mapper/225    ntfs3                    256M  2.9M  254M   2% /services_rw/localsend
+/dev/mapper/226    ntfs3                    256M  2.9M  254M   2% /services_rw/putty
+/dev/dm-15         btrfs                    256M  5.8M  175M   4% /services_rw/simple_scan
+/dev/dm-29         btrfs                    256M  5.8M  175M   4% /services_rw/speedcrunch
+/dev/mapper/219    ntfs3                    1.0G   43M  982M   5% /services_rw/libreoffice
+/dev/dm-25         btrfs                    1.0G   92M  822M  10% /services_rw/chromium
+/dev/mapper/205    ntfs3                    1.0G  113M  912M  12% /services_rw/chrome
+/dev/dm-20         btrfs                    1.0G  129M  787M  15% /services_rw/pwa
+/dev/dm-12         btrfs                    1.0G  137M  775M  16% /services_rw/firefox
+/dev/dm-11         btrfs                     12G  4.4G  6.7G  40% /services_rw/joplin
+/dev/mapper/207    ntfs3                    256M  106M  151M  42% /services_rw/webex
+/dev/dm-21         btrfs                    1.0G  332M  361M  48% /services_rw/zoom
+/dev/mapper/208    ext4                     2.8G  1.3G  1.4G  49% /services_rw/vscode_git
+/dev/dm-6          btrfs                     16G  7.4G  5.2G  59% /services_rw/docker
+/dev/dm-16         btrfs                    1.0G  572M  362M  62% /services_rw/island
+/dev/dm-26         btrfs                    1.0G  633M  300M  68% /services_rw/edge
+```
+
 ## su
 
 change to root

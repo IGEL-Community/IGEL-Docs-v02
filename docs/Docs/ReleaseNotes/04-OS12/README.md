@@ -24,6 +24,7 @@ Lists what changes are in the build.
 
 ## IGEL OS 12
 
+- [12.10.0 PR1](readme12.10.0+1.txt) 01-September-2026 (Rolling Release)
 - [12.8.3](readme12.8.3.txt) 21-August-2026 (Stable Release)
 - [12.10.0](readme12.10.0.txt) 31-July-2026 (Rolling Release)
 - [12.9.0 PR3](readme12.9.0+3.txt) 24-June-2026 (Rolling Release)

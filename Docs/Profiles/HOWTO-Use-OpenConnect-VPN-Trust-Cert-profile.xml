@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profile>
+    <profile_id>7371</profile_id>
+    <profilename>Openconnect Trust Cert</profilename>
+    <firmware>
+        <model>IGEL OS 11</model>
+        <version>11.08.230.01</version>
+    </firmware>
+    <description></description>
+    <overwritesessions>false</overwritesessions>
+    <is_master_profile>false</is_master_profile>
+    <is_igel_os>true</is_igel_os>
+    <settings>
+        <pclass name="system.environment_variables.fixvariable%.name">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false">Openconnect SHA1 Cert Hash</pvalue>
+            <pvalue instancenr="1" variableExpression="" variableSubstitutionActive="false">Openconnect AuthGroup</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="system.environment_variables.fixvariable%.value">
+            <pvalue instancenr="0" variableExpression="" variableSubstitutionActive="false"></pvalue>
+            <pvalue instancenr="1" variableExpression="" variableSubstitutionActive="false">AnyConnect</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+        <pclass name="userinterface.rccustom.custom_cmd_x11_early">
+            <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">echo Modifing oc-starter to include SHA1 Certificate Hash value as trusted and set AuthGroup| logger
+grep servercert /usr/sbin/oc-starter &amp;gt /dev/null &amp;amp&amp;amp echo done || sed -i 's#GW"#GW" --servercert $(get system.environment_variables.fixvariable0.value) --authgroup=$(get system.environment_variables.fixvariable1.value)#g' /usr/sbin/oc-starter
+grep servercert /services/unsupported02/usr/sbin/oc-starter &amp;gt /dev/null &amp;amp&amp;amp echo done || sed -i 's#GW"#GW" --servercert $(get system.environment_variables.fixvariable0.value) --authgroup=$(get system.environment_variables.fixvariable1.value)#g' /services/unsupported02/usr/sbin/oc-starter</pvalue>
+            <variableSubstitutionActive>false</variableSubstitutionActive>
+        </pclass>
+    </settings>
+    <instancesettings/>
+</profile>

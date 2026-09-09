@@ -1,0 +1,1470 @@
+IGEL OS 11  
+==========
+
+Firmware version 11.08.200  
+Release date 2022-10-18  
+Last update of this document 2022-10-17
+
+
+Supported Devices  
+-------------------------------------------------------------------------------
+
+UD2-LX 52, UD2-LX 51, UD2-LX 50, UD2-LX 40  
+UD3-LX 60, UD3-LX 51  
+UD6-LX 51  
+UD7-LX 20, UD7-LX 11, UD7-LX 10  
+
+[> Supported IGEL OS 11 thirdparty devices](https://kb.igel.com/os11-supported-hardware)
+
+
+Release Notes 11.08.200
+--------------------------------------------------------------------------------
+
+
+New Features
+--------------------------------------------------------------------------------
+
+
+### Citrix
+
+* Support for dynamic emergency calling within MS Teams
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Citrix Support for dynamic e911`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.emergencycalling`                                           |
++------------+-----------------------------------------------------------------+
+|Value       |{**}false{**}(default)/true                                      |
++------------+-----------------------------------------------------------------+
+
+* Integrated Citrix Workspace App 2207.  
+  Available Citrix Workspace Apps in this release: 2207 (default), 2205 and 2010
+**Composite USB redirection
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Native USB Redirection class rule`                              |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.usbredirection.devicepolicy.class_rule%.rule`               |
++------------+-----------------------------------------------------------------+
+|Value       |{**}Deny{**}(default), Allow, Connect                            |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Native USB Redirection product rule`                            |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.usbredirection.devicepolicy.product_rule%.rule`             |
++------------+-----------------------------------------------------------------+
+|Value       |{**}Deny{**}(default), Allow, Connect                            |
++------------+-----------------------------------------------------------------+
+
+* Citrix Workspace app allows the splitting of composite USB devices. A
+  composite USB device can perform more than one function. These functions are
+  accomplished by exposing each of those functions using different interfaces.
+  An example of a composite USB device is the Bloomberg keyboard which consists
+  of a keyboard, fingerprint reader, an audio device, and USB hub, etc.
+* The Composite USB redirection feature adds the CONNECT value to the rules for
+  USB devices.
+* CONNECT - Set the "CONNECT" keyword to enable auto-redirect of a device when a
+  session starts.
+* ALLOW - Set the "ALLOW" keyword to allow auto-redirect of a device only after
+  a session starts. However, if the "CONNECT" or "ALLOW" keyword is set, the
+  device is auto-redirected when it is unplugged and plugged in during a
+  session.
+* When redirect the composite USB device, normally the whole device is forwarded
+  to the virtual host. However, now there is the possibility to split and
+  forward only the child interfaces that use a generic USB channel. To do this,
+  it is necessary to add the following filter parameters (split and intf) to the
+  device rules. The split parameter specifies whether a composite device must be
+  forwarded as separate devices or as a single composite device. "Split=1" means
+  that the selected child interfaces of a composite device must be forwarded as
+  split devices, while split=0 must not be forwarded (If the split parameter is
+  omitted, Split=0 is assumed). The intf parameter selects the specific child
+  interfaces of the composite unit to which the action is to be applied.
+* In IGEL Setup, the device rules can be added under "Sessions / Citrix / Citrix
+  Global / Native USB Redirection / Device Rules". Adding the first two filter
+  parameters Vendor id/vid and Product id/ pid, which redirects the entire
+  composite device in the session. If splitting of the composite device is
+  required, adding additional parameters in the "Extra config" as shown in the
+  example is required.
+* Example:  
+  CONNECT: vid=047F pid=C039 split=1 intf=03 # Allow HID device and connect
+  automatically.  
+  DENY: vid=047F pid=C039 split=1 intf=00 # Deny audio endpoints  
+  ALLOW: vid=047F pid=C039 split=1 intf=05 # Allow mgmt intf but do not connect
+  automatically
+* Note: [https://kb.igel.com/igelos-11.08/en/native-usb-
+  redirection-63804310.html]ÿ the third option "connect" has been added to the
+  class and device rules. Composite USB redirection can change the behavior. If
+  a device is no longer redirected with CWA 2207, should be changed to
+  'Connect'.  
+* Enhancement to improve audio quality  
+** Playback Delay Thresh
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Playback Delay Thresh`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.PlaybackDelayThreshV4`                               |
++------------+-----------------------------------------------------------------+
+|Value       |**50 (default)**                                                 |
++------------+-----------------------------------------------------------------+
+
+* With this enhancement, the maximum output buffering value is decreased from
+  200 ms to 50 ms in Citrix Workspace app. As a result, the user experience of
+  the interactive audio application is improved. Also, the Round trip time (RTT)
+  is decreased by 150 ms.ÿThis parameter is valid only when `AudioRedirectionV4`
+  is set to `True`.  
+**  
+** Audio Temp Latency Boost
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Audio Temp Latency Boost`                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.AudioTempLatencyBoostV4`                             |
++------------+-----------------------------------------------------------------+
+|Value       |**100 (default)**                                                |
++------------+-----------------------------------------------------------------+
+
+* When the audio throughput undergoes a sudden spike or is not enough for an
+  unstable network, this value increases the output buffering value. This
+  increase in the output buffering value provides smooth audio. However, the
+  audio might be slightly delayed. This parameter is only valid when
+  `AudioRedirectionV4`, and `AudioLatencyControlEnabled` is set to True.  
+* Improved audio echo cancellation support
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Improved audio echo cancellation support`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.module.enableechocancellation`                              |
++------------+-----------------------------------------------------------------+
+|Value       |{**}false{**}(default)/true                                      |
++------------+-----------------------------------------------------------------+
+
+* Support for DPI matching
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Support for DPI matching`                                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.wfclient.dpimatchingenabled`                                |
++------------+-----------------------------------------------------------------+
+|Value       |{**}false{**}(default)/true                                      |
++------------+-----------------------------------------------------------------+
+
+* The display resolution and DPI scale values set in the Citrix Workspace app
+  match the corresponding values in the virtual apps and desktops session.ÿDPI
+  scaling is mostly used with large size and high-resolution monitors to display
+  applications, text, images, and other graphical elements in a size that can be
+  viewed comfortably.  
+* App Protection
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Citrix App Protection`                                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.appprotection`                                              |
++------------+-----------------------------------------------------------------+
+|Value       |{**}false{**}(default)/true                                      |
++------------+-----------------------------------------------------------------+
+
+* App protection is an add-on feature for the Citrix Workspace app that provides
+  enhanced security when using Citrix Virtual Apps and Desktops published
+  resources. Two policies provide anti-keylogging and anti-screen-capturing
+  capabilities for a Citrix HDX session. This feature is fully supported only
+  for workspace app 2207,ÿ with older workspace apps, you may experience x11vnc
+  crashes.
+* Updated deviceTRUST Client Extension to version 21.1.310.0.
+
+### OSC Installer
+
+* Added option in factory mode for an automatical shutdown after self-check. Log
+  file of this deployment self-check is written to dummy partition.
+
+### AVD
+
+* Added SIGTERM and SIGHUP signal handlers to disconnect sessions once received
+  these signals. Since remote log-off is not supported in RDP, both signal
+  handlers perform a session disconnect.
+* Fixed audio crackling  
+* Added potential fix for the ClaimsTokenAuthChallenge issue that dialog pops up
+  to often!  
+* Added SIGTERM and SIGHUP. As soon as the RdCoreSDK supports session log-off as
+  well, SIGHUP handler will be used instead of the disconnect  
+* Added potential fixes for crashes with enabled printer redirection  
+* Fixed MS-Teams VDI the local video window went black occasionally  
+* Applied patch to fix bug in boost 1.69.0 that caused the "User cancelled"
+  issue.  
+  [https://github.com/boostorg/container/commit/90de9533ecef08e98d82e8f8c26fad57
+  839e4184] at boost 1.74.0  
+* Added two parameters regarding MS-Teams (WebRTC) redirection video decoding:
+
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.wvd0.options.webrtchardwaredecoding`                   |
++------------+-----------------------------------------------------------------+
+|Value       |on / **auto** (default) / off                                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`sessions.wvd0.options.webrtcdecodermaxthreads`                  |
++------------+-----------------------------------------------------------------+
+|Value       |**1** (default) / 0 (auto) / 0-16                                |
++------------+-----------------------------------------------------------------+
+
+
+### RDP/IGEL RDP Client 2
+
+* Updated deviceTRUST Client Extension to version 21.1.310.0.
+
+### RD Web Access
+
+* Added new parameter to enable support for Interactive Logon Messages.
+
++------------+-----------------------------------------------------------------+
+|Registry    |`rdp.rd_web_access.options.remote_app_interactive_logon_message  |
++------------+-----------------------------------------------------------------+
+|Type        | bool                                                            |
++------------+-----------------------------------------------------------------+
+|Value       | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+
+### VMware Horizon
+
+* Updated VMware Horizon client to version 2206-8.6.0-20094634
+
+### Power Term
+
+* Updated Ericom PowerTerm LTC to version 14.0.3.71814. This fixes scaling the
+  emulation window to large sizes.
+
+### IBM_5250
+
+* Added startup splash screen to IBM iAccess client. Thus the user gets a visual
+  feedback of sessions about to start.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Show splash screen at session startup`                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`ibm.iaccess.showsplash`                                         |
++------------+-----------------------------------------------------------------+
+|Value       |**true** (default)/false                                         |
++------------+-----------------------------------------------------------------+
+
+
+### HP Anyware
+
+* Renamed Teradici PCoIP Ultra to HP Anyware PCoIP  
+  
+  Updated HP Anyware PCoIP client to version 22.07.0-18.04
+
+### Network
+
+* Updated Modemmanager and libraries to improve LTE device support.
+* Added support for Intel XMM7360 and XMM7560 LTE cards.
+
+### WiFi
+
+* Added initial support for Realtek 8852ce WiFi chipset
+
+### AppliDis
+
+* Updated Applidis SLB Linux client to version 6.1.4.17.
+
+### Smartcard
+
+* Updated Thales SafeNet Authentication client to version 10.8.1013.
+
+### CUPS Printing
+
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Make connected printer default printer`                         |
++------------+-----------------------------------------------------------------+
+|Registry    |`print.cups.dynamic_default`                                     |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+* Added the dynamic default printer feature: If several printer are defined,  
+  the last plugged printer will be set as default printer.  
+  On boot the printer will be selected which is connected at the time.  
+  If more than one printer are connected at boot, the one which is the  
+  last in the list of printers defined in the OS gets the default.  
+  If a printer which was default is removed, the remaining printer will  
+  be elected as default.  
+  If more than one remains, the last in the list of printers defined  
+  in the OS, gets the default.
+* Fixed printer activation on usb-hotplug which could fail in rare occasions.  
+* Fixed cases where choosing the first usb printer fails as not named usblp0 by
+  the kernel as expected, as higher number were used  
+  (e.g. usblp2) even if no other usb printers were connected. First usb printer
+  is now defined as the one which is first in the (sorted)  
+  list of all connected usb printers.  
+  Accordingly the second usb printer is the second in the list of usb printers.  
+  For the case more than one usb printer is used at the same time,  
+  first or second printer should not be used as selection method, as numbering
+  is also depending on the timing the printer is registered  
+  on endpoint. On next boot, the numbering can be different  
+  especially if the devices are switched on individually.  
+  In this case it's recommended to use instead the usbclass backend or selection  
+  by the USB Port on the endpoint or by the printers USB IDs.
+* Updated HP Linux Imaging and Printing (HPLIP) to version 3.22.6
+* Updated printer list to include all new printers from HPLIP 3.22.6 (which do
+  not require a proprietary plugin).
+
+### Cisco Webex
+
+* Integrated Cisco WebEx Meetings VDI plugins 42.6.8.5 and 42.2.10.7  
+  Available plugins in this release: 42.6.8.5 (default), 42.2.10.7 and
+  41.12.6.12
+* Integrated Cisco WebEx VDI plugin 42.8.0.23214
+
+### Cisco JVDI Client
+
+* Integrated Cisco JVDI 14.1.2
+
+### Base system
+
+* Updated kernel to version 5.17.15.  
+* Updated VDPAU library to version 1.5.  
+* Updated gphoto library to version 2.5.29.  
+* Updated OpenConnect VPN client to version 9.01.
+* Updated bluetooth stack (bluez) to version 5.64.  
+* Updated OpenVPN client to version 2.6.0 (with OpenVPN DCO support).  
+* Updated MESA OpenGL stack to version 22.1.5.  
+* Updated wireless regdb to version 2022.06.06.
+* Added support for webcam virtual background (must be activated in
+  System->FimwareCustomization->Features Virtual Background for Webcam)  
+* Also added new registry keys (to use the feature,
+  multimedia.webcam.virtual_background.enabled must be set to true)
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Enable virtual background for webcam.`                          |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.enabled`                   |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Replace default webcam with virtual one.`                       |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.replace_video0`            |
++------------+-----------------------------------------------------------------+
+|Type        |bool                                                             |
++------------+-----------------------------------------------------------------+
+|Value       |**enabled** (default) / disabled                                 |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select how the webcam to use should be choosen.`                |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.choose_webcam_by`          |
++------------+-----------------------------------------------------------------+
+|Range       | [Use first webcam][Choose by name]                              |
+|            | [Choose by vendor_id:product_id][Choose by number]              |
++------------+-----------------------------------------------------------------+
+|Value       |**Use first webcam**                                             |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select webcam by number (only valid if choose by number is used)` |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.webcam_number`             |
++------------+-----------------------------------------------------------------+
+|Type        |integer                                                          |
++------------+-----------------------------------------------------------------+
+|Value       |1 **Default**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select webcam by name (only valid if choose by name is used)`   |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.webcam_name`               |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select webcam by vendor_id:product_id (only valid if choose by vendor_id:product_id is used)` |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.webcam_vendor_product`     |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Background picture file to use as virtual background`           |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.background_file`           |
++------------+-----------------------------------------------------------------+
+|Type        |string                                                           |
++------------+-----------------------------------------------------------------+
+|Value       |empty **Default**                                                |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Strength of background blurring`                                |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.blur`                      |
++------------+-----------------------------------------------------------------+
+|Type        |integer                                                          |
++------------+-----------------------------------------------------------------+
+|Value       |25 **Default**                                                   |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select type of virtual background.`                             |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.type`                      |
++------------+-----------------------------------------------------------------+
+|Range       | [Use blur][Use background picture]                              |
++------------+-----------------------------------------------------------------+
+|Value       |**Use blur**                                                     |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select resolution to use.`                                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.resolution`                |
++------------+-----------------------------------------------------------------+
+|Range       | [webcam default][webcam max][1280x720][640x480][480x360]        |
++------------+-----------------------------------------------------------------+
+|Value       |**webcam default**                                               |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Select model for background segmentation.`                      |
++------------+-----------------------------------------------------------------+
+|Registry    |`multimedia.webcam.virtual_background.backscrub.model`           |
++------------+-----------------------------------------------------------------+
+|Range       | [segm_full][selfiesegmentation][segm_lite][deeplabv3]           |
++------------+-----------------------------------------------------------------+
+|Value       |**segm_full**                                                    |
++------------+-----------------------------------------------------------------+
+
+* Added possibility to use ntfs with compression as Chromium and Firefox profile
+  partition filesystem.  
+* Changed registry keys (added ntfs option):
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Firefox Profiles Partition Filesystem Type`                     |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.customization.ffpro.fs_type`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [reiser4][ext4][f2fs][ntfs]                                     |
++------------+-----------------------------------------------------------------+
+|Value       |**reiser4**                                                      |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Chromium Profiles Partition Filesystem Type`                    |
++------------+-----------------------------------------------------------------+
+|Registry    |`system.customization.chpro.fs_type`                             |
++------------+-----------------------------------------------------------------+
+|Range       | [reiser4][ext4][f2fs][ntfs]                                     |
++------------+-----------------------------------------------------------------+
+|Value       |**reiser4**                                                      |
++------------+-----------------------------------------------------------------+
+
+
+### zoomvdi
+
+* Added Smart Virtual Background support for zoomvdi.
+
++------------+-----------------------------------------------------------------+
+| IGEL Setup | Sessions > Unified Communication > Zoom Client Selection        |
++============+=================================================================+
+| Parameter  | `Smart Virtual Background Support`                              |
++------------+-----------------------------------------------------------------+
+| Registry   | `multimedia.zoomvdi.smartvb`                                    |
++------------+-----------------------------------------------------------------+
+| Type       | string                                                          |
++------------+-----------------------------------------------------------------+
+| Value      | [ Off ][ **Auto** ][ Always ]                                   |
++------------+-----------------------------------------------------------------+
+
+* Integrated Zoom VDI pluginÿ5.11.2.21530  
+  Available plugins in this release: 5.11.2.21530 (default), 5.10.6.21295 and
+  5.8.4.21112
+
+### Hardware
+
+* Updated DisplayLink driver to version 5.6.0.  
+* Improved performance of AMD devices and DisplayLink solutions.
+* Added hardware support for Dell Optiplex 3000TC
+
+### TC Setup (Java)
+
+* Updated TC Setup to version 6.10.4.
+
+### Fabulatech
+
+* Updated FabulaTech Scanner for Remote Desktop to version 3.0.1.0
+
+
+Security Fixes
+--------------------------------------------------------------------------------
+
+
+### Chromium
+
+* Fixed Chromium browser security issues CVE-2022-3075, CVE-2022-3058,
+  CVE-2022-3057, CVE-2022-3056, CVE-2022-3055, CVE-2022-3054, CVE-2022-3053,
+  CVE-2022-3052, CVE-2022-3051, CVE-2022-3050, CVE-2022-3049, CVE-2022-3048,
+  CVE-2022-3047, CVE-2022-3046, CVE-2022-3045, CVE-2022-3044, CVE-2022-3043,
+  CVE-2022-3042, CVE-2022-3041, CVE-2022-3040, CVE-2022-3039, CVE-2022-3038,
+  CVE-2022-2861, CVE-2022-2860, CVE-2022-2859, CVE-2022-2858, CVE-2022-2857,
+  CVE-2022-2856, CVE-2022-2855, CVE-2022-2854, CVE-2022-2853 and CVE-2022-2852.
+* Fixed Chromium browser security issues CVE-2022-3195, CVE-2022-3196,
+  CVE-2022-3197, CVE-2022-3198, CVE-2022-3199, CVE-2022-3200 and CVE-2022-3201  
+* Updated Chromium browser to version 105.0.5195.125.
+
+### Firefox
+
+* Updated Mozilla Firefox to version 91.13.0 ESR  
+* Fixes for mfsa2022-35, also known as:  
+  CVE-2022-38472, CVE-2022-38473, CVE-2022-38478.  
+* Fixes for mfsa2022-29, also known as:  
+  CVE-2022-36319, CVE-2022-36318.  
+* Fixes for mfsa2022-25, also known as:  
+  CVE-2022-34479, CVE-2022-34470, CVE-2022-34468, CVE-2022-34481,  
+  CVE-2022-31744, CVE-2022-34472, CVE-2022-2200, CVE-2022-34484.  
+* Fixes for mfsa2022-21, also known as:  
+  CVE-2022-31736, CVE-2022-31737, CVE-2022-31738, CVE-2022-31740,  
+  CVE-2022-31741, CVE-2022-31742, CVE-2022-31747.
+
+### Base system
+
+* Fixed libinput security issue CVE-2020-1215.  
+* Fixed libarchive security issue CVE-2022-26280.  
+* Fixed ntfs-3g security issues CVE-2022-30789, CVE-2022-30788, CVE-2022-30787,
+  CVE-2022-30786, CVE-2022-30785, CVE-2022-30784, CVE-2022-30783 and
+  CVE-2021-46790.  
+* Fixed openssl1.0 security issues CVE-2022-2068 and CVE-2022-1292.  
+* Fixed openssl security issues CVE-2022-2097, CVE-2022-2068 and CVE-2022-1292.  
+* Fixed gnupg2 security issues CVE-2022-34903 and CVE-2019-13050.  
+* Fixed webkit2gtk security issues CVE-2022-26710, CVE-2022-22677,
+  CVE-2022-22662, CVE-2022-30294, CVE-2022-30293, CVE-2022-26719,
+  CVE-2022-26717, CVE-2022-26716, CVE-2022-26709 and CVE-2022-26700.  
+* Fixed nss security issues CVE-2022-34480 and CVE-2022-22747.
+* Fixed Nvidia graphics driver 470 security issues CVE-2022-31607 and
+  CVE-2022-31608.  
+* Updated Nvidia graphics driver to version 470.141.03.  
+* Fixed curl security issues CVE-2022-32208, CVE-2022-32207, CVE-2022-32206 and
+  CVE-2022-32205.  
+* Fixed unzip security issues CVE-2022-0530 and CVE-2022-0529.  
+* Fixed freetype security issues CVE-2022-31782, CVE-2022-27406, CVE-2022-27405
+  and CVE-2022-27404.  
+* Fixed gnutls28 security issues CVE-2022-2509 and CVE-2021-4209.  
+* Fixed mysql-5.7 security issue CVE-2022-21515.  
+* Fixed python2.7 security issue CVE-2015-20107.  
+* Fixed python3.6 security issue CVE-2015-20107.  
+* Fixed net-snmp security issues CVE-2022-24810, CVE-2022-24809, CVE-2022-24808,
+  CVE-2022-24807, CVE-2022-24806, CVE-2022-24805 and CVE-2022-248.  
+* Fixed zulu8-ca security issues CVE-2022-34169, CVE-2022-25647, CVE-2022-21541
+  and CVE-2022-21540.  
+* Updated zulu8-ca JRE to version 8.0.345.  
+* Fixed libtirpc security issue CVE-2021-46828.  
+* Updated Intel microcode to version 20220809 which fixed security issue
+  CVE-2022-21233.  
+* Fixed postgresql-10 security issue CVE-2022-1552.  
+* Fixed webkit2gtk security issues CVE-2022-32816, CVE-2022-32792 and
+  CVE-2022-2294.  
+* Updated webkit2gtk to version 2.36.6.
+* Fixed open-vm-tools security issue CVE-2022-31676.  
+* Fixed postgresql-10 security issue CVE-2022-2625.  
+* Fixed libxslt security issues CVE-2021-30560 and CVE-2019-5815.  
+* Fixed zlib security issue CVE-2022-37434.  
+* Fixed rsync security issue CVE-2022-37434.  
+* Fixed webkit2gtk security issue CVE-2022-32893.  
+* Fixed gnutls28 security issues CVE-2022-2509 and CVE-2021-4209.  
+* Fixed curl security issue CVE-2022-35252.  
+* Fixed flac security issues CVE-2017-6888, CVE-2020-0499 and CVE-2021-0561.  
+* Fixed libsndfile security issue CVE-2021-4156.
+* Fixed gst-plugins-good1.0 security issues CVE-2022-1920, CVE-2022-1921,
+  CVE-2022-1922, CVE-2022-1923, CVE-2022-1924, CVE-2022-1925 and CVE-2022-2122.  
+* Updated GStreamer 1.x to version 1.20.3.
+* Fixed vim security issues CVE-2022-1621, CVE-2022-1620, CVE-2022-1619,
+  CVE-2022-1616, CVE-2022-1154 and CVE-2022-0943.  
+* Fixed tiff security issues CVE-2022-22844, CVE-2022-2058, CVE-2022-2057,
+  CVE-2022-2056, CVE-2022-1355, CVE-2022-0924, CVE-2022-0909, CVE-2022-0908,
+  CVE-2022-0907, CVE-2020-19144 and CVE-2020-19131.  
+* Fixed qemu security issues CVE-2022-35414, CVE-2022-2962, CVE-2022-1050,
+  CVE-2022-0216 and CVE-2020-14394.  
+* Fixed expat security issue CVE-2022-40674.
+
+### X server
+
+* Fixed Xorg security issues CVE-2022-2319 and CVE-2022-2320.  
+* Updated Xorg server to version 21.1.4.
+
+
+Resolved Issues
+--------------------------------------------------------------------------------
+
+
+### OSC Installer
+
+* Fixed wrong icon in OSC installer.
+* Fixed deploying IGEL OS GPT images to Fujitsu Lifebook U7311 via IGEL SCCM
+  Add-On.
+
+### RDP/IGEL RDP Client 2
+
+* Fixed RDP Client displaying wrong error message when account is locked.
+
+### Amazon Workspace Client
+
+* Fixed deviceTRUST virtual channel configuration.
+
+### Chromium
+
+* Fixed hardware accelerated video decoding on newer Intel chipsets using the
+  iHD VA-API backend.
+
+### Firefox
+
+* Fixed Firefox Tabs crashing if system uses iHD VAAPI driver.
+
+### Network
+
+* Fixed MBB connection editor
+
+### WiFi
+
+* Fixed: System regulatory domain now also set on the self-managed driver
+  rtl8852be
+* Fixed: HP Probook 450 G8 with Intel AX201 Wifi.
+* Fixed: Realtek 8852BE WiFi chipsets (included in HP T655)
+* Fixed missing firmware files of iwlwifi driver for INTEL chipsets.
+
+### Imprivata
+
+* Improved disconnect/reconnect speed with Imprivata and Horizon. Fixes
+  Imprivata/Horizon roaming issue.
+* Added: Minor improvements on Vendor Launch Scripts.
+
+### AppliDis
+
+* Fixed wrong port for HTTPS.
+
+### Smartcard
+
+* Fixed startup of SecMaker Net iD service.
+
+### Base system
+
+* Fixed confusing touchpad functions if changed between right and left hand
+  mouse.
+* Fixed touchpad enable / disable by hotkey.
+* Fixed battery notification.
+* Fixed: Not rotate SystemInformation.log at startup. Rotation is only done with
+  successful upload.
+* Fixed failed firmware update from servers with low bandwidth
+* Fixed NTP time configuration in Setup Assistant if time was set before issued
+  starter license.
+* Fixed corrupted BIOS update where relevant files were missing in rare cases.
+* Added experimental DSC over DP MST support to Intel graphic driver.  
+* Added new registry key:
+
++------------+-----------------------------------------------------------------+
+| Parameter  | `Enable DSC over DP MST support (experimental).`                |
++------------+-----------------------------------------------------------------+
+| Registry   | `x.drivers.intel.dsc_over_dp_mst`                               |
++------------+-----------------------------------------------------------------+
+| Type       | bool                                                            |
++------------+-----------------------------------------------------------------+
+| Value      | enabled / **disabled** (default)                                |
++------------+-----------------------------------------------------------------+
+
+* Updated fwupd tool to fix possible issue with LVFS Bios update.
+
+### X11 system
+
+* Updated xprintidle to version 0.2.4, which offers reasonable output also when
+  DPMS state is not On.
+* Added support for HDMI4 to HDMI8 connectors as newer devices possibly have
+  these connectors.  
+* Changed registry keys to allow HDMI connectors up to HDMI8
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.connector`                                           |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen1.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen2.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen3.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen4.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen5.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen6.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Monitor`                                                        |
++------------+-----------------------------------------------------------------+
+|Registry    |`x.xserver%.screen7.connector`                                   |
++------------+-----------------------------------------------------------------+
+|Range       | [Automatic][VGA][VGA(II)][DVI-D][DVI-D(II)][DisplayPort]        |
+|            | [DisplayPort(II)][DisplayPort(III)][DisplayPort(IV)]            |
+|            | [DisplayPort(V)][DisplayPort(VI)][DisplayPort(VII)]             |
+|            | [DisplayPort(VIII)][HDMI][HDMI(II)][HDMI(III)][HDMI(IV)][HDMI(V)]|
+|            | [HDMI(VI)][HDMI(VII)][HDMI(VIII)][Internal Panel(LVDS)]         |
+|            | [Internal Panel(LVDS II)][Internal Panel(eDP)]                  |
+|            | [Internal Panel(eDP II)][DVI-D(III)][DVI-D(IV)][DVI-D(V)]       |
+|            | [DVI-D(VI)][DVI-D(VII)][DVI-D(VIII)]                            |
++------------+-----------------------------------------------------------------+
+|Value       |**Automatic**                                                    |
++------------+-----------------------------------------------------------------+
+
+* Updated ATI / Radeon graphic driver to version 19.1.0 which fixed issues with
+  radeon Xorg driver and rotation.
+* Updated amdgpu graphic driver to version 22.0.0 which improves performance
+  with DisplayLink USB solutions.
+
+### Audio
+
+* Fixed audio output via display port/HDMI for HP Elitedesk 800 G6
+* Fixed issues with 3.5mm audio jack on LG AiO 24CN67 and 24CN65 devices.
+
+### Hardware
+
+* Improved bluetooth stability.
+
+
+Component Versions
+-------------------------------------------------------------------------------
+
++-------------------------------------------+----------------------------------+
+| Clients                                   |                                  |
++===========================================+==================================+
+| Amazon WorkSpaces Client                  | 3.1.9                            |
++-------------------------------------------+----------------------------------+
+| Chromium                                  | 105.0.5195.125-igel1663653255    |
++-------------------------------------------+----------------------------------+
+| Cisco JVDI Client                         | 14.1.2                           |
++-------------------------------------------+----------------------------------+
+| Cisco Webex VDI plugin                    | 42.8.0.23214                     |
++-------------------------------------------+----------------------------------+
+| Cisco Webex Meetings VDI plugin           | 41.12.6.12                       |
++-------------------------------------------+----------------------------------+
+| Cisco Webex Meetings VDI plugin           | 42.2.10.7                        |
++-------------------------------------------+----------------------------------+
+| Cisco Webex Meetings VDI plugin           | 42.6.8.5                         |
++-------------------------------------------+----------------------------------+
+| Zoom Media Plugin                         | 5.10.6.21295                     |
++-------------------------------------------+----------------------------------+
+| Zoom Media Plugin                         | 5.11.2.21530                     |
++-------------------------------------------+----------------------------------+
+| Zoom Media Plugin                         | 5.8.4.21112                      |
++-------------------------------------------+----------------------------------+
+| Citrix HDX Realtime Media Engine          | 2.9.400                          |
++-------------------------------------------+----------------------------------+
+| Citrix Workspace App                      | 20.10.0.6                        |
++-------------------------------------------+----------------------------------+
+| Citrix Workspace App                      | 22.05.0.16                       |
++-------------------------------------------+----------------------------------+
+| Citrix Workspace App                      | 22.07.0.20                       |
++-------------------------------------------+----------------------------------+
+| deviceTRUST Citrix Channel                | 21.1.310.0                       |
++-------------------------------------------+----------------------------------+
+| Crossmatch DP Citrix Channel              | 0125                             |
++-------------------------------------------+----------------------------------+
+| Conky System Monitor                      | 1.10.8-1                         |
++-------------------------------------------+----------------------------------+
+| ControlUp Agent                           | 8.1.5.500                        |
++-------------------------------------------+----------------------------------+
+| deskMate Client                           | 2.1.3                            |
++-------------------------------------------+----------------------------------+
+| DriveLock Agent                           | 20.1.4.30482                     |
++-------------------------------------------+----------------------------------+
+| Ericom PowerTerm                          | 14.0.3.71814                     |
++-------------------------------------------+----------------------------------+
+| Evidian AuthMgr                           | 1.5.8134                         |
++-------------------------------------------+----------------------------------+
+| Evince PDF Viewer                         | 3.28.4-0ubuntu1.2                |
++-------------------------------------------+----------------------------------+
+| FabulaTech Plugins                        | 3.8.0                            |
++-------------------------------------------+----------------------------------+
+| FabulaTech USB for Remote Desktop         | 6.0.35                           |
++-------------------------------------------+----------------------------------+
+| FabulaTech Scanner for Remote Desktop     | 3.0.1.0                          |
++-------------------------------------------+----------------------------------+
+| FabulaTech Webcam for Remote Desktop      | 2.8.10                           |
++-------------------------------------------+----------------------------------+
+| Firefox                                   | 91.13.0                          |
++-------------------------------------------+----------------------------------+
+| IBM iAccess Client Solutions              | 1.1.8.6                          |
++-------------------------------------------+----------------------------------+
+| IGEL RDP Client                           | 2.2igel1663073494                |
++-------------------------------------------+----------------------------------+
+| IGEL AVD Client                           | 1.1.0igel1663740227              |
++-------------------------------------------+----------------------------------+
+| deviceTRUST RDP Channel                   | 21.1.310.0                       |
++-------------------------------------------+----------------------------------+
+| Imprivata OneSign ProveID Embedded        | onesign-bootstrap-loader_1.0.523630_amd64 |
++-------------------------------------------+----------------------------------+
+| Lakeside SysTrack Channel                 | 9.0                              |
++-------------------------------------------+----------------------------------+
+| Login VSI Enterprise                      | 4.8.6                            |
++-------------------------------------------+----------------------------------+
+| NCP Secure Enterprise Client              | 5.10_rev40552                    |
++-------------------------------------------+----------------------------------+
+| NX Client                                 | 7.8.2-4igel1644853628            |
++-------------------------------------------+----------------------------------+
+| Open VPN                                  | 2.6.0~git20220818-1igel1661859138 |
++-------------------------------------------+----------------------------------+
+| Zulu JRE                                  | 8.0.345-1                        |
++-------------------------------------------+----------------------------------+
+| Parallels Client                          | 18.3.1                           |
++-------------------------------------------+----------------------------------+
+| Spice GTK (Red Hat Virtualization)        | 0.41-2igel1661863274             |
++-------------------------------------------+----------------------------------+
+| Remote Viewer (Red Hat Virtualization)    | 11.0-2igel1661863477             |
++-------------------------------------------+----------------------------------+
+| Usbredir (Red Hat Virtualization)         | 0.11.0-2igel1633506980           |
++-------------------------------------------+----------------------------------+
+| SpeechWrite                               | 1.0                              |
++-------------------------------------------+----------------------------------+
+| Stratusphere UX Connector ID Key software | 6.6.0-3                          |
++-------------------------------------------+----------------------------------+
+| Systancia AppliDis                        | 6.1.4-17                         |
++-------------------------------------------+----------------------------------+
+| HP Anyware PCoIP Software Client          | 22.07.0-18.04                    |
++-------------------------------------------+----------------------------------+
+| ThinLinc Client                           | 4.14.0-2324                      |
++-------------------------------------------+----------------------------------+
+| ThinPrint Client                          | 7-7.6.126                        |
++-------------------------------------------+----------------------------------+
+| Totem Media Player                        | 2.30.2-0ubuntu1igel55            |
++-------------------------------------------+----------------------------------+
+| Parole Media Player                       | 4.16.0-1igel1611217037           |
++-------------------------------------------+----------------------------------+
+| VNC Viewer                                | 1.12.0+dfsg-4igel1648284944      |
++-------------------------------------------+----------------------------------+
+| VMware Horizon client                     | 2206-8.6.0-20094634              |
++-------------------------------------------+----------------------------------+
+| Voip Client Ekiga                         | 4.0.1-9build1igel6               |
++-------------------------------------------+----------------------------------+
+
++-------------------------------------------+----------------------------------+
+| Dictation                                 |                                  |
++===========================================+==================================+
+| Diktamen driver for dictation             | 2017/09/29                       |
++-------------------------------------------+----------------------------------+
+| Grundig Business Systems dictation driver | 0.12/21-12-21                    |
++-------------------------------------------+----------------------------------+
+| Nuance Audio Extensions for dictation     | B301                             |
++-------------------------------------------+----------------------------------+
+| Olympus driver for dictation              | 4.0.2                            |
++-------------------------------------------+----------------------------------+
+| Philips Speech driver                     | 13.1.10                          |
++-------------------------------------------+----------------------------------+
+
+
++-------------------------------------------+----------------------------------+
+| Signature                                 |                                  |
++===========================================+==================================+
+| Kofax SPVC Citrix Channel                 | 3.1.41.0                         |
++-------------------------------------------+----------------------------------+
+| signotec Citrix Channel                   | 8.0.10                           |
++-------------------------------------------+----------------------------------+
+| signotec VCOM Daemon                      | 2.0.0                            |
++-------------------------------------------+----------------------------------+
+| StepOver TCP Client                       | 2.4.2                            |
++-------------------------------------------+----------------------------------+
+
+
++-------------------------------------------+----------------------------------+
+| Smartcard                                 |                                  |
++===========================================+==================================+
+| PKCS#11 Library A.E.T. SafeSign           | 3.6.0.0-AET.000                  |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library Athena IDProtect          | 7-20210902                       |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library cryptovision sc/interface | 8.0.13                           |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library Thales SafeNet            | 10.8.1013                        |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library OpenSC                    | 0.22.0-2igel1643799581           |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library SecMaker NetID Enterprise | 6.8.3.21                         |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library SecMaker NetID Client     | 1.0.2.67                         |
++-------------------------------------------+----------------------------------+
+| PKCS#11 Library 90meter                   | 20190522                         |
++-------------------------------------------+----------------------------------+
+| Reader Driver ACS CCID                    | 1.1.8-1igel1632136057            |
++-------------------------------------------+----------------------------------+
+| Reader Driver HID Global Omnikey          | 4.3.3                            |
++-------------------------------------------+----------------------------------+
+| Reader Driver Identive CCID               | 5.0.35                           |
++-------------------------------------------+----------------------------------+
+| Reader Driver Identive eHealth200         | 1.0.5                            |
++-------------------------------------------+----------------------------------+
+| Reader Driver Identive SCRKBC             | 5.0.24                           |
++-------------------------------------------+----------------------------------+
+| Reader Driver MUSCLE CCID                 | 1.5.0-2igel1646035471            |
++-------------------------------------------+----------------------------------+
+| Reader Driver REINER SCT cyberJack        | 3.99.5final.sp13igel15           |
++-------------------------------------------+----------------------------------+
+| Resource Manager PC/SC Lite               | 1.9.8-1igel1655196158            |
++-------------------------------------------+----------------------------------+
+| Cherry USB2LAN Proxy                      | 3.2.0.3                          |
++-------------------------------------------+----------------------------------+
+
+
++-------------------------------------------+----------------------------------+
+| System Components                         |                                  |
++===========================================+==================================+
+| OpenSSL                                   | 1.0.2n-1ubuntu5.10               |
++-------------------------------------------+----------------------------------+
+| OpenSSL                                   | 1.1.1-1ubuntu2.1~18.04.20        |
++-------------------------------------------+----------------------------------+
+| OpenSSH Client                            | 9.0p1-1+b1igel1661867805         |
++-------------------------------------------+----------------------------------+
+| OpenSSH Server                            | 9.0p1-1+b1igel1661867805         |
++-------------------------------------------+----------------------------------+
+| Bluetooth Stack (bluez)                   | 5.65-1igel1663161703             |
++-------------------------------------------+----------------------------------+
+| MESA OpenGL Stack                         | 22.1.7-0igel1661885230           |
++-------------------------------------------+----------------------------------+
+| VAAPI ABI Version                         | 0.40                             |
++-------------------------------------------+----------------------------------+
+| VDPAU Library Version                     | 1.5-1igel1646992192              |
++-------------------------------------------+----------------------------------+
+| Graphics Driver INTEL                     | 2.99.917+git20210115-1igel1647326046 |
++-------------------------------------------+----------------------------------+
+| Graphics Driver ATI/RADEON                | 19.1.0-3igel1657777718           |
++-------------------------------------------+----------------------------------+
+| Graphics Driver ATI/AMDGPU                | 22.0.0-3igel1661860347           |
++-------------------------------------------+----------------------------------+
+| Graphics Driver Nouveau (Nvidia Legacy)   | 1.0.17-2igel1644486678           |
++-------------------------------------------+----------------------------------+
+| Graphics Driver Nvidia                    | 470.141.03-0ubuntu0.20.04.1      |
++-------------------------------------------+----------------------------------+
+| Graphics Driver VMware                    | 13.3.0-3igel1628859075           |
++-------------------------------------------+----------------------------------+
+| Graphics Driver QXL (Spice)               | 0.1.5-2build1igel1634304534      |
++-------------------------------------------+----------------------------------+
+| Graphics Driver FBDEV                     | 0.5.0-2igel1644486279            |
++-------------------------------------------+----------------------------------+
+| Graphics Driver VESA                      | 2.5.0-1igel1628504011            |
++-------------------------------------------+----------------------------------+
+| Input Driver Evdev                        | 2.10.6-2igel1629196047           |
++-------------------------------------------+----------------------------------+
+| Input Driver Elographics                  | 1.4.2-1igel1629196349            |
++-------------------------------------------+----------------------------------+
+| Input Driver eGalax                       | 2.5.8825                         |
++-------------------------------------------+----------------------------------+
+| Input Driver Synaptics                    | 1.9.1-2igel1646823146            |
++-------------------------------------------+----------------------------------+
+| Input Driver VMMouse                      | 13.1.0-1ubuntu2igel1628499891    |
++-------------------------------------------+----------------------------------+
+| Input Driver Wacom                        | 0.39.0-0ubuntu1igel1629136980    |
++-------------------------------------------+----------------------------------+
+| Input Driver ELO Multitouch               | 3.0.0                            |
++-------------------------------------------+----------------------------------+
+| Input Driver ELO Singletouch              | 5.1.0                            |
++-------------------------------------------+----------------------------------+
+| Kernel                                    | 5.17.15 #mainline-lxos_dev-g1663242518 |
++-------------------------------------------+----------------------------------+
+| Xorg X11 Server                           | 21.1.4igel1657689370             |
++-------------------------------------------+----------------------------------+
+| Xorg Xephyr                               | 21.1.4igel1657689370             |
++-------------------------------------------+----------------------------------+
+| CUPS Printing Daemon                      | 2.2.7-1ubuntu2.9igel1654064309   |
++-------------------------------------------+----------------------------------+
+| PrinterLogic                              | 25.1.0.500                       |
++-------------------------------------------+----------------------------------+
+| Lightdm Graphical Login Manager           | 1.26.0-0ubuntu1igel14            |
++-------------------------------------------+----------------------------------+
+| XFCE4 Window Manager                      | 4.14.5-1~18.04igel1643191202     |
++-------------------------------------------+----------------------------------+
+| ISC DHCP Client                           | 4.3.5-3ubuntu7.3                 |
++-------------------------------------------+----------------------------------+
+| NetworkManager                            | 1.32.12-0ubuntu1igel1656495558   |
++-------------------------------------------+----------------------------------+
+| ModemManager                              | 1.18.10-2igel1662722763          |
++-------------------------------------------+----------------------------------+
+| GStreamer 0.10                            | 0.10.36-2ubuntu0.1igel201        |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo aacdec             | 0.10.42                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo asfdemux           | 0.10.92                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo h264dec            | 0.10.59                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo mp3dec             | 0.10.41                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo mpegdemux          | 0.10.85                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo mpeg4videodec      | 0.10.44                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo vadec              | 0.10.229                         |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo wmadec             | 0.10.70                          |
++-------------------------------------------+----------------------------------+
+| Gstreamer 0.10 Fluendo wmvdec             | 0.10.66                          |
++-------------------------------------------+----------------------------------+
+| GStreamer 1.x                             | 1.20.3-2igel1655908747           |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo aacdec              | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo asfdemux            | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo h264dec             | 1.0.3                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo mp3dec              | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo mpeg4videodec       | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo vadec               | 1.0.2                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo wmadec              | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| Gstreamer 1.0 Fluendo wmvdec              | 1.0.1                            |
++-------------------------------------------+----------------------------------+
+| WebKit2Gtk                                | 2.36.7-1igel1661518099           |
++-------------------------------------------+----------------------------------+
+| Python2                                   | 2.7.17                           |
++-------------------------------------------+----------------------------------+
+| Python3                                   | 3.6.9                            |
++-------------------------------------------+----------------------------------+
+
++-------------------------------------------+----------------------------------+
+| VM Guest Support Components               |                                  |
++===========================================+==================================+
+| Virtualbox Guest Utils                    | 6.1.38-dfsg-3igel1662536482      |
++-------------------------------------------+----------------------------------+
+| Virtualbox X11 Guest Utils                | 6.1.38-dfsg-3igel1662536482      |
++-------------------------------------------+----------------------------------+
+| Open VM Tools                             | 11.0.5-4ubuntu0.18.04.2          |
++-------------------------------------------+----------------------------------+
+| Open VM Desktop Tools                     | 11.0.5-4ubuntu0.18.04.2          |
++-------------------------------------------+----------------------------------+
+| Xen Guest Utilities                       | 7.10.0-0ubuntu1                  |
++-------------------------------------------+----------------------------------+
+| Spice Vdagent                             | 0.22.1-3igel1661859915           |
++-------------------------------------------+----------------------------------+
+| Qemu Guest Agent                          | 7.1+dfsg-2igel1663754599         |
++-------------------------------------------+----------------------------------+
+
++-------------------------------------------+----------------------------------+
+| Features with Limited IGEL Support        |                                  |
++===========================================+==================================+
+| Mobile Device Access USB (MTP)            | 1.1.20-1igel1660111560           |
++-------------------------------------------+----------------------------------+
+| Mobile Device Access USB (imobile)        | 1.3.0-6igel12                    |
++-------------------------------------------+----------------------------------+
+| Mobile Device Access USB (gphoto)         | 2.5.29-1igel1653377622           |
++-------------------------------------------+----------------------------------+
+| VPN OpenConnect                           | 9.01-1igel1657119743             |
++-------------------------------------------+----------------------------------+
+| Scanner support                           | 1.0.27-1                         |
++-------------------------------------------+----------------------------------+
+| VirtualBox VM within IGEL OS              | 6.1.38-dfsg-3igel1662536482      |
++-------------------------------------------+----------------------------------+
+| Virtual Background for Webcam             |                                  |
++-------------------------------------------+----------------------------------+
+
+
++---------------------------------------------+--------+------------------+
+| Services                                    | Size   | Reduced Firmware |
++=============================================+========+==================+
+| Asian Language Support                      |  24.8M | Included         |
++---------------------------------------------+--------+------------------+
+| Java SE Runtime Environment                 |  43.2M | Included         |
++---------------------------------------------+--------+------------------+
+| Citrix Workspace app                        | 370.2M | Included         |
+| Citrix Appliance                            |        |                  |
+| Citrix StoreFront                           |        |                  |
++---------------------------------------------+--------+------------------+
+| Ericom PowerTerm InterConnect               |  11.5M | Included         |
++---------------------------------------------+--------+------------------+
+| Media Player                                | 768.0K | Included         |
++---------------------------------------------+--------+------------------+
+| Local Browser (Firefox)                     |  94.5M | Included         |
+| Citrix Appliance                            |        |                  |
++---------------------------------------------+--------+------------------+
+| VMware Horizon                              |   7.0M | Included         |
+| RDP                                         |        |                  |
++---------------------------------------------+--------+------------------+
+| Cendio ThinLinc                             |  12.8M | Included         |
++---------------------------------------------+--------+------------------+
+| Printing (Internet printing protocol CUPS)  |  22.5M | Included         |
++---------------------------------------------+--------+------------------+
+| NoMachine NX                                |  30.8M | Included         |
++---------------------------------------------+--------+------------------+
+| VMware Horizon                              | 295.8M | Included         |
++---------------------------------------------+--------+------------------+
+| Voice over IP (Ekiga)                       |   7.2M | Included         |
++---------------------------------------------+--------+------------------+
+| Citrix Appliance                            | 768.0K | Included         |
++---------------------------------------------+--------+------------------+
+| NCP Enterprise VPN Client                   |  30.8M | Not included     |
++---------------------------------------------+--------+------------------+
+| Fluendo GStreamer Codec Plugins             |   7.2M | Included         |
++---------------------------------------------+--------+------------------+
+| IBM i Access Client Solutions               | 128.5M | Not included     |
++---------------------------------------------+--------+------------------+
+| Red Hat Enterprise Virtualization           |   3.0M | Included         |
++---------------------------------------------+--------+------------------+
+| Parallels Client                            |   6.8M | Included         |
++---------------------------------------------+--------+------------------+
+| NVIDIA graphics driver                      | 280.2M | Not included     |
++---------------------------------------------+--------+------------------+
+| Imprivata Appliance                         |  16.0M | Included         |
++---------------------------------------------+--------+------------------+
+| AppliDis                                    | 512.0K | Included         |
++---------------------------------------------+--------+------------------+
+| Evidian AuthMgr                             |   3.0M | Included         |
++---------------------------------------------+--------+------------------+
+| Hardware Video Acceleration                 |  16.5M | Included         |
++---------------------------------------------+--------+------------------+
+| Extra Font Package                          |   1.2M | Included         |
++---------------------------------------------+--------+------------------+
+| Fluendo GStreamer AAC Decoder               |   1.2M | Included         |
++---------------------------------------------+--------+------------------+
+| x32 Compatibility Support                   |   4.2M | Included         |
++---------------------------------------------+--------+------------------+
+| Cisco JVDI client                           |  76.0M | Included         |
++---------------------------------------------+--------+------------------+
+| PrinterLogic                                |  53.2M | Not included     |
++---------------------------------------------+--------+------------------+
+| Biosec BS Login                             |  10.2M | Not included     |
++---------------------------------------------+--------+------------------+
+| Login VSI Login Enterprise                  |  32.8M | Not included     |
++---------------------------------------------+--------+------------------+
+| Stratusphere UX CID Key software            |   8.5M | Not included     |
++---------------------------------------------+--------+------------------+
+| Elastic Filebeat                            |  25.0M | Not included     |
++---------------------------------------------+--------+------------------+
+| AVD                                         | 130.5M | Included         |
++---------------------------------------------+--------+------------------+
+| Local Browser (Chromium)                    | 112.0M | Not included     |
++---------------------------------------------+--------+------------------+
+| Amazon WorkSpaces Client                    |  37.2M | Included         |
++---------------------------------------------+--------+------------------+
+| deskMate Client                             |   6.5M | Included         |
++---------------------------------------------+--------+------------------+
+| Cisco WebEx VDI                             |  75.0M | Not included     |
++---------------------------------------------+--------+------------------+
+| Cisco Webex Meetings VDI                    | 130.5M | Not included     |
++---------------------------------------------+--------+------------------+
+| Zoom Media Plugin                           | 138.8M | Not included     |
++---------------------------------------------+--------+------------------+
+| DriveLock                                   |  14.8M | Included         |
++---------------------------------------------+--------+------------------+
+| SpeechWrite Client                          | 256.0K | Included         |
++---------------------------------------------+--------+------------------+
+| IGEL Imprivata Agent                        | 256.0K | Included         |
++---------------------------------------------+--------+------------------+
+| Fluendo Browser Codec Plugins               |   4.5M | Included         |
++---------------------------------------------+--------+------------------+
+| HP Factory deployment documentation         |  90.0M | Included         |
++---------------------------------------------+--------+------------------+
+| BIOS Tools                                  | 256.0K | Included         |
++---------------------------------------------+--------+------------------+
+| HP Anyware Client                           |  18.5M | Included         |
++---------------------------------------------+--------+------------------+
+| 90meter Smart Card Support                  | 256.0K | Included         |
++---------------------------------------------+--------+------------------+
+| Virtual Background for Webcam (Limited IGEL | 256.0K | Not included     |
+| Support)                                    |        |                  |
+| Limited Support Features                    |        |                  |
+| Mobile Device Access USB (Limited support)  |        |                  |
+| Virtualbox (Limited support)                |        |                  |
+| VPN OpenConnect (Limited support)           |        |                  |
+| Scanner support / SANE (Limited support)    |        |                  |
++---------------------------------------------+--------+------------------+
+| Mobile Device Access USB (Limited support)  | 512.0K | Not included     |
++---------------------------------------------+--------+------------------+
+| VPN OpenConnect (Limited support)           |   1.2M | Not included     |
++---------------------------------------------+--------+------------------+
+| Scanner support / SANE (Limited support)    |   2.8M | Not included     |
++---------------------------------------------+--------+------------------+
+| Virtualbox (Limited support)                |  74.0M | Not included     |
++---------------------------------------------+--------+------------------+
+| Virtual Background for Webcam (Limited IGEL |  38.0M | Included         |
+| Support)                                    |        |                  |
++---------------------------------------------+--------+------------------+
+
+
+Known Issues
+--------------------------------------------------------------------------------
+
+
+### Citrix
+
+* To launch multiple desktop sessions with Citrix HDX RTME and Citrix H.264  
+  acceleration plugin, the following registry key needs to be enabled:
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Activate workaround for dual RTME sessions and H264 acceleration` |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.workaround-dual-rtme`                                       |
++------------+-----------------------------------------------------------------+
+|Range       |enabled / **disabled** (default)                                 |
++------------+-----------------------------------------------------------------+
+
+* This workaround is not applicable when "Enable Secure ICA" is active for the  
+  specific delivery group.
+* Adding smartcard readers during running / active session does not work. The
+  reader is visible, but cannot be used due to unknown reader status. Only
+  relevant for CWA versions earlier than 2112.
+* There are known issues with GStreamer 1.0 in combination with Citrix. These
+  occure with multimedia redirection of H.264, MPEG1 and MPEG2. (GStreamer 1.0
+  is used if browser content redirection is enabled active.)
+* Browser content redirection does not work when DRI3 and hardware accelerated
+  H.264 deep compression codec is enabled.
+* Enabled DRI3 on an AMD GPU with enabled Citrix H.264 acceleration could lead
+  to a freeze. Selective H.264 mode (API v2) is not affected from this issue.  
+* Citrix H.264 acceleration plugin does not work with **enabled** server policy
+  "Optimize for 3D graphics workload" in combination with server policy "Use
+  video codec compression" -> *"For the entire screen"**.
+* Currently H.264 for Citrix sessions cannot be used in parallel with video
+  input acceleration.
+* With start of Self-Service it is possible that the process ServiceRecord is
+  segfaulted - Self-Service cannot be started afterwards.  
+  A cache cleanup with reboot should help, also the following parameters should
+  be set to true.
+
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up UI cache after Self-Service termination`               |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupwebui`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+|Parameter   |`Clean up Store cache after Self-Service termination`            |
++------------+-----------------------------------------------------------------+
+|Registry    |`ica.selfservice.cleanupstore`                                   |
++------------+-----------------------------------------------------------------+
+|Value       |**false** (default)/true                                         |
++------------+-----------------------------------------------------------------+
+
+
+### OSC Installer
+
+* OSC not deployable with IGEL Deployment Appliance: Version 11.3 or later is
+  required for deploying IGEL OS 11.06. and following.
+
+### AVD
+
+* AVD MS-Teams optimization can crash the AVD client if H264 software decoder is
+  used (fluh264dec). AVD prefers the hardware decoders (fluvadec) but when there
+  are no hardware decoders or when all hardware decoders are in use already, the
+  software decoder is utilized which may randomly crash the AVD client. It is
+  likely when it crashes in a certain MS-Teams call, it might crash quite soon
+  again when rejoining the same call. A fix for that is in development. A
+  workaround is to disable incoming video in such MS-Teams calls, which is an
+  option in the "..." menu from the control bar during an active call.
+* H.264 hardware decoding for MS-Teams optimization is currently limited to non-
+  AMD devices due to stability issues on AMD devices.
+
+### VMware Horizon
+
+* After disconnect of an RDP-based session, the Horizon main window which
+  contains the server or sessions overview, cannot be resized anymore.
+* Copying text from Horizon Blast sessions is not possible.
+* The on-screen keyboard in Horizon appliance mode does not work correctly with
+  local logon.  
+  It is necessary to switch off local logon and enable the following two keys
+  via IGEL registry:  
+  userinterface.softkeyboard.autoshow  
+  userinterface.softkeyboard.autohide
+* Zoom VDI Media Plugin versions below 5.8.0 make Horizon Client crash upon
+  connection to the remote desktop when TCSetup is running at the same time.
+* With usage of PCoIP protocol, the virtual channel provided by VMware used for
+  serial port and scanner redirection could freeze on logout from remote
+  session.  
+  
+  This happens only with enabled scanner or serial port redirection.  
+  The freeze does not occur if both redirection methods are enabled or none of
+  them. The Blast Protocol is not affected by this bug.  
+  
+  The respective settings can be found in the IGEL Registry:  
+  vmware.view.enable-serial-port-redir  
+  vmware.view.enable-scanner-redir
+* Keyboard Input Source Language Synchronization works only with usage of local
+  layout and deadkeys enabled.  
+  If a keyboard layout is used which has deadkeys disabled (which is the default
+  on IGEL OS), Horizon client falls back to en-US layout.
+* PCoIP sessions may crash in some cases, switch to Blast Protocol is
+  recommended then. H.264/HEVC encoding can be disabled when overall performance
+  is too low.
+* Client drive mapping and USB redirection for storage devices can be enabled at
+  the same time, but this could lead to sporadic problems.  
+  Horizon Client tracks the drives which are dynamically mounted and adds them
+  to the remote session using client drive mapping, means USB redirection is not
+  used for theses devices then.  
+  However, in case of devices like USB SD card readers, Horizon does not map
+  them as client drives but forcefully uses USB-redirection which results in an
+  unclean unmount.  
+  As a work-around, the IDs of these card readers can be added to IGEL USB
+  access rules and denied.
+
+### Parallels Client
+
+* Attached storage devices appear as network drives in the remote session  
+* USB device redirection is considered as experimental for the Parallels client
+  for Linux
+
+### Firefox
+
+* With enabled Citrix Browser Content Redirection, Firefox has no H.264 and AAC
+  multimedia codec support. Means, when codec support is needed in Firefox, BCR
+  needs to be disabled. Citrix Browser Content Redirection is disabled by
+  default.
+
+### Network
+
+* Wakeup from system suspend fails on DELL Latitude 5510
+* If applications are configured to start after established network connection
+  and network mounts are configured, spurious "Failed to start application"
+  notifications may be shown. The applications still start.
+
+### WiFi
+
+* TP-Link Archer T2UH WiFi adapters does not work after system suspend/resume.
+  Workaround: Disable system suspend at IGEL Setup > System > Power Options >
+  Shutdown.
+
+### Cisco JVDI Client
+
+* There may be a segfault shown in the logs (during logout of Citrix Desktop
+  session). Occurs only when using Citrix Workspace App 2010 and Cisco JVDI.
+
+### Base system
+
+* Hyper-V (Generation 2) needs a lot of memory (RAM). The machine needs a
+  sufficient amount of memory allocated.
+* Update from memory stick requires network online state (at least when multiple
+  update stages are triggered / necessary)
+
+### Conky
+
+* The right screen when using multiscreen environment may not be shown
+  correctly.  
+  Workaround: The horizontal offset should be set to the width of the monitor
+  (e.g. if the monitor has a width of 1920, the offset should be set to 1920)
+
+### Firmware update
+
+* On devices with 2 GB of flash storage it could happen that there is not enough
+  space for updating all features. In this case, a corresponding error message
+  occurs. Please visit [https://kb.igel.com/igelos-11.04/en/error-not-enough-
+  space-on-local-drive-when-updating-to-igel-os-11-04-or-higher-32870765.html]
+  for a possible solution and additional information.
+
+### Appliance Mode
+
+* When ending a Citrix session in browser appliance mode, the browser is
+  restarted twice (instead of once).
+* Appliance mode RHEV/Spice: spice-xpi firefox plugin is no longer supported.
+  The "Console Invocation" has to allow 'Native' client (auto is also possible)
+  and should be started in fullscreen to prevent any opening windows.
+* Browser Appliance mode can fail when the Web URL contains special control
+  characters like ampersand (& character).  
+  Workaround: Add quotes at the beginning and the end of an affected URL. E.g.:  
+  'https://www.google.com/search?q=aSearchTerm&source=lnms&tbm=isch'
+
+### Audio
+
+* IGEL UD2 (D220) fails to restore the volume level of the speaker when the
+  device used firmware version 11.01.110 before.
+* Audio jack detection on Advantec POC-W243L does not work. Therefore, sound
+  output goes through a possibly connected headset and also the internal
+  speakers.
+* UD3-M340C: Sound preferences are showing Headphone & Microphone, although not
+  connected.
+
+### Multimedia
+
+* Multimedia redirection with GStreamer could fail when using Nouveau GPU
+  driver.
+
+### Hardware
+
+* Some newer Delock 62599 active DisplayPort to DVI (4k) adapters only work on
+  INTEL-based devices.
+
+### Remote Management
+
+* AIT feature with IGEL Starter License is only supported by UMS version
+  6.05.100 or newer.
+
+

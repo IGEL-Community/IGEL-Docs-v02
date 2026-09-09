@@ -1,0 +1,3766 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Light_Zero_Touch_Deployments/">
+      
+      
+        <link rel="next" href="../HOWTO-Microsoft-Intune/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>HOWTO IGEL Managed Containers™ (IMC) - IGEL Community Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-igel-managed-containerstm-imc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO IGEL Managed Containers™ (IMC)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Community Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGEL Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet IGELOS Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet Linux General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Add Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Basic Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Browsers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO CUPs Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Call Center Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demo Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Channel and MSP Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Collect Hardware Information for a Device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Create USB installation medium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Custom Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Dynabook Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Edit Initial Settings Prior to OSC Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Frame (Dizzion powered by Frame)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO GitHub with Microsoft Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO ICG Free Signed Certificate Option
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Management Interface (IMI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Use Static Template Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Imprivata Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Light and Zero Touch Deployments of OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Managed Containers™ (IMC)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO IGEL Managed Containers™ (IMC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#howto-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOWTO Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-imc-on-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install IMC on IGEL OS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-a-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to create a container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-container-registry-to-store-and-distribute-container-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Container Registry to Store and Distribute Container Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-images-from-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Images from Container Registry
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Intune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Microsoft Teams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Nuance Dictation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Profile Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Remove IGEL Device License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run Virtual Machines on MacOS (Intel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Sample Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Setup Lab Sandbox Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Template Keys in UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Testing VDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for GitHub Custom Partition (CP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Tools Used for this Site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC Guide OS11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO UCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Run VirtualBox Virtual Machines on IGEL OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Work from Home Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Write config files to IGEL OSC ISO file from Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOWTO Zero Trust Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_54" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_54" id="__nav_2_54_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReleaseNotes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_54_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_54">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReleaseNotes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_54_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_54_2" id="__nav_2_54_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 OS11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_54_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_54_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 OS11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_54_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_54_3" id="__nav_2_54_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 UMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_54_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_54_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 UMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL UMS Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: UMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_54_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_54_4" id="__nav_2_54_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 ICG
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_54_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_54_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 ICG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL ICG Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: ICG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_54_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_54_5" id="__nav_2_54_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 OS12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_54_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_54_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 OS12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL OS 12 Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IGEL News: Builds OS 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="howto-igel-managed-containerstm-imc">HOWTO IGEL Managed Containers™ (IMC)</h1>
+<ul>
+<li>
+<p>Secure, governed containerized workloads for the distributed edge.</p>
+</li>
+<li>
+<p>IGEL Managed Containers™ (IMC) extends the IGEL Adaptive Secure Endpoint Platform™ with a managed container workload model for delivering controlled, policy-aligned applications and services.</p>
+</li>
+<li>
+<p>Run containerized workloads on the immutable IGEL OS™ foundation, connect to existing OCI-compliant registries, and centrally govern deployment and lifecycle operations through the IGEL Universal Management Suite. IGEL Managed Containers helps organizations bring modern application flexibility to IT and OT environments while preserving endpoint trust, operational control, and enterprise policy alignment.</p>
+</li>
+<li>
+<p><a href="https://www.igel.com/secure-managed-containers/">IGEL Web Site: IGEL Managed Containers™</a></p>
+</li>
+<li>
+<p><a href="https://kb.igel.com/igel-managed-containers/current">IGEL KB: IGEL Managed Containers™</a></p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="howto-docker">HOWTO Docker</h2>
+<p><strong>NOTE:</strong> As for 8 August 2026, IMC cannot be used to create container images. The IGEL Community has an <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/docker">app recipe for Docker</a></p>
+<p>Docker is a platform that lets you package, ship, and run applications in lightweight, portable units called containers.</p>
+<p>Docker makes it easy to run an application the same way everywhere—on your laptop, a server, or in the cloud—without worrying about differences in operating systems or installed software.</p>
+<ul>
+<li><a href="../HOWTO-Docker/">IGEL Community: HOWTO Docker</a></li>
+</ul>
+<hr />
+<hr />
+<h2 id="install-imc-on-igel-os">Install IMC on IGEL OS</h2>
+<p>Follow steps outlined here:</p>
+<ul>
+<li><a href="https://kb.igel.com/igel-managed-containers/current">IGEL KB: IGEL Managed Containers™</a></li>
+</ul>
+<p>Summary of steps:</p>
+<ul>
+<li>
+<p><a href="https://kb.igel.com/igel-managed-containers/current/prerequisites-for-running-the-igel-managed-containers-app#Creating-the-Profile-to-Configure-the-Container-Storage">Create a profile, include the IMC app, to configure the container storage</a> as a percentage of remaining disk space on IGEL OS 12.10.0+. This will allocate from the 64GB IGEL OS disk</p>
+</li>
+<li>
+<p>Assign the profile to IGEL OS device and select <code>Save and apply now</code>. This will apply the profile, install the IMC app, reboot device and allocate the storage for containers</p>
+</li>
+<li>
+<p>If you are connecting to <code>container registries</code> (a service that stores and distributes container images) that require authentication, then create a profile to <a href="https://kb.igel.com/igel-managed-containers/current/prerequisites-for-running-the-igel-managed-containers-app#Configuring-Container-Registry-Credentials">configure container registry credentials</a>, assign the profile to IGEL OS device and select <code>Save and apply now</code></p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="steps-to-create-a-container">Steps to create a container</h2>
+<p>Create two profiles and a container compose file (<code>my-container-compose.yaml</code>).</p>
+<ul>
+<li><a href="https://kb.igel.com/igel-managed-containers/current/how-to-manage-containers-in-the-igel-ums-web-app">IGEL KB: How to Manage Containers in the IGEL UMS Web App</a></li>
+</ul>
+<p>Summary of steps:</p>
+<ul>
+<li>
+<p>Create <code>IMC</code> folder in <code>Configuration -&gt; Files</code></p>
+</li>
+<li>
+<p>Use UMS Web App Files (<code>Configuration -&gt; Files</code>) to upload your <code>my-container-compose.yaml</code> file into folder <code>IMC</code> with these settings:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    Classification: Undefined
+    Device file location: /services_rw/imc/config/
+        Owner: Root
+        Owner access rights:
+            Read
+            Write
+        Other access rights:
+            Read
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Profile for the Container Configuration File:</strong> Create a profile, with IGEL BASE OS 12.10.0+, that will use the above <code>yaml</code> file. Save the profile. Then open this profile. Go to <code>Contained Files</code> and, in the <code>Assign file</code> search bar, enter the file name of the container configuration file (<code>my-container-compose.yaml</code>). Once the entry with the same file name appears, select it, save profile, assign to IGEL OS device,  and select <code>Save and apply now</code></p>
+</li>
+<li>
+<p><strong>Container Profile:</strong> Create a profile, with IGEL IMC app, add the container name (<code>my-container</code>) via <code>Apps &gt; IGEL Managed Containers &gt; Containers and click Add item</code>, in settings for the newly added container, add the container yaml file from above (<code>my-container-compose.yaml</code>), save profile, assign to IGEL OS device,  and select <code>Save and apply now</code></p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="create-a-container-registry-to-store-and-distribute-container-images">Create a Container Registry to Store and Distribute Container Images</h2>
+<ul>
+<li>Create container for OCI Registry: <code>oci-registry-compose.yaml</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>&lt;&lt;<span class="w"> </span><span class="s2">"EOF"</span><span class="w"> </span>&gt;<span class="w"> </span>oci-registry-compose.yaml
+services:
+<span class="w">  </span>registry:
+<span class="w">    </span>image:<span class="w"> </span>docker.io/library/registry:2
+<span class="w">    </span>container_name:<span class="w"> </span>oci-registry
+
+<span class="w">    </span>ports:
+<span class="w">      </span>-<span class="w"> </span><span class="s2">"5000:5000"</span>
+
+<span class="w">    </span>environment:
+<span class="w">      </span>REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY:<span class="w"> </span>/var/lib/registry
+<span class="w">      </span>REGISTRY_STORAGE_DELETE_ENABLED:<span class="w"> </span><span class="s2">"true"</span>
+
+<span class="w">    </span>volumes:
+<span class="w">      </span>-<span class="w"> </span><span class="s2">"/services_rw/imc/container_data/volumes/registry:/var/lib/registry:rw"</span>
+
+<span class="w">    </span>entrypoint:
+<span class="w">      </span>-<span class="w"> </span>/bin/sh
+<span class="w">      </span>-<span class="w"> </span>-c
+<span class="w">      </span>-<span class="w"> </span><span class="p">|</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Running registry garbage collection..."</span>
+<span class="w">        </span>/bin/registry<span class="w"> </span>garbage-collect<span class="w"> </span>--delete-untagged<span class="w"> </span>/etc/docker/registry/config.yml
+
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Starting OCI registry..."</span>
+<span class="w">        </span><span class="nb">exec</span><span class="w"> </span>/bin/registry<span class="w"> </span>serve<span class="w"> </span>/etc/docker/registry/config.yml
+EOF
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Follow <a href="#steps-to-create-a-container">Steps to create a container</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>yaml: oci-registry-compose.yaml
+container: oci-registry
+</code></pre></div>
+<ul>
+<li>
+<p>Start container: <a href="https://kb.igel.com/igel-managed-containers/current/how-to-run-a-container-in-the-igel-managed-containers-app">IGEL KB: How to Run a Container in the IGEL Managed Containers app</a></p>
+</li>
+<li>
+<p>Test connection:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nv">SERVER</span><span class="o">=</span><span class="m">10</span>.0.0.12
+curl<span class="w"> </span>http://<span class="si">${</span><span class="nv">SERVER</span><span class="si">}</span>:5000/v2/_catalog
+</code></pre></div>
+<ul>
+<li>Upload <a href="../HOWTO-Docker/#use-docker-to-run-igel-ums-java-console">IGEL UMS Java Console Image</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nv">SERVER</span><span class="o">=</span><span class="m">10</span>.0.0.12
+docker<span class="w"> </span>tag<span class="w"> </span>igel-ums:bookworm<span class="w"> </span><span class="si">${</span><span class="nv">SERVER</span><span class="si">}</span>:5000/igel-ums:bookworm
+docker<span class="w"> </span>push<span class="w"> </span><span class="si">${</span><span class="nv">SERVER</span><span class="si">}</span>:5000/igel-ums:bookworm
+</code></pre></div>
+<p><strong>NOTE:</strong> To use the docker tag/push to this <code>container registry</code> update the docker file <code>/etc/docker/daemon.json</code> with the following for this example of container running on IGEL OS device on the <code>10.0.0.0/24</code> network.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">"insecure-registries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"10.0.0.0/24"</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Updated <code>run-pull-docker-ums.sh</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>&lt;&lt;<span class="w"> </span><span class="s2">"EOF"</span><span class="w"> </span>&gt;<span class="w"> </span>run-pull-docker-ums.sh
+<span class="c1">#!/bin/bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-euo<span class="w"> </span>pipefail
+
+<span class="c1">#</span>
+<span class="c1"># For X11:</span>
+<span class="c1">#   xhost +local:docker</span>
+<span class="c1">#</span>
+
+xhost<span class="w"> </span>+local:docker
+
+<span class="nv">IMAGE</span><span class="o">=</span><span class="s2">"igel-ums:bookworm"</span>
+<span class="nv">EXPORT_DIR</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/container-export"</span>
+
+<span class="c1"># OCI Registry container IP</span>
+<span class="nv">OCI_REG_SRV</span><span class="o">=</span><span class="s2">"10.0.0.12"</span>
+
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$EXPORT_DIR</span><span class="s2">"</span>
+
+/services/docker/usr/bin/docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
+
+<span class="k">if</span><span class="w"> </span>/services/docker/usr/bin/docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span><span class="s2">"</span><span class="nv">$IMAGE</span><span class="s2">"</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Image </span><span class="nv">$IMAGE</span><span class="s2"> exists."</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="c1"># echo "Image $IMAGE does not exist. Building it now."</span>
+<span class="w">    </span><span class="c1"># /services/docker/usr/bin/docker build --network host -t "$IMAGE" .</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Image </span><span class="nv">$IMAGE</span><span class="s2"> does not exist. Pulling it now."</span>
+<span class="w">    </span><span class="nv">IMAGE</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">OIC_REG_SRV</span><span class="si">}</span><span class="s2">:5000/igel-ums:bookworm"</span>
+<span class="w">    </span><span class="nv">EXPORT_DIR</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/container-export"</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$EXPORT_DIR</span><span class="s2">"</span>
+<span class="w">    </span>/services/docker/usr/bin/docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Pulling latest image from private registry..."</span>
+<span class="w">    </span>/services/docker/usr/bin/docker<span class="w"> </span>pull<span class="w"> </span><span class="s2">"</span><span class="nv">$IMAGE</span><span class="s2">"</span>
+<span class="k">fi</span>
+
+/services/docker/usr/bin/docker<span class="w"> </span>run<span class="w"> </span>--network<span class="w"> </span>host<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--user<span class="w"> </span>root<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">"</span><span class="nv">$DISPLAY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">HOST_UID</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">HOST_GID</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/tmp/.X11-unix:/tmp/.X11-unix<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">PULSE_SERVER</span><span class="o">=</span>unix:/run/user/777/pulse/native<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">PULSE_COOKIE</span><span class="o">=</span>/root/.config/pulse/cookie<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/run/user/777/pulse:/run/user/777/pulse<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/userhome/config/pulse/cookie:/root/.config/pulse/cookie:ro<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span><span class="s2">"</span><span class="nv">$EXPORT_DIR</span><span class="s2">:/export"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--group-add<span class="w"> </span>video<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--group-add<span class="w"> </span>audio<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--shm-size<span class="o">=</span>2g<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--entrypoint<span class="w"> </span>/bin/bash<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">"</span><span class="nv">$IMAGE</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-c<span class="w"> </span><span class="s1">'</span>
+<span class="s1">    set +e</span>
+
+<span class="s1">    echo "Restoring exported files..."</span>
+
+<span class="s1">    if [ "$(find /export -mindepth 1 -print -quit 2&gt;/dev/null)" ]; then</span>
+<span class="s1">        cp -a /export/. /home/appuser/</span>
+<span class="s1">        chown -R appuser:appuser /home/appuser</span>
+<span class="s1">        echo "Restore complete."</span>
+<span class="s1">    else</span>
+<span class="s1">        echo "No exported files found."</span>
+<span class="s1">    fi</span>
+
+<span class="s1">    # Run the UMS Remote Manager as the non-root application user.</span>
+<span class="s1">    runuser -u appuser -- env \</span>
+<span class="s1">      HOME=/home/appuser \</span>
+<span class="s1">      DISPLAY="$DISPLAY" \</span>
+<span class="s1">      PULSE_SERVER="$PULSE_SERVER" \</span>
+<span class="s1">      /opt/IGEL/RemoteManager/RemoteManager.sh</span>
+<span class="s1">    RC=$?</span>
+
+<span class="s1">    echo "Copying generated files to /export..."</span>
+
+<span class="s1">    if [ -f /home/appuser/rmconsole.truststore ]; then</span>
+<span class="s1">        cp -a /home/appuser/rmconsole.truststore /export/</span>
+<span class="s1">    else</span>
+<span class="s1">        echo "Warning: /home/appuser/rmconsole.truststore was not found."</span>
+<span class="s1">    fi</span>
+
+<span class="s1">    #if [ -d /home/appuser/.java ]; then</span>
+<span class="s1">        #rm -rf /export/.java</span>
+<span class="s1">        #cp -a /home/appuser/.java /export/</span>
+<span class="s1">    #else</span>
+<span class="s1">        #echo "Warning: /home/appuser/.java was not found."</span>
+<span class="s1">    #fi</span>
+<span class="s1">    cp -a /home/appuser/.* /export/</span>
+
+<span class="s1">    # Make the copied files belong to the user who started the container.</span>
+<span class="s1">    chown -R "$HOST_UID:$HOST_GID" /export</span>
+
+<span class="s1">    echo "Export complete: /export"</span>
+<span class="s1">    exit "$RC"</span>
+<span class="s1">  '</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Files exported to: </span><span class="nv">$EXPORT_DIR</span><span class="s2">"</span>
+EOF
+chmod<span class="w"> </span>a+x<span class="w"> </span>run-pull-docker-ums.sh
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="remove-images-from-container-registry">Remove Images from Container Registry</h2>
+<ul>
+<li>Create remove images from container registry script: <code>oci-registry-delete-images.sh</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>&lt;&lt;<span class="w"> </span><span class="s2">"EOF"</span><span class="w"> </span>&gt;<span class="w"> </span>oci-registry-delete-images.sh
+<span class="c1">#!/usr/bin/env bash</span>
+<span class="c1">#set -x</span>
+<span class="c1">#trap read debug</span>
+
+<span class="nb">set</span><span class="w"> </span>-x
+<span class="nb">set</span><span class="w"> </span>-u
+
+<span class="nv">REGISTRY</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="k">:-</span><span class="nv">http</span><span class="p">://10.0.0.12:</span><span class="nv">5000</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="nv">ACCEPT_HEADER</span><span class="o">=</span><span class="s1">'application/vnd.oci.image.index.v1+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.docker.distribution.manifest.v2+json'</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Dialog helpers</span>
+<span class="c1">###############################################################################</span>
+
+error<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span>zenity<span class="w"> </span>--error<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--title<span class="o">=</span><span class="s2">"OCI Registry"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--text<span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="o">}</span>
+
+info<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span>zenity<span class="w"> </span>--info<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--title<span class="o">=</span><span class="s2">"OCI Registry"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--text<span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="o">}</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Dependency checks</span>
+<span class="c1">###############################################################################</span>
+
+check_dependencies<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">missing</span><span class="o">=()</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>cmd<span class="w"> </span><span class="k">in</span><span class="w"> </span>curl<span class="w"> </span>jq<span class="w"> </span>zenity<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span><span class="s2">"</span><span class="nv">$cmd</span><span class="s2">"</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nv">missing</span><span class="o">+=(</span><span class="s2">"</span><span class="nv">$cmd</span><span class="s2">"</span><span class="o">)</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">missing</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s1">'Missing required commands: %s\n'</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">missing</span><span class="p">[*]</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Registry connectivity</span>
+<span class="c1">###############################################################################</span>
+
+registry_check<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>curl<span class="w"> </span>-fsS<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/"</span><span class="w"> </span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>error<span class="w"> </span><span class="s2">"Cannot connect to registry:\n\n</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Registry query functions</span>
+<span class="c1">###############################################################################</span>
+
+get_repositories<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span>curl<span class="w"> </span>-fsS<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/_catalog"</span><span class="w"> </span><span class="p">|</span>
+<span class="w">        </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.repositories[]?'</span>
+<span class="o">}</span>
+
+get_tags<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">repo</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+
+<span class="w">    </span>curl<span class="w"> </span>-fsS<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">/tags/list"</span><span class="w"> </span><span class="p">|</span>
+<span class="w">        </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.tags[]?'</span>
+<span class="o">}</span>
+
+get_digest<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">repo</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">tag</span><span class="o">=</span><span class="s2">"</span><span class="nv">$2</span><span class="s2">"</span>
+
+<span class="w">    </span>curl<span class="w"> </span>-fsSI<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-H<span class="w"> </span><span class="s2">"Accept: </span><span class="si">${</span><span class="nv">ACCEPT_HEADER</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">/manifests/</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span>
+<span class="w">        </span>awk<span class="w"> </span>-F<span class="s1">': '</span><span class="w"> </span><span class="s1">'</span>
+<span class="s1">            tolower($1) == "docker-content-digest" {</span>
+<span class="s1">                gsub("\r", "", $2)</span>
+<span class="s1">                print $2</span>
+<span class="s1">                exit</span>
+<span class="s1">            }</span>
+<span class="s1">        '</span>
+<span class="o">}</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Delete manifest</span>
+<span class="c1">###############################################################################</span>
+
+delete_manifest<span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">repo</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">digest</span><span class="o">=</span><span class="s2">"</span><span class="nv">$2</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>response_file
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>status
+
+<span class="w">    </span><span class="nv">response_file</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="k">)</span>
+
+<span class="w">    </span><span class="nv">status</span><span class="o">=</span><span class="k">$(</span>
+<span class="w">        </span>curl<span class="w"> </span>-sS<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-o<span class="w"> </span><span class="s2">"</span><span class="nv">$response_file</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-w<span class="w"> </span><span class="s1">'%{http_code}'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-X<span class="w"> </span>DELETE<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">/manifests/</span><span class="si">${</span><span class="nv">digest</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$status</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"202"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$response_file</span><span class="s2">"</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="o">{</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"DELETE failed for </span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">@</span><span class="si">${</span><span class="nv">digest</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"HTTP status: </span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">        </span>cat<span class="w"> </span><span class="s2">"</span><span class="nv">$response_file</span><span class="s2">"</span>
+<span class="w">    </span><span class="o">}</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+
+<span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$response_file</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="o">}</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Main</span>
+<span class="c1">###############################################################################</span>
+
+check_dependencies
+registry_check
+
+<span class="nv">rows</span><span class="o">=()</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Discover repositories</span>
+<span class="c1">###############################################################################</span>
+
+mapfile<span class="w"> </span>-t<span class="w"> </span>repositories<span class="w"> </span>&lt;<span class="w"> </span>&lt;<span class="o">(</span>get_repositories<span class="o">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">repositories</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>info<span class="w"> </span><span class="s2">"No repositories were found in:\n\n</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Discover repository tags</span>
+<span class="c1">###############################################################################</span>
+
+<span class="k">for</span><span class="w"> </span>repo<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">repositories</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+
+<span class="w">    </span>mapfile<span class="w"> </span>-t<span class="w"> </span>tags<span class="w"> </span>&lt;<span class="w"> </span>&lt;<span class="o">(</span>get_tags<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="o">)</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>tag<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">tags</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">continue</span>
+
+<span class="w">        </span><span class="nv">digest</span><span class="o">=</span><span class="k">$(</span>get_digest<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span><span class="k">)</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$digest</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nv">digest</span><span class="o">=</span><span class="s2">"UNKNOWN"</span>
+<span class="w">        </span><span class="k">fi</span>
+
+<span class="w">        </span><span class="nv">rows</span><span class="o">+=(</span>
+<span class="w">            </span>FALSE
+<span class="w">            </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span>
+<span class="w">            </span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span>
+<span class="w">            </span><span class="s2">"</span><span class="nv">$digest</span><span class="s2">"</span>
+<span class="w">        </span><span class="o">)</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">rows</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>info<span class="w"> </span><span class="s2">"No tagged images were found in:\n\n</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Zenity image selection</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nv">selection</span><span class="o">=</span><span class="k">$(</span>
+<span class="w">    </span>zenity<span class="w"> </span>--list<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--title<span class="o">=</span><span class="s2">"OCI Registry Cleanup"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--text<span class="o">=</span><span class="s2">"Select images/tags to delete from:\n</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--width<span class="o">=</span><span class="m">1100</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--height<span class="o">=</span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--checklist<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--separator<span class="o">=</span><span class="s2">"|"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--print-column<span class="o">=</span><span class="m">2</span>,3<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--column<span class="o">=</span><span class="s2">"Delete"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--column<span class="o">=</span><span class="s2">"Repository"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--column<span class="o">=</span><span class="s2">"Tag"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--column<span class="o">=</span><span class="s2">"Digest"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="s2">"</span><span class="si">${</span><span class="nv">rows</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">)</span>
+
+<span class="nv">rc</span><span class="o">=</span><span class="nv">$?</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$rc</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$selection</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Parse Zenity selection</span>
+<span class="c1">#</span>
+<span class="c1"># Example:</span>
+<span class="c1">#</span>
+<span class="c1">#   igel-ums|bookworm</span>
+<span class="c1">#</span>
+<span class="c1"># Multiple selections:</span>
+<span class="c1">#</span>
+<span class="c1">#   igel-ums|bookworm|other-repo|latest</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">delete_repos</span><span class="o">=()</span>
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">delete_tags</span><span class="o">=()</span>
+
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">'|'</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>-a<span class="w"> </span>selected_fields<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">"</span><span class="nv">$selection</span><span class="s2">"</span>
+
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">selected_fields</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="nv">i</span><span class="o">+=</span><span class="m">2</span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+
+<span class="w">    </span><span class="nv">repo</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">selected_fields</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">tag</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">selected_fields</span><span class="p">[</span><span class="k">$((</span><span class="nv">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="p">]</span><span class="k">:-</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="w">    </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">continue</span>
+
+<span class="w">    </span><span class="nv">delete_repos</span><span class="o">+=(</span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="o">)</span>
+<span class="w">    </span><span class="nv">delete_tags</span><span class="o">+=(</span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span><span class="o">)</span>
+<span class="k">done</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">delete_repos</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">"No valid repository/tag selections were returned."</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Build confirmation message</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nv">confirm_text</span><span class="o">=</span><span class="s2">"The following registry items will be deleted:\n\n"</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="p">!delete_repos[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">confirm_text</span><span class="o">+=</span><span class="s2">"</span><span class="si">${</span><span class="nv">delete_repos</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">delete_tags</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">\n"</span>
+<span class="k">done</span>
+
+<span class="nv">confirm_text</span><span class="o">+=</span><span class="s2">"\nRegistry:\n</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">\n\nContinue?"</span>
+
+zenity<span class="w"> </span>--question<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--title<span class="o">=</span><span class="s2">"Confirm OCI Registry Deletion"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--width<span class="o">=</span><span class="m">550</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--text<span class="o">=</span><span class="s2">"</span><span class="nv">$confirm_text</span><span class="s2">"</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Delete selected manifests</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">success</span><span class="o">=()</span>
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">failed</span><span class="o">=()</span>
+<span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">deleted_digests</span><span class="o">=()</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="p">!delete_repos[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+
+<span class="w">    </span><span class="nv">repo</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">delete_repos</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">tag</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">delete_tags</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="w">    </span><span class="nv">digest</span><span class="o">=</span><span class="k">$(</span>get_digest<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$tag</span><span class="s2">"</span><span class="k">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$digest</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nv">failed</span><span class="o">+=(</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2"> - could not determine digest"</span><span class="o">)</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="nv">key</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">@</span><span class="si">${</span><span class="nv">digest</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="w">    </span><span class="c1"># Avoid deleting the same digest twice if multiple tags reference it.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">deleted_digests</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="k">:-</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nv">success</span><span class="o">+=(</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2"> - shared digest already deleted"</span><span class="o">)</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>delete_manifest<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$digest</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">        </span>deleted_digests<span class="o">[</span><span class="s2">"</span><span class="nv">$key</span><span class="s2">"</span><span class="o">]=</span><span class="m">1</span>
+
+<span class="w">        </span><span class="c1"># Verify that the tag no longer resolves.</span>
+<span class="w">        </span><span class="nv">verify_status</span><span class="o">=</span><span class="k">$(</span>
+<span class="w">            </span>curl<span class="w"> </span>-sS<span class="w"> </span><span class="se">\</span>
+<span class="w">                </span>-o<span class="w"> </span>/dev/null<span class="w"> </span><span class="se">\</span>
+<span class="w">                </span>-w<span class="w"> </span><span class="s1">'%{http_code}'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                </span>-H<span class="w"> </span><span class="s2">"Accept: </span><span class="si">${</span><span class="nv">ACCEPT_HEADER</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                </span><span class="s2">"</span><span class="si">${</span><span class="nv">REGISTRY</span><span class="si">}</span><span class="s2">/v2/</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">/manifests/</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">        </span><span class="k">)</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$verify_status</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"404"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nv">success</span><span class="o">+=(</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2">"</span><span class="o">)</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="nv">failed</span><span class="o">+=(</span>
+<span class="w">                </span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2"> - DELETE returned 202 but tag still returns HTTP </span><span class="si">${</span><span class="nv">verify_status</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">            </span><span class="o">)</span>
+<span class="w">        </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nv">failed</span><span class="o">+=(</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2">"</span><span class="o">)</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Refresh registry state</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nv">remaining_text</span><span class="o">=</span><span class="s2">""</span>
+
+<span class="k">for</span><span class="w"> </span>repo<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">repositories</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+
+<span class="w">    </span>mapfile<span class="w"> </span>-t<span class="w"> </span>remaining_tags<span class="w"> </span>&lt;<span class="w"> </span>&lt;<span class="o">(</span>get_tags<span class="w"> </span><span class="s2">"</span><span class="nv">$repo</span><span class="s2">"</span><span class="o">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">remaining_tags</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">        </span><span class="nv">remaining_text</span><span class="o">+=</span><span class="s2">"</span><span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="s2">:\n"</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span>tag<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">remaining_tags</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">            </span><span class="nv">remaining_text</span><span class="o">+=</span><span class="s2">"  </span><span class="si">${</span><span class="nv">tag</span><span class="si">}</span><span class="s2">\n"</span>
+<span class="w">        </span><span class="k">done</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Build results</span>
+<span class="c1">###############################################################################</span>
+
+<span class="nv">result</span><span class="o">=</span><span class="s2">""</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">success</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">    </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"Deleted:\n"</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>item<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">success</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"  </span><span class="si">${</span><span class="nv">item</span><span class="si">}</span><span class="s2">\n"</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">failed</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">    </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"\nFailed:\n"</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>item<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">failed</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"  </span><span class="si">${</span><span class="nv">item</span><span class="si">}</span><span class="s2">\n"</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="nv">$remaining_text</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"\nRemaining tagged images:\n"</span>
+<span class="w">    </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"</span><span class="nv">$remaining_text</span><span class="s2">"</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nv">result</span><span class="o">+=</span><span class="s2">"\nNo tagged images remain in the registry."</span>
+<span class="k">fi</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Display result</span>
+<span class="c1">###############################################################################</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="si">${#</span><span class="nv">failed</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">    </span>zenity<span class="w"> </span>--info<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--title<span class="o">=</span><span class="s2">"OCI Registry Cleanup"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--width<span class="o">=</span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--text<span class="o">=</span><span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span>
+
+<span class="k">else</span>
+
+<span class="w">    </span>zenity<span class="w"> </span>--warning<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--title<span class="o">=</span><span class="s2">"OCI Registry Cleanup"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--width<span class="o">=</span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--text<span class="o">=</span><span class="s2">"</span><span class="nv">$result</span><span class="s2">"</span>
+<span class="k">fi</span>
+EOF
+chmod<span class="w"> </span>a+x<span class="w"> </span>oci-registry-delete-images.sh
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

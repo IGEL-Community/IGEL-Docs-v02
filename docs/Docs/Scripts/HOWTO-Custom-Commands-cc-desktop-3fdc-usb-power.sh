@@ -12,13 +12,13 @@
 
 ACTION="cc-desktop-3fdc-usb-power"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0

@@ -11,18 +11,18 @@
 
 ACTION="cc-desktop-3fdc"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 # run all final desktop scripts
 ls /wfs/cc-desktop-3fdc-*.sh | while read LINE
   do
-  echo "Starting: ${LINE}" | $LOGGER
+  echo "Starting: ${LINE}"
   $LINE &
   done
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0

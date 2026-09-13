@@ -11,18 +11,18 @@
 
 ACTION="cc-base-4fic"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 # run all final base scripts
 ls /wfs/cc-base-4fic-*.sh | while read LINE
   do
-  echo "Starting: ${LINE}" | $LOGGER
+  echo "Starting: ${LINE}"
   $LINE &
   done
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0

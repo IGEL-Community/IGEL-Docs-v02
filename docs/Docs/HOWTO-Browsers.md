@@ -239,14 +239,16 @@ Custom Partitions (CP) can be created for the following browsers:
 DOWNLOAD_DIR="$HOME/Downloads"
 
 ACTION="watcher-${DOWNLOAD_DIR}"
-LOGGER="logger -it ${ACTION}"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
 inotifywait -m -e close_write "$DOWNLOAD_DIR" | while read dir action file; do
-    echo "Detected: $file" | $LOGGER
+    echo "Detected: $file"
 
     # Run .bin automatically
     if [[ "$file" == *.bin ]]; then
-        echo "Running program: $file" | $LOGGER
+        echo "Running program: $file"
         chmod +x "$dir/$file"
         "$dir/$file" &
     fi

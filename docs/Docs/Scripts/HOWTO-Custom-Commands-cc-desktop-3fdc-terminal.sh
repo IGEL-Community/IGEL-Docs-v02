@@ -10,13 +10,13 @@
 
 ACTION="cc-desktop-3fdc-terminal"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ -e /wfs/terminalrc ]; then
-  echo "Terminal settings found and removed" | $LOGGER
+  echo "Terminal settings found and removed"
   rm -f /wfs/terminalrc
 fi
 
@@ -30,9 +30,9 @@ EOF
 chmod a+r /wfs/terminalrc
 mkdir -p /userhome/.config/xfce4/terminal
 chown -R user:users /userhome/.config/xfce4
-ln -svf /wfs/terminalrc /userhome/.config/xfce4/terminal/terminalrc | $LOGGER
+ln -svf /wfs/terminalrc /userhome/.config/xfce4/terminal/terminalrc
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 

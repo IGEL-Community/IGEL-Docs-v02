@@ -426,19 +426,20 @@ IGEL-host-name,printer-queue,IPP-printer,default
 #
 
 ACTION="cc-desktop-3fdc-cupsofficenetworkprinters"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
 HOSTNAME="$(hostname)"
 
 COUNT=1
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
-
-echo "Starting" | $LOGGER
+echo "Starting"
 
 CSV_FILE="/wfs/igel_assigned_printers.csv"
 
 if [ -s "$CSV_FILE" ]; then
-  echo "${CSV_FILE} exists and contains data." | $LOGGER
+  echo "${CSV_FILE} exists and contains data."
   cat ${CSV_FILE} | while read LINE
     do
       LINE_HOSTNAME="$(echo ${LINE} | awk --field-separator "," '{print $1}')"
@@ -452,10 +453,10 @@ if [ -s "$CSV_FILE" ]; then
       fi
     done
 else
-    echo "ERROR: ${CSV_FILE} is missing or empty" | $LOGGER
+    echo "ERROR: ${CSV_FILE} is missing or empty"
     exit 1
 fi
 
-echo "Finished" | $LOGGER
+echo "Finished"
 exit 0
 ```

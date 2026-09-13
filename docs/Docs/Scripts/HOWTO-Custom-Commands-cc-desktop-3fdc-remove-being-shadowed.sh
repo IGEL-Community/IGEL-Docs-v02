@@ -11,11 +11,11 @@
 
 ACTION="cc-desktop-3fdc-remove-being-shadowed"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 sed -ie '/vncmessage/d' /config/vncserver/x11vnc0
 
-echo "Finished" | $LOGGER
+echo "Finished"

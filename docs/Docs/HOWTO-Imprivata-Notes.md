@@ -588,23 +588,25 @@ Once the above option is enabled in computer policy (sync and reboot IGEL device
 
 #Logging action
 ACTION="reset_imprivata_${1}"
-#output to systemlog with ID and tag
-LOGGER="logger -it ${ACTION}"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
 #Starting script
-$LOGGER "Starting reset imprivata Script in 5 min"
+echo "Starting reset imprivata Script in 5 min"
 sleep 300
 
 if [ -a /.imprivata_data/runtime/offline/Agent/FirstDomain.txt ]
 then
-	$LOGGER "Imprivata successfully deployed"
+	echo "Imprivata successfully deployed"
 
 else
-	$LOGGER "Imprivata not successfully deployed. Reset  / Update and Reboot"
+	echo "Imprivata not successfully deployed. Reset  / Update and Reboot"
 	ImprivataBootstrap -w
     rm -r /.imprivata_data/runtime/lib
     update
 	reboot
 fi
-$LOGGER "End"
+echo "End"
 exit 0
 ```

@@ -57,13 +57,18 @@ By using this method we know that:
 # https://www.igel.com/blog/microsoft-intune-on-igel-app-portal-custom-compliance-scripts-for-entra-conditional-access-with-igel-os/
 #
 
-logger “Starting compliance discovery script”
-logger ” – Checking UMS fingerprint”
+ACTION="igel-intune-compliance-check"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
+echo “Starting compliance discovery script”
+echo ” – Checking UMS fingerprint”
 estcacertfile="/wfs/igel-rmagent/trust-store/est/est-ca.pem"
 ums_fingerprint_sha256=$(openssl x509 -in ${estcacertfile} -noout -fingerprint -sha256 | cut -d "=" -f2)
 #printf ‘{“ums_fingerprint_sha256″:”%s”}\n’ “$ums_fingerprint_sha256”
 echo "{\"ums_fingerprint_sha256\":\"${ums_fingerprint_sha256}\"}"
-logger “Ending compliance script”
+echo “Ending compliance script”
 ```
 
 - Compliance policy setting in Intune admin portal

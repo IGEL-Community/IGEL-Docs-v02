@@ -11,25 +11,25 @@
 
 ACTION="cc-desktop-3fdc-apt"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ -d /etc/apt ]; then
-  echo "APT FOUND: /etc/apt folder found" | $LOGGER
+  echo "APT FOUND: /etc/apt folder found"
 
   if [ -e /wfs/etc-apt-file.tar.bz2 ]; then
-    echo "APT EXTRACT: extracting etc-apt-file.tar.bz2" | $LOGGER
+    echo "APT EXTRACT: extracting etc-apt-file.tar.bz2"
     tar xvf /media/ITC10B6762436B2/Code/igelpkg/etc-apt-file.tar.bz2 -C /etc/apt
     /services/igelpkg/usr/bin/apt update
   else
-    echo "ERROR: etc-apt-file.tar.bz2 does not exist" | $LOGGER
+    echo "ERROR: etc-apt-file.tar.bz2 does not exist"
   fi 
 else
-  echo "APT NOT FOUND: /etc/apt folder not found" | $LOGGER
+  echo "APT NOT FOUND: /etc/apt folder not found"
 fi
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0

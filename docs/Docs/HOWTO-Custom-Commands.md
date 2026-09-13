@@ -85,19 +85,19 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 
 ACTION="cc-desktop-3fdc"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 # run all final desktop scripts
 ls /wfs/cc-desktop-3fdc-*.sh | while read LINE
   do
-  echo "Starting: ${LINE}" | $LOGGER
+  echo "Starting: ${LINE}"
   $LINE &
   done
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -120,29 +120,29 @@ exit 0
 
 ACTION="cc-desktop-3fdc-cupsnetworkprinters"
 
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
 COUNT=1
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
-
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ ! -e /usr/lib/cups/backend/snmp ]; then
-  echo "ERROR: CUPS not installed. Please install CUPS app" | $LOGGER
+  echo "ERROR: CUPS not installed. Please install CUPS app"
 fi
 
 # create network printers from /usr/lib/cups/backend/snmp
 /usr/lib/cups/backend/snmp | while read LINE
   do
     URI=ipp://`echo "${LINE}" | awk --field-separator " " '{print $2}' | sed -e 's|^.*//||' -e 's|[:/].*||'`/ipp/print
-    lpadmin -p wifiprinter${COUNT} -E -v $URI -m everywhere | $LOGGER
+    lpadmin -p wifiprinter${COUNT} -E -v $URI -m everywhere
     if [ ${COUNT} -eq 1 ]; then
-      lpoptions -d wifiprinter${COUNT} | $LOGGER
+      lpoptions -d wifiprinter${COUNT}
     fi
     COUNT=$COUNT+1
   done
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -166,14 +166,14 @@ exit 0
 
 ACTION="cc-desktop-3fdc-usb-power"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -302,22 +302,22 @@ done
 
 ACTION="cc-desktop-3fdc-island"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ -e /services/island/usr/bin/island-browser-stable ]; then
-  echo "APT FOUND: /services/island/usr/bin/island-browser-stable found" | $LOGGER
-  echo "Set Default Browser to Island" | $LOGGER
+  echo "APT FOUND: /services/island/usr/bin/island-browser-stable found"
+  echo "Set Default Browser to Island"
   xdg-settings set default-web-browser island-browser.desktop
-  echo "Clear Island Browser CacheStorage" | $LOGGER
+  echo "Clear Island Browser CacheStorage"
   rm -rf /userhome/.config/island/Default/Service\ Worker/CacheStorage/*
 else
-  echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found" | $LOGGER
+  echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found"
 fi
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -340,14 +340,14 @@ exit 0
 
 ACTION="cc-desktop-3fdc-remove-being-shadowed"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 sed -ie '/vncmessage/d' /config/vncserver/x11vnc0
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -371,21 +371,22 @@ CHECK_INTERVAL=5
 
 ACTION="cc-desktop-3fdc-avd-post-session_logoff"
 
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Started" | $LOGGER
+echo "Started"
 
 while true; do
   # Check if the process is running
   PID=$(pgrep -x "$PROCESS_NAME")
   if [ -n "$PID" ]; then
-    echo "Found AVD Session" $PID | $LOGGER
+    echo "Found AVD Session" $PID
     while pgrep -x "$PROCESS_NAME" > /dev/null; do
       echo "$PROCESS_NAME is still running..."
       sleep $CHECK_INTERVAL
     done
     #logoff
-    echo "AVD Session Ended - Now Logoff" $PID | $LOGGER
+    echo "AVD Session Ended - Now Logoff" $PID
     logoff
   fi
   sleep $CHECK_INTERVAL
@@ -410,15 +411,15 @@ done
 
 ACTION="cc-desktop-3fdc-reboot-after-lock-screen"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
 PROCESS_NAME="lightdm-igel-greeter"
 CHECK_INTERVAL=5    # seconds between checks
 WAIT_AFTER_START=300  # 5 minutes in seconds
 #WAIT_AFTER_START=10  # 5 minutes in seconds
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 while true; do
     # Check if the process is running
@@ -426,13 +427,13 @@ while true; do
     echo $PID
 
     if [ -n "$PID" ]; then
-        echo "[$(date)] $PROCESS_NAME started with PID $PID. Waiting $WAIT_AFTER_START seconds..." | $LOGGER
+        echo "[$(date)] $PROCESS_NAME started with PID $PID. Waiting $WAIT_AFTER_START seconds..."
         sleep "$WAIT_AFTER_START"
 
         # Recheck if process is still running
         PID=$(pgrep -f "$PROCESS_NAME")
         if [ -n "$PID" ]; then
-            echo "[$(date)] $PROCESS_NAME still running. Reboot ..." | $LOGGER
+            echo "[$(date)] $PROCESS_NAME still running. Reboot ..."
             pkill -f ${PROCESS_NAME}
             reboot
         fi
@@ -459,13 +460,13 @@ done
 
 ACTION="cc-desktop-3fdc-terminal"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ -e /wfs/terminalrc ]; then
-  echo "Terminal settings found and removed" | $LOGGER
+  echo "Terminal settings found and removed"
   rm -f /wfs/terminalrc
 fi
 
@@ -479,10 +480,10 @@ EOF
 chmod a+r /wfs/terminalrc
 mkdir -p /userhome/.config/xfce4/terminal
 chown -R user:users /userhome/.config/xfce4
-ln -svf /wfs/terminalrc /userhome/.config/xfce4/terminal/terminalrc | $LOGGER
+ln -svf /wfs/terminalrc /userhome/.config/xfce4/terminal/terminalrc
 
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -521,19 +522,19 @@ exit 0
 
 ACTION="cc-base-4fic"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 # run all final desktop scripts
 ls /wfs/cc-base-4fic-*.sh | while read LINE
   do
-  echo "Starting: ${LINE}" | $LOGGER
+  echo "Starting: ${LINE}"
   $LINE &
   done
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```
@@ -557,25 +558,25 @@ exit 0
 
 ACTION="cc-base-4fic-linkmediadisk"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
 MOUNTPOINT=$(mount | grep "/media" | cut -d " " -f 3)
 NEWLINK="/media/$(hostname)"
 
 # exit if no media mount point
 if [ "${MOUNTPOINT}" == "" ]; then
-  echo "No media mount point to link to." | $LOGGER
+  echo "No media mount point to link to."
   exit 0
 fi
 
 if [ -L ${NEWLINK} ]; then
-  echo "Unlinking ${NEWLINK}" | $LOGGER
-  unlink ${NEWLINK} | $LOGGER
+  echo "Unlinking ${NEWLINK}"
+  unlink ${NEWLINK}
 elif [  -d ${NEWLINK} ]; then
-  echo "${NEWLINK} is a directory. Not linking ${NEWLINK} to ${MOUNTPOINT}" | $LOGGER
+  echo "${NEWLINK} is a directory. Not linking ${NEWLINK} to ${MOUNTPOINT}"
   exit 1
 fi
 
-ln -svf ${MOUNTPOINT} ${NEWLINK} | $LOGGER
+ln -svf ${MOUNTPOINT} ${NEWLINK}
 ```

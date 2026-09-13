@@ -11,15 +11,15 @@
 
 ACTION="cc-desktop-3fdc-reboot-after-lock-screen"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
 PROCESS_NAME="lightdm-igel-greeter"
 CHECK_INTERVAL=5    # seconds between checks
 WAIT_AFTER_START=300  # 5 minutes in seconds
 #WAIT_AFTER_START=10  # 5 minutes in seconds
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 while true; do
     # Check if the process is running
@@ -33,7 +33,7 @@ while true; do
         # Recheck if process is still running
         PID=$(pgrep -f "$PROCESS_NAME")
         if [ -n "$PID" ]; then
-            echo "[$(date)] $PROCESS_NAME still running. Reboot ..." | $LOGGER
+            echo "[$(date)] $PROCESS_NAME still running. Reboot ..."
             pkill -f ${PROCESS_NAME}
             reboot
         fi

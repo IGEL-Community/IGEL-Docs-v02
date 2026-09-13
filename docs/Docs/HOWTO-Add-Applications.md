@@ -538,6 +538,9 @@ Let us take a look at the init script [vlc-cp-init-script.sh](https://github.com
 
 ACTION="custompart-vlc_${1}"
 
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
 # mount point path
 MP=$(get custom_partition.mountpoint)
 
@@ -548,23 +551,20 @@ CP="${MP}/vlc"
 VLC_CONFIG="/userhome/.config/vlc"
 VLC_LOCAL="/userhome/.local/share/vlc"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
-
-echo "Starting" | $LOGGER
+echo "Starting"
 
 case "$1" in
 init)
   # Initial permissions
-  chown -R root:root "${CP}" | $LOGGER
+  chown -R root:root "${CP}"
   # Linking files and folders on proper path
   find ${CP} -printf "/%P\n" | while read DEST
   do
     if [ ! -z "${DEST}" -a ! -e "${DEST}" ]; then
       # Remove the last slash, if it is a dir
-      [ -d $DEST ] && DEST=${DEST%/} | $LOGGER
+      [ -d $DEST ] && DEST=${DEST%/}
       if [ ! -z "${DEST}" ]; then
-        ln -sv "${CP}/${DEST}" "${DEST}" | $LOGGER
+        ln -sv "${CP}/${DEST}" "${DEST}"
       fi
     fi
   done
@@ -591,14 +591,14 @@ stop)
   find ${CP} -printf "/%P\n" | while read DEST
   do
     if [ -L "${DEST}" ]; then
-      unlink $DEST | $LOGGER
+      unlink $DEST
     fi
   done
 
 ;;
 esac
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0
 ```

@@ -10,21 +10,21 @@
 
 ACTION="cc-desktop-3fdc-island"
 
-# output to systemlog with ID amd tag
-LOGGER="logger -it ${ACTION}"
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
 
-echo "Starting" | $LOGGER
+echo "Starting"
 
 if [ -e /services/island/usr/bin/island-browser-stable ]; then
-  echo "APT FOUND: /services/island/usr/bin/island-browser-stable found" | $LOGGER
-  echo "Set Default Browser to Island" | $LOGGER
+  echo "APT FOUND: /services/island/usr/bin/island-browser-stable found"
+  echo "Set Default Browser to Island"
   xdg-settings set default-web-browser island-browser.desktop
-  echo "Clear Island Browser CacheStorage" | $LOGGER
+  echo "Clear Island Browser CacheStorage"
   rm -rf /userhome/.config/island/Default/Service\ Worker/CacheStorage/*
 else
-  echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found" | $LOGGER
+  echo "APT NOT FOUND: /services/island/usr/bin/island-browser-stable not found"
 fi
 
-echo "Finished" | $LOGGER
+echo "Finished"
 
 exit 0

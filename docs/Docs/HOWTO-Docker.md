@@ -124,7 +124,7 @@ EOF
 ### Save the following as `get-debs.sh`:
 
 ```bash linenums="1"
-echo << "EOF" > get-debs.sh
+cat << "EOF" > get-debs.sh
 #!/bin/bash
 #set -x
 #trap read debug

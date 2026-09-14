@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles>
+    <profile>
+        <profile_id>150264</profile_id>
+        <profilename>VirtualBox</profilename>
+        <firmware>
+            <model>IGEL OS 11</model>
+            <version>11.06.210.01</version>
+        </firmware>
+        <description>VirtualBox</description>
+        <overwritesessions>false</overwritesessions>
+        <is_master_profile>false</is_master_profile>
+        <is_igel_os>true</is_igel_os>
+        <settings>
+            <pclass name="services.unsupported04.enabled">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.rccustom.custom_cmd_x11_final">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">cat &amp;lt&amp;lt 'EOF' &amp;gt&amp;gt /bin/igel_virtualbox_setup.sh
+#!/bin/bash
+#set -x
+#trap read debug
+
+# Configure IGEL OS for VirtualBox VMs
+MOUNTPOINT=$(ls /media)
+NEWMP="/media/VBoxMachines"
+VB_Config1="/media/VBoxMachines/config/VirtualBox"
+VB_Config2="/root/.config/VirtualBox"
+VB_ExtPack="/media/VBoxMachines/download/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack"
+
+if &amp;lb "${MOUNTPOINT}" != "VBoxMachines" &amp;rb; then
+  MOUNTDEV=$(df -H | grep media | cut -d " " -f 1)
+  umount ${MOUNTDEV}
+  if &amp;lb ! -e ${NEWMP} &amp;rb; then
+    mkdir -p "${NEWMP}"
+  fi
+  mount ${MOUNTDEV} ${NEWMP}
+fi
+
+if &amp;lb ! -e "${VB_Config1}" &amp;rb; then
+  mkdir -p "${VB_Config1}"
+fi
+
+if &amp;lb -d "${VB_Config2}" &amp;rb; then
+  rm -rf "${VB_Config2}"
+fi
+
+if &amp;lb -L "${VB_Config2}" &amp;rb; then
+  unlink "${VB_Config2}"
+fi
+
+ln -sf "${VB_Config1}" "${VB_Config2}"
+
+if &amp;lb ! -e "${VB_ExtPack}" &amp;rb; then
+  mkdir -p $(dirname "${VB_ExtPack}")
+  wget -O "${VB_ExtPack}" https://download.virtualbox.org/virtualbox/6.1.22/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack
+fi
+
+modprobe vboxdrv
+modprobe vboxnetflt
+echo "y" | vboxmanage extpack install "${VB_ExtPack}"
+EOF
+
+chown root:root /bin/igel_virtualbox_setup.sh
+chmod 700 /bin/igel_virtualbox_setup.sh
+/bin/igel_virtualbox_setup.sh</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+        </settings>
+        <instancesettings>
+            <instance classprefix="sessions.custom_application%" serialnumber="1ca6d0e3:17e92c369ac:-7ff3127.0.1.1">
+                <ivalue classname="sessions.custom_application%.applaunch" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+                <ivalue classname="sessions.custom_application%.applaunch_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+                <ivalue classname="sessions.custom_application%.applaunch_system" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.appliance_mode_access" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.autostart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.autostartnotify" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.cmdline" variableExpression="" variableSubstitutionActive="false">pkexec -u root env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/bin/virtualbox</ivalue>
+                <ivalue classname="sessions.custom_application%.desktop" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+                <ivalue classname="sessions.custom_application%.desktop_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+                <ivalue classname="sessions.custom_application%.hotkey" variableExpression="" variableSubstitutionActive="false"></ivalue>
+                <ivalue classname="sessions.custom_application%.hotkeymodifier" variableExpression="" variableSubstitutionActive="false">None</ivalue>
+                <ivalue classname="sessions.custom_application%.icon" variableExpression="" variableSubstitutionActive="false">virtualbox</ivalue>
+                <ivalue classname="sessions.custom_application%.menu_path" variableExpression="" variableSubstitutionActive="false"></ivalue>
+                <ivalue classname="sessions.custom_application%.name" variableExpression="" variableSubstitutionActive="false">VirtualBox</ivalue>
+                <ivalue classname="sessions.custom_application%.position" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+                <ivalue classname="sessions.custom_application%.pulldown" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.pwprotected" variableExpression="" variableSubstitutionActive="false">none</ivalue>
+                <ivalue classname="sessions.custom_application%.quick_start" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.restart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.scardautostart" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.snotify" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+                <ivalue classname="sessions.custom_application%.startmenu" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+                <ivalue classname="sessions.custom_application%.startmenu_system" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.usehotkey" variableExpression="" variableSubstitutionActive="false">false</ivalue>
+                <ivalue classname="sessions.custom_application%.waitfornetwork" variableExpression="" variableSubstitutionActive="false">true</ivalue>
+                <ivalue classname="sessions.custom_application%.waittime2autostart" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+                <ivalue classname="sessions.custom_application%.waittime2restart" variableExpression="" variableSubstitutionActive="false">0</ivalue>
+            </instance>
+        </instancesettings>
+    </profile>
+</profiles>

@@ -91,8 +91,9 @@ Citrix USB support enables users to interact with a wide range of USB devices wh
 
 - IGEL settings to enable for auto redirection:
 
-    - `app.cwa.wfclient.preferences0.autoredirectwhendevicesconnect`
-    - `app.cwa.wfclient.preferences%.autoredirectwhensessionstarts`
+    - Key: `app.cwa.wfclient.preferences0.autoredirectwhendevicesconnect` ; Value: `true`
+    - Key: `app.cwa.wfclient.preferences0.autoredirectwhensessionstarts` ; Value: `true`
+    - Key: `app.cwa.wfclient.preferences0.section` ; Value: `*`
 
 ### USB always on (Printer, Scanner, etc.)
 

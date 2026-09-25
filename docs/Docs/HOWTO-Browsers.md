@@ -21,7 +21,7 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 
 | Description | Browser Command |
 |--------|----------|
-| Reload page while bypassing the browser cache | ++ctrl+shift+R++ |
+| Reload page while bypassing the browser cache | ++ctrl+shift+r++ |
 | Zoom in | ++ctrl+shift+"+"++ | 
 | Zoom out | ++ctrl+"-"++ | 
 

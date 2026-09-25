@@ -13,6 +13,24 @@ IGEL OS 12 has the following browsers. Other browsers are planned.
 /usr/bin/igel-minibrowser --url https://tinyurl.com/igel-docs
 ```
 
+-----
+
+-----
+
+## Common Browser Commands
+
+| Description | Browser Command |
+|--------|----------|
+| Reload page while bypassing the browser cache | ++ctrl+shift+R++ |
+| Zoom in | ++ctrl+shift+"+"++ | 
+| Zoom out | ++ctrl+"-"++ | 
+
+-----
+
+-----
+
+## FAQ
+
 **Q:** How to reload the page while bypassing the browser cache?
 
 **A:** Run the following command in the browser tab: `Ctrl` + `Shift` + `R`. This keeps cookies, keeps login session, and reloads all page resources from the server

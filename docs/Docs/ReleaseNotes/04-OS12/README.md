@@ -4,7 +4,7 @@
 
 ## IGEL OS 12 Downloads via [app.igel.com/software](https://app.igel.com/software)
 
-## IGEL OS 12 Downloads via [direct links](../../HOWTO-Setup-Lab-Sandbox-Environment.md#appendix-current-igel-downloads)
+## IGEL OS 12 Downloads via [direct links](../../HOWTO-Setup-Lab-Sandbox-Environment.md#appendix-past-igel-downloads)
 
 -----
 

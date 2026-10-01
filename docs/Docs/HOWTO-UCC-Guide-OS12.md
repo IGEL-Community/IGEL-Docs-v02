@@ -55,7 +55,7 @@ If you need additional help, you can contact [IGEL Community](https://www.igelco
 
 ### Software Base of this Document
 
-**Note:** Download latest version of IGEL OS and UMS from [app.igel.com](https://app.igel.com/software) or [IGEL Community Docs - Appendix - Current IGEL Downloads](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#appendix-current-igel-downloads)
+**Note:** Download latest version of IGEL OS and UMS from [app.igel.com](https://app.igel.com/software) or [IGEL Community Docs - Appendix - Current IGEL Downloads](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Setup-Lab-Sandbox-Environment/#appendix-past-igel-downloads)
 
 -----
 

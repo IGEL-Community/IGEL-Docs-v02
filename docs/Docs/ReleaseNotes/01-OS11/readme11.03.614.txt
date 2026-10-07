@@ -315,7 +315,7 @@ Known Issues
 * On devices with 2 GB of flash storage it could happen that there is too less space
   for updating all features. In this case a corresponding error message occurs
   and unused features must be disabled in IGEL Setup under 
-  System > Firmware Customization > Features to perform the firmware update.
+  System > System Customization > Features to perform the firmware update.
 
 ### Firefox
 
@@ -421,7 +421,7 @@ Known Issues
 * On devices with 2 GB of flash storage it could happen that there is too less space
   to enable the Imprivata partition after the update to 11.03.500. In this case a
   corresponding error message occurs and unused features must be disabled
-  (in IGEL Setup under System > Firmware Customization > Features).
+  (in IGEL Setup under System > System Customization > Features).
   Imprivata has to be (re-)enabled after a reboot then.
   
 ### WiFi
@@ -1566,7 +1566,7 @@ New Features
 * If there's only the Starter License and no UMS connection the Licensing tool
   is shown on the desktop by default.
 * Added feature Custom Partition to Workspace Edition license.
-* Updated Fluendo multimedia codecs to the following versions:ÿ gst-fluendo-
+* Updated Fluendo multimedia codecs to the following versions:ï¿½ gst-fluendo-
   vadec - 30/01/2020 0.10.212
 * Kerberos Logon:
   You can now turn on/off numlock and/or capslock for password input.
@@ -1663,7 +1663,7 @@ Resolved Issues
 
 ### VMware Horizon
 
-* Fixed:ÿ Save VMWare Horizon user from last login when in appliance mode  
+* Fixed:ï¿½ Save VMWare Horizon user from last login when in appliance mode  
   Reduced the options for "Preset login information" to either "from last login"
   or "from session setup". The redundant option "from appliance mode" is
   removed, because the appliance mode is also treated as a session.

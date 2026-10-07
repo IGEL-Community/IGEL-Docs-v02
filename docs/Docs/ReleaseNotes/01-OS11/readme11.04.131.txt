@@ -544,7 +544,7 @@ Resolved Issues
   
 **Fixed Issues**  
   
-  1. ÿA unique USB device is now correctly redirected to a single session
+  1. ï¿½A unique USB device is now correctly redirected to a single session
   instead of multiple sessions  
   
   2. Increased maximum supported virtual drivers string length in module.ini  
@@ -1317,7 +1317,7 @@ Known Issues
 * On devices with 2 GB of flash storage it could happen that there is not enough space
   for updating all features. In this case a corresponding error message occurs
   and unused features must be disabled in IGEL Setup under 
-  System > Firmware Customization > Features to perform the firmware update.
+  System > System Customization > Features to perform the firmware update.
 
 ### Firefox
 
@@ -1428,7 +1428,7 @@ Known Issues
 * On devices with 2 GB of flash storage it could happen that there is not enough space
   to enable the Imprivata partition after the update to 11.04.100. In this case a
   corresponding error message occurs and unused features must be disabled
-  (in IGEL Setup under System > Firmware Customization > Features).
+  (in IGEL Setup under System > System Customization > Features).
   Imprivata has to be (re-)enabled after a reboot then.
   
 ### WiFi
@@ -1965,7 +1965,7 @@ New Features
     - "CNNIC ROOT"  
     - "Camerfirma Chambers of Commerce Root"  
     - "Camerfirma Global Chambersign Root"  
-    - "Certinomis - Autorit‚ Racine"  
+    - "Certinomis - Autoritï¿½ Racine"  
     - "Certum Root CA"  
     - "China Internet Network Information Center EV Certificates Root"  
     - "Comodo Secure Services root"  

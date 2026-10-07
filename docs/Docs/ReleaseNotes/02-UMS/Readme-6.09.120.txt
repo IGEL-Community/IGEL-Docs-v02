@@ -180,7 +180,7 @@ Resolved issues:
 [UMS common]  
 - Fixed: No message templates available for Postgres installations.  
 - Fixed: Heavy WebDav access may cause poor AD login performance due to authentication checks.  
-- Fixed: In some circumstances the directory's information for Firmware Customizations and Files in the UMS-Cache could be out of date.  
+- Fixed: In some circumstances the directory's information for System Customizations and Files in the UMS-Cache could be out of date.  
 - Changed: Improved performance of online check.  
 
  
@@ -211,7 +211,7 @@ Resolved issues:
 
 [High Availability Feature]  
 - Fixed: Load balancer on Linux does not show the full OS version.  
-- Fixed: Assigned files of imported Firmware Customizations weren't synchronized within HA network.  
+- Fixed: Assigned files of imported System Customizations weren't synchronized within HA network.  
  
 
 [Installer (linux)]  
@@ -501,7 +501,7 @@ Resolved issues:
 
 
 [High Availability Feature]
-- Fixed: Assigned files of imported Firmware Customizations weren't synchronized within HA network.
+- Fixed: Assigned files of imported System Customizations weren't synchronized within HA network.
 
 
 

@@ -80,7 +80,7 @@ New features:
 	 Refresh license information)
 - Added: Device commands can be executed on directory level
 - Added: Support of custom device attributes
-- Added: Presentation of all assigned objects (Profiles, Master Profiles, Files, Firmware Customizations, Template Keys, Value Groups and Universal Firmware Updates) 
+- Added: Presentation of all assigned objects (Profiles, Master Profiles, Files, System Customizations, Template Keys, Value Groups and Universal Firmware Updates) 
 	 of a device or a device directory
 - Added: Possibility to assign or detach objects to or from a device or a device directory
 - Added: Responsive design (Minimum supported width: 768px)

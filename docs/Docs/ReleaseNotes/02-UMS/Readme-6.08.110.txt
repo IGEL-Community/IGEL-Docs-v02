@@ -73,7 +73,7 @@ Resolved issues:
 
 
 [High Availability Feature]
-- Fixed: Assigned files of imported Firmware Customizations weren't synchronized within HA network.
+- Fixed: Assigned files of imported System Customizations weren't synchronized within HA network.
 
 
 

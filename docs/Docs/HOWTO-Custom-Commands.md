@@ -159,7 +159,7 @@ exit 0
 #
 # Version: 
 # USB always on (Printer, Scanner, etc.)
-# System > Firmware Customization > Custom Commands > Desktop
+# System > System Customization > Custom Commands > Desktop
 #
 # Custom Commands: Desktop: Final Desktop Command
 #

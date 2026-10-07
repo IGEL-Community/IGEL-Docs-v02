@@ -162,8 +162,8 @@ Resolved issues:
 - Changed: ICG administrated devices without valid IGEL Enterprise Management Pack license are now shown with the 'device isn't licensed' icon.
 
 
-[Firmware Customization]
-- Fixed: Some exported Firmware Customizations could not be imported if they were created with Oracle Database
+[System Customization]
+- Fixed: Some exported System Customizations could not be imported if they were created with Oracle Database
 
 
 [Profiles] 

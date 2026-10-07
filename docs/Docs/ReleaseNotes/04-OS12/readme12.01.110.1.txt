@@ -94,7 +94,7 @@ Release Notes of installable IGEL OS 12 base system
 	| ------ | ------ | ------ | ------ |
 	| `Enable Debugging of Single Sign-On` | `debug.auth.cloudidp_debug` | bool | enabled / *disabled* (default) |
 - Added registry key to enable natural scrolling
-	| Parameter | Registry ÿ | Type ÿ ÿ ÿ | Value ÿ ÿ |
+	| Parameter | Registry ï¿½ | Type ï¿½ ï¿½ ï¿½ | Value ï¿½ ï¿½ |
 	| ------ | ------ | ------ | ------ |
 	| `Natural Scroll` | `userinterface.touchpad.general.naturalscroll` | bool | *disabled* (default)/enabled |
 - Added parameter to adjust position of shadow indicator popup window.
@@ -265,7 +265,7 @@ Release Notes of installable IGEL OS 12 base system
 	* Splitted Power Options into 2 pages: Power Managment and Brightness Reduction
 	* Removed legacy settings from setup (X-key, color depth)
 * Added option in factory mode for an automatical shutdown after self-check. Log file of this deployment self-check is written to dummy partition.
-- Added: UMS Firmware Customizations can now also be deployed to OS12 devices.
+- Added: UMS System Customizations can now also be deployed to OS12 devices.
 - Added: The payload of the commands is now transferred compressed.
 
 ## Security Fixes

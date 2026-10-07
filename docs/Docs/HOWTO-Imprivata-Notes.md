@@ -474,7 +474,7 @@ The screensaver settings are in the Imprivata Appliance Computer Policy set for 
 
 Steps:
 
-- First make sure the IGEL devices have NO screensaver set (either via a Screen Saver Policy or Firmware Customization)
+- First make sure the IGEL devices have NO screensaver set (either via a Screen Saver Policy or System Customization)
 - Enable Imprivata Appliance Mode via a Policy
 - Have Imprivata administrator edit the IGEL Computer policy to set the following in the Walk-Away Security section (see screenshots below)
 

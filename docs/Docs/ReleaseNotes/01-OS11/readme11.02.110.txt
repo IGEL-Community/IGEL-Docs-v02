@@ -204,7 +204,7 @@ New Features
 ### Base system
 
 * Added support for custom bootsplash configurable at IGEL Setup > System >
-  Firmware Customization > Corporate Design > Custom Bootsplash.
+  System Customization > Corporate Design > Custom Bootsplash.
 * Post-session command: Added multi-session support. It is now possible to
   define additional Session types which will all be covered by the post-session
   command mechanism.

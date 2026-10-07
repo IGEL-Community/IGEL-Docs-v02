@@ -989,7 +989,7 @@ New Features
   to-guide via [https://kb.igel.com/hp-ami-bios], added parameters:
 
 +------------+-----------------------------------------------------------------+
-|Setup       |`System > Firmware Customization > Features`                     |
+|Setup       |`System > System Customization > Features`                     |
 +------------+-----------------------------------------------------------------+
 |Parameter   |`BIOS Tools`                                                     |
 +------------+-----------------------------------------------------------------+
@@ -2336,7 +2336,7 @@ New Features
   ALLOW: vid=047F pid=C039 split=1 intf=05 # Allow mgmt intf but do not connect
   automatically
 * Note: [https://kb.igel.com/igelos-11.08/en/native-usb-
-  redirection-63804310.html]ÿ the third option "connect" has been added to the
+  redirection-63804310.html]ï¿½ the third option "connect" has been added to the
   class and device rules. Composite USB redirection can change the behavior. If
   a device is no longer redirected with CWA 2207, should be changed to
   'Connect'.  
@@ -2354,7 +2354,7 @@ New Features
 * With this enhancement, the maximum output buffering value is decreased from
   200 ms to 50 ms in Citrix Workspace app. As a result, the user experience of
   the interactive audio application is improved. Also, the Round trip time (RTT)
-  is decreased by 150 ms.ÿThis parameter is valid only when `AudioRedirectionV4`
+  is decreased by 150 ms.ï¿½This parameter is valid only when `AudioRedirectionV4`
   is set to `True`.  
 **  
 ** Audio Temp Latency Boost
@@ -2393,7 +2393,7 @@ New Features
 +------------+-----------------------------------------------------------------+
 
 * The display resolution and DPI scale values set in the Citrix Workspace app
-  match the corresponding values in the virtual apps and desktops session.ÿDPI
+  match the corresponding values in the virtual apps and desktops session.ï¿½DPI
   scaling is mostly used with large size and high-resolution monitors to display
   applications, text, images, and other graphical elements in a size that can be
   viewed comfortably.  
@@ -2411,7 +2411,7 @@ New Features
   enhanced security when using Citrix Virtual Apps and Desktops published
   resources. Two policies provide anti-keylogging and anti-screen-capturing
   capabilities for a Citrix HDX session. This feature is fully supported only
-  for workspace app 2207,ÿ with older workspace apps, you may experience x11vnc
+  for workspace app 2207,ï¿½ with older workspace apps, you may experience x11vnc
   crashes.
 * Updated deviceTRUST Client Extension to version 21.1.310.0.
 
@@ -2707,7 +2707,7 @@ New Features
 | Value      | [ Off ][ **Auto** ][ Always ]                                   |
 +------------+-----------------------------------------------------------------+
 
-* Integrated Zoom VDI pluginÿ5.11.2.21530  
+* Integrated Zoom VDI pluginï¿½5.11.2.21530  
   Available plugins in this release: 5.11.2.21530 (default), 5.10.6.21295 and
   5.8.4.21112
 

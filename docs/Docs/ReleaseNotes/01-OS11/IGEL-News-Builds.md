@@ -18694,7 +18694,7 @@ New Features
   to-guide via [https://kb.igel.com/hp-ami-bios], added parameters:
 
 +------------+-----------------------------------------------------------------+
-|Setup       |`System > Firmware Customization > Features`                     |
+|Setup       |`System > System Customization > Features`                     |
 +------------+-----------------------------------------------------------------+
 |Parameter   |`BIOS Tools`                                                     |
 +------------+-----------------------------------------------------------------+

@@ -72,7 +72,7 @@ lpinfo --make-and-model '1536' -m
 
 ## USB always on (Printer, Scanner, etc.)
 
-System > Firmware Customization > Custom Commands > Desktop
+System > System Customization > Custom Commands > Desktop
 
 ```bash linenums="1"
 echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null

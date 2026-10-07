@@ -257,7 +257,7 @@ New features:
 - Added: Devices are now informed about new root certificates to support the exchange of the web certificate chain.
 - Added: Payload compression to reduce bandwidth in customer environment. 
 - Added: New logfile to log communication of device and UMS. Can be activated in logback.xml.
-- Added: UMS Firmware Customizations can now also be deployed to OS12 devices.
+- Added: UMS System Customizations can now also be deployed to OS12 devices.
 - Added: Support for unified protocol via IGEL Cloud Gateway (ICG 12.01.100 or higher needed).
 
 [IGEL Cloud Gateway (ICG)]

@@ -225,7 +225,7 @@ If PC firmware has a Legacy Boot option, it might interfere with the kernel’s 
 
 The kernel may hang on framebuffer driver. As first step in debugging, blacklist the framebuffer driver in file /etc/modprobe.d/blacklist-framebuffer.conf
 
- For example, add the following entry to the System/Firmware Customization/Custom Commands/Base Initialization section of IGEL Setup:
+ For example, add the following entry to the System/System Customization/Custom Commands/Base Initialization section of IGEL Setup:
 
 echo “blacklist efifb” >> /etc/modprobe.d/blacklist-framebuffer.conf
 
@@ -510,7 +510,7 @@ echo "done."
 
 ## USB always on (Printer, Scanner, Audio, etc.)
 
-System > Firmware Customization > Custom Commands > Desktop
+System > System Customization -> Custom Commands > Desktop
 
 ```bash linenums="1"
 echo on | tee /sys/bus/usb/devices/*/power/level > /dev/null

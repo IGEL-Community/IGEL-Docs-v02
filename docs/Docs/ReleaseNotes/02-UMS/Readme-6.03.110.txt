@@ -166,7 +166,7 @@ Resolved issues:
 - Fixed: When using an Oracle database, after moving files/views to a subfolder the file/view count display of the subfolder was not updated.
 - Fixed: The "Show Message"-Button (UMS Console -> Bottom right hand corner) in "smart contrast" behaves now analogously to the other themes
 - Fixed: The UMS firmware statistics overview (Misc -> Firmware Statistics) could display a wrong number of devices when UD Pocket devices were managed in the UMS
-- Fixed: When a firmware customization has been assigned to a device, this device and all other already assigned devices got a notification that the settings have changed. Now only the new device will get the notification
+- Fixed: When a System Customization has been assigned to a device, this device and all other already assigned devices got a notification that the settings have changed. Now only the new device will get the notification
 - Fixed: Overwriting an existing zip file when exporting firmware, fw customizations, template keys/groups and device settings created an unusable file (System -> Export...)
 
 
@@ -176,8 +176,8 @@ Resolved issues:
 - Changed: Renamed the field 'Expiration Date of Maintenance Subscription' to 'Expiration Date of OS10-Maintenance Subscription' in the device detail view to avoid confusion (Device -> Detail View -> Advanced System Information)
 
 
-[Firmware Customization]
-- Fixed: Importing a Firmware Customization without assigned files resulted in a 'permission denied'-warning
+[System Customization]
+- Fixed: Importing a System Customization without assigned files resulted in a 'permission denied'-warning
 
 
 [Profiles]

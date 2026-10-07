@@ -227,8 +227,8 @@ Resolved issues:
 - Fixed: Update on network name (DNS) was not triggered if name was changed via system information
 
 
-[Firmware Customization]
-- Fixed: Files or folders with spaces in the name could not be used in Firmware Customizations or file upload
+[System Customization]
+- Fixed: Files or folders with spaces in the name could not be used in System Customizations or file upload
 
 
 [Jobs]
@@ -357,7 +357,7 @@ Resolved issues:
 		   It is now important to allow the https port (default 443) and the new address (fwus.igel.com) in the firewall rules and the proxy rules.
 
 [Console, common]
-- Fixed: The file transfer status of firmware customizations without read permission were not displayed in the device detail window
+- Fixed: The file transfer status of System Customizations without read permission were not displayed in the device detail window
 
 
 [Firmwares]

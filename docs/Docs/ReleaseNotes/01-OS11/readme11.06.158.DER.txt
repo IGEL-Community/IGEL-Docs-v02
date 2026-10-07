@@ -1257,7 +1257,7 @@ New Features
 
 ### RDP/IGEL RDP Client 2
 
-*ÿ Added multitouch support for RDP Sessions.
+*ï¿½ Added multitouch support for RDP Sessions.
 
 +------------+-----------------------------------------------------------------+
 | Registry   | `sessions.winconnect%.option.enable-multitouch`                 |
@@ -1270,7 +1270,7 @@ New Features
 +------------+-----------------------------------------------------------------+
 |Registry    |`sessions.winconnect%.option.enable-serverside-audio`            |
 +------------+-----------------------------------------------------------------+
-|Value       |enabled / **disabled**ÿ(default)                                 |
+|Value       |enabled / **disabled**ï¿½(default)                                 |
 +------------+-----------------------------------------------------------------+
 
 * Added option to enable/disable automatic reconnect for RDP session.
@@ -1355,7 +1355,7 @@ New Features
 
 ### UD Pocket
 
-* Added official support for `Secured Kobra Stick´ from Digittrade.
+* Added official support for `Secured Kobra Stickï¿½ from Digittrade.
 
 ### VMware Horizon
 
@@ -1750,7 +1750,7 @@ New Features
 +------------+-----------------------------------------------------------------+
 |Registry    |`multimedia.ciscomeetings.activeversion`                         |
 +------------+-----------------------------------------------------------------+
-|Value       |**41.8.4.11**ÿ(default), 41.7.8.5 and 41.6.7.16                  |
+|Value       |**41.8.4.11**ï¿½(default), 41.7.8.5 and 41.6.7.16                  |
 +------------+-----------------------------------------------------------------+
 
 * Note: Webex meetings plugin and application version must match. Otherwise, it may fail to launch Webex VDI optimized meeting.  
@@ -1971,7 +1971,7 @@ New Features
 
 * Added automatic proxy detection and pac file support for proxy authentication
   pass through with cntlm
-* Updated frenchÿtranslation
+* Updated frenchï¿½translation
 * Added support for multiple batteries in taskbar. If enabled, taskbar shows a
   battery indicator for each device battery.
 
@@ -2008,7 +2008,7 @@ New Features
 
 * Added support to monitor multiple sessions and have a
   post-session command triggered if all sessions exited successfully.
-  Configurable at setup page: System > Firmware Customization > Custom Commands
+  Configurable at setup page: System > System Customization > Custom Commands
   > Post Session
 * Added configuration for EMP license notification:
 
@@ -2669,7 +2669,7 @@ Resolved Issues
 * Fixed: The NSAP virtual channel is loaded correctly and works as expected.
 * Improved dialog for Citrix farm selection.
 * Changed the default value of the parameter 'HDX Adaptive Transport over EDT'
-  toÿ'TCP only'. With the previous default value 'UDP with fallback to
+  toï¿½'TCP only'. With the previous default value 'UDP with fallback to
   TCP' performance problems occured.
 
 +------------+-----------------------------------------------------------------+

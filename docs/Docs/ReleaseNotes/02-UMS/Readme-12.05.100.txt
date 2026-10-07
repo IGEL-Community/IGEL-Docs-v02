@@ -142,7 +142,7 @@ New features:
 =============================================================================
 
 [Configuration]
-- Added: Corporate Identity Customizations (former Firmware Customizations) are now available in the Web App for OS11 and OS12 devices. Existing Firmware Customizations are now also available as Corporate Identity Customizations in the UMS Web App.
+- Added: Corporate Identity Customizations (former System Customizations) are now available in the Web App for OS11 and OS12 devices. Existing System Customizations are now also available as Corporate Identity Customizations in the UMS Web App.
 - Added: It is now possible to add multiple use cases to one Corporate Identity Customization in the Web App.
 
 [Network]

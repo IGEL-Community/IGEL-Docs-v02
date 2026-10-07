@@ -812,7 +812,7 @@ New Features
 ### Base system
 
 * Added LVFS utility for Bios update.  
-** Please note: IGEL supports just the mechanismÿ - BIOS updates are executed at
+** Please note: IGEL supports just the mechanismï¿½ - BIOS updates are executed at
   own risk (as usual)
 
 +------------+-----------------------------------------------------------------+
@@ -832,7 +832,7 @@ New Features
 * Added parameter for LVFS Bios update
 
 +------------+-----------------------------------------------------------------+
-|IGEL Setup  |`System > Firmware Customization > Features`                     |
+|IGEL Setup  |`System > System Customization > Features`                     |
 +------------+-----------------------------------------------------------------+
 |Parameter   |`BIOS Tools`                                                     |
 +------------+-----------------------------------------------------------------+
@@ -893,8 +893,8 @@ New Features
 
 ### zoomvdi
 
-* Integrated Zoom VDIÿclientÿ**5.10.6.21295**  
-  Available Zoom Media Plugins in this release:ÿ5.8.4.21112, 5.10.0.21068, and
+* Integrated Zoom VDIï¿½clientï¿½**5.10.6.21295**  
+  Available Zoom Media Plugins in this release:ï¿½5.8.4.21112, 5.10.0.21068, and
   **5.10.6.21295 (default)**
 
 ### Multimedia

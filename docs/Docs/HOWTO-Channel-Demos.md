@@ -9,6 +9,10 @@ What is shown in this demo:
 - Show my IGEL desktop and apps
 - Show my workflows
 
+- Summary:
+
+Ron demonstrated how he uses an IGEL device as his primary work device, showcasing various applications and tools he uses daily. He showed how he runs Island Enterprise browser as well as local apps such as GIMP, Inkscape, Visual Studio Code, and LibreOffice. Ron explained his workflow for documentation using GitHub and Markdown, with Mermaid for diagrams. He also demonstrated using OneDrive for selective file syncing to his IGEL device and transferring files from his iPhone using Local Send. Additionally, Ron showed how he accesses Windows 365 and uses native apps like WebEx and Zoom. The presentation concluded with a brief personal video shared from his iPhone to the IGEL device.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RebuALUHXbU?si=VqpPw4FWVWx79Nee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -----

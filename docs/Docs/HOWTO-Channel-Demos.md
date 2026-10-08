@@ -2,6 +2,17 @@
 
 -----
 
+## My IGEL Desktop and my Workflows
+
+What is shown in this demo:
+
+- Show my IGEL desktop and apps
+- Show my workflows
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RebuALUHXbU?si=VqpPw4FWVWx79Nee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Demo: Live Demo Session Led by an IGEL Expert
 
 What is shown in this demo:

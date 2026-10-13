@@ -50,7 +50,6 @@ Component Versions
 | Open VM Desktop Tools                     | 12.2.0-1+deb12u4                 |
 ```
 
-i
 Release Notes of installable IGEL OS 12 base system
 ================================================================================
 

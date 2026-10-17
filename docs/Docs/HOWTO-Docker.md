@@ -1025,6 +1025,22 @@ chmod a+x run-docker.sh
 
 -----
 
+## IGEL OS 12 Docker ProxyDHCP PXE Server
+
+**Safety:** UEFI x64 only. Explicit MAC allowlist. All other MACs receive no PXE offer from this service. Does **not** block manual TFTP/HTTP downloads, rogue DHCP servers, or PXE options issued by your existing DHCP server. IP blacklist is fail-closed unless enforced externally. MACs can be spoofed. Test in an isolated provisioning VLAN before production.
+
+Uses existing DHCP server and does not need DHCP server to provide TFTP server IP.
+
+- [Video: Demo: IGEL OS 12 Docker ProxyDHCP PXE Server](./HOWTO-Channel-Demos.md#demo-igel-os-12-docker-proxydhcp-pxe-server)
+
+- [DOWNLOAD: igel-pxe-template-v05.zip](./Containers/HOWTO-Docker-igel-pxe-template-v05.zip)
+
+**NOTE:** See the README.md in the zip file for details.
+
+-----
+
+-----
+
 ## Use Docker to create Karaoke songs
 
 Convert music files (mp3, flac, etc.) into karaoke format with lrc file.

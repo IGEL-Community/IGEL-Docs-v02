@@ -30,6 +30,20 @@ What is shown in this demo:
 
 -----
 
+## Demo: IGEL OS 12 Docker ProxyDHCP PXE Server
+
+What is shown in this demo:
+
+- How to setup a PXE Server in a docker container on IGEL OS 
+
+**Safety:** UEFI x64 only. Explicit MAC allowlist. All other MACs receive no PXE offer from this service. Does **not** block manual TFTP/HTTP downloads, rogue DHCP servers, or PXE options issued by your existing DHCP server. IP blacklist is fail-closed unless enforced externally. MACs can be spoofed. Test in an isolated provisioning VLAN before production.
+
+Uses existing DHCP server and does not need DHCP server to provide TFTP server IP.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qNxZcfxCIXw?si=_3znUvuCNlZ_ad1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-----
+
 ## Demo: UMS Java Console running on IGEL OS in a container
 
 What is shown in this demo:

@@ -27,6 +27,18 @@
 
 -----
 
+## UMS PXE via Docker Container on IGEL OS
+
+- [How to Deploy IGEL OS 12 with PXE](https://kb.igel.com/en/igel-os-base-system/current/how-to-deploy-igel-os-12-with-pxe)
+- More scalable than USB
+- Zero touch after device is PXE booted
+- Requires internet access
+- Simple with automated setup script
+
+### [IGEL OS 12 Docker ProxyDHCP PXE Server](./HOWTO-Docker.md#igel-os-12-docker-proxydhcp-pxe-server)
+
+-----
+
 ## Microsoft Deployment Toolkit or MDT
 
 - More scalable than USB - requires device to pxe boot

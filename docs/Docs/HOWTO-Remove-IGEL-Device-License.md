@@ -115,6 +115,8 @@ reboot
 ## How to remove the starter license from the IGEL device:
 
 <!--
+Support asked that I remove the bootreg item
+
 The starter license is not a file on the IGEL OS. Here is the command to remove starter license:
 
 ```bash linenums="1"

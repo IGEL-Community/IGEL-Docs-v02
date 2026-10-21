@@ -10,9 +10,7 @@ The following is used for the creation of this site:
 
 - **Mermaid:** [Mermaid](https://mermaid.js.org/) is a markdown diagramming and charting tool to create and modify diagram dynamically.
 
-- **MkDocs:** [MkDocs](https://www.mkdocs.org/) is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
-
-- **Material for MKDocs:** [Material](https://squidfunk.github.io/mkdocs-material/) is the theme used with MkDocs.
+- **Zensical:** [Zensical](https://zensical.org/) is a modern static site generator designed to simplify building and maintaining project documentation. It's built by the creators of Material for MkDocs and shares the same core design principles and philosophy – batteries included, easy to use, with powerful customization options.
 
 -----
 
@@ -81,6 +79,7 @@ flowchart TD
 site_name: IGEL Community Docs
 theme:
   name: material
+  variant: classic
   features:
     - navigation.tabs
     - navigation.sections
@@ -119,10 +118,8 @@ markdown_extensions:
       custom_checkbox: true
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.tasklist:
-      custom_checkbox: true
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -142,28 +139,46 @@ extra:
 - File Location: `.github/workflows/ci.yml`
 
 ```yaml linenums="1"
-name: ci 
+name: Deploy Zensical Docs
+
 on:
   push:
     branches:
-      - master 
+      - master
       - main
+  workflow_dispatch:
+
 permissions:
   contents: write
+
+concurrency:
+  group: docs-deployment
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - uses: actions/cache@v4
+          python-version: '3.12'
+
+      - name: Install Zensical
+        run: python -m pip install zensical
+
+      - name: Build documentation
+        run: zensical build
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
 ```
 
 -----

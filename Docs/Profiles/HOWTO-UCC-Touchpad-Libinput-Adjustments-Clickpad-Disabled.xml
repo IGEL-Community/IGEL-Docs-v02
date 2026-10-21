@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles>
+    <profile>
+        <profile_id>15409</profile_id>
+        <profilename>Touchpad - Libinput Adjustments - Clickpad Disabled</profilename>
+        <firmware>
+            <model>IGEL OS 11</model>
+            <version>11.08.230.01</version>
+        </firmware>
+        <description></description>
+        <overwritesessions>false</overwritesessions>
+        <is_master_profile>false</is_master_profile>
+        <is_igel_os>true</is_igel_os>
+        <settings>
+            <pclass name="userinterface.touchpad.general.touchpadconfiguration">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.pressuremotionminfactor">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">80</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.maxspeed">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">3.00</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.driver">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">libinput</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.tapanddraggesture">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="system.module_params.psmouse.a4tech_workaround">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.pressuremotionmaxfactor">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">80</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.lbcornerbutton">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">0</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.pressuremotionminz">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">80</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.accelfactor">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">0.05</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.scrolling.verttwofingerscroll">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.minspeed">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">1.50</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.rtcornerbutton">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">0</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.resolutiondetect">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.touchpadoff">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">0</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.rbcornerbutton">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">0</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.scrolling.horiztwofingerscroll">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.pressuremotionmaxz">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">80</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.scrolling.horizedgescroll">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.advanced.clickpad">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">false</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.touchpadenable">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+            <pclass name="userinterface.touchpad.general.palmdetect">
+                <pvalue instancenr="-1" variableExpression="" variableSubstitutionActive="false">true</pvalue>
+                <variableSubstitutionActive>false</variableSubstitutionActive>
+            </pclass>
+        </settings>
+        <instancesettings/>
+    </profile>
+</profiles>

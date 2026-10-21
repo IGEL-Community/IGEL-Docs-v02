@@ -1,22 +1,40 @@
-name: ci 
+name: Deploy Zensical Docs
+
 on:
   push:
     branches:
-      - master 
+      - master
       - main
+  workflow_dispatch:
+
 permissions:
   contents: write
+
+concurrency:
+  group: docs-deployment
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - uses: actions/cache@v4
+          python-version: '3.12'
+
+      - name: Install Zensical
+        run: python -m pip install zensical
+
+      - name: Build documentation
+        run: zensical build
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages

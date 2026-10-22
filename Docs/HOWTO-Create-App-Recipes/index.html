@@ -1,0 +1,4514 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../HOWTO-Collect-Hardware-Information-for-Device/">
+      
+      
+        <link rel="next" href="../HOWTO-Create-USB-Installation-medium/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.71">
+    
+    
+      
+        <title>HOWTO Create OS 12 App Recipes - IGEL Community Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.68ef4dbf.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/classic/palette.813d4b3f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PTNHLB3WSX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PTNHLB3WSX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PTNHLB3WSX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IGEL Community Docs" class="md-header__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGEL Community Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO Create OS 12 App Recipes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  IGEL Community Docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Cheatsheet-IGELCommunity/" class="md-tabs__link">
+          
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IGEL Community Docs" class="md-nav__button md-logo" aria-label="IGEL Community Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IGEL Community Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL Community Docs
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Docs
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Docs
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELCommunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cheatsheet IGEL Community
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cheatsheet IGELOS General
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cheatsheet IGELOS Hardware
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-IGELOS-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cheatsheet IGELOS Networking
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cheatsheet-Linux-General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cheatsheet Linux General
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Access-Remaining-Free-Disk-Space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Access Remaining Free Disk Space on IGEL OS 12 Device
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Add-Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Add Applications
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Basic-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Basic Setup Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Best-Practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Best Practices
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Browsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Browsers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-COSMOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO IGEL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-CUPs-Printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO CUPs Printing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Call-Center-Logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Call Center Logging
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Certificates
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demo-Setup-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Channel Demo Setup Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Channel Demos
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Channel-Partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Channel and MSP Partners
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Collect-Hardware-Information-for-Device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Collect Hardware Information for a Device
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Create OS 12 App Recipes
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Create OS 12 App Recipes
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recipe-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recipe Workflow
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe-folder-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recipe Folder Layout
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-each-file-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What Each File Does
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-files-end-up-on-igel-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Where the Files End Up on IGEL OS
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        app.json
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="app.json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Version
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies-requires" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Dependencies (requires)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-write-partition-rw_partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Read / Write Partition (rw_partition)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="data&#x2f;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#icons-dataappsvg-datamonochromesvg" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Icons (data/app.svg, data/monochrome.svg)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datadescriptionsen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/descriptions/en
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datachangelogsen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/changelogs/en
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataeulaen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/eula/en
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataconfigconfigparam" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/config/config.param
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="data&#x2f;config&#x2f;config.param">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-desktop-start-menu-icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Session (desktop / start menu icon)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-custom-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Settings (custom parameters)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataconfigconfigparamlocale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/config/config.param.locale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataconfiguijson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/config/ui.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataconfigtranslationjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        data/config/translation.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="igel&#x2f;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#igeldebianjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/debian.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igelthirdpartyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/thirdparty.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igelinstalljson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/install.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igeldirsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/dirs.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igelinstallsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/install.sh
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igeluninstallsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/uninstall.sh
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igelpre_package_commandssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/pre_package_commands.sh
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igelinputjson-igelignorejson-igelvariablejson-igelchecksumsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        igel/input.json, igel/ignore.json, igel/variable.json, igel/checksums.json
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputall" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        input/all/
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="input&#x2f;all&#x2f;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-start-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Session start script
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        systemd services
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-channel-plugins-vdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Virtual channel plugins (VDI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-add-links-to-servicesapplication_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How to add links to /services/application_name
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-a-new-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steps to Create a New Recipe
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Create a New Recipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-find-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Find the application
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-the-recipe-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Create the recipe folder
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-edit-the-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Edit the metadata
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-define-content-and-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Define content and session
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-build-deploy-and-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Build, deploy, and test
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-fix-and-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Fix and repeat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-missing-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Finding Missing Libraries
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building the App
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building the App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#igel-app-creator-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IGEL App Creator Portal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igel-os-app-sdk-igelpkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IGEL OS App SDK (igelpkg)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-and-testing-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Installing and Testing the App
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing and Testing the App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-signing-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        App signing certificate
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Install the app
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Check the result
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Debugging
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-recipe-to-igel-os-app-recipes-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding a Recipe to IGEL OS APP RECIPES (GitHub)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recipe-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recipe Checklist
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Create-USB-Installation-medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Create USB installation medium
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Custom-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Custom Commands
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Docker
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Dynabook-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Dynabook Setup
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Edit-Initial-Settings-OSC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Edit Initial Settings Prior to OSC Install
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Frame-Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Frame (Dizzion powered by Frame)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-GitHub-with-VS-Code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO GitHub with Microsoft Visual Studio Code
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-ICG-Free-Signed-Certificate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO ICG Free Signed Certificate Option
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Management-Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO IGEL Management Interface (IMI)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-IGEL-Static-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Use Static Template Keys
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Imprivata-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Imprivata Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Light_Zero_Touch_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Light and Zero Touch Deployments of OS 12
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Managed-Containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO IGEL Managed Containers™ (IMC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Intune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Microsoft Intune
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Microsoft-Teams-Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Microsoft Teams
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Nuance-Dictation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Nuance Dictation
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Profile-Templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Profile Templates
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Re-enable_TLSv1_and_TLSv11_on_UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Re-enable TLSv1 and TLSv1.1 on UMS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Remove-IGEL-Device-License/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Remove IGEL Device License
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Run-VMs-on-MacOS-Intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Run Virtual Machines on MacOS (Intel)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Sample-Profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Sample Profiles
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Setup-Lab-Sandbox-Environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Setup Lab Sandbox Environment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Template-Keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Template Keys in UMS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Terraform
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Testing-VDI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Testing VDI
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-GitHub-CP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Tools Used for GitHub Custom Partition (CP)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Tools-Used-for-this-Site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Tools Used for this Site
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO UCC Guide OS12
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC-Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO UCC Guide OS11
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-UCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO UCC
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VPN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO VPN
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-VirtualBox-VMs-on-IGELOS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Run VirtualBox Virtual Machines on IGEL OS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Work-from-Home-Notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Work from Home Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Write-Config-Files-OSC-ISO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Write config files to IGEL OSC ISO file from Linux
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HOWTO-Zero-Trust-Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HOWTO Zero Trust Networking
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_55" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_55" id="__nav_2_55_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ReleaseNotes
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_55_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_55">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  ReleaseNotes
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_55_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_55_2" id="__nav_2_55_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  01 OS11
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_55_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_55_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  01 OS11
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL OS Branches
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/01-OS11/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL News: Builds
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_55_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_55_3" id="__nav_2_55_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  02 UMS
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_55_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_55_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  02 UMS
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL UMS Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/02-UMS/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL News: UMS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_55_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_55_4" id="__nav_2_55_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  03 ICG
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_55_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_55_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  03 ICG
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL ICG Release Notes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/03-ICG/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL News: ICG
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_55_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_55_5" id="__nav_2_55_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  04 OS12
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_55_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_55_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  04 OS12
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL OS 12 Branches
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseNotes/04-OS12/IGEL-News-Builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IGEL News: Builds OS 12
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="howto-create-os-12-app-recipes">HOWTO Create OS 12 App Recipes</h1>
+<hr />
+<hr />
+<!--
+Comments
+Sources:
+- IGEL SDK Reference Manual (Getting Started With the IGEL OS App SDK, Version 2024-07-19): https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/blob/main/utils/IGEL-SDK-Reference-Manual.pdf
+- IGEL KB: IGEL App Creator Portal (snapshot Nov 2025)
+- IGEL-Community/IGEL-OS-APP-RECIPES (recipes, README, utils)
+- IGEL Community Slack #igel-app-creator-portal (Feb 2025 - Oct 2026)
+-->
+
+<p>A recipe is a folder of metadata files and scripts that the IGEL App Creator Portal (or the IGEL OS App SDK, <code>igelpkg</code>) turns into a signed IGEL OS 12 app (<code>.ipkg</code>). The recipe tells the builder <strong>what</strong> to put in the app (Debian packages, downloaded binaries, your own files), <strong>where</strong> the files go, <strong>how</strong> the app shows up in IGEL Setup / UMS, and <strong>what</strong> runs at install time.</p>
+<ul>
+<li><a href="https://kb.igel.com/igel-app-creator/current/igel-app-creator-portal">IGEL KB: IGEL App Creator Portal</a></li>
+<li><a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/blob/main/utils/IGEL-SDK-Reference-Manual.pdf">IGEL SDK Reference Manual</a> -- details on the files and format of files used in recipes</li>
+<li><a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/utils/igelpkg-new-template-1.0.0.zip" download>IGEL SDK: Initial Data Structure Template</a></li>
+<li><a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES">IGEL Community GitHub: IGEL OS APP RECIPES</a></li>
+<li><a href=".././HOWTO-Add-Applications/">IGEL Community Docs: HOWTO Add Applications</a></li>
+<li><a href=".././HOWTO-Docker/#using-igel-os-app-sdk-docker-image">IGEL Community Docs: HOWTO Docker - Using IGEL OS App SDK Docker image</a></li>
+<li><a href="https://igelcommunity.slack.com/archives/C08D44B2J2X">IGEL Community Slack: #igel-app-creator-portal</a></li>
+<li><a href="https://kb.igel.com/en/apps-created-by-igel-ready-partners/current/difference-between-apps-created-by-igel-and-apps-created-by-igel-ready-partners">IGEL KB: Difference between Apps Created by IGEL and Apps Created by IGEL Ready Partners</a> -- IGEL supports only the apps IGEL creates</li>
+</ul>
+<p><strong>Please Note:</strong></p>
+<ul>
+<li>This page is for IGEL OS 12 only. For OS 11 use <a href="https://github.com/IGEL-Community/IGEL-Custom-Partitions">Custom Partitions</a>.</li>
+<li>The IGEL SDK is not needed for creating recipes. The IGEL App Creator Portal runs the IGEL SDK to create and sign your application.</li>
+<li>IGEL App Creator Portal requirements: UMS 12.04+, IGEL OS 12.5+, and an IGEL account with the <code>App Creator</code> or <code>Super Admin</code> role (assigned in the IGEL Customer Portal).</li>
+<li>For security requirements, the IGEL App Creator Portal only allows Debian and Ubuntu official repository URLs. Use the file upload feature to add other files.</li>
+<li>IGEL is not responsible for, nor grants a license to, the applications created via the App Creator Portal. It is your responsibility to obtain all necessary rights to the components.</li>
+<li>Use underscores, not dashes, in recipe file names and paths (session scripts, folders). Dashes have been reported to break the desktop launcher and icon.</li>
+<li>IGEL OS has no multiarch support, so 32-bit applications (and Wine) are not a good fit. Consider <a href=".././HOWTO-Docker/#run-wine-in-docker">Docker</a> instead.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="recipe-workflow">Recipe Workflow</h2>
+<pre class="mermaid"><code>flowchart LR
+    A[Find app&lt;br&gt;.deb / tar / zip] --&gt; B[Create recipe&lt;br&gt;from template or&lt;br&gt;similar recipe]
+    B --&gt; C[Build&lt;br&gt;App Creator Portal&lt;br&gt;or igelpkg]
+    C --&gt; D[Deploy signing cert&lt;br&gt;and app to device]
+    D --&gt; E{App works?}
+    E -- No: missing libs,&lt;br&gt;links, config --&gt; B
+    E -- Yes --&gt; F[Bump version&lt;br&gt;share recipe]</code></pre>
+<p>Summary of steps:</p>
+<ul>
+<li>Find the application package (Debian package name, or a vendor <code>.deb</code>, <code>.tar.*</code>, <code>.zip</code>)</li>
+<li>Copy the <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/utils/igelpkg-new-template-1.0.0.zip">template</a> or, better, an existing recipe for a similar app</li>
+<li>Edit <code>app.json</code>, <code>igel/*.json</code>, <code>data/*</code>, and add a session start script under <code>input/all/config/sessions/</code></li>
+<li>Build the app with the IGEL App Creator Portal (or <code>igelpkg</code>)</li>
+<li>Deploy the app signing certificate and the app to a test device</li>
+<li>Fix missing libraries, links, and settings; rebuild until the app works</li>
+<li>Increase the <code>version</code> in <code>app.json</code> each time the recipe changes</li>
+</ul>
+<hr />
+<hr />
+<h2 id="recipe-folder-layout">Recipe Folder Layout</h2>
+<p>Example: <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/speedcrunch">SpeedCrunch</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>speedcrunch/
+├──<span class="w"> </span>app.json<span class="w">                          </span><span class="c1"># app name, version, vendor, icons, rw partition</span>
+├──<span class="w"> </span>README.md<span class="w">                         </span><span class="c1"># disclaimer, where to download binaries, notes</span>
+├──<span class="w"> </span>.gitignore<span class="w">                        </span><span class="c1"># ignore igelpkg build output</span>
+├──<span class="w"> </span>data/
+│<span class="w">   </span>├──<span class="w"> </span>app.png<span class="w">                       </span><span class="c1"># color icon (App Portal / UMS)</span>
+│<span class="w">   </span>├──<span class="w"> </span>monochrome.png<span class="w">                </span><span class="c1"># monochrome icon</span>
+│<span class="w">   </span>├──<span class="w"> </span>changelogs/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>en<span class="w">                        </span><span class="c1"># release notes</span>
+│<span class="w">   </span>├──<span class="w"> </span>descriptions/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>en<span class="w">                        </span><span class="c1"># short + long description</span>
+│<span class="w">   </span>└──<span class="w"> </span>config/
+│<span class="w">       </span>├──<span class="w"> </span>config.param<span class="w">              </span><span class="c1"># setup parameters / session definition</span>
+│<span class="w">       </span>├──<span class="w"> </span>config.param.locale<span class="w">       </span><span class="c1"># localized display names</span>
+│<span class="w">       </span>├──<span class="w"> </span>translation.json<span class="w">          </span><span class="c1"># localized Setup page labels</span>
+│<span class="w">       </span>└──<span class="w"> </span>ui.json<span class="w">                   </span><span class="c1"># Setup page layout</span>
+├──<span class="w"> </span>igel/
+│<span class="w">   </span>├──<span class="w"> </span>debian.json<span class="w">                   </span><span class="c1"># Debian packages to include</span>
+│<span class="w">   </span>├──<span class="w"> </span>dirs.json<span class="w">                     </span><span class="c1"># directories to create (persistent or not)</span>
+│<span class="w">   </span>└──<span class="w"> </span>install.json<span class="w">                  </span><span class="c1"># which files to include and where</span>
+└──<span class="w"> </span>input/
+<span class="w">    </span>└──<span class="w"> </span>all/
+<span class="w">        </span>└──<span class="w"> </span>config/
+<span class="w">            </span>└──<span class="w"> </span>sessions/
+<span class="w">                </span>└──<span class="w"> </span>speedcrunch0<span class="w">      </span><span class="c1"># session start script</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="what-each-file-does">What Each File Does</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Needed</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app.json</code></td>
+<td>Required</td>
+<td>App metadata: technical name, version, author, vendor, display name, icons, categories, read/write partition, dependencies</td>
+</tr>
+<tr>
+<td><code>data/app.svg</code> (or <code>.png</code>)</td>
+<td>Required</td>
+<td>Color icon shown in the App Portal and UMS. File name is set in <code>app.json</code></td>
+</tr>
+<tr>
+<td><code>data/monochrome.svg</code> (or <code>.png</code>)</td>
+<td>Required</td>
+<td>Monochrome icon. File name is set in <code>app.json</code></td>
+</tr>
+<tr>
+<td><code>data/descriptions/en</code></td>
+<td>Required</td>
+<td>Short description, empty line, long description (plain text or Markdown)</td>
+</tr>
+<tr>
+<td><code>data/changelogs/en</code></td>
+<td>Recommended</td>
+<td>Release notes shown in the App Portal</td>
+</tr>
+<tr>
+<td><code>data/eula/en</code></td>
+<td>Optional</td>
+<td>End User License Agreement, if the app needs one</td>
+</tr>
+<tr>
+<td><code>data/config/config.param</code></td>
+<td>Optional</td>
+<td>Setup parameters (registry keys) for the app, including session definitions</td>
+</tr>
+<tr>
+<td><code>data/config/config.param.locale</code></td>
+<td>Optional</td>
+<td>Localized display names for the parameters in <code>config.param</code></td>
+</tr>
+<tr>
+<td><code>data/config/ui.json</code></td>
+<td>Optional</td>
+<td>Layout of the app's page in IGEL Setup / UMS profile</td>
+</tr>
+<tr>
+<td><code>data/config/translation.json</code></td>
+<td>Optional</td>
+<td>Labels (per language) used by <code>ui.json</code></td>
+</tr>
+<tr>
+<td><code>igel/debian.json</code></td>
+<td>One of these two</td>
+<td>Debian packages to download and include</td>
+</tr>
+<tr>
+<td><code>igel/thirdparty.json</code></td>
+<td>One of these two</td>
+<td>Other archives (<code>.deb</code>, <code>.tar.*</code>, <code>.zip</code>, ...) to include, with license info</td>
+</tr>
+<tr>
+<td><code>igel/install.json</code></td>
+<td>Required</td>
+<td>Which files (regular expressions) from the packages are included, where they go, owner, permissions, strip</td>
+</tr>
+<tr>
+<td><code>igel/dirs.json</code></td>
+<td>Optional</td>
+<td>Directories to create; <code>persistent: true</code> links them to the app's read/write partition</td>
+</tr>
+<tr>
+<td><code>igel/install.sh</code></td>
+<td>Optional</td>
+<td>Runs when the app is installed. Used to enable systemd services</td>
+</tr>
+<tr>
+<td><code>igel/uninstall.sh</code></td>
+<td>Optional</td>
+<td>Runs when the app is uninstalled. Used to disable services and clean up</td>
+</tr>
+<tr>
+<td><code>igel/pre_package_commands.sh</code></td>
+<td>Optional</td>
+<td>Runs at <strong>build time</strong>, before packaging. Used to create files / folders inside the app</td>
+</tr>
+<tr>
+<td><code>igel/input.json</code></td>
+<td>Optional</td>
+<td>Owner / permissions for files coming from <code>input/</code> (template default is fine for most recipes)</td>
+</tr>
+<tr>
+<td><code>igel/ignore.json</code></td>
+<td>Optional</td>
+<td>List of file patterns to ignore (template default is fine for most recipes)</td>
+</tr>
+<tr>
+<td><code>igel/variable.json</code></td>
+<td>Optional</td>
+<td>Variables for <code>igelpkg</code> templates. <strong>Not supported</strong> by the App Creator Portal in <code>app.json</code> or <code>thirdparty.json</code></td>
+</tr>
+<tr>
+<td><code>igel/checksums.json</code></td>
+<td>Optional</td>
+<td>SHA256 checksums of downloaded Debian packages</td>
+</tr>
+<tr>
+<td><code>input/all/...</code></td>
+<td>Optional</td>
+<td>Your own files, copied as-is into the app. Path below <code>input/all/</code> is the path on IGEL OS</td>
+</tr>
+<tr>
+<td><code>input/all/config/sessions/&lt;name&gt;0</code></td>
+<td>For apps with a desktop icon</td>
+<td>Session start script. Name must match the session in <code>config.param</code></td>
+</tr>
+<tr>
+<td><code>input/all/etc/systemd/system/*.service</code></td>
+<td>Optional</td>
+<td>systemd service running as root</td>
+</tr>
+<tr>
+<td><code>input/all/etc/systemd/user/*.service</code></td>
+<td>Optional</td>
+<td>systemd service running as user</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Community repo</td>
+<td>Disclaimer, link to the vendor download, file names expected by <code>thirdparty.json</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="where-the-files-end-up-on-igel-os">Where the Files End Up on IGEL OS</h2>
+<table>
+<thead>
+<tr>
+<th>Location on IGEL OS</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/services/&lt;app_name&gt;/</code></td>
+<td>The app's read-only partition (everything from <code>install.json</code> and <code>input/all/</code>)</td>
+</tr>
+<tr>
+<td><code>/services/&lt;app_name&gt;/.icons/</code></td>
+<td>Icons referenced in <code>app.json</code> (handy for the session icon in <code>config.param</code>)</td>
+</tr>
+<tr>
+<td><code>/services/&lt;app_name&gt;/etc/setup.def.d/&lt;app_name&gt;/</code></td>
+<td>Processed <code>data/config/</code> files (<code>.setup.def</code>, <code>.setup.def.ui.json</code>, <code>.setup.def.translation</code>)</td>
+</tr>
+<tr>
+<td><code>/services/&lt;app_name&gt;/.licenses/</code></td>
+<td>One file per license included in the app</td>
+</tr>
+<tr>
+<td><code>/services/&lt;app_name&gt;/.scripts/</code></td>
+<td>Generated <code>install.sh</code>, <code>cache.json</code>, <code>post_mount.sh</code></td>
+</tr>
+<tr>
+<td><code>/services_rw/&lt;app_name&gt;/</code></td>
+<td>The app's read/write partition (only if <code>rw_partition</code> is defined in <code>app.json</code>)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>The IGEL App Creator Portal automatically links well-known folders (libraries, <code>.desktop</code> files, <code>udev</code> rules, <code>/opt/...</code>) from <code>/services/&lt;app_name&gt;</code> into the file system. For anything else, see <a href="#how-to-add-links-to-servicesapplication_name">How to add links to /services/application_name</a>.</p>
+</li>
+<li>
+<p>Persistent directories in <code>dirs.json</code> are stored on <code>/services_rw/&lt;app_name&gt;/</code> and linked to their normal path. Example: <code>/userhome/.config/SpeedCrunch</code> is stored in <code>/services_rw/speedcrunch/userhome/.config/SpeedCrunch</code></p>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="appjson">app.json</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"Miscellaneous"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app.png"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"monochrome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monochrome.png"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"speedcrunch"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The IGEL community"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SpeedCrunch Team"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"rw_partition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"compressed"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"prefer_btrfs"</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"release"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SpeedCrunch (Community)"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.12.0+1.1"</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Technical name. 3-42 characters, letters, numbers, and underscores (not as first character). Used for <code>/services/&lt;name&gt;</code> and <code>app.&lt;name&gt;</code> setup parameters. Must be unique</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Technical version. Must follow <a href="https://semver.org/">Semantic Versioning (SemVer)</a>. Used for ordering versions in UMS / App Portal and for dependencies</td>
+</tr>
+<tr>
+<td><code>public_version</code></td>
+<td>Display version. <strong>Must be empty or removed for the IGEL App Creator Portal</strong></td>
+</tr>
+<tr>
+<td><code>summary.en</code></td>
+<td>Display name in the App Portal, UMS, and on the device. Community recipes add <code>(Community)</code></td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Creator of the recipe / package. Required</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td>Vendor of the application that is re-packaged. Required</td>
+</tr>
+<tr>
+<td><code>icons.app</code> / <code>icons.monochrome</code></td>
+<td>File names of the icons in <code>data/</code></td>
+</tr>
+<tr>
+<td><code>categories</code></td>
+<td>List of categories. Community recipes use <code>Miscellaneous</code></td>
+</tr>
+<tr>
+<td><code>rw_partition</code></td>
+<td>Read/write partition for persistent data (see below)</td>
+</tr>
+<tr>
+<td><code>requires</code> / <code>suggests</code> / <code>provides</code> / <code>conflicts</code></td>
+<td>Dependencies on other apps. Example: <code>{"name": "base_system", "version": "&gt;=12.8.0"}</code></td>
+</tr>
+<tr>
+<td><code>release</code></td>
+<td>Leave empty</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong> The App Creator Portal does not support variables in <code>app.json</code>. <code>"version": "%version%"</code> is invalid while <code>"version": "1.0.0"</code> is valid.</p>
+<h3 id="version">Version</h3>
+<ul>
+<li>
+<p>The technical version has two parts: the vendor's version of the application, then <code>+</code> and the version of the recipe.</p>
+</li>
+<li>
+<p>Community recipes use <code>&lt;vendor version&gt;+&lt;recipe build&gt;</code>, for example <code>0.12.0+1.1</code> or <code>15.78.3+1.2</code>. Bump the part after the <code>+</code> when you change the recipe but not the application.</p>
+</li>
+<li>
+<p>Version example used for IGEL OS Base OS:</p>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">      </span>base_system-12.6.0
+<span class="w">      </span>base_system-12.6.0+1
+<span class="w">      </span>base_system-12.6.0+2
+<span class="w">      </span>base_system-12.6.1-0.tp.3
+<span class="w">      </span>base_system-12.6.1-1.rc.2
+<span class="w">      </span>base_system-12.7.0-0.tp.2
+</code></pre></div></td></tr></table></div>
+<h3 id="dependencies-requires">Dependencies (requires)</h3>
+<p>Require a minimum base system or another app, which is installed automatically with your app. Example from <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/videoscreensaver">Video Screen Saver</a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base_system"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=12.8.0"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edge"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=142.0.0"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="read-write-partition-rw_partition">Read / Write Partition (rw_partition)</h3>
+<p>Needed when the app stores data that must survive a reboot (settings, profiles, caches) or when <code>dirs.json</code> uses <code>"persistent": true</code>.</p>
+<ul>
+<li>
+<p><code>size</code>: <code>small</code>, <code>medium</code>, <code>large</code> (calculated from the device storage size), or an exact size in KiB without quotes (<code>2000000</code> = ~2GB)</p>
+</li>
+<li>
+<p><code>flags</code>:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Flags</th>
+<th>File system</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(none)</td>
+<td>EXT4</td>
+</tr>
+<tr>
+<td><code>compressed</code></td>
+<td>NTFS</td>
+</tr>
+<tr>
+<td><code>compressed</code> + <code>prefer_btrfs</code> and size &gt;= 128 MB</td>
+<td>BTRFS</td>
+</tr>
+<tr>
+<td><code>compressed</code> + <code>prefer_btrfs</code> and size &lt; 128 MB</td>
+<td>NTFS</td>
+</tr>
+<tr>
+<td><code>allow_execute</code></td>
+<td>Allow programs to be executed from the read/write partition</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">"rw_partition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"compressed"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"prefer_btrfs"</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> Apps that use SQLite (for example 1Password and OneDrive) may not work on a compressed NTFS partition. Use <code>prefer_btrfs</code>. Check the file system used for <code>/services_rw/*</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>df<span class="w"> </span>-Th<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>services_rw
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="data">data/</h2>
+<h3 id="icons-dataappsvg-datamonochromesvg">Icons (data/app.svg, data/monochrome.svg)</h3>
+<ul>
+<li>File names are set in <code>app.json</code> -&gt; <code>icons</code>. SVG is recommended (PNG and JPG are used in some community recipes).</li>
+<li>SVG icons: square, transparent background, <code>viewBox</code> attribute aligned to the image border, no filters, no animations.</li>
+<li>Monochrome icon: shapes with fill color only, no strokes.</li>
+<li>The icons are copied to <code>/services/&lt;app_name&gt;/.icons/</code> on the device.</li>
+</ul>
+<h3 id="datadescriptionsen">data/descriptions/en</h3>
+<p>First line is the short description, then an empty line, then the long description (plain text or Markdown). Maximum length in the App Creator Portal is 10,000 characters. Add other languages as additional files (example: <code>de</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>A<span class="w"> </span>high-precision<span class="w"> </span>scientific<span class="w"> </span>calculator
+
+SpeedCrunch<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>fast,<span class="w"> </span>high-precision<span class="w"> </span>scientific<span class="w"> </span>calculator.<span class="w"> </span>It<span class="w"> </span>features<span class="w"> </span>a<span class="w"> </span>syntax-highlighted<span class="w"> </span>scrollable<span class="w"> </span>display<span class="w"> </span>and<span class="w"> </span>is<span class="w"> </span>designed<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>fully<span class="w"> </span>used<span class="w"> </span>via<span class="w"> </span>keyboard.
+</code></pre></div></td></tr></table></div>
+<h3 id="datachangelogsen">data/changelogs/en</h3>
+<p>Release notes. Each main statement starts with <code>*</code>, sub-statements with <code>-</code> and <code>--</code>. End sentences with a full stop.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>*<span class="w"> </span>Initial<span class="w"> </span>release.
+*<span class="w"> </span>Added<span class="w"> </span>persistent<span class="w"> </span>settings<span class="w"> </span>folder.
+<span class="w">  </span>-<span class="w"> </span>Settings<span class="w"> </span>are<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span>/userhome/.config/SpeedCrunch.
+</code></pre></div></td></tr></table></div>
+<h3 id="dataeulaen">data/eula/en</h3>
+<p>Optional EULA file, displayed in the App Portal. UMS defines if the EULA is accepted by the user or company-wide.</p>
+<h3 id="dataconfigconfigparam">data/config/config.param</h3>
+<p>Defines the setup parameters (registry keys) of the app. Every parameter is prefixed with <code>app.&lt;app_name&gt;.</code> by the builder.</p>
+<h4 id="session-desktop-start-menu-icon">Session (desktop / start menu icon)</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;sessions&gt;
+<span class="w">    </span>&lt;speedcrunch%&gt;
+<span class="w">        </span><span class="nv">extends_base</span><span class="o">=</span>&lt;sessions.base%&gt;
+<span class="w">        </span><span class="nv">node_action</span><span class="o">=</span>&lt;wm_postsetup&gt;
+<span class="w">    </span>&lt;/speedcrunch%&gt;
+<span class="w">    </span>&lt;speedcrunch0&gt;
+<span class="w">        </span>&lt;name_localized&gt;
+<span class="w">            </span>displayname<span class="o">[</span>en_us<span class="o">]=</span>&lt;SpeedCrunch&gt;
+<span class="w">        </span>&lt;/name_localized&gt;
+<span class="w">        </span>&lt;icon&gt;
+<span class="w">            </span><span class="nv">value</span><span class="o">=</span>&lt;speedcrunch&gt;
+<span class="w">        </span>&lt;/icon&gt;
+<span class="w">        </span>&lt;type&gt;
+<span class="w">            </span>displayname<span class="o">[</span>en_us<span class="o">]=</span>&lt;Misc&gt;
+<span class="w">        </span>&lt;/type&gt;
+<span class="w">    </span>&lt;/speedcrunch0&gt;
+&lt;/sessions&gt;
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Lines: 2-5</strong> <code>&lt;speedcrunch%&gt;</code> is the session template. <code>extends_base=&lt;sessions.base%&gt;</code> adds the standard session settings (start menu, desktop, autostart, etc.). <code>node_action=&lt;wm_postsetup&gt;</code> refreshes the desktop when settings change.</li>
+<li><strong>Lines: 6-16</strong> <code>&lt;speedcrunch0&gt;</code> is the session instance. The name must match the start script <code>input/all/config/sessions/speedcrunch0</code>.</li>
+<li><strong>Lines: 10-12</strong> <code>icon</code> is either an icon theme name (<code>speedcrunch</code>, from <code>/usr/share/icons</code>) or a full path such as <code>/services/speedcrunch/.icons/app.png</code>.</li>
+</ul>
+<h4 id="settings-custom-parameters">Settings (custom parameters)</h4>
+<p>Example from <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/videoscreensaver">Video Screen Saver</a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;options&gt;
+<span class="w">    </span>&lt;idle_seconds&gt;
+<span class="w">        </span><span class="nv">value</span><span class="o">=</span>&lt;<span class="m">300</span>&gt;
+<span class="w">        </span><span class="nv">type</span><span class="o">=</span>&lt;int&gt;
+<span class="w">        </span><span class="nv">runtime</span><span class="o">=</span>&lt;true&gt;
+<span class="w">        </span><span class="nv">displayname</span><span class="o">=</span>&lt;Idle<span class="w"> </span>timeout,<span class="w"> </span><span class="k">in</span><span class="w"> </span>seconds&gt;
+<span class="w">    </span>&lt;/idle_seconds&gt;
+<span class="w">    </span>&lt;play_order&gt;
+<span class="w">        </span><span class="nv">value</span><span class="o">=</span>&lt;Random&gt;
+<span class="w">        </span><span class="nv">type</span><span class="o">=</span>&lt;string&gt;
+<span class="w">        </span><span class="nv">range</span><span class="o">=</span>&lt;<span class="o">[</span>Random<span class="o">][</span>By<span class="w"> </span>Filename<span class="o">]</span>&gt;
+<span class="w">        </span><span class="nv">runtime</span><span class="o">=</span>&lt;true&gt;
+<span class="w">        </span><span class="nv">displayname</span><span class="o">=</span>&lt;Playlist:<span class="w"> </span>Random<span class="w"> </span>or<span class="w"> </span><span class="k">in</span><span class="w"> </span>order<span class="w"> </span>of<span class="w"> </span>File<span class="w"> </span>Name<span class="w"> </span>sorting&gt;
+<span class="w">    </span>&lt;/play_order&gt;
+<span class="w">    </span><span class="nv">node_action</span><span class="o">=</span>&lt;runuser<span class="w"> </span>-l<span class="w"> </span>user<span class="w"> </span>-c<span class="w"> </span><span class="s2">"systemctl --user restart videoscreensaver.service"</span>&gt;
+&lt;/options&gt;
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>range</code> creates a drop-down list</li>
+<li><code>node_action</code> is the command run when a setting in this node changes</li>
+<li>Read the values on the device with <code>get</code>:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>get<span class="w"> </span>app.videoscreensaver.options.idle_seconds
+</code></pre></div></td></tr></table></div>
+<h3 id="dataconfigconfigparamlocale">data/config/config.param.locale</h3>
+<p>Localized display names for parameters in <code>config.param</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;sessions&gt;
+<span class="w">    </span>&lt;speedcrunch0&gt;
+<span class="w">        </span>&lt;name_localized&gt;
+<span class="w">            </span>displayname<span class="o">[</span>de_de<span class="o">]=</span>&lt;SpeedCrunch&gt;
+<span class="w">        </span>&lt;/name_localized&gt;
+<span class="w">    </span>&lt;/speedcrunch0&gt;
+&lt;/sessions&gt;
+</code></pre></div></td></tr></table></div>
+<h3 id="dataconfiguijson">data/config/ui.json</h3>
+<p>Layout of the app's page in IGEL Setup and in the UMS profile editor. For a single session:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"root"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"root"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"childrenIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"base"</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"root"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"nlsResourceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"title"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SpeedCrunch"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"childrenIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"sessions"</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"sessions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sessions"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"parentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"nlsResourceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sessions.label"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Session"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"instancePage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"fixInstanceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sessionPage"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"paramId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app.speedcrunch.sessions.speedcrunch"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"instancePageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sessions.genericInstancePage"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Line: 23</strong> <code>paramId</code> is <code>app.&lt;app_name&gt;.sessions.&lt;session template name without %&gt;</code></li>
+<li>For custom settings use <code>"type": "generic"</code> and <code>"paramId": "app.&lt;app_name&gt;.options.&lt;parameter&gt;"</code></li>
+</ul>
+<p><strong>NOTE:</strong> <code>ui.json</code> must be valid JSON (no trailing commas). Check with <code>python3 -m json.tool data/config/ui.json</code>.</p>
+<h3 id="dataconfigtranslationjson">data/config/translation.json</h3>
+<p>Labels referenced by <code>nlsResourceId</code> in <code>ui.json</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"sessions.label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"de"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sitzung"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Session"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"de"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SpeedCrunch"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SpeedCrunch"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="igel">igel/</h2>
+<h3 id="igeldebianjson">igel/debian.json</h3>
+<p>Debian packages to download from the official repositories. Licenses are retrieved automatically from most packages.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"speedcrunch"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>If a package has a non-standard license, the build fails and the license must be added. <code>%tmp%</code> points to the extracted packages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"libmcpp0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"licenses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mcpp-2.7"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"%tmp%/usr/share/doc/libmcpp0/copyright"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> Only list packages the app needs that are <strong>not</strong> already in the IGEL OS base system. See <a href="#finding-missing-libraries">Finding Missing Libraries</a>.</p>
+<h3 id="igelthirdpartyjson">igel/thirdparty.json</h3>
+<p>Archives that are not from the official Debian / Ubuntu repositories (vendor <code>.deb</code>, <code>.tar.*</code>, <code>.zip</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file:///tmp/teamviewer_amd64.deb"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"dest"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"licenses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GPL-3.0-or-later"</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>Location of the archive. Community recipes use <code>file:///tmp/&lt;file name&gt;</code>; the App Creator Portal asks you to upload a file with this name</td>
+</tr>
+<tr>
+<td><code>dest</code></td>
+<td>Optional sub folder for the extracted files. Needed if two archives contain files with the same name</td>
+</tr>
+<tr>
+<td><code>extract</code></td>
+<td>Optional. <code>false</code> copies the file without extracting it. Default is <code>true</code></td>
+</tr>
+<tr>
+<td><code>licenses[].name</code></td>
+<td>License name, use the <a href="https://spdx.org/licenses/">SPDX License List</a> identifier</td>
+</tr>
+<tr>
+<td><code>licenses[].text</code> / <code>licenses[].file</code></td>
+<td>License text or license file, if the license is not in the SPDX list</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Use one object per license. Repeating <code>"name"</code> inside one object keeps only the last name.</li>
+<li>The uploaded file name must match the name in <code>url</code> exactly. Vendor downloads usually include a version (<code>yubico-authenticator-7.2.3-linux.tar.gz</code>, <code>docker-ce_5%3a29.6.1-1~debian.12~bookworm_amd64.deb</code>); rename the file to the generic name used in the recipe (<code>yubico-authenticator-latest-linux.tar.gz</code>, <code>docker-ce.deb</code>). Community recipes keep the name generic so the recipe does not change for each new version.</li>
+<li>If the archive contains version-numbered folders, <code>install.json</code> may also contain the version and must be updated (build error: <code>Following install does not match any files</code>).</li>
+<li>File types accepted by the App Creator Portal: <code>.tar</code>, <code>.tgz</code>, <code>.tar.gz</code>, <code>.tar.xz</code>, <code>.txz</code>, <code>.xz</code>, <code>.gz</code>, <code>.bz2</code>, <code>.zip</code>, <code>.deb</code></li>
+<li>File names must be unique; files that differ only in upper / lower case are treated as the same file.</li>
+<li>Put the vendor download link and the expected file name in the recipe <code>README.md</code>. Example: <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/teamviewer">Teamviewer README</a></li>
+</ul>
+<h3 id="igelinstalljson">igel/install.json</h3>
+<p>Selects which files from the Debian packages / archives are included in the app.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"excludes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"usr/share/applications.*"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"usr/share/doc.*"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"usr/share/man.*"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"usr/share/metainfo.*"</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code></td>
+<td>Regular expression of files to include. <code>.*</code> includes everything</td>
+</tr>
+<tr>
+<td><code>excludes</code></td>
+<td>Regular expressions of files to leave out. Excluding <code>usr/share/applications.*</code> keeps the vendor <code>.desktop</code> file out of the start menu so only the IGEL session is shown</td>
+</tr>
+<tr>
+<td><code>destination</code></td>
+<td>Target folder (with wildcards) or new file name (single file). Default is the same path as in the archive</td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td><code>uid:gid</code>, default <code>0:0</code> (root)</td>
+</tr>
+<tr>
+<td><code>permissions</code></td>
+<td>Example <code>755</code>. Default is unchanged</td>
+</tr>
+<tr>
+<td><code>strip</code></td>
+<td>Strip symbols from binaries to reduce size. Default <code>true</code>. Set <code>false</code> if the vendor binaries break when stripped</td>
+</tr>
+</tbody>
+</table>
+<p>Example of a single-binary archive placed in <code>/usr/bin</code> (<a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/7zip">7zip</a>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/bin"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0:0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"755"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="igeldirsjson">igel/dirs.json</h3>
+<p>Directories to create. With <code>"persistent": true</code> the directory is stored on the app's read/write partition (<code>rw_partition</code> must be defined in <code>app.json</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/userhome/.config/SpeedCrunch"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"persistent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"777:100"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>777:100</code> is <code>user:users</code>, the desktop user on IGEL OS</li>
+<li>Optional <code>permissions</code>, example <code>750</code></li>
+<li>To find which folders an app writes to, run the app, then check <code>/userhome/.config</code>, <code>/userhome/.local/share</code>, and <code>/userhome/.&lt;app&gt;</code></li>
+<li><code>path</code> must be the folder that holds the files. A sub folder of it is not enough.</li>
+<li>Folders the app writes to must be owned by <code>777:100</code>. A folder owned by root (for example created by an init script) can make the app fail silently when started as <code>user</code>, while it works as root.</li>
+</ul>
+<h3 id="igelinstallsh">igel/install.sh</h3>
+<p>Runs when the app is installed on the device. Mostly used to enable services that are part of the app.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># For root services (input/all/etc/systemd/system/):</span>
+enable_system_service<span class="w"> </span>teamviewerd.service
+<span class="c1"># For user services (input/all/etc/systemd/user/):</span>
+enable_user_service<span class="w"> </span>videoscreensaver.service
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTE:</strong> Community recipes use <code>enable_user_service</code> for user services. The SDK Reference Manual (2024-07-19) shows <code>enable_system_user_service</code>.</p>
+<p>Rules from the SDK review criteria:</p>
+<ul>
+<li>Do not change base system files, ownership, or permissions</li>
+<li>Do not download or side-load anything; all content must be in the app</li>
+<li>Only enable / disable services that are part of the app</li>
+<li>Exit with a value between 1 and 254 on error</li>
+</ul>
+<h3 id="igeluninstallsh">igel/uninstall.sh</h3>
+<p>Runs when the app is uninstalled. Example from <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/beyondtrust_sra">BeyondTrust SRA</a>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+disable_system_service<span class="w"> </span>beyondtrust-sra.service
+</code></pre></div></td></tr></table></div>
+<h3 id="igelpre_package_commandssh">igel/pre_package_commands.sh</h3>
+<p>Runs on the build machine before the app is packaged. <code>%root%</code> is the root of the app. Use it to create folders and generate files (scripts, config files) inside the app.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"%root%/etc/topaz"</span>
+cat<span class="w"> </span>&lt;&lt;<span class="s2">"EOF"</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">"%root%/etc/topaz/topaz-init.sh"</span>
+<span class="c1">#!/bin/bash</span>
+<span class="c1"># script contents</span>
+EOF
+</code></pre></div></td></tr></table></div>
+<p>Example: <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Tools_Drivers/topaz_sigplus_pro_c_object_library">Topaz SigPlus Pro C++ Object Library</a></p>
+<h3 id="igelinputjson-igelignorejson-igelvariablejson-igelchecksumsjson">igel/input.json, igel/ignore.json, igel/variable.json, igel/checksums.json</h3>
+<ul>
+<li>Leave these as in the template unless needed. They can also be deleted.</li>
+<li><code>variable.json</code>: variables for <code>igelpkg</code>. The App Creator Portal does <strong>not</strong> support variable templates in <code>app.json</code> or <code>thirdparty.json</code>; resolve them manually before uploading.</li>
+<li><code>checksums.json</code>: SHA256 checksums of Debian packages. Example: <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/frozenbubble">Frozen Bubble</a></li>
+</ul>
+<hr />
+<hr />
+<h2 id="inputall">input/all/</h2>
+<p>Files in <code>input/all/</code> are copied into the app as-is. The path below <code>input/all/</code> is the path inside <code>/services/&lt;app_name&gt;/</code>.</p>
+<h3 id="session-start-script">Session start script</h3>
+<p><code>input/all/config/sessions/speedcrunch0</code> -- name matches <code>&lt;speedcrunch0&gt;</code> in <code>config.param</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+speedcrunch
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Use the full path if the binary is not linked into the path: <code>/services/teamviewer/usr/bin/teamviewer</code></li>
+<li>The script must be executable</li>
+</ul>
+<h3 id="systemd-services">systemd services</h3>
+<ul>
+<li>Root service: <code>input/all/etc/systemd/system/&lt;name&gt;.service</code></li>
+<li>User service: <code>input/all/etc/systemd/user/&lt;name&gt;.service</code></li>
+<li>Enable it in <code>igel/install.sh</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>&lt;app_name&gt;<span class="w"> </span>configuration
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>oneshot
+<span class="nv">RemainAfterExit</span><span class="o">=</span>Yes
+<span class="nv">ExecStart</span><span class="o">=</span>/services/&lt;app_name&gt;/&lt;path_to_binary&gt;
+</code></pre></div></td></tr></table></div>
+<h3 id="virtual-channel-plugins-vdi">Virtual channel plugins (VDI)</h3>
+<p>To add a plugin to a VDI client, place a JSON file in <code>input/all/etc/igel/configuration.d/app/&lt;vdi_app&gt;/&lt;plugin&gt;_config.json</code> where <code>&lt;vdi_app&gt;</code> is <code>cwa</code>, <code>avd</code>, <code>rdp</code>, <code>cpc</code>, or <code>horizon</code>. See the SDK Reference Manual chapter "Multimedia Plugins and Virtual Channels".</p>
+<hr />
+<hr />
+<h2 id="how-to-add-links-to-servicesapplication_name">How to add links to /services/application_name</h2>
+<p>The App Creator Portal automatically links well-known folders. For special links, create a system service file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>input/all/etc/systemd/system/appname.service
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>My<span class="w"> </span>app<span class="w"> </span>Service
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">ExecStart</span><span class="o">=</span>/bin/ln<span class="w"> </span>-sf<span class="w"> </span>/services/citrix_nsgclient/opt/Citrix/NSGClient<span class="w"> </span>/opt/Citrix/NSGClient
+</code></pre></div></td></tr></table></div>
+<p>If your recipe already has a <code>.service</code> file just add a line:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">ExecStartPre</span><span class="o">=</span>/bin/ln<span class="w"> </span>-sf<span class="w"> </span>/services/citrix_nsgclient/opt/Citrix/NSGClient<span class="w"> </span>/opt/Citrix/NSGClient
+</code></pre></div></td></tr></table></div>
+<p>Enable the service in <code>igel/install.sh</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+enable_system_service<span class="w"> </span>appname.service
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="steps-to-create-a-new-recipe">Steps to Create a New Recipe</h2>
+<h3 id="1-find-the-application">1. Find the application</h3>
+<ul>
+<li>Check if a recipe already exists: <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source">IGEL OS APP RECIPES</a> and in the IGEL App Creator Portal</li>
+<li>Debian package: search <a href="https://packages.debian.org">packages.debian.org</a> (suite <code>bookworm</code>) for the package name, add it to <code>igel/debian.json</code></li>
+<li>Vendor package: download the <code>.deb</code> / <code>.tar.*</code> / <code>.zip</code>, add it to <code>igel/thirdparty.json</code> as <code>file:///tmp/&lt;file name&gt;</code></li>
+<li><a href=".././HOWTO-Docker/#use-docker-to-collect-latest-deb-files">Use Docker to collect latest deb files</a> when the vendor provides an apt repository</li>
+<li>AppImage: use it as-is (see <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Office/libreoffice_appimage">LibreOffice AppImage</a>) or extract it with <code>--appimage-extract</code></li>
+<li>Look at what the vendor <code>.deb</code> does at install time; the <code>postinst</code> script and any services tell you what the recipe must do (links, folders, services):</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>deb_ctrl<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>dpkg-deb<span class="w"> </span>-e<span class="w"> </span>vendor_app_amd64.deb<span class="w"> </span>deb_ctrl<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>cat<span class="w"> </span>deb_ctrl/postinst
+dpkg-deb<span class="w"> </span>-c<span class="w"> </span>vendor_app_amd64.deb<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'\.service|/opt/|/etc/'</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Examples of the recipe creation process are in the closed issues of <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/issues?q=is%3Aissue+is%3Aclosed">IGEL OS APP RECIPES</a>, for example <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/issues/307">#307 Palo Alto Networks Cortex XDR Collector</a></li>
+<li>Some recipes include a script that builds a <code>tar.bz2</code> from a vendor installer by comparing the system before and after the install. Run these on a clean Ubuntu VM (20.04) that has never run the script.</li>
+</ul>
+<h3 id="2-create-the-recipe-folder">2. Create the recipe folder</h3>
+<ul>
+<li>Copy a recipe of a similar app (desktop app, service, driver) and rename the folder, or unzip the <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/utils/igelpkg-new-template-1.0.0.zip">template</a></li>
+<li>With the SDK installed:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkg<span class="w"> </span>new<span class="w"> </span>-n<span class="w"> </span>myapp<span class="w"> </span>-V<span class="w"> </span><span class="m">1</span>.0.0
+</code></pre></div></td></tr></table></div>
+<h3 id="3-edit-the-metadata">3. Edit the metadata</h3>
+<ul>
+<li><code>app.json</code>: <code>name</code>, <code>version</code>, <code>author</code>, <code>vendor</code>, <code>summary</code>, <code>icons</code>, <code>rw_partition</code>; remove <code>public_version</code></li>
+<li><code>data/descriptions/en</code>, <code>data/changelogs/en</code>, icons</li>
+<li>Replace every occurrence of the old app name in <code>data/config/*</code>, <code>input/all/config/sessions/</code>, <code>igel/dirs.json</code>, and <code>README.md</code></li>
+</ul>
+<h3 id="4-define-content-and-session">4. Define content and session</h3>
+<ul>
+<li><code>igel/debian.json</code> and / or <code>igel/thirdparty.json</code></li>
+<li><code>igel/install.json</code> (exclude docs, man pages, <code>.desktop</code> files)</li>
+<li><code>igel/dirs.json</code> for settings that must persist</li>
+<li><code>data/config/config.param</code>, <code>ui.json</code>, <code>translation.json</code> and <code>input/all/config/sessions/&lt;app&gt;0</code></li>
+</ul>
+<h3 id="5-build-deploy-and-test">5. Build, deploy, and test</h3>
+<ul>
+<li>See <a href="#building-the-app">Building the App</a> and <a href="#installing-and-testing-the-app">Installing and Testing the App</a></li>
+</ul>
+<h3 id="6-fix-and-repeat">6. Fix and repeat</h3>
+<ul>
+<li>Missing libraries -&gt; add packages to <code>igel/debian.json</code></li>
+<li>Missing links / files in wrong place -&gt; <code>install.json</code> <code>destination</code> or a link service</li>
+<li>Settings lost after reboot -&gt; <code>dirs.json</code> with <code>"persistent": true</code></li>
+<li>Increase <code>version</code> in <code>app.json</code> for each new build that is deployed</li>
+</ul>
+<hr />
+<hr />
+<h2 id="finding-missing-libraries">Finding Missing Libraries</h2>
+<p><strong>Q:</strong> The app does not start. How do I find missing libraries?</p>
+<p><strong>A:</strong> On the test device, open a terminal as <code>user</code> and start the binary from <code>/services/&lt;app_name&gt;</code> to see the errors. Then check for libraries not found:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ldd<span class="w"> </span>/services/&lt;app_name&gt;/usr/bin/&lt;binary&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"not found"</span>
+</code></pre></div></td></tr></table></div>
+<p>Search for the package that provides the library (example <code>libmcpp.so.0</code>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://packages.debian.org/search?mode<span class="o">=</span>path<span class="p">&amp;</span><span class="nv">suite</span><span class="o">=</span>bookworm<span class="p">&amp;</span><span class="nv">section</span><span class="o">=</span>all<span class="p">&amp;</span><span class="nv">arch</span><span class="o">=</span>any<span class="p">&amp;</span><span class="nv">searchon</span><span class="o">=</span>contents<span class="p">&amp;</span><span class="nv">keywords</span><span class="o">=</span>libmcpp.so.0
+</code></pre></div></td></tr></table></div>
+<p>With the SDK, compare the app with the base system (download <code>base_system</code> from the <a href="https://app.igel.com">App Portal</a>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkg<span class="w"> </span>check<span class="w"> </span>-l<span class="w"> </span>igelpkg.output/&lt;app_name&gt;-&lt;version&gt;.ipkg<span class="w"> </span>base_system-&lt;version&gt;.ipkg
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><a href=".././HOWTO-Channel-Demos/#how-to-find-and-build-a-screen-magnifier-kmag-app">How to find and build a screen magnifier (KMag) app</a> -- video walk-through of finding missing libraries with Docker</li>
+</ul>
+<hr />
+<hr />
+<h2 id="building-the-app">Building the App</h2>
+<h3 id="igel-app-creator-portal">IGEL App Creator Portal</h3>
+<ul>
+<li>Login at <a href="https://appcreator.igel.com">https://appcreator.igel.com</a> and click <code>Create my App</code></li>
+<li><strong>Step 1 Provide a recipe</strong>, choose one:<ul>
+<li><code>Upload</code> a recipe zip file. The files must be at the root of the zip (no parent folder), simple zip format without zip64. Community zips are in <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Packages">APP_Packages</a> (<code>&lt;app&gt;_community.zip</code>)</li>
+<li><code>Clone</code> from Git:<ul>
+<li>Clone Git Repository: <code>https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES.git</code> (or your fork)</li>
+<li>Authentication Token: empty for public repositories</li>
+<li>Entry Point: <code>APP_Source/Apps/speedcrunch</code></li>
+</ul>
+</li>
+<li>Select a recipe already in the portal</li>
+</ul>
+</li>
+<li><strong>Step 2 Provide binaries</strong>: upload the files named in <code>igel/thirdparty.json</code> (only shown if needed)</li>
+<li><strong>Step 3 Create the app</strong>: review name, version, description, changelog; accept the terms; click <code>Build</code></li>
+<li><strong>Step 4 Download files</strong>: <code>Download App</code> (<code>.ipkg</code>), <code>Download Certificate</code>, build logs</li>
+<li>Click <code>Save</code> to keep the recipe in the portal for rebuilding later</li>
+<li>Uploaded files are passed to the build as a third party overwrite folder. The portal's <code>system.log</code> shows the command it runs:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkg<span class="w"> </span>build<span class="w"> </span>--dir<span class="w"> </span>/recipe<span class="w"> </span>--thirdparty-overwrite-dir<span class="w"> </span>/thirdparty<span class="w"> </span>--repo<span class="w"> </span>bookworm<span class="w"> </span>-k<span class="w"> </span>--log
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Very large uploads (300MB+) have been reported to stall at 100% in Step 2</li>
+</ul>
+<p>Create the recipe zip from the recipe folder:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>speedcrunch
+zip<span class="w"> </span>-r<span class="w"> </span>../speedcrunch.zip<span class="w"> </span>.<span class="w"> </span>-x<span class="w"> </span><span class="s1">'igelpkg.*'</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="igel-os-app-sdk-igelpkg">IGEL OS App SDK (igelpkg)</h3>
+<ul>
+<li>Download the SDK (Docker image <code>igelpkg.tar</code>) from the IGEL App Creator Portal -&gt; <code>IGEL OS App SDK</code></li>
+<li><a href=".././HOWTO-Docker/#using-igel-os-app-sdk-docker-image">HOWTO Docker - Using IGEL OS App SDK Docker image</a></li>
+</ul>
+<p>Build and sign (in the recipe folder):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkg<span class="w"> </span>build<span class="w"> </span>-r<span class="w"> </span>bookworm<span class="w"> </span>-a<span class="w"> </span>x64<span class="w"> </span>-sp<span class="w"> </span>-sa
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r bookworm</code></td>
+<td>Debian release used for <code>debian.json</code> packages</td>
+</tr>
+<tr>
+<td><code>-a x64</code></td>
+<td>Architecture</td>
+</tr>
+<tr>
+<td><code>-sp</code> / <code>-sa</code></td>
+<td>Sign as publisher / sign as author</td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td>Keep temporary files (<code>igelpkg.output/</code>, <code>igelpkg.tmp/</code>)</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>Write <code>igelpkg.log</code> into the recipe folder</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="installing-and-testing-the-app">Installing and Testing the App</h2>
+<h3 id="app-signing-certificate">App signing certificate</h3>
+<ul>
+<li><strong>App Creator Portal:</strong> upload the downloaded certificate in UMS Web App -&gt; <code>Configuration -&gt; Files</code> with Classification <code>App signing certificate</code> and assign it to the device. <a href="https://kb.igel.com/en/universal-management-suite/current/upload-and-assign-files-in-the-igel-ums-web-app">IGEL KB: Upload and Assign Files in the IGEL UMS Web App</a><ul>
+<li>Check that the file Classification is <code>App signing certificate</code></li>
+<li>The Community certificate on the App Creator Portal is renewed from time to time. Add the new certificate to UMS and <strong>keep the old one</strong>; apps keep using the certificate they were built with. Add the date to the file name, for example <code>251112-igel-community-app-cert.crt</code></li>
+</ul>
+</li>
+<li><strong>SDK (SDK ≥1.0.0, IGEL OS ≥12.5.0):</strong><ul>
+<li>copy <code>/usr/share/igelpkg/certs/IGEL_OS_12_SDK-intermediate.crt</code> from development machine to <code>/wfs/cmty/im-certs/</code> on IGEL OS</li>
+<li>deploy <code>/usr/share/igelpkg/certs/IGEL_OS_12_SDK-leaf.crt</code> as app signing certificate by UMS</li>
+<li>reboot</li>
+</ul>
+</li>
+</ul>
+<h3 id="install-the-app">Install the app</h3>
+<ul>
+<li>UMS: <a href="https://kb.igel.com/en/universal-management-suite/current/how-to-export-and-upload-apps-to-the-igel-ums">IGEL KB: How to Export and Upload Apps to the IGEL UMS</a>, then assign the app to the device</li>
+<li>UMS Web App -&gt; <code>Apps</code> -&gt; settings (gear icon): <code>Download from UMS</code> enabled and <code>Block devices from downloading apps from the public App Portal as a fallback option</code> disabled. Custom apps are only on your UMS, not on the public App Portal.</li>
+<li>If the app has no Setup page (no <code>config.param</code> / <code>ui.json</code>), the profile button is greyed out. Just assign the app to the device.</li>
+<li>Test device without UMS: copy the <code>.ipkg</code> to the device (USB stick mounted under <code>/userhome/media</code>), open a terminal as root and use the absolute path to the file:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkgctl<span class="w"> </span>install<span class="w"> </span>-f<span class="w"> </span>/userhome/media/&lt;usb&gt;/speedcrunch-0.12.0+1.1.ipkg
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Reinstall after a rebuild with the same version:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkgctl<span class="w"> </span>install<span class="w"> </span>-rf<span class="w"> </span>/userhome/media/&lt;usb&gt;/speedcrunch-0.12.0+1.1.ipkg
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>More options: <a href=".././Cheatsheet-IGELCommunity/#igelos-12-packages-igelpkgctl">Cheatsheet IGELCommunity - igelpkgctl</a></li>
+</ul>
+<h3 id="check-the-result">Check the result</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/services/speedcrunch
+ls<span class="w"> </span>-l<span class="w"> </span>/services_rw/speedcrunch
+cat<span class="w"> </span>/services/speedcrunch/app.json
+journalctl<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>speedcrunch
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Click the session icon while watching the journal. <code>appwrap</code> logs the session start and errors from the start script:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>journalctl<span class="w"> </span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>-E<span class="w"> </span><span class="s1">'appwrap|speedcrunch'</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>appwrap<span class="o">[</span><span class="m">309268</span><span class="o">]</span>:<span class="w"> </span>Starting<span class="w"> </span>libreoffice0<span class="w"> </span>as<span class="w"> </span>process
+Thunar<span class="o">[</span><span class="m">309277</span><span class="o">]</span>:<span class="w"> </span>/config/sessions/libreoffice0:<span class="w"> </span>line<span class="w"> </span><span class="m">3</span>:<span class="w"> </span>/services/libreoffice/opt/libreoffice25.2/program/soffice:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Start the app from a terminal as <code>user</code> to see its errors:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">DISPLAY</span><span class="o">=</span>:0<span class="w"> </span><span class="nv">XAUTHORITY</span><span class="o">=</span>/userhome/.Xauthority<span class="w"> </span><span class="nv">HOME</span><span class="o">=</span>/userhome<span class="w"> </span>/services/speedcrunch/usr/bin/speedcrunch
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="debugging">Debugging</h2>
+<ul>
+<li><strong>Q:</strong> The app installs but there is no icon.</li>
+<li>
+<p><strong>A:</strong> Check that the session template / instance names in <code>config.param</code> match the start script name in <code>input/all/config/sessions/</code>, that <code>ui.json</code> <code>paramId</code> is <code>app.&lt;app_name&gt;.sessions.&lt;template&gt;</code>, and enable the session in Setup -&gt; <code>Apps -&gt; &lt;app&gt;</code> (start menu / desktop).</p>
+</li>
+<li>
+<p><strong>Q:</strong> Settings are lost after reboot.</p>
+</li>
+<li>
+<p><strong>A:</strong> Add the settings folder to <code>igel/dirs.json</code> with <code>"persistent": true</code> and define <code>rw_partition</code> in <code>app.json</code>. For a single file (not a folder), create a link at startup, see <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/kcalc">kcalc</a>.</p>
+</li>
+<li>
+<p><strong>Q:</strong> App Creator Portal fails with a version error.</p>
+</li>
+<li>
+<p><strong>A:</strong> <code>version</code> must be SemVer and without variables; <code>public_version</code> must be empty or removed.</p>
+</li>
+<li>
+<p><strong>Q:</strong> App Creator Portal does not accept <code>tar.xz</code>.</p>
+</li>
+<li><strong>A:</strong> Re-compress as <code>tar.bz2</code>. Example from the <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/thunderbird">Thunderbird README</a>:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>tb_tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>xvf<span class="w"> </span>thunderbird.tar.xz<span class="w"> </span>--directory<span class="w"> </span>tb_tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>tb_tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>cjvf<span class="w"> </span>../thunderbird.tar.bz2<span class="w"> </span>thunderbird<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>tb_tmp
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Q:</strong> For OS 12.5.0+ an older app does not install.</li>
+<li>
+<p><strong>A:</strong> May need to have the app <code>Compatibility layer for 12.0.x apps</code> installed.</p>
+</li>
+<li>
+<p><strong>Q:</strong> Devices do not download the app from UMS.</p>
+</li>
+<li>
+<p><strong>A:</strong> UMS Web App - Apps Settings: <code>Download from UMS</code> and do not set <code>Block devices from downloading apps from the public App Portal as a fallback option</code> unless there is no internet access from OS 12 devices. Distributing OS 12 apps through ICG is not supported; use a reverse proxy.</p>
+</li>
+<li>
+<p><strong>Q:</strong> Device shows <code>App not found</code> or the download stays at 0%.</p>
+</li>
+<li><strong>A:</strong> Check the UMS <code>Apps</code> settings (<code>Download from UMS</code>), that the app signing certificate is assigned to the device, then on the device:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>igelpkgctl<span class="w"> </span>update
+igelpkgctl<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>speedcrunch
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Q:</strong> Download of a custom app hangs when using Distributed Peer Update (Buddy Update).</li>
+<li>
+<p><strong>A:</strong> As of December 2025 Distributed Peer Update does not support IGEL App Creator apps. Do not put custom apps on the DPU server device. See <a href=".././HOWTO-COSMOS/#faq-distributed-peer-update-buddy-update">HOWTO IGEL (FAQ) - Distributed Peer Update</a></p>
+</li>
+<li>
+<p><strong>Q:</strong> Install fails with <code>Download file is empty</code> (<code>Download Datei ist leer</code>).</p>
+</li>
+<li><strong>A:</strong> Something on the network is blocking access or a proxy is doing SSL inspection. Compare the output of both commands and send it to the network team:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>curl<span class="w"> </span>-v<span class="w"> </span>-k<span class="w"> </span>https://app.igel.com
+curl<span class="w"> </span>-v<span class="w"> </span>-k<span class="w"> </span>https://myums:8443
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Q:</strong> The desktop launcher does nothing or shows the wrong icon, but the icon is fine in UMS.</li>
+<li>
+<p><strong>A:</strong> Check for dashes in file names and paths in the recipe and replace them with underscores. Check the session names as described above.</p>
+</li>
+<li>
+<p><strong>Q:</strong> The app works as root but not as <code>user</code>.</p>
+</li>
+<li>
+<p><strong>A:</strong> Check the owner of folders the app writes to (<code>ls -l</code>). Use <code>"owner": "777:100"</code> in <code>dirs.json</code> or set the owner in the init script.</p>
+</li>
+<li>
+<p><strong>Q:</strong> App Creator Portal says <code>app.json</code> is missing.</p>
+</li>
+<li>
+<p><strong>A:</strong> The zip has a parent folder. Zip the contents of the recipe folder so <code>app.json</code> is at the root of the zip.</p>
+</li>
+<li>
+<p><strong>Q:</strong> App Creator Portal fails with <code>Something went wrong while parsing the recipe. Please check for Syntax error in recipe files.</code></p>
+</li>
+<li><strong>A:</strong> A JSON file is not valid. The build log names the file. Check all files:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s1">'*.json'</span><span class="w"> </span>-size<span class="w"> </span>+0<span class="w"> </span>-exec<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'python3 -m json.tool "$1" &gt; /dev/null || echo "ERROR: $1"'</span><span class="w"> </span>_<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Q:</strong> App Creator Portal does not accept the uploaded file, or the build fails with <code>unknown file</code> / <code>Following install does not match any files</code>.</li>
+<li>
+<p><strong>A:</strong> Rename the file to the exact name in <code>thirdparty.json</code>, check that the vendor file is the same package type the recipe expects, and update version numbers in <code>install.json</code>. Try the matching zip from <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Packages">APP_Packages</a> (select <code>Raw</code> to download).</p>
+</li>
+<li>
+<p><strong>Q:</strong> How do I list systemd targets to use in <code>After=</code> of a service file?</p>
+</li>
+<li><strong>A:</strong></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="w"> </span>target
+</code></pre></div></td></tr></table></div>
+<hr />
+<hr />
+<h2 id="adding-a-recipe-to-igel-os-app-recipes-github">Adding a Recipe to IGEL OS APP RECIPES (GitHub)</h2>
+<ul>
+<li>
+<p><a href=".././HOWTO-GitHub-with-VS-Code/">IGEL Community Docs: HOWTO GitHub with Microsoft Visual Studio Code</a></p>
+</li>
+<li>
+<p>Fork <a href="https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES">IGEL-Community/IGEL-OS-APP-RECIPES</a> and add the recipe folder under the matching category:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Category folder</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APP_Source/Apps</code></td>
+<td>General applications and tools</td>
+</tr>
+<tr>
+<td><code>APP_Source/Browsers</code></td>
+<td>Web browsers</td>
+</tr>
+<tr>
+<td><code>APP_Source/Multimedia</code></td>
+<td>Audio / video</td>
+</tr>
+<tr>
+<td><code>APP_Source/Network</code></td>
+<td>VPN and network clients</td>
+</tr>
+<tr>
+<td><code>APP_Source/Office</code></td>
+<td>Office suites</td>
+</tr>
+<tr>
+<td><code>APP_Source/Scripts</code></td>
+<td>Script-only apps</td>
+</tr>
+<tr>
+<td><code>APP_Source/Server</code></td>
+<td>Server components</td>
+</tr>
+<tr>
+<td><code>APP_Source/Tools_Drivers</code></td>
+<td>Drivers, smartcard, scanner, device tools</td>
+</tr>
+<tr>
+<td><code>APP_Source/Unified_Communications</code></td>
+<td>Softphones, chat, meetings</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>README.md</code> starts with the community disclaimer, then the application link, the vendor download link, and the exact file name(s) expected in <code>thirdparty.json</code></li>
+<li><code>summary.en</code> ends with <code>(Community)</code> and <code>author</code> is <code>The IGEL community</code></li>
+<li>Do not commit binaries from vendors; link to the download</li>
+<li>After a merge to <code>main</code>, a GitHub Action (<code>utils/make-app-packages.sh</code>) builds <code>APP_Packages/&lt;category&gt;/&lt;app&gt;_community.zip</code> for every changed recipe</li>
+</ul>
+<hr />
+<hr />
+<h2 id="recipe-checklist">Recipe Checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>name</code> is unique, 3-42 characters, letters / numbers / underscores</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>version</code> is SemVer and increased for this build; <code>public_version</code> empty or removed</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>author</code>, <code>vendor</code>, <code>summary.en</code>, <code>icons</code> set; icon files exist in <code>data/</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>data/descriptions/en</code> has short description, empty line, long description</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Only packages not already in the base system are in <code>debian.json</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Every <code>thirdparty.json</code> entry has a license (SPDX name, text, or file)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>install.json</code> excludes docs, man pages, and vendor <code>.desktop</code> files</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Persistent folders in <code>dirs.json</code> and <code>rw_partition</code> defined in <code>app.json</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Session names match in <code>config.param</code>, <code>ui.json</code>, and <code>input/all/config/sessions/</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> All JSON files are valid (<code>python3 -m json.tool &lt;file&gt;</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Services in <code>input/all/etc/systemd/</code> are enabled in <code>igel/install.sh</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tested on IGEL OS 12: install, start, reboot (settings kept), uninstall</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>README.md</code> has disclaimer, download link, and expected file names</li>
+</ul>
+<hr />
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      IGEL Community Docs is a repository hosting of the IGEL Community related documentation. This documentation is without any warranty or support by IGEL Technology.
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.sections","toc.integrate","navigation.top","search.suggest","search.highlight","content.tabs.link","content.code.annotation","content.code.copy"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+    
+  </body>
+</html>

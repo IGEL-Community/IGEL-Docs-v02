@@ -39,6 +39,7 @@ Build your own IGEL OS App with IGEL App Creator Portal
 - [IGEL KB: Upload and Assign Files in the IGEL UMS Web App - Classification - App signing certificate](https://kb.igel.com/en/universal-management-suite/current/upload-and-assign-files-in-the-igel-ums-web-app)
 - [IGEL KB: How to Make Devices Download from App Portal when UMS is Configured as the App Proxy as the Global Setting](https://kb.igel.com/en/universal-management-suite/current/how-to-make-devices-download-from-app-portal-when-)
 - [IGEL Community GitHub: IGEL OS APP RECIPES](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES)
+- [IGEL Community Docs: HOWTO Create OS 12 App Recipes](./HOWTO-Create-App-Recipes.md)
 - [IGEL Community GitHub: SpeedCrunch](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Add-Applications/#building-an-os-12-app-recipe-for-igel-app-creator-portal-speedcrunch)
 - [IGEL Community GitHub: How to find and build a screen magnifier (KMag) app](https://igel-community.github.io/IGEL-Docs-v02/Docs/HOWTO-Channel-Demos/#how-to-find-and-build-a-screen-magnifier-kmag-app)
 
@@ -167,6 +168,8 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
 - [GitHub App Recipes - SpeedCrunch](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/tree/main/APP_Source/Apps/speedcrunch)
 - [GitHub App Recipes - SpeedCruch Zip File](https://github.com/IGEL-Community/IGEL-OS-APP-RECIPES/raw/refs/heads/main/APP_Packages/Apps/speedcrunch_community.zip)
 
+- [IGEL Community Docs: HOWTO Create OS 12 App Recipes](./HOWTO-Create-App-Recipes.md) -- what each recipe file does and steps to create a new recipe
+
 ![image-howto-add-applications-01](Images/HOWTO-Add-Applications-01.png)
 
 ### app.json
@@ -183,14 +186,22 @@ Steps to test out your UDPocket or OS 12 installed device with a sandbox UMS
   "name": "speedcrunch",
   "author": "The IGEL community",
   "vendor": "SpeedCrunch Team",
-  "public_version": "0.12.0-6",
+  "rw_partition": {
+    "size": "small",
+    "flags": [
+      "compressed",
+      "prefer_btrfs"
+    ]
+  },
   "release": "",
   "summary": {
     "en": "SpeedCrunch (Community)"
   },
-  "version": "0.12.0"
+  "version": "0.12.0+1.1"
 }
 ```
+
+**NOTE:** For the IGEL App Creator Portal, `public_version` must be empty or removed.
 
 ### data/app.png
 
@@ -247,18 +258,81 @@ speedcrunch (0.12.0-4) unstable; urgency=medium
 ```bash linenums="1"
 <sessions>
 	<speedcrunch%>
-        <name>
-            value=<SpeedCrunch>
-        </name>
-        <icon>
-            value=<speedcrunch>
-        </icon>
-        extends_base=<sessions.base%>
+		extends_base=<sessions.base%>
+		node_action=<wm_postsetup>
 	</speedcrunch%>
 	<speedcrunch0>
+		<name_localized>
+			displayname[en_us]=<SpeedCrunch>
+		</name_localized>
+		<icon>
+			value=<speedcrunch>
+		</icon>
+		<type>
+			displayname[en_us]=<Misc>
+		</type>
 	</speedcrunch0>
-    node_action=<wm_postsetup>
 </sessions>
+```
+
+### data/config/config.param.locale
+
+```bash linenums="1"
+<sessions>
+	<speedcrunch0>
+		<name_localized>
+			displayname[de_de]=<SpeedCrunch>
+		</name_localized>
+	</speedcrunch0>
+</sessions>
+```
+
+### data/config/translation.json
+
+```bash linenums="1"
+{
+    "sessions.label": {
+        "de": "Sitzung",
+        "en": "Session"
+    },
+    "title": {
+        "de": "SpeedCrunch",
+        "en": "SpeedCrunch"
+    }
+}
+```
+
+### data/config/ui.json
+
+```bash linenums="1"
+{
+  "root": {
+    "id": "root",
+    "childrenIds": ["base"]
+  },
+  "base": {
+    "id": "base",
+    "parentId": "root",
+    "nlsResourceId": "title",
+    "title": "SpeedCrunch",
+    "childrenIds": ["sessions"]
+  },
+  "sessions": {
+    "id": "sessions",
+    "parentId": "base",
+    "nlsResourceId": "sessions.label",
+    "title": "Session",
+    "instancePage": true,
+    "fixInstanceId": 0,
+    "elements": {
+      "0": {
+        "type": "sessionPage",
+        "paramId": "app.speedcrunch.sessions.speedcrunch",
+        "instancePageId": "sessions.genericInstancePage"
+      }
+    }
+  }
+}
 ```
 
 ### data/descriptions/en
@@ -280,6 +354,18 @@ Application icon monochrome
   {
     "package": "speedcrunch"
   }
+]
+```
+
+### igel/dirs.json
+
+```bash linenums="1"
+[
+    {
+      "path": "/userhome/.config/SpeedCrunch",
+      "persistent": true,
+      "owner": "777:100"
+    }
 ]
 ```
 

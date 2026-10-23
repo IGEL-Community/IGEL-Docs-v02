@@ -234,7 +234,7 @@ Component Versions
 |-------------------------------------------|----------------------------------|
 | MESA OpenGL Stack                         | 25.0.7-2igel1787155887           |
 | VDPAU Library Version                     | 1.5-2                            |
-| Graphics Driver INTEL                     | 2.99.917+git20210115-1igel1654609037     |
+| Graphics Driver INTEL                     | 2.99.917+git20210115-1igel1654609037 |
 | Graphics Driver ATI/RADEON                | 22.0.0-1igel1704966675           |
 | Graphics Driver ATI/AMDGPU                | 25.0.0-1igel1763123370           |
 | Graphics Driver Nouveau (Nvidia Legacy)   | 1.0.18-1igel1739362211           |
@@ -247,7 +247,7 @@ Component Versions
 | Input Driver Synaptics                    | 1.9.2-1+b2igel1742818828         |
 | Input Driver VMMouse                      | 13.1.0-1ubuntu2igel1628499891    |
 | Input Driver Wacom                        | 1.2.4-1igel1772694990            |
-| Kernel                                    | 6.18.35 #mainline-lxos12-g1788426662C      |
+| Kernel                                    | 6.18.35 #mainline-lxos12-g1788426662C |
 | Xorg X11 Server                           | 21.1.23-1igel1780396689          |
 | Lightdm Graphical Login Manager           | 1.26.0-8igel1772701866           |
 | ISC DHCP Client                           | 4.4.3-P1-2                       |
@@ -258,6 +258,7 @@ Component Versions
 | Virtualbox X11 Guest Utils                | 7.2.4-dfsg-1igel1763634473       |
 | Open VM Tools                             | 12.2.0-1+deb12u4                 |
 | Open VM Desktop Tools                     | 12.2.0-1+deb12u4                 |
+
 ```
 
 Release Notes of installable IGEL OS 12 base system

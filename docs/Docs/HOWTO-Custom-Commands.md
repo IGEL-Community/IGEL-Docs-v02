@@ -58,6 +58,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 |------|--------|
 | Wrapper - Final desktop command | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc.sh" download>LINK to script</a> |
 | Sort Desktop Icons | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a> |
+| Let user choose display DPI (first desktop start) | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-dpi.sh" download>LINK to script</a> |
 | Add CUPS Network Printers | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a> |
 | USB Always On | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-usb-power.sh" download>LINK to script</a> |
 | Set Permissions on Apache Webdav Folder | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-apache.sh" download>LINK to script</a> |
@@ -283,6 +284,76 @@ while inotifywait -qq -e create -e modify -e delete "$desktop_dir"; do
     # execute the sorting function inside the loop
     sort_icons
 done
+```
+
+-----
+
+- Let user choose display DPI (first desktop start)
+
+Shows a slider at the first desktop start so the user can pick the DPI for their monitor. The slider starts at the current DPI. The choice is saved with `setparam` and the desktop is refreshed. A marker file in `/wfs` stops the question from being asked again; delete it to ask again.
+
+- To let users change the DPI at any time, use the profile template `Display scaling by changing DPI` in [HOWTO Profile Templates](./HOWTO-Profile-Templates.md). It adds a desktop / start menu icon (Custom Application) that runs the same command.
+- To set a fixed DPI for all devices in a profile, use: `IGEL Setup -> User Interface -> Display Settings -> DPI Options -> Monitor DPI`
+- If a UMS profile also sets the DPI, the profile value wins at the next settings update
+- The command used by the script and the profile template:
+
+```bash linenums="1"
+setparam x.xserver0.auto_dpi off && setparam x.xserver0.dpi $(zenity --scale --min-value=30 --max-value=300 --step=5 --text="Please choose the DPI scale (96 default)" --value=$(getsysvalue x.xserver0.dpi)) && /usr/bin/wmrefresh
+```
+
+- Ask again at next desktop start:
+
+```bash linenums="1"
+rm /wfs/.cc-desktop-3fdc-dpi-done
+```
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Version:
+# Ask the user to choose the display DPI (first desktop start only)
+#
+# Custom Commands: Desktop: Final Desktop Command
+#
+
+ACTION="cc-desktop-3fdc-dpi"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
+export DISPLAY=:0
+
+# Remove this file to ask for the DPI again at the next desktop start
+MARKER="/wfs/.cc-desktop-3fdc-dpi-done"
+# Start the slider at the current DPI (96 if not set)
+DEFAULT_DPI=$(getsysvalue x.xserver0.dpi 2>/dev/null)
+DEFAULT_DPI=${DEFAULT_DPI:-96}
+
+echo "Starting"
+
+if [ -e "${MARKER}" ]; then
+  echo "DPI already chosen (${MARKER} exists) - nothing to do"
+  exit 0
+fi
+
+DPI=$(zenity --scale --title="Display DPI" --text="Please choose the DPI scale (96 default)" \
+  --min-value=30 --max-value=300 --step=5 --value=${DEFAULT_DPI})
+
+if [ -z "${DPI}" ]; then
+  echo "No DPI selected (dialog cancelled)"
+  exit 0
+fi
+
+echo "Setting DPI to ${DPI}"
+setparam x.xserver0.auto_dpi off && setparam x.xserver0.dpi "${DPI}" && /usr/bin/wmrefresh
+touch "${MARKER}"
+
+echo "Finished"
+
+exit 0
 ```
 
 -----

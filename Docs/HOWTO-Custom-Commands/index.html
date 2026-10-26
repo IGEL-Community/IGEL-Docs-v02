@@ -2562,6 +2562,10 @@ Comments
 <td><a href="../../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-sorticons.sh" download>LINK to script</a></td>
 </tr>
 <tr>
+<td>Let user choose display DPI (first desktop start)</td>
+<td><a href="../../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-dpi.sh" download>LINK to script</a></td>
+</tr>
+<tr>
 <td>Add CUPS Network Printers</td>
 <td><a href="../../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-cupsnetworkprinters.sh" download>LINK to script</a></td>
 </tr>
@@ -2982,6 +2986,116 @@ sort_icons
 <span class="w">    </span><span class="c1"># execute the sorting function inside the loop</span>
 <span class="w">    </span>sort_icons
 <span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<ul>
+<li>Let user choose display DPI (first desktop start)</li>
+</ul>
+<p>Shows a slider at the first desktop start so the user can pick the DPI for their monitor. The slider starts at the current DPI. The choice is saved with <code>setparam</code> and the desktop is refreshed. A marker file in <code>/wfs</code> stops the question from being asked again; delete it to ask again.</p>
+<ul>
+<li>To let users change the DPI at any time, use the profile template <code>Display scaling by changing DPI</code> in <a href=".././HOWTO-Profile-Templates/">HOWTO Profile Templates</a>. It adds a desktop / start menu icon (Custom Application) that runs the same command.</li>
+<li>To set a fixed DPI for all devices in a profile, use: <code>IGEL Setup -&gt; User Interface -&gt; Display Settings -&gt; DPI Options -&gt; Monitor DPI</code></li>
+<li>If a UMS profile also sets the DPI, the profile value wins at the next settings update</li>
+<li>The command used by the script and the profile template:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>setparam<span class="w"> </span>x.xserver0.auto_dpi<span class="w"> </span>off<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>setparam<span class="w"> </span>x.xserver0.dpi<span class="w"> </span><span class="k">$(</span>zenity<span class="w"> </span>--scale<span class="w"> </span>--min-value<span class="o">=</span><span class="m">30</span><span class="w"> </span>--max-value<span class="o">=</span><span class="m">300</span><span class="w"> </span>--step<span class="o">=</span><span class="m">5</span><span class="w"> </span>--text<span class="o">=</span><span class="s2">"Please choose the DPI scale (96 default)"</span><span class="w"> </span>--value<span class="o">=</span><span class="k">$(</span>getsysvalue<span class="w"> </span>x.xserver0.dpi<span class="k">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>/usr/bin/wmrefresh
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Ask again at next desktop start:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>/wfs/.cc-desktop-3fdc-dpi-done
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#set -x</span>
+<span class="c1">#trap read debug</span>
+
+<span class="c1">#</span>
+<span class="c1"># Version:</span>
+<span class="c1"># Ask the user to choose the display DPI (first desktop start only)</span>
+<span class="c1">#</span>
+<span class="c1"># Custom Commands: Desktop: Final Desktop Command</span>
+<span class="c1">#</span>
+
+<span class="nv">ACTION</span><span class="o">=</span><span class="s2">"cc-desktop-3fdc-dpi"</span>
+
+<span class="c1"># Send all stdout/stderr from this script to journald/syslog</span>
+<span class="nb">exec</span><span class="w"> </span>&gt;<span class="w"> </span>&gt;<span class="o">(</span>logger<span class="w"> </span>-t<span class="w"> </span><span class="s2">"</span><span class="nv">$ACTION</span><span class="s2">"</span><span class="o">)</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span>:0
+
+<span class="c1"># Remove this file to ask for the DPI again at the next desktop start</span>
+<span class="nv">MARKER</span><span class="o">=</span><span class="s2">"/wfs/.cc-desktop-3fdc-dpi-done"</span>
+<span class="c1"># Start the slider at the current DPI (96 if not set)</span>
+<span class="nv">DEFAULT_DPI</span><span class="o">=</span><span class="k">$(</span>getsysvalue<span class="w"> </span>x.xserver0.dpi<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span>
+<span class="nv">DEFAULT_DPI</span><span class="o">=</span><span class="si">${</span><span class="nv">DEFAULT_DPI</span><span class="k">:-</span><span class="nv">96</span><span class="si">}</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Starting"</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">MARKER</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"DPI already chosen (</span><span class="si">${</span><span class="nv">MARKER</span><span class="si">}</span><span class="s2"> exists) - nothing to do"</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="nv">DPI</span><span class="o">=</span><span class="k">$(</span>zenity<span class="w"> </span>--scale<span class="w"> </span>--title<span class="o">=</span><span class="s2">"Display DPI"</span><span class="w"> </span>--text<span class="o">=</span><span class="s2">"Please choose the DPI scale (96 default)"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--min-value<span class="o">=</span><span class="m">30</span><span class="w"> </span>--max-value<span class="o">=</span><span class="m">300</span><span class="w"> </span>--step<span class="o">=</span><span class="m">5</span><span class="w"> </span>--value<span class="o">=</span><span class="si">${</span><span class="nv">DEFAULT_DPI</span><span class="si">}</span><span class="k">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">DPI</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"No DPI selected (dialog cancelled)"</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Setting DPI to </span><span class="si">${</span><span class="nv">DPI</span><span class="si">}</span><span class="s2">"</span>
+setparam<span class="w"> </span>x.xserver0.auto_dpi<span class="w"> </span>off<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>setparam<span class="w"> </span>x.xserver0.dpi<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">DPI</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>/usr/bin/wmrefresh
+touch<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">MARKER</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Finished"</span>
+
+<span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <ul>

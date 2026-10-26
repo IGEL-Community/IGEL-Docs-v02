@@ -65,6 +65,7 @@ System --> System Customization --> Custom Commands --> Desktop --> Final deskto
 | Set Island.io as default browser | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-island.sh" download>LINK to script</a> |
 | How to remove --> `Currently being shadowed - Disconnect` | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-remove-being-shadowed.sh" download>LINK to script</a> |
 | AVD Post Session Logoff | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-avd-post-session-logoff.sh" download>LINK to script</a> |
+| Close application after idle time (xprintidle) | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-idle-close-app.sh" download>LINK to script</a> |
 | Reboot when lock screen running for WAIT_AFTER_START time | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-reboot-after-screen-lock.sh" download>LINK to script</a> |
 | Set terminal window to black background | <a href="../Scripts/HOWTO-Custom-Commands-cc-desktop-3fdc-terminal.sh" download>LINK to script</a> |
 
@@ -461,6 +462,72 @@ while true; do
     logoff
   fi
   sleep $CHECK_INTERVAL
+done
+```
+
+-----
+
+- Close application after idle time (xprintidle)
+
+Closes an application when the desktop has been idle (no keyboard or mouse input) for `IDLE_LIMIT` seconds. Optionally removes the application's profile so the next user starts clean. Useful for shared / kiosk devices.
+
+- Set `APP_NAME` (process name matched by `pgrep -f`) and `APP_CONFIG` (profile folder). Examples for Microsoft Edge and Chromium are in the script.
+- Set `CLEAR_CONFIG="TRUE"` to remove the profile after the application is closed.
+- `xprintidle` reports the time since the last keyboard / mouse input in milliseconds:
+
+```bash linenums="1"
+DISPLAY=:0 xprintidle
+```
+
+```bash linenums="1"
+#!/bin/bash
+#set -x
+#trap read debug
+
+#
+# Version:
+# Close an application (and optionally clear its profile) after the desktop has been idle for IDLE_LIMIT seconds
+#
+# Custom Commands: Desktop: Final Desktop Command
+#
+
+ACTION="cc-desktop-3fdc-idle-close-app"
+
+# Send all stdout/stderr from this script to journald/syslog
+exec > >(logger -t "$ACTION") 2>&1
+
+# Application to close (matched with pgrep -f) and its profile / config folder
+# Microsoft Edge:  APP_NAME="msedge"            APP_CONFIG="/userhome/.config/microsoft-edge"
+# Chromium:        APP_NAME="chromium-browser"  APP_CONFIG="/userhome/.config/chromium"
+APP_NAME="msedge"
+APP_CONFIG="/userhome/.config/microsoft-edge"
+# TRUE = remove the contents of APP_CONFIG after closing the application
+CLEAR_CONFIG="FALSE"
+IDLE_LIMIT=300      # idle time limit in seconds (5 minutes)
+CHECK_INTERVAL=5    # seconds between checks
+
+CLOSED=false
+
+echo "Starting: close ${APP_NAME} after ${IDLE_LIMIT} seconds idle"
+
+while true; do
+  # xprintidle returns the X idle time in milliseconds
+  IDLE_MS=$(DISPLAY=:0 /usr/bin/xprintidle 2>/dev/null) || IDLE_MS=0
+  IDLE_TIME=$(( ${IDLE_MS:-0} / 1000 ))
+  if [ "$IDLE_TIME" -ge "$IDLE_LIMIT" ]; then
+    if [ "$CLOSED" = false ] && pgrep -f "${APP_NAME}" > /dev/null; then
+      echo "Idle for ${IDLE_TIME} seconds - closing ${APP_NAME}"
+      pkill -9 -f "${APP_NAME}"
+      if [ "${CLEAR_CONFIG}" = "TRUE" ]; then
+        echo "Clearing ${APP_CONFIG}"
+        rm -rf "${APP_CONFIG:?}"/*
+      fi
+      CLOSED=true
+    fi
+  else
+    CLOSED=false
+  fi
+  sleep "$CHECK_INTERVAL"
 done
 ```
 

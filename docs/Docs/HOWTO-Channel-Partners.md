@@ -18,13 +18,13 @@ This is a comment section
 
 ----------
 
-## IGEL Sales Playbooks - Your home for IGEL's AI-assisted sales tools.
+## IGEL Sales Playbooks - Your home for IGEL's AI-assisted sales tools
 
 - Practical playbooks for IGEL use cases and our partner ecosystem, Built to be used, not admired.
 
 - Each playbook is a hybrid: structured guidance on the page, with Spike alongside. Spike is our in-house AI agent and resident EUC and IGEL expert. Ask him to clarify anything, pressure-test an angle, or help you draft joint messaging on the fly.
 
-- Register for access [IGEL ChannelNerd](https://www.channelnerd.wiki/)
+- Register for access: [IGEL ChannelNerd](https://www.channelnerd.wiki/)
 
 
 ----------

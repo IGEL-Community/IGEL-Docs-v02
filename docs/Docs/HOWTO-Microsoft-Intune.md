@@ -99,3 +99,15 @@ echo “Ending compliance script”
   ]
 }
 ```
+
+-----
+
+-----
+
+## Intune Agent – A hung agent can be fixed by running the following command and rebooting IGEL OS: 
+
+- Command to run:
+
+```bash
+rm -f /userhome/.local/state/microsoft-identity-broker/broker-data.db* 
+```

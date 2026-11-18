@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.1.0">
+      <meta name="generator" content="zensical-0.1.2">
     
     
       
@@ -31,7 +31,7 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.94dd801d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.0006804e.min.css">
       
         
           
@@ -1664,16 +1664,22 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-igel-community-on-github-ums-console-setup-link" class="md-nav__link">
+    <nav class="md-nav" aria-label="Install UMS on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ums-1210100-linux-console-does-not-start-after-update" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        - IGEL Community on GitHub UMS Console setup - LINK
+        UMS 12.10.100 - Linux Console Does Not Start After Update
       </span>
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2989,7 +2995,21 @@ sudo<span class="w"> </span>reboot<span class="w"> </span>now
 <li>Follow IGEL Linux installation notes -- <a href="https://kb.igel.com/en/universal-management-suite/current/igel-ums-installation-under-linux">LINK</a>- sudo ./setup-igel-ums-linux-[version].bin</li>
 </ul>
 <p><strong>Note</strong> Steps to install on Windows -- <a href="https://kb.igel.com/en/universal-management-suite/current/igel-ums-installation-under-windows">LINK</a></p>
-<h2 id="-igel-community-on-github-ums-console-setup-link">- IGEL Community on GitHub UMS Console setup - <a href="https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build">LINK</a></h2>
+<ul>
+<li>IGEL Community on GitHub UMS Console setup - <a href="https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build">LINK</a></li>
+</ul>
+<h3 id="ums-1210100-linux-console-does-not-start-after-update">UMS 12.10.100 - Linux Console Does Not Start After Update</h3>
+<ul>
+<li>Setup: UMS Server on Linux (no GUI) and a separate Linux desktop (for example Ubuntu) with the UMS Console only</li>
+<li>After updating the console-only machine to UMS 12.10.100, the install completes, but the UMS Console does not start from the icon or the command line</li>
+<li>Cause: the UMS 12.10.100 Linux installer sets incorrect permissions on some <code>rmclient</code> folders</li>
+</ul>
+<p><strong>Fix:</strong> (until the installer is fixed) run the following on the UMS Console machine:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/IGEL/RemoteManager/
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>./rmclient/conf<span class="w"> </span>./rmclient/documentation<span class="w"> </span>./rmclient/licenses
+</code></pre></div></td></tr></table></div>
+<hr />
 <h2 id="create-igel-os-clients">Create IGEL OS Clients</h2>
 <p>VirtualBox &gt; New</p>
 <ul>
@@ -3426,7 +3446,7 @@ Guide follows KB article, `First Steps with IGEL OS 11`, and adds optional IGEL 
       <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.sections","toc.integrate","navigation.top","search.suggest","search.highlight","content.tabs.link","content.code.annotation","content.code.copy"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3cb411a8.min.js"></script>
       
     
   </body>

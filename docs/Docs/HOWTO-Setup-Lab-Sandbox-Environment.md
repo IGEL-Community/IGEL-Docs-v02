@@ -184,6 +184,20 @@ sudo reboot now
 **Note** Steps to install on Windows -- [LINK](https://kb.igel.com/en/universal-management-suite/current/igel-ums-installation-under-windows)
 
 - IGEL Community on GitHub UMS Console setup - [LINK](https://github.com/IGEL-Community/IGEL-Scripts/tree/main/Script_Source/Server/UMS_Console_Ubuntu_Build)
+
+### UMS 12.10.100 - Linux Console Does Not Start After Update
+
+- Setup: UMS Server on Linux (no GUI) and a separate Linux desktop (for example Ubuntu) with the UMS Console only
+- After updating the console-only machine to UMS 12.10.100, the install completes, but the UMS Console does not start from the icon or the command line
+- Cause: the UMS 12.10.100 Linux installer sets incorrect permissions on some `rmclient` folders
+
+**Fix:** (until the installer is fixed) run the following on the UMS Console machine:
+
+```bash linenums="1"
+cd /opt/IGEL/RemoteManager/
+sudo chmod -R 755 ./rmclient/conf ./rmclient/documentation ./rmclient/licenses
+```
+
 -----
 
 ## Create IGEL OS Clients

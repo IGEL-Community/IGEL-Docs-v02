@@ -15,6 +15,9 @@ Lists what changes are in the build.
 
 ## IGEL UMS
 
+- [12.15.100](Readme-12.15.100.txt) 16-November-2026
+- [12.14.120](Readme-12.14.120.txt) 11-November-2026
+- [12.13.140](Readme-12.13.140.txt) 11-November-2026
 - [12.14.110](Readme-12.14.110.txt) 08-October-2026
 - [12.13.130](Readme-12.13.130.txt) 08-October-2026
 - [12.14.100](Readme-12.14.100.txt) 09-September-2026

@@ -271,6 +271,74 @@ Resolved issues:
 
 ----
 
+## 2026-11-11 - [12.13.140](Readme-12.13.140.txt)
+
+```
+=============================================================================
+Supported environment:
+=============================================================================
+
+UMS Server:
+
+Microsoft Windows Server 2019 (64 bit)
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+UMS Client:
+
+Microsoft Windows 10 (64 bit) 	
+Microsoft Windows 11 (64 bit)
+Microsoft Windows Server 2019 (64 bit)
+Microsoft Windows Server 2022 (64 bit)
+Microsoft Windows Server 2025 (64 bit)
+Ubuntu 22.04 (64 bit)
+Ubuntu 24.04 (64 bit)
+Oracle Linux 7 (64 bit)
+Oracle Linux 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 7 (64 bit)
+Red Hat Enterprise Linux (RHEL) 8 (64 bit)
+Red Hat Enterprise Linux (RHEL) 9 (64 bit)
+Amazon Linux 2
+
+Backend database (DBMS):
+
+Microsoft SQL Server 2017 (with cluster support)
+Microsoft SQL Server 2019 (with cluster support)
+Microsoft SQL Server 2022 (with cluster support)
+Oracle 19c (with cluster support)
+Oracle 21c (with cluster support)
+PostgreSQL 11–18
+Apache Derby 10.9–10.14
+Amazon Aurora PostgreSQL (compatible with PostgreSQL 11–18)
+Azure SQL Managed Instance
+
+Regular support for Apache Derby has expired. Support for Apache Derby will end in a later UMS version.
+	See also: https://kb.igel.com/en/igel-subscription-and-more/current/support-policies-for-connections-to-third-party-en
+
+Browser:
+
+Microsoft Edge 149.0+
+Mozilla Firefox 152.0+
+Google Chrome 149.0+
+
+=============================================================================
+Resolved issues:
+=============================================================================
+
+[UMS common]
+- Fixed: Security issues.
+```
+
+----
+
 ## 2026-10-08 - [12.14.110](Readme-12.14.110.txt)
 
 ```

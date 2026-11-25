@@ -127,7 +127,7 @@ Open the following link and type in command to get examples of usage - [Cheat Sh
 | killwait_postsetupd                                     | :material-check-bold: | :material-check-bold:| reset and applay setup changes set by "setparam"            |
 | [kinit](Cheatsheet-IGELOS-General.md#kinit)             | :material-check-bold: | :material-check-bold:| Active Directory login                                      |
 | [klist](Cheatsheet-IGELOS-General.md#klist)             | :material-check-bold: | :material-check-bold:| Display kerberos tickets                                    |
-| licensestatus(Cheatsheet-IGELOS-General.md#licensestatus) | :material-check-bold: | :material-check-bold:| Show IGEL license status |
+| [licensestatus](Cheatsheet-IGELOS-General.md#licensestatus) | :material-check-bold: | :material-check-bold:| Show IGEL license status |
 | list                                                    | :material-check-bold: | :material-check-bold:| List a part of the registry                                 |
 | load_usbconfig                                          | :material-check-bold: | :material-check-bold:| Load config from USB Storage                                |
 | newinstance                                             | :material-check-bold: | :material-check-bold:| Create a session or instance                                |

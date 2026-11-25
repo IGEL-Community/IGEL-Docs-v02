@@ -579,6 +579,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#licensestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        licensestatus
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resetvalue_tree" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -2916,6 +2927,28 @@ Choose<span class="w"> </span>number<span class="w"> </span>to<span class="w"> <
 <p>Display kerberos tickets</p>
 <p>Get current domain user (if logged in via kerberos)</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>klist<span class="w"> </span>--json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span>.principal
+</code></pre></div></td></tr></table></div>
+<h2 id="licensestatus">licensestatus</h2>
+<p>Show IGEL license status</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>licensestatus
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>product:<span class="w"> </span>SUB_SERVICE_SET_ADDON_IGEL_MANAGED_CONTAINERS
+state:<span class="w"> </span>licensed
+category:<span class="w"> </span>evaluation
+enddate:<span class="w"> </span><span class="m">20261218</span>
+
+product:<span class="w"> </span>SUB_SERVICE_SET_IGEL_SUBSCRIPTION_LICENSE
+state:<span class="w"> </span>licensed
+category:<span class="w"> </span>evaluation
+enddate:<span class="w"> </span><span class="m">20261218</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="resetvalue_tree">resetvalue_tree</h2>
 <p>Reset defined section of the IGEL registry</p>

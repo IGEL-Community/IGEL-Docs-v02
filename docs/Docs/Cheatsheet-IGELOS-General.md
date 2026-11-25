@@ -266,6 +266,26 @@ Get current domain user (if logged in via kerberos)
 klist --json | jq -r .principal
 ```
 
+## licensestatus
+
+Show IGEL license status
+
+```bash linenums="1"
+licensestatus
+```
+
+```bash linenums="1"
+product: SUB_SERVICE_SET_ADDON_IGEL_MANAGED_CONTAINERS
+state: licensed
+category: evaluation
+enddate: 20261218
+
+product: SUB_SERVICE_SET_IGEL_SUBSCRIPTION_LICENSE
+state: licensed
+category: evaluation
+enddate: 20261218
+```
+
 ## resetvalue_tree
 
 Reset defined section of the IGEL registry
